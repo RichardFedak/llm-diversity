@@ -68,6 +68,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
             list_B = item['list_B']
             list_C = item['list_C']
             gold_most_diverse = item['selected_list']
+            participation = item['participation']
 
 
             titles_A = {movie['title'] for movie in list_A}
@@ -121,6 +122,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                             metric_stats[metric]["incorrect"] += 1
 
                     json_log_data.append({
+                        "participation": participation,
                         "prompt": prompt,
                         "gold": gold_most_diverse,
                         "output": output["most_diverse_list"],
@@ -130,6 +132,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                     invalid_outputs += 1
                     error_log.write(f"Prompt: {prompt}\nStep 1 Output: {output}\n")
                     json_log_data.append({
+                        "participation": participation,
                         "prompt": prompt,
                         "gold": gold_most_diverse,
                         "output": "X",
@@ -140,6 +143,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                 invalid_outputs += 1
                 error_log.write(f"Prompt: {prompt}\nError: {str(e)}\n\n")
                 json_log_data.append({
+                    "participation": participation,
                     "prompt": prompt,
                     "gold": gold_most_diverse,
                     "output": "X",

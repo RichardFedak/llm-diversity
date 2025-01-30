@@ -1,27 +1,2 @@
 Invalid Outputs:
 
-Prompt: List A:
-- Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
-- Hangover Part III, The (2013) - Genres of the movie: Comedy, Crime
-- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance
-- Schindler's List (1993) - Genres of the movie: Biography, Drama, History
-- Ted (2012) - Genres of the movie: Comedy
-- Iron Man 2 (2010) - Genres of the movie: Action, Sci-Fi
-
-List B:
-- Doctor Strange (2016) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
-- Schindler's List (1993) - Genres of the movie: Biography, Drama, History
-- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance
-- Argo (2012) - Genres of the movie: Biography, Drama, Thriller
-- Pirates of the Caribbean: On Stranger Tides (2011) - Genres of the movie: Action, Adventure, Fantasy
-- Terminator 2: Judgment Day (1991) - Genres of the movie: Action, Sci-Fi
-
-List C:
-- Hangover Part III, The (2013) - Genres of the movie: Comedy, Crime
-- Doctor Strange (2016) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
-- Ted (2012) - Genres of the movie: Comedy
-- Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
-- 22 Jump Street (2014) - Genres of the movie: Action, Comedy, Crime
-- Sherlock Holmes: A Game of Shadows (2011) - Genres of the movie: Action, Adventure, Mystery
-Error: Invalid \escape: line 1 column 960 (char 959)
-
