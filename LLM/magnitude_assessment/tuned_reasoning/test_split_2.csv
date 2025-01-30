@@ -1,0 +1,2140 @@
+input,output
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Macadam Stories (2015) - Genres of the movie: Comedy, Drama
+- Movie: Work It (2020) - Genres of the movie: Comedy, Music
+- Movie: 1BR (2019) - Genres of the movie: Drama, Horror, Thriller
+- Movie: Heyy Babyy (2007) - Genres of the movie: Comedy, Drama
+- Movie: Hairspray Live! (2016) - Genres of the movie: Comedy, Drama, Musical, Romance
+- Movie: Creator (1985) - Genres of the movie: Comedy, Romance, Sci-Fi
+- Movie: The Prodigies (2011) - Genres of the movie: Animation, Action, Drama, Fantasy, Horror, Sci-Fi, Thriller
+
+List B:
+- Movie: Despicable Me 2 (2013) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Sci-Fi
+- Movie: 21 (2008) - Genres of the movie: Crime, Drama, History, Thriller
+- Movie: Untitled Spider-Man Reboot (2017) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Along Came Polly (2004) - Genres of the movie: Comedy, Romance
+- Movie: Ratatouille (2007) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Focus (2015) - Genres of the movie: Comedy, Crime, Drama, Romance
+- Movie: Iron Man 2 (2010) - Genres of the movie: Action, Sci-Fi
+
+List C:
+- Movie: Focus (2015) - Genres of the movie: Comedy, Crime, Drama, Romance
+- Movie: Along Came Polly (2004) - Genres of the movie: Comedy, Romance
+- Movie: Despicable Me 2 (2013) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Sci-Fi
+- Movie: Lone Ranger, The (2013) - Genres of the movie: Action, Adventure, Western
+- Movie: Avengers: Infinity War - Part I (2018) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: 21 (2008) - Genres of the movie: Crime, Drama, History, Thriller
+- Movie: Stardust (2007) - Genres of the movie: Adventure, Family, Fantasy, Romance
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less diversity in genres compared to B and C. Many movies share similar genres like Comedy and Drama. List B has more variety, with movies spanning genres like Animation, Adventure, Crime, and Sci-Fi.  List C exhibits the highest diversity, showcasing a broader range of genres including Western and Fantasy, with fewer movies sharing overlapping genres. The ordering A, B, C reflects this increasing genre diversity."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: I Am Trying to Break Your Heart (2002) - Genres of the movie: Documentary, Music
+- Movie: Short Game, The (2013) - Genres of the movie: Documentary, Sport
+- Movie: Veer Zaara (2004) - Genres of the movie: Drama, Family, Musical, Romance
+- Movie: Louis Theroux: Law and Disorder in Lagos (2010) - Genres of the movie: Documentary
+- Movie: Diana Vreeland: The Eye Has to Travel (2011) - Genres of the movie: Documentary, Biography
+- Movie: Garfield's Pet Force (2009) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Big Kahuna, The (2000) - Genres of the movie: Drama, Comedy
+
+List B:
+- Movie: Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Movie: Austin Powers: International Man of Mystery (1997) - Genres of the movie: Adventure, Comedy
+- Movie: Matrix Reloaded, The (2003) - Genres of the movie: Action, Sci-Fi
+- Movie: Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Movie: X2: X-Men United (2003) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+- Movie: American Pie (1999) - Genres of the movie: Comedy
+
+List C:
+- Movie: Requiem for a Dream (2000) - Genres of the movie: Drama
+- Movie: X2: X-Men United (2003) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy
+- Movie: Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Movie: 21 (2008) - Genres of the movie: Crime, Drama, History, Thriller
+- Movie: Watchmen (2009) - Genres of the movie: Action, Drama, Mystery, Sci-Fi
+- Movie: Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Genres of the movie: Adventure, Family, Fantasy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows more variety in genres than list B, which in turn shows more variety than list A.  List A has a cluster of documentaries, which reduces its overall genre diversity compared to the other lists.  List B has a good spread of action, sci-fi, and comedy but isn't as diverse as list C. List C has a wider spread of genres, including drama, action, sci-fi, thriller, comedy, crime, history, adventure, family, and fantasy. Therefore the correct order is C, B, A, reflecting an increasing level of genre diversity."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Barbie Presents: Thumbelina (2009) - Genres of the movie: Animation, Family
+- Movie: Gulaal (2009) - Genres of the movie: Crime, Drama, Thriller
+- Movie: Where the Red Fern Grows (2003) - Genres of the movie: Drama, Family
+- Movie: Levottomat 3 (2004) - Genres of the movie: Drama, Romance
+- Movie: The Gracefield Incident (2015) - Genres of the movie: Horror, Mystery, Sci-Fi, Thriller
+- Movie: La leggenda di Al, John e Jack (2002) - Genres of the movie: Comedy, Crime
+- Movie: Take Down (2016) - Genres of the movie: Action, Adventure, Crime, Drama, Thriller
+
+List B:
+- Movie: Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller
+- Movie: Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: District 9 (2009) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Movie: Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+
+List C:
+- Movie: Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller
+- Movie: District 9 (2009) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C exhibits a higher degree of genre diversity than List B, which in turn is more diverse than List A.  List A contains a significant number of movies with overlapping genres (several dramas and family movies), resulting in less overall genre variety. While List B includes some genre overlap (multiple fantasy and action films), the inclusion of movies like 'I Am Legend' and 'Zombieland' introduces additional genre elements (horror, sci-fi), increasing diversity relative to List A.  List C displays the greatest genre variety. Although there is some genre overlap (multiple fantasy and action movies), a wider array of genres is represented compared to lists A and B, including animation, adventure, fantasy, and mystery, thus showcasing the most diverse selection of movie genres."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Legally Blonde (2001) - Genres of the movie: Comedy, Romance
+- Movie: Isle of Dogs (2018) - Genres of the movie: Animation, Adventure, Comedy, Drama, Sci-Fi
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: The Big Sick (2017) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Pitch Perfect (2012) - Genres of the movie: Comedy, Music, Romance
+
+List B:
+- Movie: Wallace & Gromit: The Wrong Trousers (1993) - Genres of the movie: Animation, Short, Comedy, Crime, Family, Mystery, Sci-Fi
+- Movie: Pitch Perfect (2012) - Genres of the movie: Comedy, Music, Romance
+- Movie: Perfume: The Story of a Murderer (2006) - Genres of the movie: Crime, Drama, Fantasy
+- Movie: Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Full Monty, The (1997) - Genres of the movie: Comedy, Drama
+- Movie: The Founder (2016) - Genres of the movie: Biography, Drama
+- Movie: Argo (2012) - Genres of the movie: Biography, Drama, Thriller
+
+List C:
+- Movie: Legally Blonde (2001) - Genres of the movie: Comedy, Romance
+- Movie: Isle of Dogs (2018) - Genres of the movie: Animation, Adventure, Comedy, Drama, Sci-Fi
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: The Big Sick (2017) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Chocolat (2000) - Genres of the movie: Drama, Romance
+- Movie: Star Wars: Episode III - Revenge of the Sith (2005) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows more genre diversity than List C and List A.  List B includes a wider range of genres, such as Crime, Mystery, and Sci-Fi, which are less common in the other lists.  List C has a good spread of genres but fewer unique genres compared to B. List A has the least genre diversity, with a focus primarily on Comedy, Romance, Drama and a few Animation and Adventure titles. The ordering reflects a progression from less diverse genre representation to more diverse representation."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: 300 (2007) - Genres of the movie: Action, Drama
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+- Movie: They Live (1988) - Genres of the movie: Action, Horror, Sci-Fi, Thriller
+- Movie: Star Wars: Episode III - Revenge of the Sith (2005) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Movie: Transporter, The (2002) - Genres of the movie: Action, Crime, Thriller
+- Movie: Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+
+List B:
+- Movie: 300 (2007) - Genres of the movie: Action, Drama
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: Kingsman: The Secret Service (2015) - Genres of the movie: Action, Adventure, Comedy, Thriller
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+- Movie: Fugitive, The (1993) - Genres of the movie: Action, Crime, Drama, Mystery, Thriller
+- Movie: Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+- Movie: Aliens (1986) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+
+List C:
+- Movie: Murderball (2005) - Genres of the movie: Documentary, Sport
+- Movie: Bajirao Mastani (2015) - Genres of the movie: Action, Drama, History, Romance, War
+- Movie: Kevin James: Never Don't Give Up (2018) - Genres of the movie: Comedy
+- Movie: Balance (1989) - Genres of the movie: Animation, Short, Drama
+- Movie: The Witness (2016) - Genres of the movie: Documentary, Biography, Crime, Mystery
+- Movie: The Road Movie (2017) - Genres of the movie: Documentary
+- Movie: Our Song (2000) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less genre diversity than List B and C.  Most movies in List A are action movies with a few dramas and thrillers.  List B has a similar base but adds more diverse entries like a comedy and sci-fi, increasing overall genre variety. List C exhibits the highest genre diversity, encompassing documentary, sport, action, drama, history, romance, war, comedy, animation, short, biography, mystery, etc.  Therefore, the correct ordering reflects an increasing level of genre diversity from list A to list C."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Movie: Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+- Movie: Help, The (2011) - Genres of the movie: Drama
+- Movie: Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi
+- Movie: Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller
+- Movie: Friends with Benefits (2011) - Genres of the movie: Comedy, Romance
+- Movie: Pianist, The (2002) - Genres of the movie: Biography, Drama, Music, War
+- Movie: Deadpool (2016) - Genres of the movie: Action, Comedy
+
+List B:
+- Movie: Scanner Darkly, A (2006) - Genres of the movie: Animation, Comedy, Crime, Drama, Mystery, Sci-Fi, Thriller
+- Movie: Sorcerer's Apprentice, The (2010) - Genres of the movie: Action, Adventure, Family, Fantasy
+- Movie: Searching for Sugar Man (2012) - Genres of the movie: Documentary, Biography, Music
+- Movie: Frantz (2016) - Genres of the movie: Drama, History, Romance, War
+- Movie: Uncle Sam (1997) - Genres of the movie: Comedy, Horror
+- Movie: Rocky IV (1985) - Genres of the movie: Drama, Sport
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+- Movie: Botched (2007) - Genres of the movie: Thriller
+
+List C:
+- Movie: Brave (2012) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Mystery
+- Movie: Thomas Crown Affair, The (1999) - Genres of the movie: Crime, Romance, Thriller
+- Movie: Restrepo (2010) - Genres of the movie: Documentary, Biography, History, War
+- Movie: A.I. Artificial Intelligence (2001) - Genres of the movie: Drama, Sci-Fi
+- Movie: The Strangers: Prey at Night (2018) - Genres of the movie: Horror
+- Movie: Comedy Central Roast of Pamela Anderson (2005) - Genres of the movie: 
+- Movie: August Rush (2007) - Genres of the movie: Drama, Music
+- Movie: Celtic Pride (1996) - Genres of the movie: Comedy, Sport
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B is less diverse than List C and List A because although it has a broader range of genres than List A,  it contains fewer movies with overlapping genres compared to List C.  List C exhibits more genre mixing and combination across its movies than List B. List A contains a more limited set of diverse genres and fewer movies with multiple genres, making it the least diverse."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: Batman Begins (2005) - Genres of the movie: Action, Crime, Drama
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Movie: The Martian (2015) - Genres of the movie: Adventure, Drama, Sci-Fi
+
+List B:
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Ralph Breaks the Internet (2018) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+- Movie: 300 (2007) - Genres of the movie: Action, Drama
+- Movie: Straight Outta Compton (2015) - Genres of the movie: Biography, Drama, History, Music
+- Movie: Citizenfour (2014) - Genres of the movie: Documentary, Biography
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+
+List C:
+- Movie: Jim Gaffigan: Quality Time (2019) - Genres of the movie: Comedy
+- Movie: Twin Peaks (1989) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: 300 (2007) - Genres of the movie: Action, Drama
+- Movie: Jack Strong (2014) - Genres of the movie: Thriller
+- Movie: Ralph Breaks the Internet (2018) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Jeff Ross Roasts Criminals: Live at Brazos County Jail (2015) - Genres of the movie: Documentary, Comedy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less genre diversity than List B and C.  Many movies in List A share common genres like Drama and Thriller.  List B has a broader range of genres represented, including Biography, History, War, and Music, though some genre overlap still exists (Drama). List C exhibits the highest level of genre diversity, with a wider variety of genres, including Documentary, Comedy, and a more varied representation of other genres that are less frequently repeated in comparison to List A and List B. Therefore, the correct ordering from least to most diverse is A, B, C."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+- Movie: Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance
+- Movie: The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Movie: Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+- Movie: Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Miss Congeniality (2000) - Genres of the movie: Action, Comedy, Crime, Romance
+- Movie: Shawshank Redemption, The (1994) - Genres of the movie: Drama
+
+List B:
+- Movie: Red's Dream (1987) - Genres of the movie: Animation, Short, Family, Fantasy
+- Movie: Calendar (1993) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Dana Carvey: Straight White Male, 60 (2016) - Genres of the movie: Comedy
+- Movie: Louis C.K.: One Night Stand (2005) - Genres of the movie: Comedy
+- Movie: Best of Enemies (2015) - Genres of the movie: Documentary, Biography, History
+- Movie: Beasts of the Southern Wild (2012) - Genres of the movie: Adventure, Drama, Fantasy
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+
+List C:
+- Movie: The Big Sick (2017) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Trap: What Happened to Our Dream of Freedom, The (2007) - Genres of the movie: Documentary
+- Movie: Born in China (2017) - Genres of the movie: Documentary
+- Movie: Nothing Like a Dame (2018) - Genres of the movie: Documentary
+- Movie: Escape from L.A. (1996) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Simpsons Movie, The (2007) - Genres of the movie: Animation, Adventure, Comedy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows more genre diversity than List A and List C.  While List B contains a mix of comedy, animation, documentary, and drama, List A has more movies that share multiple common genres (adventure, animation, drama, comedy, and romance). List C has a smaller variety of genres compared to both List A and List B, with a concentration on documentaries and a few other common genres (animation, comedy, and action). Therefore, the ordering B, A, C reflects the increasing genre diversity across the lists."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Fallen (2016) - Genres of the movie: Drama, Fantasy, Romance, Thriller
+- Movie: Katherine Ryan: In Trouble (2017) - Genres of the movie: Comedy
+- Movie: God of War (2017) - Genres of the movie: Action, Adventure, Drama, History, War
+- Movie: Once Upon a Time in Mexico (2003) - Genres of the movie: Action, Crime, Thriller
+- Movie: Hidden Figures (2016) - Genres of the movie: Biography, Drama, History
+- Movie: 1408 (2007) - Genres of the movie: Fantasy, Horror, Mystery
+- Movie: The Spoils of Babylon (2014) - Genres of the movie: Comedy
+
+List B:
+- Movie: Sky Of Love (2007) - Genres of the movie: Drama, Romance
+- Movie: Operation Christmas Drop (2020) - Genres of the movie: Comedy, Family, Romance
+- Movie: Haunters: The Art of the Scare (2017) - Genres of the movie: Documentary, Horror
+- Movie: Killer Movie (2008) - Genres of the movie: Comedy, Horror, Mystery, Thriller
+- Movie: Violets Are Blue... (1986) - Genres of the movie: Drama, Romance
+- Movie: The Most Charming and Attractive (1985) - Genres of the movie: Comedy, Romance
+- Movie: Black (2005) - Genres of the movie: Drama
+
+List C:
+- Movie: Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Movie: Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Movie: Good Will Hunting (1997) - Genres of the movie: Drama, Romance
+- Movie: Pursuit of Happyness, The (2006) - Genres of the movie: Biography, Drama
+- Movie: Pianist, The (2002) - Genres of the movie: Biography, Drama, Music, War
+- Movie: Memento (2000) - Genres of the movie: Mystery, Thriller
+- Movie: Guardians of the Galaxy (2014) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A exhibits less genre diversity than List C, which in turn is less diverse than List B.  List A has a spread of genres, but many movies share overlapping genres (Drama appears multiple times, as does Thriller). List C shows more variety in genre combinations, presenting a wider range of distinct genre pairings. Finally, List B contains the most diverse range of genres and combinations, showcasing a less predictable pattern of genre pairings than Lists A and C. The ordering reflects a progression towards increasing genre variety and less predictable genre combinations."", ""final_ordering"": [""A"", ""C"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Movie: John Wick (2014) - Genres of the movie: Action, Crime, Thriller
+- Movie: Senna (2010) - Genres of the movie: Documentary, Biography, Sport
+- Movie: Her (2013) - Genres of the movie: Drama, Romance, Sci-Fi
+- Movie: Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) - Genres of the movie: Comedy
+- Movie: Game, The (1997) - Genres of the movie: Drama, Mystery, Thriller
+- Movie: Fury (2014) - Genres of the movie: Action, Drama, War
+- Movie: Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+
+List B:
+- Movie: Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Movie: Captain America: Civil War (2016) - Genres of the movie: Action, Sci-Fi
+- Movie: 21 (2008) - Genres of the movie: Crime, Drama, History, Thriller
+- Movie: The Theory of Everything (2014) - Genres of the movie: Biography, Drama, Romance
+- Movie: Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) - Genres of the movie: Comedy
+- Movie: American Beauty (1999) - Genres of the movie: Drama
+- Movie: World War Z (2013) - Genres of the movie: Action, Adventure, Horror, Sci-Fi
+- Movie: Game, The (1997) - Genres of the movie: Drama, Mystery, Thriller
+
+List C:
+- Movie: Chappie (2015) - Genres of the movie: Action, Crime, Drama, Sci-Fi, Thriller
+- Movie: Moana (2016) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical
+- Movie: Senna (2010) - Genres of the movie: Documentary, Biography, Sport
+- Movie: Notebook, The (2004) - Genres of the movie: Drama, Romance
+- Movie: Get Out (2017) - Genres of the movie: Horror, Mystery, Thriller
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: Fury (2014) - Genres of the movie: Action, Drama, War
+- Movie: American Beauty (1999) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows slightly more genre diversity than List C, and List A exhibits the highest genre diversity among the three lists.  List B has a good spread of genres, but several movies share overlapping genres, resulting in less diversity compared to List C. For example, several films fall under the 'Drama' category. List C has a more balanced distribution of genres, with fewer movies sharing the same genre sets. List A displays the greatest genre variety with numerous movies featuring unique genre combinations, thus showcasing higher diversity than B and C."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Big Hero 6 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi
+- Movie: Don't Breathe (2016) - Genres of the movie: Crime, Horror, Thriller
+- Movie: The Great Hack (2019) - Genres of the movie: Documentary, Biography, History
+- Movie: Mother Night (1996) - Genres of the movie: Drama, Romance, War
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: Wrestler, The (2008) - Genres of the movie: Drama, Sport
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+
+List B:
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi
+- Movie: Indiana Jones and the Last Crusade (1989) - Genres of the movie: Action, Adventure
+- Movie: Remember the Titans (2000) - Genres of the movie: Biography, Drama, Sport
+- Movie: Fight Club (1999) - Genres of the movie: Drama
+- Movie: Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Movie: Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+
+List C:
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi
+- Movie: Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Movie: Remember the Titans (2000) - Genres of the movie: Biography, Drama, Sport
+- Movie: Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Movie: Life of Pi (2012) - Genres of the movie: Adventure, Drama, Fantasy
+- Movie: Fight Club (1999) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A exhibits the lowest diversity because it has a wider range of genres, including animation, action, adventure, comedy, drama, family, fantasy, sci-fi, crime, horror, thriller, documentary, biography, history, romance, war, music, and western.  The varied genres present a less cohesive theme. List B shows more genre cohesion than A but less than C.  There is a concentration on drama, action, and adventure, with some science fiction and comedy sprinkled in.  The overlap between the genres is higher in List B than in List A. List C displays the highest level of diversity because while it has some common elements with Lists A and B (action, drama, adventure, comedy), the overall genre spread is narrower than List A and the concentration on specific genres such as drama and action is more apparent than in List B. The movies in List C feel more thematically linked than in the other two lists, suggesting a curated selection of movies based on shared or similar thematic concerns."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: American Beauty (1999) - Genres of the movie: Drama
+- Movie: Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Movie: Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi
+- Movie: How to Train Your Dragon (2010) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy
+- Movie: Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: Demolition Man (1993) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Isle of Dogs (2018) - Genres of the movie: Animation, Adventure, Comedy, Drama, Sci-Fi
+
+List B:
+- Movie: Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: Watchmen (2009) - Genres of the movie: Action, Drama, Mystery, Sci-Fi
+- Movie: Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Others, The (2001) - Genres of the movie: Horror, Mystery, Thriller
+- Movie: Isle of Dogs (2018) - Genres of the movie: Animation, Adventure, Comedy, Drama, Sci-Fi
+- Movie: Princess Bride, The (1987) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Romance
+
+List C:
+- Movie: Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War
+- Movie: Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Lady Bird (2017) - Genres of the movie: Comedy, Drama
+- Movie: Whiplash (2013) - Genres of the movie: Short, Drama, Music
+- Movie: Harold and Kumar Go to White Castle (2004) - Genres of the movie: Adventure, Comedy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less genre diversity compared to B and C.  Many films in A share similar genres like Drama and Sci-Fi, creating less variation. List B expands the genre range with additions like Horror and Romance, but still has some overlap. List C demonstrates the highest level of genre diversity, showcasing a wider variety of genres such as Biography, Sport, History and War,  with less repetition than A or B.  Therefore, the ordering A, B, C accurately reflects the progression of increasing genre diversity."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Movie: Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi
+- Movie: The Fault in Our Stars (2014) - Genres of the movie: Drama, Romance
+- Movie: Harry Potter and the Deathly Hallows: Part 1 (2010) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: Lion (2016) - Genres of the movie: Biography, Drama
+- Movie: American Beauty (1999) - Genres of the movie: Drama
+- Movie: Salt (2010) - Genres of the movie: Action, Thriller
+- Movie: Devil Wears Prada, The (2006) - Genres of the movie: Comedy, Drama
+
+List B:
+- Movie: Brave (2012) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Mystery
+- Movie: Thomas Crown Affair, The (1999) - Genres of the movie: Crime, Romance, Thriller
+- Movie: We Were Here (2011) - Genres of the movie: Documentary, Biography, History, News
+- Movie: Melancholia (2011) - Genres of the movie: Drama, Sci-Fi
+- Movie: Donner Pass (2012) - Genres of the movie: Horror
+- Movie: Whiplash (2013) - Genres of the movie: Short, Drama, Music
+- Movie: A Christmas Story Live! (2017) - Genres of the movie: Musical
+- Movie: White Men Can't Jump (1992) - Genres of the movie: Comedy, Sport
+
+List C:
+- Movie: Brave (2012) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Mystery
+- Movie: Fargo (1996) - Genres of the movie: Crime, Thriller
+- Movie: The Fault in Our Stars (2014) - Genres of the movie: Drama, Romance
+- Movie: Sunshine (2007) - Genres of the movie: Sci-Fi, Thriller
+- Movie: Lion (2016) - Genres of the movie: Biography, Drama
+- Movie: Dawn of the Dead (2004) - Genres of the movie: Action, Horror
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: American Beauty (1999) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows more genre diversity than List B, which in turn is more diverse than List A.  The analysis is based on the variety of genres present in each list. While some movies are repeated across lists (like \""The Fault in Our Stars\"" and \""Lion\""), List C demonstrates a broader range of genres compared to List B and List A. List A contains multiple movies that share common genres (such as Drama). List B has slightly more genre diversity than A, but still shares some genres. List C provides the most even distribution of genres. Therefore, the order C, B, A reflects an increasing order of genre diversity."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: Memento (2000) - Genres of the movie: Mystery, Thriller
+- Movie: Shaun of the Dead (2004) - Genres of the movie: Comedy, Horror
+
+List B:
+- Movie: Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance
+- Movie: Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: Rush Hour 2 (2001) - Genres of the movie: Action, Comedy, Crime, Thriller
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: Rock, The (1996) - Genres of the movie: Action, Adventure, Thriller
+- Movie: Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller
+
+List C:
+- Movie: Star Trek: First Contact (1996) - Genres of the movie: Action, Adventure, Drama, Sci-Fi, Thriller
+- Movie: We're the Millers (2013) - Genres of the movie: Comedy, Crime
+- Movie: Blair Witch Project, The (1999) - Genres of the movie: Horror, Mystery
+- Movie: Maleficent (2014) - Genres of the movie: Adventure, Family, Fantasy, Romance
+- Movie: Schindler's List (1993) - Genres of the movie: Biography, Drama, History
+- Movie: Rocky IV (1985) - Genres of the movie: Drama, Sport
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less genre diversity compared to B and C. While it has a spread of genres, there's a concentration in Action, Drama, and Thriller.  List B expands the genre representation, including more examples of Crime and Comedy. List C exhibits the greatest diversity; it incorporates more unique genres like Sci-Fi, Fantasy, and History, which aren't prominently featured in the other lists. Therefore, the correct ordering reflects a progression towards increasing genre variety."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Kingsman: The Secret Service (2015) - Genres of the movie: Action, Adventure, Comedy, Thriller
+- Movie: American History X (1998) - Genres of the movie: Crime, Drama
+- Movie: Deadpool (2016) - Genres of the movie: Action, Comedy
+- Movie: Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Movie: Pitch Black (2000) - Genres of the movie: Action, Horror, Sci-Fi, Thriller
+
+List B:
+- Movie: Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Movie: The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+- Movie: Harry Potter and the Goblet of Fire (2005) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: Kingsman: The Secret Service (2015) - Genres of the movie: Action, Adventure, Comedy, Thriller
+
+List C:
+- Movie: Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+- Movie: Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Movie: Deadpool (2016) - Genres of the movie: Action, Comedy
+- Movie: American History X (1998) - Genres of the movie: Crime, Drama
+- Movie: Pitch Black (2000) - Genres of the movie: Action, Horror, Sci-Fi, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B has a more consistent genre distribution compared to lists A and C.  While it contains action and adventure movies, the inclusion of fantasy and family genres in the Harry Potter films adds diversity, preventing a homogenous collection. List A contains a wider variety of genres than List B, including comedy and horror elements alongside action and drama.  However, the genres are still somewhat clustered.  List C presents a broader range of individual genres than List A, with crime and horror being less prominent in List A. The inclusion of mystery in Shutter Island pushes list C to have a broader representation of genres.  Therefore, the correct ordering reflects a progression of increasing genre diversity: B (relatively homogenous), then A (more diverse but still shows some clustering), and finally C (the most diverse with the least genre clustering)."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Sully (2016) - Genres of the movie: Biography, Drama
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: Toy Story 4 (2019) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport
+
+List B:
+- Movie: Kung Fu Panda (2008) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy
+- Movie: The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Movie: Avengers, The (2012) - Genres of the movie: Action, Sci-Fi
+- Movie: Mulan (1998) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, War
+- Movie: Blade Runner 2049 (2017) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
+
+List C:
+- Movie: Sully (2016) - Genres of the movie: Biography, Drama
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: Kung Fu Panda (2008) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy
+- Movie: The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Movie: Avengers, The (2012) - Genres of the movie: Action, Sci-Fi
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows more genre diversity than List A and List C.  List B includes a wider range of genres including Action, Sci-Fi, War and Thriller which are absent or less prevalent in A and C.  While List A has some genre variety, it leans heavily towards Biography and Drama. List C combines elements of both A and B, resulting in an intermediate level of diversity. Therefore, the ordering from least to most diverse is B, A, C."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: 7th Floor (2013) - Genres of the movie: Crime, Mystery, Thriller
+- Movie: Enemy at the Gates (2001) - Genres of the movie: Action, Drama, War
+- Movie: Royal Tenenbaums, The (2001) - Genres of the movie: Comedy, Drama
+- Movie: Lucia (2013) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Movie: A Promise (2013) - Genres of the movie: Drama, Romance
+- Movie: The Queen's Corgi (2019) - Genres of the movie: Animation, Comedy, Family
+
+List B:
+- Movie: Harry Potter and the Order of the Phoenix (2007) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Movie: Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Movie: Mad Max: Fury Road (2015) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi
+- Movie: Deadpool (2016) - Genres of the movie: Action, Comedy
+- Movie: Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+
+List C:
+- Movie: Harry Potter and the Order of the Phoenix (2007) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Movie: Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Movie: Mad Max: Fury Road (2015) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi
+- Movie: Deadpool (2016) - Genres of the movie: Action, Comedy
+- Movie: Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B and C are nearly identical, exhibiting a relatively narrow range of genres, primarily focused on action, adventure, fantasy, and drama, with some sci-fi and comedy.  The slight repetition of the Harry Potter movies and Mad Max contributes to a less diverse spread than List A.  List A, however, presents a wider variety of genres, including crime, mystery, thriller, romance, animation, and family, demonstrating a greater level of genre diversity. Therefore, the ordering B, C, A accurately reflects the progression from least to most diverse."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Barbie & Her Sisters in the Great Puppy Adventure (2015) - Genres of the movie: Animation, Adventure, Family
+- Movie: Attack Force (2006) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Hari Kondabolu: Warn Your Relatives (2018) - Genres of the movie: Comedy
+- Movie: Bolshoi (2017) - Genres of the movie: Drama
+- Movie: Tyler Perry's The Single Moms Club (2014) - Genres of the movie: Comedy, Drama
+- Movie: Jack Frost 2: Revenge of the Mutant Killer Snowman (2000) - Genres of the movie: Comedy, Fantasy, Horror
+- Movie: Ishqiya (2010) - Genres of the movie: Comedy, Drama, Romance, Thriller
+
+List B:
+- Movie: Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery
+- Movie: Lion King, The (1994) - Genres of the movie: Animation, Adventure, Drama, Family, Musical
+- Movie: Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi
+- Movie: Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Movie: Frozen (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical
+- Movie: Captain America: The First Avenger (2011) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Love Actually (2003) - Genres of the movie: Comedy, Drama, Romance
+
+List C:
+- Movie: One Small Hitch (2013) - Genres of the movie: Comedy, Romance
+- Movie: Oxford Murders, The (2007) - Genres of the movie: Crime, Horror, Mystery, Thriller
+- Movie: Joseph: King of Dreams (2000) - Genres of the movie: Animation, Adventure, Biography, Drama, Family, History, Musical
+- Movie: Role Models (2008) - Genres of the movie: Comedy
+- Movie: The Chronicles of Melanie (2016) - Genres of the movie: Biography, Drama, History
+- Movie: Aile Arasında (2017) - Genres of the movie: Comedy
+- Movie: Children of the Corn II: The Final Sacrifice (1993) - Genres of the movie: Horror, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows less genre diversity than List B, which in turn is less diverse than List A.  List C has a higher concentration of movies within specific genres (Horror, Thriller, Comedy). List B presents a broader range of genres, including animation, adventure, and musicals along with crime, drama, and comedy, but still with some genre clustering. List A has an even wider variety of genres represented, with each film having a unique genre combination or a maximum of 4 genres, preventing any significant genre clustering.  Therefore, the ordering reflects an increasing level of genre diversity."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama
+- Movie: Old Boy (2003) - Genres of the movie: Action, Drama, Mystery, Thriller
+- Movie: Good Will Hunting (1997) - Genres of the movie: Drama, Romance
+- Movie: Guardians of the Galaxy 2 (2017) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi
+- Movie: Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Movie: Braveheart (1995) - Genres of the movie: Biography, Drama, History, War
+- Movie: Forrest Gump (1994) - Genres of the movie: Drama, Romance
+
+List B:
+- Movie: Boys Over Flowers (2009) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Aladin (2009) - Genres of the movie: Action, Adventure, Comedy, Fantasy
+- Movie: Boy Culture (2006) - Genres of the movie: Drama, Romance
+- Movie: Travelling Salesman (2012) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Movie: Freaky (2020) - Genres of the movie: Comedy, Horror, Thriller
+- Movie: Dog Days (2018) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Pentagon Wars, The (1998) - Genres of the movie: Comedy, War
+
+List C:
+- Movie: Guardians of the Galaxy 2 (2017) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi
+- Movie: Old Boy (2003) - Genres of the movie: Action, Drama, Mystery, Thriller
+- Movie: Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama
+- Movie: Good Will Hunting (1997) - Genres of the movie: Drama, Romance
+- Movie: Zodiac (2007) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: Bridge of Spies (2015) - Genres of the movie: Drama, History, Thriller, War
+- Movie: Braveheart (1995) - Genres of the movie: Biography, Drama, History, War
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows a higher level of genre diversity compared to lists A and B, while maintaining a thematic coherence.  Many films share similar genre combinations, such as the presence of 'Drama' in most of the entries. However, list C includes a broader spread of genres including 'History', 'War', 'Crime' and 'Mystery' compared to list A which only contains 'Biography', 'Crime', 'Drama', 'Action', 'Romance', 'Sci-Fi', 'Thriller', and 'Adventure', whereas list B is even less diverse, focusing more heavily on 'Comedy', 'Drama' and 'Romance'. List A sits in the middle, showing more variety than B, but less than C. Therefore, the ordering C, A, B accurately reflects the progression from least diverse to most diverse."", ""final_ordering"": [""C"", ""A"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Star Wars: Episode III - Revenge of the Sith (2005) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Movie: Bridget Jones's Diary (2001) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Dirty Dancing (1987) - Genres of the movie: Drama, Music, Romance
+- Movie: Rush (2013) - Genres of the movie: Action, Biography, Drama, Sport
+- Movie: Pianist, The (2002) - Genres of the movie: Biography, Drama, Music, War
+- Movie: Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+
+List B:
+- Movie: Kingsman: The Secret Service (2015) - Genres of the movie: Action, Adventure, Comedy, Thriller
+- Movie: Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Dirty Dancing (1987) - Genres of the movie: Drama, Music, Romance
+- Movie: Bridget Jones's Diary (2001) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Sin City: A Dame to Kill For (2014) - Genres of the movie: Action, Crime, Thriller
+- Movie: Pianist, The (2002) - Genres of the movie: Biography, Drama, Music, War
+
+List C:
+- Movie: Kingsman: The Secret Service (2015) - Genres of the movie: Action, Adventure, Comedy, Thriller
+- Movie: V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: No Country for Old Men (2007) - Genres of the movie: Crime, Drama, Thriller
+- Movie: Walk the Line (2005) - Genres of the movie: Biography, Drama, Music, Romance
+- Movie: La La Land (2016) - Genres of the movie: Comedy, Drama, Music, Musical, Romance
+- Movie: Sin City: A Dame to Kill For (2014) - Genres of the movie: Action, Crime, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C exhibits higher diversity because it features a broader range of genres compared to lists B and A. While it shares some overlap with the other lists (like \""Action\"", \""Thriller\"", and \""Drama\""), it introduces genres like \""Sci-Fi\"" and \""Musical\"" which are not present in all three lists.  List B shows less diversity than C but more than A because it contains a mix of genres including \""Adventure\"", \""Fantasy\"", and \""War\"", while also sharing some common genres with List C.  List A has the least diversity of the three lists.  Although it contains a wider variety of genres than B (including \""Fantasy\"", \""Sci-Fi\"", and \""Animation\""), there is a significant overlap in genres amongst its movies and it doesn't showcase the same breadth of distinct genres seen in C and to a lesser extent B. Therefore, the order reflects the progressive increase in genre diversity: C, B, then A."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Movie: Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Pretty Woman (1990) - Genres of the movie: Comedy, Romance
+- Movie: Whiplash (2014) - Genres of the movie: Drama, Music
+- Movie: Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+- Movie: Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+
+List B:
+- Movie: Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+- Movie: Paperman (2012) - Genres of the movie: Animation, Short, Comedy, Family, Romance
+- Movie: Signs (2002) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Movie: Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Movie: Casino Royale (2006) - Genres of the movie: Action, Adventure, Thriller
+- Movie: Whiplash (2014) - Genres of the movie: Drama, Music
+
+List C:
+- Movie: Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+- Movie: Casino Royale (2006) - Genres of the movie: Action, Adventure, Thriller
+- Movie: Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Signs (2002) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Movie: John Wick (2014) - Genres of the movie: Action, Crime, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows less diversity in genres compared to List C and List A. Many movies share similar genres like Action, Adventure, Drama and Thriller.  List C has a bit more variety with addition of Sci-Fi, Comedy and Crime, while still having a cluster of similar genres. List A exhibits the highest diversity with a wider spread of genres including Animation, Family, Fantasy, Biography, Romance and Music, offering a more varied selection of movie types."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Dawn of the Planet of the Apes (2014) - Genres of the movie: Action, Adventure, Drama, Sci-Fi, Thriller
+- Movie: Snatch (2000) - Genres of the movie: Comedy, Crime
+- Movie: Nightmare Before Christmas, The (1993) - Genres of the movie: Animation, Family, Fantasy, Musical
+- Movie: The Blue Planet (2001) - Genres of the movie: Documentary
+- Movie: Braveheart (1995) - Genres of the movie: Biography, Drama, History, War
+- Movie: Along Came Polly (2004) - Genres of the movie: Comedy, Romance
+- Movie: Game, The (1997) - Genres of the movie: Drama, Mystery, Thriller
+- Movie: Million Dollar Baby (2004) - Genres of the movie: Drama, Sport
+
+List B:
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Matrix, The (1999) - Genres of the movie: Action, Sci-Fi
+- Movie: Prisoners (2013) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: Perks of Being a Wallflower, The (2012) - Genres of the movie: Drama
+- Movie: Mean Girls (2004) - Genres of the movie: Comedy
+- Movie: Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance
+- Movie: 127 Hours (2010) - Genres of the movie: Biography, Drama
+- Movie: Gifted (2017) - Genres of the movie: Drama
+
+List C:
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Maze Runner, The (2014) - Genres of the movie: Action, Mystery, Sci-Fi, Thriller
+- Movie: The Blue Planet (2001) - Genres of the movie: Documentary
+- Movie: Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance
+- Movie: Hidden Figures (2016) - Genres of the movie: Biography, Drama, History
+- Movie: Mean Girls (2004) - Genres of the movie: Comedy
+- Movie: Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Movie: Perks of Being a Wallflower, The (2012) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows more genre diversity than List C and List A. Although some movies are repeated between lists, the overall genre variety in List B is higher, covering action, sci-fi, crime, drama, mystery, thriller, comedy, animation, adventure, romance, and biography. List C demonstrates slightly less diversity than List B, still offering a good spread across several genres including action, mystery, sci-fi, thriller, documentary, crime, drama, romance, biography, history, comedy, and animation, but with some overlap with List B.  List A shows the least diversity among the three. While it includes multiple genres, the representation of each is less broad compared to the other two, and it lacks genres found prominently in B and C."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Princess for Christmas, A (2011) - Genres of the movie: Comedy, Drama, Family, Romance
+- Movie: Ronny Chieng: Asian Comedian Destroys America! (2019) - Genres of the movie: Comedy
+- Movie: Joy Ride 2: Dead Ahead (2008) - Genres of the movie: Horror
+- Movie: God of Gamblers (1989) - Genres of the movie: Action, Adventure, Comedy, Drama
+- Movie: Game Over, Man! (2018) - Genres of the movie: Action, Comedy
+- Movie: Dikkenek (2006) - Genres of the movie: Comedy
+- Movie: Chasing Madoff (2010) - Genres of the movie: Documentary
+
+List B:
+- Movie: Scooby-Doo! Curse of the Lake Monster (2010) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Mystery, Romance, Thriller
+- Movie: Almanac of Fall (1985) - Genres of the movie: Drama
+- Movie: Kismat Konnection (2008) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Men of War (1994) - Genres of the movie: Action, Drama, Thriller
+- Movie: Detective Conan: The Last Wizard of the Century (1999) - Genres of the movie: Animation, Adventure, Crime, Drama, Mystery
+- Movie: Nocturne (2020) - Genres of the movie: Drama, Horror, Music, Thriller
+- Movie: Marci X (2003) - Genres of the movie: Comedy, Music
+
+List C:
+- Movie: Boo 2! A Madea Halloween (2017) - Genres of the movie: Comedy, Drama, Horror, Mystery
+- Movie: Patriot, The (1998) - Genres of the movie: Action, Thriller
+- Movie: Warcraft (2016) - Genres of the movie: Action, Adventure, Fantasy
+- Movie: Master, The (2012) - Genres of the movie: Drama, History
+- Movie: Son of God (2014) - Genres of the movie: Biography, Drama, History
+- Movie: Beyond The Sky (2018) - Genres of the movie: Mystery, Sci-Fi, Thriller
+- Movie: Get Hard (2015) - Genres of the movie: Comedy, Crime
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows more genre diversity than List A, which in turn shows more diversity than List B.  List C has a broader representation of genres including Action, Thriller, Fantasy, Drama, History, Sci-Fi, Comedy, and Crime. While some genres repeat, the overall spread is wider than in A or B. List A contains Comedy, Drama, Family, Romance, Horror, Action, Adventure, and Documentary, which is a decent spread but less diverse than C.  The various comedic entries in A are grouped closely together genre-wise. List B has a strong showing of Adventure, Comedy, Family, Fantasy, Mystery, Romance, Thriller, and Animation.  However, the inclusion of several sub-genres under the umbrella of Adventure, Comedy, and Mystery creates less diversity in comparison to C's balanced representation across distinct genre categories. Therefore, the ordering C, A, B accurately reflects the increasing level of genre diversity."", ""final_ordering"": [""C"", ""A"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Argo (2012) - Genres of the movie: Biography, Drama, Thriller
+- Movie: Bridget Jones's Diary (2001) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Finding Nemo (2003) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: Forrest Gump (1994) - Genres of the movie: Drama, Romance
+- Movie: Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+
+List B:
+- Movie: Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: Argo (2012) - Genres of the movie: Biography, Drama, Thriller
+- Movie: Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Movie: Fugitive, The (1993) - Genres of the movie: Action, Crime, Drama, Mystery, Thriller
+- Movie: Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Movie: Illusionist, The (2006) - Genres of the movie: Drama, Fantasy, Mystery, Romance, Thriller
+
+List C:
+- Movie: Doug Stanhope: Oslo - Burning the Bridge to Nowhere (2011) - Genres of the movie: Comedy
+- Movie: El Niño (2014) - Genres of the movie: Action, Adventure, Crime, Drama, Thriller
+- Movie: Patton Oswalt: I Love Everything (2020) - Genres of the movie: Comedy
+- Movie: Dabangg 2 (2012) - Genres of the movie: Action, Comedy, Crime
+- Movie: Pokémon the Movie: White - Victini and Zekrom (2011) - Genres of the movie: Animation, Adventure, Drama, Family, Fantasy, Sci-Fi
+- Movie: Saturday Night Live: The Best of Will Ferrell (2002) - Genres of the movie: Documentary, Comedy
+- Movie: Joan Didion: The Center Will Not Hold (2017) - Genres of the movie: Documentary, Biography
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less diversity in genres compared to the other lists. Many movies share similar genres like Action, Drama, and Thriller.  List C has a broader range of genres, including Documentary, which is absent from lists A and B. However, the genres are still clustered in a few groups (Comedy, Action/Thriller, Documentary). List B exhibits the highest diversity, showcasing a wider variety of genres that are less clustered than in A or C, with a mix of common and less frequent genres. The ordering reflects a progression from limited genre representation in A, to a wider but still somewhat clustered representation in C, and finally to the most diverse and less clustered representation in B."", ""final_ordering"": [""A"", ""C"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Akira (1988) - Genres of the movie: Animation, Action, Drama, Fantasy, Sci-Fi, Thriller
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: King's Speech, The (2010) - Genres of the movie: Biography, Drama, History
+- Movie: Cabin in the Woods, The (2012) - Genres of the movie: Horror, Mystery, Thriller
+- Movie: Before Sunset (2004) - Genres of the movie: Drama, Romance
+- Movie: Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Boyhood (2014) - Genres of the movie: Drama
+- Movie: Bowling for Columbine (2002) - Genres of the movie: Documentary, Crime, Drama
+
+List B:
+- Movie: Akira (1988) - Genres of the movie: Animation, Action, Drama, Fantasy, Sci-Fi, Thriller
+- Movie: What We Do in the Shadows (2014) - Genres of the movie: Comedy, Horror
+- Movie: Samsara (2011) - Genres of the movie: Documentary, Music
+- Movie: Embrace of the Serpent (2016) - Genres of the movie: Adventure, Biography, Drama
+- Movie: The Hateful Eight (2015) - Genres of the movie: Crime, Drama, Mystery, Thriller, Western
+- Movie: Moonrise Kingdom (2012) - Genres of the movie: Comedy, Drama, Family, Romance
+- Movie: Happy Gilmore (1996) - Genres of the movie: Comedy, Sport
+- Movie: Saving Private Ryan (1998) - Genres of the movie: Drama, War
+
+List C:
+- Movie: Big Hero 6 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi
+- Movie: Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller
+- Movie: All This Mayhem (2014) - Genres of the movie: Documentary, Biography, History, Sport
+- Movie: The Aftermath (2019) - Genres of the movie: Drama, Romance, War
+- Movie: Drag Me to Hell (2009) - Genres of the movie: Horror
+- Movie: Misérables in Concert, Les (1996) - Genres of the movie: Music, Musical
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+- Movie: Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B has a good balance of different genres but several movies share some overlap.  List A has more variety than B, with a wider range of genres represented across the movies, but still some genre overlap is present. List C exhibits the highest degree of genre diversity with less repetition across its movies.  Therefore, the correct ordering reflects the increasing genre diversity from B to A to C."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Schindler's List (1993) - Genres of the movie: Biography, Drama, History
+- Movie: 127 Hours (2010) - Genres of the movie: Biography, Drama
+- Movie: Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Genres of the movie: Adventure, Family, Fantasy
+- Movie: Almost Famous (2000) - Genres of the movie: Adventure, Comedy, Drama, Music
+- Movie: Robin Hood: Men in Tights (1993) - Genres of the movie: Adventure, Comedy, Musical, Romance
+
+List B:
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: A Dragon Arrives! (2016) - Genres of the movie: Drama, Horror, Mystery, Thriller
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Patch Adams (1998) - Genres of the movie: Biography, Comedy, Drama, Romance
+- Movie: Pitch Perfect 2 (2015) - Genres of the movie: Comedy, Music
+
+List C:
+- Movie: Schindler's List (1993) - Genres of the movie: Biography, Drama, History
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: 127 Hours (2010) - Genres of the movie: Biography, Drama
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Genres of the movie: Adventure, Family, Fantasy
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C exhibits less diversity because it has a higher concentration of biographical and dramatic movies.  List A shows slightly more diversity by introducing some elements of adventure, family, fantasy, comedy, music and romance genres. However, the genres are still somewhat clustered. List B demonstrates the highest level of diversity with a broader spectrum of genres, including action, horror, mystery, thriller, sport, and romance, showcasing a wider range of movie types."", ""final_ordering"": [""C"", ""A"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy
+- Movie: Batman Begins (2005) - Genres of the movie: Action, Crime, Drama
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Movie: The Martian (2015) - Genres of the movie: Adventure, Drama, Sci-Fi
+
+List B:
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Gone Nutty (2002) - Genres of the movie: Animation, Short, Adventure, Comedy, Family
+- Movie: Requiem for the American Dream (2015) - Genres of the movie: Documentary, Biography, News
+- Movie: Vääpeli Körmy ja marsalkan sauva (1990) - Genres of the movie: Comedy
+- Movie: Hannibal Buress: Live From Chicago (2014) - Genres of the movie: Comedy
+- Movie: Ralph Breaks the Internet (2018) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+
+List C:
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy
+- Movie: Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Movie: Nightcrawler (2014) - Genres of the movie: Crime, Drama, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows more diversity in genre representation compared to List C and List A. List B includes a documentary, animation shorts and stand-up comedy, which are genres absent in other lists.  List C has a mix of genres including animation, drama, adventure and crime, however,  it lacks the diversity of subgenres that List B offers.  List A contains a wider variety of genres than List C, but fewer than B. While List A has diverse genres, it is less diverse than List B and C due to a more concentrated distribution of movies within the action, comedy, and drama categories and lacking the unique Documentary or Stand-Up Comedy genres."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Diana (2013) - Genres of the movie: Biography, Drama, Romance
+- Movie: Mrs. Miracle (2009) - Genres of the movie: Comedy, Family, Fantasy, Romance
+- Movie: Keep an Eye Out (2018) - Genres of the movie: Comedy
+- Movie: St. Giuseppe Moscati: Doctor to the Poor (2007) - Genres of the movie: Biography, Drama
+- Movie: Houseguest (1994) - Genres of the movie: Comedy
+- Movie: Barbie Presents: Thumbelina (2009) - Genres of the movie: Animation, Family
+- Movie: Gangaajal (2003) - Genres of the movie: Action, Crime, Drama
+
+List B:
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: The Man from U.N.C.L.E. (2015) - Genres of the movie: Action, Adventure, Comedy
+- Movie: Face/Off (1997) - Genres of the movie: Action, Crime, Sci-Fi, Thriller
+- Movie: Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Yes Man (2008) - Genres of the movie: Comedy, Romance
+- Movie: Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Spy (2015) - Genres of the movie: Action, Comedy
+
+List C:
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: Spy (2015) - Genres of the movie: Action, Comedy
+- Movie: Ip Man 3 (2015) - Genres of the movie: Action, Biography, Drama, History
+- Movie: It (2017) - Genres of the movie: Horror
+- Movie: Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Yes Man (2008) - Genres of the movie: Comedy, Romance
+- Movie: Equalizer, The (2014) - Genres of the movie: Action, Crime, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less diversity in genres compared to the other lists. It mainly focuses on biography, drama, comedy, family, and romance genres with only one action movie. List B is slightly more diverse, with a wider range of genres including action, adventure, sci-fi, and thriller in addition to comedy, romance, animation and family.  List C presents the highest level of genre diversity, exhibiting a variety of genres like action, comedy, biography, drama, history, horror, sci-fi and thriller. The ordering reflects a progressive increase in the number of different genres and their representation within each list, directly correlating with the level of diversity."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Avengers, The (2012) - Genres of the movie: Action, Sci-Fi
+- Movie: Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Schindler's List (1993) - Genres of the movie: Biography, Drama, History
+- Movie: Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: The Martian (2015) - Genres of the movie: Adventure, Drama, Sci-Fi
+- Movie: Kill Bill: Vol. 2 (2004) - Genres of the movie: Action, Crime, Thriller
+
+List B:
+- Movie: Piper (2016) - Genres of the movie: Animation, Short, Family
+- Movie: Sully (2016) - Genres of the movie: Biography, Drama
+- Movie: Diary of a Wimpy Kid: The Long Haul (2017) - Genres of the movie: Adventure, Comedy, Family
+- Movie: Braveheart (1995) - Genres of the movie: Biography, Drama, History, War
+- Movie: Transporter, The (2002) - Genres of the movie: Action, Crime, Thriller
+- Movie: Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport
+
+List C:
+- Movie: Piper (2016) - Genres of the movie: Animation, Short, Family
+- Movie: Diary of a Wimpy Kid: The Long Haul (2017) - Genres of the movie: Adventure, Comedy, Family
+- Movie: Braveheart (1995) - Genres of the movie: Biography, Drama, History, War
+- Movie: Transporter, The (2002) - Genres of the movie: Action, Crime, Thriller
+- Movie: Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport
+- Movie: Pitch Perfect 2 (2015) - Genres of the movie: Comedy, Music
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows more genre diversity than List B and C. While List A contains Action, Sci-Fi, Drama, Biography, Thriller, Adventure, and History genres, List B and C have fewer unique genres.  List B includes Animation, Short, Family, Biography, Drama, Adventure, Comedy, War, Action, Crime and Sport, while List C has a similar range of genres, but with slightly less variety.  Therefore, List A is the most diverse, followed by List B, and then List C. The ordering reflects the increasing genre variety."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Ender's Game (2013) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Frozen (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: American Sniper (2014) - Genres of the movie: Action, Biography, Drama, War
+- Movie: Love Actually (2003) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery
+- Movie: Lion King, The (1994) - Genres of the movie: Animation, Adventure, Drama, Family, Musical
+
+List B:
+- Movie: Hum Saath Saath Hain (1999) - Genres of the movie: Drama, Musical
+- Movie: Dirty 30 (2016) - Genres of the movie: Comedy
+- Movie: Cowboys vs. Dinosaurs (2015) - Genres of the movie: Action, Adventure, Horror, Sci-Fi, Thriller, Western
+- Movie: Beta Test (2016) - Genres of the movie: Action, Sci-Fi, Thriller
+- Movie: Where Is Kyra? (2018) - Genres of the movie: Drama
+- Movie: Left Behind: World at War (2005) - Genres of the movie: Action, Drama, Fantasy, Sci-Fi, Thriller
+- Movie: Barricade (2012) - Genres of the movie: Horror, Mystery, Thriller
+
+List C:
+- Movie: Ender's Game (2013) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: Role Models (2008) - Genres of the movie: Comedy
+- Movie: Boys Don't Cry (1999) - Genres of the movie: Biography, Crime, Drama, Romance
+- Movie: American Sniper (2014) - Genres of the movie: Action, Biography, Drama, War
+- Movie: Frozen (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical
+- Movie: The Count of Monte Cristo (2002) - Genres of the movie: Action, Adventure, Drama, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows less diversity in genres compared to List B and A.  While it includes a range of genres like Action, Adventure, Comedy, Crime, Drama, Animation, and Musical, the representation of each genre is less spread out than in List B.  List B has a more diverse range of genres including Horror, Western, and Thriller, which are less represented in List C. List A exhibits the highest genre diversity, with many instances of multiple genres being combined within a single movie. This results in the most variety and spread of different genre tags among the movies in list A."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: See You Yesterday (2019) - Genres of the movie: Action, Adventure, Crime, Drama, Sci-Fi, Thriller
+- Movie: Paperman (2012) - Genres of the movie: Animation, Short, Comedy, Family, Romance
+- Movie: Red: Werewolf Hunter (2010) - Genres of the movie: Fantasy, Horror
+- Movie: Still Bill (2009) - Genres of the movie: Documentary, Biography, Music
+- Movie: Beneath Hill 60 (2010) - Genres of the movie: Drama, History, War
+- Movie: Comedy Central Roast of Charlie Sheen (2011) - Genres of the movie: 
+- Movie: Flightplan (2005) - Genres of the movie: Drama, Mystery, Thriller
+- Movie: Major League (1989) - Genres of the movie: Comedy, Sport
+
+List B:
+- Movie: Looper (2012) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: Hangover, The (2009) - Genres of the movie: Comedy
+- Movie: Million Dollar Baby (2004) - Genres of the movie: Drama, Sport
+- Movie: Police Academy 5: Assignment: Miami Beach (1988) - Genres of the movie: Comedy, Crime
+- Movie: Notting Hill (1999) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Recruit, The (2003) - Genres of the movie: Action, Thriller
+- Movie: Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+
+List C:
+- Movie: Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Movie: Blade II (2002) - Genres of the movie: Action, Horror, Sci-Fi, Thriller
+- Movie: Step Up (2006) - Genres of the movie: Crime, Drama, Music, Romance
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Hangover, The (2009) - Genres of the movie: Comedy
+- Movie: Million Dollar Baby (2004) - Genres of the movie: Drama, Sport
+- Movie: Hot Fuzz (2007) - Genres of the movie: Action, Comedy, Mystery, Thriller
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows less diversity in genres compared to lists A and C.  Many movies share similar genre combinations, primarily action, drama, comedy, and related subgenres.  List A has more genre variety, but several movies still overlap, such as multiple films containing the drama genre. List C exhibits the highest genre diversity. It includes a wide range of genres, with fewer movies sharing common genre combinations.  The diversity of genre representation across each list is reflected in the final ordering."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: The Machinist (2004) - Genres of the movie: Drama, Thriller
+- Movie: Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama
+- Movie: Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Movie: 12 Years a Slave (2013) - Genres of the movie: Biography, Drama, History
+- Movie: Old Boy (2003) - Genres of the movie: Action, Drama, Mystery, Thriller
+- Movie: Inglourious Basterds (2009) - Genres of the movie: Adventure, Drama, War
+- Movie: Wrestler, The (2008) - Genres of the movie: Drama, Sport
+
+List B:
+- Movie: The Machinist (2004) - Genres of the movie: Drama, Thriller
+- Movie: Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama
+- Movie: Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Movie: 12 Years a Slave (2013) - Genres of the movie: Biography, Drama, History
+- Movie: Old Boy (2003) - Genres of the movie: Action, Drama, Mystery, Thriller
+- Movie: Inglourious Basterds (2009) - Genres of the movie: Adventure, Drama, War
+- Movie: Wrestler, The (2008) - Genres of the movie: Drama, Sport
+
+List C:
+- Movie: Planet Earth II (2016) - Genres of the movie: Documentary
+- Movie: Alice Through the Looking Glass (2016) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: Waiting for Guffman (1996) - Genres of the movie: Comedy
+- Movie: Pizza (2012) - Genres of the movie: Horror, Thriller
+- Movie: Mid90s (2018) - Genres of the movie: Comedy, Drama
+- Movie: Rush (2013) - Genres of the movie: Action, Biography, Drama, Sport
+- Movie: Evil Dead (2013) - Genres of the movie: Horror
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B and A are nearly identical, containing a very similar set of movies and genres.  The slight differences don't significantly impact the overall genre diversity. Both lists are heavily weighted towards Drama and Thriller, with only a few movies branching into other genres like Biography, Crime, History, Adventure, Mystery, Action, and Sport. List C exhibits considerably more genre diversity, encompassing Documentary, Family, Fantasy, Comedy, Horror, and a wider range of subgenres within the Action, Biography, and Drama categories. The inclusion of the Documentary, Fantasy, and various Comedy entries drastically increases List C's diversity compared to A and B, which have only a couple of films that stand out from their core Drama/Thriller focus.  Therefore, the correct ordering is B, A, C, with B and A being almost equally less diverse, and C being significantly more diverse."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Movie: Usual Suspects, The (1995) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Movie: Blade (1998) - Genres of the movie: Action, Horror, Sci-Fi
+- Movie: Charlie and the Chocolate Factory (2005) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Musical
+- Movie: The Butterfly Effect (2004) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Movie: Die Hard: With a Vengeance (1995) - Genres of the movie: Action, Adventure, Thriller
+- Movie: Guardians of the Galaxy (2014) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi
+
+List B:
+- Movie: Iron Giant, The (1999) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Sci-Fi
+- Movie: Thomas Crown Affair, The (1999) - Genres of the movie: Crime, Romance, Thriller
+- Movie: Ring, The (2002) - Genres of the movie: Horror, Mystery
+- Movie: God Who Wasn't There, The (2005) - Genres of the movie: Documentary, Biography, History
+- Movie: Enter the Void (2009) - Genres of the movie: Drama, Fantasy
+- Movie: Jesus Christ Superstar (2000) - Genres of the movie: Music, Musical
+- Movie: Talladega Nights: The Ballad of Ricky Bobby (2006) - Genres of the movie: Comedy, Sport
+- Movie: True Grit (2010) - Genres of the movie: Drama, Western
+
+List C:
+- Movie: Astro Boy (2009) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi
+- Movie: Thomas Crown Affair, The (1999) - Genres of the movie: Crime, Romance, Thriller
+- Movie: Ring, The (2002) - Genres of the movie: Horror, Mystery
+- Movie: Mr. Dynamite: The Rise of James Brown (2014) - Genres of the movie: Documentary, Biography, Music
+- Movie: White Material (2009) - Genres of the movie: Drama, War
+- Movie: The Coldest Game (2019) - Genres of the movie: History, Sport, Thriller
+- Movie: Rustlers' Rhapsody (1985) - Genres of the movie: Comedy, Western
+- Movie: Trainspotting (1996) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less diversity in genres compared to List B and C.  Many films in List A share similar genres, such as Action, Adventure, and Sci-Fi. List B introduces more variety with genres like Documentary, Biography, and Western, but it still has some overlap in genres like Thriller and Crime.  List C demonstrates the highest level of genre diversity. It includes a wider range of unique genres such as War and History, expanding the variety beyond what's seen in Lists A and B. Therefore, the correct order from least to most diverse is A, B, C."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: American History X (1998) - Genres of the movie: Crime, Drama
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+- Movie: Charlie and the Chocolate Factory (2005) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Musical
+- Movie: Casino Royale (2006) - Genres of the movie: Action, Adventure, Thriller
+- Movie: Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Movie: Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi
+
+List B:
+- Movie: Kokowaah 2 (2013) - Genres of the movie: Comedy
+- Movie: Marina (2013) - Genres of the movie: Biography, Drama, Music, Romance
+- Movie: Zen (2009) - Genres of the movie: Biography, Drama
+- Movie: Somewhere Between (2011) - Genres of the movie: Documentary
+- Movie: My Little Pony: Equestria Girls - Friendship Games (2015) - Genres of the movie: Animation, Family, Fantasy, Musical
+- Movie: Christmas Cupid (2010) - Genres of the movie: Comedy, Fantasy, Romance
+- Movie: Demon House (2018) - Genres of the movie: Documentary, Horror, Mystery, Thriller
+
+List C:
+- Movie: Magic of Ordinary Days, The (2005) - Genres of the movie: Drama
+- Movie: The Liberator (2013) - Genres of the movie: Biography, Drama, History
+- Movie: Barbie: Dolphin Magic (2017) - Genres of the movie: Animation, Adventure, Family, Fantasy
+- Movie: Out of Thin Air (2017) - Genres of the movie: Documentary, Crime
+- Movie: Cuties (2020) - Genres of the movie: Drama
+- Movie: Enemies Closer (2013) - Genres of the movie: Action, Thriller
+- Movie: Tesla: Master of Lightning (2000) - Genres of the movie: Documentary, Biography, History
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less diversity in genres compared to the other lists.  While it includes several genres, many movies share overlapping genres like Action, Adventure, and Thriller.  List C exhibits more genre variety; although still concentrated in certain areas (Drama and Documentary are prominent), it shows a broader range than List A. List B demonstrates the highest degree of genre diversity, including genres like Animation, Family, Fantasy, Musical, Biography, Music, Romance, Horror, and Comedy which are less represented in Lists A and C. The progression from A to C to B reflects a gradual increase in the spread and uniqueness of movie genres."", ""final_ordering"": [""A"", ""C"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Harry Potter and the Order of the Phoenix (2007) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Movie: Ice Age (2002) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Movie: Avengers, The (2012) - Genres of the movie: Action, Sci-Fi
+- Movie: Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Movie: Megamind (2010) - Genres of the movie: Animation, Action, Comedy, Crime, Family, Mystery, Sci-Fi, Thriller
+- Movie: Dead Poets Society (1989) - Genres of the movie: Comedy, Drama
+
+List B:
+- Movie: Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Movie: Zodiac (2007) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance
+- Movie: Babe (1995) - Genres of the movie: Comedy, Drama, Family
+- Movie: Harry Potter and the Deathly Hallows: Part 1 (2010) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Movie: WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+
+List C:
+- Movie: Paper Heart (2009) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Once Brothers (2010) - Genres of the movie: Documentary, Biography, History, Sport
+- Movie: Klimt (2006) - Genres of the movie: Biography, Drama
+- Movie: Sully (2016) - Genres of the movie: Biography, Drama
+- Movie: Pokémon the Movie: I Choose You! (2017) - Genres of the movie: Animation, Action, Adventure, Family, Fantasy
+- Movie: Raid (2003) - Genres of the movie: Action, Crime, Thriller
+- Movie: Barbie in the Pink Shoes (2013) - Genres of the movie: Animation, Family
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less genre diversity compared to the other lists.  Many movies share common genres like Action, Adventure, and Family.  List B has a slightly higher diversity with a broader representation of genres including Crime, Drama, and Romance, although still some overlaps. List C exhibits the highest genre diversity, encompassing genres such as Documentary, Biography, History, and Sport, alongside more common genres. The movies in List C represent a wider range of film styles and subjects than the other two lists."", ""final_ordering"": [""A"", ""B"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Good Will Hunting (1997) - Genres of the movie: Drama, Romance
+- Movie: Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Fight Club (1999) - Genres of the movie: Drama
+- Movie: Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi
+- Movie: Despicable Me (2010) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Sci-Fi
+- Movie: Trainspotting (1996) - Genres of the movie: Drama
+- Movie: Remember the Titans (2000) - Genres of the movie: Biography, Drama, Sport
+
+List B:
+- Movie: Librarian: Return to King Solomon's Mines, The (2006) - Genres of the movie: Action, Adventure, Comedy, Drama, Fantasy, Romance, Thriller
+- Movie: Dead Space: Aftermath (2011) - Genres of the movie: Animation, Horror, Sci-Fi
+- Movie: I Love You, Now Die: The Commonwealth Vs. Michelle Carter (2019) - Genres of the movie: Documentary, Crime
+- Movie: Comedy Central Roast of Bob Saget (2008) - Genres of the movie: 
+- Movie: Hacksaw Ridge (2016) - Genres of the movie: Biography, Drama, History, War
+- Movie: Big Green, The (1995) - Genres of the movie: Comedy, Family, Sport
+- Movie: Innocence (2004) - Genres of the movie: Drama, Mystery
+- Movie: Sarafina! (1992) - Genres of the movie: Drama, Musical
+
+List C:
+- Movie: Big Hero 6 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi
+- Movie: Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Movie: It (2017) - Genres of the movie: Horror
+- Movie: Lord of War (2005) - Genres of the movie: Crime, Drama
+- Movie: Legally Blonde (2001) - Genres of the movie: Comedy, Romance
+- Movie: Hacksaw Ridge (2016) - Genres of the movie: Biography, Drama, History, War
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows a wider variety of genres than List A, which in turn has more genre diversity than List C.  List B includes documentary, animation, action, and fantasy genres, along with several other diverse genres. List A has a concentration of drama and romance but also includes animation, adventure, and family which diversifies it slightly. List C contains several common genres and doesn't show the same extent of diversity of List A and B, predominantly containing action, comedy and drama."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
+- Movie: Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama
+- Movie: Super Size Me (2004) - Genres of the movie: Documentary
+- Movie: 40-Year-Old Virgin, The (2005) - Genres of the movie: Comedy, Romance
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+- Movie: Split (2017) - Genres of the movie: Horror, Thriller
+- Movie: Billy Elliot (2000) - Genres of the movie: Drama, Music
+
+List B:
+- Movie: Burn Notice: The Fall of Sam Axe (2011) - Genres of the movie: Action, Comedy, Crime, Drama, Mystery, Thriller
+- Movie: Beauty and the Beast (2017) - Genres of the movie: Adventure, Family, Fantasy, Musical, Romance
+- Movie: Kurt Cobain: Montage of Heck (2015) - Genres of the movie: Documentary, Animation, Biography, Music
+- Movie: Alien: Resurrection (1997) - Genres of the movie: Action, Horror, Sci-Fi
+- Movie: Seabiscuit (2003) - Genres of the movie: Drama, History, Sport
+- Movie: Full Metal Jacket (1987) - Genres of the movie: Drama, War
+- Movie: City Slickers II: The Legend of Curly's Gold (1994) - Genres of the movie: Comedy, Western
+- Movie: Plastic Bag (2009) - Genres of the movie: Short, Drama
+
+List C:
+- Movie: Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
+- Movie: Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama
+- Movie: 40-Year-Old Virgin, The (2005) - Genres of the movie: Comedy, Romance
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+- Movie: Shaun of the Dead (2004) - Genres of the movie: Comedy, Horror
+- Movie: American Beauty (1999) - Genres of the movie: Drama
+- Movie: Atomic Blonde (2017) - Genres of the movie: Action, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C shows less diversity in genres compared to A and B.  While it contains a variety of genres, there's a noticeable concentration in action, drama, and thriller. List A presents a broader spectrum of genres, encompassing animation, comedy, and documentary alongside the more common genres. List B exhibits the highest diversity, including less common genres like 'Western', 'Musical', 'Short', and 'History', alongside others, resulting in a more varied collection of movie types."", ""final_ordering"": [""C"", ""A"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Bridget Jones's Diary (2001) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: Straight Outta Compton (2015) - Genres of the movie: Biography, Drama, History, Music
+- Movie: The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Milk (2008) - Genres of the movie: Biography, Drama, History
+
+List B:
+- Movie: Bridget Jones's Diary (2001) - Genres of the movie: Comedy, Drama, Romance
+- Movie: Air Force One (1997) - Genres of the movie: Action, Drama, Thriller
+- Movie: Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Movie: Straight Outta Compton (2015) - Genres of the movie: Biography, Drama, History, Music
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+
+List C:
+- Movie: Hotel Rwanda (2004) - Genres of the movie: Biography, Drama, History, War
+- Movie: Pokémon: Jirachi Wish Maker (2003) - Genres of the movie: Animation, Action, Adventure, Family, Fantasy, Sci-Fi
+- Movie: Cave of Forgotten Dreams (2010) - Genres of the movie: Documentary, History
+- Movie: Ronny Chieng: Asian Comedian Destroys America! (2019) - Genres of the movie: Comedy
+- Movie: Lolo (2015) - Genres of the movie: Comedy
+- Movie: Bombay Beach (2011) - Genres of the movie: Documentary, Drama, Musical
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C exhibits the most genre diversity because it includes a wide range of genres such as Animation, Action, Adventure, Family, Fantasy, Sci-Fi, Documentary, History, Comedy, Drama and Musical.  List A shows less diversity than C, but more than B.  List B has a slightly narrower range of genres represented.  Though both lists A and B contain a good variety, list C has more unique genres that are not repeated as often, making it the most diverse.  The ordering reflects the degree of genre variety present in each list."", ""final_ordering"": [""C"", ""A"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Man on the Moon (1999) - Genres of the movie: Biography, Comedy, Drama
+- Movie: Kevin Hart: What Now? (2016) - Genres of the movie: Documentary, Comedy
+- Movie: Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War
+- Movie: Diary of a Wimpy Kid: The Long Haul (2017) - Genres of the movie: Adventure, Comedy, Family
+- Movie: Beasts of the Southern Wild (2012) - Genres of the movie: Adventure, Drama, Fantasy
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Anthony Jeselnik: Caligula (2013) - Genres of the movie: Comedy
+
+List B:
+- Movie: Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+- Movie: Grand Budapest Hotel, The (2014) - Genres of the movie: Adventure, Comedy, Crime
+- Movie: Minority Report (2002) - Genres of the movie: Action, Crime, Mystery, Sci-Fi, Thriller
+- Movie: Limitless (2011) - Genres of the movie: Sci-Fi, Thriller
+- Movie: Spider-Man (2002) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Dark Knight Rises, The (2012) - Genres of the movie: Action, Drama, Thriller
+
+List C:
+- Movie: Super Size Me (2004) - Genres of the movie: Documentary
+- Movie: Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War
+- Movie: Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+- Movie: There Will Be Blood (2007) - Genres of the movie: Drama
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows less diversity in genres compared to List A and List C.  Many films in List B are primarily action or drama, with some crime thrillers included. List A has a wider range of genres including biography, comedy, family, and fantasy films.  List C exhibits the most diversity, encompassing animation, musical, romance, and a broader spread of action and comedy, in addition to the genres in Lists A and B. Therefore, the correct ordering reflects a gradual increase in genre diversity from List B to List A and finally to List C."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Your Name. (2016) - Genres of the movie: Animation, Drama, Fantasy, Romance
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War
+- Movie: Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport
+- Movie: Toy Story 4 (2019) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Movie: Argo (2012) - Genres of the movie: Biography, Drama, Thriller
+
+List B:
+- Movie: Jim Gaffigan: Quality Time (2019) - Genres of the movie: Comedy
+- Movie: The Artist (2011) - Genres of the movie: Comedy, Drama, Romance
+- Movie: American Murder: The Family Next Door (2020) - Genres of the movie: Documentary, Crime
+- Movie: Bobby Jones, Stroke of Genius (2004) - Genres of the movie: Biography, Drama, Romance, Sport
+- Movie: Dior and I (2014) - Genres of the movie: Documentary
+- Movie: Ralph Breaks the Internet (2018) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+
+List C:
+- Movie: Your Name. (2016) - Genres of the movie: Animation, Drama, Fantasy, Romance
+- Movie: Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War
+- Movie: Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+- Movie: Enemy at the Gates (2001) - Genres of the movie: Action, Drama, War
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows less genre diversity than List C and List A.  Many films in List B have only one or two genres, while List C has more variety, with films spanning multiple genres. However, List A demonstrates the highest level of genre diversity, with more films having a wide range of genres than in List B and List C. Therefore, the correct order, from least diverse to most diverse, is B, C, A."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Grand Budapest Hotel, The (2014) - Genres of the movie: Adventure, Comedy, Crime
+- Movie: Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Movie: Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+
+List B:
+- Movie: Super Size Me (2004) - Genres of the movie: Documentary
+- Movie: Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+
+List C:
+- Movie: Super Size Me (2004) - Genres of the movie: Documentary
+- Movie: Die Hard (1988) - Genres of the movie: Action, Thriller
+- Movie: Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B shows some variety with a documentary, an action thriller, and a musical animation. However, the animation shares many genres with the other films. List C has the same movies as List B, but the order is changed so that the most diverse movie (Aladdin) is placed last. This makes the diversity progression more apparent. List A has a cluster of movies with similar genres, starting with a film that shares a few genres with the other two. The second film has a broader range of genres, and the third is more distinct from the others. The ordering B, C, A reflects the gradual increase in overall genre diversity across the lists."", ""final_ordering"": [""B"", ""C"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Furious 7 (2015) - Genres of the movie: Action, Crime, Thriller
+- Movie: Moon (2009) - Genres of the movie: Drama, Mystery, Sci-Fi
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Collection, The (2012) - Genres of the movie: Horror, Thriller
+- Movie: WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Movie: Black Hawk Down (2001) - Genres of the movie: Action, Drama, History, War
+- Movie: Hangover, The (2009) - Genres of the movie: Comedy
+
+List B:
+- Movie: Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller
+- Movie: Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Hangover, The (2009) - Genres of the movie: Comedy
+- Movie: WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Movie: Black Hawk Down (2001) - Genres of the movie: Action, Drama, History, War
+- Movie: Collection, The (2012) - Genres of the movie: Horror, Thriller
+
+List C:
+- Movie: Sixth Sense, The (1999) - Genres of the movie: Drama, Mystery, Thriller
+- Movie: Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Movie: Gone Girl (2014) - Genres of the movie: Drama, Mystery, Thriller
+- Movie: Truman Show, The (1998) - Genres of the movie: Comedy, Drama
+- Movie: Star Trek (2009) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List B has a good balance of genres, with some overlap with lists A and C, but also including unique elements.  List A is less diverse than B because it has a heavier concentration of action and thriller movies. List C is the most diverse, containing a wider variety of genres and less repetition across movie entries compared to lists A and B. The overall genre distribution in C is the most spread out, indicating greater diversity."", ""final_ordering"": [""B"", ""A"", ""C""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Looper (2012) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Movie: Gattaca (1997) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: Jurassic World (2015) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Pianist, The (2002) - Genres of the movie: Biography, Drama, Music, War
+- Movie: Fargo (1996) - Genres of the movie: Crime, Thriller
+- Movie: The Machinist (2004) - Genres of the movie: Drama, Thriller
+
+List B:
+- Movie: Jurassic World (2015) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Midsommar (2019) - Genres of the movie: Drama, Horror, Mystery, Thriller
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: The Machinist (2004) - Genres of the movie: Drama, Thriller
+- Movie: Gattaca (1997) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Movie: Pianist, The (2002) - Genres of the movie: Biography, Drama, Music, War
+- Movie: Adjustment Bureau, The (2011) - Genres of the movie: Crime, Mystery, Romance, Sci-Fi, Thriller
+
+List C:
+- Movie: The Cheetah Girls 2 (2006) - Genres of the movie: Comedy, Drama, Family, Music, Musical
+- Movie: Outpost: Black Sun (2012) - Genres of the movie: Action, Horror, Sci-Fi
+- Movie: Brave Story (2008) - Genres of the movie: Animation, Adventure, Mystery
+- Movie: Philadelphia Experiment II (1993) - Genres of the movie: Action, Adventure, Sci-Fi
+- Movie: Maigrets Night at the Crossroads (2017) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Movie: State of Emergency (2011) - Genres of the movie: Horror, Sci-Fi, Thriller
+- Movie: Garfunkel and Oates: Trying to be Special (2016) - Genres of the movie: Comedy, Music
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List A shows less genre diversity compared to List C and List B.  Many movies share similar genres like thriller and drama.  List C has a broader representation of genres, including family, animation and musical which are absent from List A. While List B also has a good variety, it includes a few movies with overlapping genres similar to those in List A, but fewer than in List A.  The inclusion of unique genres like musical in C and Sci-Fi in B make them more diverse than A. The ordering reflects a progression towards greater genre variety."", ""final_ordering"": [""A"", ""C"", ""B""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Dodgeball: A True Underdog Story (2004) - Genres of the movie: Comedy, Sport
+- Movie: 300 (2007) - Genres of the movie: Action, Drama
+- Movie: Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+- Movie: Jiro Dreams of Sushi (2011) - Genres of the movie: Documentary
+- Movie: Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Movie: Nightcrawler (2014) - Genres of the movie: Crime, Drama, Thriller
+- Movie: Patriot, The (2000) - Genres of the movie: Action, Drama, History, War
+
+List B:
+- Movie: FYRE: The Greatest Party That Never Happened (2019) - Genres of the movie: Documentary, Crime, Music
+- Movie: Mortal Kombat: Conquest (1998) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Movie: Lady Bird (2017) - Genres of the movie: Comedy, Drama
+- Movie: Jeff Ross Roasts Criminals: Live at Brazos County Jail (2015) - Genres of the movie: Documentary, Comedy
+- Movie: Dheepan (2015) - Genres of the movie: Crime, Drama
+- Movie: Meat Love (1989) - Genres of the movie: Animation, Short, Comedy, Fantasy, Romance
+- Movie: Carrington (1995) - Genres of the movie: Biography, Drama, Romance
+
+List C:
+- Movie: 300 (2007) - Genres of the movie: Action, Drama
+- Movie: Dodgeball: A True Underdog Story (2004) - Genres of the movie: Comedy, Sport
+- Movie: Hanna (2011) - Genres of the movie: Action, Adventure, Drama, Thriller
+- Movie: Moneyball (2011) - Genres of the movie: Biography, Drama, Sport
+- Movie: Mr. Nobody (2009) - Genres of the movie: Drama, Fantasy, Romance, Sci-Fi
+- Movie: Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) - Genres of the movie: Comedy
+- Movie: Jiro Dreams of Sushi (2011) - Genres of the movie: Documentary
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C exhibits less genre diversity than List B and List A.  Many films share similar genres (Action, Drama, Comedy, Documentary).  List B shows more variety in genre combinations but still has some overlap.  List A has the highest diversity, including unique combinations like Animation/Adventure/Comedy/Crime/Family/Mystery not found in the other lists."", ""final_ordering"": [""C"", ""B"", ""A""]}"
+"You are an evaluator. You are given three lists of movies with titles and genres provided. Your task is to order the lists from least to most diverse based on the information given and your knowledge.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+    - Assess the variety and uniqueness of genres in each list.
+    - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+    - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Movie: Ghost in the Shell 2.0 (2008) - Genres of the movie: Animation, Action, Crime, Drama, Mystery, Sci-Fi, Thriller
+- Movie: Stardust (2007) - Genres of the movie: Adventure, Family, Fantasy, Romance
+- Movie: School of Rock (2003) - Genres of the movie: Comedy, Music
+- Movie: Schindler's List (1993) - Genres of the movie: Biography, Drama, History
+- Movie: Split (2017) - Genres of the movie: Horror, Thriller
+- Movie: Saving Private Ryan (1998) - Genres of the movie: Drama, War
+- Movie: Hangover, The (2009) - Genres of the movie: Comedy
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+
+List B:
+- Movie: Big Hero 6 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi
+- Movie: Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller
+- Movie: Source, The (1999) - Genres of the movie: Documentary, Biography, History
+- Movie: Phantom of the Opera, The (1989) - Genres of the movie: Drama, Horror, Music, Romance
+- Movie: Disney's Newsies the Broadway Musical (2017) - Genres of the movie: Musical
+- Movie: Saving Private Ryan (1998) - Genres of the movie: Drama, War
+- Movie: Eddie (1996) - Genres of the movie: Comedy, Sport
+- Movie: Django Unchained (2012) - Genres of the movie: Drama, Western
+
+List C:
+- Movie: Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Movie: Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Movie: Matrix, The (1999) - Genres of the movie: Action, Sci-Fi
+- Movie: Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Movie: Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Movie: Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Movie: Split (2017) - Genres of the movie: Horror, Thriller
+- Movie: Requiem for a Dream (2000) - Genres of the movie: Drama
+
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+","{""reasoning"": ""List C exhibits a more focused range of genres compared to lists A and B.  While it includes diverse titles, the genres represented are not as widely spread. List A shows more genre variety than C, with a broader representation of genres including animation, action, crime, drama, mystery, sci-fi, thriller, comedy, western, biography, horror, and war. List B has an even wider spread of genres, incorporating elements like family, fantasy, musical, documentary, history and sport, making it the most diverse."", ""final_ordering"": [""C"", ""A"", ""B""]}"

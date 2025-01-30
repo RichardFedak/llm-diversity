@@ -1,0 +1,1162 @@
+input,output
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Plot of the movie: A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
+- Rush Hour 2 (2001) - Plot of the movie: Carter and Lee head to Hong Kong for a vacation, but become embroiled in a counterfeit money scam.
+- Avengers: Infinity War - Part I (2018) - Plot of the movie: The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+- The Revenant (2015) - Plot of the movie: A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.
+- Mummy, The (1999) - Plot of the movie: At an archaeological dig in the ancient city of Hamunaptra, an American serving in the French Foreign Legion accidentally awakens a mummy who begins to wreak havoc as he searches for the reincarnation of his long-lost love.
+- I, Robot (2004) - Plot of the movie: In 2035, a technophobic cop investigates a crime that may have been perpetrated by a robot, which leads to a larger threat to humanity.
+- Logan (2017) - Plot of the movie: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+- Spider-Man (2002) - Plot of the movie: After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy.
+
+List B:
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Plot of the movie: A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
+- I, Robot (2004) - Plot of the movie: In 2035, a technophobic cop investigates a crime that may have been perpetrated by a robot, which leads to a larger threat to humanity.
+- Superbad (2007) - Plot of the movie: Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Ice Age (2002) - Plot of the movie: The story revolves around sub-zero heroes: a woolly mammoth, a saber-toothed tiger, a sloth and a prehistoric combination of a squirrel and rat, known as Scrat.
+- Pulp Fiction (1994) - Plot of the movie: The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+- Zombieland (2009) - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Spider-Man (2002) - Plot of the movie: After being bitten by a genetically-modified spider, a shy teenager gains spider-like abilities that he uses to fight injustice as a masked superhero and face a vengeful enemy.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Usual Suspects, The (1995) - Plot of the movie: The sole survivor of a pier shoot-out tells the story of how a notorious criminal influenced the events that began with five criminals meeting in a seemingly random police lineup.
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- The Accountant (2016) - Plot of the movie: As a math savant uncooks the books for a new client, the Treasury Department closes in on his activities, and the body count starts to rise.
+- Moneyball (2011) - Plot of the movie: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+- Iron Man 2 (2010) - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- School of Rock (2003) - Plot of the movie: After being kicked out of his rock band, Dewey Finn becomes a substitute teacher of an uptight elementary private school, only to try and turn his class into a rock band.
+- The Revenant (2015) - Plot of the movie: A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.
+
+List B:
+- Usual Suspects, The (1995) - Plot of the movie: The sole survivor of a pier shoot-out tells the story of how a notorious criminal influenced the events that began with five criminals meeting in a seemingly random police lineup.
+- Moneyball (2011) - Plot of the movie: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+- Bourne Legacy, The (2012) - Plot of the movie: An expansion of the universe from Robert Ludlum's novels, centered on a new hero whose stakes have been triggered by the events of the previous three films.
+- Love Actually (2003) - Plot of the movie: Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England.
+- 12 Years a Slave (2013) - Plot of the movie: In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
+- Captain Phillips (2013) - Plot of the movie: The true story of Captain Richard Phillips and the 2009 hijacking by Somali pirates of the U.S.-flagged MV Maersk Alabama, the first American cargo ship to be hijacked in two hundred years.
+- Bridget Jones's Diary (2001) - Plot of the movie: Bridget Jones is determined to improve herself while she looks for love in a year in which she keeps a personal diary.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Spotlight (2015) - Plot of the movie: The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.
+- The Theory of Everything (2014) - Plot of the movie: A look at the relationship between the famous physicist Stephen Hawking and his wife.
+- Ratatouille (2007) - Plot of the movie: A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.
+- Ferris Bueller's Day Off (1986) - Plot of the movie: A popular high school student, admired by his peers, decides to take a day off from school and goes to extreme lengths to pull it off, to the chagrin of his Principal, who'll do anything to stop him.
+- Frozen (2013) - Plot of the movie: When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Braveheart (1995) - Plot of the movie: Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.
+
+List B:
+- I Am Legend (2007) - Plot of the movie: Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.
+- Ratatouille (2007) - Plot of the movie: A rat who can cook makes an unusual alliance with a young kitchen worker at a famous Paris restaurant.
+- The Theory of Everything (2014) - Plot of the movie: A look at the relationship between the famous physicist Stephen Hawking and his wife.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Ferris Bueller's Day Off (1986) - Plot of the movie: A popular high school student, admired by his peers, decides to take a day off from school and goes to extreme lengths to pull it off, to the chagrin of his Principal, who'll do anything to stop him.
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Requiem for a Dream (2000) - Plot of the movie: The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.
+- Quantum of Solace (2008) - Plot of the movie: James Bond descends into mystery as he tries to stop a mysterious organisation from eliminating a country's most valuable resource.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+- Slumdog Millionaire (2008) - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of ""Who Wants to be a Millionaire?""
+- Three Billboards Outside Ebbing, Missouri (2017) - Plot of the movie: A mother personally challenges the local authorities to solve her daughter's murder when they fail to catch the culprit.
+- Star Wars: Episode I - The Phantom Menace (1999) - Plot of the movie: Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.
+- Help, The (2011) - Plot of the movie: An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.
+- Jurassic Park (1993) - Plot of the movie: A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.
+- Bug's Life, A (1998) - Plot of the movie: A misfit ant, looking for ""warriors"" to save his colony from greedy grasshoppers, recruits a group of bugs that turn out to be an inept circus troupe.
+- 10 Things I Hate About You (1999) - Plot of the movie: A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat.
+
+List B:
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+- True Lies (1994) - Plot of the movie: A fearless, globe-trotting, terrorist-battling secret agent has his life turned upside down when he discovers his wife might be having an affair with a used-car salesman while terrorists smuggle nuclear war heads into the United States.
+- Help, The (2011) - Plot of the movie: An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+- Taken (2008) - Plot of the movie: A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.
+- Charlie and the Chocolate Factory (2005) - Plot of the movie: A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.
+- Three Billboards Outside Ebbing, Missouri (2017) - Plot of the movie: A mother personally challenges the local authorities to solve her daughter's murder when they fail to catch the culprit.
+- 10 Things I Hate About You (1999) - Plot of the movie: A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- Ex Machina (2015) - Plot of the movie: A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.
+- Deadpool (2016) - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+- Catch Me If You Can (2002) - Plot of the movie: Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Zombieland (2009) - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Arrival (2016) - Plot of the movie: A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.
+- Edge of Tomorrow (2014) - Plot of the movie: A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.
+
+List B:
+- Harry Potter and the Half-Blood Prince (2009) - Plot of the movie: As Harry Potter begins his sixth year at Hogwarts, he discovers an old book marked as ""the property of the Half-Blood Prince"" and begins to learn more about Lord Voldemort's dark past.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Gravity (2013) - Plot of the movie: Two astronauts work together to survive after an accident leaves them stranded in space.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Plot of the movie: Blacksmith Will Turner teams up with eccentric pirate ""Captain"" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.
+- Zootopia (2016) - Plot of the movie: In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Now You See Me (2013) - Plot of the movie: An F.B.I. Agent and an Interpol Detective track a team of illusionists who pull off bank heists during their performances, and reward their audiences with the money.
+- Goodfellas (1990) - Plot of the movie: The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.
+- Zombieland (2009) - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Girl with the Dragon Tattoo, The (2011) - Plot of the movie: Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years by young computer hacker Lisbeth Salander.
+- Thor: Ragnarok (2017) - Plot of the movie: Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.
+- Memoirs of a Geisha (2005) - Plot of the movie: Nitta Sayuri reveals how she transcended her fishing-village roots and became one of Japan's most celebrated geisha.
+- Contact (1997) - Plot of the movie: Dr. Ellie Arroway, after years of searching, finds conclusive radio proof of extraterrestrial intelligence, sending plans for a mysterious machine.
+
+List B:
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Lord of the Rings: The Return of the King, The (2003) - Plot of the movie: Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+- Slumdog Millionaire (2008) - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of ""Who Wants to be a Millionaire?""
+- Goodfellas (1990) - Plot of the movie: The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.
+- Aladdin (1992) - Plot of the movie: A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.
+- Dunkirk (2017) - Plot of the movie: Allied soldiers from Belgium, the British Commonwealth and Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.
+- Being John Malkovich (1999) - Plot of the movie: A puppeteer discovers a portal that leads literally into the head of movie star John Malkovich.
+- Bourne Ultimatum, The (2007) - Plot of the movie: Jason Bourne dodges a ruthless C.I.A. official and his Agents from a new assassination program while searching for the origins of his life as a trained killer.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Big Hero 6 (2014) - Plot of the movie: A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes.
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- 40-Year-Old Virgin, The (2005) - Plot of the movie: Goaded by his buddies, a nerdy guy who's never ""done the deed"" only finds the pressure mounting when he meets a single mother.
+- Iron Man (2008) - Plot of the movie: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
+- Slumdog Millionaire (2008) - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of ""Who Wants to be a Millionaire?""
+- Enemy of the State (1998) - Plot of the movie: A lawyer becomes targeted by a corrupt politician and his N.S.A. goons when he accidentally receives key evidence to a politically motivated crime.
+
+List B:
+- Iron Man (2008) - Plot of the movie: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
+- War for the Planet of the Apes (2017) - Plot of the movie: After the apes suffer unimaginable losses, Caesar wrestles with his darker instincts and begins his own mythic quest to avenge his kind.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- A Chinese Odyssey Part One: Pandora's Box (1995) - Plot of the movie: A Monkey King is reincarnated in the un human form as Joker, a highwayman oblivious to his original identity and the fact that 500 years earlier, he and his master, the Longevity Monk, were punished and made to stay human.
+- Big Hero 6 (2014) - Plot of the movie: A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes.
+- Notting Hill (1999) - Plot of the movie: The life of a simple bookshop owner changes when he meets the most famous film star in the world.
+- Back to the Future Part II (1989) - Plot of the movie: After visiting 2015, Marty McFly must repeat his visit to 1955 to prevent disastrous changes to 1985...without interfering with his first trip.
+- Blood Diamond (2006) - Plot of the movie: A fisherman, a smuggler, and a syndicate of businessmen match wits over the possession of a priceless diamond.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Blade (1998) - Plot of the movie: A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires.
+- Chappie (2015) - Plot of the movie: In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.
+- Charlie and the Chocolate Factory (2005) - Plot of the movie: A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.
+- Usual Suspects, The (1995) - Plot of the movie: The sole survivor of a pier shoot-out tells the story of how a notorious criminal influenced the events that began with five criminals meeting in a seemingly random police lineup.
+- Jumanji: Welcome to the Jungle (2017) - Plot of the movie: Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.
+- Die Hard: With a Vengeance (1995) - Plot of the movie: John McClane and a Harlem store owner are targeted by German terrorist Simon in New York City, where he plans to rob the Federal Reserve Building.
+- The Butterfly Effect (2004) - Plot of the movie: Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal.
+
+List B:
+- Chappie (2015) - Plot of the movie: In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.
+- Charlie and the Chocolate Factory (2005) - Plot of the movie: A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.
+- Trainspotting (1996) - Plot of the movie: Renton, deeply immersed in the Edinburgh drug scene, tries to clean up and get out, despite the allure of the drugs and influence of friends.
+- Ring, The (2002) - Plot of the movie: A journalist must investigate a mysterious videotape which seems to cause the death of anyone one week to the day after they view it.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Matrix Revolutions, The (2003) - Plot of the movie: The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.
+- Die Hard: With a Vengeance (1995) - Plot of the movie: John McClane and a Harlem store owner are targeted by German terrorist Simon in New York City, where he plans to rob the Federal Reserve Building.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- Saw (2004) - Plot of the movie: Two strangers awaken in a room with no recollection of how they got there, and soon discover they're pawns in a deadly game perpetrated by a notorious serial killer.
+- Captain America: Civil War (2016) - Plot of the movie: Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Furious 7 (2015) - Plot of the movie: Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.
+- Terminal, The (2004) - Plot of the movie: An Eastern European tourist unexpectedly finds himself stranded in JFK airport, and must take up temporary residence there.
+- Horrible Bosses (2011) - Plot of the movie: Three friends conspire to murder their awful bosses when they realize they are standing in the way of their happiness.
+- The Butterfly Effect (2004) - Plot of the movie: Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal.
+
+List B:
+- Saw (2004) - Plot of the movie: Two strangers awaken in a room with no recollection of how they got there, and soon discover they're pawns in a deadly game perpetrated by a notorious serial killer.
+- Furious 7 (2015) - Plot of the movie: Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- Saw (2003) - Plot of the movie: David, an orderly at a hospital, tells his horrific story of being kidnapped and forced to play a vile game of survival.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Avengers: Infinity War - Part I (2018) - Plot of the movie: The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+- Ice Age (2002) - Plot of the movie: The story revolves around sub-zero heroes: a woolly mammoth, a saber-toothed tiger, a sloth and a prehistoric combination of a squirrel and rat, known as Scrat.
+- 50/50 (2011) - Plot of the movie: Inspired by a true story, a comedy centered on a 27-year-old guy who learns of his cancer diagnosis and his subsequent struggle to beat the disease.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Lord of the Rings: The Two Towers, The (2002) - Plot of the movie: While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Kill Bill: Vol. 2 (2004) - Plot of the movie: The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.
+- Superbad (2007) - Plot of the movie: Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+
+List B:
+- Kill Bill: Vol. 2 (2004) - Plot of the movie: The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.
+- Uncut Gems (2019) - Plot of the movie: With his debts mounting and angry collectors closing in, a fast-talking New York City jeweler risks everything in hope of staying afloat and alive.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Captain America: Civil War (2016) - Plot of the movie: Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.
+- Game, The (1997) - Plot of the movie: After a wealthy San Francisco banker is given an opportunity to participate in a mysterious game, his life is turned upside down as he begins to question if it might really be a concealed conspiracy to destroy him.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Avatar (2009) - Plot of the movie: A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Midnight in Paris (2011) - Plot of the movie: While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.
+- Dallas Buyers Club (2013) - Plot of the movie: In 1985 Dallas, electrician and hustler Ron Woodroof works around the system to help AIDS patients get the medication they need after he is diagnosed with the disease.
+- Kingsman: The Secret Service (2015) - Plot of the movie: A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.
+- Dirty Dancing (1987) - Plot of the movie: Spending the summer at a Catskills resort with her family, Frances ""Baby"" Houseman falls in love with the camp's dance instructor, Johnny Castle.
+- Lord of the Rings: The Two Towers, The (2002) - Plot of the movie: While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.
+- Bridget Jones's Diary (2001) - Plot of the movie: Bridget Jones is determined to improve herself while she looks for love in a year in which she keeps a personal diary.
+- Sin City: A Dame to Kill For (2014) - Plot of the movie: Some of Sin City's most hard-boiled citizens cross paths with a few of its more reviled inhabitants.
+- Walk the Line (2005) - Plot of the movie: A chronicle of country music legend Johnny Cash's life, from his early days on an Arkansas cotton farm to his rise to fame with Sun Records in Memphis, where he recorded alongside Elvis Presley, Jerry Lee Lewis, and Carl Perkins.
+
+List B:
+- Midnight in Paris (2011) - Plot of the movie: While on a trip to Paris with his fiancée's family, a nostalgic screenwriter finds himself mysteriously going back to the 1920s every day at midnight.
+- Sin City: A Dame to Kill For (2014) - Plot of the movie: Some of Sin City's most hard-boiled citizens cross paths with a few of its more reviled inhabitants.
+- Dirty Dancing (1987) - Plot of the movie: Spending the summer at a Catskills resort with her family, Frances ""Baby"" Houseman falls in love with the camp's dance instructor, Johnny Castle.
+- Kingsman: The Secret Service (2015) - Plot of the movie: A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.
+- Good bye, Lenin! (2003) - Plot of the movie: In 1990, to protect his fragile mother from a fatal shock after a long coma, a young man must keep her from learning that her beloved nation of East Germany as she knew it has disappeared.
+- Walk the Line (2005) - Plot of the movie: A chronicle of country music legend Johnny Cash's life, from his early days on an Arkansas cotton farm to his rise to fame with Sun Records in Memphis, where he recorded alongside Elvis Presley, Jerry Lee Lewis, and Carl Perkins.
+- La La Land (2016) - Plot of the movie: While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
+- Ghost in the Shell (2017) - Plot of the movie: In the near future, Major Mira Killian is the first of her kind: A human saved from a terrible crash, who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous criminals.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Last Samurai, The (2003) - Plot of the movie: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+- Moonrise Kingdom (2012) - Plot of the movie: A pair of young lovers flee their New England town, which causes a local search party to fan out to find them.
+- Mummy, The (1999) - Plot of the movie: At an archaeological dig in the ancient city of Hamunaptra, an American serving in the French Foreign Legion accidentally awakens a mummy who begins to wreak havoc as he searches for the reincarnation of his long-lost love.
+- Pursuit of Happyness, The (2006) - Plot of the movie: A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- Full Metal Jacket (1987) - Plot of the movie: A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.
+
+List B:
+- Last Samurai, The (2003) - Plot of the movie: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Dodgeball: A True Underdog Story (2004) - Plot of the movie: A group of misfits enter a Las Vegas dodgeball tournament in order to save their cherished local gym from the onslaught of a corporate health fitness chain.
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- Pianist, The (2002) - Plot of the movie: A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.
+- Thor (2011) - Plot of the movie: The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.
+- Big (1988) - Plot of the movie: After wishing to be made big, a teenage boy wakes the next morning to find himself mysteriously in the body of an adult.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Grosse Pointe Blank (1997) - Plot of the movie: Martin Blank is a professional assassin. He is sent on a mission to a small Detroit suburb, Grosse Pointe, and, by coincidence, his ten-year high school reunion party is taking place there at the same time.
+- Braveheart (1995) - Plot of the movie: Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.
+- A.I. Artificial Intelligence (2001) - Plot of the movie: A highly advanced robotic boy longs to become ""real"" so that he can regain the love of his human mother.
+- Ted (2012) - Plot of the movie: John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear, Ted or his girlfriend, Lori.
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Plot of the movie: A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
+- 300 (2007) - Plot of the movie: King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.
+- Deadpool (2016) - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+- Parasite (2019) - Plot of the movie: Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
+
+List B:
+- 300 (2007) - Plot of the movie: King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.
+- Seabiscuit (2003) - Plot of the movie: True story of the undersized Depression-era racehorse whose victories lifted not only the spirits of the team behind it but also those of their nation.
+- Parasite (2019) - Plot of the movie: Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
+- Creed (2015) - Plot of the movie: The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.
+- Grosse Pointe Blank (1997) - Plot of the movie: Martin Blank is a professional assassin. He is sent on a mission to a small Detroit suburb, Grosse Pointe, and, by coincidence, his ten-year high school reunion party is taking place there at the same time.
+- 127 Hours (2010) - Plot of the movie: A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.
+- A.I. Artificial Intelligence (2001) - Plot of the movie: A highly advanced robotic boy longs to become ""real"" so that he can regain the love of his human mother.
+- Point Break (1991) - Plot of the movie: An F.B.I. Agent goes undercover to catch a gang of surfers who may be bank robbers.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Last Samurai, The (2003) - Plot of the movie: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Dodgeball: A True Underdog Story (2004) - Plot of the movie: A group of misfits enter a Las Vegas dodgeball tournament in order to save their cherished local gym from the onslaught of a corporate health fitness chain.
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- Pianist, The (2002) - Plot of the movie: A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.
+- Thor (2011) - Plot of the movie: The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.
+- Big (1988) - Plot of the movie: After wishing to be made big, a teenage boy wakes the next morning to find himself mysteriously in the body of an adult.
+
+List B:
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- Mummy, The (1999) - Plot of the movie: At an archaeological dig in the ancient city of Hamunaptra, an American serving in the French Foreign Legion accidentally awakens a mummy who begins to wreak havoc as he searches for the reincarnation of his long-lost love.
+- Moonrise Kingdom (2012) - Plot of the movie: A pair of young lovers flee their New England town, which causes a local search party to fan out to find them.
+- Pursuit of Happyness, The (2006) - Plot of the movie: A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.
+- Full Metal Jacket (1987) - Plot of the movie: A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.
+- Zombieland (2009) - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Her (2013) - Plot of the movie: In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.
+- American Beauty (1999) - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Gladiator (2000) - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+- Paperman (2012) - Plot of the movie: An office worker meets the girl of his dreams and uses a fleet of paper airplanes to get her attention.
+- Signs (2002) - Plot of the movie: A widowed former reverend living with his children and brother on a Pennsylvania farm finds mysterious crop circles in their fields, which suggests something more frightening to come.
+- Catch Me If You Can (2002) - Plot of the movie: Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Casino Royale (2006) - Plot of the movie: After earning 00 status and a licence to kill, secret agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.
+- American Beauty (1999) - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+
+List B:
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Monsters University (2013) - Plot of the movie: A look at the relationship between Mike Wazowski (Billy Crystal) and James P. ""Sully"" Sullivan (John Goodman) during their days at Monsters University, when they weren't necessarily the best of friends.
+- Pretty Woman (1990) - Plot of the movie: A man in a legal but hurtful business needs an escort for some social events, and hires a beautiful prostitute he meets... only to fall in love.
+- Scott Pilgrim vs. the World (2010) - Plot of the movie: In a magically realistic version of Toronto, a young man must defeat his new girlfriend's seven evil exes one by one in order to win her heart.
+- Signs (2002) - Plot of the movie: A widowed former reverend living with his children and brother on a Pennsylvania farm finds mysterious crop circles in their fields, which suggests something more frightening to come.
+- Casino Royale (2006) - Plot of the movie: After earning 00 status and a licence to kill, secret agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.
+- Gladiator (2000) - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+- Paperman (2012) - Plot of the movie: An office worker meets the girl of his dreams and uses a fleet of paper airplanes to get her attention.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Harry Potter and the Goblet of Fire (2005) - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+- Dark Knight Rises, The (2012) - Plot of the movie: Eight years after the Joker's reign of chaos, Batman is coerced out of exile with the assistance of the mysterious Selina Kyle in order to defend Gotham City from the vicious guerrilla terrorist Bane.
+- Green Mile, The (1999) - Plot of the movie: A tale set on death row in a Southern jail, where gentle giant John possesses the mysterious power to heal people's ailments. When the lead guard, Paul, recognizes John's gift, he tries to help stave off the condemned man's execution.
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Inception (2010) - Plot of the movie: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.
+- Interstellar (2014) - Plot of the movie: When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.
+- American Beauty (1999) - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+
+List B:
+- Dark Knight Rises, The (2012) - Plot of the movie: Eight years after the Joker's reign of chaos, Batman is coerced out of exile with the assistance of the mysterious Selina Kyle in order to defend Gotham City from the vicious guerrilla terrorist Bane.
+- Harry Potter and the Goblet of Fire (2005) - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Iron Man 2 (2010) - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Reservoir Dogs (1992) - Plot of the movie: When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+- Taken (2008) - Plot of the movie: A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.
+- Help, The (2011) - Plot of the movie: An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.
+- Unbreakable (2000) - Plot of the movie: A man learns something extraordinary about himself after a devastating accident.
+- Catch Me If You Can (2002) - Plot of the movie: Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.
+- True Lies (1994) - Plot of the movie: A fearless, globe-trotting, terrorist-battling secret agent has his life turned upside down when he discovers his wife might be having an affair with a used-car salesman while terrorists smuggle nuclear war heads into the United States.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+
+List B:
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+- Slumdog Millionaire (2008) - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of ""Who Wants to be a Millionaire?""
+- Three Billboards Outside Ebbing, Missouri (2017) - Plot of the movie: A mother personally challenges the local authorities to solve her daughter's murder when they fail to catch the culprit.
+- Star Wars: Episode I - The Phantom Menace (1999) - Plot of the movie: Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.
+- Help, The (2011) - Plot of the movie: An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.
+- Jurassic Park (1993) - Plot of the movie: A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.
+- Bug's Life, A (1998) - Plot of the movie: A misfit ant, looking for ""warriors"" to save his colony from greedy grasshoppers, recruits a group of bugs that turn out to be an inept circus troupe.
+- 10 Things I Hate About You (1999) - Plot of the movie: A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- The Lego Movie (2014) - Plot of the movie: An ordinary LEGO construction worker, thought to be the prophesied as ""special"", is recruited to join a quest to stop an evil tyrant from gluing the LEGO universe into eternal stasis.
+- Girl with the Dragon Tattoo, The (2011) - Plot of the movie: Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years by young computer hacker Lisbeth Salander.
+- Holiday, The (2006) - Plot of the movie: Two women troubled with guy-problems swap homes in each other's countries, where they each meet a local guy and fall in love.
+- Juno (2007) - Plot of the movie: Faced with an unplanned pregnancy, an offbeat young woman makes a selfless decision regarding the unborn child.
+- Matrix Revolutions, The (2003) - Plot of the movie: The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.
+- Beautiful Mind, A (2001) - Plot of the movie: After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.
+- Cabin in the Woods, The (2012) - Plot of the movie: Five friends go for a break at a remote cabin, where they get more than they bargained for, discovering the truth behind the cabin in the woods.
+- Edge of Tomorrow (2014) - Plot of the movie: A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.
+
+List B:
+- Easy A (2010) - Plot of the movie: A clean-cut high school student relies on the school's rumor mill to advance her social and financial standing.
+- The Lego Movie (2014) - Plot of the movie: An ordinary LEGO construction worker, thought to be the prophesied as ""special"", is recruited to join a quest to stop an evil tyrant from gluing the LEGO universe into eternal stasis.
+- Passengers (2016) - Plot of the movie: A malfunction in a sleeping pod on a spacecraft traveling to a distant colony planet wakes one passenger 90 years early.
+- The Jungle Book (2016) - Plot of the movie: After a threat from the tiger Shere Khan forces him to flee the jungle, a man-cub named Mowgli embarks on a journey of self discovery with the help of panther Bagheera and free-spirited bear Baloo.
+- Constantine (2005) - Plot of the movie: Supernatural exorcist and demonologist John Constantine helps a policewoman prove her sister's death was not a suicide, but something more.
+- Groundhog Day (1993) - Plot of the movie: A narcissistic, self-centered weatherman finds himself in a time loop on Groundhog Day.
+- Harry Potter and the Deathly Hallows: Part 2 (2011) - Plot of the movie: Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.
+- Beautiful Mind, A (2001) - Plot of the movie: After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- Ip Man (2008) - Plot of the movie: During the Japanese invasion of China, a wealthy martial artist is forced to leave his home when his city is occupied. With little means of providing for themselves, Ip Man and the remaining members of the city must find a way to survive.
+- Face/Off (1997) - Plot of the movie: To foil a terrorist plot, an FBI agent assumes the identity of the criminal who murdered his son through facial transplant surgery, but the crook wakes up prematurely and vows revenge.
+- School of Rock (2003) - Plot of the movie: After being kicked out of his rock band, Dewey Finn becomes a substitute teacher of an uptight elementary private school, only to try and turn his class into a rock band.
+- Hangover, The (2009) - Plot of the movie: Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- Rain Man (1988) - Plot of the movie: After a selfish L.A. yuppie learns his estranged father left a fortune to an autistic-savant brother in Ohio that he didn't know existed, he absconds with his brother and sets out across the country, hoping to gain a larger inheritance.
+- Skyfall (2012) - Plot of the movie: James Bond's loyalty to M is tested when her past comes back to haunt her. When MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost.
+
+List B:
+- Ip Man (2008) - Plot of the movie: During the Japanese invasion of China, a wealthy martial artist is forced to leave his home when his city is occupied. With little means of providing for themselves, Ip Man and the remaining members of the city must find a way to survive.
+- Toy Story 3 (2010) - Plot of the movie: The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.
+- The Hunger Games (2012) - Plot of the movie: Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death.
+- Yes Man (2008) - Plot of the movie: A man challenges himself to say ""yes"" to everything.
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- Ace Ventura: Pet Detective (1994) - Plot of the movie: A goofy detective specializing in animals goes in search of the missing mascot of the Miami Dolphins.
+- Serenity (2005) - Plot of the movie: The crew of the ship Serenity try to evade an assassin sent to recapture telepath River.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Aladdin (1992) - Plot of the movie: A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.
+- Terminator 2: Judgment Day (1991) - Plot of the movie: A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son John from an even more advanced and powerful cyborg.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Vicky Cristina Barcelona (2008) - Plot of the movie: Two friends on a summer holiday in Spain become enamored with the same painter, unaware that his ex-wife, with whom he has a tempestuous relationship, is about to re-enter the picture.
+- Logan (2017) - Plot of the movie: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Cast Away (2000) - Plot of the movie: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+
+List B:
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Vicky Cristina Barcelona (2008) - Plot of the movie: Two friends on a summer holiday in Spain become enamored with the same painter, unaware that his ex-wife, with whom he has a tempestuous relationship, is about to re-enter the picture.
+- Logan (2017) - Plot of the movie: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+- Anastasia (1997) - Plot of the movie: The last surviving child of the Russian Royal Family joins two con men to reunite with her grandmother, the Dowager Empress, while the undead Rasputin seeks her death.
+- Terminator 2: Judgment Day (1991) - Plot of the movie: A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son John from an even more advanced and powerful cyborg.
+- Sin City (2005) - Plot of the movie: An exploration of the dark and miserable Basin City and three of its residents, all of whom are caught up in violent corruption.
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- La La Land (2016) - Plot of the movie: While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
+- Kill Bill: Vol. 1 (2003) - Plot of the movie: After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.
+- Star Trek (2009) - Plot of the movie: The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.
+- Others, The (2001) - Plot of the movie: In 1945, immediately following the end of Second World War, a woman who lives with her two photosensitive children on her darkened old family estate in the Channel Islands becomes convinced that the home is haunted.
+- Maleficent (2014) - Plot of the movie: A vengeful fairy is driven to curse an infant princess, only to discover that the child could be the one person who can restore peace to their troubled land.
+- Last Samurai, The (2003) - Plot of the movie: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+- Bucket List, The (2007) - Plot of the movie: Two terminally ill men escape from a cancer ward and head off on a road trip with a wish list of to-dos before they die.
+- Blind Side, The  (2009) - Plot of the movie: The story of Michael Oher, a homeless and traumatized boy who became an All-American football player and first-round NFL draft pick with the help of a caring woman and her family.
+
+List B:
+- La La Land (2016) - Plot of the movie: While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.
+- Safe Haven (2013) - Plot of the movie: A young woman with a mysterious past lands in Southport, North Carolina where her bond with a widower forces her to confront the dark secret that haunts her.
+- Others, The (2001) - Plot of the movie: In 1945, immediately following the end of Second World War, a woman who lives with her two photosensitive children on her darkened old family estate in the Channel Islands becomes convinced that the home is haunted.
+- Focus (2015) - Plot of the movie: In the midst of veteran con man Nicky's latest scheme, a woman from his past - now an accomplished femme fatale - shows up and throws his plans for a loop.
+- This Means War (2012) - Plot of the movie: C.I.A. operatives wage an epic battle on each other when they discover they are dating the same woman.
+- Kill Bill: Vol. 1 (2003) - Plot of the movie: After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.
+- Just Like Heaven (2005) - Plot of the movie: A lonely landscape architect falls for the spirit of the beautiful woman who used to live in his new apartment.
+- One Day (2011) - Plot of the movie: After spending the night together on the night of their college graduation Dexter and Emma are shown each year on the same date to see where they are in their lives. They are sometimes together, sometimes not, on that day.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Lady Bird (2017) - Plot of the movie: In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Brave (2012) - Plot of the movie: Determined to make her own path in life, Princess Merida defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse.
+- Wolf of Wall Street, The (2013) - Plot of the movie: Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+
+List B:
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- Iron Man (2008) - Plot of the movie: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
+- Lady Bird (2017) - Plot of the movie: In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Great Gatsby, The (2013) - Plot of the movie: A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- The Butterfly Effect (2004) - Plot of the movie: Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal.
+- Rushmore (1998) - Plot of the movie: A teenager at Rushmore Academy falls for a much older teacher and befriends a middle-aged industrialist. Later, he finds out that his love interest and his friend are having an affair, which prompts him to begin a vendetta.
+- The Intern (2015) - Plot of the movie: Seventy-year-old widower Ben Whittaker has discovered that retirement isn't all it's cracked up to be. Seizing an opportunity to get back in the game, he becomes a senior intern at an online fashion site, founded and run by Jules Ostin.
+- Dodgeball: A True Underdog Story (2004) - Plot of the movie: A group of misfits enter a Las Vegas dodgeball tournament in order to save their cherished local gym from the onslaught of a corporate health fitness chain.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Madagascar (2005) - Plot of the movie: A group of animals who have spent all their life in a New York zoo end up in the jungles of Madagascar, and must adjust to living in the wild.
+- Beetlejuice (1988) - Plot of the movie: The spirits of a deceased couple are harassed by an unbearable family that has moved into their home, and hire a malicious spirit to drive them out.
+- Gravity (2013) - Plot of the movie: Two astronauts work together to survive after an accident leaves them stranded in space.
+
+List B:
+- Source Code (2011) - Plot of the movie: A soldier wakes up in someone else's body and discovers he's part of an experimental government program to find the bomber of a commuter train within 8 minutes.
+- Austin Powers: International Man of Mystery (1997) - Plot of the movie: A world-class playboy and part-time secret agent from the 1960s emerges after thirty years in a cryogenic state to battle with his nemesis Dr. Evil.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Beetlejuice (1988) - Plot of the movie: The spirits of a deceased couple are harassed by an unbearable family that has moved into their home, and hire a malicious spirit to drive them out.
+- Reservoir Dogs (1992) - Plot of the movie: When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.
+- Madagascar (2005) - Plot of the movie: A group of animals who have spent all their life in a New York zoo end up in the jungles of Madagascar, and must adjust to living in the wild.
+- Rushmore (1998) - Plot of the movie: A teenager at Rushmore Academy falls for a much older teacher and befriends a middle-aged industrialist. Later, he finds out that his love interest and his friend are having an affair, which prompts him to begin a vendetta.
+- Dodgeball: A True Underdog Story (2004) - Plot of the movie: A group of misfits enter a Las Vegas dodgeball tournament in order to save their cherished local gym from the onslaught of a corporate health fitness chain.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Dark Knight, The (2008) - Plot of the movie: When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.
+- Harry Potter and the Prisoner of Azkaban (2004) - Plot of the movie: Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Iron Man 2 (2010) - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Fury (2014) - Plot of the movie: A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945.
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+
+List B:
+- Harry Potter and the Half-Blood Prince (2009) - Plot of the movie: As Harry Potter begins his sixth year at Hogwarts, he discovers an old book marked as ""the property of the Half-Blood Prince"" and begins to learn more about Lord Voldemort's dark past.
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Fury (2014) - Plot of the movie: A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945.
+- Slumdog Millionaire (2008) - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of ""Who Wants to be a Millionaire?""
+- Chronicles of Narnia: The Voyage of the Dawn Treader, The (2010) - Plot of the movie: Lucy and Edmund Pevensie return to Narnia with their cousin Eustace where they meet up with Prince Caspian for a trip across the sea aboard the royal ship The Dawn Treader. Along the way they encounter dragons, dwarves, merfolk, and a band of lost warriors before reaching the edge of the world.
+- Incredibles, The (2004) - Plot of the movie: While trying to lead a quiet suburban life, a family of undercover superheroes are forced into action to save the world.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Lord of the Rings: The Two Towers, The (2002) - Plot of the movie: While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.
+- Cast Away (2000) - Plot of the movie: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+- Toy Story (1995) - Plot of the movie: A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy's bedroom.
+- Schindler's List (1993) - Plot of the movie: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+- Spider-Man: Into the Spider-Verse (2018) - Plot of the movie: Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.
+- Departed, The (2006) - Plot of the movie: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+
+List B:
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Plot of the movie: A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
+- 21 Jump Street (2012) - Plot of the movie: A pair of underachieving cops are sent back to a local high school to blend in and bring down a synthetic drug ring.
+- Schindler's List (1993) - Plot of the movie: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Harry Potter and the Goblet of Fire (2005) - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+- Departed, The (2006) - Plot of the movie: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
+- Forrest Gump (1994) - Plot of the movie: The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.
+- Blade (1998) - Plot of the movie: A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Sully (2016) - Plot of the movie: When pilot Chesley ""Sully"" Sullenberger lands his damaged plane on the Hudson River in order to save the flight's passengers and crew, some consider him a hero while others think he was reckless.
+- Aladdin (1992) - Plot of the movie: A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.
+- Gran Torino (2008) - Plot of the movie: After a Hmong teenager tries to steal his prized 1972 Gran Torino, a disgruntled, prejudiced Korean War veteran seeks to redeem both the boy and himself.
+- Tangled (2010) - Plot of the movie: The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+- Departed, The (2006) - Plot of the movie: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- Finding Nemo (2003) - Plot of the movie: After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
+
+List B:
+- Tangled (2010) - Plot of the movie: The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+- Gattaca (1997) - Plot of the movie: A genetically inferior man assumes the identity of a superior one in order to pursue his lifelong dream of space travel.
+- Taxi 2 (2000) - Plot of the movie: Police inspector Emilien and his taxi-driver pal Daniel are back, this time on the tail of a group of Japanese yakuza.
+- Sully (2016) - Plot of the movie: When pilot Chesley ""Sully"" Sullenberger lands his damaged plane on the Hudson River in order to save the flight's passengers and crew, some consider him a hero while others think he was reckless.
+- Gran Torino (2008) - Plot of the movie: After a Hmong teenager tries to steal his prized 1972 Gran Torino, a disgruntled, prejudiced Korean War veteran seeks to redeem both the boy and himself.
+- Office Space (1999) - Plot of the movie: Three company workers who hate their jobs decide to rebel against their greedy boss.
+- L.A. Confidential (1997) - Plot of the movie: As corruption grows in 1950s Los Angeles, three policemen - one strait-laced, one brutal, and one sleazy - investigate a series of murders with their own brand of justice.
+- Avatar (2009) - Plot of the movie: A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Miss Congeniality (2000) - Plot of the movie: An F.B.I. Agent must go undercover in the Miss United States beauty pageant to prevent a group from bombing the event.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Back to the Future (1985) - Plot of the movie: Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.
+- Bourne Supremacy, The (2004) - Plot of the movie: When Jason Bourne is framed for a CIA operation gone awry, he is forced to resume his former life as a trained assassin to survive.
+- Hacksaw Ridge (2016) - Plot of the movie: World War II American Army Medic Desmond T. Doss, serving during the Battle of Okinawa, refuses to kill people and becomes the first man in American history to receive the Medal of Honor without firing a shot.
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Plot of the movie: Blacksmith Will Turner teams up with eccentric pirate ""Captain"" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.
+- Creed (2015) - Plot of the movie: The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.
+- Beauty and the Beast (1991) - Plot of the movie: A prince cursed to spend his days as a hideous monster sets out to regain his humanity by earning a young woman's love.
+
+List B:
+- Catch Me If You Can (2002) - Plot of the movie: Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Plot of the movie: Blacksmith Will Turner teams up with eccentric pirate ""Captain"" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.
+- Die Hard (1988) - Plot of the movie: A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.
+- Beautiful Mind, A (2001) - Plot of the movie: After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.
+- 300 (2007) - Plot of the movie: King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Miss Congeniality (2000) - Plot of the movie: An F.B.I. Agent must go undercover in the Miss United States beauty pageant to prevent a group from bombing the event.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- 21 Jump Street (2012) - Plot of the movie: A pair of underachieving cops are sent back to a local high school to blend in and bring down a synthetic drug ring.
+- Spider-Man: Into the Spider-Verse (2018) - Plot of the movie: Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.
+- Blade (1998) - Plot of the movie: A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires.
+- Harry Potter and the Goblet of Fire (2005) - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+- Iron Man 2 (2010) - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- Love Actually (2003) - Plot of the movie: Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England.
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Plot of the movie: A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.
+
+List B:
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Lord of the Rings: The Two Towers, The (2002) - Plot of the movie: While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.
+- Cast Away (2000) - Plot of the movie: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+- Toy Story (1995) - Plot of the movie: A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy's bedroom.
+- Schindler's List (1993) - Plot of the movie: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+- Spider-Man: Into the Spider-Verse (2018) - Plot of the movie: Teen Miles Morales becomes the Spider-Man of his universe and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.
+- Departed, The (2006) - Plot of the movie: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Game, The (1997) - Plot of the movie: After a wealthy San Francisco banker is given an opportunity to participate in a mysterious game, his life is turned upside down as he begins to question if it might really be a concealed conspiracy to destroy him.
+- Isle of Dogs (2018) - Plot of the movie: Set in Japan, Isle of Dogs follows a boy's odyssey in search of his lost dog.
+- Demolition Man (1993) - Plot of the movie: A police officer is brought out of suspended animation in prison to pursue an old ultra-violent nemesis who is loose in a non-violent future society.
+- How to Train Your Dragon (2010) - Plot of the movie: A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.
+- Cruel Intentions (1999) - Plot of the movie: Two vicious step-siblings of an elite Manhattan prep school make a wager: to deflower the new headmaster's daughter before the start of term.
+- Children of Dune (2003) - Plot of the movie: The twins of Paul ""Muad'dib"" Atreides become embroiled in the political landscape of Arrakis (""Dune"") and the rest of the universe.
+- Bug's Life, A (1998) - Plot of the movie: A misfit ant, looking for ""warriors"" to save his colony from greedy grasshoppers, recruits a group of bugs that turn out to be an inept circus troupe.
+- Arrival (2016) - Plot of the movie: A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.
+
+List B:
+- Game, The (1997) - Plot of the movie: After a wealthy San Francisco banker is given an opportunity to participate in a mysterious game, his life is turned upside down as he begins to question if it might really be a concealed conspiracy to destroy him.
+- Bug's Life, A (1998) - Plot of the movie: A misfit ant, looking for ""warriors"" to save his colony from greedy grasshoppers, recruits a group of bugs that turn out to be an inept circus troupe.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- Watchmen (2009) - Plot of the movie: In 1985 where former superheroes exist, the murder of a colleague sends active vigilante Rorschach into his own sprawling investigation, uncovering something that could completely change the course of history as we know it.
+- Isle of Dogs (2018) - Plot of the movie: Set in Japan, Isle of Dogs follows a boy's odyssey in search of his lost dog.
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Plot of the movie: Blacksmith Will Turner teams up with eccentric pirate ""Captain"" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.
+- Others, The (2001) - Plot of the movie: In 1945, immediately following the end of Second World War, a woman who lives with her two photosensitive children on her darkened old family estate in the Channel Islands becomes convinced that the home is haunted.
+- Monsters University (2013) - Plot of the movie: A look at the relationship between Mike Wazowski (Billy Crystal) and James P. ""Sully"" Sullivan (John Goodman) during their days at Monsters University, when they weren't necessarily the best of friends.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Old Boy (2003) - Plot of the movie: After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must find his captor in five days.
+- School of Rock (2003) - Plot of the movie: After being kicked out of his rock band, Dewey Finn becomes a substitute teacher of an uptight elementary private school, only to try and turn his class into a rock band.
+- Inglourious Basterds (2009) - Plot of the movie: In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.
+- Pulp Fiction (1994) - Plot of the movie: The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.
+- 12 Years a Slave (2013) - Plot of the movie: In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
+- X2: X-Men United (2003) - Plot of the movie: When anti-mutant Colonel William Stryker kidnaps Professor X and attacks his school, the X-Men must ally with their archenemy Magneto to stop him.
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- Wrestler, The (2008) - Plot of the movie: A faded professional wrestler must retire, but finds his quest for a new life outside the ring a dispiriting struggle.
+
+List B:
+- Hereditary (2018) - Plot of the movie: A grieving family is haunted by tragic and disturbing occurrences.
+- Beautiful Mind, A (2001) - Plot of the movie: After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Plot of the movie: Blacksmith Will Turner teams up with eccentric pirate ""Captain"" Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.
+- Wrestler, The (2008) - Plot of the movie: A faded professional wrestler must retire, but finds his quest for a new life outside the ring a dispiriting struggle.
+- 12 Years a Slave (2013) - Plot of the movie: In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
+- The Interview (2014) - Plot of the movie: Dave Skylark and his producer Aaron Rapaport run the celebrity tabloid show ""Skylark Tonight"". When they land an interview with a surprise fan, North Korean dictator Jong-Un Kim, they are recruited by the CIA to assassinate him.
+- X2: X-Men United (2003) - Plot of the movie: When anti-mutant Colonel William Stryker kidnaps Professor X and attacks his school, the X-Men must ally with their archenemy Magneto to stop him.
+- Bourne Supremacy, The (2004) - Plot of the movie: When Jason Bourne is framed for a CIA operation gone awry, he is forced to resume his former life as a trained assassin to survive.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- Goodfellas (1990) - Plot of the movie: The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.
+- Fifth Element, The (1997) - Plot of the movie: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.
+- Erin Brockovich (2000) - Plot of the movie: An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.
+- Sherlock Holmes (2009) - Plot of the movie: Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.
+- Rise of the Planet of the Apes (2011) - Plot of the movie: A substance designed to help the brain repair itself gives advanced intelligence to a chimpanzee who leads an ape uprising.
+- Gravity (2013) - Plot of the movie: Two astronauts work together to survive after an accident leaves them stranded in space.
+- Tropic Thunder (2008) - Plot of the movie: Through a series of freak occurrences, a group of actors shooting a big-budget war movie are forced to become the soldiers they are portraying.
+
+List B:
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- John Wick (2014) - Plot of the movie: An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.
+- Erin Brockovich (2000) - Plot of the movie: An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.
+- Sherlock Holmes (2009) - Plot of the movie: Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.
+- Bridge of Spies (2015) - Plot of the movie: During the Cold War, an American lawyer is recruited to defend an arrested Soviet spy in court, and then help the CIA facilitate an exchange of the spy for the Soviet captured American U2 spy plane pilot, Francis Gary Powers.
+- Fifth Element, The (1997) - Plot of the movie: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.
+- Ex Machina (2015) - Plot of the movie: A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.
+- Austin Powers: International Man of Mystery (1997) - Plot of the movie: A world-class playboy and part-time secret agent from the 1960s emerges after thirty years in a cryogenic state to battle with his nemesis Dr. Evil.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- Iron Man (2008) - Plot of the movie: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
+- Lady Bird (2017) - Plot of the movie: In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Great Gatsby, The (2013) - Plot of the movie: A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+
+List B:
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Lady Bird (2017) - Plot of the movie: In 2002, an artistically inclined 17-year-old girl comes of age in Sacramento, California.
+- The Hateful Eight (2015) - Plot of the movie: In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+- Brave (2012) - Plot of the movie: Determined to make her own path in life, Princess Merida defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Great Gatsby, The (2013) - Plot of the movie: A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Dark Knight Rises, The (2012) - Plot of the movie: Eight years after the Joker's reign of chaos, Batman is coerced out of exile with the assistance of the mysterious Selina Kyle in order to defend Gotham City from the vicious guerrilla terrorist Bane.
+- Harry Potter and the Goblet of Fire (2005) - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Iron Man 2 (2010) - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Reservoir Dogs (1992) - Plot of the movie: When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+
+List B:
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Interstellar (2014) - Plot of the movie: When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Dark Knight Rises, The (2012) - Plot of the movie: Eight years after the Joker's reign of chaos, Batman is coerced out of exile with the assistance of the mysterious Selina Kyle in order to defend Gotham City from the vicious guerrilla terrorist Bane.
+- Jurassic Park (1993) - Plot of the movie: A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- John Wick (2014) - Plot of the movie: An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.
+- Aliens (1986) - Plot of the movie: Decades after surviving the Nostromo incident, Ellen Ripley is sent out to re-establish contact with a terraforming colony but finds herself battling the Alien Queen and her offspring.
+- Clerks (1994) - Plot of the movie: A day in the lives of two convenience clerks named Dante and Randal as they annoy customers, discuss movies, and play hockey on the store roof.
+- Zootopia (2016) - Plot of the movie: In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.
+- Transporter, The (2002) - Plot of the movie: Frank Martin, who ""transports"" packages for unknown clients, is asked to move a package that soon begins moving, and complications arise.
+- Parasite (2019) - Plot of the movie: Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
+- Shrek 2 (2004) - Plot of the movie: Shrek and Fiona travel to the Kingdom of Far Far Away, where Fiona's parents are King and Queen, to celebrate their marriage. When they arrive, they find they are not as welcome as they thought they would be.
+
+List B:
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Fargo (1996) - Plot of the movie: Minnesota car salesman Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.
+- X-Men: First Class (2011) - Plot of the movie: In the 1960s, superpowered humans Charles Xavier and Erik Lensherr work together to find others like them, but Erik's vengeful pursuit of an ambitious mutant who ruined his life causes a schism to divide them.
+- Cabin in the Woods, The (2012) - Plot of the movie: Five friends go for a break at a remote cabin, where they get more than they bargained for, discovering the truth behind the cabin in the woods.
+- Clerks (1994) - Plot of the movie: A day in the lives of two convenience clerks named Dante and Randal as they annoy customers, discuss movies, and play hockey on the store roof.
+- Pearl Harbor (2001) - Plot of the movie: A tale of war and romance mixed in with history. The story follows two lifelong friends and a beautiful nurse who are caught up in the horror of an infamous Sunday morning in 1941.
+- Parasite (2019) - Plot of the movie: Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
+- Gladiator (2000) - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+- Captain America: Civil War (2016) - Plot of the movie: Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.
+- The Theory of Everything (2014) - Plot of the movie: A look at the relationship between the famous physicist Stephen Hawking and his wife.
+- American Beauty (1999) - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+- Game, The (1997) - Plot of the movie: After a wealthy San Francisco banker is given an opportunity to participate in a mysterious game, his life is turned upside down as he begins to question if it might really be a concealed conspiracy to destroy him.
+- Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) - Plot of the movie: Kazakh TV talking head Borat is dispatched to the United States to report on the greatest country in the world. With a documentary crew in tow, Borat becomes more interested in locating and marrying Pamela Anderson.
+- Last Samurai, The (2003) - Plot of the movie: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+- World War Z (2013) - Plot of the movie: Former United Nations employee Gerry Lane traverses the world in a race against time to stop a zombie pandemic that is toppling armies and governments and threatens to destroy humanity itself.
+
+List B:
+- Finding Nemo (2003) - Plot of the movie: After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.
+- Logan (2017) - Plot of the movie: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+- Last Samurai, The (2003) - Plot of the movie: An American military advisor embraces the Samurai culture he was hired to destroy after he is captured in battle.
+- Moana (2016) - Plot of the movie: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.
+- The Theory of Everything (2014) - Plot of the movie: A look at the relationship between the famous physicist Stephen Hawking and his wife.
+- World War Z (2013) - Plot of the movie: Former United Nations employee Gerry Lane traverses the world in a race against time to stop a zombie pandemic that is toppling armies and governments and threatens to destroy humanity itself.
+- Captain America: Civil War (2016) - Plot of the movie: Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.
+- Inside Out (2015) - Plot of the movie: After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust, and Sadness - conflict on how best to navigate a new city, house, and school.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Harry Potter and the Half-Blood Prince (2009) - Plot of the movie: As Harry Potter begins his sixth year at Hogwarts, he discovers an old book marked as ""the property of the Half-Blood Prince"" and begins to learn more about Lord Voldemort's dark past.
+- Pitch Black (2000) - Plot of the movie: A transport ship crashes and leaves its crew stranded on a desert planet inhabited by bloodthirsty creatures that come out during an eclipse.
+- Forrest Gump (1994) - Plot of the movie: The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.
+- The Hunger Games: Catching Fire (2013) - Plot of the movie: Katniss Everdeen and Peeta Mellark become targets of the Capitol after their victory in the 74th Hunger Games sparks a rebellion in the Districts of Panem.
+- Guardians of the Galaxy 2 (2017) - Plot of the movie: The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.
+- Gladiator (2000) - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+- Riddick (2013) - Plot of the movie: Left for dead on a sun-scorched planet, Riddick finds himself up against an alien race of predators. Activating an emergency beacon alerts two ships: one carrying a new breed of mercenary, the other captained by a man from Riddick's past.
+- American History X (1998) - Plot of the movie: Living a life marked by violence, neo-Nazi Derek finally goes to prison after killing two black youths. Upon his release, Derek vows to change; he hopes to prevent his brother, Danny, who idolizes Derek, from following in his footsteps.
+
+List B:
+- Gladiator (2000) - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Forrest Gump (1994) - Plot of the movie: The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.
+- Iron Man 2 (2010) - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- Ice Age (2002) - Plot of the movie: The story revolves around sub-zero heroes: a woolly mammoth, a saber-toothed tiger, a sloth and a prehistoric combination of a squirrel and rat, known as Scrat.
+- American History X (1998) - Plot of the movie: Living a life marked by violence, neo-Nazi Derek finally goes to prison after killing two black youths. Upon his release, Derek vows to change; he hopes to prevent his brother, Danny, who idolizes Derek, from following in his footsteps.
+- Hobbit: The Desolation of Smaug, The (2013) - Plot of the movie: The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.
+- Deadpool (2016) - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Lord of the Rings: The Two Towers, The (2002) - Plot of the movie: While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.
+- Ocean's Twelve (2004) - Plot of the movie: Daniel Ocean recruits one more team member so he can pull off three major European heists in this sequel to Ocean's Eleven (2001).
+- Arrival (2016) - Plot of the movie: A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.
+- Easy A (2010) - Plot of the movie: A clean-cut high school student relies on the school's rumor mill to advance her social and financial standing.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Charlie and the Chocolate Factory (2005) - Plot of the movie: A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Jason Bourne (2016) - Plot of the movie: The CIA's most dangerous former operative is drawn out of hiding to uncover more explosive truths about his past.
+
+List B:
+- Iron Man (2008) - Plot of the movie: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
+- Jason Bourne (2016) - Plot of the movie: The CIA's most dangerous former operative is drawn out of hiding to uncover more explosive truths about his past.
+- Charlie and the Chocolate Factory (2005) - Plot of the movie: A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.
+- American History X (1998) - Plot of the movie: Living a life marked by violence, neo-Nazi Derek finally goes to prison after killing two black youths. Upon his release, Derek vows to change; he hopes to prevent his brother, Danny, who idolizes Derek, from following in his footsteps.
+- Warcraft (2016) - Plot of the movie: As an Orc horde invades the planet Azeroth using a magic portal, a few human heroes and dissenting Orcs must attempt to stop the true evil behind this war.
+- Easy A (2010) - Plot of the movie: A clean-cut high school student relies on the school's rumor mill to advance her social and financial standing.
+- Wallace & Gromit in The Curse of the Were-Rabbit (2005) - Plot of the movie: Wallace and his loyal dog, Gromit, set out to discover the mystery behind the garden sabotage that plagues their village and threatens the annual giant vegetable growing contest.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Big Hero 6 (2014) - Plot of the movie: A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes.
+- John Wick: Chapter Two (2017) - Plot of the movie: After returning to the criminal underworld to repay a debt, John Wick discovers that a large bounty has been put on his life.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Hangover Part II, The (2011) - Plot of the movie: Two years after the bachelor party in Las Vegas, Phil, Stu, Alan, and Doug jet to Thailand for Stu's wedding. Stu's plan for a subdued pre-wedding brunch, however, goes seriously awry.
+- The Theory of Everything (2014) - Plot of the movie: A look at the relationship between the famous physicist Stephen Hawking and his wife.
+- Inglourious Basterds (2009) - Plot of the movie: In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.
+- Dead Poets Society (1989) - Plot of the movie: Maverick teacher John Keating returns in 1959 to the prestigious New England boys' boarding school where he was once a star student, using poetry to embolden his pupils to new heights of self-expression.
+- Blade Runner 2049 (2017) - Plot of the movie: Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.
+
+List B:
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Hangover Part II, The (2011) - Plot of the movie: Two years after the bachelor party in Las Vegas, Phil, Stu, Alan, and Doug jet to Thailand for Stu's wedding. Stu's plan for a subdued pre-wedding brunch, however, goes seriously awry.
+- Big Hero 6 (2014) - Plot of the movie: A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes.
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- John Wick: Chapter Two (2017) - Plot of the movie: After returning to the criminal underworld to repay a debt, John Wick discovers that a large bounty has been put on his life.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Lost in Translation (2003) - Plot of the movie: A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo.
+- Blind Side, The  (2009) - Plot of the movie: The story of Michael Oher, a homeless and traumatized boy who became an All-American football player and first-round NFL draft pick with the help of a caring woman and her family.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Incredibles, The (2004) - Plot of the movie: While trying to lead a quiet suburban life, a family of undercover superheroes are forced into action to save the world.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Aliens (1986) - Plot of the movie: Decades after surviving the Nostromo incident, Ellen Ripley is sent out to re-establish contact with a terraforming colony but finds herself battling the Alien Queen and her offspring.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- The Hunger Games: Catching Fire (2013) - Plot of the movie: Katniss Everdeen and Peeta Mellark become targets of the Capitol after their victory in the 74th Hunger Games sparks a rebellion in the Districts of Panem.
+- Get Out (2017) - Plot of the movie: A young African-American visits his White girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.
+- Harry Potter and the Prisoner of Azkaban (2004) - Plot of the movie: Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.
+- Zodiac (2007) - Plot of the movie: Between 1968 and 1983, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.
+
+List B:
+- Inception (2010) - Plot of the movie: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.
+- Truman Show, The (1998) - Plot of the movie: An insurance salesman discovers his whole life is actually a reality TV show.
+- Harry Potter and the Prisoner of Azkaban (2004) - Plot of the movie: Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Napoleon Dynamite (2004) - Plot of the movie: A listless and alienated teenager decides to help his new friend win the class presidency in their small western high school, while he must deal with his bizarre family life back home.
+- Heat (1995) - Plot of the movie: A group of high-end professional thieves start to feel the heat from the LAPD when they unknowingly leave a clue at their latest heist.
+- Get Out (2017) - Plot of the movie: A young African-American visits his White girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.
+- Incredibles, The (2004) - Plot of the movie: While trying to lead a quiet suburban life, a family of undercover superheroes are forced into action to save the world.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Bourne Identity, The (1988) - Plot of the movie: An injured, unconscious man washes ashore in a small French town. As he recovers, it becomes quite clear, someone is trying to kill him.
+- Great Gatsby, The (2013) - Plot of the movie: A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.
+- Remember the Titans (2000) - Plot of the movie: The true story of a newly appointed African-American coach and his high school team on their first season as a racially integrated unit.
+- Trainspotting (1996) - Plot of the movie: Renton, deeply immersed in the Edinburgh drug scene, tries to clean up and get out, despite the allure of the drugs and influence of friends.
+- Despicable Me (2010) - Plot of the movie: When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better.
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- 13 Going on 30 (2004) - Plot of the movie: Jenna Rink makes an unusual wish on her birthday. Miraculously, her wish comes true and the 13-year-old Jenna wakes up the next day as a 30-year-old woman.
+
+List B:
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Eternal Sunshine of the Spotless Mind (2004) - Plot of the movie: When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories for ever.
+- Indiana Jones and the Last Crusade (1989) - Plot of the movie: In 1938, after his father goes missing while pursuing the Holy Grail, Indiana Jones finds himself up against the Nazis again to stop them from obtaining its powers.
+- Remember the Titans (2000) - Plot of the movie: The true story of a newly appointed African-American coach and his high school team on their first season as a racially integrated unit.
+- Fight Club (1999) - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Zombieland (2009) - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Dark Knight, The (2008) - Plot of the movie: When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Gladiator (2000) - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Rogue One: A Star Wars Story (2016) - Plot of the movie: In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.
+- Life of Pi (2012) - Plot of the movie: A young man who survives a disaster at sea is hurtled into an epic journey of adventure and discovery. While cast away, he forms an unexpected connection with another survivor: a fearsome Bengal tiger.
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Source Code (2011) - Plot of the movie: A soldier wakes up in someone else's body and discovers he's part of an experimental government program to find the bomber of a commuter train within 8 minutes.
+- Deadpool (2016) - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+- Dead Poets Society (1989) - Plot of the movie: Maverick teacher John Keating returns in 1959 to the prestigious New England boys' boarding school where he was once a star student, using poetry to embolden his pupils to new heights of self-expression.
+
+List B:
+- Source Code (2011) - Plot of the movie: A soldier wakes up in someone else's body and discovers he's part of an experimental government program to find the bomber of a commuter train within 8 minutes.
+- Monsters, Inc. (2001) - Plot of the movie: In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.
+- Django Unchained (2012) - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+- Hangover, The (2009) - Plot of the movie: Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.
+- Kill Bill: Vol. 2 (2004) - Plot of the movie: The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Terminal, The (2004) - Plot of the movie: An Eastern European tourist unexpectedly finds himself stranded in JFK airport, and must take up temporary residence there.
+- Rogue One: A Star Wars Story (2016) - Plot of the movie: In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",B
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Tangled (2010) - Plot of the movie: The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+- Gattaca (1997) - Plot of the movie: A genetically inferior man assumes the identity of a superior one in order to pursue his lifelong dream of space travel.
+- Taxi 2 (2000) - Plot of the movie: Police inspector Emilien and his taxi-driver pal Daniel are back, this time on the tail of a group of Japanese yakuza.
+- Sully (2016) - Plot of the movie: When pilot Chesley ""Sully"" Sullenberger lands his damaged plane on the Hudson River in order to save the flight's passengers and crew, some consider him a hero while others think he was reckless.
+- Gran Torino (2008) - Plot of the movie: After a Hmong teenager tries to steal his prized 1972 Gran Torino, a disgruntled, prejudiced Korean War veteran seeks to redeem both the boy and himself.
+- Office Space (1999) - Plot of the movie: Three company workers who hate their jobs decide to rebel against their greedy boss.
+- L.A. Confidential (1997) - Plot of the movie: As corruption grows in 1950s Los Angeles, three policemen - one strait-laced, one brutal, and one sleazy - investigate a series of murders with their own brand of justice.
+- Avatar (2009) - Plot of the movie: A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.
+
+List B:
+- Intouchables (2011) - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Taxi 2 (2000) - Plot of the movie: Police inspector Emilien and his taxi-driver pal Daniel are back, this time on the tail of a group of Japanese yakuza.
+- Sully (2016) - Plot of the movie: When pilot Chesley ""Sully"" Sullenberger lands his damaged plane on the Hudson River in order to save the flight's passengers and crew, some consider him a hero while others think he was reckless.
+- Tangled (2010) - Plot of the movie: The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.
+- Office Space (1999) - Plot of the movie: Three company workers who hate their jobs decide to rebel against their greedy boss.
+- Taxi 4 (2007) - Plot of the movie: Daniel, the driver of a very special taxi in Marseille, gets a famous soccer player to the stadium in time and later helps his clumsy police friend Émilien catch the dangerous Belgian after he escaped on Émilien's guard.
+- Gattaca (1997) - Plot of the movie: A genetically inferior man assumes the identity of a superior one in order to pursue his lifelong dream of space travel.
+- 50 First Dates (2004) - Plot of the movie: Henry Roth is a man afraid of commitment until he meets the beautiful Lucy. They hit it off and Henry think he's finally found the girl of his dreams until discovering she has short-term memory loss and forgets him the next day.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A
+"Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Pianist, The (2002) - Plot of the movie: A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Good Will Hunting (1997) - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Guardians of the Galaxy (2014) - Plot of the movie: A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.
+- Illusionist, The (2006) - Plot of the movie: In turn-of-the-century Vienna, a magician uses his abilities to secure the love of a woman far above his social standing.
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+
+List B:
+- Illusionist, The (2006) - Plot of the movie: In turn-of-the-century Vienna, a magician uses his abilities to secure the love of a woman far above his social standing.
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Catch Me If You Can (2002) - Plot of the movie: Barely 21 yet, Frank is a skilled forger who has passed as a doctor, lawyer and pilot. FBI agent Carl becomes obsessed with tracking down the con man, who only revels in the pursuit.
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Shawshank Redemption, The (1994) - Plot of the movie: Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.
+- Whiplash (2014) - Plot of the movie: A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+- Memento (2000) - Plot of the movie: A man with short-term memory loss attempts to track down his wife's murderer.
+- Million Dollar Baby (2004) - Plot of the movie: Frankie, an ill-tempered old coach, reluctantly agrees to train aspiring boxer Maggie. Impressed with her determination and talent, he helps her become the best and the two soon form a close bond.
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'.",A

@@ -1,0 +1,9 @@
+You are given two lists with movies. Your task is to evaluate which list is more diverse based on the movie name and its genres. Provide your reasoning for the comparison and choose the more diverse list.
+
+Use the following JSON schema for your response:
+{
+  'reasoning': str,   # Explain your comparison of the two lists and your decision.
+  'more_diverse_list': str  # The list you determine to be more diverse, either 'A' or 'B'.
+}
+
+Please ensure your response strictly follows this schema.

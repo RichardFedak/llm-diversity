@@ -1,0 +1,38 @@
+{
+    "cf_ild": {
+        "correct": 56,
+        "incorrect": 131,
+        "total": 187,
+        "accuracy": 0.2994652406417112
+    },
+    "cb_ild": {
+        "correct": 49,
+        "incorrect": 137,
+        "total": 186,
+        "accuracy": 0.26344086021505375
+    },
+    "ease_ild": {
+        "correct": 42,
+        "incorrect": 145,
+        "total": 187,
+        "accuracy": 0.22459893048128343
+    },
+    "genres": {
+        "correct": 56,
+        "incorrect": 130,
+        "total": 186,
+        "accuracy": 0.3010752688172043
+    },
+    "tags": {
+        "correct": 20,
+        "incorrect": 150,
+        "total": 170,
+        "accuracy": 0.11764705882352941
+    },
+    "bin_div": {
+        "correct": 52,
+        "incorrect": 134,
+        "total": 186,
+        "accuracy": 0.27956989247311825
+    }
+}

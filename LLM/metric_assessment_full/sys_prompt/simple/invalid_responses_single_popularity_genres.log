@@ -1,0 +1,24 @@
+Invalid Outputs:
+
+Prompt: List A:
+- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller
+- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+
+List B:
+- Prestige, The (2006) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+
+List C:
+- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+- Fury (2014) - Genres of the movie: Action, Drama, War
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy
+Error: 500 Unable to submit request because the service is temporarily unavailable.
+

@@ -1,0 +1,686 @@
+input,output
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Doctor Strange (2016) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Snatch (2000) - Genres of the movie: Comedy, Crime
+- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+
+List B:
+- Sherlock Holmes (2009) - Genres of the movie: Action, Adventure, Mystery
+- Fantastic Beasts and Where to Find Them (2016) - Genres of the movie: Adventure, Family, Fantasy
+- Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi
+- Guardians of the Galaxy 2 (2017) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi
+
+List C:
+- Snatch (2000) - Genres of the movie: Comedy, Crime
+- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi
+- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Sherlock Holmes (2009) - Genres of the movie: Action, Adventure, Mystery
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Shawshank Redemption, The (1994) - Genres of the movie: Drama
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi
+- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller
+- Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Gone Girl (2014) - Genres of the movie: Drama, Mystery, Thriller
+- Help, The (2011) - Genres of the movie: Drama
+
+List B:
+- Step Up 2 the Streets (2008) - Genres of the movie: Drama, Music, Romance
+- Mulan (1998) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, War
+- Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi
+- Harry Potter and the Goblet of Fire (2005) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- X-Men (2000) - Genres of the movie: Action, Adventure, Sci-Fi
+
+List C:
+- Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi
+- Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller
+- Harry Potter and the Deathly Hallows: Part 1 (2010) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi
+- Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Split (2017) - Genres of the movie: Horror, Thriller
+- Requiem for a Dream (2000) - Genres of the movie: Drama
+
+List B:
+- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Being John Malkovich (1999) - Genres of the movie: Comedy, Drama, Fantasy
+- Shawshank Redemption, The (1994) - Genres of the movie: Drama
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Little Miss Sunshine (2006) - Genres of the movie: Comedy, Drama
+- 1917 (2019) - Genres of the movie: Action, Drama, War
+- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama
+- 28 Days Later (2002) - Genres of the movie: Drama, Horror, Sci-Fi, Thriller
+
+List C:
+- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- 1917 (2019) - Genres of the movie: Action, Drama, War
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Being John Malkovich (1999) - Genres of the movie: Comedy, Drama, Fantasy
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Knives Out (2019) - Genres of the movie: Comedy, Crime, Drama, Mystery, Thriller
+- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Annihilation (2018) - Genres of the movie: Adventure, Drama, Horror, Mystery, Sci-Fi, Thriller
+- Clue (1985) - Genres of the movie: Comedy, Crime, Mystery, Thriller
+- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+- Fargo (1996) - Genres of the movie: Crime, Thriller
+- A Quiet Place (2018) - Genres of the movie: Drama, Horror, Sci-Fi
+
+List B:
+- Fargo (1996) - Genres of the movie: Crime, Thriller
+- X-Men: First Class (2011) - Genres of the movie: Action, Sci-Fi
+- Cabin in the Woods, The (2012) - Genres of the movie: Horror, Mystery, Thriller
+- Pearl Harbor (2001) - Genres of the movie: Action, Drama, History, Romance, War
+- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+
+List C:
+- John Wick (2014) - Genres of the movie: Action, Crime, Thriller
+- Aliens (1986) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+- Transporter, The (2002) - Genres of the movie: Action, Crime, Thriller
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- A-Team, The (2010) - Genres of the movie: Action, Adventure, Crime, Thriller
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy
+- Back to the Future Part II (1989) - Genres of the movie: Adventure, Comedy, Sci-Fi
+- There Will Be Blood (2007) - Genres of the movie: Drama
+- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller
+
+List B:
+- Looper (2012) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Hangover, The (2009) - Genres of the movie: Comedy
+- Notting Hill (1999) - Genres of the movie: Comedy, Drama, Romance
+- Recruit, The (2003) - Genres of the movie: Action, Thriller
+- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama
+
+List C:
+- A-Team, The (2010) - Genres of the movie: Action, Adventure, Crime, Thriller
+- Notting Hill (1999) - Genres of the movie: Comedy, Drama, Romance
+- Kingsman: The Golden Circle (2017) - Genres of the movie: Action, Adventure, Comedy, Crime, Thriller
+- Recruit, The (2003) - Genres of the movie: Action, Thriller
+- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Looper (2012) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",B
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller
+- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+
+List B:
+- Prestige, The (2006) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+
+List C:
+- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+- Fury (2014) - Genres of the movie: Action, Drama, War
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller
+- Secret Life of Walter Mitty, The (2013) - Genres of the movie: Adventure, Comedy, Drama, Fantasy, Romance
+- Lord of War (2005) - Genres of the movie: Crime, Drama
+- Sherlock Holmes: A Game of Shadows (2011) - Genres of the movie: Action, Adventure, Mystery
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Truman Show, The (1998) - Genres of the movie: Comedy, Drama
+- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi
+
+List B:
+- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Wreck-It Ralph (2012) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi
+- Truman Show, The (1998) - Genres of the movie: Comedy, Drama
+- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- Emperor's New Groove, The (2000) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- The Hateful Eight (2015) - Genres of the movie: Crime, Drama, Mystery, Thriller, Western
+
+List C:
+- Secret Life of Walter Mitty, The (2013) - Genres of the movie: Adventure, Comedy, Drama, Fantasy, Romance
+- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Gone Girl (2014) - Genres of the movie: Drama, Mystery, Thriller
+- Time Machine, The (2002) - Genres of the movie: Action, Adventure, Sci-Fi
+- The Hateful Eight (2015) - Genres of the movie: Crime, Drama, Mystery, Thriller, Western
+- Emperor's New Groove, The (2000) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Lord of War (2005) - Genres of the movie: Crime, Drama
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Dallas Buyers Club (2013) - Genres of the movie: Biography, Drama
+- Twilight Saga: Breaking Dawn - Part 2, The (2012) - Genres of the movie: Adventure, Drama, Fantasy, Romance
+- Star Wars: Episode III - Revenge of the Sith (2005) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance
+- Super Size Me (2004) - Genres of the movie: Documentary
+
+List B:
+- Twilight Saga: Breaking Dawn - Part 2, The (2012) - Genres of the movie: Adventure, Drama, Fantasy, Romance
+- Fifty Shades Darker (2017) - Genres of the movie: Drama, Romance, Thriller
+- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller
+- Limitless (2011) - Genres of the movie: Sci-Fi, Thriller
+- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance
+
+List C:
+- Thor: Ragnarok (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy, Sci-Fi
+- Fifty Shades Darker (2017) - Genres of the movie: Drama, Romance, Thriller
+- Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy
+- Black Hawk Down (2001) - Genres of the movie: Action, Drama, History, War
+- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Chappie (2015) - Genres of the movie: Action, Crime, Drama, Sci-Fi, Thriller
+- Trainspotting (1996) - Genres of the movie: Drama
+- Ring, The (2002) - Genres of the movie: Horror, Mystery
+- Whiplash (2014) - Genres of the movie: Drama, Music
+- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi
+
+List B:
+- Blade (1998) - Genres of the movie: Action, Horror, Sci-Fi
+- Chappie (2015) - Genres of the movie: Action, Crime, Drama, Sci-Fi, Thriller
+- Usual Suspects, The (1995) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Jumanji: Welcome to the Jungle (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy
+- The Butterfly Effect (2004) - Genres of the movie: Drama, Sci-Fi, Thriller
+
+List C:
+- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+- The Butterfly Effect (2004) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Star Wars: Episode II - Attack of the Clones (2002) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller
+- Princess Bride, The (1987) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Romance
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Deadpool (2016) - Genres of the movie: Action, Comedy
+- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Django Unchained (2012) - Genres of the movie: Drama, Western
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi
+- Edge of Tomorrow (2014) - Genres of the movie: Action, Adventure, Sci-Fi
+
+List B:
+- Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Edge of Tomorrow (2014) - Genres of the movie: Action, Adventure, Sci-Fi
+- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi
+- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Deadpool (2016) - Genres of the movie: Action, Comedy
+- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Ice Age (2002) - Genres of the movie: Animation, Adventure, Comedy, Family
+
+List C:
+- Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery
+- Django Unchained (2012) - Genres of the movie: Drama, Western
+- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller
+- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy
+- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi
+- King's Speech, The (2010) - Genres of the movie: Biography, Drama, History
+- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+- Trainspotting (1996) - Genres of the movie: Drama
+
+List B:
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+- 127 Hours (2010) - Genres of the movie: Biography, Drama
+- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+
+List C:
+- Moonrise Kingdom (2012) - Genres of the movie: Comedy, Drama, Family, Romance
+- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance
+- Fantastic Beasts and Where to Find Them (2016) - Genres of the movie: Adventure, Family, Fantasy
+- WALL·E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi
+- Prisoners (2013) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Mean Girls (2004) - Genres of the movie: Comedy
+- Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance
+- 127 Hours (2010) - Genres of the movie: Biography, Drama
+- Gifted (2017) - Genres of the movie: Drama
+
+List B:
+- Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance
+- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- 127 Hours (2010) - Genres of the movie: Biography, Drama
+- Hidden Figures (2016) - Genres of the movie: Biography, Drama, History
+
+List C:
+- Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- Gifted (2017) - Genres of the movie: Drama
+- Kick-Ass 2 (2013) - Genres of the movie: Action, Comedy, Crime, Thriller
+- The Blue Planet (2001) - Genres of the movie: Documentary
+- Prisoners (2013) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Mean Girls (2004) - Genres of the movie: Comedy
+- Along Came Polly (2004) - Genres of the movie: Comedy, Romance
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Django Unchained (2012) - Genres of the movie: Drama, Western
+- Shaun of the Dead (2004) - Genres of the movie: Comedy, Horror
+- Avengers, The (2012) - Genres of the movie: Action, Sci-Fi
+- Sixth Sense, The (1999) - Genres of the movie: Drama, Mystery, Thriller
+
+List B:
+- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Wolf of Wall Street, The (2013) - Genres of the movie: Biography, Comedy, Crime, Drama
+- The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- X2: X-Men United (2003) - Genres of the movie: Action, Sci-Fi, Thriller
+- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+
+List C:
+- The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Deadpool 2 (2018) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi
+- Spider-Man (2002) - Genres of the movie: Action, Adventure, Sci-Fi
+- Incredibles 2 (2018) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Sci-Fi
+- Terminator 2: Judgment Day (1991) - Genres of the movie: Action, Sci-Fi
+- Blade Runner 2049 (2017) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",B
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Untitled Spider-Man Reboot (2017) - Genres of the movie: Action, Adventure, Sci-Fi
+- Lucy (2014) - Genres of the movie: Action, Sci-Fi, Thriller
+- Others, The (2001) - Genres of the movie: Horror, Mystery, Thriller
+- Fast and the Furious, The (2001) - Genres of the movie: Action, Crime, Thriller
+- Donnie Brasco (1997) - Genres of the movie: Biography, Crime, Drama
+- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Moonrise Kingdom (2012) - Genres of the movie: Comedy, Drama, Family, Romance
+
+List B:
+- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller
+- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+- Braveheart (1995) - Genres of the movie: Biography, Drama, History, War
+- Wedding Crashers (2005) - Genres of the movie: Comedy, Romance
+
+List C:
+- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Wedding Crashers (2005) - Genres of the movie: Comedy, Romance
+- Others, The (2001) - Genres of the movie: Horror, Mystery, Thriller
+- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family
+- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller
+- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+- True Grit (2010) - Genres of the movie: Drama, Western
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi
+- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+- Hacksaw Ridge (2016) - Genres of the movie: Biography, Drama, History, War
+- Creed (2015) - Genres of the movie: Action, Drama, Sport
+- Beauty and the Beast (1991) - Genres of the movie: Animation, Family, Fantasy, Musical, Romance
+
+List B:
+- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Creed (2015) - Genres of the movie: Action, Drama, Sport
+- Hacksaw Ridge (2016) - Genres of the movie: Biography, Drama, History, War
+- Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi
+- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+
+List C:
+- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama
+- Die Hard (1988) - Genres of the movie: Action, Thriller
+- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama
+- 300 (2007) - Genres of the movie: Action, Drama
+- Social Network, The (2010) - Genres of the movie: Biography, Drama
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance
+- Gran Torino (2008) - Genres of the movie: Drama
+- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller
+- Social Network, The (2010) - Genres of the movie: Biography, Drama
+- Finding Nemo (2003) - Genres of the movie: Animation, Adventure, Comedy, Family
+
+List B:
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama
+- Taxi 2 (2000) - Genres of the movie: Action, Comedy, Crime
+- Office Space (1999) - Genres of the movie: Comedy
+- Taxi 4 (2007) - Genres of the movie: Action, Comedy, Crime
+- Gattaca (1997) - Genres of the movie: Drama, Sci-Fi, Thriller
+- 50 First Dates (2004) - Genres of the movie: Comedy, Drama, Romance
+
+List C:
+- Gattaca (1997) - Genres of the movie: Drama, Sci-Fi, Thriller
+- Taxi 2 (2000) - Genres of the movie: Action, Comedy, Crime
+- Gran Torino (2008) - Genres of the movie: Drama
+- Office Space (1999) - Genres of the movie: Comedy
+- L.A. Confidential (1997) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Blade Runner 2049 (2017) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
+- Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Genres of the movie: Adventure, Family, Fantasy
+- Rushmore (1998) - Genres of the movie: Comedy, Drama, Romance
+- Sin City (2005) - Genres of the movie: Crime, Thriller
+- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War
+- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+
+List B:
+- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Argo (2012) - Genres of the movie: Biography, Drama, Thriller
+- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Fugitive, The (1993) - Genres of the movie: Action, Crime, Drama, Mystery, Thriller
+- Illusionist, The (2006) - Genres of the movie: Drama, Fantasy, Mystery, Romance, Thriller
+
+List C:
+- Lost Highway (1997) - Genres of the movie: Mystery, Thriller
+- Sicario (2015) - Genres of the movie: Action, Crime, Drama, Mystery, Thriller
+- Blade Runner 2049 (2017) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller
+- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi
+- Illusionist, The (2006) - Genres of the movie: Drama, Fantasy, Mystery, Romance, Thriller
+- Wild at Heart (1990) - Genres of the movie: Crime, Drama, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",B
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Silence of the Lambs, The (1991) - Genres of the movie: Crime, Drama, Thriller
+- Nightcrawler (2014) - Genres of the movie: Crime, Drama, Thriller
+- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+- Love Actually (2003) - Genres of the movie: Comedy, Drama, Romance
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+
+List B:
+- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy
+- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller
+- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller
+- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi
+- 50 First Dates (2004) - Genres of the movie: Comedy, Drama, Romance
+- Deadpool (2016) - Genres of the movie: Action, Comedy
+
+List C:
+- Silence of the Lambs, The (1991) - Genres of the movie: Crime, Drama, Thriller
+- Nightcrawler (2014) - Genres of the movie: Crime, Drama, Thriller
+- Friends with Benefits (2011) - Genres of the movie: Comedy, Romance
+- Deadpool (2016) - Genres of the movie: Action, Comedy
+- Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery
+- 50 First Dates (2004) - Genres of the movie: Comedy, Drama, Romance
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",B
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- School of Rock (2003) - Genres of the movie: Comedy, Music
+- The Man from U.N.C.L.E. (2015) - Genres of the movie: Action, Adventure, Comedy
+- Face/Off (1997) - Genres of the movie: Action, Crime, Sci-Fi, Thriller
+- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Yes Man (2008) - Genres of the movie: Comedy, Romance
+- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- Spy (2015) - Genres of the movie: Action, Comedy
+
+List B:
+- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy
+- The Hunger Games (2012) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Yes Man (2008) - Genres of the movie: Comedy, Romance
+- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Ace Ventura: Pet Detective (1994) - Genres of the movie: Comedy
+- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+
+List C:
+- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance
+- Face/Off (1997) - Genres of the movie: Action, Crime, Sci-Fi, Thriller
+- School of Rock (2003) - Genres of the movie: Comedy, Music
+- Hangover, The (2009) - Genres of the movie: Comedy
+- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller
+- Rain Man (1988) - Genres of the movie: Drama
+- Skyfall (2012) - Genres of the movie: Action, Adventure, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Snatch (2000) - Genres of the movie: Comedy, Crime
+- Croods, The (2013) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy
+- Maverick (1994) - Genres of the movie: Action, Adventure, Comedy, Western
+- Kubo and the Two Strings (2016) - Genres of the movie: Animation, Action, Adventure, Family, Fantasy
+- 88 Minutes (2008) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Elysium (2013) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Frozen (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical
+
+List B:
+- Law Abiding Citizen (2009) - Genres of the movie: Action, Crime, Drama, Thriller
+- Deadpool (2016) - Genres of the movie: Action, Comedy
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Kate & Leopold (2001) - Genres of the movie: Comedy, Fantasy, Romance
+- Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Superbad (2007) - Genres of the movie: Comedy
+- 13th Warrior, The (1999) - Genres of the movie: Action, Adventure, History
+
+List C:
+- Law Abiding Citizen (2009) - Genres of the movie: Action, Crime, Drama, Thriller
+- Croods, The (2013) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy
+- 88 Minutes (2008) - Genres of the movie: Crime, Drama, Mystery, Thriller
+- Maverick (1994) - Genres of the movie: Action, Adventure, Comedy, Western
+- Kubo and the Two Strings (2016) - Genres of the movie: Animation, Action, Adventure, Family, Fantasy
+- Exam (2009) - Genres of the movie: Crime, Horror, Mystery, Thriller
+- Going Postal (2010) - Genres of the movie: Adventure, Comedy, Fantasy, Mystery, Romance
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Aliens (1986) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Saving Private Ryan (1998) - Genres of the movie: Drama, War
+- The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Zodiac (2007) - Genres of the movie: Crime, Drama, Mystery, Thriller
+
+List B:
+- I, Robot (2004) - Genres of the movie: Action, Mystery, Sci-Fi, Thriller
+- Untitled Spider-Man Reboot (2017) - Genres of the movie: Action, Adventure, Sci-Fi
+- Napoleon Dynamite (2004) - Genres of the movie: Comedy
+- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Iron Man 2 (2010) - Genres of the movie: Action, Sci-Fi
+
+List C:
+- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller
+- Truman Show, The (1998) - Genres of the movie: Comedy, Drama
+- Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery
+- Napoleon Dynamite (2004) - Genres of the movie: Comedy
+- Heat (1995) - Genres of the movie: Action, Crime, Drama
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",A
+"Consider the following three lists of movies 'A', 'B' and 'C'. Evaluate which list of movies is more diverse based on the genres provided for each list.
+
+List A:
+- Good Will Hunting (1997) - Genres of the movie: Drama, Romance
+- Bourne Identity, The (1988) - Genres of the movie: Action, Adventure, Drama, Mystery, Thriller
+- Great Gatsby, The (2013) - Genres of the movie: Drama, Romance
+- Trainspotting (1996) - Genres of the movie: Drama
+- Despicable Me (2010) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Sci-Fi
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- 13 Going on 30 (2004) - Genres of the movie: Comedy, Fantasy, Romance
+
+List B:
+- Good Will Hunting (1997) - Genres of the movie: Drama, Romance
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Fight Club (1999) - Genres of the movie: Drama
+- V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- American Sniper (2014) - Genres of the movie: Action, Biography, Drama, War
+- Despicable Me (2010) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Sci-Fi
+- Bourne Identity, The (1988) - Genres of the movie: Action, Adventure, Drama, Mystery, Thriller
+
+List C:
+- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller
+- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi
+- Indiana Jones and the Last Crusade (1989) - Genres of the movie: Action, Adventure
+- Fight Club (1999) - Genres of the movie: Drama
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller
+
+Respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A', 'B' or 'C'.",C

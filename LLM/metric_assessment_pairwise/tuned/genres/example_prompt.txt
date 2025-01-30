@@ -1,0 +1,27 @@
+Consider the following two lists of movies 'A' and 'B'. Evaluate which list of movies is more diverse based on the information provided.
+
+List A:
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- Rush Hour 2 (2001) - Genres of the movie: Action, Comedy, Crime, Thriller
+- Avengers: Infinity War - Part I (2018) - Genres of the movie: Action, Adventure, Sci-Fi
+- The Revenant (2015) - Genres of the movie: Action, Adventure, Drama, Western
+- Mummy, The (1999) - Genres of the movie: Action, Adventure, Fantasy
+- I, Robot (2004) - Genres of the movie: Action, Mystery, Sci-Fi, Thriller
+- Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller
+- Spider-Man (2002) - Genres of the movie: Action, Adventure, Sci-Fi
+
+List B:
+- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy
+- I, Robot (2004) - Genres of the movie: Action, Mystery, Sci-Fi, Thriller
+- Superbad (2007) - Genres of the movie: Comedy
+- Django Unchained (2012) - Genres of the movie: Drama, Western
+- Ice Age (2002) - Genres of the movie: Animation, Adventure, Comedy, Family
+- Pulp Fiction (1994) - Genres of the movie: Crime, Drama
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror
+- Spider-Man (2002) - Genres of the movie: Action, Adventure, Sci-Fi
+
+After your evaluation, respond with only one letter:
+'A' if List A is more diverse.
+'B' if List B is more diverse.
+
+Do not provide any explanation, justification, or additional output. Strictly respond with the single letter: 'A' or 'B'

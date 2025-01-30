@@ -1,0 +1,644 @@
+[
+    {
+        "prompt": "List A:\n- Dark Knight, The (2008)\n- Meet the Parents (2000)\n- Back to the Future (1985)\n- American Beauty (1999)\n- Shutter Island (2010)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Last Samurai, The (2003)\n\nList B:\n- Lost in Austen (2008)\n- Fargo (1996)\n- The Fault in Our Stars (2014)\n- This Beautiful Fantastic (2016)\n- Salt (2010)\n- Hot Fuzz (2007)\n- Lion (2016)\n\nList C:\n- Last Samurai, The (2003)\n- Bridget Jones's Diary (2001)\n- Snatch (2000)\n- Edward Scissorhands (1990)\n- Dark Knight, The (2008)\n- The Fault in Our Stars (2014)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Grand Budapest Hotel, The (2014)\n- Limitless (2011)\n- Avengers: Infinity War - Part I (2018)\n- Dawn of the Planet of the Apes (2014)\n- Ocean's Twelve (2004)\n\nList B:\n- Moneyball (2011)\n- Grand Budapest Hotel, The (2014)\n- Shrek (2001)\n- Scott Pilgrim vs. the World (2010)\n- Dunkirk (2017)\n\nList C:\n- Minority Report (2002)\n- Shrek (2001)\n- Moneyball (2011)\n- Limitless (2011)\n- Titanic (1997)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Die Hard (1988)\n- Snatch (2000)\n- Harry Potter and the Half-Blood Prince (2009)\n- Napoleon Dynamite (2004)\n- Good Morning, Vietnam (1987)\n- Logan Lucky (2017)\n- Royal Tenenbaums, The (2001)\n\nList B:\n- Sneakers (1992)\n- The Spectacular Now (2013)\n- Booksmart (2019)\n- Toy Story 3 (2010)\n- Die Hard (1988)\n- Napoleon Dynamite (2004)\n- Good Morning, Vietnam (1987)\n\nList C:\n- Sneakers (1992)\n- Booksmart (2019)\n- The Edge of Seventeen (2016)\n- Snatch (2000)\n- Crazy Rich Asians (2018)\n- Hudsucker Proxy, The (1994)\n- Harry Potter and the Half-Blood Prince (2009)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Girl with the Dragon Tattoo, The (2011)\n- Holiday, The (2006)\n- Juno (2007)\n- Matrix Revolutions, The (2003)\n- Beautiful Mind, A (2001)\n- Cabin in the Woods, The (2012)\n- Edge of Tomorrow (2014)\n\nList B:\n- Easy A (2010)\n- Matrix Revolutions, The (2003)\n- Holiday, The (2006)\n- The Jungle Book (2016)\n- Groundhog Day (1993)\n- Passengers (2016)\n- Here's the Plan (2016)\n\nList C:\n- Easy A (2010)\n- Passengers (2016)\n- The Jungle Book (2016)\n- Constantine (2005)\n- Groundhog Day (1993)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Beautiful Mind, A (2001)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Half-Blood Prince (2009)\n- Up (2009)\n- WALL\u00b7E (2008)\n- Spotlight (2015)\n- X-Men: First Class (2011)\n- Lord of the Rings: The Two Towers, The (2002)\n\nList B:\n- Harry Potter and the Half-Blood Prince (2009)\n- Old Boy (2003)\n- X-Men Origins: Wolverine (2009)\n- Batman Begins (2005)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Underworld (2003)\n\nList C:\n- Old Boy (2003)\n- WALL\u00b7E (2008)\n- Hangover, The (2009)\n- Batman Begins (2005)\n- Lord of the Rings: The Two Towers, The (2002)\n- Crazy, Stupid, Love. (2011)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Return of the King, The (2003)\n- 21 (2008)\n- Ice Age (2002)\n- Jurassic Park (1993)\n- Wind River (2017)\n\nList B:\n- Lord of the Rings: The Return of the King, The (2003)\n- Ice Age (2002)\n- Green Mile, The (1999)\n- Eternal Sunshine of the Spotless Mind (2004)\n- Skyfall (2012)\n\nList C:\n- Wind River (2017)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Bend It Like Beckham (2002)\n- Duchess, The (2008)\n- 21 (2008)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Taxi 3 (2003)\n- The Jungle Book (2016)\n- Baby Driver (2017)\n- Moon (2009)\n- Troy (2004)\n\nList B:\n- 300 (2007)\n- Beautiful Mind, A (2001)\n- Anchorman: The Legend of Ron Burgundy (2004)\n- Lord of the Rings: The Two Towers, The (2002)\n- Die Hard (1988)\n\nList C:\n- Lord of the Rings: The Two Towers, The (2002)\n- Memento (2000)\n- Anchorman: The Legend of Ron Burgundy (2004)\n- District 9 (2009)\n- Taxi 3 (2003)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Two Towers, The (2002)\n- Shutter Island (2010)\n- Matrix, The (1999)\n- Superbad (2007)\n- WALL\u00b7E (2008)\n\nList B:\n- Uncut Gems (2019)\n- The Imitation Game (2014)\n- Lord of the Rings: The Two Towers, The (2002)\n- Captain America: Civil War (2016)\n- WALL\u00b7E (2008)\n\nList C:\n- Uncut Gems (2019)\n- Captain America: Civil War (2016)\n- Game, The (1997)\n- The Imitation Game (2014)\n- Avatar (2009)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Your Name. (2016)\n- Sully (2016)\n- The Imitation Game (2014)\n- Kung Fu Panda (2008)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Avengers, The (2012)\n\nList B:\n- Your Name. (2016)\n- Sing (2016)\n- Mulan (1998)\n- Toy Story 4 (2019)\n- Sully (2016)\n- Blade Runner 2049 (2017)\n\nList C:\n- Kung Fu Panda (2008)\n- Avengers, The (2012)\n- The Imitation Game (2014)\n- Legally Blonde (2001)\n- Usual Suspects, The (1995)\n- Mean Girls (2004)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Dark Knight, The (2008)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Good Will Hunting (1997)\n- Avengers, The (2012)\n- Saving Private Ryan (1998)\n- Catch Me If You Can (2002)\n- Fight Club (1999)\n\nList B:\n- Harry Potter and the Half-Blood Prince (2009)\n- Catch Me If You Can (2002)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Inception (2010)\n- Good Will Hunting (1997)\n- Pirates of the Caribbean: At World's End (2007)\n- Easy A (2010)\n\nList C:\n- Harry Potter and the Half-Blood Prince (2009)\n- Saving Private Ryan (1998)\n- Fight Club (1999)\n- Up (2009)\n- Scott Pilgrim vs. the World (2010)\n- Interstellar (2014)\n- Pirates of the Caribbean: At World's End (2007)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Intouchables (2011)\n- Aladdin (1992)\n- Gran Torino (2008)\n- Departed, The (2006)\n- Social Network, The (2010)\n- Finding Nemo (2003)\n\nList B:\n- Intouchables (2011)\n- Taxi 2 (2000)\n- Office Space (1999)\n- Taxi 4 (2007)\n- Gattaca (1997)\n- 50 First Dates (2004)\n\nList C:\n- Gattaca (1997)\n- Taxi 2 (2000)\n- Gran Torino (2008)\n- Office Space (1999)\n- L.A. Confidential (1997)\n- Avatar (2009)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- The Butterfly Effect (2004)\n- Die Hard (1988)\n- Doctor Strange (2016)\n- Gravity (2013)\n- Fight Club (1999)\n\nList B:\n- The Butterfly Effect (2004)\n- Rushmore (1998)\n- The Intern (2015)\n- Beetlejuice (1988)\n- Gravity (2013)\n\nList C:\n- Source Code (2011)\n- Austin Powers: International Man of Mystery (1997)\n- Beetlejuice (1988)\n- Reservoir Dogs (1992)\n- Rushmore (1998)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Finding Nemo (2003)\n- Zootopia (2016)\n- Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006)\n- Fury (2014)\n- Love Actually (2003)\n- Up (2009)\n\nList B:\n- Inside Out (2015)\n- Captain America: Civil War (2016)\n- American Beauty (1999)\n- Game, The (1997)\n- Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006)\n- World War Z (2013)\n\nList C:\n- Finding Nemo (2003)\n- Logan (2017)\n- Moana (2016)\n- World War Z (2013)\n- Captain America: Civil War (2016)\n- Inside Out (2015)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Untitled Spider-Man Reboot (2017)\n- Lucy (2014)\n- Others, The (2001)\n- Fast and the Furious, The (2001)\n- Donnie Brasco (1997)\n- Serenity (2005)\n- Moonrise Kingdom (2012)\n\nList B:\n- Incredibles, The (2004)\n- Departed, The (2006)\n- Jurassic Park (1993)\n- Serenity (2005)\n- Aladdin (1992)\n- Braveheart (1995)\n- Wedding Crashers (2005)\n\nList C:\n- Jurassic Park (1993)\n- Wedding Crashers (2005)\n- Others, The (2001)\n- Incredibles, The (2004)\n- Departed, The (2006)\n- Avatar (2009)\n- True Grit (2010)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Avengers: Infinity War - Part I (2018)\n- When Harry Met Sally... (1989)\n- Hitchhiker's Guide to the Galaxy, The (2005)\n- Finding Dory (2016)\n- Pirates of the Caribbean: Dead Man's Chest (2006)\n- Pineapple Express (2008)\n\nList B:\n- Jurassic Park (1993)\n- When Harry Met Sally... (1989)\n- Mean Girls (2004)\n- Pulp Fiction (1994)\n- Indiana Jones and the Last Crusade (1989)\n- Lion King, The (1994)\n\nList C:\n- Finding Dory (2016)\n- Pineapple Express (2008)\n- WALL\u00b7E (2008)\n- Pirates of the Caribbean: Dead Man's Chest (2006)\n- Incredibles, The (2004)\n- Jurassic Park (1993)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Titanic (1997)\n- Guardians of the Galaxy (2014)\n- Dunkirk (2017)\n- Beautiful Mind, A (2001)\n- WALL\u00b7E (2008)\n- Casino (1995)\n\nList B:\n- Titanic (1997)\n- Easy A (2010)\n- Logan (2017)\n- Starship Troopers (1997)\n- Eternal Sunshine of the Spotless Mind (2004)\n- Hurt Locker, The (2008)\n\nList C:\n- Logan (2017)\n- Easy A (2010)\n- Beautiful Mind, A (2001)\n- WALL\u00b7E (2008)\n- Casino (1995)\n- Bourne Supremacy, The (2004)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Schindler's List (1993)\n- Aladdin (1992)\n- Avengers, The (2012)\n- Toy Story (1995)\n- V for Vendetta (2006)\n\nList B:\n- Silver Linings Playbook (2012)\n- Rogue One: A Star Wars Story (2016)\n- Get Out (2017)\n- Pocahontas (1995)\n- Now You See Me (2013)\n\nList C:\n- Guardians of the Galaxy (2014)\n- Schindler's List (1993)\n- Get Out (2017)\n- Silver Linings Playbook (2012)\n- Wonder Woman (2017)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Taken (2008)\n- Unbreakable (2000)\n- Catch Me If You Can (2002)\n- True Lies (1994)\n- Django Unchained (2012)\n- Guardians of the Galaxy 2 (2017)\n\nList B:\n- True Lies (1994)\n- Guardians of the Galaxy 2 (2017)\n- Taken (2008)\n- Charlie and the Chocolate Factory (2005)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- 10 Things I Hate About You (1999)\n\nList C:\n- Slumdog Millionaire (2008)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Star Wars: Episode I - The Phantom Menace (1999)\n- Jurassic Park (1993)\n- Bug's Life, A (1998)\n- 10 Things I Hate About You (1999)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- 300 (2007)\n- Gone Girl (2014)\n- Monsters University (2013)\n- Star Wars: Episode VII - The Force Awakens (2015)\n- Die Hard (1988)\n\nList B:\n- Bolt (2008)\n- Gone Girl (2014)\n- Silver Linings Playbook (2012)\n- Kung Fu Panda (2008)\n- Boondock Saints, The (2000)\n\nList C:\n- Looper (2012)\n- Silver Linings Playbook (2012)\n- 300 (2007)\n- Matrix, The (1999)\n- Intouchables (2011)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Monsters, Inc. (2001)\n- Memento (2000)\n- Black Swan (2010)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n\nList B:\n- Matrix, The (1999)\n- Memento (2000)\n- Requiem for a Dream (2000)\n- American Beauty (1999)\n\nList C:\n- Monsters, Inc. (2001)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Slumdog Millionaire (2008)\n- Scott Pilgrim vs. the World (2010)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Source Code (2011)\n- Hangover Part III, The (2013)\n- Cast Away (2000)\n- Schindler's List (1993)\n- Ted (2012)\n- Iron Man 2 (2010)\n\nList B:\n- Doctor Strange (2016)\n- Schindler's List (1993)\n- Cast Away (2000)\n- Argo (2012)\n- Pirates of the Caribbean: On Stranger Tides (2011)\n- Terminator 2: Judgment Day (1991)\n\nList C:\n- Hangover Part III, The (2013)\n- Doctor Strange (2016)\n- Ted (2012)\n- Source Code (2011)\n- 22 Jump Street (2014)\n- Sherlock Holmes: A Game of Shadows (2011)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Social Network, The (2010)\n- Lord of the Rings: The Return of the King, The (2003)\n- Finding Dory (2016)\n- Back to the Future Part II (1989)\n- King's Speech, The (2010)\n\nList B:\n- War for the Planet of the Apes (2017)\n- A Chinese Odyssey Part One: Pandora's Box (1995)\n- Notting Hill (1999)\n- Back to the Future Part II (1989)\n- Blood Diamond (2006)\n\nList C:\n- Shutter Island (2010)\n- Social Network, The (2010)\n- 40-Year-Old Virgin, The (2005)\n- Slumdog Millionaire (2008)\n- Enemy of the State (1998)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Bourne Supremacy, The (2004)\n- Donnie Darko (2001)\n- The Hunger Games: Mockingjay - Part 1 (2014)\n- Ex Machina (2015)\n- Three Billboards Outside Ebbing, Missouri (2017)\n\nList B:\n- Bourne Supremacy, The (2004)\n- Die Hard (1988)\n- Donnie Darko (2001)\n- Ocean's Eleven (2001)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n\nList C:\n- Catch Me If You Can (2002)\n- Juno (2007)\n- Whiplash (2014)\n- Die Hard (1988)\n- Silver Linings Playbook (2012)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- WALL\u00b7E (2008)\n- Shawshank Redemption, The (1994)\n- Doctor Strange (2016)\n- Snatch (2000)\n- Beautiful Mind, A (2001)\n- Up (2009)\n\nList B:\n- Sherlock Holmes (2009)\n- Fantastic Beasts and Where to Find Them (2016)\n- Harry Potter and the Half-Blood Prince (2009)\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n- Matrix, The (1999)\n- Guardians of the Galaxy 2 (2017)\n\nList C:\n- Snatch (2000)\n- Matrix, The (1999)\n- The Imitation Game (2014)\n- Sherlock Holmes (2009)\n- WALL\u00b7E (2008)\n- Shawshank Redemption, The (1994)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- I Am Legend (2007)\n- Secret Life of Walter Mitty, The (2013)\n- Lord of War (2005)\n- Sherlock Holmes: A Game of Shadows (2011)\n- WALL\u00b7E (2008)\n- Truman Show, The (1998)\n- Matrix Revolutions, The (2003)\n\nList B:\n- Serenity (2005)\n- Wreck-It Ralph (2012)\n- Truman Show, The (1998)\n- Departed, The (2006)\n- WALL\u00b7E (2008)\n- Emperor's New Groove, The (2000)\n- The Hateful Eight (2015)\n\nList C:\n- Secret Life of Walter Mitty, The (2013)\n- Serenity (2005)\n- Gone Girl (2014)\n- Time Machine, The (2002)\n- The Hateful Eight (2015)\n- Emperor's New Groove, The (2000)\n- Lord of War (2005)",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Johnny English Reborn (2011)\n- Logan (2017)\n- Terminal, The (2004)\n- Die Another Day (2002)\n- Lion King, The (1994)\n- Lord of the Rings: The Two Towers, The (2002)\n\nList B:\n- Terminal, The (2004)\n- Matrix, The (1999)\n- Lion King, The (1994)\n- Beautiful Mind, A (2001)\n- Girl with the Dragon Tattoo, The (2011)\n- Terminator 2: Judgment Day (1991)\n\nList C:\n- Johnny English Reborn (2011)\n- Toy Story 3 (2010)\n- Beautiful Mind, A (2001)\n- Big Hero 6 (2014)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Logan (2017)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Mummy Returns, The (2001)\n- Crazy, Stupid, Love. (2011)\n- Slumdog Millionaire (2008)\n- Star Wars: Episode I - The Phantom Menace (1999)\n- One Day (2011)\n- Last Samurai, The (2003)\n\nList B:\n- Kill Bill: Vol. 1 (2003)\n- Star Trek (2009)\n- Maleficent (2014)\n- Last Samurai, The (2003)\n- Bucket List, The (2007)\n- Blind Side, The  (2009)\n\nList C:\n- Safe Haven (2013)\n- Focus (2015)\n- This Means War (2012)\n- Kill Bill: Vol. 1 (2003)\n- Just Like Heaven (2005)\n- One Day (2011)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Dark Knight, The (2008)\n- The Martian (2015)\n- Shutter Island (2010)\n- Forrest Gump (1994)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n\nList B:\n- Joker (2019)\n- Hot Fuzz (2007)\n- Kill Bill: Vol. 2 (2004)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Dark Knight, The (2008)\n\nList C:\n- Ocean's Eleven (2001)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Joker (2019)\n- Forrest Gump (1994)\n- Lord of the Rings: The Return of the King, The (2003)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Pulp Fiction (1994)\n- Shrek 2 (2004)\n- Django Unchained (2012)\n- Shaun of the Dead (2004)\n- Avengers, The (2012)\n- Sixth Sense, The (1999)\n\nList B:\n- Lord of the Rings: The Return of the King, The (2003)\n- Up (2009)\n- Wolf of Wall Street, The (2013)\n- The Hunger Games: Catching Fire (2013)\n- X2: X-Men United (2003)\n- Shrek 2 (2004)\n\nList C:\n- The Hunger Games: Catching Fire (2013)\n- Deadpool 2 (2018)\n- Spider-Man (2002)\n- Incredibles 2 (2018)\n- Terminator 2: Judgment Day (1991)\n- Blade Runner 2049 (2017)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- 21 Jump Street (2012)\n- Spider-Man: Into the Spider-Verse (2018)\n- Blade (1998)\n- Harry Potter and the Goblet of Fire (2005)\n- Iron Man 2 (2010)\n- Love Actually (2003)\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n\nList B:\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n- 21 Jump Street (2012)\n- Schindler's List (1993)\n- Harry Potter and the Goblet of Fire (2005)\n- Departed, The (2006)\n- Forrest Gump (1994)\n- Blade (1998)\n\nList C:\n- Lord of the Rings: The Two Towers, The (2002)\n- Cast Away (2000)\n- Toy Story (1995)\n- Schindler's List (1993)\n- Spider-Man: Into the Spider-Verse (2018)\n- Departed, The (2006)\n- Shrek 2 (2004)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Last Samurai, The (2003)\n- Black Swan (2010)\n- Guardians of the Galaxy (2014)\n- Shawshank Redemption, The (1994)\n- Dodgeball: A True Underdog Story (2004)\n\nList B:\n- National Treasure (2004)\n- Usual Suspects, The (1995)\n- Silver Linings Playbook (2012)\n- Black Swan (2010)\n- Mrs. Doubtfire (1993)\n\nList C:\n- Usual Suspects, The (1995)\n- Silver Linings Playbook (2012)\n- Shawshank Redemption, The (1994)\n- Harry Potter and the Chamber of Secrets (2002)\n- Mrs. Doubtfire (1993)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Up (2009)\n- Bowling for Columbine (2002)\n- Okja (2017)\n- Iron Man (2008)\n- Fugitive, The (1993)\n\nList B:\n- Akira (1988)\n- Fugitive, The (1993)\n- Okja (2017)\n- Your Name. (2016)\n- Cabin in the Woods, The (2012)\n\nList C:\n- Akira (1988)\n- Cabin in the Woods, The (2012)\n- Iron Man (2008)\n- Boyhood (2014)\n- Moonrise Kingdom (2012)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- School of Rock (2003)\n- The Man from U.N.C.L.E. (2015)\n- Face/Off (1997)\n- Serenity (2005)\n- Yes Man (2008)\n- Toy Story 3 (2010)\n- Spy (2015)\n\nList B:\n- Toy Story 3 (2010)\n- The Hunger Games (2012)\n- Yes Man (2008)\n- Shrek (2001)\n- Ace Ventura: Pet Detective (1994)\n- Serenity (2005)\n- Donnie Darko (2001)\n\nList C:\n- Shrek (2001)\n- Face/Off (1997)\n- School of Rock (2003)\n- Hangover, The (2009)\n- Donnie Darko (2001)\n- Rain Man (1988)\n- Skyfall (2012)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- American Beauty (1999)\n- Saw (2004)\n- Deadpool (2016)\n- 50 First Dates (2004)\n- Shaun of the Dead (2004)\n- Pirates of the Caribbean: Dead Man's Chest (2006)\n- Mulholland Drive (2001)\n\nList B:\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Up (2009)\n- Mulholland Drive (2001)\n- Social Network, The (2010)\n- Simpsons Movie, The (2007)\n- Fury (2014)\n- Donnie Darko (2001)\n- Guardians of the Galaxy (2014)\n\nList C:\n- Dark Knight, The (2008)\n- Monsters, Inc. (2001)\n- American Beauty (1999)\n- Shaun of the Dead (2004)\n- Spider-Man (2002)\n- 50 First Dates (2004)\n- Usual Suspects, The (1995)\n- Deadpool (2016)",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Return of the King, The (2003)\n- Now You See Me (2013)\n- Zombieland (2009)\n- Aladdin (1992)\n- Contact (1997)\n- Shawshank Redemption, The (1994)\n- Dunkirk (2017)\n\nList B:\n- Lord of the Rings: The Return of the King, The (2003)\n- Slumdog Millionaire (2008)\n- Goodfellas (1990)\n- Aladdin (1992)\n- Dunkirk (2017)\n- Being John Malkovich (1999)\n- Bourne Ultimatum, The (2007)\n\nList C:\n- Now You See Me (2013)\n- Goodfellas (1990)\n- Zombieland (2009)\n- Girl with the Dragon Tattoo, The (2011)\n- Thor: Ragnarok (2017)\n- Memoirs of a Geisha (2005)\n- Contact (1997)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Goblet of Fire (2005)\n- Green Mile, The (1999)\n- Inception (2010)\n- Interstellar (2014)\n- American Beauty (1999)\n\nList B:\n- Harry Potter and the Goblet of Fire (2005)\n- Intouchables (2011)\n- Iron Man 2 (2010)\n- Reservoir Dogs (1992)\n- Saving Private Ryan (1998)\n\nList C:\n- Saving Private Ryan (1998)\n- Social Network, The (2010)\n- Intouchables (2011)\n- Interstellar (2014)\n- Jurassic Park (1993)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Prestige, The (2006)\n- Pulp Fiction (1994)\n- Matrix, The (1999)\n- Inglourious Basterds (2009)\n- Good Will Hunting (1997)\n- Intouchables (2011)\n- Ocean's Eleven (2001)\n\nList B:\n- Ocean's Eleven (2001)\n- Departed, The (2006)\n- The Imitation Game (2014)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n- Social Network, The (2010)\n- Schindler's List (1993)\n\nList C:\n- Prestige, The (2006)\n- Eternal Sunshine of the Spotless Mind (2004)\n- Pulp Fiction (1994)\n- Matrix, The (1999)\n- Green Mile, The (1999)\n- Good Will Hunting (1997)\n- Silence of the Lambs, The (1991)",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Hereditary (2018)\n- Beautiful Mind, A (2001)\n- The Machinist (2004)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n- The Interview (2014)\n- Old Boy (2003)\n\nList B:\n- Old Boy (2003)\n- School of Rock (2003)\n- Inglourious Basterds (2009)\n- Pulp Fiction (1994)\n- X2: X-Men United (2003)\n- Inside Out (2015)\n\nList C:\n- Hereditary (2018)\n- Beautiful Mind, A (2001)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- The Interview (2014)\n- X2: X-Men United (2003)\n- Bourne Supremacy, The (2004)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Snatch (2000)\n- Croods, The (2013)\n- Maverick (1994)\n- Kubo and the Two Strings (2016)\n- 88 Minutes (2008)\n- Elysium (2013)\n- Frozen (2013)\n\nList B:\n- Law Abiding Citizen (2009)\n- Deadpool (2016)\n- Shutter Island (2010)\n- Kate & Leopold (2001)\n- Pulp Fiction (1994)\n- Superbad (2007)\n- 13th Warrior, The (1999)\n\nList C:\n- Law Abiding Citizen (2009)\n- Croods, The (2013)\n- 88 Minutes (2008)\n- Maverick (1994)\n- Kubo and the Two Strings (2016)\n- Exam (2009)\n- Going Postal (2010)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Django Unchained (2012)\n- Big Lebowski, The (1998)\n- The Hunger Games: Catching Fire (2013)\n- Watchmen (2009)\n- The Theory of Everything (2014)\n\nList B:\n- Usual Suspects, The (1995)\n- The Hunger Games: Mockingjay - Part 1 (2014)\n- Looper (2012)\n- The Theory of Everything (2014)\n- X-Men: Days of Future Past (2014)\n\nList C:\n- Looper (2012)\n- Catch Me If You Can (2002)\n- Django Unchained (2012)\n- Usual Suspects, The (1995)\n- American Beauty (1999)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Iron Man (2008)\n- Wallace & Gromit in The Curse of the Were-Rabbit (2005)\n- Lord of the Rings: The Two Towers, The (2002)\n- The Imitation Game (2014)\n- Brave (2012)\n- Dirty Dancing (1987)\n\nList B:\n- Lord of the Rings: The Two Towers, The (2002)\n- Ocean's Twelve (2004)\n- Arrival (2016)\n- Django Unchained (2012)\n- The Imitation Game (2014)\n- Jason Bourne (2016)\n\nList C:\n- Iron Man (2008)\n- Jason Bourne (2016)\n- American History X (1998)\n- Warcraft (2016)\n- Wallace & Gromit in The Curse of the Were-Rabbit (2005)\n- Django Unchained (2012)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Bourne Identity, The (2002)\n- Along Came Polly (2004)\n- Catch Me If You Can (2002)\n- Iron Man 2 (2010)\n- Django Unchained (2012)\n- Charlie and the Chocolate Factory (2005)\n\nList B:\n- 21 (2008)\n- Untitled Spider-Man Reboot (2017)\n- Along Came Polly (2004)\n- Ratatouille (2007)\n- Focus (2015)\n- Iron Man 2 (2010)\n\nList C:\n- 21 (2008)\n- Braveheart (1995)\n- Aliens (1986)\n- Ratatouille (2007)\n- Captain Phillips (2013)\n- Charlie and the Chocolate Factory (2005)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Inside Out (2015)\n- Shutter Island (2010)\n- Matrix, The (1999)\n- Shawshank Redemption, The (1994)\n- Pulp Fiction (1994)\n- Intouchables (2011)\n- Split (2017)\n- Requiem for a Dream (2000)\n\nList B:\n- Avatar (2009)\n- Being John Malkovich (1999)\n- Shawshank Redemption, The (1994)\n- WALL\u00b7E (2008)\n- Little Miss Sunshine (2006)\n- 1917 (2019)\n- Beautiful Mind, A (2001)\n- 28 Days Later (2002)\n\nList C:\n- Avatar (2009)\n- 1917 (2019)\n- Intouchables (2011)\n- Being John Malkovich (1999)\n- WALL\u00b7E (2008)\n- Shutter Island (2010)\n- Knives Out (2019)\n- Gravity (2013)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Schindler's List (1993)\n- Departed, The (2006)\n- Forrest Gump (1994)\n- Braveheart (1995)\n- Cast Away (2000)\n- Zodiac (2007)\n\nList B:\n- Old Boy (2003)\n- Goodfellas (1990)\n- Finding Nemo (2003)\n- Bridge of Spies (2015)\n- Get Out (2017)\n- Forrest Gump (1994)\n\nList C:\n- Schindler's List (1993)\n- Old Boy (2003)\n- Goodfellas (1990)\n- Zodiac (2007)\n- Bridge of Spies (2015)\n- Braveheart (1995)",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Monsters, Inc. (2001)\n- Django Unchained (2012)\n- WALL\u00b7E (2008)\n- Brave (2012)\n- Wolf of Wall Street, The (2013)\n- The Imitation Game (2014)\n\nList B:\n- Inside Out (2015)\n- The Hateful Eight (2015)\n- Iron Man (2008)\n- Whiplash (2014)\n- Great Gatsby, The (2013)\n- The Imitation Game (2014)\n\nList C:\n- Monsters, Inc. (2001)\n- The Hateful Eight (2015)\n- Brave (2012)\n- WALL\u00b7E (2008)\n- Great Gatsby, The (2013)\n- Django Unchained (2012)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Inside Out (2015)\n- Captain America: Civil War (2016)\n- Furious 7 (2015)\n- Terminal, The (2004)\n- Horrible Bosses (2011)\n- The Butterfly Effect (2004)\n\nList B:\n- Ice Age (2002)\n- Monsters University (2013)\n- V for Vendetta (2006)\n- Call Me by Your Name (2017)\n- WALL\u00b7E (2008)\n- Blind Side, The  (2009)\n\nList C:\n- Furious 7 (2015)\n- Inside Out (2015)\n- Saw (2003)\n- Avengers: Infinity War - Part I (2018)\n- Ice Age (2002)\n- 50/50 (2011)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Bourne Identity, The (2002)\n- Snatch (2000)\n- Bourne Supremacy, The (2004)\n- Jurassic Park (1993)\n- Beautiful Mind, A (2001)\n- The Hunger Games (2012)\n\nList B:\n- Catch Me If You Can (2002)\n- Moonrise Kingdom (2012)\n- Rain Man (1988)\n- Avengers, The (2012)\n- School of Rock (2003)\n- Inglourious Basterds (2009)\n\nList C:\n- Bourne Identity, The (2002)\n- Moonrise Kingdom (2012)\n- Edge of Tomorrow (2014)\n- Bourne Supremacy, The (2004)\n- War of the Worlds (2005)\n- Rain Man (1988)",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Get Out (2017)\n- Corpse Bride (2005)\n- Prisoners (2013)\n- Dark Knight Rises, The (2012)\n- Lord of the Rings: The Return of the King, The (2003)\n- Incredibles, The (2004)\n\nList B:\n- Incredibles, The (2004)\n- Fight Club (1999)\n- Django Unchained (2012)\n- Lord of the Rings: The Return of the King, The (2003)\n- Princess Bride, The (1987)\n- Little Miss Sunshine (2006)\n\nList C:\n- Get Out (2017)\n- Little Miss Sunshine (2006)\n- Reservoir Dogs (1992)\n- Fight Club (1999)\n- Django Unchained (2012)\n- Eternal Sunshine of the Spotless Mind (2004)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n- Die Hard (1988)\n- Super Size Me (2004)\n- Saving Private Ryan (1998)\n- Monsters University (2013)\n- The Butterfly Effect (2004)\n\nList B:\n- Source Code (2011)\n- Beetlejuice (1988)\n- Gangs of New York (2002)\n- Fifth Element, The (1997)\n- Rushmore (1998)\n- Die Hard (1988)\n\nList C:\n- The Intern (2015)\n- Rushmore (1998)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n- Shutter Island (2010)\n- Fifth Element, The (1997)\n- Gravity (2013)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Kill Bill: Vol. 2 (2004)\n- Whiplash (2014)\n- Eternal Sunshine of the Spotless Mind (2004)\n- Beautiful Mind, A (2001)\n- Deadpool (2016)\n- Cloud Atlas (2012)\n- Atomic Blonde (2017)\n\nList B:\n- Predestination (2014)\n- Father of the Bride (1991)\n- Atomic Blonde (2017)\n- Whiplash (2014)\n- The Boss Baby (2017)\n- Cloud Atlas (2012)\n- Hidden Figures (2016)\n\nList C:\n- Up (2009)\n- Beautiful Mind, A (2001)\n- Being John Malkovich (1999)\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n- Blind Side, The  (2009)\n- Braveheart (1995)\n- Bridget Jones's Diary (2001)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- How to Train Your Dragon 2 (2014)\n- Dunkirk (2017)\n- Gladiator (2000)\n- The Gentlemen (2020)\n- The Imitation Game (2014)\n\nList B:\n- Up (2009)\n- Dunkirk (2017)\n- Incredibles, The (2004)\n- Braveheart (1995)\n- Rise of the Planet of the Apes (2011)\n\nList C:\n- Dark Knight, The (2008)\n- The Martian (2015)\n- How to Train Your Dragon 2 (2014)\n- Whiplash (2014)\n- Titanic (1997)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Half-Blood Prince (2009)\n- Pitch Black (2000)\n- The Hunger Games: Catching Fire (2013)\n- Guardians of the Galaxy 2 (2017)\n- Riddick (2013)\n- American History X (1998)\n\nList B:\n- Harry Potter and the Half-Blood Prince (2009)\n- Guardians of the Galaxy 2 (2017)\n- Up (2009)\n- The Hunger Games: Catching Fire (2013)\n- Kingsman: The Secret Service (2015)\n- Pitch Black (2000)\n\nList C:\n- Shutter Island (2010)\n- Iron Man 2 (2010)\n- Ice Age (2002)\n- American History X (1998)\n- Hobbit: The Desolation of Smaug, The (2013)\n- Deadpool (2016)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Spotlight (2015)\n- Ferris Bueller's Day Off (1986)\n- Frozen (2013)\n- Fight Club (1999)\n- Braveheart (1995)\n\nList B:\n- I Am Legend (2007)\n- Ferris Bueller's Day Off (1986)\n- Matrix, The (1999)\n- Requiem for a Dream (2000)\n- Quantum of Solace (2008)\n\nList C:\n- Boys (2014)\n- Spotlight (2015)\n- Quantum of Solace (2008)\n- Back to the Future Part III (1990)\n- Requiem for a Dream (2000)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Chappie (2015)\n- Trainspotting (1996)\n- Ring, The (2002)\n- Whiplash (2014)\n- Matrix Revolutions, The (2003)\n\nList B:\n- Blade (1998)\n- Chappie (2015)\n- Usual Suspects, The (1995)\n- Jumanji: Welcome to the Jungle (2017)\n- The Butterfly Effect (2004)\n\nList C:\n- Zootopia (2016)\n- The Butterfly Effect (2004)\n- Star Wars: Episode II - Attack of the Clones (2002)\n- Ocean's Eleven (2001)\n- Princess Bride, The (1987)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- 127 Hours (2010)\n- Schindler's List (1993)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Internet's Own Boy: The Story of Aaron Swartz, The (2014)\n- Goodfellas (1990)\n\nList B:\n- Dances with Wolves (1990)\n- Internet's Own Boy: The Story of Aaron Swartz, The (2014)\n- 127 Hours (2010)\n- Three Musketeers, The (1993)\n- Limitless (2011)\n\nList C:\n- Sin City (2005)\n- Schindler's List (1993)\n- Arrival (2016)\n- Dances with Wolves (1990)\n- Deadpool (2016)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Saving Private Ryan (1998)\n- Doctor Strange (2016)\n- Cast Away (2000)\n- Blind Side, The  (2009)\n- WALL\u00b7E (2008)\n- Wolf of Wall Street, The (2013)\n- Into the Wild (2007)\n\nList B:\n- Batman Begins (2005)\n- WALL\u00b7E (2008)\n- Deadpool (2016)\n- Saving Private Ryan (1998)\n- Hangover, The (2009)\n- Cast Away (2000)\n- Blade II (2002)\n\nList C:\n- Blade II (2002)\n- Drive (2011)\n- Untitled Spider-Man Reboot (2017)\n- Blind Side, The  (2009)\n- Deadpool (2016)\n- Into the Wild (2007)\n- Batman Begins (2005)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Anastasia (1997)\n- Sin City (2005)\n- Monsters, Inc. (2001)\n\nList B:\n- Aladdin (1992)\n- The Imitation Game (2014)\n- Cast Away (2000)\n\nList C:\n- Monsters, Inc. (2001)\n- Sin City (2005)\n- Bourne Ultimatum, The (2007)",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Grosse Pointe Blank (1997)\n- Braveheart (1995)\n- Ted (2012)\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n- Deadpool (2016)\n- Parasite (2019)\n\nList B:\n- Taken (2008)\n- 127 Hours (2010)\n- Being John Malkovich (1999)\n- Saving Private Ryan (1998)\n- Creed (2015)\n- Braveheart (1995)\n\nList C:\n- Seabiscuit (2003)\n- Parasite (2019)\n- Creed (2015)\n- Grosse Pointe Blank (1997)\n- 127 Hours (2010)\n- Point Break (1991)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- How to Train Your Dragon (2010)\n- Donnie Darko (2001)\n- American Beauty (1999)\n- American Psycho (2000)\n- Cruel Intentions (1999)\n- Demolition Man (1993)\n- Django Unchained (2012)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n\nList B:\n- Game, The (1997)\n- Isle of Dogs (2018)\n- Demolition Man (1993)\n- How to Train Your Dragon (2010)\n- Cruel Intentions (1999)\n- Children of Dune (2003)\n- Bug's Life, A (1998)\n- Arrival (2016)\n\nList C:\n- Game, The (1997)\n- Bug's Life, A (1998)\n- Donnie Darko (2001)\n- Watchmen (2009)\n- Isle of Dogs (2018)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Others, The (2001)\n- Monsters University (2013)",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Monsters, Inc. (2001)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Forrest Gump (1994)\n- Incredibles, The (2004)\n- Hobbit: The Desolation of Smaug, The (2013)\n- Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)\n\nList B:\n- Monsters, Inc. (2001)\n- Hobbit: The Desolation of Smaug, The (2013)\n- Thor (2011)\n- Indiana Jones and the Last Crusade (1989)\n- The Amazing Spider-Man 2 (2014)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n\nList C:\n- Forrest Gump (1994)\n- Thor (2011)\n- Sixth Sense, The (1999)\n- Incredibles, The (2004)\n- Braveheart (1995)\n- Dark Knight, The (2008)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Shrek (2001)\n- Darkest Hour (2017)\n- X-Men Origins: Wolverine (2009)\n- Sin City (2005)\n- Indiana Jones and the Last Crusade (1989)\n- 10 Cloverfield Lane (2016)\n- The Man from U.N.C.L.E. (2015)\n\nList B:\n- Kung Fu Panda (2008)\n- Darkest Hour (2017)\n- The Man from U.N.C.L.E. (2015)\n- Emperor's New Groove, The (2000)\n- Sin City (2005)\n- X-Men Origins: Wolverine (2009)\n- Blood Diamond (2006)\n\nList C:\n- Kung Fu Panda (2008)\n- Argo (2012)\n- Tangled (2010)\n- Emperor's New Groove, The (2000)\n- Blood Diamond (2006)\n- Requiem for a Dream (2000)\n- Pirates of the Caribbean: Dead Man's Chest (2006)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- I Am Legend (2007)\n- Pacific Rim (2013)\n- Last Samurai, The (2003)\n- Hangover, The (2009)\n- Big Fish (2003)\n\nList B:\n- Jurassic Park III (2001)\n- Pacific Rim (2013)\n- Brave (2012)\n- Aliens (1986)\n- I Am Legend (2007)\n\nList C:\n- Aliens (1986)\n- Brave (2012)\n- Spotlight (2015)\n- The Imitation Game (2014)\n- Last Samurai, The (2003)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Megamind (2010)\n- Dead Poets Society (1989)\n- Gran Torino (2008)\n- Scott Pilgrim vs. the World (2010)\n- Avengers, The (2012)\n- Get Out (2017)\n- Batman Begins (2005)\n\nList B:\n- Monsters University (2013)\n- Zodiac (2007)\n- Harry Potter and the Prisoner of Azkaban (2004)\n- WALL\u00b7E (2008)\n- Gran Torino (2008)\n- Ratatouille (2007)\n- Avengers, The (2012)\n\nList C:\n- Dead Poets Society (1989)\n- Megamind (2010)\n- Harry Potter and the Order of the Phoenix (2007)\n- Ice Age (2002)\n- Zodiac (2007)\n- WALL\u00b7E (2008)\n- Pineapple Express (2008)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Minority Report (2002)\n- Zodiac (2007)\n- Wolf of Wall Street, The (2013)\n- Slumdog Millionaire (2008)\n- Nightcrawler (2014)\n\nList B:\n- It Follows (2014)\n- Wolf of Wall Street, The (2013)\n- Terminator 2: Judgment Day (1991)\n- Hangover, The (2009)\n- Shutter Island (2010)\n\nList C:\n- Minority Report (2002)\n- It Follows (2014)\n- Zodiac (2007)\n- Hot Fuzz (2007)\n- Oblivion (2013)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Dallas Buyers Club (2013)\n- Twilight Saga: Breaking Dawn - Part 2, The (2012)\n- Star Wars: Episode III - Revenge of the Sith (2005)\n- Cast Away (2000)\n- Super Size Me (2004)\n\nList B:\n- Twilight Saga: Breaking Dawn - Part 2, The (2012)\n- Fifty Shades Darker (2017)\n- Reservoir Dogs (1992)\n- Limitless (2011)\n- Silver Linings Playbook (2012)\n\nList C:\n- Thor: Ragnarok (2017)\n- Fifty Shades Darker (2017)\n- Ferris Bueller's Day Off (1986)\n- Black Hawk Down (2001)\n- Reservoir Dogs (1992)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Rush Hour 2 (2001)\n- Avengers: Infinity War - Part I (2018)\n- The Revenant (2015)\n- Mummy, The (1999)\n- Logan (2017)\n- Spider-Man (2002)\n\nList B:\n- Superbad (2007)\n- Django Unchained (2012)\n- Ice Age (2002)\n- Pulp Fiction (1994)\n- Zombieland (2009)\n- Spider-Man (2002)\n\nList C:\n- Incredibles, The (2004)\n- Bug's Life, A (1998)\n- Rush Hour 2 (2001)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Mummy, The (1999)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Moneyball (2011)\n- Shrek 2 (2004)\n- Bourne Legacy, The (2012)\n- Love Actually (2003)\n- 12 Years a Slave (2013)\n- Captain Phillips (2013)\n- Bridget Jones's Diary (2001)\n\nList B:\n- Monsters, Inc. (2001)\n- Good Will Hunting (1997)\n- The Accountant (2016)\n- Moneyball (2011)\n- Iron Man 2 (2010)\n- School of Rock (2003)\n- The Revenant (2015)\n\nList C:\n- The Accountant (2016)\n- Love Actually (2003)\n- John Wick: Chapter Two (2017)\n- Bourne Legacy, The (2012)\n- 50 First Dates (2004)\n- Now You See Me 2 (2016)\n- Notting Hill (1999)",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Zootopia (2016)\n- Groundhog Day (1993)\n- Toy Story 3 (2010)\n- Inside Out (2015)\n- Indiana Jones and the Last Crusade (1989)\n\nList B:\n- Inside Out (2015)\n- I, Robot (2004)\n- Grand Budapest Hotel, The (2014)\n- Indiana Jones and the Last Crusade (1989)\n- Beautiful Mind, A (2001)\n\nList C:\n- Zootopia (2016)\n- WALL\u00b7E (2008)\n- Jurassic Park (1993)\n- Spotlight (2015)\n- Dark Knight, The (2008)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Aliens (1986)\n- Saving Private Ryan (1998)\n- The Hunger Games: Catching Fire (2013)\n- Harry Potter and the Prisoner of Azkaban (2004)\n- Zodiac (2007)\n\nList B:\n- I, Robot (2004)\n- Untitled Spider-Man Reboot (2017)\n- Napoleon Dynamite (2004)\n- Inception (2010)\n- Iron Man 2 (2010)\n\nList C:\n- Inception (2010)\n- Truman Show, The (1998)\n- Harry Potter and the Prisoner of Azkaban (2004)\n- Napoleon Dynamite (2004)\n- Heat (1995)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Silence of the Lambs, The (1991)\n- Nightcrawler (2014)\n- Dark Knight, The (2008)\n- Love Actually (2003)\n- Up (2009)\n- Bourne Supremacy, The (2004)\n\nList B:\n- Inside Out (2015)\n- Bourne Supremacy, The (2004)\n- Reservoir Dogs (1992)\n- Matrix Revolutions, The (2003)\n- 50 First Dates (2004)\n- Deadpool (2016)\n\nList C:\n- Silence of the Lambs, The (1991)\n- Nightcrawler (2014)\n- Friends with Benefits (2011)\n- Deadpool (2016)\n- Green Mile, The (1999)\n- 50 First Dates (2004)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Up (2009)\n- Social Network, The (2010)\n- Superbad (2007)\n- Inglourious Basterds (2009)\n\nList B:\n- Up (2009)\n- Social Network, The (2010)\n- Bug's Life, A (1998)\n- The Imitation Game (2014)\n\nList C:\n- Furious 7 (2015)\n- Broken Flowers (2005)\n- Cloverfield (2008)\n- Fantastic Beasts and Where to Find Them (2016)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Monsters, Inc. (2001)\n- I Am Legend (2007)\n- Harry Potter and the Chamber of Secrets (2002)\n- Zombieland (2009)\n- Lord of the Rings: The Fellowship of the Ring, The (2001)\n\nList B:\n- Prestige, The (2006)\n- Zombieland (2009)\n- Catch Me If You Can (2002)\n- Shrek 2 (2004)\n- Pulp Fiction (1994)\n\nList C:\n- Incredibles, The (2004)\n- Fury (2014)\n- Shrek 2 (2004)\n- Intouchables (2011)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Good Will Hunting (1997)\n- Bourne Identity, The (1988)\n- Great Gatsby, The (2013)\n- Trainspotting (1996)\n- Despicable Me (2010)\n- Shutter Island (2010)\n- 13 Going on 30 (2004)\n\nList B:\n- Good Will Hunting (1997)\n- Up (2009)\n- Fight Club (1999)\n- V for Vendetta (2006)\n- American Sniper (2014)\n- Despicable Me (2010)\n- Bourne Identity, The (1988)\n\nList C:\n- Up (2009)\n- Shutter Island (2010)\n- Eternal Sunshine of the Spotless Mind (2004)\n- Indiana Jones and the Last Crusade (1989)\n- Fight Club (1999)\n- Zombieland (2009)\n- Dark Knight, The (2008)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- O Brother, Where Art Thou? (2000)\n- Titanic (1997)\n- Harry Potter and the Chamber of Secrets (2002)\n- Terminator 3: Rise of the Machines (2003)\n- Little Miss Sunshine (2006)\n- Requiem for a Dream (2000)\n\nList B:\n- Goodfellas (1990)\n- Lord of the Rings: The Return of the King, The (2003)\n- Social Network, The (2010)\n- Captain Phillips (2013)\n- School of Rock (2003)\n- Big Lebowski, The (1998)\n\nList C:\n- Goodfellas (1990)\n- Ant-Man (2015)\n- School of Rock (2003)\n- Fear and Loathing in Las Vegas (1998)\n- O Brother, Where Art Thou? (2000)\n- Terminator 3: Rise of the Machines (2003)",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- John Wick: Chapter Two (2017)\n- Harry Potter and the Order of the Phoenix (2007)\n- Hurt Locker, The (2008)\n- Avengers: Infinity War - Part I (2018)\n- Indiana Jones and the Last Crusade (1989)\n- Mad Max: Fury Road (2015)\n\nList B:\n- Toy Story (1995)\n- Saving Private Ryan (1998)\n- John Wick: Chapter Two (2017)\n- Interstellar (2014)\n- Enemy at the Gates (2001)\n- Logan (2017)\n\nList C:\n- Mad Max: Fury Road (2015)\n- Deadpool (2016)\n- Pulp Fiction (1994)\n- Saving Private Ryan (1998)\n- Truman Show, The (1998)\n- Indiana Jones and the Last Crusade (1989)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Annihilation (2018)\n- Clue (1985)\n- Zootopia (2016)\n- Fargo (1996)\n- A Quiet Place (2018)\n\nList B:\n- Fargo (1996)\n- X-Men: First Class (2011)\n- Cabin in the Woods, The (2012)\n- Pearl Harbor (2001)\n- Gladiator (2000)\n\nList C:\n- John Wick (2014)\n- Aliens (1986)\n- Zootopia (2016)\n- Transporter, The (2002)\n- Shrek 2 (2004)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Dead Poets Society (1989)\n- Blade Runner 2049 (2017)\n- Inglourious Basterds (2009)\n- The Theory of Everything (2014)\n\nList B:\n- The Theory of Everything (2014)\n- Inglourious Basterds (2009)\n- Dead Poets Society (1989)\n- Blade Runner 2049 (2017)\n\nList C:\n- Shrek (2001)\n- WALL\u00b7E (2008)\n- Lost in Translation (2003)\n- Blind Side, The  (2009)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Back to the Future (1985)\n- Bourne Supremacy, The (2004)\n- Hacksaw Ridge (2016)\n- Creed (2015)\n- Beauty and the Beast (1991)\n\nList B:\n- Catch Me If You Can (2002)\n- Creed (2015)\n- Hacksaw Ridge (2016)\n- Back to the Future (1985)\n- Bourne Supremacy, The (2004)\n\nList C:\n- Catch Me If You Can (2002)\n- Die Hard (1988)\n- Beautiful Mind, A (2001)\n- 300 (2007)\n- Social Network, The (2010)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Inside Out (2015)\n- Ex Machina (2015)\n- Deadpool (2016)\n- Catch Me If You Can (2002)\n- Django Unchained (2012)\n- Zombieland (2009)\n- Arrival (2016)\n- Edge of Tomorrow (2014)\n\nList B:\n- Harry Potter and the Half-Blood Prince (2009)\n- Edge of Tomorrow (2014)\n- Monsters, Inc. (2001)\n- Arrival (2016)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Deadpool (2016)\n- Ex Machina (2015)\n- Ice Age (2002)\n\nList C:\n- Harry Potter and the Half-Blood Prince (2009)\n- Django Unchained (2012)\n- Monsters, Inc. (2001)\n- Gravity (2013)\n- The Imitation Game (2014)\n- Shrek 2 (2004)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Zootopia (2016)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Half-Blood Prince (2009)\n- Chronicles of Narnia: The Voyage of the Dawn Treader, The (2010)\n- Shutter Island (2010)\n- John Carter (2012)\n- 22 Jump Street (2014)\n- Harry Potter and the Prisoner of Azkaban (2004)\n\nList B:\n- Dark Knight, The (2008)\n- Harry Potter and the Prisoner of Azkaban (2004)\n- Iron Man 2 (2010)\n- Shrek (2001)\n- Django Unchained (2012)\n- Shutter Island (2010)\n\nList C:\n- Harry Potter and the Half-Blood Prince (2009)\n- Slumdog Millionaire (2008)\n- Chronicles of Narnia: The Voyage of the Dawn Treader, The (2010)\n- Incredibles, The (2004)\n- Django Unchained (2012)\n- Monsters, Inc. (2001)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Monsters University (2013)\n- Intouchables (2011)\n- Silver Linings Playbook (2012)\n- John Wick (2014)\n\nList B:\n- Gladiator (2000)\n- Catch Me If You Can (2002)\n- American Beauty (1999)\n- Whiplash (2014)\n\nList C:\n- Monsters University (2013)\n- Pretty Woman (1990)\n- Scott Pilgrim vs. the World (2010)\n- Gladiator (2000)",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Up (2009)\n- The Imitation Game (2014)\n- Waterworld (1995)\n- Pirates of the Caribbean: Dead Man's Chest (2006)\n- For the Birds (2000)\n\nList B:\n- Up (2009)\n- Matrix, The (1999)\n- Sherlock Holmes: A Game of Shadows (2011)\n- Saving Private Ryan (1998)\n- Snatch (2000)\n\nList C:\n- Knockin' on Heaven's Door (1997)\n- La Luna (2011)\n- Sherlock Holmes: A Game of Shadows (2011)\n- Waterworld (1995)\n- Mad Max: Fury Road (2015)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Blade Runner 2049 (2017)\n- Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005)\n- Rushmore (1998)\n- Sin City (2005)\n- The Imitation Game (2014)\n- Inception (2010)\n\nList B:\n- Lord of the Rings: The Return of the King, The (2003)\n- V for Vendetta (2006)\n- Argo (2012)\n- Donnie Darko (2001)\n- Fugitive, The (1993)\n- Illusionist, The (2006)\n\nList C:\n- Lost Highway (1997)\n- Sicario (2015)\n- Blade Runner 2049 (2017)\n- Arrival (2016)\n- Illusionist, The (2006)\n- Wild at Heart (1990)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Beauty and the Beast: The Enchanted Christmas (1997)\n- Lion King 1\u00bd, The (2004)\n- 21 Jump Street (2012)\n- Bourne Supremacy, The (2004)\n- Harry Potter and the Half-Blood Prince (2009)\n\nList B:\n- Lord of the Rings: The Return of the King, The (2003)\n- Shutter Island (2010)\n- Lion King 1\u00bd, The (2004)\n- Rogue One: A Star Wars Story (2016)\n- 21 Jump Street (2012)\n\nList C:\n- Lord of the Rings: The Return of the King, The (2003)\n- Aladdin (1992)\n- Bourne Supremacy, The (2004)\n- Beauty and the Beast: The Enchanted Christmas (1997)\n- Up (2009)",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Up (2009)\n- Matrix, The (1999)\n- Prisoners (2013)\n- Mean Girls (2004)\n- Scott Pilgrim vs. the World (2010)\n- 127 Hours (2010)\n- Gifted (2017)\n\nList B:\n- Star Wars: Episode I - The Phantom Menace (1999)\n- Cast Away (2000)\n- Up (2009)\n- Scott Pilgrim vs. the World (2010)\n- Shrek (2001)\n- 127 Hours (2010)\n- Hidden Figures (2016)\n\nList C:\n- Star Wars: Episode I - The Phantom Menace (1999)\n- Gifted (2017)\n- Kick-Ass 2 (2013)\n- The Blue Planet (2001)\n- Prisoners (2013)\n- Mean Girls (2004)\n- Along Came Polly (2004)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Source Code (2011)\n- Django Unchained (2012)\n- Hangover, The (2009)\n- Kill Bill: Vol. 2 (2004)\n- Terminal, The (2004)\n- Rogue One: A Star Wars Story (2016)\n\nList B:\n- Gladiator (2000)\n- Rogue One: A Star Wars Story (2016)\n- Life of Pi (2012)\n- Source Code (2011)\n- Deadpool (2016)\n- Dead Poets Society (1989)\n\nList C:\n- Gladiator (2000)\n- Harry Potter and the Deathly Hallows: Part 2 (2011)\n- Life of Pi (2012)\n- Hangover, The (2009)\n- Lord of the Rings: The Return of the King, The (2003)\n- Bowling for Columbine (2002)",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Rush Hour 2 (2001)\n- We're the Millers (2013)\n- Rock, The (1996)\n- Girl with the Dragon Tattoo, The (2011)\n\nList B:\n- Fight Club (1999)\n- Bug's Life, A (1998)\n- Apollo 13 (1995)\n- Schindler's List (1993)\n\nList C:\n- Bug's Life, A (1998)\n- Shaun of the Dead (2004)\n- Fight Club (1999)\n- Arrival (2016)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Slumdog Millionaire (2008)\n- Silence of the Lambs, The (1991)\n- Bug's Life, A (1998)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Beautiful Mind, A (2001)\n- Guardians of the Galaxy 2 (2017)\n- 10 Things I Hate About You (1999)\n\nList B:\n- Taken (2008)\n- Django Unchained (2012)\n- Beautiful Mind, A (2001)\n- District 9 (2009)\n- Help, The (2011)\n- True Lies (1994)\n- Inglourious Basterds (2009)\n\nList C:\n- Equalizer, The (2014)\n- 10 Things I Hate About You (1999)\n- True Lies (1994)\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Guardians of the Galaxy 2 (2017)\n- Charlie and the Chocolate Factory (2005)\n- Taken (2008)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Goodfellas (1990)\n- Fifth Element, The (1997)\n- Sherlock Holmes (2009)\n- Rise of the Planet of the Apes (2011)\n- Gravity (2013)\n- Tropic Thunder (2008)\n\nList B:\n- Austin Powers: International Man of Mystery (1997)\n- John Wick (2014)\n- Inglourious Basterds (2009)\n- Big Fish (2003)\n- American Psycho (2000)\n- Shutter Island (2010)\n\nList C:\n- John Wick (2014)\n- Sherlock Holmes (2009)\n- Bridge of Spies (2015)\n- Fifth Element, The (1997)\n- Ex Machina (2015)\n- Austin Powers: International Man of Mystery (1997)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Iron Man (2008)\n- Ocean's Eleven (2001)\n- Shawshank Redemption, The (1994)\n- Gone Girl (2014)\n- Help, The (2011)\n\nList B:\n- Step Up 2 the Streets (2008)\n- Mulan (1998)\n- Interstellar (2014)\n- Harry Potter and the Goblet of Fire (2005)\n- X-Men (2000)\n\nList C:\n- Iron Man (2008)\n- Shawshank Redemption, The (1994)\n- Shrek 2 (2004)\n- Ocean's Eleven (2001)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Ocean's Eleven (2001)\n- Silence of the Lambs, The (1991)\n- Hidden Figures (2016)\n- Life of Pi (2012)\n\nList B:\n- Ocean's Eleven (2001)\n- Perks of Being a Wallflower, The (2012)\n- Indiana Jones and the Last Crusade (1989)\n- Black Swan (2010)\n\nList C:\n- Perks of Being a Wallflower, The (2012)\n- Coco (2017)\n- O Brother, Where Art Thou? (2000)\n- Gattaca (1997)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Fight Club (1999)\n- Up (2009)\n- Spotlight (2015)\n- Finding Dory (2016)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Ex Machina (2015)\n\nList B:\n- Mr. & Mrs. Smith (2005)\n- Monsters, Inc. (2001)\n- Ex Machina (2015)\n- Fight Club (1999)\n- Sherlock Holmes (2009)\n- Rogue One: A Star Wars Story (2016)\n\nList C:\n- Mr. & Mrs. Smith (2005)\n- Hacksaw Ridge (2016)\n- Avengers: Infinity War - Part I (2018)\n- Maze Runner, The (2014)\n- Hell or High Water (2016)\n- Rogue One: A Star Wars Story (2016)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Gladiator (2000)\n- Midnight in Paris (2011)\n- Shutter Island (2010)\n- Social Network, The (2010)\n- Godzilla (2014)\n\nList B:\n- Godzilla (2014)\n- Midnight in Paris (2011)\n- Cast Away (2000)\n- The Theory of Everything (2014)\n- Die Hard: With a Vengeance (1995)\n\nList C:\n- Cast Away (2000)\n- Social Network, The (2010)\n- Braveheart (1995)\n- Juno (2007)\n- Die Hard: With a Vengeance (1995)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Short Term 12 (2013)\n- Horrible Bosses 2 (2014)\n- Mud (2012)\n- 50 First Dates (2004)\n- While You Were Sleeping (1995)\n\nList B:\n- Matrix Revolutions, The (2003)\n- Mud (2012)\n- Shawshank Redemption, The (1994)\n- Harry Potter and the Chamber of Secrets (2002)\n- Short Term 12 (2013)\n\nList C:\n- Harry Potter and the Chamber of Secrets (2002)\n- Harold and Kumar Go to White Castle (2004)\n- Waterworld (1995)\n- Fight Club (1999)\n- Shawshank Redemption, The (1994)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Pursuit of Happyness, The (2006)\n- 1408 (2007)\n- Pianist, The (2002)\n- Catch Me If You Can (2002)\n- Good Will Hunting (1997)\n\nList B:\n- Catch Me If You Can (2002)\n- Up (2009)\n- Whiplash (2014)\n- Memento (2000)\n- Million Dollar Baby (2004)\n\nList C:\n- Pianist, The (2002)\n- Up (2009)\n- Good Will Hunting (1997)\n- Guardians of the Galaxy (2014)\n- Social Network, The (2010)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Titanic (1997)\n- Ratatouille (2007)\n- Ocean's Eleven (2001)\n- Get Out (2017)\n- Star Wars: Episode VII - The Force Awakens (2015)\n- Dunkirk (2017)\n\nList B:\n- School of Rock (2003)\n- Star Wars: Episode VII - The Force Awakens (2015)\n- Titanic (1997)\n- Ratatouille (2007)\n- Finding Nemo (2003)\n- Star Wars: Episode II - Attack of the Clones (2002)\n\nList C:\n- Star Wars: Episode II - Attack of the Clones (2002)\n- Dunkirk (2017)\n- Finding Nemo (2003)\n- 300 (2007)\n- Ocean's Eleven (2001)\n- Shrek 2 (2004)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Air Force One (1997)\n- Wallace & Gromit: The Wrong Trousers (1993)\n- Bourne Supremacy, The (2004)\n\nList B:\n- Ant-Man (2015)\n- Iron Man 3 (2013)\n- Wallace & Gromit: The Wrong Trousers (1993)\n\nList C:\n- Mr. & Mrs. Smith (2005)\n- Matrix Reloaded, The (2003)\n- Rain Man (1988)",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Bourne Supremacy, The (2004)\n- Saving Private Ryan (1998)\n- Gravity (2013)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n- Jurassic Park (1993)\n\nList B:\n- Limitless (2011)\n- Saving Private Ryan (1998)\n- Prisoners (2013)\n- Good Will Hunting (1997)\n- Casino Royale (2006)\n\nList C:\n- Bourne Identity, The (2002)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n- Prisoners (2013)\n- Limitless (2011)\n- Casino Royale (2006)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Back to the Future (1985)\n- King's Speech, The (2010)\n- Bourne Supremacy, The (2004)\n- Trainspotting (1996)\n\nList B:\n- Up (2009)\n- WALL\u00b7E (2008)\n- 127 Hours (2010)\n- Bourne Supremacy, The (2004)\n\nList C:\n- Moonrise Kingdom (2012)\n- Silver Linings Playbook (2012)\n- Fantastic Beasts and Where to Find Them (2016)\n- WALL\u00b7E (2008)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Insurgent (2015)\n- Wallace & Gromit: A Close Shave (1995)\n- Nightcrawler (2014)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n- Green Mile, The (1999)\n\nList B:\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- The Imitation Game (2014)\n- Departed, The (2006)\n- Wallace & Gromit: The Wrong Trousers (1993)\n- Harry Potter and the Deathly Hallows: Part 1 (2010)\n\nList C:\n- Memento (2000)\n- The Imitation Game (2014)\n- Iron Man 2 (2010)\n- Nightcrawler (2014)\n- The Revenant (2015)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Last Samurai, The (2003)\n- Moonrise Kingdom (2012)\n- Mummy, The (1999)\n- Pursuit of Happyness, The (2006)\n- The Imitation Game (2014)\n- Donnie Darko (2001)\n- Full Metal Jacket (1987)\n\nList B:\n- Last Samurai, The (2003)\n- Donnie Darko (2001)\n- The Imitation Game (2014)\n- Dodgeball: A True Underdog Story (2004)\n- Pianist, The (2002)\n- Thor (2011)\n- Big (1988)\n\nList C:\n- Mummy, The (1999)\n- Moonrise Kingdom (2012)\n- Pursuit of Happyness, The (2006)\n- Full Metal Jacket (1987)\n- Zombieland (2009)\n- Her (2013)\n- American Beauty (1999)",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- A-Team, The (2010)\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003)\n- Back to the Future Part II (1989)\n- There Will Be Blood (2007)\n- Harry Potter and the Chamber of Secrets (2002)\n- Departed, The (2006)\n\nList B:\n- Looper (2012)\n- Harry Potter and the Chamber of Secrets (2002)\n- Hangover, The (2009)\n- Notting Hill (1999)\n- Recruit, The (2003)\n- Gladiator (2000)\n\nList C:\n- A-Team, The (2010)\n- Notting Hill (1999)\n- Kingsman: The Golden Circle (2017)\n- Recruit, The (2003)\n- Inside Out (2015)\n- Looper (2012)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Logan (2017)\n- Monsters, Inc. (2001)\n- Django Unchained (2012)\n- Forrest Gump (1994)\n- Limitless (2011)\n\nList B:\n- Pirates of the Caribbean: At World's End (2007)\n- Jumanji: Welcome to the Jungle (2017)\n- Limitless (2011)\n- Star Wars: The Last Jedi (2017)\n- Simpsons Movie, The (2007)\n\nList C:\n- Pirates of the Caribbean: At World's End (2007)\n- Simpsons Movie, The (2007)\n- Nightcrawler (2014)\n- Star Wars: The Last Jedi (2017)\n- Pirates of the Caribbean: Dead Man's Chest (2006)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Dark Knight Rises, The (2012)\n- Princess Bride, The (1987)\n- Hard Candy (2005)\n- 12 Years a Slave (2013)\n- Lost in Translation (2003)\n- Wreck-It Ralph (2012)\n\nList B:\n- Fugitive, The (1993)\n- Princess Bride, The (1987)\n- 12 Years a Slave (2013)\n- Spider-Man 2 (2004)\n- Lost in Translation (2003)\n- Perks of Being a Wallflower, The (2012)\n- Limitless (2011)\n\nList C:\n- Three Billboards Outside Ebbing, Missouri (2017)\n- Fugitive, The (1993)\n- Perks of Being a Wallflower, The (2012)\n- Fear and Loathing in Las Vegas (1998)\n- Hard Candy (2005)\n- Dark Knight Rises, The (2012)\n- Brokeback Mountain (2005)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- Iron Man (2008)\n- Social Network, The (2010)\n- Isle of Dogs (2018)\n- Incredibles, The (2004)\n- Up (2009)\n- 10 Things I Hate About You (1999)\n- Sherlock Holmes (2009)\n\nList B:\n- Looper (2012)\n- Catch Me If You Can (2002)\n- Sherlock Holmes (2009)\n- Charlie and the Chocolate Factory (2005)\n- Deadpool (2016)\n- Fargo (1996)\n- Notebook, The (2004)\n\nList C:\n- Iron Man (2008)\n- Isle of Dogs (2018)\n- Other Woman, The (2014)\n- Social Network, The (2010)\n- 10 Things I Hate About You (1999)\n- Fargo (1996)\n- Deadpool (2016)",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "prompt": "List A:\n- V for Vendetta (2006)\n- Dallas Buyers Club (2013)\n- Grand Budapest Hotel, The (2014)\n- Billy Elliot (2000)\n- Truman Show, The (1998)\n- Forrest Gump (1994)\n\nList B:\n- Dallas Buyers Club (2013)\n- Kingsman: The Secret Service (2015)\n- Dirty Dancing (1987)\n- Lord of the Rings: The Two Towers, The (2002)\n- Bridget Jones's Diary (2001)\n- Walk the Line (2005)\n\nList C:\n- Dirty Dancing (1987)\n- Kingsman: The Secret Service (2015)\n- Good bye, Lenin! (2003)\n- Walk the Line (2005)\n- La La Land (2016)\n- Ghost in the Shell (2017)",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Fury (2014)\n- Cast Away (2000)\n- Shrek 2 (2004)\n- Stranger than Fiction (2006)\n\nList B:\n- Dead Poets Society (1989)\n- Rock, The (1996)\n- Gladiator (2000)\n- Fury (2014)\n\nList C:\n- Gladiator (2000)\n- Gone Girl (2014)\n- Edward Scissorhands (1990)\n- King's Speech, The (2010)",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    }
+]

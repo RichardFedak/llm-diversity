@@ -1,0 +1,8 @@
+--- Evaluation Results ---
+Total evaluations: 215
+Valid outputs: 205 (95.35%)
+Invalid outputs: 10 (4.65%)
+Correct outputs: 100
+Incorrect outputs: 105
+Accuracy: 48.78%
+Total elapsed time: 1366.37 seconds

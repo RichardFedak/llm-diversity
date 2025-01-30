@@ -1,0 +1,217 @@
+,id,age,gender,nationality,nationality simplified
+0,61,23,Male,Hungary,European
+0,62,22,Male,Poland,European
+0,63,33,Male,Portugal,European
+0,64,29,Female,Portugal,European
+0,65,23,Female,Portugal,European
+0,66,21,Female,Poland,European
+0,67,25,Female,Portugal,European
+0,69,28,Female,Portugal,European
+0,71,Unknown,Unknown,Unknown,Unknown
+0,72,23,Male,Poland,European
+0,73,Unknown,Unknown,Unknown,Unknown
+0,74,24,Male,Portugal,European
+0,79,20,Male,Mexico,American
+0,80,31,Female,Mexico,American
+0,81,36,Female,Canada,American
+0,82,39,Male,France,European
+0,85,33,Female,Mexico,American
+0,87,25,Female,United Kingdom,European
+0,88,24,Female,Mexico,American
+0,89,24,Male,Mexico,American
+0,90,40,Female,Bangladesh,Asian
+0,91,20,Male,Poland,European
+0,93,31,Male,Switzerland,European
+0,94,23,Male,Portugal,European
+0,95,25,Female,Portugal,European
+0,96,34,Female,Iraq,Asian
+0,98,37,Male,Slovenia,European
+0,99,26,Male,Nigeria,African
+0,100,25,Male,Poland,European
+0,102,31,Female,South Africa,African
+0,103,44,Male,South Africa,African
+0,104,23,Female,South Africa,African
+0,105,22,Female,Portugal,European
+0,106,31,Female,Portugal,European
+0,108,22,Male,Finland,European
+0,109,25,Female,Poland,European
+0,111,21,Male,Poland,European
+0,113,22,Male,Poland,European
+0,114,23,Male,South Africa,African
+0,115,22,Female,Poland,European
+0,116,47,Female,Estonia,European
+0,117,27,Female,South Africa,African
+0,118,33,Female,Italy,European
+0,120,26,Female,Mexico,American
+0,121,24,Female,Poland,European
+0,122,21,Female,Poland,European
+0,123,31,Male,Poland,European
+0,125,24,Male,Portugal,European
+0,126,28,Female,United Kingdom,European
+0,127,23,Male,Greece,European
+0,129,29,Male,Portugal,European
+0,131,22,Male,Poland,European
+0,133,24,Female,Poland,European
+0,134,22,Female,Mexico,American
+0,135,48,Female,Portugal,European
+0,136,28,Male,Greece,European
+0,137,25,Male,Poland,European
+0,138,22,Male,Poland,European
+0,139,36,Male,United States,American
+0,140,24,Male,United Kingdom,European
+0,144,26,Male,Greece,European
+0,145,27,Male,United States,American
+0,146,23,Male,Poland,European
+0,147,29,Male,Spain,European
+0,148,22,Female,Estonia,European
+0,150,28,Male,United States,American
+0,151,41,Female,Australia,Oceanian
+0,152,32,Female,Ukraine,European
+0,153,27,Female,South Africa,African
+0,154,24,Female,Latvia,European
+0,155,29,Female,Italy,European
+0,156,21,Female,Poland,European
+0,157,38,Male,Greece,European
+0,158,23,Male,Poland,European
+0,159,32,Male,Greece,European
+0,160,51,Male,Poland,European
+0,163,30,Male,Syrian Arab Republic,Asian
+0,164,24,Unknown,Unknown,Unknown
+0,165,20,Male,Poland,European
+0,166,21,Female,United Kingdom,European
+0,167,26,Male,Ireland,European
+0,168,37,Female,United Kingdom,European
+0,170,38,Female,Poland,European
+0,171,24,Female,Poland,European
+0,172,20,Male,Poland,European
+0,173,25,Male,Portugal,European
+0,175,22,Male,Greece,European
+0,177,31,Female,Zimbabwe,African
+0,178,21,Male,Hungary,European
+0,179,24,Male,Poland,European
+0,180,29,Female,South Africa,African
+0,181,23,Female,South Africa,African
+0,182,23,Female,Slovenia,European
+0,183,27,Male,Italy,European
+0,184,33,Female,Estonia,European
+0,185,24,Female,Portugal,European
+0,186,26,Male,Estonia,European
+0,187,27,Male,Greece,European
+0,188,37,Male,United Kingdom,European
+0,189,Unknown,Unknown,Unknown,Unknown
+0,190,37,Male,United Kingdom,European
+0,191,55,Male,Poland,European
+0,192,21,Male,Portugal,European
+0,193,37,Male,United Kingdom,European
+0,194,36,Male,Portugal,European
+0,197,29,Female,Mexico,American
+0,203,23,Female,Portugal,European
+0,204,21,Male,Poland,European
+0,205,34,Female,Canada,American
+0,206,27,Female,Portugal,European
+0,207,32,Male,Canada,American
+0,208,28,Male,Portugal,European
+0,210,27,Female,Poland,European
+0,211,59,Male,New Zealand,Oceanian
+0,212,23,Female,Poland,European
+0,213,23,Female,Portugal,European
+0,214,21,Female,Mexico,American
+0,215,24,Male,Canada,American
+0,219,21,Female,Hungary,European
+0,220,23,Female,Portugal,European
+0,223,31,Female,Poland,European
+0,224,29,Female,Portugal,European
+0,225,23,Female,Portugal,European
+0,227,19,Male,Greece,European
+0,228,21,Male,Poland,European
+0,229,27,Male,Unknown,Unknown
+0,230,36,Female,Canada,American
+0,231,29,Female,Mexico,American
+0,232,39,Male,Portugal,European
+0,233,45,Male,Portugal,European
+0,234,21,Female,Portugal,European
+0,235,36,Male,Italy,European
+0,236,26,Female,Italy,European
+0,238,30,Female,Canada,American
+0,239,Unknown,Unknown,Unknown,Unknown
+0,243,Unknown,Unknown,Unknown,Unknown
+0,244,21,Female,South Africa,African
+0,245,28,Male,South Africa,African
+0,246,34,Female,United Kingdom,European
+0,248,22,Female,South Africa,African
+0,249,38,Male,Poland,European
+0,251,23,Female,Estonia,European
+0,252,20,Male,South Africa,African
+0,253,21,Female,Italy,European
+0,254,33,Male,Poland,European
+0,256,23,Male,Portugal,European
+0,258,35,Female,Germany,European
+0,259,30,Female,Turkey,European
+0,260,29,Male,Spain,European
+0,261,22,Female,Italy,European
+0,262,22,Female,Portugal,European
+0,263,25,Female,Spain,European
+0,264,26,Male,Poland,European
+0,265,23,Male,Poland,European
+0,266,Unknown,Unknown,Unknown,Unknown
+0,270,25,Female,Portugal,European
+0,271,31,Male,Hungary,European
+0,272,34,Female,Spain,European
+0,273,23,Female,Mexico,American
+0,274,31,Male,Chile,South American
+0,275,31,Male,United States,American
+0,276,30,Female,Hungary,European
+0,277,58,Female,United Kingdom,European
+0,279,21,Female,South Africa,African
+0,280,25,Female,South Africa,African
+0,281,43,Female,South Africa,African
+0,282,38,Male,South Africa,African
+0,284,21,Male,South Africa,African
+0,285,21,Female,South Africa,African
+0,287,23,Female,Australia,Oceanian
+0,288,48,Female,Ireland,European
+0,289,30,Female,Portugal,European
+0,290,23,Female,Poland,European
+0,291,23,Female,France,European
+0,292,23,Male,Poland,European
+0,293,Unknown,Unknown,Unknown,Unknown
+0,294,27,Female,Chile,South American
+0,295,26,Male,Portugal,European
+0,296,24,Male,Portugal,European
+0,297,28,Male,Canada,American
+0,298,20,Female,Portugal,European
+0,299,20,Male,Hungary,European
+0,300,23,Male,Portugal,European
+0,302,21,Female,Poland,European
+0,303,25,Male,Poland,European
+0,304,22,Male,Hungary,European
+0,305,29,Female,Mexico,American
+0,306,23,Male,South Africa,African
+0,308,22,Male,Czech Republic,European
+0,311,Unknown,Unknown,Unknown,Unknown
+0,313,23,Male,Albania,European
+0,314,23,Female,Chile,South American
+0,315,35,Female,Canada,American
+0,316,Unknown,Unknown,Unknown,Unknown
+0,317,Unknown,Unknown,Unknown,Unknown
+0,318,49,Male,Portugal,European
+0,320,29,Male,Italy,European
+0,321,37,Female,Ukraine,European
+0,322,27,Male,Unknown,Unknown
+0,324,23,Male,South Africa,African
+0,325,21,Male,Italy,European
+0,326,36,Male,Poland,European
+0,328,22,Female,South Africa,African
+0,329,Unknown,Unknown,Unknown,Unknown
+0,331,20,Male,Hungary,European
+0,332,33,Female,New Zealand,Oceanian
+0,333,24,Male,Morocco,African
+0,334,23,Female,Spain,European
+0,309,25.5,Female,Czech Republic,European
+0,335,45.5,Male,Czech Republic,European
+0,336,35.5,Male,Czech Republic,European
+0,2,35.5,Male,Czech Republic,European
+0,3,35.5,Female,Czech Republic,European
+0,4,25.5,Female,Czech Republic,European
+0,5,25.5,Female,Czech Republic,European
+0,6,25.5,Female,Czech Republic,European

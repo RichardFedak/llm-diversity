@@ -1,0 +1,17 @@
+--- Evaluation Results ---
+Total evaluations: 107
+Valid outputs: 106 (99.07%)
+Invalid outputs: 1 (0.93%)
+Correct outputs: 42
+Incorrect outputs: 64
+Accuracy: 39.62%
+Metric: cf_ild
+  correct: 27
+  incorrect: 79
+Metric: cb_ild
+  incorrect: 59
+  correct: 47
+Metric: bin_div
+  incorrect: 65
+  correct: 41
+Total elapsed time: 654.73 seconds

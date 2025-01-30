@@ -1,0 +1,521 @@
+Invalid Outputs:
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Barbie: Dolphin Magic (2017) - Genres of the movie: Animation, Adventure, Family, Fantasy - Plot of the movie: Barbie and her sisters visit a sun-kissed island resort, only to discover that a rare Gemstone dolphin has gone missing. Will Barbie and her mysterious new friend Isla manage to find it? Above all, what is Isla's well-hidden secret?
+- A Novel Romance (2015) - Genres of the movie: Comedy, Romance - Plot of the movie: A best-selling romance novelist moves to Portland to cure his writer's block and unknowingly falls in love with his biggest critic. When their true identities are revealed, they have to find the courage and take a leap of faith.
+- Careful What You Wish For (2015) - Genres of the movie: Drama, Thriller - Plot of the movie: A guy gets more than he bargained for after entering into an affair with the wife of an investment banker. Soon, a suspicious death and substantial life insurance policy embroil him in a scandal.
+- Fandry (2013) - Genres of the movie: Drama, Family - Plot of the movie: It is about a teenager from a Dalit (Oppressed caste) family, who lives at the village fringe, and falls in love with an upper caste girl.
+- Night Guards (2016) - Genres of the movie: Action, Fantasy, Thriller - Plot of the movie: Contemporary Moscow. When eighteen-year-old Pasha rescues a beautiful young woman from a band of strangely powerful attackers, he discovers an underworld of supernatural beings living among us.
+- Trailer Park Boys: Say Goodnight to the Bad Guys (2008) - Genres of the movie: Comedy - Plot of the movie: It has been one year since the boys have become rich. Julian decided to keep the money safe, but when it comes time for everyone to get their share, the money is lost forever.
+- Svaha : The Sixth Finger (2019) - Genres of the movie: Crime, Horror, Mystery, Thriller - Plot of the movie: Pastor Park works to expose suspicious religious groups. He's hired to look into the cult group Deer Mount. Meanwhile, Police Captain Hwang investigates a murder case and the main suspect is a member of the Deer Mount cult.
+
+List B:
+- Sherlock Holmes (2009) - Genres of the movie: Action, Adventure, Mystery - Plot of the movie: Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.
+- Fifth Element, The (1997) - Genres of the movie: Action, Adventure, Sci-Fi - Plot of the movie: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.
+- John Wick (2014) - Genres of the movie: Action, Crime, Thriller - Plot of the movie: An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.
+- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller - Plot of the movie: A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller - Plot of the movie: Two astronauts work together to survive after an accident leaves them stranded in space.
+- Erin Brockovich (2000) - Genres of the movie: Biography, Drama - Plot of the movie: An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.
+
+List C:
+- Dear Santa (2011) - Genres of the movie: Drama - Plot of the movie: A young woman from a privileged life falls for a soup-kitchen owner after discovering a Dear Santa letter written by his 7-year-old daughter.
+- Lucky Trouble (2011) - Genres of the movie: Comedy, Romance, Sport - Plot of the movie: A school teacher from a small Russian town falls for a beautiful Moscow woman who is engaged to be married.
+- The Love Letter (1998) - Genres of the movie: Fantasy, Romance - Plot of the movie: 20th century computer games designer Scott exchanges love letters with 19th century poet Elizabeth Whitcomb through an antique desk that can make letters travel through time.
+- Fireworks, Should We See It from the Side or the Bottom? (2017) - Genres of the movie: Animation, Drama, Fantasy, Romance, Sci-Fi - Plot of the movie: In this sci-fi tinged story of young love and teenage turmoil, a mysterious glowing ball offers Norimichi a second chance at securing his dream date.
+- Plastic Galaxy: The Story of Star Wars Toys (2014) - Genres of the movie: Documentary, History, Sci-Fi - Plot of the movie: Plastic Galaxy explores the groundbreaking world of Star Wars toys. Through interviews with former Kenner employees, toy experts, and collectors, it looks at the toys' history, their influence, and the feelings they elicit today.
+- Alone in the Wilderness Part II (2011) - Genres of the movie: Documentary - Plot of the movie: Dick Proenneke's simple, yet profound account of his 30 year adventure in the remote Alaska wilderness continues in this sequel to "Alone in the Wilderness". Watch through his eyes as he continues to document with his 16mm wind-up Bolex camera, capturing his own amazing craftsmanship, the stunning Alaskan wildlife and scenery and even a visit from his brother Ray (Jake). His epic journey takes you on a vacation away from the hustle and bustle of today's fast-paced society, and is a true breath of fresh air.—Pike Briggs
+- Sextuplets (2019) - Genres of the movie: Comedy - Plot of the movie: Father-to-be Alan is shocked to learn that he was born a sextuplet. He and his newfound brother Russell set out on a hilarious journey to reunite with their other long-lost siblings.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: ("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Permission (2017) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: A woman on the brink of a marriage proposal is told by a friend that she should date other men before spending the rest of her life with her boyfriend.
+- Madagascar (2011) - Genres of the movie: Documentary - Plot of the movie: Over 80% of Madagascar's animals and plants are found nowhere else on Earth. Discover what made Madagascar so different from the rest of the world, and how evolution ran wild there.
+- You Get Me (2017) - Genres of the movie: Crime, Drama, Romance, Thriller - Plot of the movie: A one-night stand turns into a nightmare for a high-school student when a young woman's obsession grows dangerous.
+- John Mulaney & The Sack Lunch Bunch (2019) - Genres of the movie: Comedy, Family, Musical - Plot of the movie: John Mulaney and his kid pals tackle existential topics for all ages with catchy songs, comedy sketches and special guests in a nostalgic variety special.
+- While at War (2019) - Genres of the movie: Drama, History, War - Plot of the movie: Writer Miguel de Unamuno faces himself and his ideals after the 1936's military coup d'etat.
+- StreetDance 2 (2012) - Genres of the movie: Drama, Music, Romance - Plot of the movie: After suffering humiliation by the crew Invincible, street dancer Ash (Hentschel) looks to gather the best dancers from around the world for a rematch.
+- Parmanu: The Story of Pokhran (2018) - Genres of the movie: Action, Drama, History - Plot of the movie: Ashwat Raina and his teammates arrive in Pokhran to re-conduct a confidential nuclear test, where they face challenges from the American Lacrosse satellite and local spies.
+
+List B:
+- About Love (2015) - Genres of the movie: Comedy, Drama - Plot of the movie: About men, about women, about essential reality of their relationships in bright and good looking Moscow. The whole film is the lecture about love like it is a child of chemistry and psychology. During this lecture we are watching through five or even more love stories about couples trying to pretend that relationship they have is special and outstanding. But the most valuable words said already at the beginning by the woman from the first couple: 'Let's go home. Will be living'. And these words mean the end of love. And the beginning the same time.—alexandrasergeeva
+- Ishq (1997) - Genres of the movie: Action, Comedy, Drama, Musical, Romance - Plot of the movie: Two rich friends, hating the poor, were challenged by their children's love lives. Thus starts the war between love and money.
+- Mrs. Miracle (2009) - Genres of the movie: Comedy, Family, Fantasy, Romance - Plot of the movie: Overwhelmed widower Seth Webster is searching for a housekeeper to help him with his unruly six year old twin sons. "Mrs. Miracle" mysteriously appears and quickly becomes an irreplaceable nanny, chef, friend... and matchmaker.
+- Crossing, The (2000) - Genres of the movie: Biography, Drama, History, War - Plot of the movie: A dramatization of George Washington's perilous gamble of crossing the Delaware River and attacking the Hessian forces at Trenton.
+- Cavemen (2013) - Genres of the movie: Comedy - Plot of the movie: Four men share an ex factory loft in LA. Dean is a romantic wannabe screenwriter. The others are cavemen preoccupied with getting laid. Tess is their platonic friend.
+- Hickok (2017) - Genres of the movie: Drama, Western - Plot of the movie: Legendary lawman and gunslinger, Wild Bill Hickok, is tasked with taming the wildest cow-town in the west. While delivering his own brand of frontier justice, the infamous gunfighter's reputation as the fastest draw in the west is put to the test.
+- The Survival Family (2017) - Genres of the movie: Adventure, Comedy, Family - Plot of the movie: After a sudden worldwide power cut, a Tokyo family are caught up in the chaos as millions traverse the country in search of electricity.
+
+List C:
+- Furious 7 (2015) - Genres of the movie: Action, Crime, Thriller - Plot of the movie: Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.
+- Call Me by Your Name (2017) - Genres of the movie: Drama, Romance - Plot of the movie: In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father's research assistant.
+- Saw (2003) - Genres of the movie: Short, Horror, Thriller - Plot of the movie: David, an orderly at a hospital, tells his horrific story of being kidnapped and forced to play a vile game of survival.
+- 50/50 (2011) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: Inspired by a true story, a comedy centered on a 27-year-old guy who learns of his cancer diagnosis and his subsequent struggle to beat the disease.
+- Avengers: Infinity War - Part I (2018) - Genres of the movie: Action, Adventure, Sci-Fi - Plot of the movie: The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+- Beauty and the Beast (2017) - Genres of the movie: Adventure, Family, Fantasy, Musical, Romance - Plot of the movie: A selfish Prince is cursed to become a monster for the rest of his life, unless he learns to fall in love with a beautiful young woman he keeps prisoner.
+- When Harry Met Sally... (1989) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: ("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Schindler's List (1993) - Genres of the movie: Biography, Drama, History - Plot of the movie: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+- 127 Hours (2010) - Genres of the movie: Biography, Drama - Plot of the movie: A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.
+- Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Genres of the movie: Adventure, Family, Fantasy - Plot of the movie: Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.
+- Almost Famous (2000) - Genres of the movie: Adventure, Comedy, Drama, Music - Plot of the movie: A high-school boy in the early 1970s is given the chance to write a story for Rolling Stone magazine about an up-and-coming rock band as he accompanies them on their concert tour.
+- Robin Hood: Men in Tights (1993) - Genres of the movie: Adventure, Comedy, Musical, Romance - Plot of the movie: A spoof of Robin Hood in general, and Robin Hood: Prince of Thieves (1991) in particular.
+
+List B:
+- Die Hard (1988) - Genres of the movie: Action, Thriller - Plot of the movie: A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.
+- A Dragon Arrives! (2016) - Genres of the movie: Drama, Horror, Mystery, Thriller - Plot of the movie: An orange Chevrolet Impala drives across a cemetery towards an abandoned shipwreck in the middle of a desert landscape. It is the 22nd of January, 1965. The day before, the Iranian prime minister was shot dead in front of the parliament building.
+- Moneyball (2011) - Genres of the movie: Biography, Drama, Sport - Plot of the movie: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+- Patch Adams (1998) - Genres of the movie: Biography, Comedy, Drama, Romance - Plot of the movie: The true story of a heroic man, Hunter "Patch" Adams, determined to become a medical doctor because he enjoys helping people. He ventured where no doctor had ventured before, using humour and pathos.
+- Pitch Perfect 2 (2015) - Genres of the movie: Comedy, Music - Plot of the movie: After a humiliating command performance at The Kennedy Center, the Barden Bellas enter an international competition that no American group has ever won in order to regain their status and right to perform.
+
+List C:
+- Schindler's List (1993) - Genres of the movie: Biography, Drama, History - Plot of the movie: In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.
+- Die Hard (1988) - Genres of the movie: Action, Thriller - Plot of the movie: A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.
+- 127 Hours (2010) - Genres of the movie: Biography, Drama - Plot of the movie: A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.
+- Moneyball (2011) - Genres of the movie: Biography, Drama, Sport - Plot of the movie: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+- Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Genres of the movie: Adventure, Family, Fantasy - Plot of the movie: Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Hangover, The (2009) - Genres of the movie: Comedy - Plot of the movie: Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.
+- Kill Bill: Vol. 2 (2004) - Genres of the movie: Action, Crime, Thriller - Plot of the movie: The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Terminal, The (2004) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: An Eastern European tourist unexpectedly finds himself stranded in JFK airport, and must take up temporary residence there.
+- Rogue One: A Star Wars Story (2016) - Genres of the movie: Action, Adventure, Sci-Fi - Plot of the movie: In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.
+
+List B:
+- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama - Plot of the movie: The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.
+- Hangover, The (2009) - Genres of the movie: Comedy - Plot of the movie: Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.
+- Terminal, The (2004) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: An Eastern European tourist unexpectedly finds himself stranded in JFK airport, and must take up temporary residence there.
+- Tropic Thunder (2008) - Genres of the movie: Action, Comedy, War - Plot of the movie: Through a series of freak occurrences, a group of actors shooting a big-budget war movie are forced to become the soldiers they are portraying.
+- American Beauty (1999) - Genres of the movie: Drama - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+
+List C:
+- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama - Plot of the movie: A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.
+- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama - Plot of the movie: After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.
+- Rogue One: A Star Wars Story (2016) - Genres of the movie: Action, Adventure, Sci-Fi - Plot of the movie: In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction.
+- Deadpool (2016) - Genres of the movie: Action, Comedy - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+- Life of Pi (2012) - Genres of the movie: Adventure, Drama, Fantasy - Plot of the movie: A young man who survives a disaster at sea is hurtled into an epic journey of adventure and discovery. While cast away, he forms an unexpected connection with another survivor: a fearsome Bengal tiger.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller - Plot of the movie: When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.
+- Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi - Plot of the movie: Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.
+- The Fault in Our Stars (2014) - Genres of the movie: Drama, Romance - Plot of the movie: Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.
+- Harry Potter and the Deathly Hallows: Part 1 (2010) - Genres of the movie: Adventure, Family, Fantasy, Mystery - Plot of the movie: As Harry, Ron and Hermione race against time and evil to destroy the Horcruxes, they uncover the existence of the three most powerful objects in the wizarding world: the Deathly Hallows.
+- Lion (2016) - Genres of the movie: Biography, Drama - Plot of the movie: A five-year-old Indian boy is adopted by an Australian couple after getting lost hundreds of kilometers from home. 25 years later, he sets out to find his lost family.
+- American Beauty (1999) - Genres of the movie: Drama - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+- Salt (2010) - Genres of the movie: Action, Thriller - Plot of the movie: A CIA agent goes on the run after a defector accuses her of being a Russian spy.
+- Devil Wears Prada, The (2006) - Genres of the movie: Comedy, Drama - Plot of the movie: A smart but sensible new graduate lands a job as an assistant to Miranda Priestly, the demanding editor-in-chief of a high fashion magazine.
+
+List B:
+- Brave (2012) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Mystery - Plot of the movie: Determined to make her own path in life, Princess Merida defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse.
+- Thomas Crown Affair, The (1999) - Genres of the movie: Crime, Romance, Thriller - Plot of the movie: A very rich and successful playboy amuses himself by stealing artwork, but may have met his match in a seductive detective.
+- We Were Here (2011) - Genres of the movie: Documentary, Biography, History, News - Plot of the movie: A deep and reflective look at the arrival and impact of AIDS in San Francisco and how individuals rose to the occasion during the first years of this unimaginable crisis.
+- Melancholia (2011) - Genres of the movie: Drama, Sci-Fi - Plot of the movie: Two sisters find their already strained relationship challenged as a mysterious new planet threatens to collide with Earth.
+- Donner Pass (2012) - Genres of the movie: Horror - Plot of the movie: Donner Pass has a well-known and macabre history - the place where George Donner and his party got stuck in the winter of 1846 and were forced to resort to cannibalism to keep from starving. But what if it wasn't just history?
+- Whiplash (2013) - Genres of the movie: Short, Drama, Music - Plot of the movie: A ferocious, bullying music teacher teaches a dedicated student.
+- A Christmas Story Live! (2017) - Genres of the movie: Musical - Plot of the movie: A live broadcast of the Broadway hit "A Christmas Story: The Musical" in which Ralphie wishes for nothing more than a Red Ryder BB Gun for Christmas.
+- White Men Can't Jump (1992) - Genres of the movie: Comedy, Sport - Plot of the movie: Black and white basketball hustlers join forces to double their chances of winning money on the street courts and in a basketball tournament.
+
+List C:
+- Brave (2012) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Mystery - Plot of the movie: Determined to make her own path in life, Princess Merida defies a custom that brings chaos to her kingdom. Granted one wish, Merida must rely on her bravery and her archery skills to undo a beastly curse.
+- Fargo (1996) - Genres of the movie: Crime, Thriller - Plot of the movie: Minnesota car salesman Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.
+- The Fault in Our Stars (2014) - Genres of the movie: Drama, Romance - Plot of the movie: Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.
+- Sunshine (2007) - Genres of the movie: Sci-Fi, Thriller - Plot of the movie: A team of international astronauts is sent on a dangerous mission to reignite the dying Sun with a nuclear fission bomb in 2057.
+- Lion (2016) - Genres of the movie: Biography, Drama - Plot of the movie: A five-year-old Indian boy is adopted by an Australian couple after getting lost hundreds of kilometers from home. 25 years later, he sets out to find his lost family.
+- Dawn of the Dead (2004) - Genres of the movie: Action, Horror - Plot of the movie: A nurse, a policeman, a young married couple, a salesman and other survivors of a worldwide plague that is producing aggressive, flesh-eating zombies, take refuge in a mega Midwestern shopping mall.
+- School of Rock (2003) - Genres of the movie: Comedy, Music - Plot of the movie: After being kicked out of his rock band, Dewey Finn becomes a substitute teacher of an uptight elementary private school, only to try and turn his class into a rock band.
+- American Beauty (1999) - Genres of the movie: Drama - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Permission (2017) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: A woman on the brink of a marriage proposal is told by a friend that she should date other men before spending the rest of her life with her boyfriend.
+- Madagascar (2011) - Genres of the movie: Documentary - Plot of the movie: Over 80% of Madagascar's animals and plants are found nowhere else on Earth. Discover what made Madagascar so different from the rest of the world, and how evolution ran wild there.
+- You Get Me (2017) - Genres of the movie: Crime, Drama, Romance, Thriller - Plot of the movie: A one-night stand turns into a nightmare for a high-school student when a young woman's obsession grows dangerous.
+- John Mulaney & The Sack Lunch Bunch (2019) - Genres of the movie: Comedy, Family, Musical - Plot of the movie: John Mulaney and his kid pals tackle existential topics for all ages with catchy songs, comedy sketches and special guests in a nostalgic variety special.
+- While at War (2019) - Genres of the movie: Drama, History, War - Plot of the movie: Writer Miguel de Unamuno faces himself and his ideals after the 1936's military coup d'etat.
+- StreetDance 2 (2012) - Genres of the movie: Drama, Music, Romance - Plot of the movie: After suffering humiliation by the crew Invincible, street dancer Ash (Hentschel) looks to gather the best dancers from around the world for a rematch.
+- Parmanu: The Story of Pokhran (2018) - Genres of the movie: Action, Drama, History - Plot of the movie: Ashwat Raina and his teammates arrive in Pokhran to re-conduct a confidential nuclear test, where they face challenges from the American Lacrosse satellite and local spies.
+
+List B:
+- About Love (2015) - Genres of the movie: Comedy, Drama - Plot of the movie: About men, about women, about essential reality of their relationships in bright and good looking Moscow. The whole film is the lecture about love like it is a child of chemistry and psychology. During this lecture we are watching through five or even more love stories about couples trying to pretend that relationship they have is special and outstanding. But the most valuable words said already at the beginning by the woman from the first couple: 'Let's go home. Will be living'. And these words mean the end of love. And the beginning the same time.—alexandrasergeeva
+- Ishq (1997) - Genres of the movie: Action, Comedy, Drama, Musical, Romance - Plot of the movie: Two rich friends, hating the poor, were challenged by their children's love lives. Thus starts the war between love and money.
+- Mrs. Miracle (2009) - Genres of the movie: Comedy, Family, Fantasy, Romance - Plot of the movie: Overwhelmed widower Seth Webster is searching for a housekeeper to help him with his unruly six year old twin sons. "Mrs. Miracle" mysteriously appears and quickly becomes an irreplaceable nanny, chef, friend... and matchmaker.
+- Crossing, The (2000) - Genres of the movie: Biography, Drama, History, War - Plot of the movie: A dramatization of George Washington's perilous gamble of crossing the Delaware River and attacking the Hessian forces at Trenton.
+- Cavemen (2013) - Genres of the movie: Comedy - Plot of the movie: Four men share an ex factory loft in LA. Dean is a romantic wannabe screenwriter. The others are cavemen preoccupied with getting laid. Tess is their platonic friend.
+- Hickok (2017) - Genres of the movie: Drama, Western - Plot of the movie: Legendary lawman and gunslinger, Wild Bill Hickok, is tasked with taming the wildest cow-town in the west. While delivering his own brand of frontier justice, the infamous gunfighter's reputation as the fastest draw in the west is put to the test.
+- The Survival Family (2017) - Genres of the movie: Adventure, Comedy, Family - Plot of the movie: After a sudden worldwide power cut, a Tokyo family are caught up in the chaos as millions traverse the country in search of electricity.
+
+List C:
+- Furious 7 (2015) - Genres of the movie: Action, Crime, Thriller - Plot of the movie: Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.
+- Call Me by Your Name (2017) - Genres of the movie: Drama, Romance - Plot of the movie: In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father's research assistant.
+- Saw (2003) - Genres of the movie: Short, Horror, Thriller - Plot of the movie: David, an orderly at a hospital, tells his horrific story of being kidnapped and forced to play a vile game of survival.
+- 50/50 (2011) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: Inspired by a true story, a comedy centered on a 27-year-old guy who learns of his cancer diagnosis and his subsequent struggle to beat the disease.
+- Avengers: Infinity War - Part I (2018) - Genres of the movie: Action, Adventure, Sci-Fi - Plot of the movie: The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+- Beauty and the Beast (2017) - Genres of the movie: Adventure, Family, Fantasy, Musical, Romance - Plot of the movie: A selfish Prince is cursed to become a monster for the rest of his life, unless he learns to fall in love with a beautiful young woman he keeps prisoner.
+- When Harry Met Sally... (1989) - Genres of the movie: Comedy, Drama, Romance - Plot of the movie: Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: ("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Fury (2014) - Genres of the movie: Action, Drama, War - Plot of the movie: A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945.
+- Fight Club (1999) - Genres of the movie: Drama - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family - Plot of the movie: While trying to lead a quiet suburban life, a family of undercover superheroes are forced into action to save the world.
+- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of "Who Wants to be a Millionaire?"
+- Chronicles of Narnia: The Voyage of the Dawn Treader, The (2010) - Genres of the movie: Adventure, Family, Fantasy - Plot of the movie: Lucy and Edmund Pevensie return to Narnia with their cousin Eustace where they meet up with Prince Caspian for a trip across the sea aboard the royal ship The Dawn Treader. Along the way they encounter dragons, dwarves, merfolk, and a band of lost warriors before reaching the edge of the world.
+- Apollo 13 (1995) - Genres of the movie: Adventure, Drama, History - Plot of the movie: NASA must devise a strategy to return Apollo 13 to Earth safely after the spacecraft undergoes massive internal damage putting the lives of the three astronauts on board in jeopardy.
+- Django Unchained (2012) - Genres of the movie: Drama, Western - Plot of the movie: With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation owner in Mississippi.
+
+List B:
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Fight Club (1999) - Genres of the movie: Drama - Plot of the movie: An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.
+- Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery - Plot of the movie: Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.
+- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery - Plot of the movie: Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.
+- Chronicles of Narnia: The Voyage of the Dawn Treader, The (2010) - Genres of the movie: Adventure, Family, Fantasy - Plot of the movie: Lucy and Edmund Pevensie return to Narnia with their cousin Eustace where they meet up with Prince Caspian for a trip across the sea aboard the royal ship The Dawn Treader. Along the way they encounter dragons, dwarves, merfolk, and a band of lost warriors before reaching the edge of the world.
+- Iron Man 2 (2010) - Genres of the movie: Action, Sci-Fi - Plot of the movie: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
+- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+
+List C:
+- Rize (2005) - Genres of the movie: Documentary, Music - Plot of the movie: Rize chronicles a dance movement that rises out of South Central Los Angeles with roots in clowning and street youth culture.
+- Lewis Black: In God We Rust (2012) - Genres of the movie: Documentary, Comedy - Plot of the movie: Lewis Black takes on pretentious politicians, sell-out celebrities and all those things and ideas you thought you could trust. Using his acerbic wit and personal wise-cracks, he reminds us as long as we laugh we can still have faith, while In God We Rust.—Anonymous
+- Fury (2014) - Genres of the movie: Action, Drama, War - Plot of the movie: A grizzled tank commander makes tough decisions as he and his crew fight their way across Germany in April, 1945.
+- Brexit: The Uncivil War (2019) - Genres of the movie: Biography, Drama, History - Plot of the movie: Political strategist Dominic Cummings leads a popular but controversial campaign to convince British voters to leave the European Union from 2015 up until the present day.
+- Rebel in the Rye (2017) - Genres of the movie: Biography, Drama, Romance, War - Plot of the movie: The life of celebrated but reclusive author, J.D. Salinger, who gained worldwide fame with the publication of his novel, "The Catcher in the Rye".
+- My Octopus Teacher (2020) - Genres of the movie: Documentary - Plot of the movie: A filmmaker forges an unusual friendship with an octopus living in a South African kelp forest, learning as the animal shares the mysteries of her world.
+- Another Gay Sequel: Gays Gone Wild! (2008) - Genres of the movie: Comedy, Romance - Plot of the movie: Andy, Nico, Jarod and Griff reunite in Fort Lauderdale for Spring Break and participate in a contest called "Gays Gone Wild" to determine who can attain the most "buttlove" over the course of the vacation.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: ("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller - Plot of the movie: An F.B.I. Agent and an Interpol Detective track a team of illusionists who pull off bank heists during their performances, and reward their audiences with the money.
+- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama - Plot of the movie: The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of "Who Wants to be a Millionaire?"
+- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller - Plot of the movie: Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years by young computer hacker Lisbeth Salander.
+- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy - Plot of the movie: Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+- Bourne Ultimatum, The (2007) - Genres of the movie: Action, Mystery, Thriller - Plot of the movie: Jason Bourne dodges a ruthless C.I.A. official and his Agents from a new assassination program while searching for the origins of his life as a trained killer.
+
+List B:
+- Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller - Plot of the movie: An F.B.I. Agent and an Interpol Detective track a team of illusionists who pull off bank heists during their performances, and reward their audiences with the money.
+- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama - Plot of the movie: The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.
+- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror - Plot of the movie: A shy student trying to reach his family in Ohio, a gun-toting bruiser in search of the last Twinkie and a pair of sisters striving to get to an amusement park join forces in a trek across a zombie-filled America.
+- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller - Plot of the movie: Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for 40 years by young computer hacker Lisbeth Salander.
+- Thor: Ragnarok (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy, Sci-Fi - Plot of the movie: Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.
+- Contact (1997) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller - Plot of the movie: Dr. Ellie Arroway, after years of searching, finds conclusive radio proof of extraterrestrial intelligence, sending plans for a mysterious machine.
+- Memoirs of a Geisha (2005) - Genres of the movie: Drama, Romance - Plot of the movie: Nitta Sayuri reveals how she transcended her fishing-village roots and became one of Japan's most celebrated geisha.
+
+List C:
+- Convent, The (2000) - Genres of the movie: Comedy, Horror - Plot of the movie: A group of college students break into an abandoned convent and become possessed by demonic spirits.
+- Magic of Ordinary Days, The (2005) - Genres of the movie: Drama - Plot of the movie: Pregnant out of wedlock, an educated young woman is pressured by her father into an arranged marriage with a lonely farmer in this drama set during WWII.
+- TerrorStorm: A History of Government-Sponsored Terrorism (2006) - Genres of the movie: Documentary - Plot of the movie: Throughout history, criminal elements inside governments have carried out terror attacks against their own populations as a pretext to enslave them. TerrorStorm reveals how, in the last hundred years, Western leaders have repeatedly murdered their own citizens while posing as their saviors.—Ole Sivertsen
+- Bonnie and Clyde (2013) - Genres of the movie: Biography, Crime, Drama, History, Thriller - Plot of the movie: Bonnie Parker and Clyde Barrow, an infamous American robbery team, were responsible for a 21-month crime spree from 1932. They robbed gas stations, restaurants, and small-town banks, chiefly operating in Texas, Oklahoma, and other states
+- Madaari (2016) - Genres of the movie: Drama, Thriller - Plot of the movie: When Nirmal loses his family in a disaster caused by government corruption, he embarks on a journey seeking accountability and revenge.
+- Operation Christmas Drop (2020) - Genres of the movie: Comedy, Family, Romance - Plot of the movie: Congressional aide Erica forgoes family Christmas to travel at her boss's behest. At a beach side Air Force base, she clashes with Capt. Andrew Jantz, who knows her assignment is finding reasons to defund the facility.
+- Cavemen (2013) - Genres of the movie: Comedy - Plot of the movie: Four men share an ex factory loft in LA. Dean is a romantic wannabe screenwriter. The others are cavemen preoccupied with getting laid. Tess is their platonic friend.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: ("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Barbie: Dolphin Magic (2017) - Genres of the movie: Animation, Adventure, Family, Fantasy - Plot of the movie: Barbie and her sisters visit a sun-kissed island resort, only to discover that a rare Gemstone dolphin has gone missing. Will Barbie and her mysterious new friend Isla manage to find it? Above all, what is Isla's well-hidden secret?
+- A Novel Romance (2015) - Genres of the movie: Comedy, Romance - Plot of the movie: A best-selling romance novelist moves to Portland to cure his writer's block and unknowingly falls in love with his biggest critic. When their true identities are revealed, they have to find the courage and take a leap of faith.
+- Careful What You Wish For (2015) - Genres of the movie: Drama, Thriller - Plot of the movie: A guy gets more than he bargained for after entering into an affair with the wife of an investment banker. Soon, a suspicious death and substantial life insurance policy embroil him in a scandal.
+- Fandry (2013) - Genres of the movie: Drama, Family - Plot of the movie: It is about a teenager from a Dalit (Oppressed caste) family, who lives at the village fringe, and falls in love with an upper caste girl.
+- Night Guards (2016) - Genres of the movie: Action, Fantasy, Thriller - Plot of the movie: Contemporary Moscow. When eighteen-year-old Pasha rescues a beautiful young woman from a band of strangely powerful attackers, he discovers an underworld of supernatural beings living among us.
+- Trailer Park Boys: Say Goodnight to the Bad Guys (2008) - Genres of the movie: Comedy - Plot of the movie: It has been one year since the boys have become rich. Julian decided to keep the money safe, but when it comes time for everyone to get their share, the money is lost forever.
+- Svaha : The Sixth Finger (2019) - Genres of the movie: Crime, Horror, Mystery, Thriller - Plot of the movie: Pastor Park works to expose suspicious religious groups. He's hired to look into the cult group Deer Mount. Meanwhile, Police Captain Hwang investigates a murder case and the main suspect is a member of the Deer Mount cult.
+
+List B:
+- Sherlock Holmes (2009) - Genres of the movie: Action, Adventure, Mystery - Plot of the movie: Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.
+- Fifth Element, The (1997) - Genres of the movie: Action, Adventure, Sci-Fi - Plot of the movie: In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.
+- John Wick (2014) - Genres of the movie: Action, Crime, Thriller - Plot of the movie: An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.
+- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller - Plot of the movie: A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.
+- Shutter Island (2010) - Genres of the movie: Mystery, Thriller - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller - Plot of the movie: Two astronauts work together to survive after an accident leaves them stranded in space.
+- Erin Brockovich (2000) - Genres of the movie: Biography, Drama - Plot of the movie: An unemployed single mother becomes a legal assistant and almost single-handedly brings down a California power company accused of polluting a city's water supply.
+
+List C:
+- Dear Santa (2011) - Genres of the movie: Drama - Plot of the movie: A young woman from a privileged life falls for a soup-kitchen owner after discovering a Dear Santa letter written by his 7-year-old daughter.
+- Lucky Trouble (2011) - Genres of the movie: Comedy, Romance, Sport - Plot of the movie: A school teacher from a small Russian town falls for a beautiful Moscow woman who is engaged to be married.
+- The Love Letter (1998) - Genres of the movie: Fantasy, Romance - Plot of the movie: 20th century computer games designer Scott exchanges love letters with 19th century poet Elizabeth Whitcomb through an antique desk that can make letters travel through time.
+- Fireworks, Should We See It from the Side or the Bottom? (2017) - Genres of the movie: Animation, Drama, Fantasy, Romance, Sci-Fi - Plot of the movie: In this sci-fi tinged story of young love and teenage turmoil, a mysterious glowing ball offers Norimichi a second chance at securing his dream date.
+- Plastic Galaxy: The Story of Star Wars Toys (2014) - Genres of the movie: Documentary, History, Sci-Fi - Plot of the movie: Plastic Galaxy explores the groundbreaking world of Star Wars toys. Through interviews with former Kenner employees, toy experts, and collectors, it looks at the toys' history, their influence, and the feelings they elicit today.
+- Alone in the Wilderness Part II (2011) - Genres of the movie: Documentary - Plot of the movie: Dick Proenneke's simple, yet profound account of his 30 year adventure in the remote Alaska wilderness continues in this sequel to "Alone in the Wilderness". Watch through his eyes as he continues to document with his 16mm wind-up Bolex camera, capturing his own amazing craftsmanship, the stunning Alaskan wildlife and scenery and even a visit from his brother Ray (Jake). His epic journey takes you on a vacation away from the hustle and bustle of today's fast-paced society, and is a true breath of fresh air.—Pike Briggs
+- Sextuplets (2019) - Genres of the movie: Comedy - Plot of the movie: Father-to-be Alan is shocked to learn that he was born a sextuplet. He and his newfound brother Russell set out on a hilarious journey to reunite with their other long-lost siblings.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: ("Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 3. The candidate's safety_ratings are: [category: HARM_CATEGORY_SEXUALLY_EXPLICIT\nprobability: MEDIUM\n, category: HARM_CATEGORY_HATE_SPEECH\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_HARASSMENT\nprobability: NEGLIGIBLE\n, category: HARM_CATEGORY_DANGEROUS_CONTENT\nprobability: NEGLIGIBLE\n].", [category: HARM_CATEGORY_SEXUALLY_EXPLICIT
+probability: MEDIUM
+, category: HARM_CATEGORY_HATE_SPEECH
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_HARASSMENT
+probability: NEGLIGIBLE
+, category: HARM_CATEGORY_DANGEROUS_CONTENT
+probability: NEGLIGIBLE
+])
+
+Prompt: You are an evaluator. You are given three lists of movies. Your task is to order the lists from least to most diverse based on the information given.
+
+Focus on the following two aspects:
+1. Genres - This is the most important factor in determining diversity.
+2. Plot and Themes - Only if the genres are almost the same or overlap significantly between the lists, use plot and themes to differentiate them.
+
+1. Focus on Genres:
+   - Assess the variety and uniqueness of genres in each list.
+   - Identify how diverse the genres are within each list and across lists.
+
+2. Focus on Plot and Themes:
+   - If genres are similar or overlap significantly between the lists:
+    - Analyze the plots to find nuanced differences in storytelling approaches.
+    - Evaluate the overarching themes and how they contribute to the distinctiveness of each list.
+
+List A:
+- Life Aquatic with Steve Zissou, The (2004) - Genres of the movie: Action, Adventure, Comedy, Drama, Romance - Plot of the movie: With a plan to exact revenge on a mythical shark that killed his partner, Oceanographer Steve Zissou (Bill Murray) rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son.
+- Cell, The (2000) - Genres of the movie: Crime, Horror, Sci-Fi, Thriller - Plot of the movie: An F.B.I. Agent persuades a social worker, who is adept with a new experimental technology, to enter the mind of a comatose serial killer in order to learn where he has hidden his latest kidnap victim.
+- Nightmare Before Christmas, The (1993) - Genres of the movie: Animation, Family, Fantasy, Musical - Plot of the movie: Jack Skellington, king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas to his home causes confusion.
+- Muscle Shoals (2013) - Genres of the movie: Documentary, Biography, History, Music - Plot of the movie: A documentary that celebrates Rick Hall, the founder of FAME Studios in Muscle Shoals, Alabama, and the signature sound he developed in songs such as "I'll Take You There", "Brown Sugar", and "When a Man Loves a Woman".
+- Memento (2000) - Genres of the movie: Mystery, Thriller - Plot of the movie: A man with short-term memory loss attempts to track down his wife's murderer.
+- Saving Private Ryan (1998) - Genres of the movie: Drama, War - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Happy Gilmore (1996) - Genres of the movie: Comedy, Sport - Plot of the movie: A rejected hockey player puts his skills to the golf course to save his grandmother's house.
+
+List B:
+- V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller - Plot of the movie: In a future British dystopian society, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow the tyrannical government - with the help of a young woman.
+- Harry Potter and the Goblet of Fire (2005) - Genres of the movie: Adventure, Family, Fantasy, Mystery - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+- Snatch (2000) - Genres of the movie: Comedy, Crime - Plot of the movie: Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.
+- Good Will Hunting (1997) - Genres of the movie: Drama, Romance - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Social Network, The (2010) - Genres of the movie: Biography, Drama - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- Saving Private Ryan (1998) - Genres of the movie: Drama, War - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Shaun of the Dead (2004) - Genres of the movie: Comedy, Horror - Plot of the movie: The uneventful, aimless lives of a London electronics salesman and his layabout roommate are disrupted by the zombie apocalypse.
+
+List C:
+- Dark Knight Rises, The (2012) - Genres of the movie: Action, Drama, Thriller - Plot of the movie: Eight years after the Joker's reign of chaos, Batman is coerced out of exile with the assistance of the mysterious Selina Kyle in order to defend Gotham City from the vicious guerrilla terrorist Bane.
+- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller - Plot of the movie: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.
+- Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery - Plot of the movie: A tale set on death row in a Southern jail, where gentle giant John possesses the mysterious power to heal people's ailments. When the lead guard, Paul, recognizes John's gift, he tries to help stave off the condemned man's execution.
+- Good Will Hunting (1997) - Genres of the movie: Drama, Romance - Plot of the movie: Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.
+- Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi - Plot of the movie: When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.
+- American Beauty (1999) - Genres of the movie: Drama - Plot of the movie: A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.
+- Harry Potter and the Goblet of Fire (2005) - Genres of the movie: Adventure, Family, Fantasy, Mystery - Plot of the movie: Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.
+
+For example, if the least diverse list is B, then C, and the most diverse is A, the output should be: B,C,A
+
+Do NOT provide explanations, comments, or any additional text — only the final output in the required format representing the order from least to most diverse list.
+
+Error: 500 An internal error has occurred. Please retry or report in https://developers.generativeai.google/guide/troubleshooting
+

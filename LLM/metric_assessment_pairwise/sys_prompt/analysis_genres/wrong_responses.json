@@ -1,0 +1,934 @@
+[
+    {
+        "prompt": "List A:\n- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Black Swan (2010) - Genres of the movie: Drama, Thriller\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n\nList B:\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Requiem for a Dream (2000) - Genres of the movie: Drama\n- American Beauty (1999) - Genres of the movie: Drama\n\n",
+        "gold": "B",
+        "step1_output": {
+            "list_a_analysis": "List A shows moderate diversity. It includes Animation, Adventure, Comedy, Family, Fantasy, Drama, and Thriller genres.  The themes touch upon fantasy, adventure, psychological thriller, and family.",
+            "list_b_analysis": "List B has limited diversity. Primarily focused on Drama and Action/Sci-Fi,  the thematic elements are largely confined to psychological drama and dystopian/futuristic themes.",
+            "comparison": "List A exhibits more diversity in genres and themes than List B. List A spans family-friendly animation to darker thrillers, while List B is heavily weighted towards drama and explores fewer thematic areas."
+        },
+        "step2_output": {
+            "reasoning": "List A shows more diversity in genres (Animation, Adventure, Comedy, Family, Fantasy, Drama, Thriller) and themes (fantasy, adventure, psychological thriller, family) compared to List B, which is primarily focused on Drama and Action/Sci-Fi with limited thematic exploration (psychological drama, dystopian/futuristic themes).",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Wreck-It Ralph (2012) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller\n- Emperor's New Groove, The (2000) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- The Hateful Eight (2015) - Genres of the movie: Crime, Drama, Mystery, Thriller, Western\n\nList B:\n- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller\n- Secret Life of Walter Mitty, The (2013) - Genres of the movie: Adventure, Comedy, Drama, Fantasy, Romance\n- Lord of War (2005) - Genres of the movie: Crime, Drama\n- Sherlock Holmes: A Game of Shadows (2011) - Genres of the movie: Action, Adventure, Mystery\n- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi\n\n",
+        "gold": "B",
+        "step1_output": {
+            "list_a_analysis": "List A shows a diverse range of genres, including Action, Adventure, Sci-Fi, Thriller, Crime, Drama, Mystery, Animation, Comedy, Family, and Western.  The movie selection spans different themes, from space adventures (Serenity) and animated family films (Wreck-It Ralph, Emperor's New Groove) to crime thrillers (The Departed, The Hateful Eight).",
+            "list_b_analysis": "List B is less diverse than List A. While it includes genres like Action, Sci-Fi, Thriller, Drama, Horror, Adventure, Comedy, Mystery, and Romance, it has fewer distinct themes compared to List A.  The themes are largely focused on action, adventure, and some thriller elements. ",
+            "comparison": "List A exhibits greater diversity in both genre and theme compared to List B. List A includes animation, family-friendly movies, and Westerns, showcasing a broader range of cinematic styles and target audiences. List B, while featuring several genres, centers more around action and adventure themes, resulting in a more homogenous selection."
+        },
+        "step2_output": {
+            "reasoning": "List A contains more diverse genres and themes.  The inclusion of Animation, Family, and Western genres, along with a wider thematic range, makes it significantly more diverse than List B, which focuses primarily on action, adventure, and thriller themes.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- American Beauty (1999) - Genres of the movie: Drama\n- Game, The (1997) - Genres of the movie: Drama, Mystery, Thriller\n- Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) - Genres of the movie: Comedy\n\nList B:\n- Finding Nemo (2003) - Genres of the movie: Animation, Adventure, Comedy, Family\n- Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- Moana (2016) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical\n\n",
+        "gold": "A",
+        "step1_output": {
+            "list_a_analysis": "List A shows limited diversity, with only three movies spanning a small range of genres.  The genres include Drama, Mystery, Thriller, and Comedy.  The movie themes are also somewhat limited, focusing on character studies and satirical social commentary.",
+            "list_b_analysis": "List B exhibits greater diversity than List A. It includes a wider variety of genres such as Animation, Adventure, Comedy, Family, Fantasy, Musical, Action, Drama, Sci-Fi, and Thriller.  The movie themes are more diverse as well, encompassing children's adventures, superhero narratives, and musical fantasy.",
+            "comparison": "Compared to List A, List B demonstrates significantly more diversity in both genre and thematic representation. List A is predominantly focused on mature dramas and comedies, while List B offers a blend of family-friendly animations and action-oriented narratives. List B's variety is more significant, showcasing a richer range of cinematic experiences."
+        },
+        "step2_output": {
+            "reasoning": "List B is more diverse because it contains a wider range of genres and themes compared to List A.  List A's limited range of genres and themes suggests less diversity in cinematic representation.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi\n- Mud (2012) - Genres of the movie: Adventure, Drama\n- Short Term 12 (2013) - Genres of the movie: Drama\n\nList B:\n- Harold and Kumar Go to White Castle (2004) - Genres of the movie: Adventure, Comedy\n- Waterworld (1995) - Genres of the movie: Action, Adventure, Sci-Fi\n- Fight Club (1999) - Genres of the movie: Drama\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is considered more diverse due to a more even distribution of genres and the inclusion of Comedy, resulting in a wider range of film styles and thematic elements compared to List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Dallas Buyers Club (2013) - Genres of the movie: Biography, Drama\n- Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Bridget Jones's Diary (2001) - Genres of the movie: Comedy, Drama, Romance\n\nList B:\n- Good bye, Lenin! (2003) - Genres of the movie: Comedy, Drama, Romance\n- La La Land (2016) - Genres of the movie: Comedy, Drama, Music, Musical, Romance\n- Ghost in the Shell (2017) - Genres of the movie: Action, Crime, Drama, Mystery, Sci-Fi, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because the analysis shows it has a wider range of genres and themes than List A.  Although List A has some diversity, List B's inclusion of genres like Music, Musical, Crime, Mystery, Sci-Fi, and Thriller demonstrates a significantly broader spectrum.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery\n- Groundhog Day (1993) - Genres of the movie: Comedy, Drama, Fantasy, Romance\n- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n\nList B:\n- I, Robot (2004) - Genres of the movie: Action, Mystery, Sci-Fi, Thriller\n- Grand Budapest Hotel, The (2014) - Genres of the movie: Adventure, Comedy, Crime\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A exhibits greater genre diversity, encompassing animation, family, and fantasy genres not present in List B.  While List B includes some diverse genres, its focus on mature themes reduces its overall diversity compared to List A's broader range and family-friendly focus.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Ocean's Twelve (2004) - Genres of the movie: Crime, Thriller\n- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n\nList B:\n- Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi\n- American History X (1998) - Genres of the movie: Crime, Drama\n- Warcraft (2016) - Genres of the movie: Action, Adventure, Fantasy\n- Wallace & Gromit in The Curse of the Were-Rabbit (2005) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Mystery, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because the analysis shows it includes a wider range of genres, such as Animation and Family, and a broader spectrum of themes, encompassing serious, comedic, and family-friendly elements, compared to List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance\n- Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family\n\nList B:\n- True Lies (1994) - Genres of the movie: Action, Comedy, Thriller\n- Guardians of the Galaxy 2 (2017) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n- Taken (2008) - Genres of the movie: Action, Crime, Thriller\n- Charlie and the Chocolate Factory (2005) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Musical\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as slightly more diverse due to the inclusion of the 'Musical' genre, adding a unique element not present in List A. While both lists have overlapping genres and moderate diversity, the additional genre in List B provides a marginal edge in terms of variety.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Jurassic Park III (2001) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Pacific Rim (2013) - Genres of the movie: Action, Adventure, Sci-Fi\n- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller\n\nList B:\n- Spotlight (2015) - Genres of the movie: Biography, Crime, Drama\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n- Last Samurai, The (2003) - Genres of the movie: Action, Drama\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B demonstrates more diversity in genres and themes compared to List A. While List A focuses heavily on action and sci-fi, List B incorporates genres like Biography, Crime, and historical dramas, offering a broader range of storytelling styles and thematic explorations.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Being John Malkovich (1999) - Genres of the movie: Comedy, Drama, Fantasy\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Little Miss Sunshine (2006) - Genres of the movie: Comedy, Drama\n- 1917 (2019) - Genres of the movie: Action, Drama, War\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n- 28 Days Later (2002) - Genres of the movie: Drama, Horror, Sci-Fi, Thriller\n\nList B:\n- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Pulp Fiction (1994) - Genres of the movie: Crime, Drama\n- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama\n- Split (2017) - Genres of the movie: Horror, Thriller\n- Requiem for a Dream (2000) - Genres of the movie: Drama\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A demonstrates a more balanced and wider range of genres and themes compared to List B.  Although List B includes several genres, its thematic exploration is narrower and less evenly distributed, with several genres represented by only one movie.  List A's more even distribution across diverse genres and themes makes it the more diverse list.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi\n- Shawshank Redemption, The (1994) - Genres of the movie: Drama\n- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller\n- Harry Potter and the Deathly Hallows: Part 1 (2010) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n\nList B:\n- Step Up 2 the Streets (2008) - Genres of the movie: Drama, Music, Romance\n- Mulan (1998) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, War\n- Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi\n- Harry Potter and the Goblet of Fire (2005) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- X-Men (2000) - Genres of the movie: Action, Adventure, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show similar diversity, List B includes 'Musical' and 'War' genres which are absent from List A.  This small difference tips the balance in favor of List B having slightly more diverse genres.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Air Force One (1997) - Genres of the movie: Action, Drama, Thriller\n- Wallace & Gromit: The Wrong Trousers (1993) - Genres of the movie: Animation, Short, Comedy, Crime, Family, Mystery, Sci-Fi\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n\nList B:\n- Mr. & Mrs. Smith (2005) - Genres of the movie: Action, Comedy, Crime, Thriller\n- Matrix Reloaded, The (2003) - Genres of the movie: Action, Sci-Fi\n- Rain Man (1988) - Genres of the movie: Drama\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a wider variety of genres, including Animation, Comedy, Family, and Mystery, in addition to Action, Thriller, and Drama. List B's genres are more concentrated, with less variety in themes. Therefore, List A is more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Face/Off (1997) - Genres of the movie: Action, Crime, Sci-Fi, Thriller\n- School of Rock (2003) - Genres of the movie: Comedy, Music\n- Hangover, The (2009) - Genres of the movie: Comedy\n- Rain Man (1988) - Genres of the movie: Drama\n- Skyfall (2012) - Genres of the movie: Action, Adventure, Thriller\n\nList B:\n- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- The Hunger Games (2012) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Yes Man (2008) - Genres of the movie: Comedy, Romance\n- Ace Ventura: Pet Detective (1994) - Genres of the movie: Comedy\n- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is considered more diverse due to the inclusion of genres such as Animation and Fantasy, which broaden the thematic range compared to List A. Although neither list is exceptionally diverse, List B shows a slightly wider variety of genres.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery\n- Pitch Black (2000) - Genres of the movie: Action, Horror, Sci-Fi, Thriller\n- The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Guardians of the Galaxy 2 (2017) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n- Riddick (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\nList B:\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Iron Man 2 (2010) - Genres of the movie: Action, Sci-Fi\n- Ice Age (2002) - Genres of the movie: Animation, Adventure, Comedy, Family\n- Hobbit: The Desolation of Smaug, The (2013) - Genres of the movie: Adventure, Drama, Fantasy\n- Deadpool (2016) - Genres of the movie: Action, Comedy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although List B has a wider variety of genres, List A's more consistent thematic presentation within its genres makes it more diverse. List B's less consistent representation of genres results in a less cohesive overall thematic presentation.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- The Theory of Everything (2014) - Genres of the movie: Biography, Drama, Romance\n- Inglourious Basterds (2009) - Genres of the movie: Adventure, Drama, War\n- Dead Poets Society (1989) - Genres of the movie: Comedy, Drama\n- Blade Runner 2049 (2017) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller\n\nList B:\n- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Lost in Translation (2003) - Genres of the movie: Comedy, Drama\n- Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is considered more diverse due to the inclusion of genres like Animation and Family, which offer a thematic contrast to the more dramatic genres present in List A. While both lists show moderate diversity and have some genres represented only once, List B's broader thematic range provides a more varied viewing experience.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Uncut Gems (2019) - Genres of the movie: Crime, Drama, Thriller\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n- Captain America: Civil War (2016) - Genres of the movie: Action, Sci-Fi\n\nList B:\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Superbad (2007) - Genres of the movie: Comedy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A shows more diversity in genres, including Crime, Drama, Thriller, Biography, Action, and Sci-Fi, even if the representation within each genre is limited.  List B has fewer genres overall and less representation within those genres. Although List A has limited representation in each genre, the wider range of genres makes it more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lost in Austen (2008) - Genres of the movie: Drama, Fantasy, Romance, Sci-Fi\n- Fargo (1996) - Genres of the movie: Crime, Thriller\n- The Fault in Our Stars (2014) - Genres of the movie: Drama, Romance\n- This Beautiful Fantastic (2016) - Genres of the movie: Comedy, Drama, Romance\n- Salt (2010) - Genres of the movie: Action, Thriller\n- Hot Fuzz (2007) - Genres of the movie: Action, Comedy, Mystery, Thriller\n- Lion (2016) - Genres of the movie: Biography, Drama\n\nList B:\n- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller\n- Meet the Parents (2000) - Genres of the movie: Comedy, Romance\n- Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi\n- American Beauty (1999) - Genres of the movie: Drama\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- Last Samurai, The (2003) - Genres of the movie: Action, Drama\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A shows more variety in both genre and themes. While both lists have some genre overrepresentation, List A's thematic diversity, encompassing biographical, fantastical, and relationship-focused narratives, gives it a slight edge over List B's more concentrated themes within action-adventure and suspenseful mysteries.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery\n- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi\n- American Beauty (1999) - Genres of the movie: Drama\n\nList B:\n- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama\n- Iron Man 2 (2010) - Genres of the movie: Action, Sci-Fi\n- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller\n- Saving Private Ryan (1998) - Genres of the movie: Drama, War\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A is more diverse because it includes genres (Fantasy and Mystery) not present in List B.  While both lists contain similar genres, List A's thematic exploration is broader, encompassing philosophical and existential themes that go beyond the more specific themes of war, crime, and biography in List B.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Get Out (2017) - Genres of the movie: Horror, Mystery, Thriller\n- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller\n- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi\n\nList B:\n- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Princess Bride, The (1987) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Romance\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genre, encompassing Animation, Action, Adventure, Family, Comedy, Fantasy, and Romance, whereas List A has fewer genres.  The analysis indicates that List B's themes are also more varied than List A's.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi\n- Wallace & Gromit in The Curse of the Were-Rabbit (2005) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Mystery, Sci-Fi\n- Brave (2012) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Mystery\n- Dirty Dancing (1987) - Genres of the movie: Drama, Music, Romance\n\nList B:\n- Ocean's Twelve (2004) - Genres of the movie: Crime, Thriller\n- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi\n- Django Unchained (2012) - Genres of the movie: Drama, Western\n- Jason Bourne (2016) - Genres of the movie: Action, Thriller\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains more diverse genres, including Animation, Family, and Romance, which are absent from List B.  List B's genres are more concentrated in Action, Thriller, and related categories. Therefore, List A is more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama\n- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance\n- John Wick (2014) - Genres of the movie: Action, Crime, Thriller\n\nList B:\n- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- American Beauty (1999) - Genres of the movie: Drama\n- Whiplash (2014) - Genres of the movie: Drama, Music\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a wider variety of genres, including Animation, Sci-Fi, and Fantasy, which are absent from List B.  List A's thematic scope is also broader, encompassing family-friendly content and intense action, compared to List B's focus on biographical narratives and character-driven dramas.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Last Samurai, The (2003) - Genres of the movie: Action, Drama\n- Black Swan (2010) - Genres of the movie: Drama, Thriller\n- Guardians of the Galaxy (2014) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n- Dodgeball: A True Underdog Story (2004) - Genres of the movie: Comedy, Sport\n\nList B:\n- Usual Suspects, The (1995) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance\n- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Mrs. Doubtfire (1993) - Genres of the movie: Comedy, Drama\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B demonstrates more diversity because it includes genres such as Crime, Mystery, Romance, and Family, which are absent from List A.  While both lists show a variety of themes, List B's exploration of mental health and family dynamics adds to its overall diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Die Hard (1988) - Genres of the movie: Action, Thriller\n- Doctor Strange (2016) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Fight Club (1999) - Genres of the movie: Drama\n\nList B:\n- Rushmore (1998) - Genres of the movie: Comedy, Drama, Romance\n- The Intern (2015) - Genres of the movie: Comedy, Drama\n- Beetlejuice (1988) - Genres of the movie: Comedy, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A is more diverse because it includes a wider range of genres (Action, Thriller, Adventure, Fantasy, Sci-Fi, and Drama) and themes than List B, which primarily focuses on Comedy and Drama with limited Fantasy and Romance.  Even though List A's Drama representation is limited, its overall genre spread is more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Dallas Buyers Club (2013) - Genres of the movie: Biography, Drama\n- Twilight Saga: Breaking Dawn - Part 2, The (2012) - Genres of the movie: Adventure, Drama, Fantasy, Romance\n- Star Wars: Episode III - Revenge of the Sith (2005) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance\n- Super Size Me (2004) - Genres of the movie: Documentary\n\nList B:\n- Thor: Ragnarok (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy, Sci-Fi\n- Fifty Shades Darker (2017) - Genres of the movie: Drama, Romance, Thriller\n- Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy\n- Black Hawk Down (2001) - Genres of the movie: Action, Drama, History, War\n- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genres and themes compared to List A.  List A is limited to fewer categories and has repetitions. Therefore, List B is considered more diverse.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Toy Story (1995) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Saving Private Ryan (1998) - Genres of the movie: Drama, War\n- Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi\n- Enemy at the Gates (2001) - Genres of the movie: Action, Drama, War\n- Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n\nList B:\n- Harry Potter and the Order of the Phoenix (2007) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery\n- Hurt Locker, The (2008) - Genres of the movie: Drama, Thriller, War\n- Avengers: Infinity War - Part I (2018) - Genres of the movie: Action, Adventure, Sci-Fi\n- Indiana Jones and the Last Crusade (1989) - Genres of the movie: Action, Adventure\n- Mad Max: Fury Road (2015) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A demonstrates slightly more diversity due to its broader thematic range, encompassing themes such as childhood, family, war, and space exploration, offering a more varied viewing experience compared to List B's more action-oriented and less thematically diverse selection.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Demolition Man (1993) - Genres of the movie: Action, Sci-Fi, Thriller\n- How to Train Your Dragon (2010) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy\n- Cruel Intentions (1999) - Genres of the movie: Drama, Romance\n- Children of Dune (2003) - Genres of the movie: Adventure, Drama, Sci-Fi\n- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi\n\nList B:\n- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller\n- Watchmen (2009) - Genres of the movie: Action, Drama, Mystery, Sci-Fi\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- Others, The (2001) - Genres of the movie: Horror, Mystery, Thriller\n- Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Both lists show similar diversity, but List B has a slightly wider range of genres and a more pronounced thematic variety, making it marginally more diverse overall.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Mr. & Mrs. Smith (2005) - Genres of the movie: Action, Comedy, Crime, Thriller\n- Matrix Reloaded, The (2003) - Genres of the movie: Action, Sci-Fi\n- Rain Man (1988) - Genres of the movie: Drama\n\nList B:\n- Ant-Man (2015) - Genres of the movie: Action, Comedy, Sci-Fi\n- Iron Man 3 (2013) - Genres of the movie: Action, Adventure, Sci-Fi\n- Wallace & Gromit: The Wrong Trousers (1993) - Genres of the movie: Animation, Short, Comedy, Crime, Family, Mystery, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genres than List A.  List B includes genres such as Animation, Short, and Family which significantly broadens its thematic scope compared to List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n- Social Network, The (2010) - Genres of the movie: Biography, Drama\n- Simpsons Movie, The (2007) - Genres of the movie: Animation, Adventure, Comedy\n- Fury (2014) - Genres of the movie: Action, Drama, War\n- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller\n- Guardians of the Galaxy (2014) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n\nList B:\n- American Beauty (1999) - Genres of the movie: Drama\n- Saw (2004) - Genres of the movie: Horror, Mystery, Thriller\n- Deadpool (2016) - Genres of the movie: Action, Comedy\n- 50 First Dates (2004) - Genres of the movie: Comedy, Drama, Romance\n- Shaun of the Dead (2004) - Genres of the movie: Comedy, Horror\n- Pirates of the Caribbean: Dead Man's Chest (2006) - Genres of the movie: Action, Adventure, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a broader range of genres, including Animation and Family, which are absent in List B. While List B includes mature genres like Horror and Thriller, the overall diversity is slightly less comprehensive than List A's.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n- Departed, The (2006) - Genres of the movie: Crime, Drama, Thriller\n- Wallace & Gromit: The Wrong Trousers (1993) - Genres of the movie: Animation, Short, Comedy, Crime, Family, Mystery, Sci-Fi\n\nList B:\n- Insurgent (2015) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Wallace & Gromit: A Close Shave (1995) - Genres of the movie: Animation, Short, Comedy, Crime, Family, Mystery\n- Nightcrawler (2014) - Genres of the movie: Crime, Drama, Thriller\n- Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Both lists show similar diversity, with List A having a wider range of individual genre entries and a more unique entry. However, the thematic overlap in both lists, particularly with thrillers and crime dramas, reduces the overall diversity.  The presence of the Wallace and Gromit films in both lists further impacts the diversity assessment. Despite this, the slightly wider range in List A and the inclusion of a more unique combination of genres makes List A marginally more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Inglourious Basterds (2009) - Genres of the movie: Adventure, Drama, War\n- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama\n- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller\n\nList B:\n- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi\n- Green Mile, The (1999) - Genres of the movie: Crime, Drama, Fantasy, Mystery\n- Silence of the Lambs, The (1991) - Genres of the movie: Crime, Drama, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B exhibits more diversity in genre and theme. While both lists contain Drama and Crime, List B's inclusion of Sci-Fi, Fantasy, Romance, and Mystery provides a broader thematic range than List A, which is more concentrated on crime, war, and biography.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Snatch (2000) - Genres of the movie: Comedy, Crime\n- Elysium (2013) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- Frozen (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical\n\nList B:\n- Law Abiding Citizen (2009) - Genres of the movie: Action, Crime, Drama, Thriller\n- Exam (2009) - Genres of the movie: Crime, Horror, Mystery, Thriller\n- Going Postal (2010) - Genres of the movie: Adventure, Comedy, Fantasy, Mystery, Romance\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Both lists show moderate diversity with similar genre spreads. However, List A's inclusion of animation and musical elements gives it a slightly broader range compared to List B's concentration in crime and thriller subgenres.  The inclusion of diverse film styles (animation, musical, action thriller, comedy) gives List A a marginal edge in terms of overall diversity.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller\n- Ferris Bueller's Day Off (1986) - Genres of the movie: Comedy\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n\nList B:\n- Boys (2014) - Genres of the movie: Drama, Romance, Sport\n- Spotlight (2015) - Genres of the movie: Biography, Crime, Drama\n- Back to the Future Part III (1990) - Genres of the movie: Adventure, Comedy, Sci-Fi, Western\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genre and themes, offering a broader range of movie styles and subject matter than List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy\n- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller\n- Deadpool (2016) - Genres of the movie: Action, Comedy\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror\n- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi\n- Edge of Tomorrow (2014) - Genres of the movie: Action, Adventure, Sci-Fi\n\nList B:\n- Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery\n- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because it includes the genres War and Romance, which are absent from List A.  Although the difference is subtle, the inclusion of additional genres, however slight, tips the balance in favor of List B's greater diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Titanic (1997) - Genres of the movie: Drama, Romance\n- Starship Troopers (1997) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi\n- Hurt Locker, The (2008) - Genres of the movie: Drama, Thriller, War\n\nList B:\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Casino (1995) - Genres of the movie: Crime, Drama\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B demonstrates more diversity due to its inclusion of genres like Animation and Biography, which are absent from List A. While both lists show moderate diversity, the broader range of genres in List B makes it the more diverse option.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Shawshank Redemption, The (1994) - Genres of the movie: Drama\n- Pulp Fiction (1994) - Genres of the movie: Crime, Drama\n- Split (2017) - Genres of the movie: Horror, Thriller\n- Requiem for a Dream (2000) - Genres of the movie: Drama\n\nList B:\n- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- 1917 (2019) - Genres of the movie: Action, Drama, War\n- Being John Malkovich (1999) - Genres of the movie: Comedy, Drama, Fantasy\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Knives Out (2019) - Genres of the movie: Comedy, Crime, Drama, Mystery, Thriller\n- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show similar diversity in genre, List B demonstrates a broader thematic range, encompassing science fiction, war, surrealism, and mystery.  List A's themes, while diverse, are more concentrated around emotional experiences, dystopian futures, and crime/psychological thrillers.  Therefore, List B exhibits slightly higher overall diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Taken (2008) - Genres of the movie: Action, Crime, Thriller\n- Unbreakable (2000) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- True Lies (1994) - Genres of the movie: Action, Comedy, Thriller\n- Django Unchained (2012) - Genres of the movie: Drama, Western\n- Guardians of the Galaxy 2 (2017) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n\nList B:\n- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance\n- Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama\n- Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family\n- 10 Things I Hate About You (1999) - Genres of the movie: Comedy, Drama, Romance\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show considerable diversity, List A exhibits a broader spectrum of genres, including Western and a stronger presence of Action and Sci-Fi, resulting in more thematic variety.  While List B has a good variety as well, its genres are more evenly distributed among a smaller selection, and its themes are less diverse focusing on character-driven narratives.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Guardians of the Galaxy (2014) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n- Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Casino (1995) - Genres of the movie: Crime, Drama\n\nList B:\n- Easy A (2010) - Genres of the movie: Comedy, Drama, Romance\n- Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- Starship Troopers (1997) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi\n- Hurt Locker, The (2008) - Genres of the movie: Drama, Thriller, War\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A is more diverse because it includes a wider range of genres than List B.  Although List B has more thematic consistency, the criteria for evaluation is diversity of genres, and List A clearly shows more of this.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Fury (2014) - Genres of the movie: Action, Drama, War\n- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance\n- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- Stranger than Fiction (2006) - Genres of the movie: Comedy, Drama, Fantasy, Romance\n\nList B:\n- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama\n- Gone Girl (2014) - Genres of the movie: Drama, Mystery, Thriller\n- Edward Scissorhands (1990) - Genres of the movie: Drama, Fantasy, Romance\n- King's Speech, The (2010) - Genres of the movie: Biography, Drama, History\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a wider variety of genres including Animation, Comedy, and Fantasy, offering a broader thematic range than List B which is heavily focused on the Drama genre.  Although List B has some variety, its concentration on Drama reduces its overall diversity compared to List A.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Titanic (1997) - Genres of the movie: Drama, Romance\n- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Little Miss Sunshine (2006) - Genres of the movie: Comedy, Drama\n- Requiem for a Dream (2000) - Genres of the movie: Drama\n\nList B:\n- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama\n- Ant-Man (2015) - Genres of the movie: Action, Comedy, Sci-Fi\n- School of Rock (2003) - Genres of the movie: Comedy, Music\n- Fear and Loathing in Las Vegas (1998) - Genres of the movie: Adventure, Comedy, Drama\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B contains a wider variety of genres and themes, showing a more balanced representation than List A, which is heavily weighted towards the Drama genre.  Therefore, List B is considered more diverse.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- Django Unchained (2012) - Genres of the movie: Drama, Western\n- American Beauty (1999) - Genres of the movie: Drama\n\nList B:\n- The Hunger Games: Mockingjay - Part 1 (2014) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- The Theory of Everything (2014) - Genres of the movie: Biography, Drama, Romance\n- X-Men: Days of Future Past (2014) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genres (Action, Adventure, Sci-Fi, Thriller, Biography, Drama, and Romance) and themes (dystopian futures, biographical accounts, and superhero narratives) compared to List A (primarily Drama, Biography, and Crime, with biographical and intense human experience themes).  The comparison explicitly states that List B has significantly more diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance\n- Shawshank Redemption, The (1994) - Genres of the movie: Drama\n- Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War\n\nList B:\n- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama\n- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Thor: Ragnarok (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy, Sci-Fi\n- Memoirs of a Geisha (2005) - Genres of the movie: Drama, Romance\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A shows more diversity of genres and themes compared to List B.  The analysis indicates that List A has a wider range of genres, including Animation and Musical, which are absent in List B.  Even though both lists have uneven genre representation, List A's broader spectrum gives it a clear advantage in terms of diversity.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Limitless (2011) - Genres of the movie: Sci-Fi, Thriller\n- Prisoners (2013) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Good Will Hunting (1997) - Genres of the movie: Drama, Romance\n- Casino Royale (2006) - Genres of the movie: Action, Adventure, Thriller\n\nList B:\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller\n- Harry Potter and the Deathly Hallows: Part 1 (2010) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a broader range of genres (Sci-Fi, Thriller, Crime, Drama, Mystery, and Romance) compared to List B (Action, Sci-Fi, Thriller, Family, and Fantasy), even though List B has a unique addition of fantasy.  List A's thematic exploration, while lacking depth in any one area, shows more variety in themes. Therefore, List A demonstrates slightly more diversity in terms of genre and themes.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi\n- Indiana Jones and the Last Crusade (1989) - Genres of the movie: Action, Adventure\n- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror\n- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller\n\nList B:\n- Good Will Hunting (1997) - Genres of the movie: Drama, Romance\n- V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- American Sniper (2014) - Genres of the movie: Action, Biography, Drama, War\n- Despicable Me (2010) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Sci-Fi\n- Bourne Identity, The (1988) - Genres of the movie: Action, Adventure, Drama, Mystery, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because the analysis shows it includes a wider range of genres (Animation, Biography, War, Family) and themes (personal struggles, political intrigue, war, family dynamics) compared to List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Hangover, The (2009) - Genres of the movie: Comedy\n- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama\n\nList B:\n- A-Team, The (2010) - Genres of the movie: Action, Adventure, Crime, Thriller\n- Kingsman: The Golden Circle (2017) - Genres of the movie: Action, Adventure, Comedy, Crime, Thriller\n- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because the analysis highlights its inclusion of Animation as a genre, a genre not present in List A.  Further, the analysis indicates a richer mix of genre combinations in List B, which contributes to a wider range of themes and styles.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- 127 Hours (2010) - Genres of the movie: Biography, Drama\n- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Internet's Own Boy: The Story of Aaron Swartz, The (2014) - Genres of the movie: Documentary, Biography, Crime\n- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama\n\nList B:\n- Sin City (2005) - Genres of the movie: Crime, Thriller\n- Arrival (2016) - Genres of the movie: Drama, Mystery, Sci-Fi\n- Dances with Wolves (1990) - Genres of the movie: Adventure, Drama, Western\n- Deadpool (2016) - Genres of the movie: Action, Comedy\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genre and theme than List A. While List A has some variety, List B's inclusion of genres like Sci-Fi, Western, Action, and Comedy demonstrates a broader range of movie experiences.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n- Sherlock Holmes (2009) - Genres of the movie: Action, Adventure, Mystery\n\nList B:\n- Other Woman, The (2014) - Genres of the movie: Comedy, Romance\n- Fargo (1996) - Genres of the movie: Crime, Thriller\n- Deadpool (2016) - Genres of the movie: Action, Comedy\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is determined to be more diverse because the analysis shows it has a wider variety of genres (Comedy, Romance, Crime, Thriller, and Action) and themes (romantic comedies, crime thrillers, and superhero action) compared to List A, which is primarily focused on Animation, Adventure, and Family films.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- Saw (2004) - Genres of the movie: Horror, Mystery, Thriller\n- Pirates of the Caribbean: Dead Man's Chest (2006) - Genres of the movie: Action, Adventure, Fantasy\n- Mulholland Drive (2001) - Genres of the movie: Drama, Mystery, Thriller\n\nList B:\n- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller\n- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Spider-Man (2002) - Genres of the movie: Action, Adventure, Sci-Fi\n- Usual Suspects, The (1995) - Genres of the movie: Crime, Drama, Mystery, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genres and themes compared to List A.  List A is limited to a few overlapping genres and similar themes, while List B includes animation, family-friendly films, and a wider range of themes. Therefore, List B is more diverse.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- The Edge of Seventeen (2016) - Genres of the movie: Comedy, Drama\n- Snatch (2000) - Genres of the movie: Comedy, Crime\n- Crazy Rich Asians (2018) - Genres of the movie: Comedy, Drama, Romance\n- Hudsucker Proxy, The (1994) - Genres of the movie: Comedy, Drama, Fantasy\n- Harry Potter and the Half-Blood Prince (2009) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery\n\nList B:\n- The Spectacular Now (2013) - Genres of the movie: Drama, Romance\n- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Die Hard (1988) - Genres of the movie: Action, Thriller\n- Napoleon Dynamite (2004) - Genres of the movie: Comedy\n- Good Morning, Vietnam (1987) - Genres of the movie: Biography, Comedy, Drama, War\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genre (including Animation, Thriller, War, and Biography) and thematic representation (coming-of-age, action thrillers, biographical, and wartime narratives) compared to List A, which is more limited to comedy, drama, fantasy, and action, with less thematic variety.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Easy A (2010) - Genres of the movie: Comedy, Drama, Romance\n- The Jungle Book (2016) - Genres of the movie: Adventure, Drama, Family, Fantasy\n- Groundhog Day (1993) - Genres of the movie: Comedy, Drama, Fantasy, Romance\n- Passengers (2016) - Genres of the movie: Drama, Romance, Sci-Fi, Thriller\n- Here's the Plan (2016) - Genres of the movie: Animation, Short, Drama, Family, Fantasy, Romance\n\nList B:\n- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Juno (2007) - Genres of the movie: Comedy, Drama\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n- Cabin in the Woods, The (2012) - Genres of the movie: Horror, Mystery, Thriller\n- Edge of Tomorrow (2014) - Genres of the movie: Action, Adventure, Sci-Fi\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A shows a wider range of genres and themes, including lighter genres like Comedy and Family, in addition to more serious genres.  List B is diverse but leans heavily towards darker genres such as Thriller and Horror.  The comparison provided also concludes that List A's diversity is broader.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Star Wars: Episode I - The Phantom Menace (1999) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance\n- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- Hidden Figures (2016) - Genres of the movie: Biography, Drama, History\n\nList B:\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Prisoners (2013) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Mean Girls (2004) - Genres of the movie: Comedy\n- Gifted (2017) - Genres of the movie: Drama\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a wider range of genres and themes, including Animation, Fantasy, and Historical Biopics, demonstrating more diversity than List B, which is largely focused on Thriller and Drama.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller\n- Harry Potter and the Chamber of Secrets (2002) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror\n- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy\n\nList B:\n- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family\n- Fury (2014) - Genres of the movie: Action, Drama, War\n- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- Intouchables (2011) - Genres of the movie: Biography, Comedy, Drama\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show high diversity, List A includes genres like Horror and Sci-Fi which are not present in List B. This gives List A a slightly broader range of genres, thus making it more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- Juno (2007) - Genres of the movie: Comedy, Drama\n- Whiplash (2014) - Genres of the movie: Drama, Music\n- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance\n\nList B:\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller\n- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is considered more diverse due to its wider range of genres, including Action, Adventure, Fantasy, Sci-Fi, and Thriller, in addition to Crime and Mystery.  List A, while containing some genre variety, is predominantly focused on Drama, indicating less diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller\n- Django Unchained (2012) - Genres of the movie: Drama, Western\n- Kill Bill: Vol. 2 (2004) - Genres of the movie: Action, Crime, Thriller\n- Terminal, The (2004) - Genres of the movie: Comedy, Drama, Romance\n- Rogue One: A Star Wars Story (2016) - Genres of the movie: Action, Adventure, Sci-Fi\n\nList B:\n- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama\n- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Life of Pi (2012) - Genres of the movie: Adventure, Drama, Fantasy\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Bowling for Columbine (2002) - Genres of the movie: Documentary, Crime, Drama\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is more diverse because it includes a wider range of genres, including a documentary and family films, which significantly broadens its thematic scope compared to List A.  List B also shows a more even distribution of genres.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Lion King 1\u00bd, The (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Musical\n- Rogue One: A Star Wars Story (2016) - Genres of the movie: Action, Adventure, Sci-Fi\n- 21 Jump Street (2012) - Genres of the movie: Action, Comedy, Crime\n\nList B:\n- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n- Beauty and the Beast: The Enchanted Christmas (1997) - Genres of the movie: Animation, Family, Fantasy, Musical\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show similar diversity, List B includes 'Romance' and 'Drama' genres, which gives it a slightly wider range of genres than List A.  Therefore, List B is considered more diverse based on the provided analysis.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Furious 7 (2015) - Genres of the movie: Action, Crime, Thriller\n- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy\n- Saw (2003) - Genres of the movie: Short, Horror, Thriller\n- Avengers: Infinity War - Part I (2018) - Genres of the movie: Action, Adventure, Sci-Fi\n- 50/50 (2011) - Genres of the movie: Comedy, Drama, Romance\n\nList B:\n- Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- V for Vendetta (2006) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- Call Me by Your Name (2017) - Genres of the movie: Drama, Romance\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Blind Side, The  (2009) - Genres of the movie: Biography, Drama, Sport\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is considered more diverse due to its inclusion of genres such as Biography and Sport, which are absent from List A.  While both lists contain a variety of genres, the additional genres in List B contribute to a broader thematic range and a more balanced distribution.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- How to Train Your Dragon 2 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy\n- Gladiator (2000) - Genres of the movie: Action, Adventure, Drama\n- The Gentlemen (2020) - Genres of the movie: Action, Crime\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n\nList B:\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family\n- Braveheart (1995) - Genres of the movie: Biography, Drama, History, War\n- Rise of the Planet of the Apes (2011) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show similar diversity, List A contains Comedy and Fantasy genres which are absent in List B.  The inclusion of more genres, even if some overlap exists, makes List A slightly more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Saving Private Ryan (1998) - Genres of the movie: Drama, War\n- Snatch (2000) - Genres of the movie: Comedy, Crime\n\nList B:\n- Knockin' on Heaven's Door (1997) - Genres of the movie: Action, Crime, Comedy, Drama\n- La Luna (2011) - Genres of the movie: Animation, Short, Drama, Family, Fantasy\n- Waterworld (1995) - Genres of the movie: Action, Adventure, Sci-Fi\n- Mad Max: Fury Road (2015) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows slightly more diverse genres, including 'Short', 'Fantasy', and 'Thriller', which are absent from List A. While the overall diversity is moderate in both, the slightly wider range and more balanced distribution in List B give it a small edge.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Aliens (1986) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Saving Private Ryan (1998) - Genres of the movie: Drama, War\n- The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Zodiac (2007) - Genres of the movie: Crime, Drama, Mystery, Thriller\n\nList B:\n- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Truman Show, The (1998) - Genres of the movie: Comedy, Drama\n- Napoleon Dynamite (2004) - Genres of the movie: Comedy\n- Heat (1995) - Genres of the movie: Action, Crime, Drama\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show comparable diversity, List B's inclusion of Comedy alongside Action, Adventure, Sci-Fi, Thriller, and Crime genres provides a slightly broader range of thematic and tonal variety compared to List A.  List A's focus on action and thriller subgenres makes it less diverse than List B, even if the difference is subtle.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Corpse Bride (2005) - Genres of the movie: Animation, Drama, Family, Fantasy, Musical, Romance\n- Prisoners (2013) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Dark Knight Rises, The (2012) - Genres of the movie: Action, Drama, Thriller\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Incredibles, The (2004) - Genres of the movie: Animation, Action, Adventure, Family\n\nList B:\n- Little Miss Sunshine (2006) - Genres of the movie: Comedy, Drama\n- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller\n- Fight Club (1999) - Genres of the movie: Drama\n- Django Unchained (2012) - Genres of the movie: Drama, Western\n- Eternal Sunshine of the Spotless Mind (2004) - Genres of the movie: Drama, Romance, Sci-Fi\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A is more diverse because it includes a wider range of genres and themes than List B.  List B is more concentrated in the Drama genre, and lacks the variety of tones found in List A, which includes Animation, Family films, and intense genres such as Crime and Thriller.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Iron Man (2008) - Genres of the movie: Action, Adventure, Sci-Fi\n- Boyhood (2014) - Genres of the movie: Drama\n- Moonrise Kingdom (2012) - Genres of the movie: Comedy, Drama, Family, Romance\n\nList B:\n- Fugitive, The (1993) - Genres of the movie: Action, Crime, Drama, Mystery, Thriller\n- Okja (2017) - Genres of the movie: Action, Adventure, Drama, Sci-Fi\n- Your Name. (2016) - Genres of the movie: Animation, Drama, Fantasy, Romance\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B demonstrates more diversity in genres than List A.  List B has a wider range of genres and a more even distribution, whereas List A is less balanced and has fewer genres represented.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Back to the Future (1985) - Genres of the movie: Adventure, Comedy, Sci-Fi\n- King's Speech, The (2010) - Genres of the movie: Biography, Drama, History\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n- Trainspotting (1996) - Genres of the movie: Drama\n\nList B:\n- Moonrise Kingdom (2012) - Genres of the movie: Comedy, Drama, Family, Romance\n- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance\n- Fantastic Beasts and Where to Find Them (2016) - Genres of the movie: Adventure, Family, Fantasy\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is considered more diverse due to its broader range of genres (including Animation and Family) and a wider variety of themes (including mental health, magical realism, and environmentalism) compared to List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Inside Out (2015) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family, Fantasy\n- I, Robot (2004) - Genres of the movie: Action, Mystery, Sci-Fi, Thriller\n- Grand Budapest Hotel, The (2014) - Genres of the movie: Adventure, Comedy, Crime\n- Indiana Jones and the Last Crusade (1989) - Genres of the movie: Action, Adventure\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n\nList B:\n- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Spotlight (2015) - Genres of the movie: Biography, Crime, Drama\n- Dark Knight, The (2008) - Genres of the movie: Action, Crime, Drama, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show comparable diversity with similar genre representation, List B's inclusion of the 'Crime' genre, and its more balanced representation of family-friendly and mature themes, edges it ahead of List A in terms of overall diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller\n- Zombieland (2009) - Genres of the movie: Action, Comedy, Horror\n- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Thor: Ragnarok (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy, Sci-Fi\n- Memoirs of a Geisha (2005) - Genres of the movie: Drama, Romance\n- Contact (1997) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller\n\nList B:\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance\n- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance\n- Dunkirk (2017) - Genres of the movie: Action, Drama, History, Thriller, War\n- Being John Malkovich (1999) - Genres of the movie: Comedy, Drama, Fantasy\n- Bourne Ultimatum, The (2007) - Genres of the movie: Action, Mystery, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse due to its inclusion of genres like Animation, Family, and Musical, which are absent from List A.  While both lists have a wide range of genres and themes, List B's additional categories provide a broader spectrum of movie types.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Goodfellas (1990) - Genres of the movie: Biography, Crime, Drama\n- Rise of the Planet of the Apes (2011) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller\n- Tropic Thunder (2008) - Genres of the movie: Action, Comedy, War\n\nList B:\n- John Wick (2014) - Genres of the movie: Action, Crime, Thriller\n- Bridge of Spies (2015) - Genres of the movie: Drama, History, Thriller, War\n- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller\n- Austin Powers: International Man of Mystery (1997) - Genres of the movie: Adventure, Comedy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show comparable diversity, List A exhibits slightly more variety by including genres like Biography and potentially War films (implied by the analysis).  List B's focus on action and thriller subgenres makes it slightly less diverse in its overall genre spread. Therefore, List A is considered more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Terminal, The (2004) - Genres of the movie: Comedy, Drama, Romance\n- Die Another Day (2002) - Genres of the movie: Action, Adventure, Thriller\n- Lion King, The (1994) - Genres of the movie: Animation, Adventure, Drama, Family, Musical\n- Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy\n\nList B:\n- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Beautiful Mind, A (2001) - Genres of the movie: Biography, Drama\n- Big Hero 6 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show moderate diversity with a similar number of genres, List A is slightly more diverse due to a more balanced representation of genres, even though it is still skewed towards action, adventure and drama. List B has a stronger presence of animation and related genres, resulting in less overall balance.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- American Beauty (1999) - Genres of the movie: Drama\n- Whiplash (2014) - Genres of the movie: Drama, Music\n\nList B:\n- Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- Pretty Woman (1990) - Genres of the movie: Comedy, Romance\n- Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B's analysis shows a wider variety of genres (Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi, Action, and Romance) and themes compared to List A, which primarily focuses on Drama, Biography, and Crime.  The comparison explicitly points to List B's superior diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- Social Network, The (2010) - Genres of the movie: Biography, Drama\n- 40-Year-Old Virgin, The (2005) - Genres of the movie: Comedy, Romance\n- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance\n- Enemy of the State (1998) - Genres of the movie: Action, Thriller\n\nList B:\n- War for the Planet of the Apes (2017) - Genres of the movie: Action, Adventure, Drama, Sci-Fi, Thriller\n- A Chinese Odyssey Part One: Pandora's Box (1995) - Genres of the movie: Action, Adventure, Comedy, Drama, Fantasy\n- Notting Hill (1999) - Genres of the movie: Comedy, Drama, Romance\n- Back to the Future Part II (1989) - Genres of the movie: Adventure, Comedy, Sci-Fi\n- Blood Diamond (2006) - Genres of the movie: Adventure, Drama, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genre and thematic coverage compared to List A. While List A has some diversity, List B's wider range of genres and the inclusion of multiple genres within films contributes to richer thematic blends, making it more diverse overall.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Holiday, The (2006) - Genres of the movie: Comedy, Romance\n- Juno (2007) - Genres of the movie: Comedy, Drama\n- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi\n- Cabin in the Woods, The (2012) - Genres of the movie: Horror, Mystery, Thriller\n- Edge of Tomorrow (2014) - Genres of the movie: Action, Adventure, Sci-Fi\n\nList B:\n- Easy A (2010) - Genres of the movie: Comedy, Drama, Romance\n- Passengers (2016) - Genres of the movie: Drama, Romance, Sci-Fi, Thriller\n- The Jungle Book (2016) - Genres of the movie: Adventure, Drama, Family, Fantasy\n- Constantine (2005) - Genres of the movie: Action, Fantasy, Horror, Mystery\n- Groundhog Day (1993) - Genres of the movie: Comedy, Drama, Fantasy, Romance\n- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genres and themes than List A.  While both lists include a variety of genres, List B's inclusion of Adventure and Family genres, combined with its mention of more varied themes (supernatural, coming-of-age, time loops), makes it demonstrably more diverse.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Die Hard (1988) - Genres of the movie: Action, Thriller\n- Napoleon Dynamite (2004) - Genres of the movie: Comedy\n- Good Morning, Vietnam (1987) - Genres of the movie: Biography, Comedy, Drama, War\n- Logan Lucky (2017) - Genres of the movie: Action, Comedy, Crime, Drama\n- Royal Tenenbaums, The (2001) - Genres of the movie: Comedy, Drama\n\nList B:\n- Sneakers (1992) - Genres of the movie: Comedy, Crime, Drama, Mystery, Thriller\n- Booksmart (2019) - Genres of the movie: Comedy\n- The Edge of Seventeen (2016) - Genres of the movie: Comedy, Drama\n- Crazy Rich Asians (2018) - Genres of the movie: Comedy, Drama, Romance\n- Hudsucker Proxy, The (1994) - Genres of the movie: Comedy, Drama, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A shows more diversity in genres, including Action, Thriller, Biography, and War, while List B is more concentrated in Comedy and Drama. Although List B has more variation within its narrower genre focus, List A's broader range makes it more diverse overall.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Guardians of the Galaxy (2014) - Genres of the movie: Action, Adventure, Comedy, Sci-Fi\n- Schindler's List (1993) - Genres of the movie: Biography, Drama, History\n- Wonder Woman (2017) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi, War\n\nList B:\n- Rogue One: A Star Wars Story (2016) - Genres of the movie: Action, Adventure, Sci-Fi\n- Pocahontas (1995) - Genres of the movie: Animation, Adventure, Drama, Family, Musical, Romance\n- Now You See Me (2013) - Genres of the movie: Crime, Mystery, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Both lists show moderate diversity with a variety of genres. However, List B has a wider range of genres, including Animation, Family, Musical, Romance, Crime, Mystery, and Thriller, in addition to Action, Adventure, and Sci-Fi.  This broader spectrum of genres makes List B slightly more diverse than List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Memento (2000) - Genres of the movie: Mystery, Thriller\n- Requiem for a Dream (2000) - Genres of the movie: Drama\n- American Beauty (1999) - Genres of the movie: Drama\n\nList B:\n- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance\n- Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is more diverse because it includes a wider range of genres (animation, adventure, comedy, family, fantasy, action, crime, drama, and romance) and themes compared to List A, which is primarily composed of dramas with only a few exceptions.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n- Social Network, The (2010) - Genres of the movie: Biography, Drama\n- Bug's Life, A (1998) - Genres of the movie: Animation, Adventure, Comedy, Family\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n\nList B:\n- Furious 7 (2015) - Genres of the movie: Action, Crime, Thriller\n- Broken Flowers (2005) - Genres of the movie: Comedy, Drama, Mystery, Romance\n- Cloverfield (2008) - Genres of the movie: Action, Adventure, Horror, Sci-Fi, Thriller\n- Fantastic Beasts and Where to Find Them (2016) - Genres of the movie: Adventure, Family, Fantasy\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B contains a wider variety of genres and themes, including action, horror, and fantasy, which are underrepresented in List A.  List A is more limited in its genre and thematic scope, focusing heavily on biographical dramas and animated family films.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Chappie (2015) - Genres of the movie: Action, Crime, Drama, Sci-Fi, Thriller\n- Trainspotting (1996) - Genres of the movie: Drama\n- Ring, The (2002) - Genres of the movie: Horror, Mystery\n- Whiplash (2014) - Genres of the movie: Drama, Music\n- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi\n\nList B:\n- Zootopia (2016) - Genres of the movie: Animation, Adventure, Comedy, Crime, Family, Mystery\n- The Butterfly Effect (2004) - Genres of the movie: Drama, Sci-Fi, Thriller\n- Star Wars: Episode II - Attack of the Clones (2002) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller\n- Princess Bride, The (1987) - Genres of the movie: Adventure, Comedy, Family, Fantasy, Romance\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in both genres and themes.  List A has some diversity but is less varied than List B, particularly in terms of themes.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Others, The (2001) - Genres of the movie: Horror, Mystery, Thriller\n- Avatar (2009) - Genres of the movie: Action, Adventure, Fantasy, Sci-Fi\n- True Grit (2010) - Genres of the movie: Drama, Western\n\nList B:\n- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance\n- Braveheart (1995) - Genres of the movie: Biography, Drama, History, War\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is more diverse because it contains a wider range of genres, including Animation, Biography, History, and War, which are absent from List A.  List A's diversity is limited, even though it has some genre variety.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- The Butterfly Effect (2004) - Genres of the movie: Drama, Sci-Fi, Thriller\n- The Intern (2015) - Genres of the movie: Comedy, Drama\n- Gravity (2013) - Genres of the movie: Drama, Sci-Fi, Thriller\n\nList B:\n- Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller\n- Austin Powers: International Man of Mystery (1997) - Genres of the movie: Adventure, Comedy\n- Reservoir Dogs (1992) - Genres of the movie: Crime, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because the analysis clearly shows it encompasses a wider range of genres (Action, Adventure, Comedy, Crime, Mystery, Sci-Fi, Thriller) compared to List A (Drama, Sci-Fi, Thriller).  The greater variety of genres in List B indicates more thematic diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Johnny English Reborn (2011) - Genres of the movie: Action, Adventure, Comedy\n- Toy Story 3 (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Big Hero 6 (2014) - Genres of the movie: Animation, Action, Adventure, Comedy, Drama, Family, Fantasy, Sci-Fi\n- Pirates of the Caribbean: The Curse of the Black Pearl (2003) - Genres of the movie: Action, Adventure, Fantasy\n- Logan (2017) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n\nList B:\n- Terminal, The (2004) - Genres of the movie: Comedy, Drama, Romance\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Lion King, The (1994) - Genres of the movie: Animation, Adventure, Drama, Family, Musical\n- Girl with the Dragon Tattoo, The (2011) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Terminator 2: Judgment Day (1991) - Genres of the movie: Action, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B contains more unique genres and although the distribution is not uniform, the wider range of genres (including Crime, Mystery, Romance, and Musical) gives it a slight edge in diversity compared to List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- I Am Legend (2007) - Genres of the movie: Action, Drama, Horror, Sci-Fi, Thriller\n- Sherlock Holmes: A Game of Shadows (2011) - Genres of the movie: Action, Adventure, Mystery\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Truman Show, The (1998) - Genres of the movie: Comedy, Drama\n- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi\n\nList B:\n- Serenity (2005) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Gone Girl (2014) - Genres of the movie: Drama, Mystery, Thriller\n- Time Machine, The (2002) - Genres of the movie: Action, Adventure, Sci-Fi\n- The Hateful Eight (2015) - Genres of the movie: Crime, Drama, Mystery, Thriller, Western\n- Emperor's New Groove, The (2000) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B contains more diverse genres and themes than List A, based on the provided analysis.  The addition of Western and Fantasy genres, along with a broader thematic scope beyond sci-fi and action, makes it the more diverse selection.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Bourne Supremacy, The (2004) - Genres of the movie: Action, Mystery, Thriller\n- Donnie Darko (2001) - Genres of the movie: Drama, Mystery, Sci-Fi, Thriller\n- The Hunger Games: Mockingjay - Part 1 (2014) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Ex Machina (2015) - Genres of the movie: Drama, Sci-Fi, Thriller\n- Three Billboards Outside Ebbing, Missouri (2017) - Genres of the movie: Comedy, Crime, Drama\n\nList B:\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- Juno (2007) - Genres of the movie: Comedy, Drama\n- Whiplash (2014) - Genres of the movie: Drama, Music\n- Die Hard (1988) - Genres of the movie: Action, Thriller\n- Silver Linings Playbook (2012) - Genres of the movie: Comedy, Drama, Romance\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A is considered more diverse because, although both lists contain similar genres, List A's distribution is more balanced, with less emphasis on any single genre compared to List B which shows a higher concentration of movies in Drama and Comedy.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Shrek (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n- Darkest Hour (2017) - Genres of the movie: Biography, Drama, War\n- X-Men Origins: Wolverine (2009) - Genres of the movie: Action, Sci-Fi\n- Sin City (2005) - Genres of the movie: Crime, Thriller\n- Indiana Jones and the Last Crusade (1989) - Genres of the movie: Action, Adventure\n- 10 Cloverfield Lane (2016) - Genres of the movie: Drama, Horror, Mystery, Sci-Fi, Thriller\n- The Man from U.N.C.L.E. (2015) - Genres of the movie: Action, Adventure, Comedy\n\nList B:\n- Kung Fu Panda (2008) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy\n- Argo (2012) - Genres of the movie: Biography, Drama, Thriller\n- Tangled (2010) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance\n- Emperor's New Groove, The (2000) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Blood Diamond (2006) - Genres of the movie: Adventure, Drama, Thriller\n- Requiem for a Dream (2000) - Genres of the movie: Drama\n- Pirates of the Caribbean: Dead Man's Chest (2006) - Genres of the movie: Action, Adventure, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show comparable diversity, List A exhibits slightly more variety by including genres such as War, Crime, Horror, and Mystery, which are absent from List B.  The inclusion of these genres adds to the overall diversity of the film selection. Therefore List A is considered more diverse.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Wolf of Wall Street, The (2013) - Genres of the movie: Biography, Comedy, Crime, Drama\n- Terminator 2: Judgment Day (1991) - Genres of the movie: Action, Sci-Fi\n- Hangover, The (2009) - Genres of the movie: Comedy\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n\nList B:\n- Minority Report (2002) - Genres of the movie: Action, Crime, Mystery, Sci-Fi, Thriller\n- Zodiac (2007) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Hot Fuzz (2007) - Genres of the movie: Action, Comedy, Mystery, Thriller\n- Oblivion (2013) - Genres of the movie: Action, Adventure, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because its genre distribution is more balanced and it features movies with multiple genres, indicating a wider range of cinematic experiences than List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Gran Torino (2008) - Genres of the movie: Drama\n- Ratatouille (2007) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Avengers, The (2012) - Genres of the movie: Action, Sci-Fi\n\nList B:\n- Dead Poets Society (1989) - Genres of the movie: Comedy, Drama\n- Megamind (2010) - Genres of the movie: Animation, Action, Comedy, Crime, Family, Mystery, Sci-Fi, Thriller\n- Harry Potter and the Order of the Phoenix (2007) - Genres of the movie: Action, Adventure, Family, Fantasy, Mystery\n- Ice Age (2002) - Genres of the movie: Animation, Adventure, Comedy, Family\n- Pineapple Express (2008) - Genres of the movie: Action, Comedy, Crime\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show comparable diversity, List B demonstrates a slightly broader range of themes and genres by including Crime and Thriller, thus offering more variety than List A's focus on family-friendly themes.  The inclusion of these darker themes adds to the overall diversity of the list.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Saving Private Ryan (1998) - Genres of the movie: Drama, War\n- Fight Club (1999) - Genres of the movie: Drama\n- Up (2009) - Genres of the movie: Animation, Adventure, Comedy, Drama, Family\n- Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance\n- Interstellar (2014) - Genres of the movie: Adventure, Drama, Sci-Fi\n\nList B:\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Inception (2010) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Good Will Hunting (1997) - Genres of the movie: Drama, Romance\n- Easy A (2010) - Genres of the movie: Comedy, Drama, Romance\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is chosen as more diverse because, while both lists show moderate diversity, List B includes more genres than List A.  The comparison highlights that List B incorporates genres such as Biography, Crime, and Mystery, which are absent from List A.  Although neither list has perfect representation across all genres, List B's broader range gives it a slight edge in terms of diversity.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Ocean's Eleven (2001) - Genres of the movie: Crime, Thriller\n- Silence of the Lambs, The (1991) - Genres of the movie: Crime, Drama, Thriller\n- Hidden Figures (2016) - Genres of the movie: Biography, Drama, History\n- Life of Pi (2012) - Genres of the movie: Adventure, Drama, Fantasy\n\nList B:\n- Perks of Being a Wallflower, The (2012) - Genres of the movie: Drama\n- Coco (2017) - Genres of the movie: Animation, Adventure, Drama, Family, Fantasy, Music, Mystery\n- O Brother, Where Art Thou? (2000) - Genres of the movie: Adventure, Comedy, Crime, Music\n- Gattaca (1997) - Genres of the movie: Drama, Sci-Fi, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B is more diverse because it has a wider range of genres and themes than List A.  List A concentrates on a smaller set of genres, while List B includes animation, family, musical, and sci-fi genres in addition to many of the genres in List A.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Finding Dory (2016) - Genres of the movie: Animation, Adventure, Comedy, Family\n- Back to the Future Part II (1989) - Genres of the movie: Adventure, Comedy, Sci-Fi\n- King's Speech, The (2010) - Genres of the movie: Biography, Drama, History\n\nList B:\n- Shutter Island (2010) - Genres of the movie: Mystery, Thriller\n- 40-Year-Old Virgin, The (2005) - Genres of the movie: Comedy, Romance\n- Slumdog Millionaire (2008) - Genres of the movie: Crime, Drama, Romance\n- Enemy of the State (1998) - Genres of the movie: Action, Thriller\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a wider variety of genres, including Animation, Fantasy, and History, and also shows a mix of family-friendly and mature content, making it more diverse than List B, which is heavily weighted towards thrillers and dramas.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Two Towers, The (2002) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance\n- Toy Story (1995) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n- Spider-Man: Into the Spider-Verse (2018) - Genres of the movie: Animation, Action, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- Shrek 2 (2004) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Romance\n\nList B:\n- Lord of the Rings: The Fellowship of the Ring, The (2001) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- 21 Jump Street (2012) - Genres of the movie: Action, Comedy, Crime\n- Harry Potter and the Goblet of Fire (2005) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Forrest Gump (1994) - Genres of the movie: Drama, Romance\n- Blade (1998) - Genres of the movie: Action, Horror, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B exhibits more genre diversity with the inclusion of Crime, Mystery, and Horror genres, which are absent from List A. Although List A has a good variety, List B's broader range of themes and genres makes it more diverse.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Blade (1998) - Genres of the movie: Action, Horror, Sci-Fi\n- Usual Suspects, The (1995) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Jumanji: Welcome to the Jungle (2017) - Genres of the movie: Action, Adventure, Comedy, Fantasy\n- The Butterfly Effect (2004) - Genres of the movie: Drama, Sci-Fi, Thriller\n\nList B:\n- Trainspotting (1996) - Genres of the movie: Drama\n- Ring, The (2002) - Genres of the movie: Horror, Mystery\n- Whiplash (2014) - Genres of the movie: Drama, Music\n- Matrix Revolutions, The (2003) - Genres of the movie: Action, Sci-Fi\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a broader range of genres and themes, including comedy and adventure, which offer more variety than List B's focus on drama and suspense.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Aladdin (1992) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Musical, Romance\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance\n\nList B:\n- Anastasia (1997) - Genres of the movie: Animation, Adventure, Drama, Family, Fantasy, Musical, Mystery, Romance\n- Sin City (2005) - Genres of the movie: Crime, Thriller\n- Monsters, Inc. (2001) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "Although both lists show a variety of genres, List A demonstrates a wider range of moods and plot types, from animation to war films, showcasing more diversity in its selection than List B.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Megamind (2010) - Genres of the movie: Animation, Action, Comedy, Crime, Family, Mystery, Sci-Fi, Thriller\n- Dead Poets Society (1989) - Genres of the movie: Comedy, Drama\n- Scott Pilgrim vs. the World (2010) - Genres of the movie: Action, Comedy, Fantasy, Romance\n- Get Out (2017) - Genres of the movie: Horror, Mystery, Thriller\n- Batman Begins (2005) - Genres of the movie: Action, Crime, Drama\n\nList B:\n- Monsters University (2013) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy, Sci-Fi\n- Zodiac (2007) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- Harry Potter and the Prisoner of Azkaban (2004) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- WALL\u00b7E (2008) - Genres of the movie: Animation, Adventure, Family, Sci-Fi\n- Ratatouille (2007) - Genres of the movie: Animation, Adventure, Comedy, Family, Fantasy\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A contains a wider variety of genres and themes, and while some genres are overrepresented, it still shows more diversity than List B which is heavily concentrated on animation and family-friendly adventures.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Lord of the Rings: The Return of the King, The (2003) - Genres of the movie: Action, Adventure, Drama, Fantasy\n- Ice Age (2002) - Genres of the movie: Animation, Adventure, Comedy, Family\n- Jurassic Park (1993) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n\nList B:\n- Harry Potter and the Deathly Hallows: Part 2 (2011) - Genres of the movie: Adventure, Family, Fantasy, Mystery\n- Bend It Like Beckham (2002) - Genres of the movie: Comedy, Drama, Romance, Sport\n- Duchess, The (2008) - Genres of the movie: Biography, Drama, History, Romance, Thriller\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B shows more diversity in genres and themes than List A.  List A is primarily focused on adventure, while List B includes a broader range of genres, including drama, romance, biography, history, and sport, resulting in greater thematic variety.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- The Imitation Game (2014) - Genres of the movie: Biography, Drama, Thriller, War\n- Waterworld (1995) - Genres of the movie: Action, Adventure, Sci-Fi\n- Pirates of the Caribbean: Dead Man's Chest (2006) - Genres of the movie: Action, Adventure, Fantasy\n- For the Birds (2000) - Genres of the movie: Animation, Short, Comedy, Family\n\nList B:\n- Matrix, The (1999) - Genres of the movie: Action, Sci-Fi\n- Sherlock Holmes: A Game of Shadows (2011) - Genres of the movie: Action, Adventure, Mystery\n- Saving Private Ryan (1998) - Genres of the movie: Drama, War\n- Snatch (2000) - Genres of the movie: Comedy, Crime\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A demonstrates more diversity in genres and themes than List B.  List A includes animation and biographical drama, which are absent in List B.  List B is more concentrated in the action/thriller genre.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Big Lebowski, The (1998) - Genres of the movie: Comedy, Crime\n- The Hunger Games: Catching Fire (2013) - Genres of the movie: Action, Adventure, Sci-Fi, Thriller\n- Watchmen (2009) - Genres of the movie: Action, Drama, Mystery, Sci-Fi\n- The Theory of Everything (2014) - Genres of the movie: Biography, Drama, Romance\n\nList B:\n- Looper (2012) - Genres of the movie: Action, Drama, Sci-Fi, Thriller\n- Catch Me If You Can (2002) - Genres of the movie: Biography, Crime, Drama\n- Usual Suspects, The (1995) - Genres of the movie: Crime, Drama, Mystery, Thriller\n- American Beauty (1999) - Genres of the movie: Drama\n\n",
+        "gold": "B",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List A is considered more diverse due to its wider range of genres and themes compared to List B.  Although both lists contain similar genres, List A demonstrates a more even distribution across various categories, including comedy, romance, and adventure, whereas List B's genres are more clustered in thriller, crime, mystery, and biographical categories. The analysis explicitly states that List A presents a broader spectrum of themes.",
+            "more_diverse_list": "A"
+        },
+        "correct": false
+    },
+    {
+        "prompt": "List A:\n- Hangover Part III, The (2013) - Genres of the movie: Comedy, Crime\n- Ted (2012) - Genres of the movie: Comedy\n- Source Code (2011) - Genres of the movie: Action, Drama, Mystery, Sci-Fi, Thriller\n- 22 Jump Street (2014) - Genres of the movie: Action, Comedy, Crime\n- Sherlock Holmes: A Game of Shadows (2011) - Genres of the movie: Action, Adventure, Mystery\n\nList B:\n- Schindler's List (1993) - Genres of the movie: Biography, Drama, History\n- Cast Away (2000) - Genres of the movie: Adventure, Drama, Romance\n- Argo (2012) - Genres of the movie: Biography, Drama, Thriller\n- Pirates of the Caribbean: On Stranger Tides (2011) - Genres of the movie: Action, Adventure, Fantasy\n- Terminator 2: Judgment Day (1991) - Genres of the movie: Action, Sci-Fi\n\n",
+        "gold": "A",
+        "step1_output": "",
+        "step2_output": {
+            "reasoning": "List B demonstrates greater thematic variety with the inclusion of biography and history, genres notably absent from List A.  Although both lists show moderate diversity, the broader range of genres in List B leads to a more diverse selection.",
+            "more_diverse_list": "B"
+        },
+        "correct": false
+    }
+]

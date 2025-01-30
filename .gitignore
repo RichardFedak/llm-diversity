@@ -1,0 +1,5 @@
+Venv/
+.env
+old/
+paper_data/
+papers/
