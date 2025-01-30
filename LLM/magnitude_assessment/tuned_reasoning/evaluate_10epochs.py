@@ -10,11 +10,11 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 model_ids = [
-    "tunedModels/TODO",
-    "tunedModels/TODO",
-    "tunedModels/TODO",
-    "tunedModels/TODO",
-    "tunedModels/TODO",
+    "tunedModels/e10reasoningtrainsplit1-87zu1ysnog6e",
+    "tunedModels/e10reasoningtrainsplit2-z434tcqqjoyu",
+    "tunedModels/e10reasoningtrainsplit3-7ny0zt136z7u",
+    "tunedModels/e10reasoningtrainsplit4-xw5n3ayl0ha2",
+    "tunedModels/e10reasoningtrainsplit5-79klqbaisw8a",
 ]
 models = [genai.GenerativeModel(id) for id in model_ids]
 
@@ -29,13 +29,14 @@ incorrect_outputs = 0
 start_time = time.time()
 
 error_log_file = "invalid_responses_e10.log"
+evaluation_file = "evaluation_summary_e10.log"
+valid_responses_file = "valid_responses_e10.json"
 
 MAX_REQUESTS_PER_MINUTE = 12
 REQUEST_INTERVAL = (60 / MAX_REQUESTS_PER_MINUTE) / 2
 requests_made = 0  # Track the number of requests made in the current minute
 last_request_time = time.time()
 
-valid_responses_file = "valid_responses_e10.json"
 
 with open(valid_responses_file, 'w') as valid_responses_log:
     json_log_data = []
@@ -92,7 +93,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                             json_log_data.append({
                                 "prompt": prompt,
                                 "reasoning": "",
-                                "gold": expected_final_ordering,
+                                "gold": gold["final_ordering"],
                                 "output": [0,0,0],
                             })
                     except Exception as e:
@@ -102,7 +103,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                         json_log_data.append({
                             "prompt": prompt,
                             "reasoning": "",
-                            "gold": expected_final_ordering,
+                            "gold": gold["final_ordering"],
                             "output": [0,0,0],
                         })
 
@@ -127,7 +128,7 @@ print(f"Incorrect outputs: {incorrect_outputs}")
 print(f"Accuracy: {accuracy_percentage:.2f}%")
 print(f"Total elapsed time: {elapsed_time:.2f} seconds")
 
-with open("evaluation_summary.log", 'w', encoding='utf-8') as summary_log:
+with open(evaluation_file, 'w', encoding='utf-8') as summary_log:
     summary_log.write("--- Evaluation Results ---\n")
     summary_log.write(f"Total evaluations: {total_evaluations}\n")
     summary_log.write(f"Valid outputs: {valid_outputs} ({valid_percentage:.2f}%)\n")
