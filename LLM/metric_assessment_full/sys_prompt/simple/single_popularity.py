@@ -84,9 +84,9 @@ with open(valid_responses_file, 'w') as valid_responses_log:
             filtered_list_B = [movie for movie in list_B if movie['title'] not in common_titles]
             filtered_list_C = [movie for movie in list_C if movie['title'] not in common_titles]
             
-            list_A_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']}" for movie in filtered_list_A])
-            list_B_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']}" for movie in filtered_list_B])
-            list_C_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']}" for movie in filtered_list_C])
+            list_A_info = "\n".join([f"- {movie['title']}" for movie in filtered_list_A])
+            list_B_info = "\n".join([f"- {movie['title']}" for movie in filtered_list_B])
+            list_C_info = "\n".join([f"- {movie['title']}" for movie in filtered_list_C])
 
             prompt = (
                 f"List A:\n{list_A_info}\n\n"
