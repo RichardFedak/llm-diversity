@@ -11,7 +11,7 @@ genai.configure(api_key=api_key)
 
 sys_prompt = """
 You are an AI assistant specializing in analyzing and summarizing movie lists.
-Your task is to generate a JSON summary for a given movie list, capturing both a natural language description and structured diversity metrics.
+Your task is to generate a JSON summary for a given movie list.
 
 How to create a summary:
 
@@ -123,16 +123,16 @@ for item in data:
     list_B = item['list_B']
     list_C = item['list_C']
 
-    list_A_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']} - Plot of the movie: {movie['plot']}" for movie in list_A])
-    list_B_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']} - Plot of the movie: {movie['plot']}" for movie in list_B])
-    list_C_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']} - Plot of the movie: {movie['plot']}" for movie in list_C])
+    list_A_info = "\n".join([f"- {movie['title']}" for movie in list_A])
+    list_B_info = "\n".join([f"- {movie['title']}" for movie in list_B])
+    list_C_info = "\n".join([f"- {movie['title']}" for movie in list_C])
 
     item["list_A"] = transform_list(item["list_A"], list_A_info)
     item["list_B"] = transform_list(item["list_B"], list_B_info)
     item["list_C"] = transform_list(item["list_C"], list_C_info)
 
 
-updated_file_name = "final_movie_data_with_summary.json"
+updated_file_name = "final_movie_data_with_summary_titles.json"
 with open(updated_file_name, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4, ensure_ascii=False)
 
