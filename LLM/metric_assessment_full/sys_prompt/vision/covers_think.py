@@ -9,7 +9,7 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 sys_prompt = """
-You are an assistant tasked with comparing three lists of movies. For each movie, the cover is provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies based solely on the information that can be obtained from the covers.
+You are an assistant tasked with comparing three lists of movies. For each movie, the cover is provided. Use your expertise to determine key differences between the lists and identify the most diverse list.
 
 Deliver your comparison and choice of the most diverse list in the following JSON format:
 
@@ -78,8 +78,6 @@ with open(valid_responses_file, 'w') as valid_responses_log:
 
         for idx, item in enumerate(data):
             print(idx)
-            if idx > 5:
-                break
             current_time = time.time()
             if requests_made >= MAX_REQUESTS_PER_MINUTE:
                 elapsed_time = current_time - last_request_time

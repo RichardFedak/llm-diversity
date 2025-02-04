@@ -100,8 +100,6 @@ with open(valid_responses_file, 'w') as valid_responses_log:
 
         for idx, item in enumerate(data):
             print(idx)
-            if idx > 5:
-                break
             current_time = time.time()
             if requests_made >= MAX_REQUESTS_PER_MINUTE:
                 elapsed_time = current_time - last_request_time
