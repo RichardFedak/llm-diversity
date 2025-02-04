@@ -6,3 +6,7 @@
 | [Standouts+Titles](single_popularity.py) | ***43.93%***   | 20.6%    | 27.1%    | ***57.9%***    |
 | [Standouts+T+Genres](single_popularity_genres.py) | ***46.73%***   | 21.5%    | 33.6%    | ***55.1%***    |
 | [Standouts+G+Plot](single_popularity_plot.py) | *39.25%*   | 19.6%    | 27.1%    | ***60.7%***    |
+
+
+### Findings
+- **Summary** increases correlation of MD-genres-BinDiv with Gemini accross all experiments dramatically
