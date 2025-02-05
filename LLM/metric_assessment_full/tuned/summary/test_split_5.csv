@@ -1,0 +1,684 @@
+input,output
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Zootopia (2016)
+- Groundhog Day (1993)
+- Toy Story 3 (2010)
+- Inside Out (2015)
+- Indiana Jones and the Last Crusade (1989)
+
+List B:
+- Inside Out (2015)
+- I, Robot (2004)
+- Grand Budapest Hotel, The (2014)
+- Indiana Jones and the Last Crusade (1989)
+- Beautiful Mind, A (2001)
+
+List C:
+- Zootopia (2016)
+- WALL·E (2008)
+- Jurassic Park (1993)
+- Spotlight (2015)
+- Dark Knight, The (2008)
+
+","{""reasoning"": ""List B exhibits the most diversity in genre and thematic representation. While List A contains animation and adventure, it leans heavily towards family-friendly themes.  List C shows a mix of animation, adventure, and drama, but less variety compared to B. List B offers a blend of animation (Inside Out), science fiction (I, Robot), dramedy (Grand Budapest Hotel), adventure (Indiana Jones), and biographical drama (A Beautiful Mind). This combination provides a wider range of storytelling styles, tones, and subject matters, making it the most diverse."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Monsters, Inc. (2001)
+- Memento (2000)
+- Black Swan (2010)
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+
+List B:
+- Matrix, The (1999)
+- Memento (2000)
+- Requiem for a Dream (2000)
+- American Beauty (1999)
+
+List C:
+- Monsters, Inc. (2001)
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+- Slumdog Millionaire (2008)
+- Scott Pilgrim vs. the World (2010)
+
+","{""reasoning"": ""List B exhibits the most thematic diversity. While List A contains a mix of animation, thriller, and action-adventure, and List C offers animation, action-adventure, drama, and action-comedy, List B provides a more nuanced range.  It features science fiction (The Matrix), psychological thriller (Memento), a dark drama about addiction (Requiem for a Dream), and a dark comedy exploring suburban life (American Beauty).  These films represent very distinct genres and thematic approaches within the realm of psychological and social commentary, making it more diverse than the others."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Iron Man (2008)
+- Ocean's Eleven (2001)
+- Shawshank Redemption, The (1994)
+- Gone Girl (2014)
+- Help, The (2011)
+
+List B:
+- Step Up 2 the Streets (2008)
+- Mulan (1998)
+- Interstellar (2014)
+- Harry Potter and the Goblet of Fire (2005)
+- X-Men (2000)
+
+List C:
+- Iron Man (2008)
+- Shawshank Redemption, The (1994)
+- Shrek 2 (2004)
+- Ocean's Eleven (2001)
+- Harry Potter and the Deathly Hallows: Part 1 (2010)
+
+","{""reasoning"": ""List C exhibits the most diversity in genre and tone. While lists A and B lean towards specific genres (A towards crime and drama, B towards fantasy/action), list C presents a better balance.  It includes a superhero film (Iron Man), a classic drama (Shawshank Redemption), an animated comedy (Shrek 2), a heist film (Ocean's Eleven), and a fantasy adventure (Harry Potter). This variety in style, target audience, and overall thematic elements makes it the most diverse."", ""most_diverse_list"": ""C""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Chappie (2015)
+- Trainspotting (1996)
+- Ring, The (2002)
+- Whiplash (2014)
+- Matrix Revolutions, The (2003)
+
+List B:
+- Blade (1998)
+- Chappie (2015)
+- Usual Suspects, The (1995)
+- Jumanji: Welcome to the Jungle (2017)
+- The Butterfly Effect (2004)
+
+List C:
+- Zootopia (2016)
+- The Butterfly Effect (2004)
+- Star Wars: Episode II - Attack of the Clones (2002)
+- Ocean's Eleven (2001)
+- Princess Bride, The (1987)
+
+","{""reasoning"": ""List A exhibits more diversity in terms of genre and thematic elements compared to lists B and C.  List A includes science fiction (Chappie, The Matrix Revolutions), drama (Trainspotting, Whiplash), horror (Ring), and action (potentially elements of action in several of the films). List B has action (Blade), sci-fi (Chappie), crime (Usual Suspects), adventure (Jumanji), and thriller (Butterfly Effect), which is less varied. List C leans heavily toward adventure and fantasy (Zootopia, Princess Bride, Star Wars), with a thriller (Butterfly Effect) and heist elements (Ocean's Eleven), resulting in less overall genre diversity than List A."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Back to the Future (1985)
+- Bourne Supremacy, The (2004)
+- Hacksaw Ridge (2016)
+- Creed (2015)
+- Beauty and the Beast (1991)
+
+List B:
+- Catch Me If You Can (2002)
+- Creed (2015)
+- Hacksaw Ridge (2016)
+- Back to the Future (1985)
+- Bourne Supremacy, The (2004)
+
+List C:
+- Catch Me If You Can (2002)
+- Die Hard (1988)
+- Beautiful Mind, A (2001)
+- 300 (2007)
+- Social Network, The (2010)
+
+","{""reasoning"": ""List A shows more variety in terms of genre and tone. While Lists A and B share some titles, List A includes a classic animated musical (\""Beauty and the Beast\""), balancing action movies like \""Bourne Supremacy\"" and \""Hacksaw Ridge\"" with the drama of \""Creed\"".  List C, while including some variety in years, contains more movies from a similar thematic space (dramas and action thrillers). List A's inclusion of a classic animated musical provides a significant contrast and thus a broader representation of film genres. "", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Goodfellas (1990)
+- Fifth Element, The (1997)
+- Sherlock Holmes (2009)
+- Rise of the Planet of the Apes (2011)
+- Gravity (2013)
+- Tropic Thunder (2008)
+
+List B:
+- Austin Powers: International Man of Mystery (1997)
+- John Wick (2014)
+- Inglourious Basterds (2009)
+- Big Fish (2003)
+- American Psycho (2000)
+- Shutter Island (2010)
+
+List C:
+- John Wick (2014)
+- Sherlock Holmes (2009)
+- Bridge of Spies (2015)
+- Fifth Element, The (1997)
+- Ex Machina (2015)
+- Austin Powers: International Man of Mystery (1997)
+
+","{""reasoning"": ""List C exhibits the most diversity because it offers a balanced blend of genres and styles while maintaining a thematic coherence.  The inclusion of action (John Wick), mystery (Sherlock Holmes), thriller (Bridge of Spies), science fiction (The Fifth Element, Ex Machina), and comedy (Austin Powers) provides a broader range of cinematic experiences compared to the other lists.  Lists A and B show more thematic clustering, for example List A has more action-oriented films and List B is heavier on thrillers and crime dramas.  While List C contains some overlapping genres, the combination and the spread across different subgenres within those genres demonstrate more diversity than either List A or List B."", ""most_diverse_list"": ""C""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- The Butterfly Effect (2004)
+- Die Hard (1988)
+- Doctor Strange (2016)
+- Gravity (2013)
+- Fight Club (1999)
+
+List B:
+- The Butterfly Effect (2004)
+- Rushmore (1998)
+- The Intern (2015)
+- Beetlejuice (1988)
+- Gravity (2013)
+
+List C:
+- Source Code (2011)
+- Austin Powers: International Man of Mystery (1997)
+- Beetlejuice (1988)
+- Reservoir Dogs (1992)
+- Rushmore (1998)
+
+","{""reasoning"": ""List B shows more variety in terms of genre and tone. While List A has action (Die Hard, Doctor Strange, Gravity), and thriller (Fight Club, The Butterfly Effect) elements, List B incorporates elements of comedy (Rushmore, The Intern), fantasy (Beetlejuice), drama (The Intern), and science fiction (Gravity).  This wider range of genres and tones makes List B more diverse than the other options. List C also has variety, but the blend of action and comedy leans more toward specific niche preferences compared to the broader range found in List B."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+- American Beauty (1999)
+- Saw (2004)
+- Deadpool (2016)
+- 50 First Dates (2004)
+- Shaun of the Dead (2004)
+- Pirates of the Caribbean: Dead Man's Chest (2006)
+- Mulholland Drive (2001)
+
+List B:
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+- Up (2009)
+- Mulholland Drive (2001)
+- Social Network, The (2010)
+- Simpsons Movie, The (2007)
+- Fury (2014)
+- Donnie Darko (2001)
+- Guardians of the Galaxy (2014)
+
+List C:
+- Dark Knight, The (2008)
+- Monsters, Inc. (2001)
+- American Beauty (1999)
+- Shaun of the Dead (2004)
+- Spider-Man (2002)
+- 50 First Dates (2004)
+- Usual Suspects, The (1995)
+- Deadpool (2016)
+
+","{""reasoning"": ""List A exhibits the most genre diversity.  While all lists contain a mix of genres, List A stands out with its broader representation. It includes action-adventure (Pirates of the Caribbean), drama (American Beauty), horror (Saw), superhero (Deadpool), romantic comedy (50 First Dates), zombie comedy (Shaun of the Dead), and neo-noir (Mulholland Drive).  Lists B and C, while diverse, show more concentration within specific genres (e.g., List B leans towards action/adventure and superhero films, while List C has more superhero and crime thriller elements) than List A."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- I Am Legend (2007)
+- Pacific Rim (2013)
+- Last Samurai, The (2003)
+- Hangover, The (2009)
+- Big Fish (2003)
+
+List B:
+- Jurassic Park III (2001)
+- Pacific Rim (2013)
+- Brave (2012)
+- Aliens (1986)
+- I Am Legend (2007)
+
+List C:
+- Aliens (1986)
+- Brave (2012)
+- Spotlight (2015)
+- The Imitation Game (2014)
+- Last Samurai, The (2003)
+
+","{""reasoning"": ""List B shows more variety in terms of genre and animation style.  While List A has a mix of genres, List B includes animation (Brave), classic Sci-Fi (Aliens), and post-apocalyptic Sci-fi (I Am Legend) alongside a more typical action movie (Pacific Rim).  List C has a more focused selection of films, primarily focusing on drama and historical fiction, lacking the diversity of genres present in List B.  Therefore, List B presents the most varied selection of films."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Slumdog Millionaire (2008)
+- Silence of the Lambs, The (1991)
+- Bug's Life, A (1998)
+- Three Billboards Outside Ebbing, Missouri (2017)
+- Beautiful Mind, A (2001)
+- Guardians of the Galaxy 2 (2017)
+- 10 Things I Hate About You (1999)
+
+List B:
+- Taken (2008)
+- Django Unchained (2012)
+- Beautiful Mind, A (2001)
+- District 9 (2009)
+- Help, The (2011)
+- True Lies (1994)
+- Inglourious Basterds (2009)
+
+List C:
+- Equalizer, The (2014)
+- 10 Things I Hate About You (1999)
+- True Lies (1994)
+- Three Billboards Outside Ebbing, Missouri (2017)
+- Guardians of the Galaxy 2 (2017)
+- Charlie and the Chocolate Factory (2005)
+- Taken (2008)
+
+","{""reasoning"": ""List A exhibits greater diversity in genre and thematic representation compared to Lists B and C.  While Lists B and C share some overlap in titles and similar action/adventure themes, List A presents a broader range. It includes a drama focusing on poverty in India (Slumdog Millionaire), a thriller (Silence of the Lambs), an animated film (A Bug's Life), a dark comedy-drama (Three Billboards), a biographical drama (A Beautiful Mind), a superhero film (Guardians of the Galaxy 2), and a teen romantic comedy (10 Things I Hate About You). This variety across genres, tones, and target audiences makes List A the most diverse."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Untitled Spider-Man Reboot (2017)
+- Lucy (2014)
+- Others, The (2001)
+- Fast and the Furious, The (2001)
+- Donnie Brasco (1997)
+- Serenity (2005)
+- Moonrise Kingdom (2012)
+
+List B:
+- Incredibles, The (2004)
+- Departed, The (2006)
+- Jurassic Park (1993)
+- Serenity (2005)
+- Aladdin (1992)
+- Braveheart (1995)
+- Wedding Crashers (2005)
+
+List C:
+- Jurassic Park (1993)
+- Wedding Crashers (2005)
+- Others, The (2001)
+- Incredibles, The (2004)
+- Departed, The (2006)
+- Avatar (2009)
+- True Grit (2010)
+
+","{""reasoning"": ""List C shows a better spread of genres and film styles compared to Lists A and B.  While Lists A and B have some genre variety, List C includes action (Jurassic Park, True Grit), comedy (Wedding Crashers), thriller (The Departed), animation (The Incredibles), science fiction (Avatar), and mystery (The Others). This broader range of genres and styles makes List C the most diverse."", ""most_diverse_list"": ""C""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Minority Report (2002)
+- Zodiac (2007)
+- Wolf of Wall Street, The (2013)
+- Slumdog Millionaire (2008)
+- Nightcrawler (2014)
+
+List B:
+- It Follows (2014)
+- Wolf of Wall Street, The (2013)
+- Terminator 2: Judgment Day (1991)
+- Hangover, The (2009)
+- Shutter Island (2010)
+
+List C:
+- Minority Report (2002)
+- It Follows (2014)
+- Zodiac (2007)
+- Hot Fuzz (2007)
+- Oblivion (2013)
+
+","{""reasoning"": ""List B demonstrates more diversity in genre and tone compared to lists A and C. While List A features a mix of crime thrillers and dramas, it lacks the comedic element present in List B with \""The Hangover.\""  List C includes some genre variety but is still predominantly focused on thrillers and science fiction.  List B successfully balances crime (Wolf of Wall Street, Shutter Island), action (Terminator 2), horror (It Follows), and comedy (The Hangover). This combination of varied genres and overall moods makes List B stand out as the most diverse selection."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Dark Knight, The (2008)
+- Harry Potter and the Deathly Hallows: Part 2 (2011)
+- Good Will Hunting (1997)
+- Avengers, The (2012)
+- Saving Private Ryan (1998)
+- Catch Me If You Can (2002)
+- Fight Club (1999)
+
+List B:
+- Harry Potter and the Half-Blood Prince (2009)
+- Catch Me If You Can (2002)
+- Harry Potter and the Deathly Hallows: Part 2 (2011)
+- Inception (2010)
+- Good Will Hunting (1997)
+- Pirates of the Caribbean: At World's End (2007)
+- Easy A (2010)
+
+List C:
+- Harry Potter and the Half-Blood Prince (2009)
+- Saving Private Ryan (1998)
+- Fight Club (1999)
+- Up (2009)
+- Scott Pilgrim vs. the World (2010)
+- Interstellar (2014)
+- Pirates of the Caribbean: At World's End (2007)
+
+","{""reasoning"": ""List C exhibits the most diversity in genre and tone.  While Lists A and B share several films and lean towards action and fantasy (with the Harry Potter series heavily represented in both), List C offers a wider range. It includes a war film (Saving Private Ryan), an animated film (Up), an action-comedy (Scott Pilgrim vs. the World), a science fiction film (Interstellar), and a dark drama (Fight Club) alongside the fantasy elements from Harry Potter and the pirate adventure from Pirates of the Caribbean. This variety of genres and moods makes it the most diverse."", ""most_diverse_list"": ""C""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Your Name. (2016)
+- Sully (2016)
+- The Imitation Game (2014)
+- Kung Fu Panda (2008)
+- Three Billboards Outside Ebbing, Missouri (2017)
+- Avengers, The (2012)
+
+List B:
+- Your Name. (2016)
+- Sing (2016)
+- Mulan (1998)
+- Toy Story 4 (2019)
+- Sully (2016)
+- Blade Runner 2049 (2017)
+
+List C:
+- Kung Fu Panda (2008)
+- Avengers, The (2012)
+- The Imitation Game (2014)
+- Legally Blonde (2001)
+- Usual Suspects, The (1995)
+- Mean Girls (2004)
+
+","{""reasoning"": ""List A shows a better balance of genres and themes compared to the other lists.  It includes biographical dramas (Sully, The Imitation Game), an action movie (Avengers), an animated film (Kung Fu Panda), and a dark comedy/drama (Three Billboards Outside Ebbing, Missouri).  While List B has animation and sci-fi, it leans heavily towards more recent animation and action-adventure films, making it less diverse in terms of styles and subject matter. List C has a slightly better mix of genres (action, animation, drama, comedy), but the themes are somewhat more similar compared to List A, which offers a broader range of emotional tones and storytelling approaches."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Monsters, Inc. (2001)
+- Django Unchained (2012)
+- WALL·E (2008)
+- Brave (2012)
+- Wolf of Wall Street, The (2013)
+- The Imitation Game (2014)
+
+List B:
+- Inside Out (2015)
+- The Hateful Eight (2015)
+- Iron Man (2008)
+- Whiplash (2014)
+- Great Gatsby, The (2013)
+- The Imitation Game (2014)
+
+List C:
+- Monsters, Inc. (2001)
+- The Hateful Eight (2015)
+- Brave (2012)
+- WALL·E (2008)
+- Great Gatsby, The (2013)
+- Django Unchained (2012)
+
+","{""reasoning"": ""List B exhibits the most diversity in genre and tone.  It includes an animated film (Inside Out), a Western (The Hateful Eight), a superhero film (Iron Man), a drama (Whiplash), a period drama (The Great Gatsby), and a biographical thriller (The Imitation Game). This range of genres and film styles is broader than Lists A and C, which contain more films that share thematic similarities or belong to the same genre category (e.g. animation in List A and Westerns/period pieces in List C). List B's variety offers a more comprehensive cinematic experience."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- V for Vendetta (2006)
+- Dallas Buyers Club (2013)
+- Grand Budapest Hotel, The (2014)
+- Billy Elliot (2000)
+- Truman Show, The (1998)
+- Forrest Gump (1994)
+
+List B:
+- Dallas Buyers Club (2013)
+- Kingsman: The Secret Service (2015)
+- Dirty Dancing (1987)
+- Lord of the Rings: The Two Towers, The (2002)
+- Bridget Jones's Diary (2001)
+- Walk the Line (2005)
+
+List C:
+- Dirty Dancing (1987)
+- Kingsman: The Secret Service (2015)
+- Good bye, Lenin! (2003)
+- Walk the Line (2005)
+- La La Land (2016)
+- Ghost in the Shell (2017)
+
+","{""reasoning"": ""List B exhibits the most diversity in terms of genre and themes. While some overlap exists with other lists (e.g., Dallas Buyers Club), List B successfully incorporates a wider range of genres. It includes a historical drama (Walk the Line), an action comedy (Kingsman), a romantic drama (Dirty Dancing), a fantasy epic (Lord of the Rings), and a romantic comedy (Bridget Jones's Diary). This combination of genres and tones makes it more diverse than Lists A and C, which, although containing diverse films, show less variation in their overall thematic and stylistic approaches."", ""most_diverse_list"": ""B""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- John Wick: Chapter Two (2017)
+- Harry Potter and the Order of the Phoenix (2007)
+- Hurt Locker, The (2008)
+- Avengers: Infinity War - Part I (2018)
+- Indiana Jones and the Last Crusade (1989)
+- Mad Max: Fury Road (2015)
+
+List B:
+- Toy Story (1995)
+- Saving Private Ryan (1998)
+- John Wick: Chapter Two (2017)
+- Interstellar (2014)
+- Enemy at the Gates (2001)
+- Logan (2017)
+
+List C:
+- Mad Max: Fury Road (2015)
+- Deadpool (2016)
+- Pulp Fiction (1994)
+- Saving Private Ryan (1998)
+- Truman Show, The (1998)
+- Indiana Jones and the Last Crusade (1989)
+
+","{""reasoning"": ""List A shows more variety in terms of genre and tone. It includes action (John Wick, Mad Max, Indiana Jones), fantasy (Harry Potter), war (Hurt Locker), and superhero (Avengers). The time span of the movies is also more spread out, showcasing films from different eras.  Lists B and C, while having some variety, seem to cluster more around specific genres or tones (e.g., List B has a mix of action and sci-fi/drama, but fewer distinct categories than List A). Therefore, List A exhibits a greater range of film styles and periods."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- 127 Hours (2010)
+- Schindler's List (1993)
+- Harry Potter and the Deathly Hallows: Part 2 (2011)
+- Internet's Own Boy: The Story of Aaron Swartz, The (2014)
+- Goodfellas (1990)
+
+List B:
+- Dances with Wolves (1990)
+- Internet's Own Boy: The Story of Aaron Swartz, The (2014)
+- 127 Hours (2010)
+- Three Musketeers, The (1993)
+- Limitless (2011)
+
+List C:
+- Sin City (2005)
+- Schindler's List (1993)
+- Arrival (2016)
+- Dances with Wolves (1990)
+- Deadpool (2016)
+
+","{""reasoning"": ""List A exhibits the most diversity in genre and theme.  It includes a survival story (127 Hours), a historical drama (Schindler's List), a fantasy film (Harry Potter), a documentary (Internet's Own Boy), and a gangster film (Goodfellas). This variety surpasses the other lists which show more genre overlap.  List B has two films with survival/adventure themes, and List C has a couple of action movies. List A's combination of genres and the inclusion of a documentary make it stand out in terms of overall diversity."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Back to the Future (1985)
+- King's Speech, The (2010)
+- Bourne Supremacy, The (2004)
+- Trainspotting (1996)
+
+List B:
+- Up (2009)
+- WALL·E (2008)
+- 127 Hours (2010)
+- Bourne Supremacy, The (2004)
+
+List C:
+- Moonrise Kingdom (2012)
+- Silver Linings Playbook (2012)
+- Fantastic Beasts and Where to Find Them (2016)
+- WALL·E (2008)
+
+","{""reasoning"": ""List A exhibits the most diversity in terms of genre and tone. It includes a science fiction adventure (Back to the Future), a historical drama (King's Speech, The), a spy thriller (Bourne Supremacy, The), and a gritty drama (Trainspotting).  This range of genres and cinematic styles makes it more diverse than lists B and C, which show more thematic similarities within their selections. Lists B and C, while containing varied elements, lean towards specific areas (animation and survival/adventure in List B; indie dramedy and fantasy in List C) rather than providing the broad spectrum of styles seen in List A."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- WALL·E (2008)
+- Shawshank Redemption, The (1994)
+- Doctor Strange (2016)
+- Snatch (2000)
+- Beautiful Mind, A (2001)
+- Up (2009)
+
+List B:
+- Sherlock Holmes (2009)
+- Fantastic Beasts and Where to Find Them (2016)
+- Harry Potter and the Half-Blood Prince (2009)
+- Lord of the Rings: The Fellowship of the Ring, The (2001)
+- Matrix, The (1999)
+- Guardians of the Galaxy 2 (2017)
+
+List C:
+- Snatch (2000)
+- Matrix, The (1999)
+- The Imitation Game (2014)
+- Sherlock Holmes (2009)
+- WALL·E (2008)
+- Shawshank Redemption, The (1994)
+
+","{""reasoning"": ""List A exhibits the most diversity in terms of genre and style.  While List B focuses heavily on fantasy and adventure, and List C shares several films with both A and B, creating less unique variety, List A presents a broader spectrum. It includes animation (WALL·E, Up), crime (Snatch), drama (Shawshank Redemption, A Beautiful Mind), and superhero elements (Doctor Strange). This blend of animation, crime, drama, and fantasy/superhero elements showcases a wider range of filmmaking styles and target audiences than the other lists."", ""most_diverse_list"": ""A""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Johnny English Reborn (2011)
+- Logan (2017)
+- Terminal, The (2004)
+- Die Another Day (2002)
+- Lion King, The (1994)
+- Lord of the Rings: The Two Towers, The (2002)
+
+List B:
+- Terminal, The (2004)
+- Matrix, The (1999)
+- Lion King, The (1994)
+- Beautiful Mind, A (2001)
+- Girl with the Dragon Tattoo, The (2011)
+- Terminator 2: Judgment Day (1991)
+
+List C:
+- Johnny English Reborn (2011)
+- Toy Story 3 (2010)
+- Beautiful Mind, A (2001)
+- Big Hero 6 (2014)
+- Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+- Logan (2017)
+
+","{""reasoning"": ""List C exhibits the most diversity in genre and tone.  It includes animation (Toy Story 3 and Big Hero 6), action (Pirates of the Caribbean, Logan), and a biographical drama (A Beautiful Mind).  While List A and B contain some genre variety, List C offers a more balanced representation across different film categories. Johnny English Reborn adds a comedic element further enhancing this variety.  The mix of animated films with action and drama creates a more heterogeneous collection of movies than is seen in the other two lists."", ""most_diverse_list"": ""C""}"
+"You are given three lists of movies with titles provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+Use the following JSON schema for your response:
+{
+    ""reasoning"": str,         # Explain your evaluation of the lists and why the given ordering is correct.
+    ""final_ordering"": array   # Array, ordering of the lists 'A', 'B' and 'C' starting from the least diverse list.
+}
+
+List A:
+- Source Code (2011)
+- Django Unchained (2012)
+- Hangover, The (2009)
+- Kill Bill: Vol. 2 (2004)
+- Terminal, The (2004)
+- Rogue One: A Star Wars Story (2016)
+
+List B:
+- Gladiator (2000)
+- Rogue One: A Star Wars Story (2016)
+- Life of Pi (2012)
+- Source Code (2011)
+- Deadpool (2016)
+- Dead Poets Society (1989)
+
+List C:
+- Gladiator (2000)
+- Harry Potter and the Deathly Hallows: Part 2 (2011)
+- Life of Pi (2012)
+- Hangover, The (2009)
+- Lord of the Rings: The Return of the King, The (2003)
+- Bowling for Columbine (2002)
+
+","{""reasoning"": ""List A exhibits more genre variety than the other lists.  While Lists B and C contain a mix of genres, List A includes action (Kill Bill, Django Unchained, Rogue One), Sci-fi thriller (Source Code), comedy (Hangover), and drama (The Terminal). This broader range of film genres, compared to the slightly more focused genre selections of Lists B and C, makes List A the most diverse."", ""most_diverse_list"": ""A""}"
