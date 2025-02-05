@@ -1,0 +1,2058 @@
+[
+    {
+        "participation": 63,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Bourne series, Jurassic Park), thriller (Bourne series), and drama (A Beautiful Mind, The Hunger Games).  There is some variety but a noticeable concentration on thrillers and action.",
+            "list_B_summary": "List B showcases a wider range of genres, including crime (Catch Me If You Can), comedy (Moonrise Kingdom, School of Rock), drama (Rain Man), action (Avengers), and war (Inglourious Basterds). This list demonstrates more diversity in genre than List A.",
+            "list_C_summary": "List C shares some overlap with List A (Bourne series, Rain Man) but introduces science fiction (Edge of Tomorrow, War of the Worlds).  However, the genre variety is less broad than in List B.",
+            "genre_diversity": "List B exhibits the highest level of genre diversity, encompassing action, crime, comedy, drama, and war.  Lists A and C, while containing some variety, tend to cluster more closely around action and thriller genres."
+        },
+        "most_diverse_list_reasoning": "List B is determined to be the most diverse because it contains a wider variety of genres than lists A and C.  Lists A and C show some genre diversity but are less varied than List B.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 61,
+        "comparison": {
+            "list_A_summary": "List A shows variety but leans towards action and adventure with a hint of animation and drama.  The genres are diverse but not evenly represented.",
+            "list_B_summary": "List B has a mix of action, animation, sci-fi, and mystery. The inclusion of Fight Club and Ex Machina shows a stronger emphasis on darker themes or thought-provoking concepts.",
+            "list_C_summary": "List C is a mix of action and war movies with some sci-fi elements. It has more focus on action-oriented themes compared to other lists. The time span of the movies is the most limited."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in genre and tone. While List B has a strong mix, it leans towards darker or more intellectual films. List C has a more narrow focus on action and war themes. List A successfully balances animation (Up, Finding Dory), action (Pirates of the Caribbean), drama (Spotlight), and psychological thriller (Fight Club, Ex Machina).",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 62,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres, including animation (Inside Out), thriller (Shutter Island, Split), action (Matrix), drama (Shawshank Redemption), crime (Pulp Fiction), comedy-drama (Intouchables), and psychological drama (Requiem for a Dream).  The release dates span from 1994 to 2017.",
+            "list_B_summary": "List B shows variety with science fiction (Avatar, WALL\u00b7E), drama (Shawshank Redemption, A Beautiful Mind), comedy (Being John Malkovich, Little Miss Sunshine), war (1917), and horror (28 Days Later). The release dates range from 1994 to 2019.",
+            "list_C_summary": "List C's genres include science fiction (Avatar, Gravity), war (1917), comedy-drama (Intouchables), surrealist comedy (Being John Malkovich), animation (WALL\u00b7E), thriller (Shutter Island), mystery (Knives Out). Release dates are between 1999 and 2019.",
+            "genre_diversity": {
+                "A": [
+                    "Animation",
+                    "Thriller",
+                    "Action",
+                    "Drama",
+                    "Crime",
+                    "Comedy-Drama",
+                    "Psychological Drama"
+                ],
+                "B": [
+                    "Science Fiction",
+                    "Drama",
+                    "Comedy",
+                    "War",
+                    "Horror"
+                ],
+                "C": [
+                    "Science Fiction",
+                    "War",
+                    "Comedy-Drama",
+                    "Surrealist Comedy",
+                    "Animation",
+                    "Thriller",
+                    "Mystery"
+                ]
+            },
+            "overlap": {
+                "common_movies": [
+                    "Shawshank Redemption, The",
+                    "Intouchables",
+                    "Shutter Island",
+                    "Avatar",
+                    "Being John Malkovich",
+                    "WALL\u00b7E",
+                    "1917"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity, encompassing a wider range of genres than the others, including animation, action, crime, and psychological drama.  While Lists B and C have some genre variety, List A's inclusion of diverse subgenres within broader categories makes it the most varied.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 64,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of drama, romance, and animated film, with a focus on more serious and emotional themes. There's a balance of newer and slightly older movies.",
+            "list_B_summary": "List B has a blend of drama, comedy, and action, spanning a wider range of years.  It includes both animated and live-action films, but the genre mix is notable. ",
+            "list_C_summary": "List C presents a combination of action, romance, and comedy, with a concentration on films from the early 2000s to the mid-2010s. The films appear to be more action-oriented than List A.",
+            "key_differences": "List A features a stronger emotional and dramatic focus, while List B presents a wider genre spread with a blend of action, comedy, and drama. List C shows a concentration on action and romantic comedies. The release dates are more spread out in List B."
+        },
+        "most_diverse_list_reasoning": "List B stands out due to its diverse range of genres (including animation, drama, action, and comedy) and the broader span of release years. This variety makes it the most diverse.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 67,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including horror (Get Out), animation (Corpse Bride, Incredibles), thriller (Prisoners), superhero (Dark Knight Rises), and fantasy (Lord of the Rings).  The release dates span from 2003-2017.",
+            "list_B_summary": "List B has a more balanced representation of genres, combining animation (Incredibles), action (Fight Club, Django Unchained), fantasy (Lord of the Rings), adventure (Princess Bride), and comedy-drama (Little Miss Sunshine). Release dates range from 1987-2006.",
+            "list_C_summary": "List C is genre diverse, with horror (Get Out), comedy-drama (Little Miss Sunshine), crime (Reservoir Dogs), psychological thriller (Fight Club), action (Django Unchained), and romance (Eternal Sunshine). Release dates are spread across 1992-2017.",
+            "genre_diversity": {
+                "A": [
+                    "Horror",
+                    "Animation",
+                    "Thriller",
+                    "Superhero",
+                    "Fantasy"
+                ],
+                "B": [
+                    "Animation",
+                    "Action",
+                    "Fantasy",
+                    "Adventure",
+                    "Comedy-Drama"
+                ],
+                "C": [
+                    "Horror",
+                    "Comedy-Drama",
+                    "Crime",
+                    "Psychological Thriller",
+                    "Action",
+                    "Romance"
+                ]
+            },
+            "release_date_range": {
+                "A": "2003-2017",
+                "B": "1987-2006",
+                "C": "1992-2017"
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diverse range of film genres, encompassing horror, comedy-drama, crime, psychological thriller, action, and romance.  While List B also shows a good variety, List C's selection of genres is more distinct and varied.  List A's genres are less varied and lean heavily towards action/adventure and thriller.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 65,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Dark Knight, Pirates of the Caribbean), drama (American Beauty, Shutter Island, The Last Samurai), and comedy (Meet the Parents) with a classic Sci-fi (Back to the Future).",
+            "list_B_summary": "List B showcases a variety of genres including romance (Lost in Austen, The Fault in Our Stars), crime (Fargo), dramedy (This Beautiful Fantastic), action (Salt, Hot Fuzz), and biographical drama (Lion). It presents a blend of lighter and more serious tones.",
+            "list_C_summary": "List C presents a combination of action (Dark Knight, Pirates of the Caribbean), drama (Last Samurai), romantic comedy (Bridget Jones's Diary), crime (Snatch), and dark fantasy (Edward Scissorhands). The inclusion of The Fault in Our Stars adds a young adult element.",
+            "genre_diversity": {
+                "A": [
+                    "Action",
+                    "Drama",
+                    "Comedy",
+                    "Sci-Fi"
+                ],
+                "B": [
+                    "Romance",
+                    "Crime",
+                    "Dramedy",
+                    "Action",
+                    "Biographical Drama"
+                ],
+                "C": [
+                    "Action",
+                    "Drama",
+                    "Romantic Comedy",
+                    "Crime",
+                    "Dark Fantasy",
+                    "Young Adult"
+                ]
+            },
+            "thematic_diversity": {
+                "A": [
+                    "Superhero",
+                    "Family",
+                    "Time Travel",
+                    "Coming-of-Age",
+                    "Thriller"
+                ],
+                "B": [
+                    "Social Class",
+                    "Love and Loss",
+                    "Friendship",
+                    "Action",
+                    "Resilience"
+                ],
+                "C": [
+                    "War",
+                    "Romance",
+                    "Crime",
+                    "Fantasy",
+                    "Love and Loss"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most significant diversity. While List C has a broad range of genres, List B's blend of genres and thematic elements creates a more balanced and varied collection of films. It successfully incorporates lighthearted movies alongside serious ones, including various subgenres within those categories. This makes List B the most diverse and representative selection.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 66,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of drama, action, and animation, spanning a wider release date range (2008-2017).  The genres are relatively diverse but not strongly represented in each category.",
+            "list_B_summary": "List B shows more animation and action movies compared to List A and C.  The release dates are also more spread out than List A, including some older films.",
+            "list_C_summary": "List C is more diverse in terms of genre, including animation, action, drama, and comedy. The release dates are spread across several decades but less so than List B."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diverse range of genres, encompassing animation (Kung Fu Panda), action (Avengers), drama (The Imitation Game), comedy (Legally Blonde, Mean Girls), and crime (Usual Suspects).  While List B has a broader release date range, the genre variety in List C makes it more diverse overall.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 69,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Taken, True Lies, Django Unchained), thriller (Catch Me If You Can), superhero (Guardians of the Galaxy Vol. 2), and a superhero-adjacent film (Unbreakable).  There's a variety in release dates spanning several decades.",
+            "list_B_summary": "List B offers a blend of action (Taken, True Lies), superhero (Guardians of the Galaxy Vol. 2), family-friendly (Charlie and the Chocolate Factory), dark comedy/drama (Three Billboards), and teen romantic comedy (10 Things I Hate About You). The variety of genres is notable here.",
+            "list_C_summary": "List C shows diversity across genres including drama (Slumdog Millionaire, Three Billboards), science fiction (Star Wars), adventure (Jurassic Park), and animation (A Bug's Life). It also incorporates a teen romantic comedy similar to List B, while spanning multiple decades in film.",
+            "key_differences": "The main difference lies in the range of genres and tones. List A leans more towards action and thriller, while List B adds family-friendly and teen-oriented elements. List C incorporates animation and a broader spectrum of dramatic tones.  The release dates also show a similar range in all three."
+        },
+        "most_diverse_list_reasoning": "List C demonstrates the most diversity because it has the most varied selection of genres, including animation (A Bug's Life), science fiction (Star Wars), adventure (Jurassic Park), and a wider range of dramatic tones from a coming-of-age story (10 Things I Hate About You) to a dark comedy/drama (Three Billboards) and a powerful drama (Slumdog Millionaire).  It's not dominated by a single genre like Lists A and B.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 72,
+        "comparison": {
+            "list_A_summary": "List A contains a war film, a survival drama, an animated comedy, and a dramedy.  Genres are varied, but the films don't show a clear thematic pattern.",
+            "list_B_summary": "List B features a drama about an inspirational teacher, an action movie, a historical epic, and a war film. There is more of a focus on male-driven narratives and themes of heroism/conflict.",
+            "list_C_summary": "List C includes a historical epic, a psychological thriller, a dark fantasy, and a biographical drama. This list displays diversity in genre and tone, ranging from action to dark fantasy to character studies.",
+            "genre_diversity": {
+                "A": "high",
+                "B": "moderate",
+                "C": "high"
+            },
+            "thematic_diversity": {
+                "A": "moderate",
+                "B": "low",
+                "C": "high"
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the highest level of diversity. While List A shows diversity in genre, List C offers not only genre diversity but also thematic variety.  It blends historical epics with psychological thrillers and dark fantasies; showcasing a broader range of storytelling styles and emotional tones.  List B, while containing diverse genres, is fairly thematically consistent, focusing on male-driven narratives and heroic conflict.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 74,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of animation, comedy, war, and romance.  There is a blend of family-friendly and adult-oriented movies.",
+            "list_B_summary": "List B has a mix of animation, action, drama, and comedy.  It's also quite diverse but with a slightly more mature theme than list A.",
+            "list_C_summary": "List C combines animation, action, and superhero themes.  The diversity is less pronounced than in lists A and B, it is more focused on action-adventure and animation.",
+            "key_differences": "The main difference lies in the range of genres. List A showcases a wider variety of genres, while List C is more focused on action and animation. List B falls somewhere in between."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity. It successfully blends animation (Finding Nemo, Up, Zootopia), comedy (Borat, Love Actually), war (Fury), and romance (Love Actually). This variety surpasses the more focused genres in Lists B and C.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 79,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animation, thriller, psychological drama, and fantasy adventure.  It shows some variety but is not particularly cohesive.",
+            "list_B_summary": "List B focuses on psychological thrillers and dramas, with a touch of science fiction. Thematically, it is relatively consistent.",
+            "list_C_summary": "List C blends animation, fantasy adventure, a drama with social commentary and a quirky action-comedy.  It displays a broader range of genres and tones than List A or B."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While List A has some genre variety, List C presents a more balanced spread across animation, adventure, drama, and comedy.  List B, while good, is more thematically unified around psychological elements.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 82,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action (Avengers: Infinity War, Dawn of the Planet of the Apes), comedy (Grand Budapest Hotel, Ocean's Twelve), and a thriller (Limitless).  The films span a range of years but don't show a strong thematic cohesion.",
+            "list_B_summary": "List B is more diverse in genre. It includes drama (Moneyball, Dunkirk), comedy (Shrek), action-comedy (Scott Pilgrim vs. the World), and an acclaimed period piece (Grand Budapest Hotel). The time range of films is wider than List A.",
+            "list_C_summary": "List C presents a blend of Sci-Fi (Minority Report, Limitless), animated (Shrek), drama (Moneyball, Titanic) and spans several years.  The films are quite varied."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity. While List C has genre variety, List B's inclusion of a broad range of genres - drama, comedy, action-comedy, and a period piece - makes it stand out.  The films also span a wider timeframe than the other two lists.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 81,
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including animation, action, thriller, comedy, and drama.  There's a mix of older and newer films.",
+            "list_B_summary": "List B has a similar genre range to List A but includes more animated films and leans slightly towards family-friendly options.  There's also a mix of older and newer films. ",
+            "list_C_summary": "List C contains a mix of genres similar to the other lists, but contains a nature documentary and has films that skew slightly more towards action and comedy than List A or B.",
+            "key_differences": "The main differences lie in the specific genre mixes and the inclusion of a nature documentary in List C. List B has a higher number of family-friendly movies compared to the others.  List A has a more balanced mix of genres without skewing too heavily towards a particular type."
+        },
+        "most_diverse_list_reasoning": "List A demonstrates the most diversity because it provides a balanced representation of various genres without being overly dominated by any single category. While List B has a broad range, it leans towards more family-friendly choices, and List C has a nature documentary that is quite distinct from the rest of its entries. List A presents a more consistent mix across different movie types.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 85,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including drama, action, comedy, thriller, and animation.  There's a range of tones, from dark and serious (Three Billboards, 12 Years a Slave, Hard Candy) to lighter and more whimsical (Princess Bride, Wreck-It Ralph, Lost in Translation). The release dates span several decades.",
+            "list_B_summary": "List B shows a similar spread of genres as List A, but with a slightly stronger emphasis on drama and action.  The range of tones is also present, though perhaps less varied than List A.  The release dates are again spread across several decades.",
+            "list_C_summary": "List C has a more balanced mix of genres and tones compared to List A and B, including drama, action, thriller, and elements of dark comedy. The movies represent both independent films (Brokeback Mountain, Fear and Loathing) and larger studio productions. The time span covered is also reasonably broad."
+        },
+        "most_diverse_list_reasoning": "While all three lists contain a variety of genres and tones, List C shows the most balanced distribution of film types. It includes critically acclaimed dramas alongside more mainstream action films and independent productions. List A has a strong representation of dark dramas, and list B contains fewer unique films, so the diversity of List C makes it the superior choice.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 88,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action (300, Die Hard, Star Wars), thriller (Gone Girl), and animation (Monsters University).  It spans a wider release date range.",
+            "list_B_summary": "List B includes animation (Bolt, Kung Fu Panda), drama (Silver Linings Playbook), and action (Boondock Saints). The release dates are clustered more closely together.",
+            "list_C_summary": "List C features Sci-fi (Looper, Matrix), drama (Silver Linings Playbook), action (300), and a foreign-language film (Intouchables). This list has a good balance of genres and also spans several years.",
+            "genre_diversity": {
+                "A": [
+                    "Action",
+                    "Thriller",
+                    "Animation",
+                    "Sci-fi"
+                ],
+                "B": [
+                    "Animation",
+                    "Drama",
+                    "Action"
+                ],
+                "C": [
+                    "Sci-fi",
+                    "Drama",
+                    "Action",
+                    "Foreign-language"
+                ]
+            },
+            "release_date_spread": {
+                "A": "Wide",
+                "B": "Moderate",
+                "C": "Moderate"
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity. While List C has a good spread of genres, List A offers a broader range including action, thriller, animation, and sci-fi.  It also demonstrates a wider spread of release dates, showcasing diversity across time.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 87,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animated movies (Isle of Dogs, Incredibles, Up), superhero movies (Iron Man), dramas (Social Network), and teen rom-coms (10 Things I Hate About You), with a Sherlock Holmes movie thrown in for good measure.  The release dates span from 1999-2018.",
+            "list_B_summary": "List B features a mix of action (Looper, Deadpool), crime (Catch Me If You Can, Fargo), fantasy (Charlie and the Chocolate Factory), and romance (Notebook).  It has a broader range of genres than A, but still feels somewhat grouped together thematically. The time period covers 1996-2016.",
+            "list_C_summary": "List C is a blend of superhero (Iron Man), animated (Isle of Dogs), romantic comedy (Other Woman), drama (Social Network, 10 Things I Hate About You), crime (Fargo), and superhero (Deadpool). It has a similar mix of genres to List A, but with some thematic overlap like the inclusion of both 'Iron Man' and 'Deadpool', both superhero films.  The time range is 1996-2018."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity because it encompasses a broader range of genres than lists A and C. While lists A and C have elements of various genres, list B successfully avoids thematic clustering; it contains action, crime, fantasy, and romance films without obvious thematic links between them. The combination of genres is more diverse.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 89,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including animation (Inside Out), sci-fi (Ex Machina, Arrival, Edge of Tomorrow), action (Deadpool, Django Unchained), comedy (Zombieland), and crime (Catch Me If You Can).  There's a range of tones, from lighthearted to dark and serious.",
+            "list_B_summary": "List B is heavily weighted towards sci-fi and fantasy, with the inclusion of both Harry Potter movies and similar-themed films like Ex Machina and Arrival.  There's also a couple of animated movies (Monsters, Inc., possibly Ice Age) and Deadpool as a more action-oriented movie. The tone is quite varied, though largely leaning towards action and adventure.",
+            "list_C_summary": "List C presents a more balanced mix of genres than List B, incorporating fantasy (Harry Potter), action (Django Unchained, Pirates of the Caribbean), animation (Monsters, Inc., possibly Shrek 2), historical drama (The Imitation Game), adventure (Pirates of the Caribbean), and sci-fi (Gravity).  The range of tones is broader than list B, but potentially less than A.",
+            "key_differences": "The main difference lies in the genre distribution. List A has a wider variety of genres, while List B is dominated by Sci-Fi and fantasy. List C is somewhere in between, with a more balanced representation but with less diversity than List A.",
+            "genre_analysis": {
+                "List A": [
+                    "Animation",
+                    "Sci-Fi",
+                    "Action",
+                    "Comedy",
+                    "Crime"
+                ],
+                "List B": [
+                    "Sci-Fi",
+                    "Fantasy",
+                    "Action",
+                    "Animation"
+                ],
+                "List C": [
+                    "Fantasy",
+                    "Action",
+                    "Animation",
+                    "Historical Drama",
+                    "Adventure",
+                    "Sci-Fi"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it encompasses a broader range of genres and tones than Lists B and C.  While List C also offers a decent variety, List A includes crime, comedy, and a more balanced mix of action, sci-fi, and animation which results in a richer overall selection of movie types.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 90,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of drama, comedy, and historical fiction films spanning different decades.  There's a balance between lighter and more serious tones, and the films are fairly diverse stylistically. However, they lack a strong cohesive theme.",
+            "list_B_summary": "List B is a more eclectic mix of genres, including action, romance, drama, and fantasy.  The time period of the films is also quite varied.  While there's a wider range of genres than List A, some might feel it lacks thematic consistency.",
+            "list_C_summary": "List C presents a more unified aesthetic or thematic approach, perhaps focusing on a blend of action-oriented and independent films with a slightly more international feel than the other lists.  The selection of films feels more curated than the others.",
+            "key_differences": "The primary differences lie in genre diversity and thematic consistency. List A shows some thematic diversity but a narrower range of genres. List B displays wider genre diversity but less thematic cohesion. List C presents a strong thematic cohesion albeit with a more limited genre spread.",
+            "genre_analysis": {
+                "List_A": [
+                    "Drama",
+                    "Comedy",
+                    "Historical Fiction"
+                ],
+                "List_B": [
+                    "Action",
+                    "Romance",
+                    "Drama",
+                    "Fantasy"
+                ],
+                "List_C": [
+                    "Action",
+                    "Musical",
+                    "Comedy",
+                    "Drama",
+                    "Sci-fi"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity in terms of genre.  While List A has a good balance of tone and style, and List C displays a more cohesive thematic approach, List B's inclusion of action, romance, drama, and fantasy elements makes it the most genre-diverse list.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 91,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of fantasy, drama, and sci-fi genres.  It includes a young adult fantasy film, two drama films with some mystery elements, and a sci-fi film.",
+            "list_B_summary": "List B is a more diverse genre list, with fantasy, action, crime, and war movies, showcasing a wider variety of tones and themes.",
+            "list_C_summary": "List C has a mix of war, drama, and sci-fi genres, similar to List A but with a more distinct action movie and classic sci-fi movie which provides some genre diversity.",
+            "key_differences": "The main difference lies in the genre variety. List B stands out with a crime film and a French comedy-drama, demonstrating more diversity in terms of national cinema and genre compared to the other lists which share more overlap in genre and style.  List A and C both have a similar blend of Sci-Fi and War genre movies.",
+            "genre_analysis": {
+                "List A": [
+                    "Fantasy",
+                    "Drama",
+                    "Sci-Fi"
+                ],
+                "List B": [
+                    "Fantasy",
+                    "Comedy-Drama",
+                    "Action",
+                    "Crime",
+                    "War"
+                ],
+                "List C": [
+                    "War",
+                    "Drama",
+                    "Sci-Fi",
+                    "Action"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity because it includes a wider range of genres, including comedy-drama (Intouchables), crime (Reservoir Dogs), and action (Iron Man 2), along with fantasy and war films.  This contrasts with Lists A and C, which show more thematic and genre overlap.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 93,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including historical drama (Last Samurai), psychological thriller (Black Swan), superhero (Guardians of the Galaxy), drama (Shawshank Redemption), and comedy (Dodgeball).  The time span of the films is relatively wide, ranging from 1994 to 2014.",
+            "list_B_summary": "List B shows a blend of action-adventure (National Treasure), crime (Usual Suspects), romantic comedy-drama (Silver Linings Playbook), psychological thriller (Black Swan), and comedy (Mrs. Doubtfire). The movies in this list span from 1993 to 2012.",
+            "list_C_summary": "List C features crime (Usual Suspects), romantic comedy-drama (Silver Linings Playbook), drama (Shawshank Redemption), fantasy (Harry Potter), and comedy (Mrs. Doubtfire).  The release dates range from 1993 to 2012.",
+            "genre_diversity": {
+                "list_A": [
+                    "Historical Drama",
+                    "Psychological Thriller",
+                    "Superhero",
+                    "Drama",
+                    "Comedy"
+                ],
+                "list_B": [
+                    "Action-Adventure",
+                    "Crime",
+                    "Romantic Comedy-Drama",
+                    "Psychological Thriller",
+                    "Comedy"
+                ],
+                "list_C": [
+                    "Crime",
+                    "Romantic Comedy-Drama",
+                    "Drama",
+                    "Fantasy",
+                    "Comedy"
+                ]
+            },
+            "overlap": "Lists B and C share three movies ('Usual Suspects', 'Silver Linings Playbook', and 'Mrs. Doubtfire'), while List A only shares one movie with each of Lists B and C ('Black Swan' and 'Shawshank Redemption', respectively)."
+        },
+        "most_diverse_list_reasoning": "List A stands out as the most diverse because it offers the widest range of genres, encompassing historical drama, psychological thriller, superhero film, classic drama, and comedy.  The other lists have more genre overlap.  While List B and C both have a nice mix, neither reaches the level of variety presented by List A.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 94,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including superhero, heist, drama, and thriller.  The release years span several decades, suggesting some diversity in filmmaking styles.",
+            "list_B_summary": "List B shows a blend of genres: dance, animation, science fiction, fantasy, and superhero. The release years are also relatively spread out.",
+            "list_C_summary": "List C has a similar mix of genres to List A, including superhero, drama, animation, and fantasy.  The release years are somewhat spread, but less so than List B."
+        },
+        "most_diverse_list_reasoning": "List B stands out due to its wider range of genres.  It includes animation (Mulan), dance (Step Up), science fiction (Interstellar), fantasy (Harry Potter), and superhero (X-Men). This variety is more pronounced than the other lists, which have more overlap in genre and themes.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 95,
+        "comparison": {
+            "List A Summary": "List A shows a mix of genres including historical drama (Last Samurai), adventure (Mummy), comedy-drama (Pursuit of Happyness), biographical drama (Imitation Game), psychological thriller (Donnie Darko), and war drama (Full Metal Jacket).  There's a range of tones and styles, but it lacks a strong unifying theme.",
+            "List B Summary": "List B presents a broader range of genres than List A: historical drama (Last Samurai), psychological thriller (Donnie Darko), biographical drama (Imitation Game), sports comedy (Dodgeball), historical drama (Pianist), superhero (Thor), and fantasy comedy (Big). The mix of tones and styles is more varied than List A.",
+            "List C Summary": "List C contains a mix of genres: adventure (Mummy), coming-of-age (Moonrise Kingdom), drama (Pursuit of Happyness), war (Full Metal Jacket), zombie comedy (Zombieland), sci-fi romance (Her), and dark comedy-drama (American Beauty). The list displays some thematic connections, such as exploring different aspects of life and relationships, although the variety of genres is still present."
+        },
+        "most_diverse_list_reasoning": "List B stands out as the most diverse because it has the widest range of genres, including historical dramas, psychological thrillers, biographical dramas, sports comedies, superhero films, and fantasy comedies.  This variety in tone, style, and subject matter surpasses the other lists, which, while containing diverse elements, exhibit more thematic connections or narrower genre ranges.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 96,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres and animation styles, including animation (Shrek), historical drama (Darkest Hour), superhero (X-Men Origins: Wolverine), neo-noir (Sin City), action-adventure (Indiana Jones), thriller (10 Cloverfield Lane), and spy (The Man from U.N.C.L.E.).  The time range of films is quite broad.",
+            "list_B_summary": "List B has a similar mix of genres to List A but includes more action and animated films.  It also contains the war drama Blood Diamond, adding another layer of genre diversity. The time range is also broad.",
+            "list_C_summary": "List C is more diverse in terms of animation styles, ranging from animated features (Kung Fu Panda, The Emperor's New Groove) to a more serious and dramatic tone in movies like Argo, Blood Diamond, and Requiem for a Dream.  There's a good balance between animated and live-action, and a range of genres represented.",
+            "key_differences": "The main difference lies in the balance and variety of genres and animation styles. List A is relatively diverse, but List C presents a more balanced spread, with a mix of animated and live-action, and an inclusion of more dramatic and serious films alongside lighter-hearted ones.  List B falls somewhere in between.",
+            "genre_analysis": {
+                "List A": [
+                    "Animation",
+                    "Historical Drama",
+                    "Superhero",
+                    "Neo-Noir",
+                    "Action-Adventure",
+                    "Thriller",
+                    "Spy"
+                ],
+                "List B": [
+                    "Animation",
+                    "Historical Drama",
+                    "Spy",
+                    "Animation",
+                    "Neo-Noir",
+                    "Superhero",
+                    "War Drama"
+                ],
+                "List C": [
+                    "Animation",
+                    "Political Thriller",
+                    "Animation",
+                    "Animation",
+                    "War Drama",
+                    "Psychological Drama",
+                    "Action-Adventure"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List C demonstrates the most diversity because it offers a balanced mix of animated and live-action films, spanning a wider range of genres, including animation, political thrillers, war dramas, and psychological dramas.  The inclusion of films like Requiem for a Dream adds a level of thematic and tonal diversity not as strongly present in Lists A or B.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 98,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, sci-fi, thriller, and drama genres.  There's a range of release years, but it is not very diverse.",
+            "list_B_summary": "List B presents a blend of action, sci-fi, crime, and adventure. The release years span several decades, which provides a bit more diversity in film-making styles.",
+            "list_C_summary": "List C showcases animation, sci-fi, adventure, crime and fantasy genres. The release dates show a broader time range than List A, implying a greater diversity in filmmaking techniques and storytelling approaches.",
+            "genre_diversity": {
+                "A": [
+                    "Action",
+                    "Sci-fi",
+                    "Thriller",
+                    "Drama"
+                ],
+                "B": [
+                    "Action",
+                    "Sci-fi",
+                    "Crime",
+                    "Adventure"
+                ],
+                "C": [
+                    "Animation",
+                    "Sci-fi",
+                    "Adventure",
+                    "Crime",
+                    "Fantasy"
+                ]
+            },
+            "release_year_range": {
+                "A": 19,
+                "B": 22,
+                "C": 29
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity.  It has the widest range of genres (Animation, Sci-fi, Adventure, Crime, and Fantasy), and the largest span of release years, suggesting a greater variety in filmmaking styles and storytelling approaches.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 99,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action-comedies (Rush Hour 2, We're the Millers, The Rock) and a crime thriller (The Girl with the Dragon Tattoo).  It shows some variety but is heavily weighted towards action and comedy.",
+            "list_B_summary": "List B offers a wider range of genres including drama (Schindler's List, Apollo 13), action (Fight Club), and animation (A Bug's Life). This demonstrates more diversity than List A.",
+            "list_C_summary": "List C blends animation (A Bug's Life), dark comedy (Shaun of the Dead), psychological thriller (Fight Club), and science fiction (Arrival).  It has a unique combination of genres showing considerable diversity.",
+            "key_differences": "The main difference lies in the genre variety. List A is primarily action and comedy, List B includes drama and animation, while List C features a more eclectic mix of genres, with animation, dark comedy, thriller, and sci-fi."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity because it features a unique combination of genres: animation, dark comedy, psychological thriller, and science fiction.  Neither List A nor List B displays such a wide range of distinct film types.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 102,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including adventure (Harry Potter), drama (Titanic, Requiem for a Dream), comedy (Little Miss Sunshine, O Brother, Where Art Thou?), and action (Terminator 3).  The time span is relatively short, focused primarily on the late 1990s and early 2000s.",
+            "list_B_summary": "List B has a broader range of years represented. The genres are more diverse with crime (Goodfellas), fantasy (Lord of the Rings), drama (Captain Phillips, Social Network), and comedy (Big Lebowski, School of Rock).",
+            "list_C_summary": "List C demonstrates some overlap with Lists A and B. It includes crime (Goodfellas), action (Terminator 3), comedy (School of Rock, O Brother, Where Art Thou?), and other genres such as superhero (Ant-Man) and dark comedy (Fear and Loathing in Las Vegas). The time span is similar to List A but with an addition of a more recent movie (Ant-Man).",
+            "key_differences": "The main differences lie in the range of years covered and the breadth of genres represented. List A is more focused in time and genre, whereas Lists B and C exhibit more variation. List B stands out due to its inclusion of films spanning a wider period and a clear diversity in genre.",
+            "genre_analysis": {
+                "list_A": [
+                    "Adventure",
+                    "Drama",
+                    "Comedy",
+                    "Action"
+                ],
+                "list_B": [
+                    "Crime",
+                    "Fantasy",
+                    "Drama",
+                    "Action",
+                    "Comedy"
+                ],
+                "list_C": [
+                    "Crime",
+                    "Action",
+                    "Comedy",
+                    "Superhero",
+                    "Dark Comedy"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B is the most diverse because it contains movies from a wider range of years (1990-2013), showcasing a greater variety of genres compared to Lists A and C.  While List C has some genre diversity, it does not span as many years and shares some films with List A.  List B's balanced selection across genres and release dates demonstrates the most significant diversity.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 100,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of science fiction, war, action, fantasy, and mystery genres.  The movies span several decades, from 1986 to 2013.",
+            "list_B_summary": "List B is a more contemporary list, with movies mostly from the 2000s and 2010s. It features science fiction, superhero, comedy, and action genres.",
+            "list_C_summary": "List C has a mix of science fiction, drama, fantasy, and comedy.  It shows some overlap with List A and B, but with a slightly older selection of films."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity. While all lists contain a variety of genres, List A's selection spans a wider range of decades and includes a distinct mystery film (Zodiac), resulting in more thematic variation than the other lists.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 103,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Air Force One, Bourne Supremacy) and animation (Wallace & Gromit).  It shows a range of release years.",
+            "list_B_summary": "List B focuses primarily on superhero movies from the Marvel Cinematic Universe (MCU), with one animated film (Wallace & Gromit) as an outlier.",
+            "list_C_summary": "List C presents a variety of genres including action (Mr. & Mrs. Smith), Sci-Fi (Matrix Reloaded), and drama (Rain Man). The release years span several decades."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While List A has a mix of action and animation, List C offers a broader genre range encompassing action, science fiction, and drama. The time span of release years is also significant, showing a variety of filmmaking styles across different eras.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 104,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including post-apocalyptic (I Am Legend), science fiction (Pacific Rim), historical drama (The Last Samurai), comedy (The Hangover), and fantasy (Big Fish).  There's a spread across different decades as well.",
+            "list_B_summary": "List B leans towards science fiction and action, with Jurassic Park III, Pacific Rim, and Aliens. It includes one animated film (Brave) and a post-apocalyptic film (I Am Legend).",
+            "list_C_summary": "List C offers a blend of genres, including science fiction (Aliens), animation (Brave), biographical drama (Spotlight and The Imitation Game), and historical drama (The Last Samurai). The films are distributed over multiple decades.",
+            "key_differences": "The main difference lies in genre focus. List A has a more balanced representation of various genres, while List B is weighted towards science fiction/action. List C exhibits a more distinct mix of genres, featuring biographical and historical dramas alongside sci-fi and animation."
+        },
+        "most_diverse_list_reasoning": "List A shows more diversity in its genre selection, covering science fiction, action, historical drama, comedy, and fantasy. While List C also has a good mix of genres, the inclusion of comedy in List A gives it a slight edge in terms of overall diversity.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 105,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animation, drama, and comedy genres.  There's a family-friendly movie ('Up'), a biographical drama ('The Social Network'), a raunchy comedy ('Superbad'), and a war film ('Inglourious Basterds').",
+            "list_B_summary": "List B is similar to List A, also including animation ('Up'), drama ('The Social Network', 'The Imitation Game'), but adds an animated film ('A Bug's Life') and expands the range of years.",
+            "list_C_summary": "List C offers a more varied selection with action ('Furious 7'), independent drama ('Broken Flowers'), science fiction/horror ('Cloverfield'), and fantasy ('Fantastic Beasts'). The years spanned are also more spread out.",
+            "genre_diversity": {
+                "A": [
+                    "Animation",
+                    "Drama",
+                    "Comedy",
+                    "War"
+                ],
+                "B": [
+                    "Animation",
+                    "Drama",
+                    "Comedy"
+                ],
+                "C": [
+                    "Action",
+                    "Drama",
+                    "Science Fiction",
+                    "Horror",
+                    "Fantasy"
+                ]
+            },
+            "year_range": {
+                "A": 3,
+                "B": 16,
+                "C": 11
+            }
+        },
+        "most_diverse_list_reasoning": "List C demonstrates the most diversity because it encompasses the widest range of genres (Action, Drama, Science Fiction, Horror, and Fantasy) and has a wider span of release years (11 years).  Lists A and B are similar in genre and have a smaller range of release years, making List C stand out in terms of overall diversity.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 108,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, sci-fi, and drama, with a few outliers.  It features films like 'I Am Legend' and 'Lord of War' (action/drama), 'WALL\u00b7E' and 'The Matrix Revolutions' (sci-fi), and 'The Truman Show' (drama). 'Sherlock Holmes' adds a bit of mystery and 'The Secret Life of Walter Mitty' is more of a dramedy.",
+            "list_B_summary": "List B has a broader range of animation, action, drama, and comedy.  'Serenity' and 'The Departed' are action/dramas, 'WALL\u00b7E' and 'Emperor's New Groove' represent animation, and 'The Truman Show' and 'The Hateful Eight' fall into drama and western/mystery respectively.  'Wreck-it Ralph' is a unique addition.",
+            "list_C_summary": "List C contains a more balanced selection of genres. It includes adventure ('Serenity', 'The Secret Life of Walter Mitty'), thriller ('Gone Girl'), sci-fi ('The Time Machine'), and western ('The Hateful Eight'). The inclusion of 'Lord of War' and 'The Emperor's New Groove' adds diversity across genres and tones."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity because it presents a balanced mix of genres without being heavily weighted toward any particular type of film.  While Lists A and B have diverse elements, List C shows a more even distribution of genres across its selections.  List A leans towards sci-fi/action while List B has a slightly heavier animation presence.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 106,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including animation, action, and fantasy, spanning from 1997 to 2012.  There's a Disney animation sequel, a comedic action film, a thriller, and a popular fantasy series installment.",
+            "list_B_summary": "List B features a blend of fantasy, thriller, and science fiction, ranging from 2003 to 2016.  It includes an epic fantasy conclusion, a psychological thriller, a Disney sequel, an action movie and a Star Wars film.",
+            "list_C_summary": "List C presents a combination of animation, action, fantasy, and adventure from 1992 to 2009. It includes classic Disney animation, an action thriller, a Disney animated film and a Pixar animation."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity because it spans a wider range of genres, including fantasy, thriller, and science fiction.  The inclusion of 'Star Wars' and 'Lord of the Rings' alongside '21 Jump Street' and 'The Lion King 1 1/2' showcases a broader spectrum of cinematic styles and target audiences than the other lists.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 109,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animation, adventure, and fantasy films, including family-friendly options and some more mature adventure films.",
+            "list_B_summary": "List B shows a combination of animation, fantasy, superhero, and action-adventure movies.  There's a blend of family-friendly and more mature action content.",
+            "list_C_summary": "List C offers a more diverse selection spanning various genres, including drama, superhero, thriller, and animation. It presents a more balanced mix of film styles and target audiences.",
+            "genre_diversity": {
+                "list_A": [
+                    "Animation",
+                    "Adventure",
+                    "Fantasy"
+                ],
+                "list_B": [
+                    "Animation",
+                    "Fantasy",
+                    "Superhero",
+                    "Action-Adventure"
+                ],
+                "list_C": [
+                    "Drama",
+                    "Superhero",
+                    "Thriller",
+                    "Animation",
+                    "Action"
+                ]
+            },
+            "themes": {
+                "list_A": [
+                    "Family",
+                    "Adventure",
+                    "Magic"
+                ],
+                "list_B": [
+                    "Adventure",
+                    "Superpowers",
+                    "Mythology"
+                ],
+                "list_C": [
+                    "Drama",
+                    "Justice",
+                    "Superpowers",
+                    "Mystery"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the greatest diversity in terms of genre and thematic elements. It includes drama (Forrest Gump, Braveheart), superhero (Thor, Dark Knight), thriller (Sixth Sense), animation (Incredibles), and action (Braveheart).  Lists A and B lean more towards specific genre categories (fantasy/adventure and superhero/animation, respectively).",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 111,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including action (Logan, Django Unchained), animation (Monsters, Inc.), drama (Forrest Gump), and thriller (Limitless).  The release dates span several decades.",
+            "list_B_summary": "List B features a blend of action-adventure (Pirates of the Caribbean, Jumanji), science fiction (Star Wars), and animation (Simpsons Movie). The movies are mostly from the 2000s and 2010s.",
+            "list_C_summary": "List C is dominated by action-adventure films from the Pirates of the Caribbean franchise, along with animation (Simpsons Movie) and science fiction (Star Wars). It also includes a thriller (Nightcrawler). The release years are clustered around the 2000s.",
+            "genre_diversity": "List A shows more diversity in genres compared to Lists B and C, which are more focused on action-adventure and animation.",
+            "release_date_diversity": "List A has the widest range of release years, indicating broader temporal diversity."
+        },
+        "most_diverse_list_reasoning": "List A exhibits greater diversity across genres. It includes action, animation, drama, and thriller, showcasing a wider variety of cinematic styles and storytelling approaches than Lists B and C.  The span of release dates is also more significant in List A.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 113,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action (A-Team, Pirates), Sci-Fi (Back to the Future), drama (There Will Be Blood), fantasy (Harry Potter), and crime (Departed).  It spans a wider range of years (1989-2010).",
+            "list_B_summary": "List B has action (Looper, Gladiator), comedy (Hangover), romance (Notting Hill), thriller (Recruit), and fantasy (Harry Potter). The years are concentrated in the late 1990s to 2012.",
+            "list_C_summary": "List C features action (A-Team, Kingsman), romance (Notting Hill), animation (Inside Out), sci-fi (Looper), and thriller (Recruit). The years span 1999-2017, similar to List B."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity. While all lists contain a mix of genres, List A's range of genres is broader and includes more distinct stylistic choices.  The time span is also more significant, suggesting greater diversity in cinematic styles across different eras. List B and C are comparable but less widely varied in genre and time.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 114,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of romantic comedies (50 First Dates, While You Were Sleeping), dramedy (Short Term 12), and dramas (Mud, Horrible Bosses 2).  The range of years is 1995-2014.",
+            "list_B_summary": "List B shows a blend of action (Matrix Revolutions), drama (Shawshank Redemption, Mud), and fantasy (Harry Potter). The years span 1994-2003.",
+            "list_C_summary": "List C presents a combination of action (Fight Club, Waterworld), fantasy (Harry Potter), and comedy (Harold and Kumar). The years range from 1994-2004."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it includes romantic comedies, dramedy, and dramas.  While the other lists have genre variety, List A offers a broader spectrum of film styles and emotional tones.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 115,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including fantasy, thriller, science fiction, comedy, and animation.  There's a significant time range spanned by the release dates.",
+            "list_B_summary": "List B shows a blend of thriller, historical drama, fantasy, superhero, and animation. The release dates are also spread across multiple years.",
+            "list_C_summary": "List C includes thriller, superhero, crime, historical drama, and science fiction. The release dates are from different years.",
+            "genre_diversity": "List A shows more genre variety compared to Lists B and C.  Lists B and C share some common movie genres.",
+            "release_date_diversity": "All lists show movies released across different years, indicating temporal diversity."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity due to a wider range of movie genres compared to Lists B and C. While all lists include movies from different years, List A's genre variety is the defining factor in determining the most diverse list.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 116,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres, including Western (Django Unchained), crime (Big Lebowski), action (Hunger Games), superhero (Watchmen), and biographical drama (Theory of Everything).  It shows some diversity but lacks a clear unifying theme.",
+            "list_B_summary": "List B leans towards science fiction and action, with The Hunger Games, Looper, and X-Men.  The inclusion of The Usual Suspects and The Theory of Everything adds some genre variety, but the list is less diverse than List C.",
+            "list_C_summary": "List C presents a more balanced mix of genres, including crime (Usual Suspects, Catch Me If You Can), Western (Django Unchained), science fiction (Looper), and drama (American Beauty). The time span of the films also showcases diversity."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity because it offers a balanced representation of genres without being overly focused on any single category.  It includes crime, Western, science fiction, and drama, demonstrating a broader range than the other two lists.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 118,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including fantasy (Lord of the Rings), crime thriller (Wind River), animated (Ice Age), and science fiction (Jurassic Park).  There is also a heist film (21).",
+            "list_B_summary": "List B shows more variety in terms of tones. It has fantasy (Lord of the Rings), animated (Ice Age), drama (Green Mile), romantic sci-fi (Eternal Sunshine), and action (Skyfall).",
+            "list_C_summary": "List C offers a blend of genres including crime thriller (Wind River), fantasy (Harry Potter), sports comedy-drama (Bend It Like Beckham), drama (Duchess), and heist (21).  It has a more diverse set of themes compared to List A, with less focus on action/adventure.",
+            "genre_diversity": {
+                "List A": [
+                    "Fantasy",
+                    "Crime Thriller",
+                    "Animated",
+                    "Science Fiction",
+                    "Heist"
+                ],
+                "List B": [
+                    "Fantasy",
+                    "Animated",
+                    "Drama",
+                    "Sci-Fi",
+                    "Action"
+                ],
+                "List C": [
+                    "Crime Thriller",
+                    "Fantasy",
+                    "Sports Comedy-Drama",
+                    "Drama",
+                    "Heist"
+                ]
+            },
+            "themes": {
+                "List A": [
+                    "Adventure",
+                    "Mystery",
+                    "Suspense"
+                ],
+                "List B": [
+                    "Adventure",
+                    "Hope",
+                    "Memory",
+                    "Action"
+                ],
+                "List C": [
+                    "Justice",
+                    "Magic",
+                    "Sport",
+                    "Social Class",
+                    "Crime"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B demonstrates the most diversity. While all lists have a mix of genres, List B's selection presents a wider range of tones and themes, from the dark drama of \"The Green Mile\" to the whimsical romance of \"Eternal Sunshine of the Spotless Mind\", alongside action and fantasy. The combination offers more variation in style and emotional impact than the other two lists.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 117,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, comedy, and drama, with films spanning from 2004 to 2016.  There's a slight focus on action and crime genres. ",
+            "list_B_summary": "List B presents a more varied range of genres, including action, sci-fi, drama, and comedy. The release years span from 1989 to 2016, showing a wider temporal distribution. ",
+            "list_C_summary": "List C offers a blend of action, adventure, fantasy, and documentary genres. The films cover a time period from 2000 to 2011,  showing a mix of high-budget productions and a documentary. ",
+            "genre_diversity": {
+                "A": "Moderate",
+                "B": "High",
+                "C": "Moderate"
+            },
+            "temporal_diversity": {
+                "A": "Low",
+                "B": "High",
+                "C": "Moderate"
+            }
+        },
+        "most_diverse_list_reasoning": "List B exhibits the highest degree of diversity.  It demonstrates greater genre variety, including action, sci-fi, drama, and comedy, and shows a wider range of release years (1989-2016) compared to the other lists.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 121,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animated movies (Monsters, Inc., WALL-E, Brave) and live-action films spanning various genres, including drama (The Imitation Game), crime (Wolf of Wall Street), and Western (Django Unchained).",
+            "list_B_summary": "List B showcases a blend of animation (Inside Out), crime (The Hateful Eight), action (Iron Man), drama (Whiplash), and period drama (The Great Gatsby), along with the drama film The Imitation Game.  There's a slightly more contemporary feel compared to List A.",
+            "list_C_summary": "List C shares some overlap with Lists A and B, featuring animated movies (Monsters, Inc., Brave, WALL-E) and live action films including Western (Django Unchained), period drama (The Great Gatsby), and crime (The Hateful Eight).  It has a similar mix to List A but with some different titles."
+        },
+        "most_diverse_list_reasoning": "While all three lists exhibit a degree of diversity, List A stands out due to its broader range of genres.  It successfully blends animation and live action, and features genres including drama, crime, and Western, whereas the other lists have a slightly more focused genre spread.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 122,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including Sci-Fi (Blade Runner 2049, Inception), fantasy (Chronicles of Narnia), crime (Sin City), drama (The Imitation Game), and comedy-drama (Rushmore).  The films span different decades, from the late 1990s to the 2010s.",
+            "list_B_summary": "List B is more focused on action and adventure (Lord of the Rings, V for Vendetta, The Fugitive), with elements of drama (Argo, The Illusionist) and psychological thriller (Donnie Darko). The time range is more concentrated, primarily from the 1990s to the 2000s.",
+            "list_C_summary": "List C leans towards darker, more atmospheric films.  It blends neo-noir (Lost Highway, Blade Runner 2049, Sicario), Sci-Fi (Blade Runner 2049, Arrival), and surrealist drama (Wild at Heart). The Illusionist provides a bit of a tonal contrast. The release dates are spread across several decades."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in terms of genre. While List C features atmospheric variety, List A's blend of sci-fi, fantasy, crime, drama, and comedy-drama across a wider range of years makes it the most diverse.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 127,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Die Hard, Doctor Strange), sci-fi (Gravity), thriller (The Butterfly Effect), and cult classic (Fight Club).  It has a broader range of years.",
+            "list_B_summary": "List B shares some overlap with List A (The Butterfly Effect, Gravity), but introduces more comedy and coming-of-age elements with Rushmore and The Intern.  The years are still diverse, but slightly less so than List A.",
+            "list_C_summary": "List C has a more eclectic mix, including sci-fi thriller (Source Code), action-comedy (Austin Powers), dark comedy (Beetlejuice), crime (Reservoir Dogs), and coming-of-age (Rushmore). It also has decent range of years.",
+            "genre_diversity": "List C shows slightly more genre diversity with crime, action-comedy, and sci-fi thriller genres all represented and less overlap with List A and B.",
+            "year_diversity": "List A shows the largest range of release years."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diverse range of genres, including sci-fi thriller, action-comedy, dark comedy, crime, and coming-of-age. While List A has a broader range of years, List C's genre variety makes it the most diverse.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 126,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres, including science fiction (Insurgent), animation (Wallace & Gromit), thriller (Nightcrawler), fantasy (Harry Potter), and drama (Green Mile).  There's a range of release years, but no readily apparent theme beyond the diverse nature of the selection.",
+            "list_B_summary": "List B shares some similarities with List A in genre diversity, including fantasy (Harry Potter), adventure (Pirates of the Caribbean), thriller (The Imitation Game), crime (The Departed), and animation (Wallace & Gromit).  Again, release years vary, and there isn't an easily identifiable overarching theme.",
+            "list_C_summary": "List C showcases a slightly more cohesive theme compared to the others, showing a stronger focus on thrillers and dramas. Memento, Nightcrawler, and possibly The Revenant all fit neatly into this genre. The inclusion of Iron Man 2 broadens the scope to include superhero films, offering a unique contrast within this somewhat concentrated genre mix. ",
+            "key_differences": "The key difference is the thematic consistency. List C shows a tighter grouping in terms of genre and tone, while Lists A and B have a wider array of genres and less thematic coherence.  List A and B each contain a claymation movie; List C does not. Lists B and C share The Imitation Game."
+        },
+        "most_diverse_list_reasoning": "List A and List B exhibit greater diversity in terms of genre and film styles, encompassing animation, fantasy, science fiction, thriller, drama, and adventure. List C, while having some genre diversity, leans more heavily towards thriller/drama with only one outlier (Iron Man 2).  Therefore, Lists A and B are more diverse than List C. Between A and B, List A has a slightly broader representation of genres and subgenres, resulting in greater overall diversity. ",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 123,
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including superhero, thriller, sci-fi, drama, and adventure.  The movies span different decades, suggesting some degree of diversity across time.",
+            "list_B_summary": "List B leans towards darker themed movies.  It includes crime drama, action-comedy, action, and dark comedy. The range of time periods is slightly more condensed than list A.",
+            "list_C_summary": "List C has a mix of heist, dark comedy, crime drama and epic fantasy.  The time range is similar to list A. ",
+            "genre_diversity": "List A shows greater genre diversity than B and C, while List C has a more balanced representation of time periods."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it encompasses a broader range of genres (superhero, thriller, sci-fi, drama, and adventure) compared to List B (crime, action-comedy, action, dark comedy) and List C (heist, dark comedy, drama, and fantasy). While List C includes a classic epic fantasy film, List A's wider genre spread makes it more diverse.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 129,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Gladiator, Godzilla), drama (Shutter Island), and a period piece (Midnight in Paris), with a biographical element (The Social Network).",
+            "list_B_summary": "List B is a blend of action (Godzilla, Die Hard), drama (Cast Away, The Theory of Everything), and a comedy-drama (Midnight in Paris).  It shows a broader range of release years.",
+            "list_C_summary": "List C offers variety with a survival drama (Cast Away), a biographical drama (The Social Network), historical drama (Braveheart), a coming-of-age comedy-drama (Juno), and action (Die Hard). The range of genres and tones is diverse."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While List A and B have some genre variety, List C showcases a broader spectrum of genres (action, drama, historical drama, and comedy-drama) and tones.  The inclusion of films from different eras further enhances its diversity.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 125,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of drama, thriller, and comedy genres.  There's a range of years, but the selection isn't particularly focused.",
+            "list_B_summary": "List B shows a similar mix of genres to List A, but with a slightly stronger emphasis on action and drama.  The range of years represented is again somewhat broad, lacking a clear thematic focus.",
+            "list_C_summary": "List C presents a more balanced blend of genres including adventure and action. The films have a wider spread of release dates, leading to less of a concentrated timeframe.",
+            "key_differences": "The main difference lies in the thematic consistency. List A and B have less coherence in their genre and release year selections than List C.  List C has more genre diversity within a similar timeframe."
+        },
+        "most_diverse_list_reasoning": "List C is the most diverse because it offers a wider variety of genres (adventure, action, thriller, comedy, drama) and has a more balanced representation of release years, without being overly focused on a particular era or theme. Lists A and B have a less defined spread across genre and release years.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 133,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including drama, comedy, animation, and action, spanning different decades from the 1980s to the 2010s.  There's a variety in tone, from the lighthearted 'Ferris Bueller's Day Off' to the intense 'Fight Club'.",
+            "list_B_summary": "List B leans more towards action and science fiction, with films like 'I Am Legend' and 'The Matrix', but also includes a drama ('Requiem for a Dream') and a comedy ('Ferris Bueller's Day Off'). The time range is more concentrated within the late 1990s and 2000s.",
+            "list_C_summary": "List C shows more thematic connections between films, possibly suggesting a focus on specific aspects like character studies or social commentary, although it also includes action ('Quantum of Solace') and the comedy 'Back to the Future Part III'. The time range is from the 1990s to the 2010s."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it has the widest range of genres and tones.  It includes animation ('Frozen'), drama ('Spotlight'), action ('Braveheart'), and comedy ('Ferris Bueller's Day Off').  The time span is also wider compared to lists B and C.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 131,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, comedy, and animation, spanning multiple decades.  There's a noticeable blend of established franchises (James Bond, Lord of the Rings) and standalone films.",
+            "list_B_summary": "List B shows a more varied genre selection, including action, drama, animation, and thriller, also crossing multiple decades.  It features a mix of popular and critically acclaimed movies.",
+            "list_C_summary": "List C's genre mix is similar to List B, with action, animation, drama, and adventure represented. The time range is more concentrated, and it also includes popular family-friendly films."
+        },
+        "most_diverse_list_reasoning": "While all three lists exhibit some diversity, List B stands out due to its broader genre representation, ranging from action (The Matrix, Terminator 2) to thought-provoking drama (A Beautiful Mind) and animation (The Lion King). The inclusion of The Girl with the Dragon Tattoo adds a unique thriller element not prominently featured in the other lists.  The temporal span is also significant, covering several decades.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 134,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including superhero movies, romantic comedies, sci-fi comedies, animated movies and action-adventure. The release dates span several decades, indicating some diversity in time periods.",
+            "list_B_summary": "List B features a blend of action-adventure, romantic comedy, teen comedy, crime, and animated films. The movies are mostly from the 1980s and 1990s, with one from the 2000s.",
+            "list_C_summary": "List C contains animated movies, comedies, and action-adventure, with a more limited range of genres compared to List A and List B. The release dates are concentrated within a more limited timeframe."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the greatest diversity. It encompasses a wider variety of genres (superhero, romantic comedy, sci-fi comedy, animated, action-adventure) and has movies spanning a broader range of release years. This combination suggests a more diverse selection of films compared to the other lists.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 135,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including biographical drama, thriller, fantasy, and crime.  There's a significant time span between the release dates.",
+            "list_B_summary": "List B shows a broader range of genres, including adventure, biographical drama, thriller, and action.  The time span of releases is also significant, and the overall tone is more varied.",
+            "list_C_summary": "List C is a blend of genres: neo-noir, historical drama, science fiction, and superhero films. The time range is quite broad.",
+            "genre_diversity": {
+                "A": [
+                    "Biographical Drama",
+                    "Thriller",
+                    "Fantasy",
+                    "Crime"
+                ],
+                "B": [
+                    "Adventure",
+                    "Biographical Drama",
+                    "Thriller",
+                    "Action"
+                ],
+                "C": [
+                    "Neo-Noir",
+                    "Historical Drama",
+                    "Science Fiction",
+                    "Superhero"
+                ]
+            },
+            "time_diversity": {
+                "A": "Significant",
+                "B": "Significant",
+                "C": "Significant"
+            }
+        },
+        "most_diverse_list_reasoning": "List C demonstrates the most diversity. While all lists contain a variety of genres and release dates, List C's genre blend is more eclectic, showcasing a wider range of cinematic styles (neo-noir, historical drama, sci-fi, superhero) compared to the other lists.  Lists A and B have some overlaps in genre and tone.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 137,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of fantasy (Harry Potter), sci-fi action (Pitch Black, Riddick), dystopian (Hunger Games), superhero (Guardians of the Galaxy), and drama (American History X).  There's a blend of different tones and target audiences.",
+            "list_B_summary": "List B shows a similar blend to List A, including fantasy (Harry Potter), superhero (Guardians of the Galaxy), animated (Up), dystopian (Hunger Games), action (Kingsman), and sci-fi (Pitch Black).  The inclusion of 'Up' adds a family-friendly element.",
+            "list_C_summary": "List C offers a mix of thriller (Shutter Island), superhero (Iron Man 2), animated (Ice Age), drama (American History X), fantasy (Hobbit), and superhero/action (Deadpool). This list also has variety in tone and target audience, but potentially less in genre than List A or B."
+        },
+        "most_diverse_list_reasoning": "While all three lists exhibit diversity, List A stands out due to the broader spectrum of genres represented. It seamlessly blends fantasy, science fiction, action, drama, and dystopian elements, creating a more heterogeneous collection than the other two. List B is very similar, but the inclusion of an animated film makes it slightly less diverse in terms of core genre.  List C is strong but has more of a focus on action and superhero genres. Therefore, List A presents the most diverse range of film types.",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 138,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Bourne Supremacy, Saving Private Ryan), science fiction (Gravity, Jurassic Park), and fantasy (Harry Potter).  It spans a wider release date range (1993-2013).",
+            "list_B_summary": "List B features a blend of action/thriller (Limitless, Saving Private Ryan, Prisoners, Casino Royale) and drama (Good Will Hunting). The release dates are clustered more closely together than List A.",
+            "list_C_summary": "List C combines action/thriller (Bourne Identity, Casino Royale, Prisoners, Limitless) and fantasy (Harry Potter). The release dates are relatively close together, similar to List B.",
+            "genre_diversity": "List A shows more genre diversity with action, science fiction, and fantasy represented.  Lists B and C lean more heavily towards action and thriller subgenres.",
+            "temporal_diversity": "List A has a wider range of release years, indicating a broader temporal span.  Lists B and C have movie releases clustered within a tighter timeframe."
+        },
+        "most_diverse_list_reasoning": "List A exhibits greater diversity in terms of both genre and release date range.  It includes action, science fiction, and fantasy films, spanning a period of 20 years (1993-2013). Lists B and C, while having some variety, predominantly feature action and thriller films released within a smaller time window.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 136,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including fantasy (Harry Potter), animation (Up, WALL\u00b7E), drama (Spotlight), superhero (X-Men), and fantasy (Lord of the Rings).  There's a blend of family-friendly and more mature films.",
+            "list_B_summary": "List B is heavily weighted towards superhero and fantasy genres, with the Harry Potter franchise represented twice. There is a South Korean action thriller (Old Boy) and Underworld, a dark fantasy action horror film. This list is less diverse in genre than List A.",
+            "list_C_summary": "List C offers a more varied selection than List B, combining action (Old Boy), animation (WALL\u00b7E), comedy (Hangover), superhero (Batman Begins), fantasy (Lord of the Rings), and romantic comedy (Crazy, Stupid, Love). It demonstrates a good spread of genres and tones."
+        },
+        "most_diverse_list_reasoning": "List C stands out as the most diverse because it encompasses a wider range of genres and film styles.  While List A also has some variety, List C avoids the concentration on a single genre seen in List B (superhero/fantasy). The inclusion of comedy, romantic comedy, and action alongside animation and fantasy makes List C the most heterogeneous.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 139,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including gangster (Goodfellas), science fiction (The Fifth Element), action (Sherlock Holmes, Rise of the Planet of the Apes), thriller (Gravity), and comedy (Tropic Thunder).  There's a spread across decades, but not a huge range.",
+            "list_B_summary": "List B is a more diverse mix of genres, including comedy (Austin Powers), action (John Wick), war (Inglourious Basterds), fantasy (Big Fish), thriller (American Psycho, Shutter Island). The time range is also wider.",
+            "list_C_summary": "List C has a good mix of action (John Wick), mystery (Sherlock Holmes), thriller (Bridge of Spies), Sci-fi (The Fifth Element), and Sci-fi thriller (Ex Machina), comedy (Austin Powers).  It shows less diversity in terms of genre than List B, but has a similar time-range spread."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity. While all three lists contain a variety of genres, List B's selection offers a broader spectrum, including comedy, action, war, fantasy, and psychological thriller.  This wider range of genres, combined with its temporal spread, makes it more diverse than the other two lists.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 140,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including action-adventure (Mummy Returns, Star Wars), romance (Crazy, Stupid, Love., One Day), drama (Slumdog Millionaire, Last Samurai), spanning various years from 1999-2011.",
+            "list_B_summary": "List B contains action (Kill Bill, Star Trek), fantasy (Maleficent), drama (Last Samurai, Bucket List, Blind Side), and covers a time range from 2003-2014.",
+            "list_C_summary": "List C focuses mainly on romance and drama genres, with movies such as Safe Haven, Just Like Heaven, One Day, and also includes action (Kill Bill, This Means War), spanning the years 2003-2015.",
+            "genre_diversity": {
+                "A": "moderate",
+                "B": "moderate",
+                "C": "low"
+            },
+            "year_range": {
+                "A": "1999-2011",
+                "B": "2003-2014",
+                "C": "2003-2015"
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits more diverse genres, including action-adventure, romance, and drama, showcasing a wider range of themes and styles compared to List B and C.  While List B has some genre diversity, it's less varied than List A. List C is largely focused on romance and drama.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 145,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action-adventure (Pirates of the Caribbean), horror (Saw), comedy (50 First Dates, Shaun of the Dead), drama (American Beauty), and superhero (Deadpool) movies.  There's a range of years, but a concentration in the early 2000s. The genres are fairly diverse, but not exceptionally so.",
+            "list_B_summary": "List B presents a more balanced mix of genres. It includes animation (Up), drama (Social Network), action (Fury, Guardians of the Galaxy), and some more arthouse/cult films (Mulholland Drive, Donnie Darko).  The release dates are slightly more spread out.",
+            "list_C_summary": "List C shares some overlap with List A (American Beauty, Shaun of the Dead, Deadpool) but also includes superhero (Spider-Man, Deadpool), crime (Usual Suspects), and animation (Monsters Inc.).  The genres are reasonably mixed, but there's some repetition with List A.",
+            "key_differences": "The main differences lie in the balance of genres and the spread of release years. List A is somewhat clustered around the early 2000s with a more distinct genre separation.  List B has a more even spread of release years and a greater variety of genres. List C contains some overlap with List A, introducing elements that bridge the gap between List A and B, but without achieving the same diversity as List B."
+        },
+        "most_diverse_list_reasoning": "List B stands out as the most diverse because it presents the most balanced mix of genres and release years.  It includes animation, action, drama, and arthouse films, spanning a wider range of time periods than the other two lists.  Lists A and C share several films and have less of a range of genres or release dates.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 144,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of drama and thriller films, with a focus on heavier, more dramatic themes.  There's a slight time span from the early 1990s to the early 2000s.",
+            "list_B_summary": "List B offers the most genre variety, including thriller, crime drama, animation, and a more contemporary horror/thriller. The time range is broader than List A.",
+            "list_C_summary": "List C shares some titles with A and B, creating an overlap of dramatic and thriller films.  It also has a period piece (Braveheart) and a South Korean thriller (Old Boy), offering some genre variety, but less than List B.",
+            "key_differences": "The main differences lie in genre diversity and the time periods represented. List B stands out with its inclusion of animation (Finding Nemo) and a horror/thriller (Get Out), which significantly broadens its genre representation compared to the other lists.  List A is more narrowly focused, while List C falls somewhere in between."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the greatest diversity. It includes a wider range of genres than Lists A and C, incorporating animation (Finding Nemo), horror (Get Out), crime drama (Goodfellas), and thriller (Old Boy and Bridge of Spies). This variety makes it the most diverse.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 146,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including romance (Titanic), animation (Ratatouille), heist (Ocean's Eleven), horror (Get Out), sci-fi (Star Wars), and war (Dunkirk).  It shows some variety but lacks a strong unifying theme.",
+            "list_B_summary": "List B has a more consistent theme with some overlap with List A. It includes animation (Ratatouille, Finding Nemo), romance (Titanic), and sci-fi (Star Wars). The addition of School of Rock adds a musical comedy element.",
+            "list_C_summary": "List C is similar to List B in terms of genre diversity, but it introduces more action and fantasy elements with 300 and Shrek 2. It also shares some titles with List B and List A."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it spans a wider range of genres, including romance, animation, heist, horror, sci-fi, and war. While Lists B and C show some genre variety, they tend to cluster around animation, sci-fi, and action more closely than List A.  List A's less cohesive nature, while potentially a weakness for thematic unity, actually strengthens its diversity across genres.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 147,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (John Wick, Mad Max, Indiana Jones), fantasy (Harry Potter), and war (Hurt Locker) genres.  There's a significant time range in the release dates.",
+            "list_B_summary": "List B features a blend of action (Saving Private Ryan, John Wick, Logan), sci-fi (Interstellar), and animation (Toy Story). The time range is relatively broad.",
+            "list_C_summary": "List C showcases a combination of action (Mad Max, Indiana Jones), superhero (Deadpool), and drama (Pulp Fiction, Truman Show). The release years span several decades.",
+            "key_differences": "The main differences lie in the genre distributions and the emphasis on specific film styles. List A includes a war film, while List B features animation. List C has a clear superhero entry (Deadpool)."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it presents a wider range of genres, including action, fantasy, war, and adventure. The inclusion of 'The Hurt Locker' provides a unique stylistic element compared to the other lists.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 150,
+        "comparison": {
+            "list_summaries": {
+                "A": "List A contains a mix of drama and science fiction films, with a focus on thought-provoking themes and character studies.",
+                "B": "List B is identical to List A, simply with a different order of films.",
+                "C": "List C offers a more diverse range of genres, including animation, science fiction, and comedy-drama."
+            },
+            "genre_diversity": {
+                "A": "Lower genre diversity, mostly drama and science fiction.",
+                "B": "Lower genre diversity, mostly drama and science fiction.",
+                "C": "Higher genre diversity, encompassing animation, science fiction, and dramedy."
+            },
+            "thematic_diversity": {
+                "A": "Thematic focus on personal growth, societal issues, and existential questions.",
+                "B": "Thematic focus on personal growth, societal issues, and existential questions.",
+                "C": "Thematic variety including themes of environmentalism, social connection, and family."
+            }
+        },
+        "most_diverse_list_reasoning": "List C stands out due to its inclusion of animation (Shrek, WALL-E), alongside other diverse genres such as dramedy (Lost in Translation) and sports drama (Blind Side, The).  This combination provides a broader spectrum of film styles and target audiences, compared to the drama- and science fiction-focused Lists A and B. Lists A and B are virtually identical.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 148,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres, including biographical drama (Dallas Buyers Club), fantasy (Star Wars), adventure (Cast Away), and documentary (Super Size Me).  There's a significant time range across the movies.",
+            "list_B_summary": "List B presents a more contemporary selection with romance (Twilight, Fifty Shades), crime (Reservoir Dogs), thriller (Limitless), and romantic comedy (Silver Linings Playbook). The time range is narrower compared to List A.",
+            "list_C_summary": "List C has a blend of action (Thor, Black Hawk Down), romance (Fifty Shades), comedy (Ferris Bueller's Day Off), and crime (Reservoir Dogs).  Similar to List B, there is a significant representation of more modern films.",
+            "genre_diversity": "List A shows more genre diversity, including a documentary. Lists B and C share some overlap (Fifty Shades, Reservoir Dogs), and are more focused on romance, action, and crime genres.",
+            "time_range_diversity": "List A spans a wider time range (2000-2013) showing more diversity in terms of cinematic styles across different eras. Lists B and C are more concentrated in recent decades."
+        },
+        "most_diverse_list_reasoning": "List A exhibits greater diversity because of its broader range of genres, including a documentary, and a wider time span showcasing the evolution of filmmaking styles.  Lists B and C, while having a variety of genres, demonstrate less diversity in their genre selection and a more narrow time range.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 152,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including fantasy (Harry Potter), action (Die Hard, Saving Private Ryan), documentary (Super Size Me), animation (Monsters University), and thriller (The Butterfly Effect).  The release years span from 1988 to 2013.",
+            "list_B_summary": "List B shows more variety in terms of genre and tone, encompassing science fiction (Source Code, The Fifth Element), fantasy (Beetlejuice), period drama (Gangs of New York), comedy-drama (Rushmore), and action (Die Hard). The release dates range from 1988 to 2011.",
+            "list_C_summary": "List C presents a blend of genres, including comedy (The Intern), drama (Rushmore, Shutter Island), fantasy (Harry Potter), science fiction (The Fifth Element, Gravity). The release years are between 1997 and 2015."
+        },
+        "most_diverse_list_reasoning": "List B stands out as the most diverse because it successfully combines various genres (science fiction, fantasy, period drama, comedy-drama, and action) with varying tones and styles.  While Lists A and C have a mix of genres, List B exhibits a wider range of thematic approaches and film styles, making it the most eclectic and diverse.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 151,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including science fiction, action, war drama, sports drama, and animation.  The release dates span several decades.",
+            "list_B_summary": "List B is nearly identical to List A, with the same movies but in a slightly different order. ",
+            "list_C_summary": "List C features a more diverse range of genres including biographical crime, action, biographical drama, historical war, and drama.  The films also represent a broader range of styles and tones.",
+            "genre_diversity": {
+                "A": [
+                    "Science Fiction",
+                    "Action",
+                    "War Drama",
+                    "Sports Drama",
+                    "Animation"
+                ],
+                "B": [
+                    "Science Fiction",
+                    "Action",
+                    "War Drama",
+                    "Sports Drama",
+                    "Animation"
+                ],
+                "C": [
+                    "Biographical Crime",
+                    "Action",
+                    "Biographical Drama",
+                    "Historical War",
+                    "Drama"
+                ]
+            },
+            "release_date_range": {
+                "A": "1985-2016",
+                "B": "1985-2016",
+                "C": "1988-2010"
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits greater diversity in both genre and the stylistic approach of the films. While Lists A and B are nearly identical, List C offers a wider range of film types and tones, making it the most diverse.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 154,
+        "comparison": {
+            "list_A_summary": "List A contains dramas and thrillers, focusing on biographical and character-driven narratives.",
+            "list_B_summary": "List B presents a mix of genres, including drama, thriller, animation, and biographical pieces.",
+            "list_C_summary": "List C shows a blend of biographical drama, animation, superhero films, and tech-related narratives. ",
+            "genre_diversity": {
+                "A": "Low",
+                "B": "Medium",
+                "C": "Medium-High"
+            },
+            "themes": {
+                "A": [
+                    "Biographical",
+                    "Drama",
+                    "Thriller"
+                ],
+                "B": [
+                    "Biographical",
+                    "Drama",
+                    "Thriller",
+                    "Animation",
+                    "Comedy"
+                ],
+                "C": [
+                    "Biographical",
+                    "Drama",
+                    "Animation",
+                    "Superhero",
+                    "Tech"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits more thematic and genre variety compared to List A and List B, encompassing biographical dramas, animation, superhero movies, and tech-focused narratives. This variety in themes and genre types makes it the most diverse.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 155,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of fantasy (Lord of the Rings, Harry Potter), animation (Monsters, Inc.), and horror/action (I Am Legend, Zombieland).  It shows some diversity but leans towards fantasy and action.",
+            "list_B_summary": "List B offers a blend of crime (Catch Me If You Can, Pulp Fiction), fantasy (Shrek 2), and thriller (Prestige).  It demonstrates a wider genre range than List A but could benefit from additional animation or action films.",
+            "list_C_summary": "List C includes animation (Incredibles, Shrek 2), action (Pirates of the Caribbean, Fury), and a foreign-language drama (Intouchables).  This provides a good balance across different genres and film styles."
+        },
+        "most_diverse_list_reasoning": "List C stands out due to its balanced representation of animation, action, and a foreign-language drama.  Lists A and B, while having some variety, focus more heavily on specific genres, leading to less diversity.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 157,
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including drama, crime, animation, and romance, spanning different decades.  There's a mix of critically acclaimed films and more mainstream movies.",
+            "list_B_summary": "List B leans towards action and drama, with a few exceptions. The films are mostly from the 2000s and 2010s.",
+            "list_C_summary": "List C has an action/adventure theme with a couple of exceptions. The time range is similar to List B.",
+            "genre_diversity": {
+                "A": "High",
+                "B": "Medium",
+                "C": "Low"
+            },
+            "decade_diversity": {
+                "A": "High",
+                "B": "Medium",
+                "C": "Medium"
+            },
+            "overlap": {
+                "A_B": [
+                    "A Beautiful Mind"
+                ],
+                "A_C": [
+                    "10 Things I Hate About You",
+                    "Three Billboards Outside Ebbing, Missouri",
+                    "Guardians of the Galaxy 2"
+                ],
+                "B_C": [
+                    "Taken",
+                    "True Lies"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in terms of genre and the decades the movies were released. It includes animation (A Bug's Life), drama (Slumdog Millionaire, A Beautiful Mind), crime (Silence of the Lambs, Three Billboards Outside Ebbing, Missouri), and romance (10 Things I Hate About You).  The release dates also span a wider range.  Lists B and C are more homogenous in genre and release years.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 153,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Bourne Identity, Catch Me If You Can, Iron Man 2), comedy (Along Came Polly), a western (Django Unchained), and a children's movie (Charlie and the Chocolate Factory).  The genres are varied but not exceptionally wide-ranging.",
+            "list_B_summary": "List B presents a blend of action (Untitled Spider-Man Reboot, Iron Man 2), crime (21, Focus), and animation (Ratatouille).  The inclusion of a superhero movie adds a specific subgenre. The range is slightly broader than List A.",
+            "list_C_summary": "List C showcases the most diverse range of genres and styles. It includes historical drama (Braveheart), science fiction (Aliens), animation (Ratatouille), a thriller (Captain Phillips), and a children's movie (Charlie and the Chocolate Factory).  The time periods represented are also quite varied. ",
+            "key_differences": "The main differences lie in the genre diversity and the span of film styles. List C exhibits the clearest diversity in both aspects, whereas List A is the most homogeneous."
+        },
+        "most_diverse_list_reasoning": "List C stands out due to its inclusion of movies spanning various genres, including historical drama, science fiction, animation, thriller, and children's film. This variety, combined with the differences in styles and time periods represented, marks it as the most diverse.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 156,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including drama (The King's Speech, The Social Network), fantasy (Lord of the Rings), and animation (Finding Dory), with a sci-fi comedy (Back to the Future Part II) thrown in.  The release dates span from 1989 to 2016.",
+            "list_B_summary": "List B shows more variety in terms of international cinema (A Chinese Odyssey) and a broader range of action and drama. The films cover a wider time frame, from 1995 to 2017.",
+            "list_C_summary": "List C is dominated by dramas and thrillers (Shutter Island, Enemy of the State, Social Network), but also has a comedy (40 Year Old Virgin) and a more international flavour with Slumdog Millionaire. The time frame is more concentrated from 1998 to 2010."
+        },
+        "most_diverse_list_reasoning": "List B stands out due to its inclusion of a film from Hong Kong (A Chinese Odyssey Part One), showcasing a wider geographical and cultural representation than the other lists.  The genre range, while still predominantly action/drama, is broader than List A's more concentrated grouping or the more thriller-heavy List C.  The wider release date range further supports its diversity.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 159,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, sci-fi, crime, and drama, spanning various decades.  There's a superhero movie, a cerebral action film, and some more character-driven pieces.",
+            "list_B_summary": "List B is a blend of animation, action, crime, and adventure films from the 90s and 2000s. It includes a family-friendly animated film, a critically acclaimed crime drama, and some classic adventure titles.",
+            "list_C_summary": "List C contains a similar mix of genres to List B but with a more pronounced focus on action and adventure.  It has a strong representation of films from the early 2000s and includes a high-profile science fiction film, Avatar."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it features the broadest range of genres and film styles, including more character-driven dramas compared to Lists B and C, which leans more heavily towards action and adventure films.  While Lists B and C have some genre diversity, List A better balances genres and feels less homogenous in its selection.",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 158,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including psychological horror (Hereditary), biographical drama (A Beautiful Mind), psychological thriller (The Machinist), fantasy (Harry Potter), dark comedy (The Interview), and neo-noir action (Oldboy).  The release dates span from 2001 to 2014.",
+            "list_B_summary": "List B offers a blend of action, crime, and comedy genres.  It includes South Korean neo-noir (Oldboy), musical comedy (School of Rock), war (Inglourious Basterds), crime (Pulp Fiction), superhero (X2), and animated (Inside Out). Release dates are between 1994 and 2015.",
+            "list_C_summary": "List C presents a combination of psychological horror (Hereditary), biographical drama (A Beautiful Mind), action-adventure (Pirates of the Caribbean), dark comedy (The Interview), superhero (X2), and action thriller (Bourne Supremacy). The release dates range from 2001 to 2018."
+        },
+        "most_diverse_list_reasoning": "List B stands out as the most diverse because it features the widest range of genres and animation. The inclusion of animation (Inside Out) alongside diverse genres like neo-noir (Oldboy), war (Inglourious Basterds), crime (Pulp Fiction), and superhero (X2) demonstrates a broader spectrum of cinematic styles and storytelling techniques compared to lists A and C.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 160,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including romance (Titanic), sci-fi (Guardians of the Galaxy, WALL\u00b7E), war (Dunkirk), drama (A Beautiful Mind), and crime (Casino).",
+            "list_B_summary": "List B offers a variety of genres: romance (Titanic), teen comedy (Easy A), superhero (Logan), sci-fi action (Starship Troopers), romantic drama (Eternal Sunshine of the Spotless Mind), and war (The Hurt Locker).",
+            "list_C_summary": "List C's genres include superhero (Logan), teen comedy (Easy A), drama (A Beautiful Mind), animation (WALL\u00b7E), crime (Casino), and action (The Bourne Supremacy).  There's an overlap with both List A and B.",
+            "key_differences": "List A includes a more classic romance and a prominent war film. List B features a stronger sci-fi element. List C has a blend of genres similar to A and B, but lacks the distinct war film of A and the pure sci-fi of B.",
+            "genre_diversity": "All lists show a decent spread of genres, but the specific mix differs.  List A has more distinct categories and an iconic romance."
+        },
+        "most_diverse_list_reasoning": "While all three lists exhibit diversity in genre, List A stands out because of its inclusion of a classic romance (Titanic), a visually distinct animated film (WALL\u00b7E), and a war film (Dunkirk), creating a broader spectrum of cinematic styles and experiences.  Lists B and C share several movies, making List A the most unique and diverse overall.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 163,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of crime thrillers (Minority Report, Zodiac, Nightcrawler), a biographical crime drama (Wolf of Wall Street), and a drama (Slumdog Millionaire).  The common thread is strong narratives and a focus on character studies.",
+            "list_B_summary": "List B offers a blend of thriller (Shutter Island, It Follows), action (Terminator 2), comedy (Hangover), and mystery.  While stylistically diverse, it leans towards the thriller/suspense genre.",
+            "list_C_summary": "List C presents a combination of science fiction (Minority Report, Oblivion), crime thriller (Zodiac), horror (It Follows), and action-comedy (Hot Fuzz).  It shows the most genre diversity, although many films share a common thriller element."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity.  While List A has a thematic coherence, and List B is somewhat genre-focused, List C successfully mixes genres (sci-fi, thriller, horror, action-comedy) without losing a certain level of narrative cohesion, as several films can be characterized as thrillers. This combination makes it the most varied collection.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 165,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including animation (How to Train Your Dragon 2), war (Dunkirk), historical drama (Gladiator), crime (The Gentlemen), and biographical drama (The Imitation Game).  It shows some variety but lacks a strong unifying theme.",
+            "list_B_summary": "List B is primarily focused on animated films and action-adventure movies, with a bit of historical drama thrown in. The unifying theme is arguably adventure and action.  It shows less diversity in terms of genres.",
+            "list_C_summary": "List C presents a blend of superhero (Dark Knight), sci-fi (The Martian), animation (How to Train Your Dragon 2), drama (Whiplash), and romance/disaster (Titanic).  It demonstrates a diverse selection of genres and tones but has an uneven representation of genre compared to A.",
+            "genre_diversity": {
+                "A": [
+                    "Animation",
+                    "War",
+                    "Historical Drama",
+                    "Crime",
+                    "Biographical Drama"
+                ],
+                "B": [
+                    "Animation",
+                    "Action-Adventure",
+                    "Historical Drama"
+                ],
+                "C": [
+                    "Superhero",
+                    "Sci-Fi",
+                    "Animation",
+                    "Drama",
+                    "Romance/Disaster"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List C is considered the most diverse because, while List A has a wider range of genres, List C has a more even distribution of genres and types of movies.  List B is the least diverse, mainly focused on adventure.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 166,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, drama, and thriller movies, spanning different decades.  It features popular titles such as 'The Dark Knight' and 'Saving Private Ryan'.",
+            "list_B_summary": "List B shows a blend of fantasy (Harry Potter series), drama ('Good Will Hunting'), action ('Pirates of the Caribbean'), and crime ('Catch Me If You Can'). It also includes some newer titles, such as 'Inception' and 'Easy A'.",
+            "list_C_summary": "List C exhibits variety with animation ('Up'), action ('Pirates of the Caribbean'), drama ('Saving Private Ryan'), and science fiction ('Interstellar').  The inclusion of 'Fight Club' adds a unique element.",
+            "key_differences": "The main differences lie in the genre distribution and the time span of the movies. List A has a stronger focus on action and drama from the late 1990s to the 2010s. List B blends fantasy with other genres, while List C shows a broader spectrum including animation and science fiction."
+        },
+        "most_diverse_list_reasoning": "List C stands out as the most diverse. While all lists include some variety, List C has the widest range of genres, including animation ('Up'), science fiction ('Interstellar'), action-adventure ('Pirates of the Caribbean'), war drama ('Saving Private Ryan'), and dark comedy/drama ('Fight Club'). This combination makes it the most heterogeneous list.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 164,
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including superhero, stop-motion animation, fantasy, historical drama, and romantic drama.  The release dates span several decades.",
+            "list_B_summary": "List B is more focused on action and thriller genres, with a couple of outliers (Ocean's Twelve being a heist film). The release dates are more concentrated within a timeframe.",
+            "list_C_summary": "List C blends action, animation, historical drama, and fantasy.  Similar to List A, it has a wider range of release dates."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it encompasses a broader spectrum of genres and has films spanning a larger time frame.  While List C has some genre diversity, List A shows a more consistent variety in its selections.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 168,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including historical drama (Schindler's List), animation (Aladdin, Toy Story), superhero (Avengers), and dystopian thriller (V for Vendetta).  The movies span a range of years from the early 1990s to the 2000s.",
+            "list_B_summary": "List B shows variety with romantic comedy-drama (Silver Linings Playbook), science fiction (Rogue One), horror (Get Out), animation (Pocahontas), and thriller (Now You See Me). The release dates are spread across a similar timeframe to List A.",
+            "list_C_summary": "List C features superhero (Guardians of the Galaxy, Wonder Woman), historical drama (Schindler's List), horror (Get Out), and romantic comedy-drama (Silver Linings Playbook).  Similar to the other lists, it presents a range of years and genres."
+        },
+        "most_diverse_list_reasoning": "While all lists exhibit some genre diversity, List B stands out due to its inclusion of a horror film (Get Out), which is a distinct genre not represented in the other lists.  The blend of genres in List B provides a more varied cinematic experience. Although List A and List C have some overlap, List B offers a more unique and broader spectrum of film types.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 167,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, superhero, and drama genres.  There is a spread of release dates.",
+            "list_B_summary": "List B features a blend of comedy, action, and animation, with a focus on slightly more mature themes compared to list C.",
+            "list_C_summary": "List C leans towards animation and action-adventure, with a couple of crossover movies from other lists.",
+            "key_differences": "The main differences lie in genre distribution and the age appropriateness of films. List A has the widest range of release years. ",
+            "overlap": "There is some overlap between the lists, specifically 'Rush Hour 2' and 'The Mummy' are in both List A and List C, and 'Spider-Man' appears in both List A and List B."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it encompasses a broader range of genres (action, drama, superhero) and has the most significant spread across release years, indicating variety in filmmaking styles and eras.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 171,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including thriller (Girl with the Dragon Tattoo), romantic comedy (Holiday, Juno), action (Matrix Revolutions), drama (Beautiful Mind), horror (Cabin in the Woods), and sci-fi (Edge of Tomorrow).  There's a range of years represented.",
+            "list_B_summary": "List B has a similar mix of genres to List A, but with more of a focus on comedy and sci-fi/adventure (Easy A, The Jungle Book, Passengers, Here's the Plan). It includes older films (Groundhog Day) as well as newer ones.",
+            "list_C_summary": "List C presents a blend of genres including teen comedy (Easy A), sci-fi/adventure (Passengers, The Jungle Book), fantasy (Harry Potter), action/fantasy (Constantine), and drama (Beautiful Mind). The release dates span several years.",
+            "key_differences": "The main difference lies in the genre emphasis. List A has a more balanced representation of different genres. List B leans towards comedy and sci-fi/adventure, while List C displays a stronger presence of fantasy and sci-fi/adventure elements.  List A also shows a wider range of years present"
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it offers a wider range of genres and has a better distribution of release years, showcasing a more balanced selection of films.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 170,
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including war, superhero, drama, and animation, spanning different decades.",
+            "list_B_summary": "List B has a similar mix of genres to List A, with action, animation, and comedy represented, and also movies from different years.",
+            "list_C_summary": "List C also contains a diverse range of genres including action, superhero, drama, and animation, but with a slightly more focused selection of films than List A."
+        },
+        "most_diverse_list_reasoning": "While all three lists show a variety of genres and release years, List A stands out due to its broader representation of themes and styles. It includes a war film, superhero movie, drama, animated film, biographical drama, and an adventure film, showing a more extensive range than the other lists.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 172,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, animation, and drama movies spanning different decades.  There's a noticeable presence of animation with 'The Croods', 'Frozen', and 'Kubo and the Two Strings', alongside action films like 'Snatch' and '88 Minutes', and a western with 'Maverick'.",
+            "list_B_summary": "List B showcases a variety of genres, including action ('Deadpool', '13th Warrior'), thriller ('Law Abiding Citizen', 'Shutter Island'), romantic comedy ('Kate & Leopold'), and crime ('Pulp Fiction'). The release years are also spread across several decades.",
+            "list_C_summary": "List C presents a blend of action, thriller, and animation, showing some overlap with List A.  'The Croods', '88 Minutes', and 'Maverick' are shared with List A, indicating some similar genre choices. It includes a more diverse representation of genres than List A, containing animation, action, thriller and a touch of other genres, and a smaller number of films overall.",
+            "key_differences": "The primary difference lies in the genre distribution and the inclusion of animated movies.  List A has a more significant animated movie section compared to Lists B and C. List B has a better spread of genre than List A but has less variety than List C. List C is the most balanced representation in terms of genre and animation, and it does not contain a disproportionate amount of movies from the same genre.",
+            "genre_analysis": {
+                "List_A": [
+                    "Action",
+                    "Animation",
+                    "Drama",
+                    "Western"
+                ],
+                "List_B": [
+                    "Action",
+                    "Thriller",
+                    "Romantic Comedy",
+                    "Crime"
+                ],
+                "List_C": [
+                    "Action",
+                    "Thriller",
+                    "Animation",
+                    "Other"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While List A includes animation, it's heavily weighted towards action and drama. List B has a broader genre spread but still lacks the balance that List C displays.  List C effectively blends genres while maintaining a balanced representation without any one genre disproportionately dominating.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 173,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of fantasy (Harry Potter, Narnia), thriller (Shutter Island), action (John Carter, 22 Jump Street), spanning different years. ",
+            "list_B_summary": "List B contains superhero (Dark Knight, Iron Man 2), fantasy (Harry Potter), animation (Shrek), and Western (Django Unchained), showing variety in genre and tone.",
+            "list_C_summary": "List C combines fantasy (Harry Potter, Narnia), drama (Slumdog Millionaire), animation (Incredibles, Monsters Inc), and Western (Django Unchained), offering a diverse range of genres and animation styles. ",
+            "key_differences": "The main difference lies in the genre distribution and inclusion of animation. List B has a superhero theme, while List C blends animation with other genres more effectively. List A is less focused, blending genres without a strong connecting theme."
+        },
+        "most_diverse_list_reasoning": "List C stands out due to its balanced mix of genres, including animation, fantasy, drama, and Western.  The inclusion of animated films alongside more serious dramas like Slumdog Millionaire and action-packed Westerns like Django Unchained creates the most diverse range of styles and tones compared to the other lists. List B is also diverse, but the presence of two superhero films gives it less variety than List C.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 175,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of crime, drama, and action movies, spanning from the 1990s to the 2010s.  There's a blend of critically acclaimed films and more commercially successful ones.",
+            "list_B_summary": "List B shows a variety of genres including crime, drama, historical and fantasy. The time range is broader, from the 1990s to the 2010s.  It includes both popular and critically acclaimed movies.",
+            "list_C_summary": "List C is quite similar to List A, focusing mainly on critically acclaimed dramas and thrillers from the 1990s and 2000s. It has a slightly narrower genre focus than List B.",
+            "key_differences": "The main difference lies in the range of genres. List B is more diverse in terms of genre, including a fantasy epic (Lord of the Rings), while List A and C are more focused on crime and drama.  List B also includes a wider time span."
+        },
+        "most_diverse_list_reasoning": "List B stands out due to its inclusion of the Lord of the Rings, a high fantasy film, which significantly broadens the genre representation compared to Lists A and C. The inclusion of films spanning a wider range of years also adds to its diversity.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 177,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres, including drama (Schindler's List, Cast Away), comedy (Ted, Hangover Part III), action (Iron Man 2), and science fiction (Source Code).  The release dates span from 1993 to 2013.",
+            "list_B_summary": "List B shows more variety in terms of release years, ranging from 1991 to 2016. Genres include drama (Schindler's List, Argo), action-adventure (Pirates of the Caribbean, Terminator 2), and fantasy (Doctor Strange).  The inclusion of historical drama (Argo) adds another layer of diversity.",
+            "list_C_summary": "List C features a blend of action-comedy (22 Jump Street, Hangover Part III), science fiction (Source Code), and action (Sherlock Holmes). The release years are clustered between 2011 and 2016.",
+            "key_differences": "The main differences lie in the genre distribution and the span of release years. List A has a more balanced representation of genres, whereas List B stands out for the wider range of release dates and inclusion of a historical drama.  List C shows more focus on a specific era and related action and comedic genres."
+        },
+        "most_diverse_list_reasoning": "List B is considered the most diverse because it exhibits a broader range of release years (1991-2016), encompassing different eras of filmmaking.  It also includes a wider variety of genres, such as historical drama (Argo), which adds a significant layer of thematic diversity that is absent from the other lists.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 178,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, comedy, and thriller genres spanning from 1994 to 2012.  There's a blend of critically acclaimed and commercially successful films, with a range of tones and styles.",
+            "list_B_summary": "List B features a combination of action, adventure, animation, and crime.  The release dates span from 2003 to 2013, slightly more concentrated than List A. It shares one movie with List A (Shrek 2).",
+            "list_C_summary": "List C shows a mix of action, superhero, and sci-fi films. Release dates are spread from 1991 to 2018, showcasing a longer time span and a more consistent theme than lists A and B.",
+            "genre_diversity": "List A has the most varied genres. List B has some genre overlap with A and C. List C has a more focused genre selection.",
+            "time_span_diversity": "List C spans the longest period, indicating a larger variety in filmmaking styles and trends. List A and B have more concentrated release windows."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the greatest diversity due to its wider range of genres (action, comedy, thriller) and styles, while also encompassing a significant time span. Although List C has a longer time range, its genre selection is more consistent, making List A more diverse overall.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 179,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animation, adventure, and comedy films spanning several decades.  The common theme appears to be lighthearted and family-friendly.",
+            "list_B_summary": "List B presents a more diverse range of genres, including animation, sci-fi, dramedy, and adventure. It has a broader tonal range than List A.",
+            "list_C_summary": "List C showcases a combination of animation, adventure, sci-fi, and drama with a focus on visually stimulating and critically acclaimed films. It is more stylistically diverse than List A."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity. While List C has stylistic diversity, List B offers a wider range of genres and tones, including animation (Inside Out), science fiction (I, Robot), dramedy (The Grand Budapest Hotel), and biographical drama (A Beautiful Mind). This variety makes it stand out compared to the more homogenous selections in Lists A and C.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 180,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of genres including sci-fi (Annihilation), mystery (Clue), animation (Zootopia), crime (Fargo), and horror (A Quiet Place).  There's a balance between newer and older films.",
+            "list_B_summary": "List B leans towards action and adventure, with a historical epic (Gladiator), a superhero film (X-Men), and horror elements (Cabin in the Woods). It also includes a war film (Pearl Harbor) and a classic crime film (Fargo). The films are mostly from the 2000s and later.",
+            "list_C_summary": "List C presents a blend of action (John Wick, Transporter), sci-fi (Aliens), animation (Zootopia), and more lighthearted animation (Shrek 2). The release dates span a wider range than List B, but it features fewer genre variations compared to List A."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in terms of genre. It includes science fiction, mystery, animation, crime, and horror, offering a broader range of cinematic experiences than the other lists. While List C has some genre variety, List A's selection is more comprehensive and less predictable.",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 181,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Captain America: Civil War, Furious 7), comedy (Horrible Bosses), and psychological thriller (The Butterfly Effect, The Terminal) genres.  There's a range of release years, but no clear dominant theme.",
+            "list_B_summary": "List B shows more variety in animation styles, with both Pixar and other animation studios represented.  Genres include animation (Ice Age, Monsters University, WALL\u00b7E), drama (Call Me by Your Name, The Blind Side), and action (V for Vendetta). The release dates are spread across a wider range.",
+            "list_C_summary": "List C has a stronger overlap with List A, including Inside Out and Furious 7.  It adds elements of horror (Saw) and superhero action (Avengers: Infinity War). The range of genres and years is slightly less diverse than List B."
+        },
+        "most_diverse_list_reasoning": "List B stands out due to its broader representation of genres and animation styles. It includes animated features alongside dramatic and action films, spanning a wider range of release years and tones.  Lists A and C show some diversity, but their genre and thematic overlaps limit their overall range compared to List B.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 182,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Die Hard, Snatch, Logan Lucky), comedy (Napoleon Dynamite, Good Morning, Vietnam), and drama (Royal Tenenbaums), with one fantasy film (Harry Potter).  The films span several decades.",
+            "list_B_summary": "List B shares some overlap with List A (Die Hard, Napoleon Dynamite, Good Morning, Vietnam), but also includes more teen-focused films (The Spectacular Now, Booksmart) and an animated film (Toy Story 3). The range of years is similar to List A.",
+            "list_C_summary": "List C has a blend of genres similar to List A and B, with action (Snatch), comedy (Booksmart), drama (The Edge of Seventeen), and a fantasy element (Harry Potter).  It also includes films representing diverse cultural backgrounds (Crazy Rich Asians) and different filmmaking styles (The Hudsucker Proxy). The time range of films is also across several decades."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While Lists A and B have some overlapping films and genres, List C offers a broader spectrum of film styles, cultural representation (Crazy Rich Asians), and a more balanced mix of genres without heavy weighting towards any specific genre. The inclusion of The Hudsucker Proxy adds a unique element not found in the other lists.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 184,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres: animation (Monsters University), dramedy (Intouchables, Silver Linings Playbook), and action (John Wick).  It shows some variety but isn't particularly broad.",
+            "list_B_summary": "List B presents a more classic Hollywood feel, spanning drama (Gladiator, American Beauty), crime (Catch Me If You Can), and musical drama (Whiplash). The selection is cohesive but less diverse in terms of genre and tone.",
+            "list_C_summary": "List C offers a blend of animation (Monsters University), romantic comedy (Pretty Woman), action-comedy (Scott Pilgrim vs. the World), and historical drama (Gladiator). This list displays a wider range of genres and tones than A or B."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While List A has some variety, it's less broad. List B is more cohesive but less diverse in genre and tone. List C successfully blends animation, romantic comedy, action-comedy, and historical drama, demonstrating a wider range of film styles and target audiences.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 183,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animation (Up), documentary (Bowling for Columbine), action (Iron Man), and thriller (The Fugitive) genres, along with a more recent South Korean film (Okja).",
+            "list_B_summary": "List B presents a blend of animation (Akira, Your Name.), thriller (The Fugitive), and horror (The Cabin in the Woods), including a South Korean film (Okja).  It features a wider range of animation styles compared to List A.",
+            "list_C_summary": "List C shows a mix of animation (Akira), action (Iron Man), drama (Boyhood), and comedy (Moonrise Kingdom) with a horror element (The Cabin in the Woods)."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity because it includes a broader range of animation styles, with both classic anime (Akira) and a more modern, visually distinct anime film (Your Name.).  The inclusion of horror, thriller, and animation creates a more varied selection than the other lists.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 185,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres, including science fiction (Back to the Future), historical drama (King's Speech), action thriller (Bourne Supremacy), and drama (Trainspotting).  The time span of the movies is relatively large (1985-2010).",
+            "list_B_summary": "List B is more focused on adventure and animation.  It includes animated films (Up, WALL-E) and a survival thriller (127 Hours). The time span is smaller than List A (2004-2010).",
+            "list_C_summary": "List C shows a blend of genres including adventure, comedy, and fantasy with a more recent time frame (2008-2016). The movies in this list seem to share a common theme of quirky characters and whimsical storytelling. ",
+            "genre_diversity": "List A shows more genre variety than the other lists.",
+            "time_span_diversity": "List A has movies spanning the largest time range.",
+            "overall_diversity": "List A and List C each offer a good mix of genres and styles; however List A covers a broader timespan."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the greatest diversity due to its wider range of genres and release dates. While List C offers a diverse range of genres, the time span is narrower, and the visual style seems more homogenous. List B is the least diverse, focusing primarily on adventure and animation.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 188,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animation (Monsters, Inc.), neo-noir (Sin City), and musical animation (Anastasia).",
+            "list_B_summary": "List B includes animation (Aladdin), historical drama (The Imitation Game), and survival drama (Cast Away).",
+            "list_C_summary": "List C features animation (Monsters, Inc.), neo-noir (Sin City), and action thriller (Bourne Ultimatum).",
+            "genre_diversity": {
+                "A": [
+                    "Animation",
+                    "Neo-Noir",
+                    "Musical Animation"
+                ],
+                "B": [
+                    "Animation",
+                    "Historical Drama",
+                    "Survival Drama"
+                ],
+                "C": [
+                    "Animation",
+                    "Neo-Noir",
+                    "Action Thriller"
+                ]
+            },
+            "visual_themes": {
+                "A": [
+                    "Varied animation styles, dark tones, bright colors"
+                ],
+                "B": [
+                    "Live action, period setting, isolated island setting"
+                ],
+                "C": [
+                    "Animation, dark tones, realistic action sequences"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity because it encompasses animation, historical drama, and survival drama.  These genres offer vastly different settings, themes, and tones, resulting in the most varied cinematic experiences.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 187,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action (Bourne Supremacy), psychological thriller (Donnie Darko), science fiction (Ex Machina), and drama (Three Billboards).  It shows some variety but isn't strongly themed.",
+            "list_B_summary": "List B leans towards action and adventure, with elements of thriller (Donnie Darko). The inclusion of Ocean's Eleven adds a heist element. It's more cohesive thematically than List A but less diverse.",
+            "list_C_summary": "List C offers a blend of genres, including crime (Catch Me If You Can), comedy-drama (Juno), musical drama (Whiplash), action (Die Hard), and romantic comedy-drama (Silver Linings Playbook). This list demonstrates significant genre diversity.",
+            "key_differences": "The main difference lies in genre variety. List A shows some variety, List B is more focused, and List C has the most diverse range of genres and film styles."
+        },
+        "most_diverse_list_reasoning": "List C stands out due to its inclusion of diverse genres.  It features crime, comedy-drama, musical drama, action, and romantic comedy-drama, showcasing a wider range of cinematic experiences than the other lists.  Lists A and B have more focused thematic elements.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 186,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, superhero, and drama movies.  There's a blend of animation (Megamind) and live-action, with a range of tones from lighthearted (Scott Pilgrim) to serious (Gran Torino).",
+            "list_B_summary": "List B features a combination of animation (Monsters University, WALL-E, Ratatouille), drama (Zodiac), and superhero elements (Avengers). There's a more family-friendly feel compared to List A.",
+            "list_C_summary": "List C has a mix of animation (Ice Age, potentially Megamind depending on interpretation), drama (Dead Poets Society, potentially Zodiac), and fantasy (Harry Potter).  The inclusion of Pineapple Express adds a comedic element.",
+            "genre_diversity": {
+                "A": [
+                    "Action",
+                    "Superhero",
+                    "Drama",
+                    "Animation",
+                    "Comedy"
+                ],
+                "B": [
+                    "Animation",
+                    "Drama",
+                    "Superhero",
+                    "Family"
+                ],
+                "C": [
+                    "Animation",
+                    "Drama",
+                    "Fantasy",
+                    "Comedy"
+                ]
+            },
+            "visual_themes": {
+                "A": [
+                    "Varied, mix of animation and live action, diverse color palettes"
+                ],
+                "B": [
+                    "More consistent animation style, some live-action drama"
+                ],
+                "C": [
+                    "Mix of animation and live action, but less visually consistent than A"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity. While List B has a family-friendly animation focus, and List C mixes animation, drama, and fantasy, List A successfully blends animation with live-action films spanning a broader range of genres (action, superhero, drama, comedy).  The tonal shifts between movies in List A are more pronounced than in the other lists.",
+        "gold": "B",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 191,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, comedy, and fantasy, with a sprinkling of dark comedy and thriller elements.  The range of years is relatively wide (1995-2019).",
+            "list_B_summary": "List B leans towards action and drama, with one metafictional comedy. The time range is slightly narrower than A (1995-2010).",
+            "list_C_summary": "List C presents a blend of biographical drama, action, and dark comedy, spanning from 1991 to 2019. It has a less concentrated genre focus than B but less diversity in tone than A."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity.  While List B has some variety, it centers largely around action and drama. List C also has a thematic similarity, although slightly broader than B. List A successfully blends action, comedy, fantasy, and darker genres, making it the most diverse in terms of both genre and tone.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 193,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, thriller, and drama movies from the 90s and 2000s, with a few animated films.  The genres are relatively varied but the style is predominantly live-action.",
+            "list_B_summary": "List B presents a blend of animation, sci-fi, and drama.  It contains a broader range of years than List A, although many are still from around the turn of the millennium. ",
+            "list_C_summary": "List C features a combination of animation, superhero, and psychological thriller movies.  There is a similar mix in years to List B, suggesting more temporal diversity than List A. ",
+            "key_differences": "The main differences lie in genre distribution and the inclusion of animated films. List A has a heavier emphasis on live-action thrillers and dramas, while List B and C have a more balanced representation of animation and other genres. Lists B and C have a slightly broader time span of movie releases.",
+            "genre_analysis": {
+                "List_A": [
+                    "Action",
+                    "Thriller",
+                    "Drama",
+                    "Animation"
+                ],
+                "List_B": [
+                    "Action",
+                    "Animation",
+                    "Sci-fi",
+                    "Drama"
+                ],
+                "List_C": [
+                    "Animation",
+                    "Superhero",
+                    "Thriller",
+                    "Drama"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List B demonstrates the most diversity because it presents a balanced mix of animation and live-action films across multiple genres (animation, sci-fi, and drama), as well as a wider range of release years compared to Lists A and C. While Lists A and C show genre diversity, they lean more heavily toward specific categories.  List B provides a more comprehensive representation.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 192,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animated, adventure, and sci-fi movies, spanning from 1995 to 2009.  It includes a Pixar film (Up), a historical drama (The Imitation Game), a post-apocalyptic film (Waterworld), and a fantasy adventure (Pirates of the Caribbean).",
+            "list_B_summary": "List B features a similar mix of genres as List A, but with a stronger action/sci-fi focus. It has an animated film, a classic sci-fi film (The Matrix), a mystery/action movie (Sherlock Holmes), a war film (Saving Private Ryan), and a British crime film (Snatch).",
+            "list_C_summary": "List C presents a more diverse range of genres and tones. It includes a dark comedy (Knockin' on Heaven's Door), an animated short (La Luna), an action movie (Sherlock Holmes), a post-apocalyptic film (Waterworld), and an action-packed dystopian film (Mad Max: Fury Road). The inclusion of a dark comedy and an animated short distinguishes it from the other lists."
+        },
+        "most_diverse_list_reasoning": "List C is the most diverse because it offers the widest variety of genres and film styles.  It has animation, action, dark comedy, and post-apocalyptic themes represented, demonstrating more tonal and stylistic range than the other two lists. Lists A and B, while diverse in their own way, mainly focus on adventure and action genres.",
+        "gold": "B",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 194,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action-comedy (The Man from U.N.C.L.E., Spy), action (Face/Off, Serenity), comedy (School of Rock, Yes Man), and animation (Toy Story 3).  There's a decent spread across genres, but some overlap in action-comedy.",
+            "list_B_summary": "List B presents a more varied genre mix. It includes animation (Toy Story 3, Shrek), action (The Hunger Games), comedy (Yes Man, Ace Ventura), drama (Donnie Darko), and fantasy (Shrek).  The inclusion of Donnie Darko adds a unique element.",
+            "list_C_summary": "List C shows a blend of comedy (School of Rock, Hangover), action (Face/Off, Skyfall), and drama (Rain Man, Donnie Darko). The inclusion of Shrek adds an animated element, and the range of release years is notable.",
+            "key_differences": "The main differences lie in the genre variety and the inclusion of unique films. List B stands out with its inclusion of Donnie Darko, a cult classic that differs significantly from the other films in both style and content. List C also shows a decent spread, but less diverse than List B."
+        },
+        "most_diverse_list_reasoning": "List B is the most diverse because it contains the widest range of genres and film styles.  The inclusion of Donnie Darko, a cult classic known for its unique blend of science fiction, drama, and mystery, significantly increases the diversity compared to Lists A and C. While Lists A and C have variety, they don't have the same level of genre and thematic variation found in List B.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 197,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including fantasy, action, thriller, animation, sci-fi, and drama.  There's a range of release years, spanning from 1992 to 2017. Visually, the films are diverse, ranging from animation to intense war scenes and supernatural elements.",
+            "list_B_summary": "List B shows a similar spread of genres as List A, including fantasy, drama, crime, animation, and action. The release years are also varied, ranging from 1990 to 2008. The visual style is mixed.",
+            "list_C_summary": "List C presents a blend of thriller, crime, action, fantasy and drama genres. The release dates are spread from 1990 to 2017, but the list has a more modern feel compared to List A and List B. The visual styles are eclectic but mostly lean toward modern action or crime films.",
+            "key_differences": "The main differences lie in the emphasis on particular genres and the overall feel of the lists. List A has a broader mix, but some might argue it is less cohesive. List B has a slightly stronger mix of both older and newer films.  List C leans toward more modern films and a more consistent tone in terms of genre.",
+            "overlap": "Lists A and B share three movies, List A and C share two, and List B and C share two."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity because it includes a wider variety of genres and visual styles. While List B and C have a diverse range of films, List A encompasses a broader span of release dates, creating a better sense of variety across time and filmmaking styles.",
+        "gold": "C",
+        "output": "A",
+        "correct": false
+    },
+    {
+        "participation": 3,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of animated films (WALL-E, Up), dramas (Shawshank Redemption, A Beautiful Mind), and action/fantasy (Doctor Strange, Snatch).",
+            "list_B_summary": "List B focuses primarily on fantasy and adventure films, with a few exceptions (Matrix).  There's a noticeable concentration on franchises (Harry Potter, Lord of the Rings, Fantastic Beasts).",
+            "list_C_summary": "List C is a blend of action (Snatch, Matrix, Sherlock Holmes), drama (Shawshank Redemption), and animated (WALL-E), similar to List A but with less animated content.  It also shares some titles with List A and List B, suggesting some overlap in selection criteria.",
+            "genre_diversity": "List A shows more diverse genres compared to Lists B and C. List B is heavily focused on fantasy/adventure, while List C has less variety than List A.",
+            "overlap": "There is some overlap between the lists; for instance, 'WALL-E', 'Shawshank Redemption', and 'Snatch' are present in both List A and List C.  'Sherlock Holmes' and 'Matrix' appear in List B and List C.",
+            "release_date_range": "All lists span multiple decades, indicating a range of movie production eras.  No list shows a particularly unusual clustering of release dates."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in terms of genre representation. While List C has some overlap with List A, List A includes animated films alongside dramas and action, demonstrating a broader range of cinematic styles and storytelling approaches compared to the other two lists.  List B is more focused on fantasy and adventure, which makes it less diverse.",
+        "gold": "A",
+        "output": "A",
+        "correct": true
+    },
+    {
+        "participation": 4,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action (Kill Bill, Deadpool, Atomic Blonde), drama (Whiplash, A Beautiful Mind), and science fiction (Eternal Sunshine, Cloud Atlas).  There's a blend of violence and more introspective films.",
+            "list_B_summary": "List B has a variety of genres including science fiction (Predestination, Cloud Atlas), comedy (Father of the Bride, The Boss Baby), action (Atomic Blonde), and drama (Hidden Figures, Whiplash). It contains family-friendly films and more mature ones.",
+            "list_C_summary": "List C is more focused on drama and adventure, with some animated (Up) and historical elements (Braveheart).  It seems less focused on action and contains more classic films and family-friendly options. There is also a mix of different decades represented."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity because it contains a broader range of genres and film types, including family-friendly movies, action films, science fiction, and drama.  Lists A and C, while having some variety, are more focused in their thematic or genre choices.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 5,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of thriller (Silence of the Lambs, Dark Knight, Bourne Supremacy), drama (Nightcrawler), romantic comedy (Love Actually), and animation (Up).  It shows some variety but is not particularly balanced.",
+            "list_B_summary": "List B offers a blend of animation (Inside Out), action (Bourne Supremacy, Matrix Revolutions, Deadpool), crime (Reservoir Dogs), and romantic comedy (50 First Dates). It demonstrates better genre diversity than List A.",
+            "list_C_summary": "List C includes thriller (Silence of the Lambs, Nightcrawler), romantic comedy (Friends with Benefits, 50 First Dates), action (Deadpool), and drama (Green Mile).  It has a similar level of genre diversity to List B but has less thematic cohesion.",
+            "key_differences": "The main differences lie in genre balance and thematic consistency. List A has a less defined focus compared to B and C, while List B displays a better mix of genres with a more distinct thematic structure. List C has good genre representation but lacks a noticeable thematic backbone."
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity. While List C has a wide range of genres, List B presents a more balanced mix of genres, including animation, action, crime and romantic comedy.  This variety makes it more diverse in both genre and thematic representation than the others.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
+        "participation": 6,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, superhero, and fantasy genres with a romantic comedy. The release dates span two decades.",
+            "list_B_summary": "List B has a similar mix of genres to List A but includes more critically acclaimed and dramatic films.  The time range is also wide.",
+            "list_C_summary": "List C contains a mix of animation, action, and drama.  It has a similar range of release years as the other lists but contains more family-friendly movies."
+        },
+        "most_diverse_list_reasoning": "While all lists show variety, List C exhibits the most diversity in terms of genre (animation, action, drama) and the inclusion of family-friendly options that sets it apart from the other lists.  Lists A and B have a greater concentration on action and fantasy genres.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 8,
+        "comparison": {
+            "list_A_summary": "List A shows variety but leans towards drama and animation. It includes acclaimed films like Gran Torino and The Departed, a classic animated movie, Finding Nemo, and a mix of other genres.",
+            "list_B_summary": "List B has a more comedic and action-oriented tone with the Taxi series, but it also contains a sci-fi film (Gattaca) and a romantic comedy (50 First Dates).",
+            "list_C_summary": "List C presents a nice blend of genres, spanning crime (L.A. Confidential), sci-fi (Gattaca), action-comedy (Taxi 2), and more.  The inclusion of Gran Torino adds a dramatic element."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. While List A has a range, it's less balanced. List B is focused around a series and a specific style.  List C successfully balances different genres (sci-fi, crime, action-comedy, and drama) without being overly concentrated in one area. The inclusion of films spanning different decades further enhances its diversity.",
+        "gold": "C",
+        "output": "C",
+        "correct": true
+    },
+    {
+        "participation": 9,
+        "comparison": {
+            "list_A_summary": "List A contains a mix of genres including crime, thriller, drama, and adventure.  There's a range of release years, but no particular thematic coherence.",
+            "list_B_summary": "List B presents a more eclectic mix, blending crime, drama, adventure, and psychological thriller. The release years span several decades.",
+            "list_C_summary": "List C shows more thematic unity,  with a focus on coming-of-age stories and independent/art-house films. The genres are varied but the tone is more consistent. ",
+            "genre_diversity": {
+                "A": [
+                    "Crime",
+                    "Thriller",
+                    "Drama",
+                    "Adventure"
+                ],
+                "B": [
+                    "Crime",
+                    "Drama",
+                    "Adventure",
+                    "Psychological Thriller"
+                ],
+                "C": [
+                    "Drama",
+                    "Animated",
+                    "Comedy",
+                    "Sci-Fi"
+                ]
+            },
+            "year_range": {
+                "A": 25,
+                "B": 31,
+                "C": 20
+            }
+        },
+        "most_diverse_list_reasoning": "List B exhibits the most diversity. While List A has some genre variety, List B's blend of crime, drama, adventure, and psychological thriller, along with a wider spread of release years (spanning roughly three decades) makes it the most diverse.  List C has a more consistent thematic approach.",
+        "gold": "A",
+        "output": "B",
+        "correct": false
+    },
+    {
+        "participation": 11,
+        "comparison": {
+            "list_A_summary": "List A shows a mix of action, adventure, sci-fi, and drama, spanning different decades.  The movies seem to have a broad appeal but lack a specific unifying theme.",
+            "list_B_summary": "List B is also quite varied, encompassing action, drama, comedy, and fantasy, but again, without a particularly strong common thread. The time range is more significant, covering almost two decades. ",
+            "list_C_summary": "List C presents a more eclectic collection.  It has action, sci-fi, comedy and thriller elements, but the selection feels less cohesive than the others. It contains some overlapping titles with List A and B.",
+            "key_differences": "The main differences lie in the genre blends and the perceived coherence of each list. Lists A and B are diverse in terms of genre, but List C contains elements from multiple genres as well. However,  the degree of thematic connection between films in each list differs. ",
+            "genre_analysis": {
+                "List_A": [
+                    "Action",
+                    "Adventure",
+                    "Sci-Fi",
+                    "Drama"
+                ],
+                "List_B": [
+                    "Action",
+                    "Drama",
+                    "Comedy",
+                    "Fantasy"
+                ],
+                "List_C": [
+                    "Action",
+                    "Sci-Fi",
+                    "Comedy",
+                    "Thriller"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "While all three lists offer a variety of genres, List B demonstrates the most significant diversity across genres and release decades, suggesting a wider range of cinematic styles and storytelling approaches.  Although List C has some overlaps, the selection doesn't convey the same breadth of cinematic diversity as List B.",
+        "gold": "C",
+        "output": "B",
+        "correct": false
+    }
+]

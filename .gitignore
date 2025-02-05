@@ -3,3 +3,4 @@ Venv/
 old/
 paper_data/
 papers/
+image_cache.json
