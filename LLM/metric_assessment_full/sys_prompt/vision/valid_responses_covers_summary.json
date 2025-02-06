@@ -1,856 +1,856 @@
 [
     {
         "participation": 63,
-        "comparison": "List A, B, and C each offer a blend of popular and less mainstream films.  List A and C share some overlap in movies.  List B features a more diverse range of genres and themes, with fewer thematic repetitions than the other lists.",
-        "most_diverse_list_reasoning": "List B demonstrates the greatest diversity across all three categories: Popularity Diversity, Genre Diversity, and Theme Diversity. While all lists include a mix of popular and niche films, List B exhibits a wider array of genres and less thematic repetition, indicating a more varied selection of films.",
+        "comparison": "List A, B, and C all contain a mix of popular and less popular movies, resulting in a Popularity Diversity score of 2 for each.  List B and C have a similar time span (1988-2017), while List A's time span is slightly shorter (1993-2017). All three lists include movies from the same franchise.  List B stands out with a Theme Diversity score of 3, showcasing a broader thematic range compared to Lists A and C, which both score 2.  Genre diversity is similar across all three lists, with scores of 3 for Lists A and B, and 2 for List C.",
+        "most_diverse_list_reasoning": "List B exhibits the most diversity across all categories. While all three lists have a Popularity Diversity score of 2, List B achieves a Theme Diversity score of 3, indicating a wider range of themes compared to Lists A and C.  Although List A and B both have a Genre Diversity score of 3, List B's thematic breadth gives it a clear edge in overall diversity.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 61,
-        "comparison": "List A contains a greater diversity of genres and themes compared to Lists B and C. While Lists B and C include some blockbuster movies and some less popular films, their genre and theme diversity scores are lower than that of List A.  List A also has a better popularity diversity score.",
-        "most_diverse_list_reasoning": "List A demonstrates the most balanced blend of popular and niche movies, resulting in higher scores across popularity, genre, and theme diversity.  The lack of franchise inclusion in List A is outweighed by its other strengths.",
+        "comparison": "List A stands out with a higher Popularity Diversity score (3) compared to Lists B and C (both scoring 2).  All three lists show a similar range in Genre Diversity (List A: 3, Lists B and C: 2), and Theme Diversity (List A: 2, Lists B and C: 2).  List A does not include movies from the same franchise, while Lists B and C both include at least two movies from the same franchise.  The time span is roughly similar across all three lists.",
+        "most_diverse_list_reasoning": "Although the Genre and Theme Diversity scores are comparable across the three lists, List A achieves a higher Popularity Diversity score, indicating a better balance between popular and niche films.  The absence of franchise inclusion in List A contributes to its diversity by showcasing a wider range of cinematic styles and storytelling approaches, rather than relying on established franchises.  Therefore, List A is considered the most diverse.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 62,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": "List A, B, and C all show a diverse range of movies.  List A has the highest genre diversity, while List C demonstrates the highest theme diversity. List B sits in the middle, with balanced scores across all categories.  However, none of the lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List C edges out the others due to its superior Theme Diversity score of 3, indicating a wider range of explored themes compared to Lists A and B. While List A boasts a higher Genre Diversity score, the Theme Diversity is crucial for overall diversity, making List C the most thematically rich and therefore the most diverse.",
         "gold": "A",
-        "output": "X",
+        "output": "C",
         "correct": false
     },
     {
         "participation": 64,
-        "comparison": "List A, B, and C each contain a mix of popular and less popular films.  List A shows slightly more diversity in popularity than Lists B and C.  List B demonstrates greater genre and thematic diversity than the other two lists. List C has a moderate level of genre and thematic diversity, with some overlap in themes and genres between the movies.",
-        "most_diverse_list_reasoning": "List B is considered the most diverse because it exhibits a better balance across the specified diversity metrics.  While List A has a broader range of popularity in its movies, List B shows more genre and thematic diversity.  The inclusion of movies like 'Monsters Inc.' and 'The Revenant' significantly contributes to this diversity, creating more overall variety and less repetition of themes and genres.",
+        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List B stands out with higher scores in genre and theme diversity, suggesting a broader range of cinematic styles and narratives.  However, all three lists include 'The Usual Suspects', which may skew the results slightly.  List A and C both include movies from the same franchise, while List B does not. ",
+        "most_diverse_list_reasoning": "List B achieves the highest scores in Genre and Theme Diversity, indicating a wider variety of film styles and narratives compared to Lists A and C. Although List A and C have a mix of popular and niche films, List B's higher diversity scores in genre and theme make it the most diverse overall.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 67,
-        "comparison": "List A, List B, and List C all show a moderate level of diversity in terms of popularity, genre, and themes.  List A and B both include the Lord of the Rings trilogy, which skews their genre and theme diversity. List B has a more significant time span, going back to 1987 with The Princess Bride. List C includes a wider variety of movies with different levels of popularity compared to List A and B, and the overall theme diversity seems a bit more varied, though the inclusion of Lord of the Rings trilogy still limits the diversity.",
-        "most_diverse_list_reasoning": "List C demonstrates slightly better diversity across popularity, genre, and theme compared to lists A and B. Although all three lists have some overlap in terms of genres and themes, List C's inclusion of films like Reservoir Dogs, Eternal Sunshine of the Spotless Mind, and Get Out provides a broader range of thematic exploration and genre representation compared to the other lists. The time span of List C is also larger. While the presence of the Lord of the Rings trilogy in all lists diminishes diversity, List C's other selections compensate more effectively. ",
+        "comparison": "List A, B, and C all show a moderate level of diversity across popularity, genre, and theme.  List A and B have similar diversity scores across all categories, while List C shows slightly higher theme diversity. All three lists include movies from the Lord of the Rings franchise.",
+        "most_diverse_list_reasoning": "While all three lists exhibit similar diversity in popularity and genre, List C demonstrates a slightly higher theme diversity score.  The inclusion of three Lord of the Rings movies in List C doesn't significantly detract from its overall diversity given the range of other themes present.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 65,
-        "comparison": "List A contains a more balanced mix of popular and less popular movies compared to Lists B and C.  While all three lists show some genre and theme diversity, none are exceptionally high. List A has a slightly wider timespan than the others.",
-        "most_diverse_list_reasoning": "List A stands out due to its better balance in popularity diversity, incorporating both mainstream blockbusters and less widely known films. Although the genre and theme diversity scores are moderate for all lists, List A's broader range of popularity makes it the most diverse overall.",
+        "comparison": "List A stands out with a higher Popularity Diversity score (3) compared to Lists B and C (both scoring 2).  While all three lists show moderate Genre and Theme Diversity (scores of 2 across the board), List A's broader time span (1985-2010) compared to List B (1996-2016) and List C (1990-2008) suggests a wider range of cinematic styles and cultural contexts.  None of the lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List A achieves a better balance in popularity diversity, offering a mix of blockbusters and less mainstream films.  Although all three lists have similar genre and theme diversity scores, List A's wider time span (1985-2010) provides a more extensive representation of filmmaking across different eras.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 66,
-        "comparison": "List A contains a mix of popular and niche movies, with some genre and thematic overlap. List B offers a broader range of genres and themes with no franchise repetition, while List C showcases significant genre variety, but has some thematic overlap and includes a franchise movie.",
-        "most_diverse_list_reasoning": "List B stands out due to its higher genre and theme diversity scores compared to Lists A and C.  The absence of franchise repetition further enhances its diversity, showcasing a wider range of cinematic styles and narratives.",
+        "comparison": "List A, B, and C each offer a diverse range of movies.  List A has a good balance of popular and niche films but shows some thematic and genre overlap. List B boasts high genre and theme diversity but has a moderate popularity diversity. List C has high genre and popularity diversity but moderate theme diversity.  All three lists include movies spanning multiple years.",
+        "most_diverse_list_reasoning": "List B stands out due to its high scores in both genre and theme diversity, indicating a wide variety of cinematic experiences. While its popularity diversity is moderate, the breadth of genres and themes compensates for this, making it the most diverse overall.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 69,
-        "comparison": "List A, B and C each offer a diverse range of films.  List A stands out with a broader genre spread, encompassing animation, action, drama, and thriller, among others. Lists B and C show some genre repetition, particularly in drama and comedy.  All three lists demonstrate thematic diversity, exploring various social issues, personal relationships, and adventures. List B edges out the others slightly due to a higher number of franchises being included. However, List A's more diverse genre selection gives it a slight edge in overall diversity.",
-        "most_diverse_list_reasoning": "While List B has a good mix of popular and less popular films and includes multiple franchises, List A exhibits slightly better genre diversity, offering a broader spectrum of film types without sacrificing thematic variety or popularity diversity.",
+        "comparison": "List A, B, and C each offer a diverse range of films, but their strengths lie in different areas. List A stands out with its broad genre diversity, encompassing animation, action, and drama, among others.  List B also shows strong genre diversity but has some genre repetition. List C has a good balance of popular and niche films but has less genre diversity than A and B.  All three lists exhibit thematic diversity, exploring various themes such as family, social issues, and adventure.  List B and A include movies from the same franchise, while List C does not.",
+        "most_diverse_list_reasoning": "List A achieves the best balance across all categories. While List B has a similar level of popularity and theme diversity, List A's genre diversity is slightly higher, making it the most well-rounded and diverse list overall. List C, while including a mix of popular and niche films, lacks the same level of genre and franchise diversity as Lists A and B.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 72,
-        "comparison": "List A contains a mix of popular and niche movies, covering various genres and themes, with a notable inclusion of two movies from the same franchise. List B has a similar mix of popular and niche films with a wide range of genres and themes, but without franchise inclusion. List C stands out with a broader variety of genres and themes, even more diverse than A and B, although it does not include movies from the same franchise.",
-        "most_diverse_list_reasoning": "List C exhibits the highest diversity across all three categories: Popularity Diversity, Genre Diversity, and Theme Diversity. While Lists A and B show a good balance of popular and niche films and cover multiple genres, List C's thematic range is more extensive and unique.  The genres covered are wider and more specific than in the other lists, with less repetition. Although neither List A nor C contain movies from the same franchise, the overall breadth of List C across all aspects of diversity makes it the most diverse list.",
+        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme, both scoring a 2 in each category.  List C stands out with a score of 3 across all three diversity categories. Although List A includes movies from the same franchise, this is not a significant factor compared to the higher diversity scores of List C.",
+        "most_diverse_list_reasoning": "List C exhibits the highest level of diversity across popularity, genre, and theme.  While List A and B show some diversity, List C's scores of 3 in each category clearly indicate a more balanced and varied selection of films. The inclusion of movies from the same franchise in List A is a minor factor compared to the significant difference in diversity scores.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 74,
-        "comparison": "List A contains a variety of movies across different genres and popularity levels, but lacks thematic cohesion. List B offers a similar genre spread but includes more popular movies and has some thematic overlaps. List C demonstrates a good balance between popular and niche movies, offering a wider range of themes compared to the other lists.  List C also contains movies from the same franchise, adding another layer of potential thematic depth.",
-        "most_diverse_list_reasoning": "List C exhibits the highest diversity due to its balanced mix of popular and critically acclaimed movies across multiple genres and themes, coupled with the inclusion of movies from the same franchise, suggesting a potential for deeper thematic exploration.  While Lists A and B have some diversity, List C presents a more varied range of themes and a unique connection through franchise inclusion.",
+        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme, both receiving a score of 2 in each category.  List C is comparable in popularity and genre diversity, also scoring 2, but shows a slightly higher theme diversity with a score of 3.  The key difference is that List C includes movies from the same franchise (Marvel Cinematic Universe), while Lists A and B do not.",
+        "most_diverse_list_reasoning": "List C exhibits slightly higher theme diversity compared to Lists A and B, and it also includes movies from the same franchise, adding another layer of potential thematic connections and shared narrative elements. While the numerical difference in diversity scores is not substantial, the inclusion of franchise movies adds a unique dimension to List C, making it slightly more diverse overall.",
         "gold": "B",
         "output": "C",
         "correct": false
     },
     {
         "participation": 79,
-        "comparison": "List A, B, and C all demonstrate a moderate level of diversity across popularity, genre, and theme.  List A and C are similar in their mix of films, with a slight leaning towards more popular titles, while list B offers a more balanced representation of blockbuster and independent films. The genre and thematic diversity across all three lists is similar, with a spread across various categories but some overlap in certain genres or themes.  All lists include movies spanning multiple years.",
-        "most_diverse_list_reasoning": "List B exhibits the highest level of thematic diversity, encompassing a wider range of core themes compared to the other lists. While Lists A and C have some thematic overlap, List B's inclusion of movies such as The Matrix, American Beauty, and Requiem for a Dream adds unique thematic elements not found in the other lists. Although its genre diversity is on par with the other lists, the thematic richness elevates List B.",
+        "comparison": "List A, B, and C all show a similar level of diversity in terms of popularity and genre. However, List B stands out with a higher Theme Diversity score (3) compared to Lists A and C (both scoring 2).  List B also has a broader time span, although all three lists cover a similar range of years.  While all three lists include movies from the same franchise, List B is the only one without any franchise movies.",
+        "most_diverse_list_reasoning": "List B achieves a better balance across all diversity metrics. While the popularity and genre diversity scores are comparable across all three lists, List B's superior Theme Diversity score, along with the absence of franchise movies, makes it the most diverse. The broader range of themes explored in List B's movies contributes significantly to its higher overall diversity.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 82,
-        "comparison": "List A contains a mix of blockbuster and independent films, but its genre and theme diversity are moderate. List B demonstrates higher genre and theme diversity and a balanced popularity mix, with no franchise inclusion. List C shows a good balance in popularity, high genre diversity, but moderate theme diversity and includes movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B stands out due to its superior genre and theme diversity.  While List C also has high genre diversity, List B's thematic range is broader and more varied.  The absence of franchise inclusion in List B further enhances its diversity by showcasing a wider range of cinematic styles and storytelling approaches.",
+        "comparison": "List A, B, and C each offer a unique blend of film popularity, genre, and thematic diversity.  List A shows moderate diversity across all three categories, with a balanced mix of popular and niche films, but less genre variety. List B boasts high diversity in both popularity and genre, covering a wide range of themes. List C demonstrates a balanced popularity diversity and high genre diversity, but its thematic diversity is only moderate. ",
+        "most_diverse_list_reasoning": "List B stands out due to its high scores in popularity and genre diversity, coupled with a high theme diversity score. While List C also has high scores in popularity and genre diversity, its thematic diversity is lower. List A has moderate scores across all three categories.  Therefore, List B exhibits the most comprehensive and balanced diversity.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 81,
-        "comparison": "List A contains a wider variety of movies compared to List B and List C. Although List B and List C include movies from the Star Wars franchise, the overall diversity of genres and themes in List A is higher.",
-        "most_diverse_list_reasoning": "List A shows more diversity in terms of popularity, genre, and themes compared to List B and List C. While Lists B and C include movies from the same franchise, List A has a better balance of popular and niche movies and a wider range of genres and themes.  The inclusion of animation, action, sci-fi, drama, comedy, mystery, thriller, and romance, in List A suggests better genre diversity than the other lists. The themes explored also span adventure, deception, isolation, love, revenge, and family; showcasing a wider thematic range. Although some overlap exists in List A, it still shows greater overall diversity than the other two lists.",
+        "comparison": "Lists A, B, and C all received a score of 2 in Popularity Diversity, Genre Diversity, and Theme Diversity.  List B and C both contain movies from the Star Wars franchise, while List A does not include any movies from the same franchise.  List A's time span is from 1999-2017, while List B's time span is from 1999-2016 and List C's time span is from 1999-2017.",
+        "most_diverse_list_reasoning": "While all three lists have similar diversity scores, List A stands out slightly because it has a broader time span (1999-2017) compared to List B (1999-2016) and List C (1999-2017).  The slightly wider time range suggests a potentially more diverse representation of filmmaking styles and trends across the years.  The lack of franchise inclusion in List A also contributes to its slightly higher perceived diversity, as it avoids the potential bias of focusing on a single established universe.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 85,
-        "comparison": "List A and List C have similar diversity scores, with List A having a slightly higher genre diversity score (3 vs 2).  List B also has a mix of popular and niche films but scores lower on diversity in genres and themes, and has franchise inclusion which List A does not.  All lists show decent diversity across the time span covered.",
-        "most_diverse_list_reasoning": "List A exhibits the highest level of diversity across all categories. While List C has a mix of popular and less popular movies, its genre and theme diversity are lower than List A. List B is less diverse and includes a movie franchise.",
+        "comparison": "List A, B, and C all show moderate popularity diversity with scores of 2.  List A and C have higher genre and theme diversity scores (3) compared to List B (2). List A and C do not include movies from the same franchise, while List B does.  List A has a wider time span (1987-2017) than List B (1987-2014) and List C (1993-2017).",
+        "most_diverse_list_reasoning": "List A stands out due to its higher genre and theme diversity scores, and the widest time span, indicating a broader range of cinematic styles and thematic explorations. While List B includes a movie franchise, its lower diversity scores in genre and theme, and shorter time span, make List A a more diverse selection overall.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 88,
-        "comparison": "List A contains a mix of blockbuster and less popular films, covering various genres and themes, but with some repetition. List B shows a similar pattern, with a mix of popular and niche films, but with less genre and theme diversity compared to List A. List C offers a more balanced mix of popular and independent movies. It demonstrates greater genre and theme diversity compared to Lists A and B. The thematic range and genre variety make it stand out.",
-        "most_diverse_list_reasoning": "List C exhibits the highest level of diversity across all three categories: Popularity Diversity, Genre Diversity, and Theme Diversity.  Its selection of films offers a broader representation of both popular and independent cinema, along with a wider spectrum of genres and themes than Lists A and B.  The inclusion of films like 'Looper', 'The Intouchables', and 'The Matrix' alongside more widely recognized titles significantly contributes to this diversity. Although List A and B have some variety, they are less diverse compared to list C.",
+        "comparison": "List A, B, and C all include a mix of popular and less popular movies, spanning various genres and themes.  However, List C demonstrates a more balanced representation across these categories.  While all three lists include movies from the same franchise, List C's genre and theme diversity scores are higher than the others, indicating a wider range of cinematic experiences.",
+        "most_diverse_list_reasoning": "List C achieves the highest scores across Popularity Diversity, Genre Diversity, and Theme Diversity.  Its summary highlights a broader range of genres and themes compared to Lists A and B.  Although all three lists contain movies from the same franchise, List C's superior diversity scores in other areas make it the most diverse.",
         "gold": "B",
         "output": "C",
         "correct": false
     },
     {
         "participation": 87,
-        "comparison": "List A contains a more balanced mix of popular and less popular films compared to List B and List C.  List B has a broader range of genres than Lists A and C.  List C shows a similar genre diversity to List A but has a smaller number of films.  All three lists lack franchise inclusion.",
-        "most_diverse_list_reasoning": "List B exhibits the greatest diversity across all criteria. While List A has a good balance of popular and less popular movies, List B showcases a wider variety of genres and presents diverse themes, despite some thematic overlap. List C is less diverse than A and B, as it shares similar characteristics with A but has fewer films.",
+        "comparison": "List A, B, and C all show a similar level of diversity based on the provided scores.  List A has a slightly better balance of popular and niche films, while List B boasts a wider range of genres.  List C falls somewhere in between.  However, the differences are marginal.",
+        "most_diverse_list_reasoning": "While the numerical scores are very close, List B edges out the others due to its higher genre diversity score.  A wider range of genres suggests a more varied and comprehensive cinematic experience.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 89,
-        "comparison": "List A contains a variety of movies, but lacks franchise inclusion.  List B has some franchise inclusion with Harry Potter, but has less genre diversity than List C. List C demonstrates both high genre and theme diversity, and also includes multiple movies from two different franchises. ",
-        "most_diverse_list_reasoning": "List C stands out due to its superior genre and theme diversity compared to Lists A and B. The inclusion of multiple films from two distinct franchises further enhances its diversity, showcasing a wider range of cinematic styles and storytelling approaches.",
+        "comparison": "List A, B, and C each offer a diverse range of movies, but they vary in their balance of blockbuster and niche films, genre representation, and thematic depth. List A shows less diversity in themes and genres compared to the others. List B has a better balance of popular and niche movies, but it is less diverse in terms of themes and genres than List C. List C stands out with its higher scores in Popularity Diversity and Theme Diversity, indicating a more balanced mix of popular and niche films and a wider range of themes. Although all three lists include movies from different years, List C demonstrates a more significant variety in genres and themes.",
+        "most_diverse_list_reasoning": "List C exhibits the most balanced blend of popular and niche films, resulting in a higher Popularity Diversity score.  Furthermore, it showcases superior Genre and Theme Diversity, encompassing a broader spectrum of genres and thematic explorations compared to Lists A and B.  The inclusion of multiple franchises adds to its overall diversity, making it the most comprehensive and varied selection.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 90,
-        "comparison": "Lists A, B, and C all show moderate diversity in popularity, genre, and theme.  List A has the shortest time span, while List C has the longest. None of the lists include movies from the same franchise.  While the scores are similar across lists, the variety of genres in List B is slightly higher, as it includes more unique genres than the other lists. ",
-        "most_diverse_list_reasoning": "List B demonstrates slightly higher genre diversity compared to Lists A and C, encompassing a broader range of genres including Action, Adventure, Comedy, Fantasy, Drama, Romance, Thriller, Biography, Music, and Crime. Although some genres like Drama and Romance appear in several films, the overall genre variety surpasses that of the other lists. The inclusion of diverse film types, such as blockbusters alongside smaller independent films, further enhances the list's diversity.",
+        "comparison": "Lists A, B, and C all received a score of 2 across Popularity Diversity, Genre Diversity, and Theme Diversity.  List A's time span is 1994-2014, List B's is 1987-2015, and List C's is 1987-2017.  None of the lists contain movies from the same franchise.",
+        "most_diverse_list_reasoning": "While all three lists are similar in their diversity scores, List C has the largest time span, suggesting a broader range of cinematic styles and cultural contexts.  The slightly later release date of the newest film in List C also suggests a more up-to-date representation of cinema.",
         "gold": "B",
-        "output": "B",
-        "correct": true
+        "output": "C",
+        "correct": false
     },
     {
         "participation": 91,
-        "comparison": "List A contains a smaller variety of movies compared to lists B and C.  List B demonstrates a wider range of genres and a better balance between popular and niche films than List A.  List C, while having a good mix of popular and niche titles, shows slightly less genre diversity than List B.  However, all three lists exhibit moderate theme diversity.",
-        "most_diverse_list_reasoning": "List B is considered the most diverse because it boasts the highest score in Popularity Diversity and Genre Diversity. Although its Theme Diversity score is slightly lower than List A, the overall balance and broader genre representation make List B the most comprehensive in terms of variety.",
+        "comparison": "List A, B, and C each offer a diverse range of films, but their strengths lie in different areas. List A demonstrates a good balance between popular and niche movies, but its genre and theme diversity are moderate. List B boasts higher genre diversity and a wider range of blockbuster and niche films, although its theme diversity is similar to List A. List C shows a balanced mix of popular and niche movies, but its genre and theme diversity scores are slightly lower than List B.  All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List B stands out due to its superior genre diversity (score of 3) compared to Lists A and C (both scoring 2). While List C has a similar popularity diversity score, List B's broader genre representation makes it the most diverse overall.  Although List B's theme diversity score is 2, similar to the other lists, its higher genre diversity tips the scales in its favor.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 93,
-        "comparison": "List A, B, and C all show a similar level of diversity in terms of popularity, genre, and themes. Each list includes a mix of blockbuster and less mainstream films, spanning various genres and exploring diverse themes. However, the diversity scores are relatively modest for all three lists, suggesting that while there is some variety, certain genres and themes are more prevalent than others.  The key difference lies in franchise inclusion.  Lists A and B do not contain movies from the same franchise, while List C includes at least two Harry Potter movies.",
-        "most_diverse_list_reasoning": "While the diversity scores for all three lists are similar, List C is slightly more diverse due to the inclusion of movies from the same franchise, specifically the Harry Potter franchise. This adds another layer of diversity compared to lists with no franchise inclusion.  Even though the numerical diversity scores are the same, the presence of a franchise indicates a deeper level of thematic consistency and audience appeal within that subset of films. ",
+        "comparison": "Lists A, B, and C all received a score of 2 across Popularity Diversity, Genre Diversity, and Theme Diversity.  List C is the only list that includes movies from the same franchise (Harry Potter), which could be considered a factor in diversity depending on the interpretation.  All lists show a variety of genres and themes, but none demonstrate exceptional diversity in any category.",
+        "most_diverse_list_reasoning": "While all three lists have similar scores across the diversity metrics, List C stands out slightly due to the inclusion of movies from the same franchise. This adds another layer of diversity, showcasing a cohesive series within a broader range of films.  The other diversity metrics are comparable across all three lists.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 94,
-        "comparison": "List A contains a mix of popular and less mainstream films, with a variety of genres and themes, but lacks franchise inclusion. List B boasts high genre and theme diversity and includes movies from the same franchise. List C offers a good balance of popular and less popular movies, covering a wide range of genres, but its theme diversity is slightly lower than List B, though it also includes movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B stands out due to its high scores across all diversity categories. Its genre and theme diversity are particularly noteworthy, encompassing animation, adventure, comedy, family, fantasy, and more.  The inclusion of movies from the same franchise further adds to its overall diversity, showing a curated selection rather than a random assortment.",
+        "comparison": "List A, B, and C all show a relatively balanced mix of popular and niche films, scoring a 3 in Popularity Diversity.  List B and C both include movies from the same franchise, while List A does not.  List B and C both achieve a score of 3 in Genre Diversity, while List A scores a 2.  List B and C both score a 3 in Theme Diversity, while List A scores a 2.  All three lists cover a similar time span, from 1993 to 2015.",
+        "most_diverse_list_reasoning": "List B stands out due to its higher scores across Genre and Theme Diversity, both receiving a score of 3, compared to List A and C. While List C also achieves a score of 3 in Genre Diversity, List B's thematic variety is more pronounced.  The inclusion of multiple franchises in List B and C adds another layer of diversity, but List B's broader genre range makes it slightly more diverse overall.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 95,
-        "comparison": "List A, B, and C each offer a diverse range of films.  List A showcases a balance of popular and niche movies, spanning various genres and themes.  List B also has a good mix but leans slightly more towards popular titles.  List C features a very wide range of genres but shows some thematic repetition.  All three lists lack franchise inclusion.",
-        "most_diverse_list_reasoning": "While all three lists demonstrate diversity, List A offers the most balanced combination of popularity diversity, genre diversity, and thematic diversity, with a good spread across various genres and themes without leaning too heavily on any one category. Although List C has slightly higher genre diversity, the thematic repetition lessens its overall diversity compared to List A.",
+        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  None of the lists include movies from the same franchise.  List C has a higher genre diversity score than A and B, but the theme diversity is similar across all three lists.  The time span is also the same for all three lists.",
+        "most_diverse_list_reasoning": "List C achieves the highest genre diversity score, indicating a broader range of film genres represented compared to lists A and B. While the theme and popularity diversity scores are comparable across all three lists, the wider genre representation in List C makes it slightly more diverse overall.",
         "gold": "B",
-        "output": "A",
+        "output": "C",
         "correct": false
     },
     {
         "participation": 96,
-        "comparison": "List A contains a wider variety of genres than lists B and C.  List B and C both have a mix of popular and less popular films, but List A has more genre diversity, although it lacks franchise inclusion. List B and C both include films from the same franchise.  List B has a slightly wider thematic range than List C, though not significantly so.",
-        "most_diverse_list_reasoning": "List A stands out due to its superior genre diversity, showcasing a broader range of film styles compared to the other lists. While List B and C offer a mix of popular and niche films and some franchise inclusion, List A's genre variety makes it the most diverse overall.",
+        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List A has the highest genre diversity score (3), while Lists B and C have a score of 2.  List A does not include any movies from the same franchise, while Lists B and C do. The time span is widest for List A (1989-2017), followed by List B (2000-2017), and lastly List C (2000-2012).",
+        "most_diverse_list_reasoning": "Although List A does not have the highest score in every category, its wider range of genres and longer time span, combined with the lack of franchise inclusion, suggests a broader representation of films. The inclusion of multiple films from the same franchise in Lists B and C might skew the diversity assessment, as it indicates a focus on specific cinematic universes rather than a wider exploration of different film styles and themes.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 98,
-        "comparison": "List A demonstrates the most balanced combination of popularity and genre diversity, with a broad thematic range spanning various time periods, while Lists B and C show some franchise repetition and less overall diversity in their selection.",
-        "most_diverse_list_reasoning": "List A stands out due to its balanced representation of popular and niche films, coupled with a remarkable variety of genres and themes. The absence of franchise repetition further enhances its diversity, offering a more unique cinematic journey compared to the other lists. While lists B and C also have some variety, they lack the same level of balance and have franchise repetition.",
+        "comparison": "List A stands out with a perfect score of 3 across all diversity categories (Popularity, Genre, and Theme).  Lists B and C both receive a score of 2 in each category, indicating less diversity. While Lists B and C include movies from the same franchise, this factor is outweighed by the significantly lower diversity scores in comparison to List A.",
+        "most_diverse_list_reasoning": "List A achieves the highest scores across all diversity metrics (Popularity, Genre, and Theme Diversity), suggesting a more balanced and varied selection of films compared to Lists B and C.  The inclusion of movies from the same franchise in Lists B and C does not compensate for their lower diversity scores.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 99,
-        "comparison": "List A contains a mix of blockbuster and independent films, but its genre and theme diversity are moderate. List B shows more genre diversity than A and C, but less theme diversity than C. List C has a good balance of popularity diversity, and high genre and theme diversity.",
-        "most_diverse_list_reasoning": "List C exhibits the highest overall diversity.  While List B boasts strong genre diversity, List C's theme diversity is superior, encompassing a wider range of thematic explorations.  Additionally, List C's popularity diversity is well-balanced.",
+        "comparison": "List A, B, and C all showcase a decent variety in their movie selections.  List A has a balanced mix of popular and niche films, but its genre and theme diversity scores are lower than the others. List B boasts high genre diversity but has slightly lower scores in popularity diversity and theme diversity compared to List C. List C stands out with high scores across all three diversity categories (popularity, genre, and theme), suggesting a more well-rounded and varied selection of films.",
+        "most_diverse_list_reasoning": "List C achieves the highest overall diversity. While all three lists avoid franchise repetition, List C's balanced representation of popular and niche films, coupled with its superior genre and theme diversity, makes it the most diverse.  The themes explored in List C are particularly unique and varied, contributing to its higher overall diversity score.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 102,
-        "comparison": "List A, B, and C each offer a blend of popular and independent films, showcasing variety in genre and theme.  List A stands out with its inclusion of diverse subgenres like musical and family-friendly movies, which are not as prominently represented in Lists B and C.  List B is strong in terms of thematic diversity. List C shows a less pronounced variation in genre and theme compared to the other two.",
-        "most_diverse_list_reasoning": "List A demonstrates the most well-rounded diversity across all categories. While Lists B and C show good diversity in some areas, List A shows greater balance of both popular and independent films and a wider range of genres and themes, even if some repetition occurs across some.",
+        "comparison": "List A, B, and C all show a moderate level of diversity in terms of popularity, genre, and theme.  List A and C both include movies from the same franchise, while List B does not.  All three lists span a similar timeframe (1990-2017).",
+        "most_diverse_list_reasoning": "List B demonstrates slightly higher diversity scores across popularity, theme, and genre compared to Lists A and C. While Lists A and C include movies from the same franchise, this does not necessarily contribute to overall diversity.  The absence of franchise repetition in List B, combined with its slightly higher diversity scores, makes it the most diverse.",
         "gold": "A",
-        "output": "A",
-        "correct": true
+        "output": "B",
+        "correct": false
     },
     {
         "participation": 100,
-        "comparison": "List A, B, and C all show a decent variety in their movie selections.  List A features a blend of blockbuster hits and more niche films, spanning various genres and themes from 1986-2017.  List B also offers a good mix of popular and less mainstream titles, representing several genres and themes but from a slightly later period (2004-2017). List C boasts impressive genre diversity with a broad range of genres present, but with some thematic overlap.  All three lists include movies from the same franchise.",
-        "most_diverse_list_reasoning": "While all three lists exhibit good diversity, List C edges out the others due to its superior genre diversity (score of 3) and a wider timespan of movies (1995-2017) compared to lists A and B. Although List A and B have similar scores in other aspects, List C's broader genre range makes it slightly more diverse.",
+        "comparison": "List A, B, and C all show a similar level of Popularity Diversity and Theme Diversity, scoring a 2 out of a possible higher score in each category.  List B has the narrowest Time Span, covering movies released between 2004 and 2017.  List A's Time Span is the widest, ranging from 1986 to 2017.  List C's Time Span falls between the two, ranging from 1995 to 2017.  List C has the highest Genre Diversity score with a 3, while Lists A and B both score a 2.  All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "Although all three lists exhibit comparable diversity in popularity and themes, List C stands out due to its higher genre diversity score of 3 compared to the score of 2 for Lists A and B.  The wider range of genres in List C suggests a more varied cinematic experience.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 103,
-        "comparison": "List A contains a more balanced mix of popular and niche films compared to List B and C.  While List B and C include movies from the same franchise, List A shows more genre and theme diversity. List B's inclusion of two Marvel movies reduces its overall diversity in themes and genres compared to A. List C has less diversity than A in terms of popularity and genre, with a few movies sharing similar themes and genres.",
-        "most_diverse_list_reasoning": "List A exhibits the greatest diversity across all categories. It boasts a balanced mix of popular and less mainstream movies, a wide range of genres, and a broad spectrum of thematic explorations. Although Lists B and C show franchise inclusion, List A's stronger performance across popularity, genre, and theme diversity makes it the most diverse list.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A stands out for its lack of franchise inclusion, suggesting a more curated selection based purely on individual film merit rather than leveraging pre-existing franchise popularity.  List B and C both include Marvel and Matrix franchises respectively, indicating a potential bias towards established properties.  While all three lists demonstrate genre and thematic diversity, List A's balanced representation of popular and niche films, coupled with its avoidance of franchise reliance, makes it the most unique and arguably the most thoughtfully curated.",
+        "most_diverse_list_reasoning": "List A achieves the highest level of diversity by avoiding franchise inclusion, which often skews the selection towards already popular films.  The balanced mix of blockbuster and niche films, combined with the broad range of genres and themes, makes it stand out as the most diverse list.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 104,
-        "comparison": "List A contains a wider variety of genres and themes compared to List B and List C.  Lists B and C have a similar range of movies, with List B having a slightly wider genre variety while List C has a slightly more balanced mix of popularity. All three lists contain a mix of popular and less mainstream movies, indicating a moderate level of popularity diversity in each.",
-        "most_diverse_list_reasoning": "List A stands out due to its higher genre and thematic diversity compared to lists B and C. While all three lists exhibit a balanced mix of popular and niche films, List A showcases a wider array of movie styles and thematic explorations, making it the most diverse.",
+        "comparison": "List A, B, and C all show a moderate level of diversity across various aspects. List A stands out with its higher genre diversity (score of 3) compared to Lists B and C (score of 2 each). However, Lists B and C include movies from the same franchise, which List A lacks.  All three lists have a similar popularity diversity score of 2 and theme diversity score of 2. The time span is also comparable across the three lists.",
+        "most_diverse_list_reasoning": "While Lists B and C benefit from including movies from the same franchise, List A's superior genre diversity makes it the most diverse overall.  The slightly broader range of genres in List A outweighs the franchise inclusion in Lists B and C, leading to a more varied cinematic experience.",
         "gold": "B",
         "output": "A",
         "correct": false
     },
     {
         "participation": 105,
-        "comparison": "List A contains a variety of movies, but lacks thematic depth. List B offers a better balance of popular and niche films, with a more diverse range of genres and themes. List C, while having a good mix of genres, presents a narrower thematic focus and includes movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B exhibits the highest level of diversity across all three categories: Popularity Diversity, Genre Diversity, and Theme Diversity.  While List C includes movies from the same franchise, indicating some franchise repetition, List B avoids this issue and displays the broadest thematic coverage, making it the most diverse overall.",
+        "comparison": "List A, B, and C all show a decent variety in genre and theme, but List B stands out with a higher Popularity Diversity score (3) compared to A and C (both 2).  While List C has Franchise Inclusion, this is outweighed by the lower diversity scores in other categories.  All three lists have similar time spans, starting around 1986 and ending in the 2010s.",
+        "most_diverse_list_reasoning": "List B achieves a better balance between popular and niche movies, resulting in a higher Popularity Diversity score. Although the Theme Diversity score is slightly lower than List A, the overall diversity across popularity, genre, and theme makes List B the most diverse.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 108,
-        "comparison": "List A contains a mix of blockbuster and independent films, offering moderate diversity across genres and themes. List B shows a similar level of diversity but lacks franchise inclusion. List C boasts higher genre diversity compared to A and B, but the popularity and theme diversity remain moderate.",
-        "most_diverse_list_reasoning": "List C exhibits the highest genre diversity among the three lists, showcasing a broader spectrum of film genres than Lists A and B. Although its popularity and theme diversity scores are similar to the other lists, the significant advantage in genre diversity makes it the most diverse.",
+        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List A includes movies from the same franchise, while Lists B and C do not.  List C has a higher genre diversity score than A and B.",
+        "most_diverse_list_reasoning": "Although all three lists have similar overall diversity scores, List C stands out with a higher genre diversity score (3) compared to Lists A and B (both 2).  While theme diversity is moderate across all lists, the wider range of genres in List C suggests a more varied cinematic experience.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 106,
-        "comparison": "List A, B, and C all contain a mix of popular and less popular films, resulting in a balanced popularity diversity.  List B demonstrates the highest genre and theme diversity with a wider range of genres and more nuanced thematic exploration compared to Lists A and C. Although all lists include movies from the same franchise, List B's inclusion of multiple franchises (Star Wars and The Lion King) is more significant than the single franchise representation in Lists A and C. ",
-        "most_diverse_list_reasoning": "List B stands out due to its superior genre and thematic diversity. While all three lists exhibit a balance in terms of popular versus less popular movies, List B showcases a broader spectrum of genres and more intricate thematic depth.  The inclusion of multiple movie franchises, despite not being the primary factor in determining diversity, further enhances List B's overall diversity.  Lists A and C have some genre and theme overlap, thus reducing their overall diversity score. ",
+        "comparison": "List A, B, and C all show some diversity in terms of genre and theme, but List B stands out with its higher scores in both Genre Diversity and Theme Diversity.  While all three lists include a mix of popular and niche films, List B's genre range is wider, encompassing action, adventure, drama, fantasy, mystery, thriller, crime, romance, animation, comedy, family, sci-fi, and biography.  Its thematic range is equally impressive, covering war and fate, mystery and deception, love and loss, family and friendship, addiction, hope and rebellion, and biographical accounts. Lists A and C have more limited genre and thematic variety. Although all three lists include movies from the same franchise, List B's inclusion of Star Wars and a possible reference to The Lion King suggests a broader scope of franchise representation than the Harry Potter or Beauty and the Beast franchises in Lists A and C respectively.",
+        "most_diverse_list_reasoning": "List B is the most diverse because it has the highest scores in Genre Diversity and Theme Diversity.  Its genre range is significantly broader than Lists A and C, and its themes are more varied and richer. While all three lists contain a mix of popular and less popular films, List B's superior diversity in genre and theme makes it the most diverse overall.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 109,
-        "comparison": "List A contains a mix of popular and less popular movies, covering various genres and themes, but with some repetition. List B is similar, with a slightly wider range of popular movies and franchises represented. List C boasts the greatest diversity, including blockbuster movies alongside more niche films, and has a significantly wider range of genres and themes, although some thematic overlap exists.",
-        "most_diverse_list_reasoning": "List C stands out due to its balanced representation of both popular and less popular films, resulting in higher scores across all diversity categories.  The inclusion of movies spanning a range of genres, including animation, action, sci-fi, drama, mystery, and historical war films, combined with a varied selection of themes such as heroism, social injustice, and personal redemption, gives it a clear edge in terms of overall diversity.",
+        "comparison": "List A, B, and C all show moderate to high diversity in terms of popularity, genre, and theme.  List A and B have similar diversity scores across the board, while List C shows a slightly higher genre diversity score. All three lists include movies from multiple franchises.",
+        "most_diverse_list_reasoning": "List C edges out Lists A and B due to its higher genre diversity score. While all three lists exhibit a good balance of popular and niche films and cover a range of themes, List C's broader genre representation makes it the most diverse.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 111,
-        "comparison": "List A demonstrates greater diversity in genre and theme compared to Lists B and C.  While Lists B and C include popular franchises like Pirates of the Caribbean and Star Wars, they have less thematic and genre variety. List A balances popular movies with niche films, resulting in a richer overall selection.",
-        "most_diverse_list_reasoning": "List A stands out due to its superior genre and thematic diversity.  It avoids relying heavily on established franchises, opting for a broader representation of filmmaking styles and storytelling approaches.  Although Lists B and C feature some genre variation, their inclusion of multiple films from the same franchises limits the overall diversity of themes and genres compared to List A.",
+        "comparison": "List A stands out with a balanced representation across popularity, genre, and theme diversity, achieving a score of 3 in each category.  Lists B and C both receive a score of 2 across the board, indicating less diversity. While Lists B and C include movies from the same franchise, this factor is outweighed by the superior diversity of List A.",
+        "most_diverse_list_reasoning": "List A exhibits the highest level of diversity across all three categories: Popularity Diversity, Genre Diversity, and Theme Diversity.  It achieves a score of 3 in each category, showcasing a well-balanced selection of popular and niche films, a wide range of genres, and a broad spectrum of themes. Lists B and C, while containing some variety, show less balance and a repetition of genres and themes, resulting in lower diversity scores.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 113,
-        "comparison": "List A, B, and C each offer a blend of popular and less mainstream films, resulting in a moderate popularity diversity across all three.  Genre diversity is slightly higher in List C, encompassing animation (Inside Out) and a broader range of action-oriented movies.  List A and B show some thematic overlap, while List C demonstrates slightly less repetition.  The timespans covered by the lists are comparable, with List C having the largest range of release years (1988-2017), whereas A's span is 1988-2010 and B's is 1988-2012. All three lists include at least two movies from the same franchise.",
-        "most_diverse_list_reasoning": "List C exhibits the greatest genre diversity, with a more varied selection of genres compared to Lists A and B. While thematic diversity is comparable across the lists, List C's broader genre range gives it a slight edge.",
+        "comparison": "List A, B, and C all received similar scores across the board in terms of Popularity Diversity, Genre Diversity, and Theme Diversity.  All three lists show a mix of popular and less popular films, a range of genres, and a variety of themes, although none are exceptionally high in any category.  List C has a slightly higher Genre Diversity score, suggesting a wider range of genres represented.  All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "While the numerical scores are very close, List C edges out the others due to its slightly higher Genre Diversity score.  This suggests a broader representation of film genres compared to Lists A and B, making it the most diverse.",
         "gold": "B",
         "output": "C",
         "correct": false
     },
     {
         "participation": 114,
-        "comparison": "List A contains a variety of movies ranging from popular blockbusters to independent films, but lacks franchise inclusion.  List B shows a similar variety but includes movies from the Harry Potter franchise. List C boasts the most diversity in terms of popularity and genre, incorporating both critically acclaimed and mainstream movies and a wider range of genres, while also including a Harry Potter film.",
-        "most_diverse_list_reasoning": "List C stands out due to its higher scores in Popularity Diversity and Genre Diversity. While all three lists exhibit a moderate Theme Diversity, List C's broader genre representation and balanced inclusion of popular and niche films make it the most diverse.",
+        "comparison": "List A, B, and C all share a similar time span (1993-2017) and include a mix of popular and less mainstream films.  However, List C stands out with higher scores in Popularity Diversity and Genre Diversity (both 3), indicating a more balanced representation of different movie types and genres.  Lists A and B both have scores of 2 for these categories. While List B and C both include movies from the same franchise, List C's broader genre diversity makes it more diverse overall.",
+        "most_diverse_list_reasoning": "List C achieves the highest overall diversity due to its superior scores in Popularity Diversity and Genre Diversity.  Although List B also includes movies from the same franchise, List C's wider range of genres and better balance between popular and niche films make it the most diverse.",
         "gold": "B",
         "output": "C",
         "correct": false
     },
     {
         "participation": 115,
-        "comparison": "List A contains a variety of genres and themes, but has less diversity in popularity compared to List B.  List B has a good balance of popular and less mainstream films and a higher diversity in themes. List C has a similar genre and theme range to List B, but does not include movies from the same franchise, impacting its diversity score.",
-        "most_diverse_list_reasoning": "List B exhibits the highest diversity across all categories. It boasts a balanced mix of popular and niche films, a broad range of genres, and a rich variety of themes, while also including multiple movies from the same franchise (MCU and LOTR). Although List A has a higher genre diversity score than List B, this advantage is countered by B's significantly higher theme and popularity diversity scores, and by B's inclusion of movies from the same franchise. List C, while including varied genres and themes, misses the mark by not including at least two movies from the same franchise.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A shows moderate diversity in popularity, genre, and theme. List B demonstrates high diversity across all three categories, with a good balance of popular and niche films, a wide range of genres, and varied themes. List C has a moderate popularity diversity but lower genre and theme diversity compared to List B.  List B stands out due to its inclusion of movies from different franchises, further enhancing its diversity.",
+        "most_diverse_list_reasoning": "List B is the most diverse because it achieves high scores across all three diversity metrics (Popularity, Genre, and Theme).  It successfully balances popular and niche films, includes a wide variety of genres, and explores a broad range of themes.  The inclusion of movies from multiple franchises adds another layer of diversity.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 116,
-        "comparison": "List A, B and C each contain a mix of blockbuster and independent films, resulting in moderate popularity diversity scores.  List A exhibits the greatest genre and thematic diversity, encompassing a broader spectrum of genres and themes compared to Lists B and C.  Lists B and C show some repetition in genres and themes. All three lists include movies from the same franchise.",
-        "most_diverse_list_reasoning": "List A stands out due to its superior genre and theme diversity. While all three lists have a mix of popular and less popular films, List A's movies explore a wider array of genres and more nuanced themes.  The inclusion of films like 'The Big Lebowski' and 'Django Unchained' significantly contributes to this. Although Lists B and C have some genre and thematic variety, they lack the breadth and depth of List A.",
+        "comparison": "List A, B, and C all contain a mix of blockbuster and independent films, resulting in a moderate popularity diversity score of 2 for each list.  List A stands out with a higher genre and theme diversity score of 3, compared to 2 for both List B and C. While all three lists include movies from the same franchise, List A's genre and theme diversity are more pronounced.  List B and C have similar diversity scores across all categories.",
+        "most_diverse_list_reasoning": "List A achieves the highest scores in both Genre Diversity and Theme Diversity, indicating a wider range of genres and thematic explorations compared to Lists B and C. Although all three lists have a moderate Popularity Diversity, List A's superior genre and theme diversity make it the most diverse overall.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 118,
-        "comparison": "List A, B, and C each offer a diverse range of films, spanning various genres and themes.  List A stands out with its broader genre representation, encompassing biography, drama, thriller, action, adventure, fantasy, crime, and comedy, among others.  List B also demonstrates good genre diversity, but List C shows slightly less variety.  In terms of popularity diversity, all three lists contain a good mix of blockbusters and less mainstream titles. Thematic diversity is similar across the three lists, with each exploring a range of themes although some minor overlap is present.  All three lists also include at least one movie franchise.",
-        "most_diverse_list_reasoning": "List A is chosen as the most diverse because of its superior genre diversity compared to List B and C.  While all three lists exhibit a balanced mix of popular and niche films and a reasonable variety of themes, List A's wider range of distinct genres gives it the edge in overall diversity.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A stands out with its broader genre representation, including animation, western, and family films, which are less prevalent in Lists B and C.  While all three lists include a mix of popular and less-known movies, List A's time span is wider, covering more years.  The thematic diversity is comparable across the three lists, with each exploring various themes, although some overlap exists within each list.  All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List A is chosen as the most diverse because of its wider range of genres, including genres underrepresented in the other lists.  The broader time span also contributes to its diversity, showcasing films from a longer period. While thematic diversity is similar across all three lists, List A's inclusion of more varied genres gives it a slight edge.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 117,
-        "comparison": "List A, B, and C all demonstrate a good level of diversity in terms of genre and theme.  List A has a slight edge in theme diversity, exploring more unique thematic territories compared to List B and C which share some thematic overlap (adventure and overcoming adversity).  List C has a broader timespan than A and B. List B and C both include multiple movies from the same franchise (Star Wars/Pixar in B, Lord of the Rings/Harry Potter in C), while List A only has one film possibly from a franchise (Star Wars), giving List A a slight edge in that category too.",
-        "most_diverse_list_reasoning": "While all three lists show a good balance of popular and niche films, and a variety of genres, List A stands out for its more unique theme diversity compared to the other lists.  Lists B and C both include multiple films from the same franchises which reduces the diversity scores.",
+        "comparison": "List A, B, and C all show a similar level of Popularity Diversity, each receiving a score of 2.  In terms of Genre and Theme Diversity, Lists A and B both receive scores of 3 and 2 respectively, while List C gets a 3 and a 2.  List A has a time span from 2001-2016, List B from 1989-2016, and List C from 2000-2012. All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "Although the numerical scores are fairly close, List B stands out due to its broader time span, encompassing almost three decades of film releases (1989-2016), compared to List A (2001-2016) and List C (2000-2012). This wider temporal range suggests a more extensive representation of cinematic trends and styles. While all three lists exhibit good genre diversity, List B's inclusion of films spanning a longer period arguably provides a richer and more varied representation of filmmaking across different eras.",
         "gold": "A",
-        "output": "A",
-        "correct": true
-    },
-    {
-        "participation": 121,
-        "comparison": "List A and List C are nearly identical, containing a mix of popular and independent films, and a range of genres and themes. List B shares similarities but includes a Marvel film, slightly reducing its diversity compared to A and C.  All three lists show moderate diversity scores across all categories.",
-        "most_diverse_list_reasoning": "Lists A and C are equally diverse, with a balanced mix of popular and independent movies, multiple genres, and a wide range of themes without too much repetition.  While List B has some variety, the inclusion of a major franchise film like Iron Man slightly reduces its overall diversity compared to the other two lists.  The inclusion of more niche titles in Lists A and C makes them edge out List B.",
-        "gold": "B",
-        "output": "A",
+        "output": "B",
         "correct": false
     },
     {
+        "participation": 121,
+        "comparison": "Lists A, B, and C all received a score of 2 across the board for Popularity Diversity, Genre Diversity, and Theme Diversity.  List B is the only list that includes movies from the same franchise (the Marvel Cinematic Universe).  The time span for all three lists is roughly the same, from the early 2000s to 2017.",
+        "most_diverse_list_reasoning": "While all three lists show similar diversity scores, List B stands out slightly because it includes movies from the same franchise. This adds another layer of diversity by showcasing a cohesive cinematic universe alongside standalone films.  The inclusion of a franchise suggests a more curated approach to selection, potentially indicating a more deliberate attempt at variety.",
+        "gold": "B",
+        "output": "B",
+        "correct": true
+    },
+    {
         "participation": 122,
-        "comparison": "List A, B, and C all contain a mix of popular and less mainstream films, resulting in moderate popularity diversity scores.  List B shows slightly higher diversity in popularity compared to A and C. Regarding genre diversity, all three lists show some repetition within genres, with List B exhibiting a slightly wider range of genres.  Theme diversity is similar across the lists, with subtle variations in thematic exploration. List B demonstrates more thematic breadth than A and C.  The time spans covered by the lists are comparable. Only List A and B include movies from the same franchise. Considering all factors, List B emerges as the most balanced list, offering a relatively strong mix of popularity, genres, and themes.",
-        "most_diverse_list_reasoning": "List B exhibits a slightly better balance across all diversity metrics. While the genre and theme diversity scores are similar across all three lists, List B presents a more extensive range of movie popularity and more varied themes compared to the other two lists.  The inclusion of a movie franchise in List B and A is a point of note, but doesn't outweigh the other diversity factors when making the final decision. The slight edge in both popularity and thematic diversity makes List B the most diverse.",
+        "comparison": "List A, B, and C all show a decent variety in their movie selections, but they all suffer from a lack of diversity in genres and themes.  List B has a slightly higher popularity diversity score, suggesting a better balance between mainstream and niche films.  List C is the only list without any franchise inclusion, which could be seen as either positive or negative depending on the desired characteristics of the list.  All three lists cover a reasonable timespan.",
+        "most_diverse_list_reasoning": "While none of the lists are exceptionally diverse, List B edges out the others due to its slightly higher popularity diversity score, indicating a better mix of popular and niche films.  The inclusion of a movie franchise isn't necessarily a negative, but List C's lack of franchise inclusion makes it slightly more unique.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 127,
-        "comparison": "List A, B, and C all demonstrate a decent level of diversity across popularity, genre, and theme.  List A and B have a slight edge in genre diversity, while List B shows slightly better theme diversity than List A and C. List C has the shortest time span compared to List A and B.",
-        "most_diverse_list_reasoning": "List B achieves the most balanced diversity across all categories. While List A and C have strong genre diversity, List B exhibits a slightly more even spread of themes and a better balance in popularity diversity.  Although the time span is not significantly different across lists,  List B shows a slightly more significant variety across themes that are explored in the movies than the other two lists.",
+        "comparison": "List A, B, and C all show a similar level of popularity diversity, with scores of 2 out of a possible higher score.  List B and C have a slightly higher Theme Diversity score (3) compared to List A (2). All three lists have a Genre Diversity score of 3, indicating a wide range of genres.  None of the lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "While all three lists are comparable in terms of genre and popularity diversity, List B edges out slightly due to its higher Theme Diversity score.  The themes explored in List B seem more varied and less repetitive than in Lists A and C, making it the most thematically diverse.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 126,
-        "comparison": "List A contains a mix of popular and niche movies, covering various genres and themes, but has less genre and theme diversity compared to List B and C. List B demonstrates good diversity across popularity, genre, and theme, with multiple franchises included. List C boasts high genre and theme diversity, but has slightly lower popularity diversity and no franchise inclusion.",
-        "most_diverse_list_reasoning": "List B and C both show a higher level of diversity than List A. While List C has slightly higher genre and theme diversity, List B's inclusion of multiple franchises adds another layer of complexity and interest, making it slightly more diverse overall.",
+        "comparison": "List A and List B both include movies from the same franchise, while List C does not. List B has a higher diversity score across all categories compared to List A. List C has a similar diversity score to List B, but lacks franchise inclusion. ",
+        "most_diverse_list_reasoning": "List B exhibits the highest level of diversity across popularity, genre, and theme. While List C also scores highly on genre and theme diversity, List B's inclusion of movies from multiple franchises adds another layer of diversity, making it the most well-rounded and diverse list.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 123,
-        "comparison": "List A contains a mix of popular and less popular movies, spanning various genres and themes. List B shows a similar variety but has some thematic overlaps. List C exhibits a wider range of popularity, with a mix of blockbusters and independent films, and offers a broader thematic exploration, including some franchise inclusion.",
-        "most_diverse_list_reasoning": "List C stands out due to its balanced mix of popular and niche movies, resulting in higher popularity diversity.  Further, it showcases a greater thematic range than Lists A and B, exploring diverse and unique themes in each film, and also includes a movie franchise. Although the genre diversity is not overwhelmingly different, the combination of popularity, thematic, and franchise diversity makes List C the most diverse.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A boasts a high Theme Diversity score (3), indicating a wide variety of thematic explorations.  List B has lower scores across the board, suggesting less diversity in popularity, genre, and theme. List C achieves a balance, with high scores in Popularity Diversity and Theme Diversity (both 3), and a decent Genre Diversity score (2).  The inclusion of a movie franchise in List C is a notable factor.",
+        "most_diverse_list_reasoning": "List C stands out due to its higher scores in Popularity Diversity and Theme Diversity, coupled with the inclusion of a movie franchise, which adds another layer of complexity and potential for thematic connections. While List A has a high Theme Diversity score, List C's more balanced approach across all categories makes it the most diverse.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 129,
-        "comparison": "List A, B, and C each offer a diverse range of films. List A stands out with its broad genre and thematic representation, showcasing a balance between popular and niche films. List B also demonstrates good diversity but features movies from the same franchise. List C shows a moderate level of diversity across genres and themes but has a less balanced representation of popular versus niche movies.",
-        "most_diverse_list_reasoning": "List A is selected as the most diverse because it achieves a high level of genre and thematic diversity without relying heavily on blockbuster films or including movies from the same franchise.  The inclusion of both popular and independent films demonstrates a wider range of cinematic styles and audience appeal.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A stands out with its balanced representation of popular and niche films, resulting in high scores across popularity, genre, and theme diversity. List B also shows strong diversity but has slightly lower theme diversity due to some thematic repetition. List C has a moderate level of diversity across all categories.",
+        "most_diverse_list_reasoning": "List A achieves the highest overall diversity. While List B has a high popularity diversity score, List A's balanced scores across all three diversity categories (popularity, genre, and theme) and the absence of franchise inclusion make it the most diverse.",
         "gold": "B",
         "output": "A",
         "correct": false
     },
     {
         "participation": 125,
-        "comparison": "List A contains a mix of popular and independent films, offering good genre and theme diversity, but lacks franchise inclusion. List B shows similar diversity but with a slightly more limited genre range. List C demonstrates the highest diversity across popularity, genre, and themes, maintaining a good balance between popular and niche films.  Additionally, the time span of List C is notably longer, showing more of a range across different eras.",
-        "most_diverse_list_reasoning": "List C is the most diverse because it achieves a high score across all diversity categories (Popularity, Genre, Theme). It includes a good balance of popular and less mainstream films, its genre and thematic range is broader than lists A and B, and its time span is also more extensive.",
+        "comparison": "List A, B, and C all show a decent variety in their movie selections.  List A has a slight edge in genre diversity, covering a wider range of genres than List B. List C boasts the highest scores across popularity, genre, and theme diversity, suggesting a more balanced and varied selection of films.  All three lists lack franchise inclusion.",
+        "most_diverse_list_reasoning": "List C achieves the highest scores across all three diversity categories (Popularity, Genre, and Theme).  While List A shows strong genre diversity, List C's more balanced approach across all aspects makes it the most diverse.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 133,
-        "comparison": "List A contains a mix of popular and niche films, with a variety of genres and themes, but lacks movies from the same franchise. List B has a similar diversity in terms of popularity, genres, and themes, but includes movies from established franchises. List C presents a good mix of popular and niche films with a wide range of genres and themes, and has franchise inclusion.",
-        "most_diverse_list_reasoning": "List B stands out due to its high scores across all diversity categories (Popularity Diversity, Genre Diversity, and Theme Diversity) and the inclusion of movies from established franchises.  While List C also shows good genre diversity, its overall theme diversity is slightly lower. List A, while diverse, lacks franchise representation.",
+        "comparison": "List A, B, and C each offer a diverse range of films, but with varying strengths. List A demonstrates good genre and theme diversity but lacks franchise inclusion. List B boasts higher popularity diversity and includes films from established franchises, but its theme diversity is slightly lower than List A. List C shows strong genre diversity and includes a franchise film, but its popularity diversity is similar to List A.  All three lists cover a respectable timespan.",
+        "most_diverse_list_reasoning": "List B emerges as the most diverse because it effectively balances popularity diversity with genre and theme diversity. The inclusion of films from established franchises adds another layer of depth, showcasing a broader spectrum of cinematic experiences than the other lists.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 131,
-        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List A has a slightly lower genre diversity score than List B due to the repetition of action and adventure films. List C has a comparable diversity level to List A.  The time spans of the lists are relatively similar, with all containing movies released between the 1990s and 2010s. All three lists include at least two movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B demonstrates the highest genre diversity with a score of 3, encompassing a wider range of genres than Lists A and C. While all lists include popular and less popular films and cover similar thematic ranges, List B's broader genre representation makes it the most diverse.",
+        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List B stands out with a higher genre diversity score (3) compared to the score of 2 for Lists A and C.  All three lists include movies from at least two franchises. The time span is relatively similar across the three lists, with List B having a slightly shorter time span (1991-2011) compared to Lists A and C (1994-2017 and 1995-2017, respectively).",
+        "most_diverse_list_reasoning": "List B achieves a higher genre diversity score than Lists A and C, indicating a wider range of film genres. While the popularity and theme diversity scores are similar across all three lists, the broader genre representation in List B makes it the most diverse.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 134,
-        "comparison": "List A, B, and C each offer a diverse range of films across various genres and themes. List A stands out with its balanced mix of blockbuster and independent movies, resulting in higher popularity diversity. List B includes more franchises than A and C, showcasing more established cinematic universes. List C has a slightly lower genre and theme diversity than A and B, despite still presenting a good variety.",
-        "most_diverse_list_reasoning": "List A achieves the most balanced diversity across all the criteria. While List B boasts multiple franchises, List A's superior popularity diversity and comparable genre and theme diversity make it the most well-rounded choice.  List C has a lower diversity score across the board.",
+        "comparison": "List A, B, and C all contain a variety of movies across different genres and themes.  List A and B have higher genre diversity scores than List C. List A has a slightly higher theme diversity score than List B.  List A has a higher popularity diversity score than both List B and C. All three lists include movies from multiple franchises.",
+        "most_diverse_list_reasoning": "List A achieves the highest scores across all diversity categories (Popularity, Genre, and Theme). While Lists B and C show diversity, List A's more balanced representation across popularity and themes makes it the most diverse.",
         "gold": "B",
         "output": "A",
         "correct": false
     },
     {
         "participation": 135,
-        "comparison": "List A and List B have similar popularity and theme diversity scores, but List A shows slightly higher genre diversity. List C stands out with the highest scores across all three diversity categories (Popularity, Genre, and Theme), indicating a more balanced and varied selection of movies.",
-        "most_diverse_list_reasoning": "List C exhibits the highest level of diversity across popularity, genre, and theme.  While List A boasts a broad range of genres, List C's combination of blockbuster films and critically acclaimed, less mainstream movies, along with its varied themes, makes it the most diverse.",
+        "comparison": "List A, B, and C all contain a mix of popular and niche films, resulting in similar Popularity Diversity scores.  List A and B have a Genre Diversity score of 3, while List C boasts a score of 3.  List A and B have a Theme Diversity score of 2, while List C achieves a score of 3.  List A has a wider time span (1990-2014) compared to Lists B and C (1990-2005). All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List C stands out due to its higher scores across all three diversity categories (Popularity, Genre, and Theme). While the time span is similar to Lists B, the superior diversity scores in other aspects make List C the most diverse.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 137,
-        "comparison": "List A, List B, and List C all contain a mix of blockbuster and less popular movies, resulting in moderate popularity diversity scores.  List A and B both have a score of 2, while List C has a score of 3, indicating slightly better balance. Genre and Theme Diversity scores vary across lists.  List C showcases the best genre diversity (score of 3), offering a broader range of genres compared to lists A and B. List A and B have a score of 2 in this category, indicating that while they include multiple genres, some overlap exists.  Similarly, List C demonstrates better theme diversity (score of 2) than lists A and B (both scores of 2). However, the difference is not significant. All lists include movies spanning a considerable number of years, and all include movies from the same franchise.",
-        "most_diverse_list_reasoning": "List C stands out due to its higher popularity diversity and genre diversity scores. Although the theme diversity score is similar across the three lists, the stronger genre diversity suggests a wider range of cinematic experiences.  The inclusion of diverse blockbuster and independent films alongside a varied range of genres makes List C the most comprehensive in terms of diversity.",
+        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme, with scores of 2 or 3.  List C shows a higher genre diversity (score 3) compared to Lists A and B (score 2), but lower theme diversity (score 2) compared to Lists A and B (score 2 or 3). All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List C exhibits the highest genre diversity with a score of 3, indicating a broader range of genres represented than Lists A and B. While its theme diversity score is slightly lower at 2, the overall balance between genre and theme diversity makes List C the most diverse.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 138,
-        "comparison": "Lists A, B, and C all show moderate diversity in terms of popularity, genre, and theme.  List A has a slightly wider timespan than the others.  All three lists include movies from the same franchise.",
-        "most_diverse_list_reasoning": "While all three lists exhibit similar levels of diversity, List A features the widest range of release years, spanning from 1993 to 2011. This broader temporal scope suggests a more extensive representation of cinematic trends and styles compared to the other lists.  Although all lists include franchise films, List A still provides enough variety to stand out.",
+        "comparison": "Lists A, B, and C all show a similar level of diversity based on the provided scores.  Each list has a score of 2 for Popularity Diversity, Genre Diversity, and Theme Diversity.  All three lists also include movies from the same franchise.  The main difference lies in the time span of the movies included. List A spans from 1993 to 2011, List B from 1997 to 2011, and List C from 2002 to 2013.",
+        "most_diverse_list_reasoning": "While the numerical scores are identical, List A has the widest time span, covering more years (1993-2011) than List B (1997-2011) and List C (2002-2013). A wider time span suggests a broader representation of cinematic trends and styles. Although the diversity scores are the same, the longer time span gives List A a slight edge in overall diversity.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 136,
-        "comparison": "List A, B, and C each offer a blend of popular and less mainstream films, resulting in a balanced popularity diversity.  Genre diversity is slightly higher in List C due to its broader representation, although List A also demonstrates significant variety. Theme diversity shows some overlap across lists, with List A showcasing a more expansive range of thematic explorations. All three lists include at least two movies from the same franchise. List C has a shorter time span than List A, spanning from 1999 to 2008, while List A spans from 1999 to 2015 and List B spans from 1999 to 2011.",
-        "most_diverse_list_reasoning": "List C stands out due to its superior genre diversity, offering a wider range of distinct genre combinations compared to Lists A and B. While the thematic explorations in List A are arguably more expansive, List C's more balanced genre diversity gives it a slight edge in overall diversity.",
+        "comparison": "List A, B, and C all received a score of 2 for Popularity Diversity and Theme Diversity.  List A and B received a score of 2 for Genre Diversity, while List C received a score of 3.  All three lists include movies from the same franchise.  List C has a slightly shorter time span (1999-2008) compared to List A (1999-2015) and List B (1999-2011).",
+        "most_diverse_list_reasoning": "List C stands out with a higher Genre Diversity score (3) compared to Lists A and B (both 2). While the Theme and Popularity Diversity scores are similar across all three lists, the wider range of genres in List C suggests a more diverse selection of films.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 139,
-        "comparison": "Lists A, B, and C all show moderate diversity in terms of popularity, genre, and theme.  List A has a slightly better time span than the other lists.  None of the lists contain movies from the same franchise.",
-        "most_diverse_list_reasoning": "While all three lists demonstrate a similar level of diversity across popularity, genre, and theme, List B edges out slightly due to its broader representation of genres and themes, even though the scores are all very similar.",
+        "comparison": "Lists A, B, and C all show a similar level of diversity across popularity, genre, and theme.  Each list attempts to balance popular and niche films, but none achieve a high level of balance.  Genre and theme diversity are also moderate, with some repetition across categories.  None of the lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "While all three lists have similar scores, List B has a slightly wider range of genres represented, including horror and fantasy, which gives it a marginal edge in terms of overall diversity.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 140,
-        "comparison": "List A contains movies from the Star Wars franchise and some less popular films, resulting in moderate diversity scores across popularity, genre, and theme. List B demonstrates higher genre and theme diversity with a broader range of genres and themes, despite having a similar popularity diversity score to List A and lacking franchise inclusion.  List C shows moderate diversity in popularity, genre, and theme, similar to List A, and also lacks franchise inclusion.",
-        "most_diverse_list_reasoning": "List B stands out due to its higher genre and theme diversity scores. While all lists show moderate popularity diversity, List B's wider range of genres and themes, including action, sci-fi, horror, mystery, and biographical elements, makes it the most thematically and generically diverse.",
+        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List B stands out with a higher genre and theme diversity score compared to Lists A and C.  List A includes movies from the same franchise, while Lists B and C do not.  All lists cover a similar time span.",
+        "most_diverse_list_reasoning": "List B achieves the highest scores in genre and theme diversity, indicating a broader range of cinematic styles and narrative explorations. While List A has a slightly higher popularity diversity, the more significant difference in genre and theme diversity makes List B the most diverse overall.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 145,
-        "comparison": "List A and List B have similar diversity scores, with a slight edge to List B in terms of genre diversity due to the inclusion of animation and sci-fi.  List C stands out with higher scores in Popularity Diversity and Genre Diversity, showcasing a broader range of both popular and niche films, and a more extensive genre variety. However, List C's Theme Diversity score is lower than List A and List B.  List A and B both contain movies from the same franchise, while List C does not.",
-        "most_diverse_list_reasoning": "List C demonstrates the greatest overall diversity. While its Theme Diversity is slightly lower than Lists A and B, its significantly higher Popularity Diversity and Genre Diversity scores, along with the absence of franchise repetition, make it the most diverse overall. The list's balance of popular and less popular films, coupled with a wider range of genres, contributes to its higher diversity score.",
+        "comparison": "List A and B have similar diversity scores, with a slight edge to List B due to a wider range of genres and themes, although both lists suffer from genre and theme repetition. List C boasts higher genre diversity and a more balanced popularity mix, but its theme diversity is lower than List B.  All three lists include a mix of popular and less popular films, but List C shows a better balance in popularity diversity.",
+        "most_diverse_list_reasoning": "List C demonstrates the best overall diversity. While List B has a slightly higher theme diversity score, List C's superior genre diversity and more balanced popularity representation make it the most diverse overall. The absence of franchise inclusion in List C further contributes to its broader representation of films.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 144,
-        "comparison": "List A, B, and C all include a mix of blockbuster and independent films, demonstrating some level of popularity diversity.  List B shows the highest genre and theme diversity compared to A and C. List A and C have similar genre and theme diversity scores. List B is the only list that includes movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B stands out due to its higher scores across all diversity categories.  The inclusion of diverse genres such as animation (Finding Nemo) and horror (Get Out), along with a broader thematic range that encompasses social commentary, historical events, and various character journeys, sets it apart. The presence of a movie franchise further adds to its overall diversity, as it showcases a successful film series within the broader context of varied movie styles.",
+        "comparison": "List A, B, and C all contain a variety of movies, but differ in their diversity scores and franchise inclusion.  List A has lower diversity scores across the board compared to List B and C. List B has the highest popularity diversity score (3), indicating a good balance of popular and niche films.  List C has similar diversity scores to List A.  List B also includes movies from the same franchise, while Lists A and C do not. ",
+        "most_diverse_list_reasoning": "List B stands out due to its higher popularity and genre diversity scores. The inclusion of movies from the same franchise adds another layer of potential thematic connections and audience appeal, although this is not the primary factor in determining diversity.  The higher scores across multiple diversity metrics suggest a more varied and engaging collection of films.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 146,
-        "comparison": "List A, B, and C all contain a mix of popular and less popular films, spanning various genres and themes.  List A stands out for its particularly broad genre diversity, including animation, horror, and biography, alongside the more common action and adventure films. List B also shows good diversity, but has more repetition in genres. List C includes more franchises (Star Wars and Shrek), which could be considered either positive or negative depending on whether franchise inclusion is valued for diversity. ",
-        "most_diverse_list_reasoning": "List A achieves a high level of diversity across all aspects.  Its genre diversity is exceptional, encompassing a wide range of styles with minimal repetition, and its theme diversity is similarly strong. While List B and C contain a good mix of films, they do not reach the same level of genre variety as List A.",
+        "comparison": "List A, B, and C all share a similar time span (1993-2018) and include blockbuster and less popular films.  List A and C achieve higher diversity scores across popularity, genre, and theme compared to List B.  While all lists include movie franchises, List C stands out by including two distinct franchises (Star Wars and Shrek), showcasing broader representation than List A (only Star Wars) and List B (only Star Wars).",
+        "most_diverse_list_reasoning": "List C demonstrates the highest level of diversity.  Although all three lists have similar popularity and genre diversity scores, List C's inclusion of two different franchises (Star Wars and Shrek) significantly enhances its overall diversity compared to Lists A and B, which only feature the Star Wars franchise.  This indicates a wider range of movie selections and avoids over-representation of a single franchise.",
+        "gold": "A",
+        "output": "C",
+        "correct": false
+    },
+    {
+        "participation": 147,
+        "comparison": "Lists A, B, and C all show a similar level of diversity in terms of popularity, genre, and theme.  List A has a slightly better time span, covering more years.  All three lists include movies from the same franchise, which is a positive aspect of each list.",
+        "most_diverse_list_reasoning": "While all three lists have similar diversity scores, List A has a slightly broader time span, showcasing movies from a longer period.  The inclusion of franchises is a common factor across all lists, so it doesn't significantly differentiate them.  Therefore, List A is chosen for its slightly better time span.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
-        "participation": 147,
-        "comparison": "List A, B, and C all show a moderate level of diversity across popularity, genre, and theme.  List A has a slightly stronger showing in popularity diversity, while List B has a more balanced genre and theme representation than A or C. List C has a wider range of genres represented but shows less diversity in terms of popularity.",
-        "most_diverse_list_reasoning": "Although List B doesn't have the highest score in any single category, it presents a more balanced overall diversity across popularity, genre, and theme when compared to Lists A and C.  List A is slightly more diverse in popularity and List C in genre, but List B maintains a consistent level across all categories, making it the most well-rounded and diverse list.",
-        "gold": "A",
-        "output": "B",
-        "correct": false
-    },
-    {
         "participation": 150,
-        "comparison": "List A and List B are nearly identical, both showcasing a blend of popular and niche films across diverse genres and themes.  List C also offers genre and thematic variety but includes a higher proportion of popular movies and has one film franchise represented. ",
-        "most_diverse_list_reasoning": "While all three lists exhibit a degree of diversity, List A and List B display a slightly more balanced representation of popular and niche films.  List A wins the tie-breaker because of higher scores in genre and theme diversity.  List C's inclusion of a movie franchise slightly detracts from its overall diversity compared to Lists A and B.",
+        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme.  List C has comparable genre and theme diversity to Lists A and B, but lower popularity diversity.  List A has a slightly higher genre diversity score than List B.  List C is the only list with franchise inclusion. ",
+        "most_diverse_list_reasoning": "While the numerical scores are close, List A edges out the others due to its higher genre diversity score and the absence of franchise inclusion, which can skew the perception of diversity.  A list with a wider range of genres and no franchise bias is considered more diverse. ",
         "gold": "B",
         "output": "A",
         "correct": false
     },
     {
         "participation": 148,
-        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List A has a slightly wider range of genres, including a documentary, while List B and C are heavily weighted towards drama and action.  All three lists include both blockbuster and independent films, but none exhibit exceptional diversity in any category.",
-        "most_diverse_list_reasoning": "While all three lists demonstrate a balance of blockbuster and independent films, and touch upon various genres and themes, List A shows slightly more diversity in genre due to its inclusion of a documentary ('Super Size Me').  The difference is marginal, but List A's broader genre representation gives it a slight edge in overall diversity.",
+        "comparison": "Lists A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List A has a slightly wider range of genres, including documentary, while List B and C are more focused on action, drama, and thriller. All three lists include a mix of blockbuster and independent films, and all include movies from the same franchise. The time spans are similar across all three lists, covering roughly two decades.",
+        "most_diverse_list_reasoning": "While all three lists demonstrate similar levels of diversity, List A edges out slightly due to its inclusion of a documentary, resulting in a slightly broader genre representation than Lists B and C.  The thematic diversity is comparable across all three lists.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 152,
-        "comparison": "List A, B, and C each offer a blend of popular and niche films, showcasing genre and thematic variety.  List A and C both include movies from the same franchise, while list B does not.  List A has a slightly earlier start date than the others.",
-        "most_diverse_list_reasoning": "While all three lists demonstrate diversity, List C edges out the others due to its broader time span, covering more years than List A and B.  The inclusion of films like 'Gravity' and 'The Intern' adds unique thematic elements not as strongly present in the other lists, making List C's overall thematic diversity slightly stronger.  The genre diversity across all lists is similar.",
+        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List A and C both include movies from the same franchise, while List B does not.  List A and C have slightly higher genre diversity scores than List B.  The time spans are similar across all three lists.",
+        "most_diverse_list_reasoning": "While the overall diversity scores are relatively close, List A edges out the others due to its higher genre diversity score and the inclusion of movies from the same franchise, suggesting a more curated approach to building the list.  The inclusion of franchises indicates a potential focus on established narratives and their evolution, adding another layer of thematic complexity.",
         "gold": "A",
-        "output": "C",
-        "correct": false
+        "output": "A",
+        "correct": true
     },
     {
         "participation": 151,
-        "comparison": "List A and List B share several movies, including Back to the Future, The Shawshank Redemption, Hacksaw Ridge, Pirates of the Caribbean, and Miss Congeniality.  List B adds Creed and Catch Me If You Can, while List C includes Die Hard, A Beautiful Mind, 300, and The Social Network.  List A focuses on a broader range of genres and themes, while Lists B and C have a more specific focus and higher franchise inclusion, though some of the genres are repeated.  List A and B have the highest Genre diversity score of 3, with list B also having a higher Popularity diversity score than list A.",
-        "most_diverse_list_reasoning": "List B is the most diverse because it has a high popularity diversity score, a high genre diversity score, and includes movies from different franchises.  While List A has high genre and theme diversity, List B combines a more balanced mix of popular and less popular films, leading to a wider appeal. Although List B has some repeated themes, it still presents a broad variety of genres.  List C has the lowest scores in all categories.",
+        "comparison": "List A, B, and C all contain a mix of popular and less popular movies, resulting in moderate popularity diversity scores.  List B stands out with a higher score, suggesting a better balance.  Genre diversity is high across all three lists, with List A and B showing slightly more variety.  Theme diversity is moderate for all lists, with some thematic repetition.  List B includes movies from the same franchise, while A and C do not.  List A and B have the same time span, while List C has a shorter time span.",
+        "most_diverse_list_reasoning": "List B exhibits the best overall diversity. While all three lists have good genre diversity, List B has a higher popularity diversity score, indicating a better mix of popular and niche films.  The inclusion of movies from the same franchise adds another layer of diversity, showcasing different entries within established cinematic universes. Although theme diversity is similar across the lists, List B's stronger showing in popularity diversity and the inclusion of franchises makes it the most diverse.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 154,
-        "comparison": "List A and List B have similar diversity scores, with moderate diversity across popularity, genre, and theme.  List C exhibits higher diversity scores in all three categories, showcasing a more balanced selection of popular and niche films, a wider variety of genres, and a more expansive thematic range.",
-        "most_diverse_list_reasoning": "List C stands out due to its higher diversity scores across all three assessed categories.  It includes a better balance of popular and less mainstream films, a broader spectrum of genres, and a more extensive thematic scope compared to Lists A and B. The films in List C have less overlap in genre and theme, resulting in a richer and more varied cinematic experience.",
+        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme, with moderate scores of 2 in each category.  List C stands out with higher diversity scores of 3 across all three categories, indicating a more balanced and varied selection of movies.",
+        "most_diverse_list_reasoning": "List C demonstrates the highest level of diversity.  Its higher scores across popularity, genre, and theme diversity suggest a more balanced mix of popular and niche films, a wider range of genres, and a greater variety of explored themes compared to Lists A and B.  The descriptions of the lists support this conclusion, highlighting the lack of repetitive genres and themes in List C.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 155,
-        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List A and C have a slightly narrower timespan than List B.  All lists include multiple movies from the same franchise.  The differences are subtle, making a definitive choice difficult.",
-        "most_diverse_list_reasoning": "While the diversity scores are similar, List B edges out the others due to its inclusion of Pulp Fiction and Catch Me If You Can, which offer unique thematic and stylistic elements compared to the other lists' more homogenous selections.  Although all lists have a mix of blockbusters and less mainstream movies, List B's blend is slightly more varied in tone and style.",
+        "comparison": "Lists A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List B has a slightly wider range of genres and themes, although all three lists include similar blockbuster and less mainstream films.  The time spans are also quite similar across the three lists.",
+        "most_diverse_list_reasoning": "While the numerical scores are identical, List B exhibits a slightly broader range of genres and themes compared to Lists A and C.  The inclusion of films like Pulp Fiction, Catch Me If You Can, and The Prestige adds to the thematic and genre diversity, giving it a marginal edge.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 157,
-        "comparison": "List A, List B, and List C each contain a mix of popular and less popular films, but the diversity in genre and theme varies across the lists. List A has the most balanced representation of genres and themes, despite having fewer movies. List B shows greater variation in themes but less in genre. List C has a mix of blockbusters and independent films, but its theme and genre diversity are similar to that of List B.",
-        "most_diverse_list_reasoning": "List A exhibits a better balance between blockbuster and niche films, providing a more even distribution across various genres and themes despite having fewer films compared to the others. Although List B has a wider range of themes, it lacks the same level of genre variety. List C shows a good balance between popular and less popular films but lacks the thematic depth of List B and the genre balance of List A.",
+        "comparison": "List A, B, and C all show a similar level of diversity in terms of popularity, genre, and theme.  List A and C both include movies from the same franchise, while List B does not.  The time span is also relatively similar across all three lists.",
+        "most_diverse_list_reasoning": "While the numerical scores are similar across all three lists, List B stands out slightly due to its broader thematic diversity (score of 3 compared to 2 for A and C).  Although the genre and popularity diversity scores are the same, the thematic exploration of marriage, revenge, slavery, mental illness, war, and social injustice suggests a wider range of topics compared to the other lists.  The absence of franchise inclusion in List B also contributes to its diversity by avoiding the potential overrepresentation of specific cinematic universes.",
         "gold": "A",
-        "output": "A",
-        "correct": true
+        "output": "B",
+        "correct": false
     },
     {
         "participation": 153,
-        "comparison": "List A demonstrates a more balanced representation of movie popularity, encompassing both critically acclaimed and commercially successful films.  All three lists include similar genres (animation, action, drama, comedy), but List A showcases a wider array of themes compared to Lists B and C. While List B includes movies from the same franchise, this does not significantly impact its overall diversity compared to List A. List C also contains a selection of movies from different eras, but it lacks the thematic breadth seen in List A.",
-        "most_diverse_list_reasoning": "List A stands out due to its superior balance in popularity diversity and the significant thematic range its movies exhibit. While Lists B and C show some variety in genres and time span, neither achieves the same breadth of themes or the balanced mix of popular and less mainstream movies present in List A.",
+        "comparison": "List A, B, and C all contain a mix of popular and less popular movies, but List A shows a better balance.  List A and C have no franchise inclusion, while List B includes two movies from the Iron Man franchise and the Spider-Man franchise.  List A has the highest genre and theme diversity scores (both 3), while List B and C have scores of 2.  List A's time span is shorter than List B and C.",
+        "most_diverse_list_reasoning": "List A stands out due to its higher genre and theme diversity scores, indicating a wider range of genres and thematic explorations compared to Lists B and C. While List B includes movies from the same franchise, List A's superior diversity in genres and themes makes it the most diverse overall.  The shorter time span of List A also contributes to its diversity, suggesting a more focused selection of films.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 156,
-        "comparison": "List A, List B, and List C each offer a variety of films spanning different genres and decades.  List A features a blend of popular franchises and critically acclaimed independent films. List B shows a similar mix of movies, however, it has a broader selection of movies from different regions and cultures. List C presents a more balanced mix of popular and niche movies. While all lists show diversity, List B is more diverse in terms of movie origins and themes.",
-        "most_diverse_list_reasoning": "List B stands out due to its inclusion of movies from different cultural backgrounds, such as 'A Chinese Odyssey Part One: Pandora's Box', alongside popular Hollywood films. This geographical and cultural diversity, combined with a good genre and thematic range, makes it the most diverse.",
+        "comparison": "Lists A and B are very similar in terms of their diversity scores across popularity, genre, and theme.  Both include a mix of blockbuster and niche films, but neither achieves a high level of diversity in any category. List C has a slightly lower popularity diversity score because it has fewer movies overall, but it boasts a wider range of genres and themes than A and B.  The absence of franchise inclusion in List C is a notable difference.",
+        "most_diverse_list_reasoning": "While all three lists receive similar diversity scores, List C demonstrates a slightly broader range of genres and themes, despite having fewer movies. The lack of franchise inclusion in List C adds to its uniqueness and prevents a potential bias towards specific movie series.  Therefore, List C is considered the most diverse.",
         "gold": "C",
-        "output": "B",
-        "correct": false
+        "output": "C",
+        "correct": true
     },
     {
         "participation": 159,
-        "comparison": "List A contains a mix of blockbuster and independent films, showcasing genre and thematic variety, but includes movies from the same franchise. List B demonstrates high genre diversity and a balanced popularity mix but lacks franchise inclusion. List C offers a blend of popular and niche movies with notable genre and thematic variety; however, it does not include movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B stands out due to its remarkable genre diversity, encompassing animation, action, adventure, biography, drama, history, crime, thriller, sci-fi, comedy, romance, family, fantasy, musical, and war, without repeating genres significantly.  It also achieves a good balance of popularity. While List A offers good diversity, the inclusion of movies from the same franchise slightly diminishes its overall diversity compared to List B. List C also has great genre and theme diversity, but it lacks the franchise inclusion that List A has.",
+        "comparison": "List A, B, and C each offer a diverse range of movies.  List A has a slight edge in genre diversity with a broader representation, while List C shows strength in theme diversity. List B is notable for its balanced mix of popular and niche films, although it lacks franchise inclusion.  All three lists demonstrate a good spread of release years.",
+        "most_diverse_list_reasoning": "While all three lists show diversity, List A edges out the others due to its higher scores across multiple categories. Its genre diversity is particularly strong, encompassing a wide range of genres. Although its theme diversity score is slightly lower, the overall balance and breadth of genres make it the most diverse.",
         "gold": "C",
-        "output": "B",
+        "output": "A",
         "correct": false
     },
     {
         "participation": 158,
-        "comparison": "List A contains a mix of popular and niche films, but its genre and theme diversity are somewhat limited due to overlaps in categories. List B demonstrates higher diversity across genres and themes, encompassing a broader range of cinematic styles. List C exhibits a similar balance between popular and independent films as List A, but the genre and theme diversity remains relatively constrained.",
-        "most_diverse_list_reasoning": "List B stands out due to its superior genre and theme diversity.  It includes a wider variety of genres than the other lists and explores a more expansive range of themes.  While List A and List C contain a balance of popular and niche movies, List B's thematic scope and genre variety provide a richer and more diverse cinematic experience.",
+        "comparison": "List A, B, and C each offer a diverse range of films, but they vary in the breadth and depth of that diversity. List A shows some genre and theme overlap. List B boasts a wider array of genres and themes, with less repetition. List C presents a mix of popular and less mainstream films, but its genre and theme diversity is somewhat limited by repetition. ",
+        "most_diverse_list_reasoning": "List B stands out due to its higher scores across all diversity metrics.  The genre diversity is particularly impressive, encompassing a wide spectrum of film styles.  The thematic variety is also noteworthy, with each film exploring unique and distinct concepts.  The inclusion of both popular and less mainstream films further enhances its overall diversity.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 160,
-        "comparison": "List A, B, and C all demonstrate a good level of diversity in terms of popularity, genre, and theme.  List A has a slightly higher genre diversity score, with a broader range of unique genres represented. However, List C shows the strongest thematic diversity, with each film covering a unique and distinct theme.  List B has the lowest diversity scores across the board, while maintaining a decent balance.",
-        "most_diverse_list_reasoning": "While List A boasts a higher genre diversity score, and List B's franchise diversity is notably lower, List C wins out due to its superior thematic range. Each movie in List C explores a different core theme, giving a wider spectrum of human experience and storytelling than List A and B.  The inclusion of more than one Bourne movie further enhances its diversity.",
+        "comparison": "List A, B, and C all show a decent variety in their movie selections, but they have different strengths and weaknesses.  List A boasts impressive genre and theme diversity, with a good balance of popular and niche films. List B has slightly less diversity across genres and themes, and lacks franchise inclusion. List C also demonstrates strong diversity across genres and themes, and includes movies from the same franchise.  All three lists cover a similar time span.",
+        "most_diverse_list_reasoning": "While all three lists are relatively diverse, List A edges out the others due to its balanced combination of popularity diversity, genre diversity, and theme diversity, all receiving a score of 3.  Although List C also scores 3 across these categories, the explicit mention of only one franchise in List A makes it slightly more diverse than List C.",
         "gold": "B",
-        "output": "C",
+        "output": "A",
         "correct": false
     },
     {
         "participation": 163,
-        "comparison": "List A, B, and C each offer a variety of films spanning different genres and themes.  List A has a slightly lower genre diversity score than the others, while List C has a lower score across popularity, genre, and theme diversity. List B boasts the highest scores across all three diversity metrics, suggesting a more balanced and varied selection of movies.",
-        "most_diverse_list_reasoning": "List B stands out due to its higher scores in popularity diversity, genre diversity, and theme diversity.  The inclusion of both blockbuster hits and less mainstream films, coupled with a wider range of genres and themes, makes it the most diverse selection.",
+        "comparison": "List A and List B have similar Popularity and Theme Diversity scores, both scoring 3 in each category.  List B has a slightly higher Genre Diversity score (3) compared to List A (2). List C has lower scores across all three diversity categories (Popularity, Genre, and Theme), scoring 2 in each.  All three lists include movies released between 2002 and 2017. Lists A and B include movies from the same franchise, while List C does not.",
+        "most_diverse_list_reasoning": "List B exhibits the most balanced diversity. While List A and B have similar scores in Popularity and Theme Diversity, List B edges out List A with a higher Genre Diversity score.  List C shows less diversity across all three categories.  The presence of movies from the same franchise in Lists A and B is a minor factor, as the overall diversity of genres and themes is more significant.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 165,
-        "comparison": "List A and List B have similar diversity scores, with moderate diversity across popularity, genre, and themes.  List C demonstrates higher diversity across all three categories.  All three lists lack franchise inclusion.",
-        "most_diverse_list_reasoning": "List C stands out due to its higher scores in popularity diversity, genre diversity, and theme diversity.  The inclusion of both critically acclaimed niche films and major blockbusters contributes to its balanced popularity, while the wide range of genres and thematic explorations further solidifies its status as the most diverse list.",
+        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme, both receiving a score of 2 in each category.  List C stands out with a score of 3 across all three diversity categories, indicating a more balanced and varied selection of films.  All three lists lack franchise inclusion.",
+        "most_diverse_list_reasoning": "List C demonstrates the highest level of diversity across popularity, genre, and theme.  While the other lists show some variety, List C's movies represent a broader spectrum of film types and thematic explorations, making it the most diverse.",
         "gold": "B",
         "output": "C",
         "correct": false
     },
     {
         "participation": 166,
-        "comparison": "List A, List B, and List C all contain a mix of popular and less mainstream films, spanning various genres and themes. However, they differ in the balance and range of these elements.  List A shows a slightly better balance between blockbuster and niche films compared to B and C, although it has fewer movies overall. List B and C have a similar range of movies and diversity scores.  All lists include at least two movies from the same franchise, indicating some degree of repetition but also thematic cohesion within those franchises.",
-        "most_diverse_list_reasoning": "While all three lists offer a decent variety in genre and theme, List A stands out slightly due to its more balanced inclusion of both popular and less mainstream titles.  Although the overall scores for diversity are close, the subjective assessment of the movies themselves favors List A's mix.",
+        "comparison": "List A exhibits slightly better diversity scores across popularity, genre, and theme compared to Lists B and C.  All three lists include a mix of blockbuster and independent films, but List A's higher scores suggest a more balanced representation.  While all three lists have similar genre and theme diversity scores, List A's time span is not explicitly stated, making a complete comparison difficult.  All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "Although the differences are subtle, List A demonstrates a marginally higher level of diversity based on the provided scores.  The slightly higher scores in popularity, genre, and theme diversity, even with the lack of explicit time span information, suggest a more balanced and varied selection of films compared to Lists B and C.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 164,
-        "comparison": "List A contains a mix of popular and less popular movies, with some genre and theme repetition. List B has more genre and theme diversity but does not include movies from the same franchise. List C has a good balance of popularity and genre diversity, but theme diversity is moderate, and it also lacks franchise inclusion.",
-        "most_diverse_list_reasoning": "List B demonstrates the highest level of genre and theme diversity among the three lists.  While List C has strong genre diversity, List B's thematic range is more varied and comprehensive, with fewer genre repetitions. Although List B lacks franchise inclusion, its broad thematic and genre representation makes it the most diverse.",
+        "comparison": "List A, B, and C all show a decent variety in their movie selections.  List A has a slightly lower diversity score across the board compared to B and C.  List B and C both score higher in genre and theme diversity, with List B having a slightly higher theme diversity score.  List B and C both lack franchise inclusion, while List A includes at least two movies from the same franchise.  The time span is similar across all three lists.",
+        "most_diverse_list_reasoning": "List B and C are very close in terms of diversity, but List B edges out List C due to its slightly higher theme diversity score.  While List A includes movies from the same franchise, its lower scores in genre and theme diversity make it less diverse overall compared to B and C.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 168,
-        "comparison": "List A, B, and C all show a good diversity of movie popularity, genre, and themes.  List A has no franchise inclusion, while List B includes at least two Star Wars movies, and List C has no franchise inclusion.  All three lists span multiple years.",
-        "most_diverse_list_reasoning": "List C edges out the other lists because, while all three lists demonstrate good diversity across popularity, genre, and themes, List C's selection creates the most balanced representation of various themes and genres without relying on franchise cohesion.  This is a key differentiator, as the lack of franchise inclusion highlights the curatorial effort to select diverse films based on their individual merits, rather than leveraging pre-existing brand recognition.",
+        "comparison": "List A, B, and C all exhibit high diversity in genre and theme, scoring a 3 across the board.  List A and C both achieve a Popularity Diversity score of 3, indicating a balanced mix of blockbuster and niche films. List B leans more towards popular movies, resulting in a score of 2 for Popularity Diversity.  List B is the only list with franchise inclusion (Star Wars).  List A and C do not include movies from the same franchise.  The time span is relatively similar across all three lists, spanning roughly 20 years.",
+        "most_diverse_list_reasoning": "While all three lists show strong diversity across genre and theme, List A and C stand out with their balanced representation of popular and niche films, as indicated by their Popularity Diversity score of 3.  The absence of franchise inclusion in List A and C further contributes to their overall diversity by showcasing a wider range of cinematic works.  Therefore, between List A and C, I've chosen List A as slightly more diverse due to its earlier start date, showcasing a longer time span of film.",
         "gold": "C",
-        "output": "C",
-        "correct": true
+        "output": "A",
+        "correct": false
     },
     {
         "participation": 167,
-        "comparison": "List A contains a mix of blockbuster and less popular movies, spanning various genres and themes, with some franchise overlap. List B demonstrates higher diversity in genre and theme, incorporating more niche films while still featuring popular titles, resulting in a better balance. List C showcases a similar range of genres and popularity to List A, but with a slightly narrower thematic scope.",
-        "most_diverse_list_reasoning": "List B stands out due to its superior genre and theme diversity. It successfully balances popular and less mainstream movies, offering a broader spectrum of cinematic experiences than Lists A and C.  The inclusion of films like Pulp Fiction and Superbad significantly enhances its thematic range and overall diversity.",
+        "comparison": "List A, B, and C each offer a variety of movies, but differ in their diversity scores. List A has a score of 2 across all three diversity categories (Popularity, Genre, and Theme), while List B achieves a score of 3 across all three categories. List C mirrors List A with a score of 2 across the board.  List B stands out with its broader range of genres and themes, and a more balanced inclusion of popular and less mainstream films.",
+        "most_diverse_list_reasoning": "List B is the most diverse because it has the highest scores across all three diversity metrics (Popularity, Genre, and Theme).  Its genre diversity is particularly impressive, encompassing action, adventure, drama, fantasy, sci-fi, thriller, comedy, western, animation, horror, and crime.  The thematic diversity is also noteworthy, covering a wide range of topics from good vs. evil to coming-of-age stories and social commentary.  The inclusion of both blockbuster and less mainstream films further enhances its overall diversity.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 171,
-        "comparison": "List A contains a good mix of popular and niche movies, along with a high diversity of genres and themes. List B has a slightly lower diversity in genres and themes, although still diverse, and lacks franchise inclusion. List C shows good genre and theme diversity, but a lower popularity diversity compared to List A.  List A and C both include movies from franchises.",
-        "most_diverse_list_reasoning": "List A stands out due to its balanced combination of popular and niche films, resulting in high scores across popularity, genre, and theme diversity.  While List C also has high genre and theme diversity, List A's stronger popularity diversity gives it an edge.",
+        "comparison": "List A, B, and C all show moderate diversity in popularity, with scores of 2.  List A and C have higher genre diversity scores (3) compared to List B (2).  List A has the highest theme diversity score (3), followed by List C (2), and then List B (2). List A and C both include movies from the same franchise, while List B does not.  List A spans from 2001-2014, List B from 1993-2016, and List C from 1993-2016.",
+        "most_diverse_list_reasoning": "List A stands out due to its higher scores in genre and theme diversity compared to Lists B and C. While all three lists have a moderate popularity diversity, List A's broader thematic range and genre variety make it the most diverse.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 170,
-        "comparison": "List A, B, and C each offer a diverse range of films, spanning various genres and themes.  List A stands out with its higher diversity scores across popularity, genre, and theme, reflecting a well-balanced selection of both critically acclaimed and commercially successful movies.  List B and C have more limited diversity, indicated by lower diversity scores. Although List B includes films from the same franchise, the overall diversity is weaker than List A. List C has a similar level of diversity to List B, but with no franchise inclusion.",
-        "most_diverse_list_reasoning": "List A achieves the highest overall diversity due to its balanced representation of popular and niche films, a wider array of genres, and more distinct themes compared to Lists B and C.  While List B includes movies from the same franchise, this does not compensate for its lower diversity scores in other categories. List C has a similar level of diversity to List B without franchise inclusion.",
+        "comparison": "List A stands out with a balanced representation across popularity, genre, and theme diversity, achieving a score of 3 in each category.  Lists B and C both receive a score of 2 across the board, indicating less diversity. While List B includes movies from the same franchise, this does not outweigh the lower diversity scores in other areas. List C has a slightly later time span than List A, but this difference is minor compared to the overall diversity gap.",
+        "most_diverse_list_reasoning": "List A exhibits the highest level of diversity across all three categories (Popularity, Genre, and Theme), achieving a score of 3 in each.  The inclusion of both blockbuster and independent films, a wide range of genres, and varied themes contribute to its superior diversity compared to Lists B and C, which scored 2 across all categories.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 172,
-        "comparison": "List A, B, and C all show a decent variety in their movie selections.  List A has a good mix of popular and less popular films, including diverse genres and themes. List B offers a similar range of popularity and a broader representation of genres, with themes that are more varied. List C has a slightly less diverse genre selection compared to List B, but still presents a satisfactory variety of films. All three lists lack franchise inclusion.",
-        "most_diverse_list_reasoning": "List B stands out due to its higher genre and theme diversity scores. While all three lists present a mix of popular and niche films, List B's broader genre range and more varied thematic exploration make it the most diverse.",
+        "comparison": "List A, B, and C all show a similar level of Popularity Diversity, all scoring a 2.  List B stands out with higher Genre and Theme Diversity scores (both 3), compared to Lists A and C which both score a 2 in both categories.  All three lists have a similar time span and none include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List B is the most diverse because it has the highest scores in Genre Diversity and Theme Diversity. While the Popularity Diversity is similar across all three lists, the significantly higher scores in Genre and Theme Diversity for List B make it stand out as the most thematically and generically diverse.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 173,
-        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List A has a slightly lower genre diversity score than List B due to the repetition of action and adventure genres.  List C has a slightly higher franchise inclusion, with multiple movies from both the Harry Potter and Chronicles of Narnia franchises, whereas List A and B only contain multiple Harry Potter films. However, the differences between the lists are minor.",
-        "most_diverse_list_reasoning": "List B exhibits the highest genre diversity (a score of 3 compared to 2 for Lists A and C), encompassing a wider range of genres including animation, western, and romance, despite some thematic overlap. While List C has more franchise inclusion, List B's broader genre representation makes it slightly more diverse overall.",
+        "comparison": "List A, B, and C all show moderate diversity scores across popularity, genre, and theme.  List B has a slightly higher genre diversity score (3) compared to Lists A and C (both 2).  All three lists include movies from the same franchise.  The time span is the same for all three lists.",
+        "most_diverse_list_reasoning": "List B is chosen as the most diverse because it has a higher genre diversity score than the other two lists. While the other diversity metrics are similar across all three lists, the wider range of genres in List B suggests a more varied cinematic experience.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 175,
-        "comparison": "List A contains a mix of popular and niche films, with moderate genre and theme diversity. List B shows a similar pattern, with a broader range of years covered and a higher popularity diversity score. List C is similar to A and B but with a slightly more limited time span.",
-        "most_diverse_list_reasoning": "List B demonstrates the highest level of popularity diversity, incorporating both critically acclaimed and widely popular films, thus showcasing a wider range of audience appeal. While List A and C also present a variety of films, they lack the balanced mix of blockbuster and niche films that List B displays.  List B's time span is also broader, indicating a wider range of cinematic styles and trends.",
+        "comparison": "List A, B, and C all show moderate diversity across popularity, genre, and theme.  List B has a slightly larger time span (1993-2017) compared to List A (1994-2009) and List C (1991-2006).  None of the lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List B exhibits the greatest temporal range, spanning from 1993 to 2017, suggesting a broader representation of cinematic trends and styles across a longer period. While all three lists demonstrate moderate diversity across various categories, the wider time span of List B gives it a slight edge in terms of overall diversity.",
         "gold": "A",
         "output": "B",
         "correct": false
     },
     {
         "participation": 177,
-        "comparison": "List A, List B, and List C all show some diversity in terms of popularity, genre, and theme, but none achieve a perfect balance.  List A and List C both include movies from the same franchise, while List B does not.  All three lists have a range of release years, spanning at least 20 years.",
-        "most_diverse_list_reasoning": "While all three lists have a mix of popular and less popular movies, List B stands out for its lack of franchise inclusion. This suggests a greater effort to curate a list based on individual film merit, rather than relying on pre-existing franchise success.  Though List B might have slightly less genre diversity than the others, the absence of franchise repetition signifies more thematic uniqueness.",
+        "comparison": "Lists A, B, and C all show a similar level of diversity based on the provided scores.  Each list has a score of 2 across Popularity Diversity, Genre Diversity, and Theme Diversity.  List A and C both include movies from the same franchise, while List B does not.  The time spans of the lists are relatively similar, with List B having the widest range (1991-2016).",
+        "most_diverse_list_reasoning": "While the numerical scores are identical, List B stands out slightly due to its wider time span, showcasing movies from a broader period.  The absence of franchise inclusion in List B might be seen as a positive or negative depending on the desired balance.  However, the wider time span suggests a more extensive exploration of cinematic trends and styles.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 178,
-        "comparison": "List A contains a greater variety of genres and themes compared to Lists B and C.  List B has a couple of movie franchises, while List C contains a few, but List A has no franchise movies.  List B and C have a similar mix of popular and less popular movies, slightly more balanced than List A.",
-        "most_diverse_list_reasoning": "List A stands out due to its higher genre and theme diversity scores. While Lists B and C benefit from including movies from the same franchise, the thematic and genre variety in List A is more significant in showcasing a broader range of cinematic experiences.  Though List B also has a good score, the lack of franchise inclusion in List A makes it the most diverse.",
+        "comparison": "List A, B, and C each offer a diverse range of films, but with varying strengths. List A stands out with its high genre diversity, encompassing a wide spectrum of genres without any single one dominating.  List B and C both have franchise inclusion, which while adding familiarity, can slightly reduce the overall diversity compared to List A's unique film selection.  List B has a slightly higher popularity diversity score than List C, suggesting a better balance between popular and niche films.  However, List A's broader genre spread gives it an edge in overall diversity.",
+        "most_diverse_list_reasoning": "List A achieves the highest level of diversity due to its superior genre diversity score. While Lists B and C include movies from the same franchise, which can reduce the overall diversity, List A's wide range of genres, from action and sci-fi to drama and comedy, makes it stand out.  Although its theme diversity score is lower, the breadth of its genres compensates for this, resulting in a more diverse cinematic experience.",
         "gold": "B",
         "output": "A",
         "correct": false
     },
     {
         "participation": 179,
-        "comparison": "List A, List B, and List C each offer a diverse range of films, incorporating both popular blockbusters and more niche titles.  List A and B both include at least two films from the same franchise, while List C does not.  All three lists demonstrate genre diversity, although List B has a slightly higher score.  List A and B showcase a wider thematic range in comparison to List C.  List A has a slightly broader time span than Lists B and C.",
-        "most_diverse_list_reasoning": "List B stands out due to its higher score in genre diversity and a balanced mix of blockbuster and niche movies, offering a significant range of genres and styles. While List A has similar strengths, List B's broader genre diversity edges it out slightly.  List C has excellent genre and popularity diversity, but its lower thematic diversity score holds it back slightly in comparison.",
+        "comparison": "List A, B, and C all show a balanced inclusion of popular and niche movies, achieving a Popularity Diversity score of 3.  List B and C have a higher Genre Diversity score (3) compared to List A (2).  List A has a slightly higher Theme Diversity score (3) than B and C (2).  List A and B include movies from the same franchise, while List C does not.  The time span is similar across all three lists, covering roughly the same period.",
+        "most_diverse_list_reasoning": "While all three lists exhibit good diversity, List B edges out the others due to its higher Genre Diversity score and the inclusion of movies from the same franchise. Although List A has a slightly higher Theme Diversity score, the stronger genre variety in List B makes it more diverse overall.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 180,
-        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List A has no franchise inclusion, while List C has one franchise represented. List B has a higher genre diversity score than A and C.",
-        "most_diverse_list_reasoning": "List B demonstrates the highest genre diversity, encompassing animation, adventure, comedy, drama, family, crime, thriller, action, sci-fi, horror, mystery, history, romance, and war. While the theme diversity is only moderate, the sheer range of genres gives it an edge over Lists A and C.",
+        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List B has the highest genre diversity score, while Lists A and C have slightly lower scores.  List C is the only list with franchise inclusion.  The time spans of all three lists are relatively similar.",
+        "most_diverse_list_reasoning": "While List B has the highest genre diversity score, List C's inclusion of movies from the same franchise adds another layer of diversity.  The overall diversity across popularity, genre, and theme is comparable among the three lists. Therefore, List C is chosen as the most diverse due to the franchise inclusion.",
         "gold": "C",
-        "output": "B",
-        "correct": false
+        "output": "C",
+        "correct": true
     },
     {
         "participation": 181,
-        "comparison": "List A contains a greater variety of genres and themes compared to List B and List C. Although List B has a similar genre and theme diversity, the inclusion of two movies from the same franchise lowers its diversity score.  List C has a lower genre diversity due to the repetition of Action movies and also has fewer diverse themes.  List A also has a slightly higher popularity diversity score compared to the other lists, making it the most well-rounded.",
-        "most_diverse_list_reasoning": "List A demonstrates the highest level of diversity across all categories. Its balanced mix of popular and niche films, combined with a wide range of genres and themes without repetition, makes it stand out. While List B and C exhibit some diversity, they are less balanced either because of franchise inclusion or genre/theme repetition.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A stands out for its balanced representation of popular and less popular movies, as well as its broad genre and thematic diversity. List B and C both include movies from the same franchise, which slightly reduces their overall diversity compared to List A.  List B has a slightly higher popularity diversity score than List C, but List C has a higher genre diversity score than List B. However, List A has the highest score in both popularity and genre diversity.",
+        "most_diverse_list_reasoning": "List A achieves the highest scores across all three diversity categories (Popularity, Genre, and Theme). While Lists B and C include movies from the same franchise, which slightly detracts from their overall diversity, List A's balanced representation of popular and niche films, combined with its wide range of genres and themes, makes it the most diverse.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 182,
-        "comparison": "List A contains a more balanced mix of blockbuster and independent films compared to Lists B and C.  All three lists show a good variety of genres, but List A stands out with its unique genre combinations.  List A also demonstrates a wider range of themes compared to the other lists. While all lists include movies from the same franchise, List A's time span is slightly wider than List C's, and List B's is the narrowest. ",
-        "most_diverse_list_reasoning": "List A exhibits the highest level of diversity across all categories. Its balanced inclusion of popular and niche films, combined with a wider range of genres and themes, makes it stand out from Lists B and C. While Lists B and C have some diversity, they lack the same balance and breadth of thematic exploration found in List A.",
+        "comparison": "List A, B, and C all contain a mix of blockbuster and independent films, spanning various genres and themes.  List A stands out with its higher scores across Popularity Diversity, Genre Diversity, and Theme Diversity. While List B and C show some diversity, their scores are lower, indicating less thematic and popularity variation. All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "List A achieves the highest scores across all diversity categories (Popularity, Genre, and Theme).  Its balanced inclusion of popular and niche films, coupled with a wide range of genres and non-repetitive themes, makes it the most diverse.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 184,
-        "comparison": "List A, B, and C all show a good variety in their movie selections, covering diverse genres and themes.  List A has a slightly higher popularity diversity score (3) compared to List B (2) and List C (3). List B has fewer movies, and while it covers a decent range, it doesn't achieve the same level of genre or theme diversity as List A and C.  All three lists lack franchise inclusion.",
-        "most_diverse_list_reasoning": "List A and C both have a popularity diversity, genre diversity, and theme diversity score of 3, indicating strong diversity across these categories.  Although both lists are very similar in composition, the slight time span advantage of List C (1990-2013) over List A (1994-2014) makes List C marginally more diverse.",
+        "comparison": "List A, B and C all show a relatively balanced mix of blockbuster and niche films, resulting in similar Popularity Diversity scores.  List A and C have higher Genre and Theme Diversity scores compared to List B.  All three lists lack franchise inclusion.  List C has a slightly earlier time span than A and B.",
+        "most_diverse_list_reasoning": "Lists A and C both achieve the highest scores across all three diversity categories (Popularity, Genre, and Theme).  While List A has a slightly wider time span, List C's earlier starting year (1990 vs 1994) gives it a slight edge in overall diversity. Therefore, List C is chosen as the most diverse.",
         "gold": "B",
         "output": "C",
         "correct": false
     },
     {
         "participation": 183,
-        "comparison": "List A, B and C each offer a diverse range of films spanning various genres, themes, and popularity levels.  List A stands out for its inclusion of a documentary (Bowling for Columbine), which adds to its thematic and genre diversity.  List B also includes a notable animated film, Akira, which enhances its visual and cultural diversity. List C incorporates more independent or critically acclaimed films in addition to blockbusters, providing a good mix.  All three lists show absence of franchise inclusion.",
-        "most_diverse_list_reasoning": "While all three lists demonstrate a good degree of diversity, List A edges out slightly due to the inclusion of a documentary film, which broadens the thematic and genre representation beyond the typical blockbuster and independent film categories. The presence of 'Bowling for Columbine' adds a unique layer of social commentary that is absent in the other lists.",
+        "comparison": "List A, B, and C all exhibit a balanced mix of popular and niche films, resulting in a Popularity Diversity score of 2 for each.  List A and C achieve higher Genre and Theme Diversity scores (3) compared to List B (2).  All three lists span a similar timeframe (1988-2017 or 1993-2017) and do not include movies from the same franchise.",
+        "most_diverse_list_reasoning": "While all three lists show good diversity, List A and C stand out with higher scores in Genre and Theme Diversity.  Although the difference is only one point, it suggests a more varied selection of genres and themes in Lists A and C compared to List B.  Therefore, between List A and C, List A is slightly more diverse due to its broader range of genres mentioned in its summary.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 185,
-        "comparison": "List A, B, and C all show moderate diversity in popularity, genre, and theme.  List A has the widest temporal range of films, while List C is the only one with films from the same franchise.",
-        "most_diverse_list_reasoning": "While all three lists exhibit similar levels of diversity in terms of popularity, genre, and theme, List C stands out due to the inclusion of movies from the same franchise (Harry Potter), signifying a unique approach to curation.  This factor, combined with its representation of diverse genres and themes, makes it the most diverse list.",
+        "comparison": "Lists A, B, and C all received a score of 2 in Popularity Diversity, Genre Diversity, and Theme Diversity.  List A's time span is wider (1985-2012) than List B (2002-2012) and List C (2002-2016).  However, List C is the only list that includes movies from the same franchise.",
+        "most_diverse_list_reasoning": "Although all three lists have similar diversity scores, List C stands out because it includes movies from the same franchise, indicating a potential for deeper thematic connections and exploration of a shared universe.  The slightly later time span also suggests a more contemporary selection of films.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 188,
-        "comparison": "List A has a Popularity Diversity score of 3, Genre Diversity of 2, and Theme Diversity of 2.  List B has scores of 3, 3, and 2 respectively. List C has scores of 3, 3, and 3 respectively.  All lists have the same timespan and franchise inclusion (no franchise inclusion in A and B, yes in C).",
-        "most_diverse_list_reasoning": "List C is the most diverse because it achieves the highest scores across all three diversity categories (Popularity, Genre, and Theme).  It also includes movies from the same franchise, which adds another layer of complexity and potential for thematic exploration.",
+        "comparison": "List A, B, and C all contain a mix of popular and less mainstream films, resulting in a Popularity Diversity score of 3 for all three.  List B and C achieve higher Genre Diversity scores (3) compared to List A (2), indicating a wider range of genres.  List C stands out with the highest Theme Diversity score (3), showcasing a more varied exploration of themes compared to List A and B (both scoring 2).  All lists span a similar timeframe (1991-2017), and only List C includes movies from the same franchise (Terminator).",
+        "most_diverse_list_reasoning": "List C exhibits the most diversity across all categories. While all three lists have a similar Popularity Diversity, List C surpasses Lists A and B in both Genre and Theme Diversity.  The inclusion of movies from the same franchise adds another layer of diversity, showcasing a curated selection with a cohesive element.  The higher scores across all three diversity metrics make List C the most diverse.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 187,
-        "comparison": "List A, B and C all show moderate diversity in popularity, genre, and theme.  List A has a slightly shorter time span than List B and C.  List B includes movies from two different franchises. List C has a similar time span to List B, with fewer franchises represented. All lists contain a mix of blockbuster and independent films, with genres ranging from action and thriller to drama and comedy.",
-        "most_diverse_list_reasoning": "List B demonstrates a slightly higher level of diversity due to the inclusion of movies from two different franchises, spanning a wider range of years than List A. While List C includes various genres and themes, the overall diversity is comparable to List A.",
+        "comparison": "Lists A, B, and C all show moderate diversity across popularity, genre, and theme.  List B has a wider time span than A and C, ranging from 1988 to 2004 (though it mentions films outside this range).  List A's time span is 1999-2017, and List C's is 1988-2014. All three lists include movies from at least one franchise.",
+        "most_diverse_list_reasoning": "While all three lists have similar diversity scores, List B stands out due to its broader time span, encompassing a wider range of filmmaking styles and cultural contexts. Although the diversity scores are numerically the same, the inclusion of films from 1988 to 2004 suggests a greater variety in cinematic trends and techniques compared to the other lists.",
         "gold": "C",
         "output": "B",
         "correct": false
     },
     {
         "participation": 186,
-        "comparison": "List A, List B, and List C all show moderate diversity in popularity, genre, and theme.  List A has the widest time span, including movies from 1989 to 2017. Lists B and C have narrower time spans (2004-2013). All three lists include movies from the same franchise.  The thematic diversity seems somewhat similar across all lists.  List A has a slightly broader range of genres, though none is overwhelmingly diverse.",
-        "most_diverse_list_reasoning": "List A is chosen as the most diverse because of its wider time span, encompassing movies released between 1989 and 2017. This broader range provides a more comprehensive representation of cinematic trends and styles over time, compared to the lists that only show movies released between 2004 and 2013. While genre and theme diversity are similar across the lists, the temporal diversity gives List A an edge.",
+        "comparison": "Lists A, B, and C all received a score of 2 in Popularity Diversity, Genre Diversity, and Theme Diversity.  List A spans from 1989 to 2017, while Lists B and C span from 2004 to 2013. All three lists include movies from the same franchise.",
+        "most_diverse_list_reasoning": "Although all three lists have the same diversity scores, List A has a broader time span, encompassing a wider range of filmmaking styles and cultural contexts. This makes List A slightly more diverse than the other two lists.",
         "gold": "B",
         "output": "A",
         "correct": false
     },
     {
         "participation": 191,
-        "comparison": "List A, B, and C each offer a diverse range of films across various genres and themes. However, they vary in their balance of popular and niche movies, as well as the time span of their included films. List A contains a balanced mix of popular and niche movies, while list B has a heavier weighting toward popular films. List C's weighting is also toward popular movies, but it does offer a more significant time span than the other lists, covering movies from 1991 to 2019. All lists show a moderate level of genre diversity, with action and drama featuring prominently.  Theme diversity is fairly even across all lists, with each offering a wide range of thematic elements but also some repetition.",
-        "most_diverse_list_reasoning": "While all three lists demonstrate good diversity, List C edges out slightly due to its broader time span, covering almost three decades of film releases, compared to List A (1995-2019) and List B (1995-2015). This longer time span suggests a wider representation of cinematic trends and styles.  Though the genre and theme diversity scores are similar across all lists, the extended time range of list C makes it the most diverse.",
+        "comparison": "Lists A, B, and C all show a similar level of diversity in terms of popularity and genre.  List C stands out slightly with a higher Theme Diversity score (3) compared to A and B (both 2).  All three lists lack franchise inclusion.",
+        "most_diverse_list_reasoning": "While all three lists have similar scores in popularity and genre diversity, List C demonstrates a slightly broader range of themes, giving it a marginal edge in overall diversity.  The higher Theme Diversity score of 3 for List C, compared to 2 for Lists A and B, makes it the most diverse.",
         "gold": "A",
         "output": "C",
         "correct": false
     },
     {
         "participation": 193,
-        "comparison": "List A, B, and C all show some diversity in genre and theme, but List A has the widest range of movies, including popular and niche films. List B includes more animated films, but the overall diversity is similar to List A. List C has some franchise inclusion, but it's not as diverse in terms of popularity and theme compared to List A.",
-        "most_diverse_list_reasoning": "List A exhibits the greatest diversity across all three categories: Popularity Diversity, Genre Diversity, and Theme Diversity.  While Lists B and C contain a mix of genres and themes, List A's combination of critically acclaimed indie films like Donnie Darko and American Beauty alongside more mainstream titles makes it the most balanced and diverse in terms of popularity.  The absence of franchise inclusion doesn't negate the broad range of genres and thematic exploration in List A, which sets it apart.",
+        "comparison": "Lists A, B, and C all received a score of 2 across the board for Popularity Diversity, Genre Diversity, and Theme Diversity.  List A's time span is 1993-2012, List B's is 1993-2018, and List C's is 1997-2018.  List C is the only list that includes movies from the same franchise.",
+        "most_diverse_list_reasoning": "While all three lists show similar scores across the different diversity metrics, List C stands out because it includes movies from the same franchise. This adds another layer of diversity by showcasing the development and evolution of characters and storylines within a shared universe.  The slightly shorter time span of List C compared to List B is negligible in this context.",
         "gold": "B",
-        "output": "A",
+        "output": "C",
         "correct": false
     },
     {
         "participation": 192,
-        "comparison": "List A, B, and C all contain a mix of popular and less popular movies, spanning various genres and themes.  List A and C both include movies from the same franchise, while List B does not.  List B has a slightly better balance in terms of popularity diversity than A and C.  All three lists cover a similar time span.",
-        "most_diverse_list_reasoning": "List B demonstrates the highest level of genre and thematic diversity without sacrificing popularity diversity. While List A and C also offer a range of genres and themes, List B's selection seems to offer more balanced representation overall. The absence of franchise inclusion in List B could be viewed as either a positive or negative aspect. It allows for a broader exploration of diverse cinematic experiences.  Considering all factors, List B emerges as the most diverse.",
+        "comparison": "List A and List C both have a Popularity Diversity and Genre Diversity score of 2, while List B has a score of 3 for both.  List B also has a higher Theme Diversity score (3) compared to Lists A and C (both 2).  List A and C include movies from the same franchise, while List B does not.  All three lists cover a similar time span (1988-2018).",
+        "most_diverse_list_reasoning": "List B stands out due to its higher scores across Popularity Diversity, Genre Diversity, and Theme Diversity. While franchise inclusion is a factor, the significantly higher diversity scores in other aspects make List B the most diverse overall.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 194,
-        "comparison": "List A, B, and C all show a moderate level of diversity across popularity, genre, and theme.  List A has a slight edge in terms of the time span covered (1997-2015) compared to List B (1994-2012) and List C (1988-2012). However, all three lists have a score of 2 for popularity diversity, genre diversity, and theme diversity.",
-        "most_diverse_list_reasoning": "While all three lists exhibit similar diversity scores, List A's slightly wider time span (1997-2015) gives it a marginal advantage. The inclusion of a franchise (Toy Story) in List A also adds a layer of diversity not present in Lists B and C, though the franchise representation is limited. The other diversity aspects are too similar across the lists to provide a stronger basis for choosing one list over the other two.",
+        "comparison": "Lists A, B, and C all received a score of 2 in Popularity Diversity, Genre Diversity, and Theme Diversity.  List A is the only list that includes movies from the same franchise.  List B and C do not include movies from the same franchise.  List A's time span is 1997-2015, List B's is 1994-2012, and List C's is 1988-2012.",
+        "most_diverse_list_reasoning": "While all three lists show similar scores across the board, List A stands out slightly because it includes movies from the same franchise, indicating a potential deeper exploration of a particular cinematic universe or narrative style. This adds another layer of diversity, even if the scores for the other categories are the same.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 197,
-        "comparison": "List A, B, and C all showcase a blend of popular and less mainstream films, resulting in a balanced popularity diversity.  Genre diversity is high across all three lists, with a broad range of genres represented. Theme diversity is comparable among the lists, with various themes explored, although List A might have a slight edge in the thematic range. All lists span several decades, showcasing films across different eras. Franchise inclusion is present in all lists. The subtle differences among the lists lie in the specific selection of movies which lead to slightly varied thematic ranges.",
-        "most_diverse_list_reasoning": "While all three lists exhibit strong diversity across popularity, genre, and time span, List A demonstrates a more nuanced thematic exploration. The themes represented in List A, such as illusion vs. reality, friendship and redemption, survival, ambition and love, and war, offer a slightly more comprehensive range compared to the other lists. The combination of high genre diversity and this subtle thematic edge makes List A the most diverse.",
+        "comparison": "List A, B, and C all demonstrate a good level of diversity in genre and theme.  List A and B have slightly higher scores for theme diversity than List C.  List B has a slightly higher popularity diversity score than List A. All three lists include movies from the same franchise.  The time span is similar across all three lists.",
+        "most_diverse_list_reasoning": "List B edges out the others due to its slightly higher scores in popularity and theme diversity, indicating a better balance between mainstream and niche films and a wider range of explored themes. While the differences are not drastic, List B's more balanced representation across these categories makes it the most diverse.",
         "gold": "C",
-        "output": "A",
+        "output": "B",
         "correct": false
     },
     {
         "participation": 3,
-        "comparison": "List A, B, and C each offer a blend of popular and less mainstream films.  List A demonstrates more genre diversity, incorporating animation (WALL-E, Up) and crime (Snatch), which are absent from Lists B and C. List B's focus is more heavily on fantasy franchises (Lord of the Rings, Harry Potter, Fantastic Beasts) with a few action movies mixed in.  List C has a more diverse range of genres than B, but it is not as diverse as A. The themes explored are similar across all three lists (adventure, redemption, good vs. evil), but List A shows a slightly wider thematic range.",
-        "most_diverse_list_reasoning": "List A stands out due to its superior genre diversity. The inclusion of animation (WALL-E and Up), crime (Snatch), and a strong drama (Shawshank Redemption) alongside more action-oriented movies provides a better balance than the more fantasy-centric lists B and C. While all lists include blockbuster films, List A provides a richer variety in genres and thematic exploration.",
+        "comparison": "List A, B, and C all show a similar pattern in terms of their diversity scores.  List A and C have almost identical scores across all categories, while List B has slightly lower scores in Popularity Diversity, but similar scores in Genre and Theme Diversity. All three lists include movies from popular franchises, indicating a bias towards well-known films. However, they attempt to incorporate a variety of genres and themes, resulting in moderate diversity scores.",
+        "most_diverse_list_reasoning": "While all three lists exhibit similar levels of diversity, List A edges out slightly due to its slightly broader range of popularity among the movies included.  Lists B and C are heavily weighted towards blockbuster movies, whereas List A has a better balance of popular and less mainstream films.  The difference is subtle, but List A's slightly better balance in popularity diversity gives it a marginal edge.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 4,
-        "comparison": "List A, B and C all contain a variety of movies spanning multiple genres and themes. However, List A showcases a more balanced representation of popular and niche films compared to Lists B and C.  List A's genre and theme diversity are also slightly higher based on the descriptions provided, although all three lists exhibit good diversity in these areas. List B and C show slightly less diversity in their popularity and genre mix.",
-        "most_diverse_list_reasoning": "List A gets the highest score across popularity, genre, and theme diversity. While all lists demonstrate a good selection of movies, List A's balance between popular and niche titles, coupled with its wider genre and thematic range, makes it the most diverse.",
+        "comparison": "List A, B and C each offer a diverse range of movies, but with varying degrees of balance and breadth. List A stands out with its even distribution across popularity, genre, and theme, achieving a score of 3 across the board.  List B and C both show slightly lower scores, particularly in genre diversity, indicating some repetition within those categories.  List B has a slightly higher theme diversity score than List C, suggesting a wider thematic range in its selection.",
+        "most_diverse_list_reasoning": "List A is the most diverse because it achieves the highest scores across all three diversity metrics (Popularity, Genre, and Theme).  The consistent score of 3 indicates a balanced representation of popular and niche films, a wide variety of genres, and a broad range of themes.  Lists B and C show some repetition in genres and themes, resulting in lower scores.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 5,
-        "comparison": "List A and List C are very similar, both containing a mix of popular and less mainstream films, with a good spread of genres. List B also has a good genre variety, but includes more blockbuster movies compared to A and C.  List B also has movies from the same franchise.",
-        "most_diverse_list_reasoning": "List B demonstrates the best balance across all categories. While List A and C have good genre diversity, List B shows a better balance between popular and niche films and a broader thematic range, covering emotional journeys, action adventures, social issues, crime, and heartwarming stories.  Additionally, List B's inclusion of movies from the same franchise adds another layer of diversity in its approach to film selection.",
+        "comparison": "List A, B, and C all show a decent variety in genre.  List B has the highest Theme Diversity score, indicating a wider range of thematic exploration compared to Lists A and C.  List A and C have no franchise inclusion, while List B includes at least two movies from the same franchise.  List B has a slightly higher popularity diversity score than List A and C.",
+        "most_diverse_list_reasoning": "List B stands out due to its balanced scores across all categories. While List A and C show strengths in genre diversity, List B achieves a higher level of thematic diversity and includes movies from the same franchise, adding another layer of complexity and interest.  The balanced nature of List B's scores makes it the most diverse.",
         "gold": "B",
         "output": "B",
         "correct": true
     },
     {
         "participation": 6,
-        "comparison": "List A, B and C all include a variety of popular and niche movies, spanning multiple genres and themes.  List A shows slightly more genre diversity than List B and C. List B has a better balance of popular and less popular movies than List C.  List C has a wider time span than A and B, but slightly less genre and theme diversity.",
-        "most_diverse_list_reasoning": "List A exhibits the best overall diversity across all categories. While List B and C include movies from multiple genres and themes, List A demonstrates slightly superior genre and theme diversity.  The inclusion of movies like Love Actually adds to its thematic range. List B's thematic and genre diversity, though diverse, isn't as broad. List C shows a slightly narrower range of movies and genres than A.",
+        "comparison": "List A, B, and C all include a mix of blockbuster and independent films, resulting in similar Popularity Diversity scores.  List A exhibits the highest Genre Diversity, with a wider range of genres and less repetition.  While all three lists show Theme Diversity, List A's themes are arguably more distinct and less overlapping.  List A and C have a broader time span compared to List B. All three lists include movie franchises.",
+        "most_diverse_list_reasoning": "List A stands out due to its superior Genre Diversity and more distinct Theme Diversity compared to Lists B and C. Although all three lists have a mix of popular and niche films and include movie franchises, List A's genres are more varied and its themes less repetitive, making it the most diverse.",
         "gold": "C",
         "output": "A",
         "correct": false
     },
     {
         "participation": 8,
-        "comparison": "List A contains a mix of popular and niche movies but has less genre and theme diversity compared to Lists B and C. List B includes two movies from the same franchise, which adds a unique aspect, while List C demonstrates a higher level of theme diversity with a broader range of thematic explorations across its movies. All lists showcase a good time span of movie releases.",
-        "most_diverse_list_reasoning": "List C exhibits the most diversity across various aspects. It achieves a high score in both genre and theme diversity, encompassing a wide array of genres and in-depth thematic explorations, providing a rich and varied cinematic experience.  While List B also shows high genre diversity and includes a film franchise, List C's thematic breadth gives it a slight edge in overall diversity.",
+        "comparison": "List A, B, and C each offer a diverse range of films.  List A has a slightly lower diversity score across the board compared to B and C. List B includes movies from the same franchise, which could be seen as either increasing or decreasing diversity depending on the perspective. List C has high scores in Genre and Theme Diversity, making it a strong contender. ",
+        "most_diverse_list_reasoning": "List C demonstrates the highest overall diversity. While List B boasts high genre diversity, List C's balanced scores across popularity, genre, and theme diversity, coupled with its thematic range, make it the most diverse selection.",
         "gold": "C",
         "output": "C",
         "correct": true
     },
     {
         "participation": 9,
-        "comparison": "List A, List B, and List C all contain a variety of movies across different genres and themes. List A has a more balanced mix of blockbuster and niche films compared to Lists B and C.  List B includes a few more popular titles and fewer niche titles.  List C has some overlaps between genres and themes.  All three lists lack franchise inclusion.",
-        "most_diverse_list_reasoning": "List A displays the greatest diversity across popularity, genre, and theme. While all three lists offer a range of genres and themes, List A demonstrates a more even distribution of popular and niche films, resulting in higher diversity scores across all three categories in the summary.",
+        "comparison": "List A, B and C all contain a variety of movies, but List A shows more diversity in genre and theme.  List B and C have similar diversity scores, with List B having a slightly better popularity diversity score than List C.  All three lists lack franchise inclusion.",
+        "most_diverse_list_reasoning": "List A has the highest scores across all three diversity categories (Popularity, Genre, and Theme).  While the other lists show some diversity, List A demonstrates a more balanced and wider range of movies in terms of popularity, genre, and thematic exploration.",
         "gold": "A",
         "output": "A",
         "correct": true
     },
     {
         "participation": 11,
-        "comparison": "List A and List B have similar diversity scores across popularity, genre, and theme, with List A having a slightly higher genre diversity score. List C demonstrates higher diversity across all three categories, especially in theme diversity.  List A and B do not include any movies from the same franchise, while List C includes at least two movies from the same franchise.",
-        "most_diverse_list_reasoning": "List C is considered the most diverse because it has higher scores in popularity diversity, genre diversity, and especially theme diversity compared to lists A and B.  The inclusion of movies from the same franchise adds another layer to its diversity.",
+        "comparison": "List A, B, and C all show moderate popularity diversity, with scores of 2.  List A and C have higher genre diversity scores (3) compared to List B (2).  List C stands out with a higher theme diversity score (3) than Lists A and B (both 2).  List A and C have a similar time span, while List B has a shorter time span (1988-2007). Only List C includes movies from the same franchise.",
+        "most_diverse_list_reasoning": "List C exhibits the highest overall diversity. While all three lists have moderate popularity diversity, List C scores higher in both genre and theme diversity.  The inclusion of movies from the same franchise adds another layer of diversity, showcasing a range of films within a shared universe.  Although List A has high genre diversity, its theme diversity is lower than List C. List B has lower scores across all diversity categories.",
         "gold": "C",
         "output": "C",
         "correct": true

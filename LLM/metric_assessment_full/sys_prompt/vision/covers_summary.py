@@ -30,7 +30,7 @@ Deliver your comparison and choice of the most diverse list in the following JSO
 
 """
 
-model = genai.GenerativeModel(system_instruction=sys_prompt, generation_config={"response_mime_type": "application/json"})
+model = genai.GenerativeModel(system_instruction=sys_prompt, generation_config={"response_mime_type": "application/json", "temperature": 0})
 
 total_evaluations = 0
 valid_outputs = 0
@@ -47,6 +47,8 @@ error_log_file = "invalid_responses_"+EVALUATION_NAME+".log"
 valid_responses_file = "valid_responses_"+EVALUATION_NAME+".json"
 eval_file = "evaluation_summary_"+EVALUATION_NAME+".log"
 
+CACHE_FILE = "image_cache.json"
+
 MAX_REQUESTS_PER_MINUTE = 14
 REQUEST_INTERVAL = (60 / MAX_REQUESTS_PER_MINUTE)
 requests_made = 0  
@@ -54,6 +56,17 @@ last_request_time = time.time()
 
 with open("final_movie_data_with_summary.json", 'r') as f:
     data = json.load(f)
+
+def load_cache():
+    if os.path.exists(CACHE_FILE):
+        with open(CACHE_FILE, 'r') as f:
+            return json.load(f)
+    return {}
+
+# Save cache to a file
+def save_cache(cache):
+    with open(CACHE_FILE, 'w') as f:
+        json.dump(cache, f, indent=4)
 
 def fetch_save_and_upload_image(url, local_path):
     response = httpx.get(url)
@@ -65,19 +78,31 @@ def fetch_save_and_upload_image(url, local_path):
         uploaded_file = genai.upload_file(local_path)
         os.remove(local_path)
         
-        return uploaded_file
+        return uploaded_file.name
     else:
         print(f"Failed to retrieve image from {url}")
         return None
     
-def process_image_list(covers, list_name):
+def process_image_list(covers, list_name, cache):
     uploaded_images = []
+    
     for idx, url in enumerate(covers):
-        local_path = f"{list_name}_{idx}.jpg"  # Local file name for the image
-        uploaded_uri = fetch_save_and_upload_image(url, local_path)
-        if uploaded_uri:
-            uploaded_images.append(uploaded_uri)
+        cache_key = f"{list_name}_{idx}"
+        
+        if cache_key in cache:
+            cover_file = genai.get_file(cache[cache_key])
+            uploaded_images.append(cover_file.name)
+        else:
+            local_path = f"{list_name}_{idx}.jpg"
+            uploaded_uri = fetch_save_and_upload_image(url, local_path)
+            if uploaded_uri:
+                uploaded_images.append(uploaded_uri)
+                cache[cache_key] = uploaded_uri  # Update cache
+
     return uploaded_images
+
+# Load cache at start
+image_cache = load_cache()
 
 def create_summary_string(list_data):
     summary = list_data['summary']
@@ -121,9 +146,9 @@ with open(valid_responses_file, 'w') as valid_responses_log:
             list_C_covers = [movie['cover'] for movie in list_C['items']]
 
             try:
-                uploaded_list1 = process_image_list(list_A_covers, "list1")
-                uploaded_list2 = process_image_list(list_B_covers, "list2")
-                uploaded_list3 = process_image_list(list_C_covers, "list3")
+                uploaded_list1 = process_image_list(list_A_covers, f"{idx}_list1", image_cache)
+                uploaded_list2 = process_image_list(list_B_covers, f"{idx}_list2", image_cache)
+                uploaded_list3 = process_image_list(list_C_covers, f"{idx}_list3", image_cache)
 
                 prompt =(
                     ["List A:\n"] + uploaded_list1 + [create_summary_string(list_A)] +
@@ -192,6 +217,7 @@ with open(valid_responses_file, 'w') as valid_responses_log:
             requests_made += 1
             # time.sleep(REQUEST_INTERVAL) # uploading images is slow enough (~40s)
 
+    save_cache(image_cache)
     json.dump(json_log_data, valid_responses_log, indent=4)
 
 valid_percentage = (valid_outputs / total_evaluations) * 100 if total_evaluations > 0 else 0

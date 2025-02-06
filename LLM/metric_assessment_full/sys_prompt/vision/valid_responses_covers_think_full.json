@@ -2510,10 +2510,14 @@
     },
     {
         "participation": 171,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including crime, drama, mystery, thriller, comedy, romance, action, and sci-fi.  The plots range from mysteries and thrillers to romantic comedies and science fiction adventures. There's a mix of tones, from dark and serious to lighthearted.",
+            "list_B_summary": "List B has a broader range of genres than List A, including animation, family, and fantasy elements alongside comedy, romance, sci-fi, and drama.  The plots explore themes of self-discovery, time loops, and relationships, creating a more diverse narrative landscape.",
+            "list_C_summary": "List C shares similarities with List B in genre diversity, encompassing action, fantasy, horror, mystery, comedy, romance, and family films.  The plots cover magical adventures, supernatural mysteries, and personal journeys, demonstrating a balance of fantastical and realistic themes."
+        },
+        "most_diverse_list_reasoning": "List B stands out as the most diverse because it incorporates animation (with 'Here's the Plan') and expands on the fantasy genre with 'The Jungle Book' and 'Groundhog Day' demonstrating more thematic and stylistic variety. While List C is also diverse, it leans more heavily on fantasy and adventure compared to List B's inclusion of animation and a wider range of subgenres within the comedy and drama categories.",
         "gold": "A",
-        "output": "X",
+        "output": "B",
         "correct": false
     },
     {
@@ -3183,26 +3187,100 @@
     },
     {
         "participation": 6,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, comedy, sci-fi, fantasy, and drama movies.  There's a superhero theme with Iron Man and Spider-Man, but also a range of genres that are quite different from each other.",
+            "list_B_summary": "List B has a similar mix of genres to List A, but with the addition of biographical and historical elements from Schindler's List. It also includes a stronger crime/thriller element.",
+            "list_C_summary": "List C includes animation, adventure, drama, fantasy and romance.  It is notable for including several animated films and has a stronger focus on fantasy and adventure compared to lists A and B. ",
+            "genre_diversity": {
+                "list_A": [
+                    "Action",
+                    "Comedy",
+                    "Crime",
+                    "Animation",
+                    "Adventure",
+                    "Family",
+                    "Fantasy",
+                    "Sci-Fi",
+                    "Horror",
+                    "Drama",
+                    "Mystery",
+                    "Romance"
+                ],
+                "list_B": [
+                    "Action",
+                    "Adventure",
+                    "Drama",
+                    "Fantasy",
+                    "Comedy",
+                    "Crime",
+                    "Biography",
+                    "History",
+                    "Thriller",
+                    "Romance"
+                ],
+                "list_C": [
+                    "Action",
+                    "Adventure",
+                    "Drama",
+                    "Fantasy",
+                    "Animation",
+                    "Comedy",
+                    "Family",
+                    "Romance"
+                ]
+            },
+            "themes": {
+                "list_A": [
+                    "Superheroes",
+                    "Undercover cops",
+                    "Vampires",
+                    "Magic",
+                    "Relationship struggles"
+                ],
+                "list_B": [
+                    "War",
+                    "Crime",
+                    "Magic",
+                    "Undercover cops",
+                    "Historical events",
+                    "Personal journeys"
+                ],
+                "list_C": [
+                    "Friendship",
+                    "Adventure",
+                    "Family relationships",
+                    "War",
+                    "Historical events"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diverse range of genres, including action, comedy, crime, animation, adventure, family, fantasy, sci-fi, horror, drama, mystery, and romance. While List B introduces biographical and historical elements, and List C features animation and fantasy more prominently, List A's broader spread across multiple genres makes it the most diverse.",
         "gold": "C",
-        "output": "X",
+        "output": "A",
         "correct": false
     },
     {
         "participation": 8,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres, including biography, comedy, drama, animation, adventure, family, fantasy, musical, romance, crime, and thriller.  The movies cover diverse themes such as social class, family relationships, crime, and the creation of social media. ",
+            "list_B_summary": "List B has a more concentrated selection of genres, focusing mainly on comedy, action, crime, drama, sci-fi, and romance.  Several movies have similar comedic elements.  The themes are broader than List A, touching on commitment issues, social mobility, and the ethics of genetic engineering.",
+            "list_C_summary": "List C offers a balance of action, adventure, sci-fi, crime, drama, and comedy.  The movies explore diverse themes such as genetic discrimination, crime investigations, and interspecies relations. There is a mixture of serious and lighthearted tones."
+        },
+        "most_diverse_list_reasoning": "List A stands out due to its wider range of genres and themes.  It includes animation, musical, and fantasy elements that are absent in the other lists. The movies explore distinct themes such as social class dynamics (Intouchables), the creation of a social media giant (The Social Network), and the complexities of personal redemption (Gran Torino). This variety makes it the most diverse list.",
         "gold": "C",
-        "output": "X",
+        "output": "A",
         "correct": false
     },
     {
         "participation": 9,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including crime, thriller, drama, biography, history, adventure, and fantasy.  The movies span different decades and cover diverse themes such as heists, serial killers, historical achievements, and survival stories.",
+            "list_B_summary": "List B is more focused on drama and thriller genres, with an action-adventure film included. The movies are mostly character-driven, exploring themes of adolescence, ambition, psychological torment and adventure. ",
+            "list_C_summary": "List C has a broader range of genres including drama, animation, adventure, comedy, crime, music, mystery, and sci-fi. It features diverse themes such as teenage angst, musical journeys, criminal escapades, and dystopian futures. The movies represent different animation styles and time periods."
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity because it encompasses a wider range of genres than lists A and B. It includes animation (Coco), musical elements (Coco, O Brother, Where Art Thou?), comedy (O Brother, Where Art Thou?), and science fiction (Gattaca), creating the most varied collection of films in terms of style, tone, and subject matter.",
         "gold": "A",
-        "output": "X",
+        "output": "C",
         "correct": false
     },
     {

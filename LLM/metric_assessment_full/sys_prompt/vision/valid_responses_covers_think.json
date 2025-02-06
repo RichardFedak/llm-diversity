@@ -1036,19 +1036,27 @@
     },
     {
         "participation": 159,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres including Action, Sci-Fi, Thriller, Horror, Crime, Drama, and Comedy.  The plots range from superhero adventures to psychological thrillers and mobster dramas. There's a mix of modern and older films.",
+            "list_B_summary": "List B has a good balance of animation, action, and family films, alongside crime thrillers and dramas.  It includes a biography, a war film and a comedy. The time period of films is spread out.",
+            "list_C_summary": "List C contains a mix of action, adventure, sci-fi, thriller, horror, animation, and family films.  It also includes a comedy, drama, and western. There's a decent mix of older and newer movies."
+        },
+        "most_diverse_list_reasoning": "List A stands out due to its broader range of genres and film styles. While Lists B and C have variety, List A includes horror (The Others), a biographical crime drama (Donnie Brasco), and a quirky comedy-drama (Moonrise Kingdom), showcasing a more diverse selection of cinematic experiences than the other lists.",
         "gold": "C",
-        "output": "X",
+        "output": "A",
         "correct": false
     },
     {
         "participation": 158,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A shows a variety of genres, including horror (Hereditary), drama (A Beautiful Mind, The Machinist), thriller (The Machinist, Old Boy), adventure (Harry Potter), comedy (The Interview), and fantasy (Harry Potter).  The plots are diverse, ranging from psychological thrillers and family dramas to political satire and magical adventures.",
+            "list_B_summary": "List B is more diverse in terms of tone. It includes action (Old Boy, X2), comedy (School of Rock), war (Inglourious Basterds), crime (Pulp Fiction), and animation (Inside Out).  While there is some genre overlap, the overall mood and style of the films differ greatly from one another.",
+            "list_C_summary": "List C contains a combination of genres similar to List A, including horror (Hereditary), drama (A Beautiful Mind), action (Pirates of the Caribbean, The Interview, Bourne Supremacy), adventure (Pirates of the Caribbean, The Interview), and fantasy (Pirates of the Caribbean).  The plots focus on personal struggles and high-stakes missions, but also include elements of supernatural and political intrigue."
+        },
+        "most_diverse_list_reasoning": "List B stands out due to its wider range of tones and styles.  While List A and C share some overlapping genres, List B successfully mixes genres such as animation (Inside Out), war (Inglourious Basterds), and crime (Pulp Fiction) with action and sci-fi, resulting in a collection with more noticeable tonal and stylistic diversity.",
         "gold": "B",
-        "output": "X",
-        "correct": false
+        "output": "B",
+        "correct": true
     },
     {
         "participation": 160,
@@ -1340,10 +1348,14 @@
     },
     {
         "participation": 184,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A offers a diverse range of genres, including animation, comedy, drama, action, crime, and thriller.  The plots cover different themes:  friendship (Monsters University), social issues (Intouchables), mental health (Silver Linings Playbook), and revenge (John Wick).",
+            "list_B_summary": "List B focuses primarily on drama, with subgenres like biography, crime, and music.  The plots explore themes of revenge (Gladiator), con artistry (Catch Me If You Can), midlife crisis (American Beauty), and ambition (Whiplash).",
+            "list_C_summary": "List C shows a mix of animation, comedy, romance, action, and fantasy.  The plots deal with friendship (Monsters University), romance (Pretty Woman), magical realism (Scott Pilgrim vs. the World), and revenge (Gladiator).  It has some overlap with Lists A and B but presents unique genre combinations."
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in terms of both genre and thematic content. While List C also shows a good variety, List A includes more varied genres, including animation, and touches on wider-ranging themes such as mental health and social dynamics in addition to common themes like revenge and romance.",
         "gold": "B",
-        "output": "X",
+        "output": "A",
         "correct": false
     },
     {
@@ -1548,11 +1560,17 @@
     },
     {
         "participation": 6,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A_summary": "List A contains a mix of action, comedy, sci-fi, fantasy, and drama movies.  There's a balance between action-oriented films and those with romantic or comedic elements. The range of genres is relatively broad but not exceptionally diverse.",
+            "list_B_summary": "List B features a combination of action, drama, crime, and fantasy films.  It includes a biographical drama and a historical film, adding some thematic depth but maintaining a focus on action and suspense.  The genre mix is broader than List A, including biographical and historical elements.",
+            "list_C_summary": "List C blends animation, action, adventure, drama, and fantasy movies. It has a significant animation sub-section and includes both lighthearted (e.g., Toy Story) and more serious (e.g., Schindler's List) films. The inclusion of animation and a wide range of tones and subjects creates considerable diversity.",
+            "key_differences": "The main differences lie in the inclusion of animated films and the thematic range. List C has more animated movies, while List B adds a historical/biographical element.  List A lacks the distinct subgenres present in Lists B and C.",
+            "genre_diversity_analysis": "Analyzing the genre diversity, List C stands out due to the mix of animation, adventure, drama, and fantasy films.  The blend of tones and styles within these categories adds another layer of diversity not as prominent in Lists A and B."
+        },
+        "most_diverse_list_reasoning": "List C is the most diverse because it contains a mix of animation and live-action films, spanning various tones and themes. The presence of both light-hearted animated movies like Toy Story and Shrek 2, alongside more serious films such as Schindler's List, demonstrates a greater range of styles and storytelling approaches than Lists A and B.  Lists A and B have some diversity in terms of genre, but List C shows a greater variety in both genre and the overall feeling and themes of the films.",
         "gold": "C",
-        "output": "X",
-        "correct": false
+        "output": "C",
+        "correct": true
     },
     {
         "participation": 8,

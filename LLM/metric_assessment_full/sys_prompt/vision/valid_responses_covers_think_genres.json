@@ -833,26 +833,180 @@
     },
     {
         "participation": 109,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A": {
+                "genre_diversity": "High diversity of genres including Animation, Adventure, Comedy, Family, Fantasy, Drama, Romance",
+                "themes": [
+                    "Adventure",
+                    "Family",
+                    "Fantasy",
+                    "Historical Fiction",
+                    "Coming-of-Age"
+                ]
+            },
+            "list_B": {
+                "genre_diversity": "Good diversity, mainly focused on Action, Adventure, and Fantasy.  Includes animation.",
+                "themes": [
+                    "Adventure",
+                    "Superheroes",
+                    "Fantasy",
+                    "Mythology"
+                ]
+            },
+            "list_C": {
+                "genre_diversity": "High diversity of genres including Drama, Romance, Mystery, Thriller, Animation, Action, Adventure, Family, Biography, History, War, Crime",
+                "themes": [
+                    "Superheroes",
+                    "Psychological Thriller",
+                    "Historical",
+                    "War"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diverse range of genres and themes. While List A has a variety of genres, List C's inclusion of genres like Biography, History, War, and Crime adds a level of diversity not found in the other lists.  The themes are also more varied.",
         "gold": "C",
-        "output": "X",
-        "correct": false
+        "output": "C",
+        "correct": true
     },
     {
         "participation": 111,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "list_A": {
+                "genres": [
+                    "Action",
+                    "Drama",
+                    "Sci-Fi",
+                    "Thriller",
+                    "Animation",
+                    "Adventure",
+                    "Comedy",
+                    "Family",
+                    "Fantasy",
+                    "Western",
+                    "Romance"
+                ],
+                "themes": [
+                    "dystopian future",
+                    "monsters",
+                    "slavery",
+                    "coming-of-age",
+                    "superhuman abilities"
+                ],
+                "summary": "List A contains a variety of genres and themes, ranging from dark and gritty sci-fi to heartwarming coming-of-age stories and historical dramas.  It includes animation and very different time periods. "
+            },
+            "list_B": {
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Fantasy",
+                    "Sci-Fi",
+                    "Comedy",
+                    "Animation"
+                ],
+                "themes": [
+                    "pirates",
+                    "video games",
+                    "superhuman abilities",
+                    "space opera",
+                    "family"
+                ],
+                "summary": "List B is focused on adventure and fantasy, with some sci-fi and animation.  The themes are fairly light-hearted, despite some action elements. "
+            },
+            "list_C": {
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Fantasy",
+                    "Crime",
+                    "Drama",
+                    "Thriller",
+                    "Animation",
+                    "Comedy"
+                ],
+                "themes": [
+                    "pirates",
+                    "family",
+                    "crime",
+                    "space opera"
+                ],
+                "summary": "List C blends adventure, fantasy, crime and animation, similar to List B, but incorporates more dramatic elements. It has some overlap with List B."
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity. It encompasses a wider range of genres (including animation, Western, and romance) and presents more disparate themes than the other lists. The combination of a dystopian future, a monster story, slavery drama, and a classic coming-of-age narrative showcases more variety compared to the more focused adventures and fantasy found in Lists B and C.",
         "gold": "A",
-        "output": "X",
-        "correct": false
+        "output": "A",
+        "correct": true
     },
     {
         "participation": 113,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "listA": {
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Crime",
+                    "Thriller",
+                    "Drama",
+                    "Comedy",
+                    "Sci-Fi",
+                    "Fantasy",
+                    "Family",
+                    "Mystery"
+                ],
+                "themes": [
+                    "War",
+                    "Fantasy",
+                    "Time Travel",
+                    "Oil Industry",
+                    "Magic"
+                ],
+                "summary": "List A offers a mix of action, adventure, and fantasy films, with a couple of dramas and a time travel movie.  Genre diversity is present, but the plots aren't vastly different."
+            },
+            "listB": {
+                "genres": [
+                    "Action",
+                    "Drama",
+                    "Sci-Fi",
+                    "Thriller",
+                    "Comedy",
+                    "Romance"
+                ],
+                "themes": [
+                    "Time Travel",
+                    "Comedy of Errors",
+                    "Romance",
+                    "Espionage",
+                    "Historical Drama"
+                ],
+                "summary": "List B has a more balanced mix of genres, including action, sci-fi, comedy, and romance. The themes are varied, encompassing time travel, and more grounded stories."
+            },
+            "listC": {
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Crime",
+                    "Thriller",
+                    "Comedy",
+                    "Drama",
+                    "Romance",
+                    "Animation",
+                    "Family",
+                    "Fantasy",
+                    "Sci-Fi"
+                ],
+                "themes": [
+                    "War",
+                    "Romance",
+                    "Espionage",
+                    "Superhero",
+                    "Emotions"
+                ],
+                "summary": "List C presents a variety of genres, including animation, alongside the more common action and thriller genres.  Themes are more diverse, covering espionage, emotions, and superhero elements."
+            }
+        },
+        "most_diverse_list_reasoning": "List C exhibits the most diversity. It has the widest range of genres, encompassing animation (Inside Out), alongside action, thriller, comedy, and romance.  The thematic variety is also higher, including emotional exploration, espionage, and superhero elements, in addition to war and romance. This combination makes it more diverse than the others.",
         "gold": "B",
-        "output": "X",
+        "output": "C",
         "correct": false
     },
     {
@@ -2562,10 +2716,69 @@
     },
     {
         "participation": 8,
-        "comparison": "X",
-        "most_diverse_list_reasoning": "X",
+        "comparison": {
+            "listA": {
+                "genres": [
+                    "Biography",
+                    "Comedy",
+                    "Drama",
+                    "Animation",
+                    "Adventure",
+                    "Family",
+                    "Fantasy",
+                    "Musical",
+                    "Romance",
+                    "Crime",
+                    "Thriller"
+                ],
+                "themes": [
+                    "Social issues",
+                    "family relationships",
+                    "crime",
+                    "technology"
+                ]
+            },
+            "listB": {
+                "genres": [
+                    "Biography",
+                    "Comedy",
+                    "Drama",
+                    "Action",
+                    "Crime",
+                    "Sci-Fi",
+                    "Romance"
+                ],
+                "themes": [
+                    "Social issues",
+                    "workplace issues",
+                    "love relationships",
+                    "genetic engineering"
+                ]
+            },
+            "listC": {
+                "genres": [
+                    "Sci-Fi",
+                    "Thriller",
+                    "Drama",
+                    "Action",
+                    "Comedy",
+                    "Crime",
+                    "Mystery",
+                    "Adventure",
+                    "Fantasy"
+                ],
+                "themes": [
+                    "genetic engineering",
+                    "crime",
+                    "war",
+                    "technology",
+                    "environmentalism"
+                ]
+            }
+        },
+        "most_diverse_list_reasoning": "List A exhibits the most diversity in both genre and thematic representation.  It encompasses animation, biographical, comedic, dramatic, and crime thriller elements, covering a wide range of storytelling styles and societal issues.",
         "gold": "C",
-        "output": "X",
+        "output": "A",
         "correct": false
     },
     {
