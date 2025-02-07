@@ -14,10 +14,10 @@
 
 | Evaluation                              | BIN-DIV  | CB-ILD   | CF-ILD   |
 |-----------------------------------------|----------|----------|----------|
-| [Titles](single_think.json)               | 54.21%   | 28.97%    | 15.89%    |
-| [T+Genres](single_think_genres.json)      | 57.94%   | 28.04%    | 14.02%    |
-| [T+G+Plot](single_think_plot.json)        | 56.07%   | 28.97%    | 14.95%    |
-| [Standouts+Titles](single_popularity.json) | 56.07%   | 27.10%    | 14.95%    |
-| [Standouts+T+Genres](single_popularity_genres.json) | 53.27%   | 33.64%    | 13.08%    |
-| [Standouts+G+Plot](single_popularity_plot.json) | 58.88%   | 27.10%    | 14.02%    |
+| [Titles](single_think.py)               | 54.21%   | 28.97%    | 15.89%    |
+| [T+Genres](single_think_genres.py)      | 57.94%   | 28.04%    | 14.02%    |
+| [T+G+Plot](single_think_full.py)        | 56.07%   | 28.97%    | 14.95%    |
+| [Standouts+Titles](single_popularity.py) | 56.07%   | 27.10%    | 14.95%    |
+| [Standouts+T+Genres](single_popularity_genres.py) | 53.27%   | 33.64%    | 13.08%    |
+| [Standouts+G+Plot](single_popularity_plot.py) | 58.88%   | 27.10%    | 14.02%    |
 
