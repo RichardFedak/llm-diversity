@@ -1,0 +1,30 @@
+{
+    "name": "single_think_plot",
+    "total_evaluations": 107,
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 46,
+            "cf_ild": 20,
+            "cb_ild": 31,
+            "bin_div": 62
+        },
+        "accuracy": {
+            "output": 0.4299,
+            "cf_ild": 0.1869,
+            "cb_ild": 0.2897,
+            "bin_div": 0.5794
+        }
+    },
+    "chosen_metrics": {
+        "counts": {
+            "BIN-DIV": 60,
+            "CB-ILD": 31,
+            "CF-ILD": 16
+        },
+        "percentages": {
+            "BIN-DIV": 0.5607,
+            "CB-ILD": 0.2897,
+            "CF-ILD": 0.1495
+        }
+    }
+}
