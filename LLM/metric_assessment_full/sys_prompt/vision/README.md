@@ -11,3 +11,5 @@
 *   As noted in related [ILS and diversity paper](https://link.springer.com/article/10.1007/s11257-022-09351-w), the most frequent response regarding the criteria that determine movie similarity (and diversity) was genre. Therefore, in the `covers_think` evaluation, where only movie covers were provided to the LLM, the LLM/User correlation is only 27%. Evaluations that included additional information about the movies resulted in higher LLM/User and LLM/BIN-DIV correlations. This suggests that visual information alone is not sufficient.
 
 *   The CB-ILD metric shows the highest correlation with the LLM in the `covers_think` evaluation, where only movie covers were presented without supplementary information. So the **cosine distance of rating vectors** has **(a slight) correlation** with the **visual features** present on the movie covers ?
+
+*   The overall coverage, that is at least one correct output from one of the evaluations, is ***~86%***. `covers_think_full.py` & `covers_summary.py` have coverage of ***~68%***.

@@ -1,0 +1,1936 @@
+{
+    "total_entries": 535,
+    "correct_entries": 217,
+    "overall_correct_count": 92,
+    "total_participations": 107,
+    "overall_coverage": 0.8598130841121495,
+    "ensemble_correct_count": 44,
+    "participation_stats": {
+        "63": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "61": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "62": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "64": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "67": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "B",
+                "C",
+                "C"
+            ]
+        },
+        "65": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "66": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "69": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "C",
+                "B"
+            ]
+        },
+        "72": {
+            "correct_files": 5,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "74": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "79": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "82": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "81": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "85": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "C",
+                "B"
+            ]
+        },
+        "88": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "87": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "89": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "90": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "B",
+                "C"
+            ]
+        },
+        "91": {
+            "correct_files": 5,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "93": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "94": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "95": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "96": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "A",
+                "C",
+                "C"
+            ]
+        },
+        "98": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "C",
+                "A"
+            ]
+        },
+        "99": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "C",
+                "C",
+                "B"
+            ]
+        },
+        "102": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        "100": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "C",
+                "A",
+                "B"
+            ]
+        },
+        "103": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "B",
+                "C",
+                "C"
+            ]
+        },
+        "104": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "105": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "108": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "C",
+                "C"
+            ]
+        },
+        "106": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "C",
+                "B",
+                "B"
+            ]
+        },
+        "109": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "C",
+                "B"
+            ]
+        },
+        "111": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "113": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "114": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "115": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "116": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "C",
+                "C"
+            ]
+        },
+        "118": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "B",
+                "C"
+            ]
+        },
+        "117": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "121": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "122": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "A",
+                "C"
+            ]
+        },
+        "127": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "126": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "A",
+                "C"
+            ]
+        },
+        "123": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "129": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "C",
+                "C"
+            ]
+        },
+        "125": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "C",
+                "C",
+                "B"
+            ]
+        },
+        "133": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "A",
+                "C"
+            ]
+        },
+        "131": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "134": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "135": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "137": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "A",
+                "B"
+            ]
+        },
+        "138": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "136": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "C",
+                "B"
+            ]
+        },
+        "139": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "C",
+                "B",
+                "C"
+            ]
+        },
+        "140": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "145": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "144": {
+            "correct_files": 5,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "146": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "147": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "A",
+                "A"
+            ]
+        },
+        "150": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "C",
+                "B"
+            ]
+        },
+        "148": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "A",
+                "A"
+            ]
+        },
+        "152": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        "151": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "C",
+                "C"
+            ]
+        },
+        "154": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "B",
+                "C",
+                "C"
+            ]
+        },
+        "155": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "B",
+                "C",
+                "A"
+            ]
+        },
+        "157": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "153": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "156": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "159": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "C",
+                "A",
+                "A"
+            ]
+        },
+        "158": {
+            "correct_files": 5,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "160": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "C",
+                "A",
+                "B"
+            ]
+        },
+        "163": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "C",
+                "B"
+            ]
+        },
+        "165": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "C",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "166": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "164": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "A",
+                "C"
+            ]
+        },
+        "168": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "167": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "A",
+                "A"
+            ]
+        },
+        "171": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "170": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "C"
+            ]
+        },
+        "172": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "A",
+                "C",
+                "B"
+            ]
+        },
+        "173": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "C",
+                "C"
+            ]
+        },
+        "175": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        "177": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        "178": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "A"
+            ]
+        },
+        "179": {
+            "correct_files": 5,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "180": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "B",
+                "A",
+                "C"
+            ]
+        },
+        "181": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "B",
+                "B",
+                "B",
+                "A"
+            ]
+        },
+        "182": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "B",
+                "C",
+                "A"
+            ]
+        },
+        "184": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "C",
+                "C",
+                "A"
+            ]
+        },
+        "183": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "185": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "B",
+                "A",
+                "B"
+            ]
+        },
+        "188": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "B",
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        "187": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "C",
+                "C",
+                "B"
+            ]
+        },
+        "186": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "C"
+            ]
+        },
+        "191": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "193": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "C",
+                "B",
+                "C"
+            ]
+        },
+        "192": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "C",
+                "C",
+                "C",
+                "A"
+            ]
+        },
+        "194": {
+            "correct_files": 0,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "B",
+                "B",
+                "B"
+            ]
+        },
+        "197": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "A",
+                "C",
+                "A",
+                "C"
+            ]
+        },
+        "3": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "A",
+                "A",
+                "B"
+            ]
+        },
+        "4": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "5": {
+            "correct_files": 4,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "B",
+                "B",
+                "B",
+                "B",
+                "C"
+            ]
+        },
+        "6": {
+            "correct_files": 3,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "A",
+                "C",
+                "C",
+                "C"
+            ]
+        },
+        "8": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "C",
+                "B"
+            ]
+        },
+        "9": {
+            "correct_files": 1,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "A",
+                "C",
+                "C",
+                "B",
+                "B"
+            ]
+        },
+        "11": {
+            "correct_files": 2,
+            "total_files": 5,
+            "files": [
+                "valid_responses_covers_summary.json",
+                "valid_responses_covers_think_full.json",
+                "valid_responses_covers_think_genres.json",
+                "valid_responses_covers_think_titles.json",
+                "valid_responses_covers_think.json"
+            ],
+            "outputs": [
+                "C",
+                "A",
+                "A",
+                "B",
+                "C"
+            ]
+        }
+    }
+}
