@@ -10,13 +10,9 @@ genai.configure(api_key=api_key)
 
 sys_prompt = """
 You are an assistant tasked with comparing three lists of movies. For each movie, the title, genres and cover is provided. 
-Use your expertise and given information to determine key differences between the lists and identify the most diverse list.
+Use your own judgment to determine what information is relevant when assessing the diversity of the lists. You may consider, the titles, genres and covers. 
 
 Deliver your comparison and choice of the most diverse list in the following JSON format:
-Note that:
-    - The "comparison" field can be any custom object you create to compare and analyze key differences between the lists, such as visual themes, genres or create summaries of the lists containing the information to help determine the most diverse list.
-    - The "most_diverse_list_reasoning" field should explain which list you perceive to be the most diverse and why.
-    - The "most_diverse_list" field should contain the list you determine to be the most diverse, either 'A', 'B', or 'C'. 
 
 {
     "comparison": object,                     # Your custom object comparing and analyzing the lists.
@@ -82,11 +78,11 @@ def process_image_list(covers, list_name, cache):
     uploaded_images = []
     
     for idx, url in enumerate(covers):
-        cache_key = f"{list_name}_{idx}"
+        cache_key = url
         
         if cache_key in cache:
             cover_file = genai.get_file(cache[cache_key])
-            uploaded_images.append(cover_file.name)
+            uploaded_images.append(cover_file)
         else:
             local_path = f"{list_name}_{idx}.jpg"
             uploaded_uri = fetch_save_and_upload_image(url, local_path)

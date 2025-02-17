@@ -1,0 +1,20 @@
+{
+    "total_evaluations": 107,
+    "correct_evaluations": {
+        "output": 47,
+        "cf_ild": 24,
+        "cb_ild": 42,
+        "bin_div": 46
+    },
+    "correlations": {
+        "output": 0.4393,
+        "cf_ild": 0.2243,
+        "cb_ild": 0.3925,
+        "bin_div": 0.4299
+    },
+    "chosen_metrics_counts": {
+        "BIN-DIV": 46,
+        "CF-ILD": 19,
+        "CB-ILD": 42
+    }
+}

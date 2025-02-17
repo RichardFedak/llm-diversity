@@ -18,7 +18,7 @@ The summary includes the following information:
     - Time Span: Years of the earliest and latest movie releases in the list.
     - Franchise Inclusion: Whether the list includes at least two movies from the same franchise.
 
-Use your own judgment to determine what information is relevant when assessing the diversity of the lists. You may consider the movie covers provided or any information from the summary.
+Use your own judgment to determine what information is relevant when assessing the diversity of the lists. You should consider the movie covers provided and information from the summary.
 
 Deliver your comparison and choice of the most diverse list in the following JSON format:
 
@@ -30,7 +30,7 @@ Deliver your comparison and choice of the most diverse list in the following JSO
 
 """
 
-model = genai.GenerativeModel(system_instruction=sys_prompt, generation_config={"response_mime_type": "application/json", "temperature": 0})
+model = genai.GenerativeModel(system_instruction=sys_prompt, generation_config={"response_mime_type": "application/json"})
 
 total_evaluations = 0
 valid_outputs = 0
@@ -87,11 +87,11 @@ def process_image_list(covers, list_name, cache):
     uploaded_images = []
     
     for idx, url in enumerate(covers):
-        cache_key = f"{list_name}_{idx}"
+        cache_key = url
         
         if cache_key in cache:
             cover_file = genai.get_file(cache[cache_key])
-            uploaded_images.append(cover_file.name)
+            uploaded_images.append(cover_file)
         else:
             local_path = f"{list_name}_{idx}.jpg"
             uploaded_uri = fetch_save_and_upload_image(url, local_path)
@@ -104,10 +104,11 @@ def process_image_list(covers, list_name, cache):
 # Load cache at start
 image_cache = load_cache()
 
-def create_summary_string(list_data):
+def create_summary_string(list_data, list_name):
     summary = list_data['summary']
 
     summary_text = (
+        f"Summary for list {list_name}\n"
         f"Popularity Diversity: {summary['popularity_diversity']['reasoning']} (Score: {summary['popularity_diversity']['value']})\n"
         f"Genre Diversity: {summary['genre_diversity']['reasoning']} (Score: {summary['genre_diversity']['value']})\n"
         f"Theme Diversity: {summary['theme_diversity']['reasoning']} (Score: {summary['theme_diversity']['value']})\n"
@@ -151,9 +152,9 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                 uploaded_list3 = process_image_list(list_C_covers, f"{idx}_list3", image_cache)
 
                 prompt =(
-                    ["List A:\n"] + uploaded_list1 + [create_summary_string(list_A)] +
-                    ["\n\nList B:\n"] + uploaded_list2 + [create_summary_string(list_B)] +
-                    ["\n\nList C:\n"] + uploaded_list3 + [create_summary_string(list_C)]
+                    ["List A:\n"] + uploaded_list1 + [create_summary_string(list_A, "A")] +
+                    ["\n\nList B:\n"] + uploaded_list2 + [create_summary_string(list_B, "B")] +
+                    ["\n\nList C:\n"] + uploaded_list3 + [create_summary_string(list_C, "C")]
                 )
                 response_step1 = model.generate_content(prompt)
                 output = json.loads(response_step1.text.strip())

@@ -1,20 +1,20 @@
 {
     "total_evaluations": 107,
     "correct_evaluations": {
-        "output": 29,
-        "cf_ild": 41,
-        "cb_ild": 32,
-        "bin_div": 29
+        "output": 43,
+        "cf_ild": 29,
+        "cb_ild": 49,
+        "bin_div": 38
     },
     "correlations": {
-        "output": 0.271,
-        "cf_ild": 0.3832,
-        "cb_ild": 0.2991,
-        "bin_div": 0.271
+        "output": 0.4019,
+        "cf_ild": 0.271,
+        "cb_ild": 0.4579,
+        "bin_div": 0.3551
     },
     "chosen_metrics_counts": {
-        "CF-ILD": 44,
-        "BIN-DIV": 31,
-        "CB-ILD": 32
+        "BIN-DIV": 37,
+        "CF-ILD": 21,
+        "CB-ILD": 49
     }
 }

@@ -3,11 +3,12 @@ import os
 from collections import defaultdict, Counter
 
 files = [
-    "valid_responses_covers_summary.json",
-    "valid_responses_covers_think_full.json",
+    #"valid_responses_covers_think.json",
+    #"valid_responses_covers_think_titles.json",
     "valid_responses_covers_think_genres.json",
-    "valid_responses_covers_think_titles.json",
-    "valid_responses_covers_think.json",
+    "valid_responses_covers_think_plot.json",
+    #"valid_responses_covers_think_full.json",
+    "valid_responses_covers_summary.json",
 ]
 
 def load_data(files):

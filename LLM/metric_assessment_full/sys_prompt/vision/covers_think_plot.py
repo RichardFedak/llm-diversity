@@ -9,8 +9,8 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 sys_prompt = """
-You are an assistant tasked with comparing three lists of movies. For each movie, the cover is provided. 
-Use your expertise to recognize the covers and determine key differences between the lists and identify the most diverse list.
+You are an assistant tasked with comparing three lists of movies. For each movie, the title, plot and cover is provided. 
+Use your own judgment to determine what information is relevant when assessing the diversity of the lists. You may consider the movie titles, plots and covers.
 
 Deliver your comparison and choice of the most diverse list in the following JSON format:
 
@@ -32,7 +32,7 @@ metric_stats = {}
 
 start_time = time.time()
 
-EVALUATION_NAME = "covers_think"
+EVALUATION_NAME = "covers_think_plot"
 
 error_log_file = "invalid_responses_"+EVALUATION_NAME+".log"
 valid_responses_file = "valid_responses_"+EVALUATION_NAME+".json"
@@ -137,8 +137,14 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                 uploaded_list2 = process_image_list(list_B_covers, f"{idx}_list2", image_cache)
                 uploaded_list3 = process_image_list(list_C_covers, f"{idx}_list3", image_cache)
 
+                list_A_info_str = "\n".join([f"{movie['title']} Plot: {movie['plot']}" for movie in filtered_list_A])
+                list_B_info_str = "\n".join([f"{movie['title']} Plot: {movie['plot']}" for movie in filtered_list_B])
+                list_C_info_str = "\n".join([f"{movie['title']} Plot: {movie['plot']}" for movie in filtered_list_C])
+
                 prompt =(
-                    ["List A:\n"] + uploaded_list1 + ["\n\nList B:\n"] + uploaded_list2 + ["\n\nList C:\n"] + uploaded_list3
+                    ["List A:\n"] + [list_A_info_str] + uploaded_list1 + 
+                    ["\n\nList B:\n"] + [list_B_info_str] + uploaded_list2 + 
+                    ["\n\nList C:\n"] + [list_C_info_str] + uploaded_list3
                 )
                 response_step1 = model.generate_content(prompt)
                 output = json.loads(response_step1.text.strip())
