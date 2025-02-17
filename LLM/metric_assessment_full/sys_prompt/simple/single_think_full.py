@@ -10,14 +10,15 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 sys_prompt = """
-You are an assistant tasked with comparing three lists of movies. For each movie, the title, genres and plot are provided. Use your expertise to assess the lists and choose the one with the most diverse collection of movies.
+You are an assistant tasked with comparing three lists of movies. For each movie, the title, genres and plot is provided. 
+Use your own judgment to determine what information is relevant when assessing the diversity of the lists. You may consider the movie titles, genres and plots.
 
 Deliver your comparison and choice of the most diverse list in the following JSON format:
 
 {
-    "comparison": str,                     # Compare the lists.
-    "most_diverse_list_reasoning": str,    # Explanation of what list you perceive to be the most diverse.
-    "most_diverse_list": str               # The list you determine to be the most diverse, either 'A', 'B' or 'C'.
+    "comparison": object,                     # Your custom object comparing and analyzing the lists.
+    "most_diverse_list_reasoning": string,    # Explanation of which list you perceive to be the most diverse.
+    "most_diverse_list": string               # The list you determine to be the most diverse, either 'A', 'B', or 'C'.
 }
 """
 
@@ -32,8 +33,8 @@ metric_stats = {}
 
 start_time = time.time()
 
-error_log_file = "invalid_responses_single_think_plot.log"
-valid_responses_file = "valid_responses_single_think_plot.json"
+error_log_file = "invalid_responses_single_think_full.log"
+valid_responses_file = "valid_responses_single_think_full.json"
 
 MAX_REQUESTS_PER_MINUTE = 14
 REQUEST_INTERVAL = (60 / MAX_REQUESTS_PER_MINUTE)
@@ -119,6 +120,8 @@ with open(valid_responses_file, 'w') as valid_responses_log:
                     json_log_data.append({
                         "participation": participation,
                         "prompt": prompt,
+                        "comparison": output["comparison"],
+                        "most_diverse_list_reasoning": output["most_diverse_list_reasoning"],
                         "gold": gold_most_diverse,
                         "output": output["most_diverse_list"],
                         "correct": correctness
@@ -171,7 +174,7 @@ for metric_name, stats in metric_stats.items():
         print(f"    {stat_name}: {count}")
 print(f"Total elapsed time: {elapsed_time:.2f} seconds")
 
-with open("evaluation_summary_single_think_plot.log", 'w') as summary_log:
+with open("evaluation_summary_single_think_full.log", 'w') as summary_log:
     summary_log.write("--- Evaluation Results ---\n")
     summary_log.write(f"Total evaluations: {total_evaluations}\n")
     summary_log.write(f"Valid outputs: {valid_outputs} ({valid_percentage:.2f}%)\n")

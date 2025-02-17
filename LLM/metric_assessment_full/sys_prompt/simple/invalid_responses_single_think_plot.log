@@ -1,2 +1,174 @@
 Invalid Outputs:
 
+Prompt: List A:
+- Grand Budapest Hotel, The (2014) - Plot of the movie: A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.
+- Limitless (2011) - Plot of the movie: A mysterious pill that enables the user to access 100% of his brain's abilities transforms a struggling writer into a financial wizard, but it also puts him in a new world with many dangers.
+- Avengers: Infinity War - Part I (2018) - Plot of the movie: The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+- Dawn of the Planet of the Apes (2014) - Plot of the movie: The fragile peace between apes and humans is threatened as mistrust and betrayal threaten to plunge both tribes into a war for dominance over the Earth.
+- Ocean's Twelve (2004) - Plot of the movie: Daniel Ocean recruits one more team member so he can pull off three major European heists in this sequel to Ocean's Eleven (2001).
+
+List B:
+- Moneyball (2011) - Plot of the movie: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+- Grand Budapest Hotel, The (2014) - Plot of the movie: A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- Scott Pilgrim vs. the World (2010) - Plot of the movie: In a magically realistic version of Toronto, a young man must defeat his new girlfriend's seven evil exes one by one in order to win her heart.
+- Dunkirk (2017) - Plot of the movie: Allied soldiers from Belgium, the British Commonwealth and Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.
+
+List C:
+- Minority Report (2002) - Plot of the movie: In a future where a special police unit is able to arrest murderers before they commit their crimes, an officer from that unit is himself accused of a future murder.
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- Moneyball (2011) - Plot of the movie: Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.
+- Limitless (2011) - Plot of the movie: A mysterious pill that enables the user to access 100% of his brain's abilities transforms a struggling writer into a financial wizard, but it also puts him in a new world with many dangers.
+- Titanic (1997) - Plot of the movie: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.
+Error: Expecting ':' delimiter: line 1 column 535 (char 534)
+
+Prompt: List A:
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Prisoners (2013) - Plot of the movie: When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.
+- Mean Girls (2004) - Plot of the movie: Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.
+- Scott Pilgrim vs. the World (2010) - Plot of the movie: In a magically realistic version of Toronto, a young man must defeat his new girlfriend's seven evil exes one by one in order to win her heart.
+- 127 Hours (2010) - Plot of the movie: A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.
+- Gifted (2017) - Plot of the movie: Frank, a single man raising his child prodigy niece Mary, is drawn into a custody battle with his mother.
+
+List B:
+- Star Wars: Episode I - The Phantom Menace (1999) - Plot of the movie: Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.
+- Cast Away (2000) - Plot of the movie: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Scott Pilgrim vs. the World (2010) - Plot of the movie: In a magically realistic version of Toronto, a young man must defeat his new girlfriend's seven evil exes one by one in order to win her heart.
+- Shrek (2001) - Plot of the movie: A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.
+- 127 Hours (2010) - Plot of the movie: A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, Utah and resorts to desperate measures in order to survive.
+- Hidden Figures (2016) - Plot of the movie: The story of a team of female African-American mathematicians who served a vital role in NASA during the early years of the U.S. space program.
+
+List C:
+- Star Wars: Episode I - The Phantom Menace (1999) - Plot of the movie: Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.
+- Gifted (2017) - Plot of the movie: Frank, a single man raising his child prodigy niece Mary, is drawn into a custody battle with his mother.
+- Kick-Ass 2 (2013) - Plot of the movie: Following Kick-Ass' heroics, other citizens are inspired to become masked crusaders, but Red Mist leads his own group of evil super-villains to get revenge, kill Kick-Ass, and destroy everything he stands for.
+- The Blue Planet (2001) - Plot of the movie: Mammoth series, five years in the making, taking a look at the rich tapestry of life in the world's oceans.
+- Prisoners (2013) - Plot of the movie: When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.
+- Mean Girls (2004) - Plot of the movie: Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.
+- Along Came Polly (2004) - Plot of the movie: A buttoned-up newlywed finds his strictly organized life descend into chaos when he falls in love with an old classmate.
+Error: Expecting ':' delimiter: line 1 column 1191 (char 1190)
+
+Prompt: List A:
+- Blade Runner 2049 (2017) - Plot of the movie: Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.
+- Chronicles of Narnia: The Lion, the Witch and the Wardrobe, The (2005) - Plot of the movie: Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.
+- Rushmore (1998) - Plot of the movie: A teenager at Rushmore Academy falls for a much older teacher and befriends a middle-aged industrialist. Later, he finds out that his love interest and his friend are having an affair, which prompts him to begin a vendetta.
+- Sin City (2005) - Plot of the movie: An exploration of the dark and miserable Basin City and three of its residents, all of whom are caught up in violent corruption.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Inception (2010) - Plot of the movie: A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.
+
+List B:
+- Lord of the Rings: The Return of the King, The (2003) - Plot of the movie: Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+- V for Vendetta (2006) - Plot of the movie: In a future British dystopian society, a shadowy freedom fighter, known only by the alias of "V", plots to overthrow the tyrannical government - with the help of a young woman.
+- Argo (2012) - Plot of the movie: Acting under the cover of a Hollywood producer scouting a location for a science fiction film, a CIA agent launches a dangerous operation to rescue six Americans in Tehran during the U.S. hostage crisis in Iran in 1979.
+- Donnie Darko (2001) - Plot of the movie: After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes.
+- Fugitive, The (1993) - Plot of the movie: Dr. Richard Kimble, unjustly accused of murdering his wife, must find the real killer while being the target of a nationwide manhunt led by a seasoned U.S. Marshal.
+- Illusionist, The (2006) - Plot of the movie: In turn-of-the-century Vienna, a magician uses his abilities to secure the love of a woman far above his social standing.
+
+List C:
+- Lost Highway (1997) - Plot of the movie: Anonymous videotapes presage a musician's murder conviction, and a gangster's girlfriend leads a mechanic astray.
+- Sicario (2015) - Plot of the movie: An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.
+- Blade Runner 2049 (2017) - Plot of the movie: Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.
+- Arrival (2016) - Plot of the movie: A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.
+- Illusionist, The (2006) - Plot of the movie: In turn-of-the-century Vienna, a magician uses his abilities to secure the love of a woman far above his social standing.
+- Wild at Heart (1990) - Plot of the movie: Young lovers Sailor and Lula run from the variety of weirdos that Lula's mom has hired to kill Sailor.
+Error: Expecting ',' delimiter: line 1 column 1641 (char 1640)
+
+Prompt: List A:
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- Lord of the Rings: The Return of the King, The (2003) - Plot of the movie: Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.
+- Finding Dory (2016) - Plot of the movie: Friendly but forgetful blue tang Dory begins a search for her long-lost parents and everyone learns a few things about the real meaning of family along the way.
+- Back to the Future Part II (1989) - Plot of the movie: After visiting 2015, Marty McFly must repeat his visit to 1955 to prevent disastrous changes to 1985...without interfering with his first trip.
+- King's Speech, The (2010) - Plot of the movie: The story of King George VI, his unexpected ascension to the throne of the British Empire in 1936, and the speech therapist who helped the unsure monarch overcome his stammer.
+
+List B:
+- War for the Planet of the Apes (2017) - Plot of the movie: After the apes suffer unimaginable losses, Caesar wrestles with his darker instincts and begins his own mythic quest to avenge his kind.
+- A Chinese Odyssey Part One: Pandora's Box (1995) - Plot of the movie: A Monkey King is reincarnated in the un human form as Joker, a highwayman oblivious to his original identity and the fact that 500 years earlier, he and his master, the Longevity Monk, were punished and made to stay human.
+- Notting Hill (1999) - Plot of the movie: The life of a simple bookshop owner changes when he meets the most famous film star in the world.
+- Back to the Future Part II (1989) - Plot of the movie: After visiting 2015, Marty McFly must repeat his visit to 1955 to prevent disastrous changes to 1985...without interfering with his first trip.
+- Blood Diamond (2006) - Plot of the movie: A fisherman, a smuggler, and a syndicate of businessmen match wits over the possession of a priceless diamond.
+
+List C:
+- Shutter Island (2010) - Plot of the movie: Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.
+- Social Network, The (2010) - Plot of the movie: As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.
+- 40-Year-Old Virgin, The (2005) - Plot of the movie: Goaded by his buddies, a nerdy guy who's never "done the deed" only finds the pressure mounting when he meets a single mother.
+- Slumdog Millionaire (2008) - Plot of the movie: A Mumbai teenager reflects on his life after being accused of cheating on the Indian version of "Who Wants to be a Millionaire?"
+- Enemy of the State (1998) - Plot of the movie: A lawyer becomes targeted by a corrupt politician and his N.S.A. goons when he accidentally receives key evidence to a politically motivated crime.
+Error: Expecting ',' delimiter: line 1 column 1315 (char 1314)
+
+Prompt: List A:
+- Titanic (1997) - Plot of the movie: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.
+- Guardians of the Galaxy (2014) - Plot of the movie: A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.
+- Dunkirk (2017) - Plot of the movie: Allied soldiers from Belgium, the British Commonwealth and Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.
+- Beautiful Mind, A (2001) - Plot of the movie: After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Casino (1995) - Plot of the movie: In Las Vegas, two best friends - a casino executive and a mafia enforcer - compete for a gambling empire and a fast-living, fast-loving socialite.
+
+List B:
+- Titanic (1997) - Plot of the movie: A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.
+- Easy A (2010) - Plot of the movie: A clean-cut high school student relies on the school's rumor mill to advance her social and financial standing.
+- Logan (2017) - Plot of the movie: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+- Starship Troopers (1997) - Plot of the movie: Humans in a fascist, militaristic future wage war with giant alien bugs.
+- Eternal Sunshine of the Spotless Mind (2004) - Plot of the movie: When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories for ever.
+- Hurt Locker, The (2008) - Plot of the movie: During the Iraq War, a Sergeant recently assigned to an army bomb squad is put at odds with his squad mates due to his maverick way of handling his work.
+
+List C:
+- Logan (2017) - Plot of the movie: In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+- Easy A (2010) - Plot of the movie: A clean-cut high school student relies on the school's rumor mill to advance her social and financial standing.
+- Beautiful Mind, A (2001) - Plot of the movie: After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, his life takes a turn for the nightmarish.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Casino (1995) - Plot of the movie: In Las Vegas, two best friends - a casino executive and a mafia enforcer - compete for a gambling empire and a fast-living, fast-loving socialite.
+- Bourne Supremacy, The (2004) - Plot of the movie: When Jason Bourne is framed for a CIA operation gone awry, he is forced to resume his former life as a trained assassin to survive.
+Error: Expecting ':' delimiter: line 1 column 615 (char 614)
+
+Prompt: List A:
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Doctor Strange (2016) - Plot of the movie: While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.
+- Cast Away (2000) - Plot of the movie: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+- Blind Side, The  (2009) - Plot of the movie: The story of Michael Oher, a homeless and traumatized boy who became an All-American football player and first-round NFL draft pick with the help of a caring woman and her family.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Wolf of Wall Street, The (2013) - Plot of the movie: Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.
+- Into the Wild (2007) - Plot of the movie: After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life.
+
+List B:
+- Batman Begins (2005) - Plot of the movie: After witnessing his parents' death, Bruce learns the art of fighting to confront injustice. When he returns to Gotham as Batman, he must stop a secret society that intends to destroy the city.
+- WALL·E (2008) - Plot of the movie: In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.
+- Deadpool (2016) - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Hangover, The (2009) - Plot of the movie: Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.
+- Cast Away (2000) - Plot of the movie: A FedEx executive undergoes a physical and emotional transformation after crash landing on a deserted island.
+- Blade II (2002) - Plot of the movie: Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires.
+
+List C:
+- Blade II (2002) - Plot of the movie: Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires.
+- Drive (2011) - Plot of the movie: A mysterious Hollywood action film stuntman gets in trouble with gangsters when he tries to help his neighbor's husband rob a pawn shop while serving as his getaway driver.
+- Untitled Spider-Man Reboot (2017) - Plot of the movie: Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.
+- Blind Side, The  (2009) - Plot of the movie: The story of Michael Oher, a homeless and traumatized boy who became an All-American football player and first-round NFL draft pick with the help of a caring woman and her family.
+- Deadpool (2016) - Plot of the movie: A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.
+- Into the Wild (2007) - Plot of the movie: After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life.
+- Batman Begins (2005) - Plot of the movie: After witnessing his parents' death, Bruce learns the art of fighting to confront injustice. When he returns to Gotham as Batman, he must stop a secret society that intends to destroy the city.
+Error: Expecting ',' delimiter: line 1 column 1685 (char 1684)
+
+Prompt: List A:
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- The Imitation Game (2014) - Plot of the movie: During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.
+- Waterworld (1995) - Plot of the movie: In a future where the polar ice-caps have melted and Earth is almost entirely submerged, a mutated mariner fights starvation and outlaw "smokers," and reluctantly helps a woman and a young girl try to find dry land.
+- Pirates of the Caribbean: Dead Man's Chest (2006) - Plot of the movie: Jack Sparrow races to recover the heart of Davy Jones to avoid enslaving his soul to Jones' service, as other friends and foes seek the heart for their own agenda as well.
+- For the Birds (2000) - Plot of the movie: A group of snooty birds roosting on a telephone wire get their just deserts when a goofy bird drops in.
+
+List B:
+- Up (2009) - Plot of the movie: 78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.
+- Matrix, The (1999) - Plot of the movie: When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+- Sherlock Holmes: A Game of Shadows (2011) - Plot of the movie: Detective Sherlock Holmes is on the trail of criminal mastermind Professor Moriarty, who is carrying out a string of random crimes across Europe.
+- Saving Private Ryan (1998) - Plot of the movie: Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.
+- Snatch (2000) - Plot of the movie: Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.
+
+List C:
+- Knockin' on Heaven's Door (1997) - Plot of the movie: Two terminally ill patients escape from a hospital, steal a car and rush towards the sea.
+- La Luna (2011) - Plot of the movie: A fable of a young boy coming of age in the most peculiar of circumstances. It's the first time his Papa and Grandpa are taking him to work. Will he be able to find his own way?
+- Sherlock Holmes: A Game of Shadows (2011) - Plot of the movie: Detective Sherlock Holmes is on the trail of criminal mastermind Professor Moriarty, who is carrying out a string of random crimes across Europe.
+- Waterworld (1995) - Plot of the movie: In a future where the polar ice-caps have melted and Earth is almost entirely submerged, a mutated mariner fights starvation and outlaw "smokers," and reluctantly helps a woman and a young girl try to find dry land.
+- Mad Max: Fury Road (2015) - Plot of the movie: In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper and a drifter named Max.
+Error: Expecting ',' delimiter: line 1 column 1431 (char 1430)
+
