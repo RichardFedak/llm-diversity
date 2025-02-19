@@ -3,28 +3,28 @@
     "total_evaluations": 107,
     "llm_output": {
         "correct_evaluations": {
-            "output": 47,
-            "cf_ild": 33,
-            "cb_ild": 36,
-            "bin_div": 48
+            "output": 43,
+            "cf_ild": 24,
+            "cb_ild": 39,
+            "bin_div": 43
         },
         "accuracy": {
-            "output": 0.4393,
-            "cf_ild": 0.3084,
-            "cb_ild": 0.3364,
-            "bin_div": 0.4486
+            "output": 0.4019,
+            "cf_ild": 0.2243,
+            "cb_ild": 0.3645,
+            "bin_div": 0.4019
         }
     },
     "chosen_metrics": {
         "counts": {
-            "BIN-DIV": 47,
-            "CF-ILD": 24,
-            "CB-ILD": 36
+            "BIN-DIV": 42,
+            "CB-ILD": 39,
+            "CF-ILD": 19
         },
         "percentages": {
-            "BIN-DIV": 0.4393,
-            "CF-ILD": 0.2243,
-            "CB-ILD": 0.3364
+            "BIN-DIV": 0.3925,
+            "CB-ILD": 0.3645,
+            "CF-ILD": 0.1776
         }
     }
 }

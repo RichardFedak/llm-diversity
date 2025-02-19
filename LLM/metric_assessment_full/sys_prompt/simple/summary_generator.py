@@ -1,7 +1,7 @@
 import json
 from collections import defaultdict
 
-EVAL_NAME = "single_popularity_plot"
+EVAL_NAME = "single_think_full"
 
 VALID_RESPONSES_FILE = "valid_responses_" + EVAL_NAME + ".json"
 DATASET_FILE = "final_movie_data.json"
