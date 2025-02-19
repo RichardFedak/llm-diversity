@@ -1,0 +1,16 @@
+{
+    "name": "covers_think",
+    "total_evaluations": 222,
+    "llm_output": {
+        "correct_evaluations": 47,
+        "accuracy": "21.17%"
+    },
+    "metric_accuracies": {
+        "cf_ild": "23.87%",
+        "cb_ild": "19.82%",
+        "ease_ild": "18.92%",
+        "genres": "18.47%",
+        "tags": "15.32%",
+        "bin_div": "17.57%"
+    }
+}
