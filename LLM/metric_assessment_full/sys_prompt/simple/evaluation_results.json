@@ -1,0 +1,1294 @@
+{
+    "total_entries": 214,
+    "correct_entries": 79,
+    "overall_correct_count": 61,
+    "total_participations": 107,
+    "overall_coverage": 0.5700934579439252,
+    "ensemble_correct_count": 39,
+    "participation_stats": {
+        "63": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "61": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "62": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "64": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "67": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "65": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "66": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "69": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "72": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "74": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "79": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "82": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "81": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "85": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "88": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "87": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "A"
+            ]
+        },
+        "89": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "90": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "91": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "93": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "94": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "95": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "96": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "98": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "99": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "102": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "100": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "103": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "104": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "105": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "108": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "106": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "109": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "111": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "113": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "C"
+            ]
+        },
+        "114": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "115": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "116": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "118": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "117": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "121": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "122": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "127": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "126": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "123": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "129": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "125": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "133": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "131": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "134": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "135": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "137": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "A"
+            ]
+        },
+        "138": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "136": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "139": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "140": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "145": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "144": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "146": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "147": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "150": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "148": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "152": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "151": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "154": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "155": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "157": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "A"
+            ]
+        },
+        "153": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "156": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "159": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "158": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "160": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "163": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "165": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "166": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "164": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "168": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "167": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "171": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "170": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "172": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "173": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "175": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "A"
+            ]
+        },
+        "177": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "178": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "179": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "180": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "181": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "182": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "184": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "183": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "B"
+            ]
+        },
+        "185": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "188": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "187": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "186": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "191": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "193": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "192": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "194": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "197": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "B",
+                "A"
+            ]
+        },
+        "3": {
+            "correct_files": 2,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        },
+        "4": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "B"
+            ]
+        },
+        "5": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "B"
+            ]
+        },
+        "6": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "A"
+            ]
+        },
+        "8": {
+            "correct_files": 1,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "C"
+            ]
+        },
+        "9": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "C",
+                "C"
+            ]
+        },
+        "11": {
+            "correct_files": 0,
+            "total_files": 2,
+            "files": [
+                "valid_responses_single_think.json",
+                "valid_responses_single_think_genres.json"
+            ],
+            "outputs": [
+                "A",
+                "A"
+            ]
+        }
+    }
+}

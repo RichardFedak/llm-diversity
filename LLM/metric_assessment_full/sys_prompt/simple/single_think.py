@@ -80,10 +80,6 @@ with open(valid_responses_file, 'w') as valid_responses_log:
             filtered_list_A = [movie for movie in list_A if movie['title'] not in common_titles]
             filtered_list_B = [movie for movie in list_B if movie['title'] not in common_titles]
             filtered_list_C = [movie for movie in list_C if movie['title'] not in common_titles]
-            
-            # list_A_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']} - Plot of the movie: {movie['plot']}" for movie in filtered_list_A])
-            # list_B_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']} - Plot of the movie: {movie['plot']}" for movie in filtered_list_B])
-            # list_C_info = "\n".join([f"- {movie['title']} - Genres of the movie: {movie['genres']} - Plot of the movie: {movie['plot']}" for movie in filtered_list_C])
 
             list_A_info = "\n".join([f"- {movie['title']}" for movie in filtered_list_A])
             list_B_info = "\n".join([f"- {movie['title']}" for movie in filtered_list_B])
