@@ -7,3 +7,25 @@ porovnat metriky s User outputom
 experiment - goals
 
 6 listov, q3(div), q4(serend.) questionnaire.json... predikovat odpovede
+
+Metric assessment - 
+pripravit folder structure
+rozmysliet evals
+pripravit eval.py
+- accuracy LLM/user, LLM/merika, User/metrika, len tie 3 metriky
+pripravit coverage.py
+- najlepšia dvojica, trojica pokrytia, celkove pokrytie, (tabulka všetkych kombinacii ?)
+
+
+magnitude
+spravit evaluator, okrem poradia vratit aj approx. values [0,1] na 1 desatinne
+folder struct podobne ako u metric a.
+pripravit eval.py
+- accuracy LLM/user, LLM/merika, User/metrika, len tie 3 metriky
+pripravit coverage.py
+- najlepšia dvojica, trojica pokrytia, celkove pokrytie, (tabulka všetkych kombinacii evals?)
+
+six-list
+rozmysliet ako a čo merat...
+serendipity, diversity
+regresia -3,..,0,..,3 
