@@ -13,13 +13,14 @@ class MovieFields(Enum):
     GENRES = "genres"
 
 class MovieEvaluator:
-    def __init__(self, api_key, evaluation_name, system_prompt=None, input_fields=None, include_summary=False):
+    def __init__(self, api_key, evaluation_name, system_prompt=None, input_fields=None, include_summary=False, temperature=0):
         """Initializes the MovieEvaluator with API key and configuration."""
         genai.configure(api_key=api_key)
         self.system_prompt = system_prompt
         self.input_fields = input_fields
         self.evaluation_name = evaluation_name
         self.include_summary = include_summary
+        self.temperature = temperature
         self.MAX_REQUESTS_PER_MINUTE = 15
         self.REQUEST_INTERVAL = 60 / self.MAX_REQUESTS_PER_MINUTE
         self.results = []
@@ -65,7 +66,7 @@ class MovieEvaluator:
 
     def evaluate_data(self, data, gold_standard_field='selected_list'):
         """Evaluates movie data, logs results to a JSON file, and prints summary."""
-        json_log_file = f"{self.evaluation_name}_results.json"
+        json_log_file = f"./results/{self.evaluation_name}.json"
         existing_results = self._load_existing_results(json_log_file)
         existing_results_map = {}
         if existing_results:
@@ -74,9 +75,11 @@ class MovieEvaluator:
 
         model = genai.GenerativeModel(
             system_instruction=self.system_prompt,
-            generation_config={"response_mime_type": "application/json"}
+            generation_config={
+                "response_mime_type": "application/json",
+                "temperature":self.temperature
+                }
         )
-        # Map participation IDs to existing outputs
 
         valid_outputs = 0
         invalid_outputs = 0
@@ -90,12 +93,13 @@ class MovieEvaluator:
 
         for idx, item in enumerate(data):
             print(idx)
-            if idx>1:
-                break
             participation = item["participation"]
 
             if participation in existing_results_map and existing_results_map[participation].get("output") != "X":
                 updated_results.append(existing_results_map[participation])
+                valid_outputs += 1
+                if existing_results_map[participation].get("output") == existing_results_map[participation].get("gold"):
+                    correct_outputs += 1
                 continue
 
             current_time = time.time()
@@ -148,7 +152,7 @@ class MovieEvaluator:
                     invalid_outputs += 1
                     output = {
                         "comparison": "X",
-                        "most_diverse_list_reasoning": "Invalid Response",
+                        "most_diverse_list_reasoning": "X",
                         "most_diverse_list": "X",
                         "error": "Invalid JSON response from model"
                     }
@@ -182,16 +186,21 @@ class MovieEvaluator:
         if existing_results:
             elapsed_time += existing_results["evaluation_duration"]
 
+        accuracy_percentage = round((correct_outputs / valid_outputs) * 100, 2) if valid_outputs > 0 else 0
         result = {
             "name": self.evaluation_name,
             "evaluation_duration": elapsed_time,
+            "accuracy": accuracy_percentage,
             "system_prompt": model._system_instruction.parts[0].text,
             "evaluations": updated_results
         }
 
+        folder_path = os.path.dirname(json_log_file)
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+
         with open(json_log_file, "w") as json_log:
             json.dump(result, json_log, indent=4)
 
-        accuracy_percentage = (correct_outputs / valid_outputs) * 100 if valid_outputs > 0 else 0
         print("Finished")
         print(f"Accuracy: {accuracy_percentage:.2f}%")

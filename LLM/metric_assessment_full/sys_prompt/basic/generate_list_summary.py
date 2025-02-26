@@ -132,7 +132,7 @@ for item in data:
     item["list_C"] = transform_list(item["list_C"], list_C_info)
 
 
-updated_file_name = "final_movie_data_with_summary_full.json"
+updated_file_name = "final_movie_data_with_summary.json"
 with open(updated_file_name, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4, ensure_ascii=False)
 

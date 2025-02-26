@@ -8,12 +8,10 @@ OUTPUT_SUMMARY_FILE = "user_metric_stats.json"
 
 def analyze_data(dataset_file, output_summary_file):
     """
-    Analyzes data from two JSON files, calculates evaluation metrics,
-    and generates summary data in JSON format.
+    Analyzes data and generates summary for User/metric outputs in JSON format.
 
     Args:
-        valid_responses_file (str): Path to the valid responses JSON file.
-        dataset_file (str): Path to the dataset JSON file.
+        dataset_file (str): Path to final movie data file.
         output_summary_file (str): Path to the output summary JSON file.
     """
 
@@ -31,27 +29,18 @@ def analyze_data(dataset_file, output_summary_file):
         return
     
     total_evaluations = len(dataset)
-    correct_evals = {"selected_list": 0, "cf_ild": 0, "cb_ild": 0, "bin_div": 0}
-    accuracy = {"selected_list": 0.0, "cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
+    correct_evals = {"cf_ild": 0, "cb_ild": 0, "bin_div": 0}
+    accuracy = {"cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
 
     selected_list_to_index = {"A": 0, "B": 1, "C": 2}
     list_metrics_value_counts = defaultdict(int)
 
-    dataset_dict = {item["participation"]: item for item in dataset}
-
     for response in dataset:
-        participation = response["participation"]
 
-        dataset_entry = dataset_dict.get(participation)
-        if dataset_entry is None:
-            print(f"Warning: No corresponding dataset entry found for participation {participation}. Skipping evaluation.")
-            total_evaluations -= 1
-            continue
-
-        cf_ild = dataset_entry.get("cf_ild")
-        cb_ild = dataset_entry.get("cb_ild")
-        bin_div = dataset_entry.get("bin_div")
-        output = dataset_entry.get("selected_list")
+        cf_ild = response.get("cf_ild")
+        cb_ild = response.get("cb_ild")
+        bin_div = response.get("bin_div")
+        output = response.get("selected_list")
 
         if cf_ild and output == cf_ild:
             correct_evals["cf_ild"] += 1
@@ -60,7 +49,7 @@ def analyze_data(dataset_file, output_summary_file):
         if bin_div and output == bin_div:
             correct_evals["bin_div"] += 1
 
-        list_metrics = dataset_entry.get("list_metrics")
+        list_metrics = response.get("list_metrics")
         if output in selected_list_to_index and list_metrics:
             index = selected_list_to_index[output]
             metric = list_metrics[index]
@@ -79,7 +68,7 @@ def analyze_data(dataset_file, output_summary_file):
     summary_data = {
         "name": "user_metric_stats",
         "total_evaluations": total_evaluations,
-        "llm_output": {
+        "user_output": {
             "correct_evaluations": correct_evals,
             "accuracy": accuracy,
         },

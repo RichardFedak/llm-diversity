@@ -1,0 +1,9 @@
+- Evals
+  - Simple = Select MDL
+    - T, T-G, T-P, T-G-P
+  - Verbose = Analyze, compare, select MDL
+    - T, T-G, T-P, T-G-P
+    - G, P, G-P
+    - Standouts-T, Standouts-T-G, Standouts-T-P, Standouts-T-G-P
+  - Summary = Get summary, analyze, compare, select
+    - T-S, S

@@ -1,0 +1,28 @@
+{
+    "name": "user_metric_stats",
+    "total_evaluations": 107,
+    "user_output": {
+        "correct_evaluations": {
+            "cf_ild": 25,
+            "cb_ild": 35,
+            "bin_div": 53
+        },
+        "accuracy": {
+            "cf_ild": 0.2336,
+            "cb_ild": 0.3271,
+            "bin_div": 0.4953
+        }
+    },
+    "chosen_metrics": {
+        "counts": {
+            "BIN-DIV": 55,
+            "CF-ILD": 17,
+            "CB-ILD": 35
+        },
+        "percentages": {
+            "BIN-DIV": 0.514,
+            "CF-ILD": 0.1589,
+            "CB-ILD": 0.3271
+        }
+    }
+}
