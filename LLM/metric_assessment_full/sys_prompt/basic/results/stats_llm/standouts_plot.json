@@ -1,0 +1,30 @@
+{
+    "name": "standouts_plot",
+    "total_evaluations": 107,
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 43,
+            "cf_ild": 20,
+            "cb_ild": 50,
+            "bin_div": 40
+        },
+        "accuracy": {
+            "output": 0.4019,
+            "cf_ild": 0.1869,
+            "cb_ild": 0.4673,
+            "bin_div": 0.3738
+        }
+    },
+    "chosen_metrics": {
+        "counts": {
+            "CB-ILD": 50,
+            "BIN-DIV": 39,
+            "CF-ILD": 18
+        },
+        "percentages": {
+            "CB-ILD": 0.4673,
+            "BIN-DIV": 0.3645,
+            "CF-ILD": 0.1682
+        }
+    }
+}

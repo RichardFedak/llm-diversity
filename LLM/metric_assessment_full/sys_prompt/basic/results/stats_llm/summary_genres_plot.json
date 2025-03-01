@@ -1,0 +1,30 @@
+{
+    "name": "summary_genres_plot",
+    "total_evaluations": 107,
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 42,
+            "cf_ild": 18,
+            "cb_ild": 30,
+            "bin_div": 66
+        },
+        "accuracy": {
+            "output": 0.3925,
+            "cf_ild": 0.1682,
+            "cb_ild": 0.2804,
+            "bin_div": 0.6168
+        }
+    },
+    "chosen_metrics": {
+        "counts": {
+            "BIN-DIV": 64,
+            "CB-ILD": 30,
+            "CF-ILD": 13
+        },
+        "percentages": {
+            "BIN-DIV": 0.5981,
+            "CB-ILD": 0.2804,
+            "CF-ILD": 0.1215
+        }
+    }
+}

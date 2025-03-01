@@ -1,0 +1,30 @@
+{
+    "name": "title_genres",
+    "total_evaluations": 107,
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 39,
+            "cf_ild": 27,
+            "cb_ild": 35,
+            "bin_div": 51
+        },
+        "accuracy": {
+            "output": 0.3645,
+            "cf_ild": 0.2523,
+            "cb_ild": 0.3271,
+            "bin_div": 0.4766
+        }
+    },
+    "chosen_metrics": {
+        "counts": {
+            "BIN-DIV": 52,
+            "CF-ILD": 20,
+            "CB-ILD": 35
+        },
+        "percentages": {
+            "BIN-DIV": 0.486,
+            "CF-ILD": 0.1869,
+            "CB-ILD": 0.3271
+        }
+    }
+}

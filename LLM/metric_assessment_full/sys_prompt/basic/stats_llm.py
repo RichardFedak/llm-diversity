@@ -1,62 +1,66 @@
 import json
+import os
 from collections import defaultdict
 
-EVAL_NAME = "single_think_full"
-
-VALID_RESPONSES_FILE = "valid_responses_" + EVAL_NAME + ".json"
+RESULTS_FOLDER = "results/"
+STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 DATASET_FILE = "final_movie_data.json"
-OUTPUT_SUMMARY_FILE = "summary_data_" + EVAL_NAME + ".json"
 
+os.makedirs(STATS_FOLDER, exist_ok=True)
 
-def analyze_data(valid_responses_file, dataset_file, output_summary_file):
-    """
-    Analyzes data from two JSON files, calculates evaluation metrics,
-    and generates summary data in JSON format.
-
-    Args:
-        valid_responses_file (str): Path to the valid responses JSON file.
-        dataset_file (str): Path to the dataset JSON file.
-        output_summary_file (str): Path to the output summary JSON file.
-    """
-
+def load_dataset():
+    """Loads the dataset file into a dictionary."""
     try:
-        with open(valid_responses_file, "r") as f:
-            valid_responses = json.load(f)
-        with open(dataset_file, "r") as f:
+        with open(DATASET_FILE, "r") as f:
             dataset = json.load(f)
+        return {item["participation"]: item for item in dataset}
+    except FileNotFoundError:
+        print(f"Error: Dataset file '{DATASET_FILE}' not found.")
+        return {}
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON format in dataset file: {e}")
+        return {}
+
+def analyze_file(file_path, dataset_dict):
+    """Processes a single JSON results file and generates a summary."""
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
     except FileNotFoundError as e:
         print(f"Error: File not found: {e}")
         return
     except json.JSONDecodeError as e:
-        print(f"Error: Invalid JSON format: {e}")
+        print(f"Error: Invalid JSON format in {file_path}: {e}")
         return
     except Exception as e:
-        print(f"An unexpected error occurred during file loading: {e}")
+        print(f"An unexpected error occurred while loading {file_path}: {e}")
         return
-
-    total_evaluations = len(valid_responses)
+    
+    eval_name = data["name"]
+    evaluations = data["evaluations"]
+    total_evaluations = len(evaluations)
+    
     correct_evals = {"output": 0, "cf_ild": 0, "cb_ild": 0, "bin_div": 0}
     accuracy = {"output": 0.0, "cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
-
+    
     selected_list_to_index = {"A": 0, "B": 1, "C": 2}
     list_metrics_value_counts = defaultdict(int)
-
-    dataset_dict = {item["participation"]: item for item in dataset}
-
-    for response in valid_responses:
+    
+    for response in evaluations:
         participation = response["participation"]
         gold = response["gold"]
-
+        output = response["output"]
         dataset_entry = dataset_dict.get(participation)
-        if dataset_entry is None:
-            print(f"Warning: No corresponding dataset entry found for participation {participation}. Skipping evaluation.")
+
+        if not dataset_entry:
+            print(f"Warning: No corresponding dataset entry found for participation {participation}. Skipping.")
             total_evaluations -= 1
             continue
 
-        cf_ild = dataset_entry.get("cf_ild")
-        cb_ild = dataset_entry.get("cb_ild")
-        bin_div = dataset_entry.get("bin_div")
-        output = response["output"]
+        cf_ild = dataset_entry["cf_ild"]
+        cb_ild = dataset_entry["cb_ild"]
+        bin_div = dataset_entry["bin_div"]
+        list_metrics = dataset_entry["list_metrics"]
 
         if output and output == gold:
             correct_evals["output"] += 1
@@ -67,24 +71,24 @@ def analyze_data(valid_responses_file, dataset_file, output_summary_file):
         if bin_div and output == bin_div:
             correct_evals["bin_div"] += 1
 
-        list_metrics = dataset_entry.get("list_metrics")
         if output in selected_list_to_index and list_metrics:
             index = selected_list_to_index[output]
-            metric = list_metrics[index]
-            list_metrics_value_counts[metric] += 1
-
+            if 0 <= index < len(list_metrics):
+                metric = list_metrics[index]
+                list_metrics_value_counts[metric] += 1
+    
     for key in correct_evals:
         accuracy[key] = (
             round(correct_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
         )
-
+    
     chosen_metrics_percentages = {
         metric: round(count / total_evaluations, 4)
         for metric, count in list_metrics_value_counts.items()
     }
-
+    
     summary_data = {
-        "name": EVAL_NAME,
+        "name": eval_name,
         "total_evaluations": total_evaluations,
         "llm_output": {
             "correct_evaluations": correct_evals,
@@ -95,16 +99,38 @@ def analyze_data(valid_responses_file, dataset_file, output_summary_file):
             "percentages": chosen_metrics_percentages,
         },
     }
-
+    
+    output_summary_file = os.path.join(
+        STATS_FOLDER, f"{os.path.basename(file_path)}"
+    )
     try:
         with open(output_summary_file, "w") as f:
             json.dump(summary_data, f, indent=4)
-        print(f"Summary data saved to {output_summary_file}")
+        print(f"Summary saved: {output_summary_file}")
     except IOError as e:
-        print(f"Error: Could not write to file: {e}")
+        print(f"Error: Could not write to file {output_summary_file}: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred while saving the file: {e}")
+        print(f"An unexpected error occurred while saving {output_summary_file}: {e}")
 
+def process_all_files():
+    """Processes all JSON files in the results folder."""
+    if not os.path.exists(RESULTS_FOLDER):
+        print(f"Error: Folder '{RESULTS_FOLDER}' not found.")
+        return
+    
+    dataset_dict = load_dataset()
+    if not dataset_dict:
+        print("Skipping file processing due to missing dataset.")
+        return
+    
+    files = [f for f in os.listdir(RESULTS_FOLDER) if f.endswith(".json")]
+    if not files:
+        print("No JSON files found in the results folder.")
+        return
+    
+    for file in files:
+        file_path = os.path.join(RESULTS_FOLDER, file)
+        analyze_file(file_path, dataset_dict)
 
 if __name__ == "__main__":
-    analyze_data(VALID_RESPONSES_FILE, DATASET_FILE, OUTPUT_SUMMARY_FILE)
+    process_all_files()

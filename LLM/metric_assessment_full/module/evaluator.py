@@ -74,6 +74,7 @@ class MovieEvaluator:
             existing_results_map = {res["participation"]: res for res in existing_results["evaluations"]}
 
         model = genai.GenerativeModel(
+            model_name="gemini-1.5-flash-002",
             system_instruction=self.system_prompt,
             generation_config={
                 "response_mime_type": "application/json",

@@ -1,0 +1,30 @@
+{
+    "name": "plot",
+    "total_evaluations": 107,
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 45,
+            "cf_ild": 16,
+            "cb_ild": 51,
+            "bin_div": 41
+        },
+        "accuracy": {
+            "output": 0.4206,
+            "cf_ild": 0.1495,
+            "cb_ild": 0.4766,
+            "bin_div": 0.3832
+        }
+    },
+    "chosen_metrics": {
+        "counts": {
+            "CB-ILD": 51,
+            "CF-ILD": 14,
+            "BIN-DIV": 42
+        },
+        "percentages": {
+            "CB-ILD": 0.4766,
+            "CF-ILD": 0.1308,
+            "BIN-DIV": 0.3925
+        }
+    }
+}

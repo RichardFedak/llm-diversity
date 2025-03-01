@@ -36,15 +36,15 @@ You are an assistant tasked with comparing three lists of movies. For each movie
 Use your own judgment to determine what information is relevant when assessing the diversity of the lists. 
 You should consider the given {field_text} for every movie.
 
-Identify movies that stand out from the rest in genre, tone, or theme, as they can impact perceived diversity of the list.  
-A list of movies with similar features may feel more diverse if it includes one or more outliers.  
+Identify movies that stand out from the rest in the given information, as they may impact the perceived diversity of the list.
+List of movies with similar features may feel more diverse if it includes one or more outliers.  
 
 Deliver your descriptions of lists, comparison, and choice of the most diverse list in the following JSON format:
 
 {{
-    "list_A_description": string,            # Describe the diversity of the movies in list A
-    "list_B_description": string,            # Describe the diversity of the movies in list B
-    "list_C_description": string,            # Describe the diversity of the movies in list C
+    "list_A_description": string,            # Describe the diversity of the movies in list A with the focus on outliers.
+    "list_B_description": string,            # Describe the diversity of the movies in list B with the focus on outliers.
+    "list_C_description": string,            # Describe the diversity of the movies in list C with the focus on outliers.
     "comparison": string,                    # Compare the diversity of the lists.
     "most_diverse_list_reasoning": string,   # Explanation of which list you perceive to be the most diverse.
     "most_diverse_list": string              # The list you determine to be the most diverse, either 'A', 'B', or 'C'.
