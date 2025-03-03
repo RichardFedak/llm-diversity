@@ -1,0 +1,23 @@
+{
+    "name": "standouts_title",
+    "total_evaluations": 222,
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 55,
+            "cf_ild": 61,
+            "cb_ild": 68,
+            "bin_div": 51
+        },
+        "accuracy": {
+            "output": 0.2477,
+            "cf_ild": 0.2748,
+            "cb_ild": 0.3063,
+            "bin_div": 0.2297
+        }
+    },
+    "correct_output_metric_counts": {
+        "BIN-DIV": 18,
+        "CB-ILD": 24,
+        "CF-ILD": 13
+    }
+}
