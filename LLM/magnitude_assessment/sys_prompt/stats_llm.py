@@ -1,6 +1,8 @@
 import json
 import os
 from collections import defaultdict
+from scipy.stats import spearmanr, wasserstein_distance
+import numpy as np
 
 RESULTS_FOLDER = "results/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
@@ -42,7 +44,9 @@ def analyze_file(file_path, dataset):
     
     correct_evals = {"output": 0, "cf_ild": 0, "cb_ild": 0, "bin_div": 0}
     accuracy = {"output": 0.0, "cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
-    
+    emd_distances = []
+    spearman_correlations = []
+        
     selected_list_to_index = {"A": 0, "B": 1, "C": 2}
     list_metrics_value_counts = defaultdict(int)
     
@@ -73,12 +77,21 @@ def analyze_file(file_path, dataset):
             correct_evals["cb_ild"] += 1
         if llm_final_ordering == bin_div:
             correct_evals["bin_div"] += 1
+        
+        emd_distance = wasserstein_distance(llm_approx_alphas, user_approx_alphas)
+        emd_distances.append(emd_distance)
+
+        res = spearmanr(llm_approx_alphas, user_approx_alphas)
+        spearman_correlations.append(res.statistic)
 
     for key in correct_evals:
         accuracy[key] = (
             round(correct_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
         )
     
+    mean_emd = np.mean(emd_distances)
+    mean_spearman = np.nanmean(spearman_correlations)
+        
     summary_data = {
         "name": eval_name,
         "total_evaluations": total_evaluations,
@@ -86,7 +99,9 @@ def analyze_file(file_path, dataset):
             "correct_evaluations": correct_evals,
             "accuracy": accuracy,
         },
-        "correct_output_metric_counts": dict(list_metrics_value_counts)
+        "correct_output_metric_counts": dict(list_metrics_value_counts),
+        "emd": mean_emd,
+        "spearman": mean_spearman,
     }
     
     output_summary_file = os.path.join(
