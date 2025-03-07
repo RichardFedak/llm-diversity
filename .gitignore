@@ -6,3 +6,4 @@ papers/
 image_cache.json
 __pycache__
 final_data
+*/recommendations/*/final_movie_data.json
