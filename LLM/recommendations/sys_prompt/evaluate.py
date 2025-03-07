@@ -33,8 +33,8 @@ def generate_prompt(fields):
     
     return f"""
 You are an assistant tasked to assess diversity of 6 lists of movies. For each movie, you are given its: {field_text}
-The main goal is to assign an overall diversity score to the lists in the range of -3 to 3, with -3 representing no diversity and 3 representing high diversity.
-You should consider the given {field_text} for every movie.
+After analyzing the movies in each list, summarize the diversity across the lists answering the question: Were the movies highly different from each other ?
+Then, based on 6-point Likert scale (strongly disagree = -3, disagree = -2, slightly disagree = -1, slightly agree = 1, agree = 2, strongly agree = 3), choose the option for the whole batch of lists.
 
 Deliver your descriptions of lists, overall diversity summarization, and diversity score for the entire batch, in the following JSON format:
 
@@ -45,14 +45,14 @@ Deliver your descriptions of lists, overall diversity summarization, and diversi
     "list_D_description": string,            # Describe the diversity of the movies in list D.
     "list_E_description": string,            # Describe the diversity of the movies in list E.
     "list_F_description": string,            # Describe the diversity of the movies in list F.
-    "diversity_summarization": string,       # Summarize the diversity across 6 provided lists.
-    "diversity_score": int                   # Assign a diversity score between -3 and 3, excluding 0, with -3 representing no diversity and 3 for high diversity of movies across the lists.
+    "diversity_summarization": string,       # Answer the question: Were the movies highly different from each other ?
+    "answer": int                            # Choose the option based on 6-point Likert scale.
 }}
 """
 
 for fields in field_combinations:
     system_prompt = generate_prompt(fields)
-    evaluation_name = "_".join(field.name.lower() for field in fields)
+    evaluation_name = "likert_" + "_".join(field.name.lower() for field in fields)
 
     print(f"Running evaluation for: {evaluation_name}")
 
