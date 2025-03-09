@@ -1,0 +1,28 @@
+{
+    "name": "likert_title",
+    "total_evaluations": 321,
+    "serendipity_score_counts": {
+        "user": {
+            "-1.0": 110,
+            "3.0": 23,
+            "-2.0": 42,
+            "-3.0": 4,
+            "2.0": 63,
+            "1.0": 79
+        },
+        "llm": {
+            "1": 206,
+            "-1": 12,
+            "2": 103
+        }
+    },
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 80
+        },
+        "accuracy": {
+            "output": 0.2492
+        }
+    },
+    "pearson": 0.04899746306146273
+}

@@ -1,0 +1,28 @@
+{
+    "name": "likert_genres",
+    "total_evaluations": 321,
+    "diversity_score_counts": {
+        "user": {
+            "1.0": 133,
+            "-1.0": 72,
+            "2.0": 65,
+            "-2.0": 25,
+            "-3.0": 4,
+            "3.0": 22
+        },
+        "llm": {
+            "1": 289,
+            "2": 30,
+            "-1": 2
+        }
+    },
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 127
+        },
+        "accuracy": {
+            "output": 0.3956
+        }
+    },
+    "pearson": 0.020510272888731876
+}

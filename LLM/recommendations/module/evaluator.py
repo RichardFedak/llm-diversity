@@ -137,10 +137,10 @@ class MovieEvaluator:
                     "list_E_description", 
                     "list_F_description", 
                     "diversity_summarization", 
-                    "diversity_score"
+                    "answer"
                     ]):
                     valid_outputs += 1
-                    predicted_score = output["diversity_score"]
+                    predicted_score = output["answer"]
                     correctness = predicted_score == gold_diversity_score
                     if correctness:
                         print("-OK-")
@@ -162,7 +162,7 @@ class MovieEvaluator:
                     "response": output,
                     "gold": gold_diversity_score,
                     "diversity_score": predicted_score,
-                    "correct": correctness if "diversity_score" in output else False,
+                    "correct": correctness if "answer" in output else False,
                     "error": output.get("error", None)
                 })
 
