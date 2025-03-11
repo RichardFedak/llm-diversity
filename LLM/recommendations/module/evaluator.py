@@ -35,16 +35,6 @@ class MovieEvaluator:
             list_info.append("\n".join(movie_info) + "\n")
         return "\n".join(list_info)
 
-    def _generate_summary_text(self, summary):
-        summary_text = (
-            f"Popularity Diversity: {summary['popularity_diversity']['reasoning']}\n"
-            f"Genre Diversity: {summary['genre_diversity']['reasoning']}\n"
-            f"Theme Diversity: {summary['theme_diversity']['reasoning']}\n"
-            f"Time Span: {summary['time_span']['reasoning']}\n"
-            f"Franchise Inclusion: {'Yes' if summary['franchise_inclusion']['value'] else 'No'} - {summary['franchise_inclusion']['reasoning']}"
-        )
-        return summary_text
-
     def _load_existing_results(self, json_log_file):
         """Loads existing evaluation results if the file exists."""
         if os.path.exists(json_log_file):
@@ -83,104 +73,100 @@ class MovieEvaluator:
         updated_results = []
 
         for idx, item in enumerate(data):
+            idx *= 3
             print((idx+1)/len(data))
             participation = item["participation"]
-            block = item["block"]
-
-            if existing_results and existing_results[idx]["diversity_score"] != "X":
-                updated_results.append(existing_results[idx])
-                valid_outputs += 1
-                if existing_results[idx]["diversity_score"] == existing_results[idx]["gold"]:
-                    correct_outputs += 1
-                continue
-
-            current_time = time.time()
-            if requests_made >= self.MAX_REQUESTS_PER_MINUTE:
-                elapsed_time = current_time - last_request_time
-                if elapsed_time < 60:
-                    time_to_wait = 60 - elapsed_time + 10
-                    print(f"Rate limit reached. Waiting for {time_to_wait:.2f} seconds...")
-                    time.sleep(time_to_wait)
-                requests_made = 0
-                last_request_time = time.time()
-
-            gold_diversity_score = item["diversity_score"]
-            prompt = ""
-
-            if existing_results and existing_results[idx]["diversity_score"] == "X":
-                prompt = existing_results[idx].get("prompt")
-            else:
-                prompt_parts = []
-                list_names = ["A", "B", "C", "D", "E", "F"]
-                idx = 0
-                for _, iteration in item["iterations"].items():
-                    list_data = iteration['items']
-                    movies_info = self._generate_list_info(list_data)
-                    prompt_parts.append(f"List {list_names[idx]}:\n{movies_info}")
-                    # if self.include_summary and 'summary' in item[list_name]:
-                    #     summary_text = self._generate_summary_text(item[list_name]['summary'])
-                    #     prompt_parts.append(f"\nSummary:\n{summary_text}")
-                    idx += 1
-
-                prompt = "\n\n".join(prompt_parts)
-
-            try:
-                response_step1 = model.generate_content(prompt)
-                output = json.loads(response_step1.text.strip())
-                predicted_score = "X"
-
-                if all(key in output for key in [
-                    "list_A_description", 
-                    "list_B_description", 
-                    "list_C_description", 
-                    "list_D_description", 
-                    "list_E_description", 
-                    "list_F_description", 
-                    "diversity_summarization", 
-                    "answer"
-                    ]):
+            elicitation_selections = item["elicitation_selections"]
+            for i in range(len(item["iterations"])):
+                iter = item["iterations"][i]
+                eval_index = idx + i
+                if existing_results and existing_results[eval_index]["diversity_score"] != "X":
+                    updated_results.append(existing_results[eval_index])
                     valid_outputs += 1
-                    predicted_score = output["answer"]
-                    correctness = predicted_score == gold_diversity_score
-                    if correctness:
-                        print("-OK-")
+                    if existing_results[eval_index]["diversity_score"] == existing_results[eval_index]["gold"]:
                         correct_outputs += 1
-                    else:
-                        incorrect_outputs += 1
+                    continue
+
+                current_time = time.time()
+                if requests_made >= self.MAX_REQUESTS_PER_MINUTE:
+                    elapsed_time = current_time - last_request_time
+                    if elapsed_time < 60:
+                        time_to_wait = 60 - elapsed_time + 10
+                        print(f"Rate limit reached. Waiting for {time_to_wait:.2f} seconds...")
+                        time.sleep(time_to_wait)
+                    requests_made = 0
+                    last_request_time = time.time()
+
+                gold_diversity_score = iter["diversity_score"]
+                prompt = ""
+
+                prompt_parts = []
+                preferred_movies_info = self._generate_list_info(elicitation_selections[:20])
+                prompt_parts.append(f"Preferred movies: \n{preferred_movies_info}")
+
+                if existing_results and existing_results[eval_index]["diversity_score"] == "X":
+                    prompt = existing_results[eval_index].get("prompt")
                 else:
+                    list_names = ["A", "B", "C", "D", "E", "F"]
+                    list_idx = 0
+                    for _, iteration in iter["iterations"].items():
+                        list_data = iteration['items']
+                        movies_info = self._generate_list_info(list_data)
+                        prompt_parts.append(f"List {list_names[list_idx]}:\n{movies_info}")
+                        list_idx += 1
+
+                    prompt = "\n\n".join(prompt_parts)
+
+                try:
+                    response_step1 = model.generate_content(prompt)
+                    output = json.loads(response_step1.text.strip())
+                    predicted_score = "X"
+
+                    if all(key in output for key in [ 
+                        "answer"
+                        ]):
+                        valid_outputs += 1
+                        predicted_score = output["answer"]
+                        correctness = predicted_score == gold_diversity_score
+                        if correctness:
+                            print("-OK-")
+                            correct_outputs += 1
+                        else:
+                            incorrect_outputs += 1
+                    else:
+                        invalid_outputs += 1
+                        output = {
+                            "comparison": "X",
+                            "diversity_score": "X",
+                            "error": "Invalid JSON response from model"
+                        }
+
+                    updated_results.append({
+                        "participation": participation,
+                        "block": iter["block"],
+                        "prompt": prompt,
+                        "response": output,
+                        "gold": gold_diversity_score,
+                        "diversity_score": predicted_score,
+                        "correct": correctness if "answer" in output else False,
+                        "error": output.get("error", None)
+                    })
+
+                except Exception as e:
+                    print(f"Error generating response for row {idx}: {e}")
                     invalid_outputs += 1
-                    output = {
-                        "comparison": "X",
+                    updated_results.append({
+                        "participation": participation,
+                        "block": iter["block"],
+                        "prompt": prompt,
+                        "gold": gold_diversity_score,
                         "diversity_score": "X",
-                        "error": "Invalid JSON response from model"
-                    }
+                        "correct": False,
+                        "error": str(e)
+                    })
 
-                updated_results.append({
-                    "participation": participation,
-                    "block": block,
-                    "prompt": prompt,
-                    "response": output,
-                    "gold": gold_diversity_score,
-                    "diversity_score": predicted_score,
-                    "correct": correctness if "answer" in output else False,
-                    "error": output.get("error", None)
-                })
-
-            except Exception as e:
-                print(f"Error generating response for row {idx}: {e}")
-                invalid_outputs += 1
-                updated_results.append({
-                    "participation": participation,
-                    "block": block,
-                    "prompt": prompt,
-                    "gold": gold_diversity_score,
-                    "diversity_score": "X",
-                    "correct": False,
-                    "error": str(e)
-                })
-
-            requests_made += 1
-            time.sleep(self.REQUEST_INTERVAL)
+                requests_made += 1
+                time.sleep(self.REQUEST_INTERVAL)
 
         elapsed_time = time.time() - start_time
         if existing_results:

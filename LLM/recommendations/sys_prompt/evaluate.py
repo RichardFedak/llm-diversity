@@ -32,27 +32,36 @@ def generate_prompt(fields):
     field_text = ", ".join(field_descriptions)
     
     return f"""
-You are an assistant tasked to assess diversity of 6 lists of movies. For each movie, you are given its: {field_text}
-After analyzing the movies in each list, summarize the diversity across the lists answering the question: Were the movies highly different from each other ?
-Then, based on 6-point Likert scale (strongly disagree = -3, disagree = -2, slightly disagree = -1, slightly agree = 1, agree = 2, strongly agree = 3), choose the option for the whole batch of lists.
+You are an assistant tasked with predicting the user's perception of diversity in 6 lists of movies.  
+For each movie, you are given its: {field_text}.
+Additionally, you are provided with a separate list of preferred movies that represent the user's taste.  
 
-Deliver your descriptions of lists, overall diversity summarization, and diversity score for the entire batch, in the following JSON format:
+Your task is to analyze the movies in each of the 6 lists and compare them to each other as well as to the preferred movies.  
+Based on this analysis, predict how the user would perceive the diversity of these lists.  
+
+Summarize the diversity across the lists by answering the question: **Would the user perceive the movies as highly different from each other?**  
+Consider variations in genre, themes, time periods, and other relevant aspects. Also, analyze whether the movies align with or diverge from the user's preferred movies.  
+
+Then, based on a 6-point Likert scale (strongly disagree = -3, disagree = -2, slightly disagree = -1, slightly agree = 1, agree = 2, strongly agree = 3), choose the option for the whole batch of lists. Option 0 is not valid, DON'T select it.  
+
+Deliver your descriptions of lists, comparison with preferred movies, overall diversity summarization, and diversity score for the entire batch in the following JSON format:  
 
 {{
-    "list_A_description": string,            # Describe the diversity of the movies in list A.
-    "list_B_description": string,            # Describe the diversity of the movies in list B.
-    "list_C_description": string,            # Describe the diversity of the movies in list C.
-    "list_D_description": string,            # Describe the diversity of the movies in list D.
-    "list_E_description": string,            # Describe the diversity of the movies in list E.
-    "list_F_description": string,            # Describe the diversity of the movies in list F.
-    "diversity_summarization": string,       # Answer the question: Were the movies highly different from each other ?
-    "answer": int                            # Choose the option based on 6-point Likert scale.
+    "list_A_description": string,            # Describe the diversity of the movies in list A, noting differences and similarities with the preferred movies.
+    "list_B_description": string,            # Describe the diversity of the movies in list B, noting differences and similarities with the preferred movies.
+    "list_C_description": string,            # Describe the diversity of the movies in list C, noting differences and similarities with the preferred movies.
+    "list_D_description": string,            # Describe the diversity of the movies in list D, noting differences and similarities with the preferred movies.
+    "list_E_description": string,            # Describe the diversity of the movies in list E, noting differences and similarities with the preferred movies.
+    "list_F_description": string,            # Describe the diversity of the movies in list F, noting differences and similarities with the preferred movies.
+    "preferred_movies_analysis": string,     # Analyze the preferred movies and describe their common themes, genres, and characteristics.
+    "diversity_summarization": string,       # Answer the question: Were the movies highly different from each other? Consider diversity within the lists and in relation to the preferred movies.
+    "answer": int                            # Choose the option based on the 6-point Likert scale.
 }}
 """
 
 for fields in field_combinations:
     system_prompt = generate_prompt(fields)
-    evaluation_name = "likert_" + "_".join(field.name.lower() for field in fields)
+    evaluation_name = "likert_elicitation_" + "_".join(field.name.lower() for field in fields)
 
     print(f"Running evaluation for: {evaluation_name}")
 

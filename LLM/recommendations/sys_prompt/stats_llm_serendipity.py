@@ -4,7 +4,7 @@ from collections import defaultdict
 from scipy.stats import pearsonr
 import numpy as np
 
-RESULTS_FOLDER = "results/"
+RESULTS_FOLDER = "serendipity_results/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 
 os.makedirs(STATS_FOLDER, exist_ok=True)
@@ -30,7 +30,7 @@ def analyze_file(file_path):
     
     correct_evals = {"output": 0}
     accuracy = {"output": 0.0}
-    diversity_score_counts = {
+    serendipity_score_counts = {
         "user": {},
         "llm": {}
     }
@@ -40,13 +40,13 @@ def analyze_file(file_path):
     for idx, response in enumerate(evaluations):
 
         gold_output = response["gold"]
-        llm_output = response["diversity_score"]
+        llm_output = response["serendipity_score"]
 
         if gold_output == llm_output:
             correct_evals["output"] += 1
         
-        diversity_score_counts["user"][gold_output] = diversity_score_counts["user"].get(gold_output, 0) + 1
-        diversity_score_counts["llm"][llm_output] = diversity_score_counts["llm"].get(llm_output, 0) + 1
+        serendipity_score_counts["user"][gold_output] = serendipity_score_counts["user"].get(gold_output, 0) + 1
+        serendipity_score_counts["llm"][llm_output] = serendipity_score_counts["llm"].get(llm_output, 0) + 1
         
         gold_outputs.append(gold_output)
         llm_outputs.append(llm_output)
@@ -61,7 +61,7 @@ def analyze_file(file_path):
     summary_data = {
         "name": eval_name,
         "total_evaluations": total_evaluations,
-        "diversity_score_counts": diversity_score_counts,
+        "serendipity_score_counts": serendipity_score_counts,
         "llm_output": {
             "correct_evaluations": correct_evals,
             "accuracy": accuracy,
