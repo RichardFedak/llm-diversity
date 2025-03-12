@@ -36,25 +36,24 @@ You are an assistant tasked with predicting the user's perception of serendipity
 For each movie, you are given its: {field_text}.
 Additionally, you are provided with a separate list of preferred movies that represent the user's taste.  
 
-Your task is to analyze the movies in each of the 6 lists and compare them to each other as well as to the preferred movies.  
-Based on this analysis, predict how the user would perceive the serendipity of these lists.  
+For each list given, describe the serendipity by telling if there are any selected movies that stand out compared to the movies user already selected before (preferred, selected in previous lists). Name the movies that stand out or write that selected movies were not unexpected.
 
 Summarize the serendipity across the lists by answering the question: **Were the movies across the lists unexpected yet interesting?**  
-Consider variations in genre, themes, time periods, and other relevant aspects. Also, analyze whether the movies align with or diverge from the user's preferred movies.  
+Consider variations in genre, themes, time periods, and other relevant aspects. Also, analyze whether the movies align with or diverge from the user's preferred and already selected movies.  
 
 Then, based on a 6-point Likert scale (strongly disagree = -3, disagree = -2, slightly disagree = -1, slightly agree = 1, agree = 2, strongly agree = 3), choose the option for the whole batch of lists. Option 0 is not valid, DON'T select it.  
 
 Deliver your descriptions of lists, comparison with preferred movies, overall serendipity summarization, and serendipity score for the entire batch in the following JSON format:  
 
 {{
-    "list_A_description": string,            # Describe the serendipity of the movies in list A, noting differences and similarities with the preferred movies.
-    "list_B_description": string,            # Describe the serendipity of the movies in list B, noting differences and similarities with the preferred movies.
-    "list_C_description": string,            # Describe the serendipity of the movies in list C, noting differences and similarities with the preferred movies.
-    "list_D_description": string,            # Describe the serendipity of the movies in list D, noting differences and similarities with the preferred movies.
-    "list_E_description": string,            # Describe the serendipity of the movies in list E, noting differences and similarities with the preferred movies.
-    "list_F_description": string,            # Describe the serendipity of the movies in list F, noting differences and similarities with the preferred movies.
-    "preferred_movies_analysis": string,     # Analyze the preferred movies and describe their common themes, genres, and characteristics.
-    "serendipity_summarization": string,     # Answer the question: Were the movies across the lists unexpected yet interesting? Consider serendipity within the lists and in relation to the preferred movies.
+    "preferred_movies_analysis": string,     # Analyze the preferred movies and describe their common themes, genres, and characteristics. Build a user profile based on these movies.
+    "list_A_selections_description": string,
+    "list_B_selections_description": string,
+    "list_C_selections_description": string,
+    "list_D_selections_description": string,
+    "list_E_selections_description": string,
+    "list_F_selections_description": string,
+    "serendipity_summarization": string,     # Answer the question: Were the movies across the lists unexpected yet interesting? Consider if there were more lists with unexpected and interesting movies (agree) or more lists that contained movies that were not interesting (disagree).
     "answer": int                            # Choose the option based on the 6-point Likert scale.
 }}
 """
@@ -62,7 +61,7 @@ Deliver your descriptions of lists, comparison with preferred movies, overall se
 
 for fields in field_combinations:
     system_prompt = generate_prompt(fields)
-    evaluation_name = "likert_elicitation_" + "_".join(field.name.lower() for field in fields)
+    evaluation_name = "likert_elicitation_selected_" + "_".join(field.name.lower() for field in fields)
 
     print(f"Running evaluation for: {evaluation_name}")
 

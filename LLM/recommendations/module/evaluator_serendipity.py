@@ -75,6 +75,8 @@ class MovieEvaluator:
         for idx, item in enumerate(data):
             idx *= 3
             print((idx+1)/len(data))
+            # if idx > 0 :
+            #     break
             participation = item["participation"]
             elicitation_selections = item["elicitation_selections"]
             for i in range(len(item["iterations"])):
@@ -113,6 +115,9 @@ class MovieEvaluator:
                         list_data = iteration['items']
                         movies_info = self._generate_list_info(list_data)
                         prompt_parts.append(f"List {list_names[list_idx]}:\n{movies_info}")
+                        selected_data = iteration["selected_items"]
+                        selected_movies_info = self._generate_list_info(selected_data)
+                        prompt_parts.append(f"List {list_names[list_idx]} selected movies:\n{selected_movies_info}")
                         list_idx += 1
 
                     prompt = "\n\n".join(prompt_parts)
