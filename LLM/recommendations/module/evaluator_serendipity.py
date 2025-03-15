@@ -195,3 +195,155 @@ class MovieEvaluator:
 
         print("Finished")
         print(f"Accuracy: {accuracy_percentage:.2f}%")
+
+    def filter_movie_fields(self, movies):
+        allowed_fields = {field.value for field in self.input_fields}
+
+        filtered_movies = []
+        for movie in movies:
+            filtered_movie = {
+                key: value for key, value in movie.items()
+                if key in allowed_fields and key != "cover"
+            }
+            filtered_movies.append(filtered_movie)
+        
+        return filtered_movies
+
+
+    def evaluate_data_per_user(self, data):
+        """Evaluates movie data, logs results to a JSON file, and prints summary."""
+        json_log_file = f"./serendipity_per_user_results/{self.evaluation_name}.json"
+        existing_results = self._load_existing_results(json_log_file)
+        if existing_results:
+            self.system_prompt = existing_results["system_prompt"]
+            eval_duration = existing_results["evaluation_duration"]
+            existing_results = existing_results["evaluations"]
+
+        model = genai.GenerativeModel(
+            model_name="gemini-2.0-flash-lite-001",
+            system_instruction=self.system_prompt,
+            generation_config={
+                "response_mime_type": "application/json",
+                "temperature":self.temperature
+                }
+        )
+
+        valid_outputs = 0
+        invalid_outputs = 0
+        correct_outputs = 0
+        incorrect_outputs = 0
+        requests_made = 0
+        start_time = time.time()
+        last_request_time = start_time
+
+        updated_results = []
+
+        for idx, item in enumerate(data):
+            print((idx+1)/len(data))
+            # if idx > 0 :
+            #     break
+            participation = item["participation"]
+            item["elicitation_selections"] = self.filter_movie_fields(item["elicitation_selections"])
+
+            if existing_results and existing_results[idx]["serendipity_score"] != "X":
+                updated_results.append(existing_results[idx])
+                valid_outputs += 1
+                if existing_results[idx]["serendipity_score"] == existing_results[idx]["gold"]:
+                    correct_outputs += 1
+                continue
+
+            current_time = time.time()
+            if requests_made >= self.MAX_REQUESTS_PER_MINUTE:
+                elapsed_time = current_time - last_request_time
+                if elapsed_time < 60:
+                    time_to_wait = 60 - elapsed_time + 10
+                    print(f"Rate limit reached. Waiting for {time_to_wait:.2f} seconds...")
+                    time.sleep(time_to_wait)
+                requests_made = 0
+                last_request_time = time.time()
+
+            for iteration in item["iterations"]:
+                for key, value in iteration["iterations"].items():
+                    value["items"] = self.filter_movie_fields(value["items"])
+                    value["selected_items"] = self.filter_movie_fields(value["selected_items"])
+                    value.pop("cf_ild", None)
+                    value.pop("cb_ild", None)
+                    value.pop("bin_div", None)
+                iteration.pop("diversity_score", None)
+                iteration.pop("dataset", None)
+
+            gold_serendipity_score = item["iterations"][2]["serendipity_score"]
+            item["iterations"][2]["serendipity_score"] = "X"
+            prompt = json.dumps(item)
+
+            try:
+                response_step1 = model.generate_content(prompt)
+                output = json.loads(response_step1.text.strip())
+                predicted_score = "X"
+
+                if all(key in output for key in [ 
+                    "answer"
+                    ]):
+                    valid_outputs += 1
+                    predicted_score = output["answer"]
+                    correctness = predicted_score == gold_serendipity_score
+                    if correctness:
+                        print("-OK-")
+                        correct_outputs += 1
+                    else:
+                        incorrect_outputs += 1
+                else:
+                    invalid_outputs += 1
+                    output = {
+                        "comparison": "X",
+                        "serendipity_score": "X",
+                        "error": "Invalid JSON response from model"
+                    }
+
+                updated_results.append({
+                    "participation": participation,
+                    "prompt": prompt,
+                    "response": output,
+                    "gold": gold_serendipity_score,
+                    "serendipity_score": predicted_score,
+                    "correct": correctness if "answer" in output else False,
+                    "error": output.get("error", None)
+                })
+
+            except Exception as e:
+                print(f"Error generating response for row {idx}: {e}")
+                invalid_outputs += 1
+                updated_results.append({
+                    "participation": participation,
+                    "prompt": prompt,
+                    "gold": gold_serendipity_score,
+                    "serendipity_score": "X",
+                    "correct": False,
+                    "error": str(e)
+                })
+
+            requests_made += 1
+            time.sleep(self.REQUEST_INTERVAL)
+
+        elapsed_time = time.time() - start_time
+        if existing_results:
+            elapsed_time += eval_duration
+        accuracy_percentage = (correct_outputs / valid_outputs) * 100 if valid_outputs > 0 else 0
+            
+        result = {
+            "name": self.evaluation_name,
+            "evaluation_duration": elapsed_time,
+            "accuracy": accuracy_percentage,
+            "system_prompt": model._system_instruction.parts[0].text,
+            "evaluations": updated_results
+        }
+
+        folder_path = os.path.dirname(json_log_file)
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+
+        with open(json_log_file, "w") as json_log:
+            json.dump(result, json_log, indent=4)
+
+        print("Finished")
+        print(f"Accuracy: {accuracy_percentage:.2f}%")
