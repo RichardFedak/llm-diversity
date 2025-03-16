@@ -1,0 +1,30 @@
+{
+    "name": "likert_elicitation_selected_per_user_title_genres",
+    "total_evaluations": 107,
+    "serendipity_score_counts": {
+        "user": {
+            "-1.0": 40,
+            "-3.0": 2,
+            "3.0": 4,
+            "2.0": 20,
+            "1.0": 24,
+            "-2.0": 17
+        },
+        "llm": {
+            "-1": 20,
+            "-2": 5,
+            "1": 60,
+            "2": 20,
+            "3": 2
+        }
+    },
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 32
+        },
+        "accuracy": {
+            "output": 0.2991
+        }
+    },
+    "pearson": 0.10651062689404234
+}
