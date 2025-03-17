@@ -4,7 +4,7 @@ from collections import defaultdict
 from scipy.stats import pearsonr
 import numpy as np
 
-RESULTS_FOLDER = "serendipity_per_user_results/"
+RESULTS_FOLDER = "serendipity_results/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 
 os.makedirs(STATS_FOLDER, exist_ok=True)

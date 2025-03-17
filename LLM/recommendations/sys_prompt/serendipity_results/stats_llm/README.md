@@ -7,3 +7,5 @@
 | title_genres_plot        | 0.2243   | 0.02972    |
 | elicitation_title        | 0.2305   | -0.08371   |
 | elicitation_title_genres | 0.2212   | -0.07596   |
+| elicitation_selected_title         | 0.2368   | 0.03421    |
+| elicitation_selected_title_genres  | 0.2399   | 0.08566    |

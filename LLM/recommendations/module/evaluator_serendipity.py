@@ -224,7 +224,7 @@ class MovieEvaluator:
             system_instruction=self.system_prompt,
             generation_config={
                 "response_mime_type": "application/json",
-                "temperature": 1
+                "temperature": self.temperature
                 }
         )
 
