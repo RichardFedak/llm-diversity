@@ -18,3 +18,6 @@
 | likert_title_plot      | **36.1%**         | -0.02   |
 | likert_title_genres_plot | **32.4%**         | -0.05   |
 | likert_elicitation_title | **40.2%**         | **-0.10**   |
+
+Try other metrics...
+Per user, predict 3rd

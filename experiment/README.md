@@ -32,6 +32,7 @@ Main focus is not to recommend movies suitable for user but to learn how they pe
    - Ask the user if they agree, why, why not...
    - Iterated Z(?) times.
 3.  **Questionnaire?** --- ***TODO, after the learning phase?***  
+   - preferovany film, dvojice porovnanie, vymysliet dvojice, na čo sa zamerat, jeden fixny
    - Questions about the number of movies in lists...  
      - *How was it to determine the most diverse list when only a few movies were in each list?*  
      - *How was it to determine the most diverse list when there were many movies in each list?*  
@@ -44,7 +45,8 @@ Main focus is not to recommend movies suitable for user but to learn how they pe
 We should have some basic understanding of the user, their preferences, and how they perceive diversity.  
 [LLM paper 3.3.2](https://arxiv.org/pdf/2306.05817)  
 - **CRM Generation**
-  - Not using LLM.
+  - Not using LLM. ***BIN-DIV***
+- Vyskušat generovanie...
 - **Open-set item generation**
   - Based on user preferences and the diversity learning phase, generate a list of movies.
   - Post-processing for generative hallucination. ***TODO*** Check if the movie exists in the dataset?
@@ -61,7 +63,9 @@ X lists of Y movies, same generation, different parameters.
 **TASKS:**  
   - Select movies  
   - Rate the diversity of lists  
-  - Make it possible for user to ask for more diverse list ? Something like "This list is not diverse, give me more diverse list..." + reasoning
+  - RELEVANCE
+  - Make it possible for user to ask for more diverse list ? Something like "This list is not diverse, give me more diverse list..." + reasoning, textový feedback, conversational recsys PAPERS LLMs
+  - napisat Patrikovi
   - ***TODO...***  
 
 **Recommendations generation:**  
