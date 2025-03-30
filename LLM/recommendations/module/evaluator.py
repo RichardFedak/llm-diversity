@@ -47,7 +47,7 @@ class MovieEvaluator:
 
     def evaluate_data(self, data):
         """Evaluates movie data, logs results to a JSON file, and prints summary."""
-        json_log_file = f"./results/{self.evaluation_name}.json"
+        json_log_file = f"./diversity_results/{self.evaluation_name}.json"
         existing_results = self._load_existing_results(json_log_file)
         if existing_results:
             self.system_prompt = existing_results["system_prompt"]

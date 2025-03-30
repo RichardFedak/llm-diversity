@@ -61,11 +61,11 @@ Deliver your descriptions of lists, comparison with preferred movies, overall di
 
 for fields in field_combinations:
     system_prompt = generate_prompt(fields)
-    evaluation_name = "likert_elicitation_" + "_".join(field.name.lower() for field in fields)
+    evaluation_name = "likert_elicitation_very_creative_" + "_".join(field.name.lower() for field in fields)
 
     print(f"Running evaluation for: {evaluation_name}")
 
-    evaluator = MovieEvaluator(api_key, evaluation_name, system_prompt, fields, include_summary=True)
+    evaluator = MovieEvaluator(api_key, evaluation_name, system_prompt, fields, include_summary=True, temperature=2)
     evaluator.evaluate_data(data)
     
     print(f"Completed evaluation for: {evaluation_name}\n")
