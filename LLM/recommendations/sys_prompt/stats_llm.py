@@ -4,7 +4,7 @@ from collections import defaultdict
 from scipy.stats import pearsonr
 import numpy as np
 
-RESULTS_FOLDER = "diversity_results/"
+RESULTS_FOLDER = "diversity_per_user_results/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 
 os.makedirs(STATS_FOLDER, exist_ok=True)
@@ -30,15 +30,12 @@ def analyze_file(file_path):
     
     correct_evals = {"output": 0}
     accuracy = {"output": 0.0}
-    diversity_score_counts = {
-        "user": {},
-        "llm": {}
-    }
+    diversity_score_counts = {"user": {}, "llm": {}}
     gold_outputs = []
-    llm_outputs =[]
+    llm_outputs = []
+    binary_correct = 0
             
     for idx, response in enumerate(evaluations):
-
         gold_output = response["gold"]
         llm_output = response["diversity_score"]
 
@@ -50,13 +47,22 @@ def analyze_file(file_path):
         
         gold_outputs.append(gold_output)
         llm_outputs.append(llm_output)
-
+        
+        if (gold_output > 0 and llm_output > 0) or (gold_output < 0 and llm_output < 0):
+            binary_correct += 1
+    
     for key in correct_evals:
         accuracy[key] = (
             round(correct_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
         )
     
     pearson_corr = pearsonr(gold_outputs, llm_outputs).statistic
+    
+    rmse = np.sqrt(np.mean((np.array(gold_outputs) - np.array(llm_outputs)) ** 2))
+    
+    mae = np.mean(np.abs(np.array(gold_outputs) - np.array(llm_outputs)))
+    
+    binary_accuracy = binary_correct / total_evaluations if total_evaluations > 0 else 0.0
         
     summary_data = {
         "name": eval_name,
@@ -67,11 +73,12 @@ def analyze_file(file_path):
             "accuracy": accuracy,
         },
         "pearson": pearson_corr,
+        "rmse": rmse,
+        "mae": mae,
+        "binary_accuracy": binary_accuracy,
     }
     
-    output_summary_file = os.path.join(
-        STATS_FOLDER, f"{os.path.basename(file_path)}"
-    )
+    output_summary_file = os.path.join(STATS_FOLDER, f"{os.path.basename(file_path)}")
     try:
         with open(output_summary_file, "w") as f:
             json.dump(summary_data, f, indent=4)

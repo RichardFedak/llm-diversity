@@ -1,7 +1,7 @@
 {
     "name": "likert_elicitation_selected_per_user_title_plot",
     "total_evaluations": 107,
-    "serendipity_score_counts": {
+    "diversity_score_counts": {
         "user": {
             "-1.0": 40,
             "-3.0": 2,
@@ -27,5 +27,7 @@
             "output": 0.3084
         }
     },
-    "pearson": 0.07739450964395246
+    "pearson": 0.07739450964395246,
+    "rmse": 2.0301466269958937,
+    "binary_accuracy": 0.4766355140186916
 }

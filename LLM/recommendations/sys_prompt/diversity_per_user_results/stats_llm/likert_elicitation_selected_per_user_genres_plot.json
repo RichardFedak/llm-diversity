@@ -1,0 +1,31 @@
+{
+    "name": "likert_elicitation_selected_per_user_genres_plot",
+    "total_evaluations": 107,
+    "diversity_score_counts": {
+        "user": {
+            "1.0": 48,
+            "-3.0": 2,
+            "2.0": 23,
+            "-2.0": 9,
+            "-1.0": 22,
+            "3.0": 3
+        },
+        "llm": {
+            "-1": 16,
+            "2": 27,
+            "1": 64
+        }
+    },
+    "llm_output": {
+        "correct_evaluations": {
+            "output": 38
+        },
+        "accuracy": {
+            "output": 0.3551
+        }
+    },
+    "pearson": 0.03356884658115548,
+    "rmse": 1.7103314429840237,
+    "mae": 1.2429906542056075,
+    "binary_accuracy": 0.6355140186915887
+}
