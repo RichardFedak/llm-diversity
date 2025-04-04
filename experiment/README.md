@@ -8,37 +8,23 @@
 
 In this phase, the main goal is to understand the user, what type of movies they prefer, and how they perceive diversity.
 
-### Preference elicitation
-
 1.  **Movie Selection:** 
     -  Same as in the paper.?...
     -  Recommend random/popular + non-popular ***TODO***
 
-### Diversity perception
-
-Main focus is not to recommend movies suitable for user but to learn how they perceive diversity.
-
-1.  **Diversity perception learning:** 
-    -  Three lists of X(?) movies each. 
-       -  ***TODO: Each iteration, a different number of movies in the list?***
-       -  ***TODO: Lists generated in 3 different ways ? combination of popular/non-popular + CF,CB,BIN_DIV ILD ... OR focus on TOP 3 borda counts criteria (genres, plot, actors) from (https://link.springer.com/article/10.1007/s11257-022-09351-w/tables/12)***
-    -  Select the list you perceive as most diverse (select multiple if you perceive their diversity as the same?).
-    -  *(Ask the user why they selected that list, text-based/options [genres, plots ...])*
-    -  Iterated Y(?) times.
-2.  **Sample generation:**  
-   - [LLM paper 3.1.2](https://arxiv.org/pdf/2306.05817)
-   - LLM will generate lists ***OR*** generate lists like in the 1st part.
-   - LLM selects the most diverse list(s) + reasoning?
-   - Ask the user if they agree, why, why not...
-   - Iterated Z(?) times.
-3.  **Questionnaire?** --- ***TODO, after the learning phase?***  
-   - preferovany film, dvojice porovnanie, vymysliet dvojice, na čo sa zamerat, jeden fixny
-   - Questions about the number of movies in lists...  
-     - *How was it to determine the most diverse list when only a few movies were in each list?*  
-     - *How was it to determine the most diverse list when there were many movies in each list?*  
-     - *Which count of movies in lists suited you the best?*  
-     - Give weights to selections / remove selections based on responses. (Keep only selections that user is confident with.)
-   - Overall, was it easy to determine the more diverse lists, and are you happy with your selections? Yes/No - if ***NO*** - One more time (only with the selected movie count...) + discard all previous selections?  
+2.  **Diversity perception**
+    -  One page
+    -  Pairs of movies
+       -  with different genres, plot, actory, release year
+       -  from the same franchise
+       -  same genres, different plot
+       -  same actor/s, different genres
+       -  same actor/s, same genres
+       -  similar plot, different genres ? parody+original ?
+    -  For each pair: 
+       -  Are the movies different from each other ?
+       -  Likert scale ?
+       -  Write, what they have in common and what features are diverse
 
 ## Recommendation
 
@@ -67,6 +53,10 @@ X lists of Y movies, same generation, different parameters.
   - Make it possible for user to ask for more diverse list ? Something like "This list is not diverse, give me more diverse list..." + reasoning, textový feedback, conversational recsys PAPERS LLMs
   - napisat Patrikovi
   - ***TODO...***  
+
+## Questionnaire
+  - Which algo provided most diverse recommendations? Why...
+  - Which algo provided least diverse recommendations? Why...
 
 **Recommendations generation:**  
   - Based on evaluations for the paper [User Perception of Diversity](https://dl.acm.org/doi/pdf/10.1145/3627043.3659555), tuning a model did not prove to be an effective solution, as it produced similar or worse predictions than using system prompts and also took a lot more time to prepare...  
