@@ -205,11 +205,21 @@ def join():
 def on_joined():
     return redirect(url_for(
         "utils.preference_elicitation",
-        continuation_url=url_for(f"{__plugin_name__}.send_feedback"),
+        continuation_url=url_for(f"{__plugin_name__}.diversity_perception"),
         consuming_plugin=__plugin_name__,
         initial_data_url=url_for(f"{__plugin_name__}.get_initial_data"),
         search_item_url=url_for(f'{__plugin_name__}.item_search')
     ))
+
+
+@bp.route("/diversity-perception", methods=["GET"])
+def diversity_perception():
+    print("WOO")
+    return render_template(
+        "diversity_perception.html",
+        continuation_url=url_for(f"{__plugin_name__}.send_feedback"),
+        request_args=request.args
+    )
 
 def search_for_item(pattern, tr=None):
     conf = load_user_study_config(session["user_study_id"])
@@ -273,6 +283,7 @@ def send_feedback():
 
     # Movie indices of selected movies
     selected_movies = request.args.get("selectedMovies")
+    print(selected_movies)
     selected_movies = selected_movies.split(",") if selected_movies else []
     selected_movies = [int(m) for m in selected_movies]
 

@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+<div id="app">
+  <b-container fluid>
+    <b-jumbotron header="Diversity Perception">
+      <p>TODO...</p>
+    </b-jumbotron>
+
+    <b-row align-h="center">
+      <b-col cols="4">
+        <b-form method="GET" action="{{ continuation_url }}">
+          {% for key, value in request_args.items() %}
+            <input type="hidden" name="{{ key }}" value="{{ value }}">
+          {% endfor %}
+          <b-button type="submit" block variant="primary">Continue</b-button>
+        </b-form>
+      </b-col>
+    </b-row>
+  </b-container>
+</div>
+{{ emit_assets('fastcompare','diversity_perception.js') }}   
+{% include 'footer.html' %}

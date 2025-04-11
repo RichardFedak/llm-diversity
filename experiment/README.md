@@ -24,11 +24,26 @@ In this phase, the main goal is to understand the user, what type of movies they
     -  For each pair: 
        -  Are the movies different from each other ?
        -  Likert scale ?
-       -  Write, what they have in common and what features are diverse
+       -  Write, what they have in common and what features are diverse ?
+  
+3. **Text input ?**
+   -  Describe preferences
+   -  Describe, what is diversity ... ?
+
+
+## Model preparation
+
+Based on the given preferences and diversity feedback, let LLM create a user profile.
+User profile will be divided into 2 main parts:
+   1. Textual description of user interest groups based on diversity perception
+   2. JSON file/s representing preferences (semantic profile)
+
+and descriptions
+that will be embedded. We will look for closest embeddings based on cosine similarity.
 
 ## Recommendation
 
-We should have some basic understanding of the user, their preferences, and how they perceive diversity.  
+We have user profile, 
 [LLM paper 3.3.2](https://arxiv.org/pdf/2306.05817)  
 - **CRM Generation**
   - Not using LLM. ***BIN-DIV***
