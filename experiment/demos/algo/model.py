@@ -1,4 +1,4 @@
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Dict
 
 from pydantic import BaseModel, Field, RootModel
 
@@ -48,30 +48,9 @@ class Iteration(BaseModel):
     cb_ild: float
     bin_div: float
 
-class Iterations(BaseModel):
-    iter_0: Optional[Iteration] = Field(None, alias='0')
-    iter_1: Optional[Iteration] = Field(None, alias='1')
-    iter_2: Optional[Iteration] = Field(None, alias='2')
-    iter_3: Optional[Iteration] = Field(None, alias='3')
-    iter_4: Optional[Iteration] = Field(None, alias='4')
-    iter_5: Optional[Iteration] = Field(None, alias='5')
-    iter_6: Optional[Iteration] = Field(None, alias='6')
-    iter_7: Optional[Iteration] = Field(None, alias='7')
-    iter_8: Optional[Iteration] = Field(None, alias='8')
-    iter_9: Optional[Iteration] = Field(None, alias='9')
-    iter_10: Optional[Iteration] = Field(None, alias='10')
-    iter_11: Optional[Iteration] = Field(None, alias='11')
-    iter_12: Optional[Iteration] = Field(None, alias='12')
-    iter_13: Optional[Iteration] = Field(None, alias='13')
-    iter_14: Optional[Iteration] = Field(None, alias='14')
-    iter_15: Optional[Iteration] = Field(None, alias='15')
-    iter_16: Optional[Iteration] = Field(None, alias='16')
-    iter_17: Optional[Iteration] = Field(None, alias='17')
-
-
 class Iteration(BaseModel):
     block: int
-    iterations: Iterations
+    iterations: Dict[str, Iteration]
     diversity_score: float
     serendipity_score: float
     dataset: str

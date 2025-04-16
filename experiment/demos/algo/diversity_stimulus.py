@@ -12,15 +12,17 @@ class StimulusType(Enum):
     PLOT = "plot"
     # Future stimuli can go here...
 
+class StimulusResponseRecommend(BaseModel):
+    list_analysis: str
+    list_score: int
 
-class StimulusResponse(BaseModel):
+class StimulusResponseAnalyze(BaseModel):
     list_1_analysis: str
     list_1_score: int
     list_2_analysis: str
     list_2_score: int
     list_3_analysis: str
     list_3_score: int
-
 
 
 class DiversityStimulusAnalyzer:
@@ -49,7 +51,7 @@ class DiversityStimulusAnalyzer:
 
         return self._normalize_results(analysis_results)
 
-    def _log_to_json(self, stimulus: StimulusType, prompt: str, response: StimulusResponse, diversity_score: int):
+    def _log_to_json(self, stimulus: StimulusType, prompt: str, response, diversity_score: int):
         log_entry = {
             "stimulus_type": stimulus.value,
             "prompt": prompt,
@@ -116,9 +118,9 @@ class DiversityStimulusAnalyzer:
             "- per_list_scores: list of integers (one per list)\n"
         )
 
-        wrapper = OllamaWrapper[StimulusResponse](
+        wrapper = OllamaWrapper[StimulusResponseAnalyze](
             system_prompt=system_prompt,
-            response_model=StimulusResponse,
+            response_model=StimulusResponseAnalyze,
         )
 
         response = wrapper.ask(prompt)
@@ -158,12 +160,91 @@ class DiversityStimulusAnalyzer:
             for stimulus, score in raw_results.items()
         }
     
-    def calculate_total_distribution(self) -> Dict[StimulusType, float]:
-        print(self.stimulus_totals.values())
+    def calculate_total_distribution(self, stretch_factor: float = 0.5) -> Dict[StimulusType, float]:
         total = sum(self.stimulus_totals.values())
         if total == 0:
             return {stimulus: 0.0 for stimulus in StimulusType}
-        return {
+
+        normalized = {
             stimulus: score / total
             for stimulus, score in self.stimulus_totals.items()
         }
+
+        stretched = {
+            stimulus: val ** (1 / stretch_factor)
+            for stimulus, val in normalized.items()
+        }
+
+        stretched_total = sum(stretched.values())
+        return {
+            stimulus: val / stretched_total
+            for stimulus, val in stretched.items()
+        }
+
+
+class DiversityStimulusEvaluator:
+    def __init__(self, stimuli_scores: Dict[StimulusType, float]):
+        self.stimuli_scores = stimuli_scores
+
+    def _analyze_diversity_for_list(self, stimulus: StimulusType, movie_list: List[MovieItem]) -> int:
+
+        field_name = stimulus.value  # "genres" or "plot"
+        
+        system_prompt = (
+            f"You are an expert in analyzing movie collections for diversity based solely on {field_name.upper()}. "
+            f"You will receive one movie list. Each movie includes a title and its {field_name}. "
+            f"Your task is to analyze the list and determine how diverse it is in terms of {field_name}."
+        )
+
+        STIMULUS_INSTRUCTIONS = {
+            StimulusType.GENRES: (
+                "Focus only on the listed genres.\n"
+                "Consider genre variety and uniqueness across movies in the list.\n"
+                "Avoid interpreting the genre meaning — just evaluate the diversity based on genre labels."
+            ),
+            StimulusType.PLOT: (
+                "Focus only on the content of the plots. Do not focus on genres.\n"
+                "Try to group plots into themes and assess the thematic range in the list.\n"
+                "Summarize the dominant themes of the list in your analysis."
+            )
+        }
+
+        prompt = (
+            f"Please do the following:\n"
+            f"1. Provide a short analysis of the {field_name} diversity for the list.\n"
+            f"{STIMULUS_INSTRUCTIONS[stimulus]}\n"
+            f"2. Give a diversity score between 0 and 10 for the list (10 = very diverse, 0 = no diversity in terms of {field_name}).\n\n"
+        )
+
+        for movie in movie_list:
+            value = getattr(movie, field_name)
+            prompt += f"- {movie.title} | {field_name.capitalize()}: {value}\n"
+        
+        prompt += (
+            "Format your response as JSON with these keys:\n"
+            "- list_analysis: string\n"
+            "- list_score: integer\n"
+        )
+
+        wrapper = OllamaWrapper[StimulusResponseRecommend](
+            system_prompt=system_prompt,
+            response_model=StimulusResponseRecommend,
+        )
+
+        response = wrapper.ask(prompt)
+
+        return response.list_score
+
+    def evaluate_lists(self, movie_lists: List[List[MovieItem]]) -> float:
+        total_score = 0
+        total_weight = 0
+
+        for movie_list in movie_lists:
+            for stimulus in StimulusType:
+                list_score = self._analyze_diversity_for_list(stimulus, movie_list)
+                weight = self.stimuli_scores[stimulus]
+                total_score += list_score * weight
+                total_weight += weight
+
+        final_score = total_score / total_weight
+        return final_score
