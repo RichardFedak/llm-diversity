@@ -106,7 +106,7 @@ class MLDataLoaderWrapper(DataLoaderBase):
 
     @classmethod
     def name(self):
-        return "Filtered ML-25M dataset"
+        return "Filtered ML-32M dataset"
 
     @classmethod
     def parameters(self):
