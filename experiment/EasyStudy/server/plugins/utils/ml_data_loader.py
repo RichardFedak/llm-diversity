@@ -345,4 +345,12 @@ class MLDataLoader:
                 self.movie_index_to_url[self.movie_id_to_index[movie_id]] = os.path.join(self.img_dir_path, img_name)
 
         print(f"Already downloaded images for: {len(self.movie_index_to_url)} movies")
+        
+        # GET IDS OF NEW MOVIES
+        # cover_ids = []
+        # for index, value in self.movie_index_to_id.items():
+        #     if index not in self.movie_index_to_url:
+        #         cover_ids.append(value)
+        # print(cover_ids)
+
         return True
