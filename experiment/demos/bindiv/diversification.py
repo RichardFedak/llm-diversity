@@ -44,17 +44,22 @@ def select_next(alpha, mgains, seen_items_mask):
 #       (basically arbitrary numpy array of shape |items| that contain 0/1 implicit feedback)
 #   *filter_out_items* which items should not be recommended
 #       (typically we do not want to recommend same items twice for single user)
-#   *n_items_subset* how many candidate items should we consider, this is crucial otherwise the procedure is not
-#       computationally feasible in real-time user study (esp. because of the BIN-DIV)
-#       we used 500 in our experiments (is expected to be divisible by 2).
-#       We use "random mixture", this means that n_items_subset / 2 items were those with highest relevance
-#       and remaining n_items_subset / 2 were selected randomly from the rest of candidate items 
 def diversify(k, rel_scores,
-            alpha, items, relevance_f, diversity_f,
-            rating_row, filter_out_items, n_items_subset=None):
+            alpha, items, diversity_f,
+            rating_row, filter_out_items):
 
     assert rel_scores.ndim == 1
     assert rating_row.ndim == 1
+
+    def relevance_f(top_k):
+        return rel_scores[top_k].sum()
+
+    n_items_subset=500
+    #   n_items_subset -> how many candidate items should we consider, this is crucial otherwise the procedure is not
+    #   computationally feasible in real-time user study (esp. because of the BIN-DIV)
+    #   we used 500 in our experiments (is expected to be divisible by 2).
+    #   We use "random mixture", this means that n_items_subset / 2 items were those with highest relevance
+    #   and remaining n_items_subset / 2 were selected randomly from the rest of candidate items 
 
     # This is going to be the resulting top-k item
     top_k_list = np.zeros(shape=(k, ), dtype=np.int32)
@@ -66,26 +71,22 @@ def diversify(k, rel_scores,
     # Filter_out_items are already propageted into rel_scores (have lowest score)
     sorted_relevances = np.argsort(-rel_scores, axis=-1)
 
-    # If n_items_subset is specified, we take subset of items
-    if n_items_subset is None:
-        # Mgain masking will ensure we do not select items in filter_out_items set
-        source_items = items
-    else:
-        assert n_items_subset % 2 == 0, f"When using random mixture we expect n_items_subset ({n_items_subset}) to be divisible by 2"
-        # Here we need to ensure that we do not include already seen items among source_items
-        # so we have to filter out 'filter_out_items' out of the set
+    assert n_items_subset % 2 == 0, f"When using random mixture we expect n_items_subset ({n_items_subset}) to be divisible by 2"
+    # Here we need to ensure that we do not include already seen items among source_items
+    # so we have to filter out 'filter_out_items' out of the set
 
-        # We know items from filter_out_items have very low relevances
-        # so here we are safe w.r.t. filter_out_movies because those will be at the end of the sorted list
-        relevance_half = sorted_relevances[:n_items_subset//2]
-        # However, for the random half, we have to ensure we do not sample movies from filter_out_movies because this can lead to issues
-        # especially when n_items_subset is small and filter_out_items is large (worst case is that we will sample exactly those items that should have been filtered out)
-        random_candidates = np.setdiff1d(sorted_relevances[n_items_subset//2:], filter_out_items)
-        random_half = np.random.choice(random_candidates, n_items_subset//2, replace=False)
-        source_items = np.concatenate([
-            relevance_half, 
-            random_half
-        ])
+    # We know items from filter_out_items have very low relevances
+    # so here we are safe w.r.t. filter_out_movies because those will be at the end of the sorted list
+    relevance_half = sorted_relevances[:n_items_subset//2]
+    # However, for the random half, we have to ensure we do not sample movies from filter_out_movies because this can lead to issues
+    # especially when n_items_subset is small and filter_out_items is large (worst case is that we will sample exactly those items that should have been filtered out)
+    random_candidates = np.setdiff1d(sorted_relevances[n_items_subset//2:], filter_out_items)
+    random_half = np.random.choice(random_candidates, n_items_subset//2, replace=False)
+
+    source_items = np.concatenate([
+        relevance_half, 
+        random_half
+    ])
 
     # Default number of quantiles is 1000, however, if n_samples is smaller than n_quantiles, then n_samples is used and warning is raised
     # to get rid of the warning, we calculates quantiles straight away

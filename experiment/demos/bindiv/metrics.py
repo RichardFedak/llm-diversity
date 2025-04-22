@@ -17,13 +17,10 @@ import numpy as np
 
 ### Binomial diversity and everything that is needed to compute it ###
 class binomial_diversity:
-    def __init__(self, all_categories, get_item_categories, rating_matrix, alpha, loader_name):
+    def __init__(self, all_categories, get_item_categories, rating_matrix):
         self.all_categories = set(all_categories)
         self.category_getter = get_item_categories
         self.rating_matrix = rating_matrix
-        self.alpha = alpha
-        self.loader_name = loader_name
-        assert alpha == 0.0, f"Current we only support alpha=0 meaning local proportion"
 
     def __call__(self, rec_list):
         rec_list_categories = self._get_list_categories(rec_list)
@@ -48,8 +45,8 @@ class binomial_diversity:
         return set(categories)
 
     # Global part does not change for different users so we calculate it just once
-    # @functools.lru_cache(maxsize=None)
-    def _p_g_1(self, g):
+    @functools.lru_cache(maxsize=None)
+    def _p_g(self, g):
         # Denominator is for every user take number of items the user has interacted with
         # which reduces to nonzero entries in the rating_matrix
         x = self.rating_matrix.astype(bool)
@@ -75,29 +72,8 @@ class binomial_diversity:
             # k_g = len([x for x in i_u if g in self.category_getter(x)])
             # nom += k_g
 
-        p_g_1 = nom / denom
-        return p_g_1
-
-    def _p_g_2(self, g):
-        return 0.0 # TODO if you ever switch to self.alpha != 0.0
-
-
-    def __eq__(self, other) -> bool:
-        if not isinstance(other, binomial_diversity):
-            return False
-        
-        return self.alpha == other.alpha and self.loader_name == other.loader_name
-
-    def __hash__(self) -> int:
-        return self.alpha.__hash__() ^ self.loader_name.__hash__()
-
-    # As long as _p_g_2 returns fixed 0, we can cache this function fully
-    # Once this changes, we can only cache _p_g_1
-    @functools.lru_cache(maxsize=None)
-    def _p_g(self, g):
-        assert self.alpha == 0.0, f"Current we only support alpha=0 meaning local proportion"
-        return (1.0 - self.alpha) * self._p_g_1(g) + self.alpha * self._p_g_2(g)
-
+        p_g = nom / denom
+        return p_g
 
     # Coverage as in the Binomial algorithm paper
     def _coverage(self, rec_list, rec_list_categories):
