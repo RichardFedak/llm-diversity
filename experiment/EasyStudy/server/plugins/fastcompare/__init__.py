@@ -185,7 +185,10 @@ def get_initial_data():
 
     for i in range(len(x)):
         input_name = f"{config['selected_data_loader']}_{x[i]['movie_id']}"
-        x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]])
+        print(x[i])
+        x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + \
+        "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + " " + \
+        x[i]["plot"]
     
     el_movies.extend(x)
     session["elicitation_movies"] = el_movies
@@ -408,7 +411,9 @@ def compare_algorithms():
         x = d["movies"]
         for i in range(len(x)):
             input_name = f"{conf['selected_data_loader']}_{x[i]['movie_id']}"
-            x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]])
+            x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + \
+                "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + " " + \
+                x[i]["plot"]
             #x[i]["movie"] = tr(str(x[i]["movie_id"])) + " " + "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]])
 
     params = {

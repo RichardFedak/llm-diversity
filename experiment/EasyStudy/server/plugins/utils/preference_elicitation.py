@@ -297,8 +297,9 @@ def enrich_results(top_k, loader):
             top_k_genres = ['' for movie_id in top_k_ids]
         top_k_genres = [x if x != ["(no genres listed)"] else [] for x in top_k_genres]
         top_k_url = [loader.get_item_index_image_url(movie_idx) for movie_idx in top_k]
+        top_k_plot = [loader.items_df_indexed.loc[movie_id]["plot"] for movie_id in top_k_ids]
     
-    return [{"movie": movie, "url": url, "movie_idx": str(movie_idx), "movie_id": movie_id, "genres": genres} for movie, url, movie_idx, movie_id, genres in zip(top_k_description, top_k_url, top_k, top_k_ids, top_k_genres)]
+    return [{"movie": movie, "url": url, "movie_idx": str(movie_idx), "movie_id": movie_id, "genres": genres, "plot": plot} for movie, url, movie_idx, movie_id, genres, plot in zip(top_k_description, top_k_url, top_k, top_k_ids, top_k_genres, top_k_plot)]
 
 def prepare_wrapper(selected_movies, model, mandate_allocation_factory, obj_weights, filter_out_movies = [], k=10):
     assert False, 'Disabled on ndbi021 branch to remove dependency on tensorflow'
