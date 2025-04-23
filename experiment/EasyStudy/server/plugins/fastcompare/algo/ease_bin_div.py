@@ -37,6 +37,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         self._l2 = l2
         self._n_candidates = n_candidates
         self._alpha = alpha
+        self.NEG_INF = int(-10e6)
 
         self._items_count = np.shape(self._rating_matrix)[1]
 
@@ -196,6 +197,13 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
         rel_scores = np.dot(user_vector, self._weights)
 
+        print("rel scores", rel_scores.shape)
+        print("filter out", filter_out_items)
+
+        # mask out scores for already seen movies
+        rel_scores[selected_items] = self.NEG_INF
+        rel_scores[filter_out_items] = self.NEG_INF
+
         diversity_function = self.binomial_diversity(
             self._all_categories,
             self._get_item_idx_categories,
@@ -229,7 +237,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         top_k_list = np.zeros(shape=(k, ), dtype=np.int32)
 
         # Hold marginal gain for each item, objective pair
-        mgains = np.zeros(shape=(2, self._all_items.size if n_items_subset is None else n_items_subset), dtype=np.float32)
+        mgains = np.zeros(shape=(2, n_items_subset), dtype=np.float32)
 
         # Sort relevances
         # Filter_out_items are already propageted into rel_scores (have lowest score)
@@ -295,7 +303,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
 
     def mask_scores(self, scores, seen_items_mask):
-        NEG_INF = int(-10e6)
+        
         # Ensure seen items get lowest score of 0
         # Just multiplying by zero does not work when scores are not normalized to be always positive
         # because masked-out items will not have smallest score (some valid, non-masked ones can be negative)
@@ -305,8 +313,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         # Here we do not mandate NEG_INF to be strictly smaller
         # because rel_scores may already contain some NEG_INF that was set by predict_with_score
         # called previously -> so we allow <=.
-        assert NEG_INF <= min_score, f"min_score ({min_score}) is not smaller than NEG_INF ({NEG_INF})"
-        scores = scores * seen_items_mask + NEG_INF * (1 - seen_items_mask)
+        scores = scores * seen_items_mask + self.NEG_INF * (1 - seen_items_mask)
         return scores
 
 
