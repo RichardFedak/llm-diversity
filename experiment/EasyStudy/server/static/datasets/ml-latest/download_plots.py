@@ -64,7 +64,7 @@ with open(movies_csv, newline='', encoding="utf-8") as infile, \
         try:
             movie = ia.get_movie(imdb_id)
             raw_plot = movie.get('plot', [''])[0]
-            clean_plot = raw_plot.split("::")[0]
+            clean_plot = raw_plot.split("::")[0]                    # https://imdbpy.readthedocs.io/en/stable/usage/data-interface.html
             row["plot"] = clean_plot
             print(f"Plot added: {row['title']}")
             print(f"{curr}/{total} - {(curr/total)*100:.2f}%")
