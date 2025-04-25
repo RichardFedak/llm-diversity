@@ -1,21 +1,70 @@
 {% include 'header.html' %}
 <div id="app">
   <b-container fluid>
-    <b-jumbotron header="Diversity Perception">
-      <p>TODO...</p>
+    <b-jumbotron lead="TODO... Rate the diversity of the movie pairs" class="smallJumbotron" header="Diversity perception">
+      Rate the movie's diversity by selecting one number. 1 means minimal or no diversity, while 5 signifies high diversity.
     </b-jumbotron>
 
-    <b-row align-h="center">
-      <b-col cols="4">
-        <b-form method="GET" action="{{ continuation_url }}">
-          {% for key, value in request_args.items() %}
-            <input type="hidden" name="{{ key }}" value="{{ value }}">
-          {% endfor %}
-          <b-button type="submit" block variant="primary">Continue</b-button>
-        </b-form>
+    <!-- Loop through all movie pairs -->
+    <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4">
+      <b-row align-h="center">
+        <b-col cols="auto" v-for="(col, index) in pair" :key="col.movie.idx">
+          <b-img
+            :src="col.movie.url"
+            :alt="col.movieName"
+            :id="col.movie.idx"
+            width="175"
+            fluid
+            center
+            class="mb-3"
+            v-b-tooltip.hover
+            :title="col.movieName"
+          ></b-img>
+        </b-col>
+      </b-row>
+
+      <b-row align-h="center" class="mb-3">
+        <b-col cols="auto">
+          <b-form-group
+            label="How diverse are these movies?"
+            :label-for="'radio-rating-' + pairIndex"
+            label-align="center"
+          >
+            <b-form-radio-group
+              :id="'radio-rating-' + pairIndex"
+              :name="'rating_' + pairIndex"
+              v-model="ratings[pairIndex]"
+              :state="ratings[pairIndex] !== null"
+              buttons
+              button-variant="outline-primary"
+            >
+              <b-form-radio :value="1">1 - No diversity</b-form-radio>
+              <b-form-radio :value="2">2</b-form-radio>
+              <b-form-radio :value="3">3 - Moderate</b-form-radio>
+              <b-form-radio :value="4">4</b-form-radio>
+              <b-form-radio :value="5">5 - High diversity</b-form-radio>
+            </b-form-radio-group>
+          </b-form-group>
+        </b-col>
+      </b-row>
+
+      <hr>
+    </div>
+
+    <b-row align-h="center" class="mt-4">
+      <b-col cols="3">
+        <b-btn :disabled="!isFormValid" variant="primary" block @click="submit">Submit</b-btn>
       </b-col>
     </b-row>
   </b-container>
 </div>
-{{ emit_assets('fastcompare','diversity_perception.js') }}   
+
+<script>
+var initial_data_url = "{{ initial_data_url }}";
+var continuation_url = "{{ continuation_url }}";
+var csrfToken = "{{ csrf_token() }}";
+</script>
+
+{{ emit_assets('fastcompare','diversity_perception.js') }} 
+
 {% include 'footer.html' %}
