@@ -185,7 +185,6 @@ def get_initial_data():
 
     for i in range(len(x)):
         input_name = f"{config['selected_data_loader']}_{x[i]['movie_id']}"
-        print(x[i])
         x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + \
         "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + " " + \
         x[i]["plot"]
@@ -194,7 +193,39 @@ def get_initial_data():
     session["elicitation_movies"] = el_movies
 
     # TODO to do lazy loading, return just X and update rows & items in JS directly
+    print(el_movies)
     return jsonify(el_movies)
+
+@bp.route("/get-diversity-data", methods=["GET"])
+def get_diversity_data():
+    config = load_user_study_config(session["user_study_id"])
+    
+    loader_factory = load_data_loaders()[config["selected_data_loader"]]
+    loader = loader_factory(**filter_params(config["data_loader_parameters"], loader_factory))
+    load_data_loader(loader, session["user_study_guid"], loader_factory.name())
+
+    # Same genres
+    # 290573,The Creator (2023)
+    # 95875,Total Recall (2012)
+    top_k_ids = [290573, 95875]
+
+    top_k_description = [loader.items_df_indexed.loc[movie_id].title for movie_id in top_k_ids]
+    top_k_genres = [loader.items_df_indexed.loc[movie_id].genres.split("|") for movie_id in top_k_ids]
+    top_k_genres = [x if x != ["(no genres listed)"] else [] for x in top_k_genres]
+    top_k_url = [loader.get_item_id_image_url(movie_idx) for movie_idx in top_k_ids]
+    top_k_plot = [loader.items_df_indexed.loc[movie_id]["plot"] for movie_id in top_k_ids]
+
+    data = [{"movie": movie, "url": url, "movie_id": movie_id, "genres": genres, "plot": plot} for movie, url, movie_id, genres, plot in zip(top_k_description, top_k_url, top_k_ids, top_k_genres, top_k_plot)]
+
+    tr = get_tr(languages, get_lang())
+
+    for i in range(len(data)):
+        input_name = f"{config['selected_data_loader']}_{data[i]['movie_id']}"
+        data[i]["movie"] = tr(input_name, data[i]['movie']) + " " + \
+        "|".join([tr(f"genre_{y.lower()}") for y in data[i]["genres"]]) + " " + \
+        data[i]["plot"]
+
+    return data
 
 # Public facing endpoint
 @bp.route("/join", methods=["GET"])
@@ -207,22 +238,42 @@ def join():
 @bp.route("/on-joined", methods=["GET", "POST"])
 def on_joined():
     return redirect(url_for(
+            f"{__plugin_name__}.diversity_perception",
+            continuation_url=url_for(f"{__plugin_name__}.send_diversity_feedback"),
+            consuming_plugin=__plugin_name__,
+            diversity_data_url=url_for(f"{__plugin_name__}.get_diversity_data")
+        ))
+
+@bp.route("/diversity-perception", methods=["GET"])
+def diversity_perception():
+    continuation_url = request.args.get("continuation_url")
+    diversity_data_url = request.args.get("diversity_data_url")
+
+    return render_template(
+        "diversity_perception.html",
+        continuation_url=continuation_url,
+        initial_data_url=diversity_data_url
+    )
+
+@bp.route("/send-diversity-feedback", methods=["POST"])
+def send_diversity_feedback():
+    data = {}
+    for key in request.form:
+        if key.startswith("rating_"):
+            pair_index = key.split("_")[1]
+            rating_value = request.form.get(key)
+            data[pair_index] = rating_value
+
+    log_interaction(session["participation_id"], "diversity-perception-ended", **data)
+
+    return redirect(url_for(
         "utils.preference_elicitation",
-        continuation_url=url_for(f"{__plugin_name__}.diversity_perception"),
+        continuation_url=url_for(f"{__plugin_name__}.send_elicitation_feedback"),
         consuming_plugin=__plugin_name__,
         initial_data_url=url_for(f"{__plugin_name__}.get_initial_data"),
         search_item_url=url_for(f'{__plugin_name__}.item_search')
     ))
 
-
-@bp.route("/diversity-perception", methods=["GET"])
-def diversity_perception():
-    print("WOO")
-    return render_template(
-        "diversity_perception.html",
-        continuation_url=url_for(f"{__plugin_name__}.send_feedback"),
-        request_args=request.args
-    )
 
 def search_for_item(pattern, tr=None):
     conf = load_user_study_config(session["user_study_id"])
@@ -277,8 +328,8 @@ def prepare_recommendations(loader, conf, recommendations, selected_movies, filt
     return recommendations
 
 # Receives arbitrary feedback (CALLED from preference elicitation) and generates recommendation
-@bp.route("/send-feedback", methods=["GET"])
-def send_feedback():
+@bp.route("/send-elicitation-feedback", methods=["GET"])
+def send_elicitation_feedback():
     # We read k from configuration of the particular user study
     conf = load_user_study_config(session["user_study_id"])
     k = conf["k"]
