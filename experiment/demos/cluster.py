@@ -1,156 +1,123 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer('all-MiniLM-L6-v2') 
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 movies = [
-    {"title": "Iron Man", "genres": ["Action", "Adventure", "Sci-Fi"], 
+    {"title": "Iron Man", "genres": ["Action", "Adventure", "Sci-Fi"],
         "plot": "A wealthy industrialist is kidnapped and builds a high-tech suit of armor to escape."},
-    
-    {"title": "Captain America: The First Avenger", "genres": ["Action", "Adventure", "Sci-Fi"], 
+    {"title": "Captain America: The First Avenger", "genres": ["Action", "Adventure", "Sci-Fi"],
         "plot": "A scrawny but determined man becomes a super soldier during World War II."},
-    
-    {"title": "Thor", "genres": ["Action", "Adventure", "Fantasy"], 
+    {"title": "Thor", "genres": ["Action", "Adventure", "Fantasy"],
         "plot": "A powerful god is banished to Earth and must learn humility to reclaim his throne."},
-    
-    {"title": "Dunkirk", "genres": ["Action", "Drama", "War"], 
+    {"title": "Dunkirk", "genres": ["Action", "Drama", "War"],
         "plot": "Allied soldiers from Belgium, the British Empire, and France are surrounded by the German army and evacuated during a fierce battle in World War II."},
-    
-    {"title": "Mad Max: Fury Road", "genres": ["Action", "Adventure", "Sci-Fi"], 
+    {"title": "Mad Max: Fury Road", "genres": ["Action", "Adventure", "Sci-Fi"],
         "plot": "In a post-apocalyptic wasteland, a man teams up with a woman to escape a tyrannical warlord."},
-    
-    {"title": "The Dark Knight", "genres": ["Action", "Crime", "Drama"], 
+    {"title": "The Dark Knight", "genres": ["Action", "Crime", "Drama"],
         "plot": "Batman faces off against the Joker, a criminal mastermind who wants to create chaos in Gotham City."},
-
-    {"title": "Saving Private Ryan", "genres": ["Drama", "War"], 
+    {"title": "Saving Private Ryan", "genres": ["Drama", "War"],
         "plot": "A group of soldiers is sent to find and bring home a paratrooper whose brothers have been killed in action."},
-    
-    {"title": "The Shawshank Redemption", "genres": ["Drama"], 
+    {"title": "The Shawshank Redemption", "genres": ["Drama"],
         "plot": "Two imprisoned men bond over the years, finding solace and eventual redemption through acts of common decency."},
-    
-    {"title": "Forrest Gump", "genres": ["Drama", "Romance"], 
+    {"title": "Forrest Gump", "genres": ["Drama", "Romance"],
         "plot": "The presidencies of Kennedy and Johnson, the events of Vietnam, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an extraordinary life."},
-    
-    {"title": "A Beautiful Mind", "genres": ["Drama", "Biography"], 
+    {"title": "A Beautiful Mind", "genres": ["Drama", "Biography"],
         "plot": "A brilliant but asocial mathematician struggles with mental illness while developing a revolutionary theory."},
-    
-    {"title": "The Pursuit of Happyness", "genres": ["Drama", "Biography"], 
+    {"title": "The Pursuit of Happyness", "genres": ["Drama", "Biography"],
         "plot": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career."},
-    
-    {"title": "The Hangover", "genres": ["Comedy", "Adventure"], 
+    {"title": "The Hangover", "genres": ["Comedy", "Adventure"],
         "plot": "Three friends wake up from a bachelor party in Las Vegas, with no memory of the previous night and the groom missing."},
-    
-    {"title": "Superbad", "genres": ["Comedy", "Teen"], 
+    {"title": "Superbad", "genres": ["Comedy", "Teen"],
         "plot": "Two high school friends try to enjoy their final days before graduation while dealing with their own issues of friendship and love."},
-    
-    {"title": "The Grand Budapest Hotel", "genres": ["Comedy", "Drama", "Crime"], 
+    {"title": "The Grand Budapest Hotel", "genres": ["Comedy", "Drama", "Crime"],
         "plot": "A hotel concierge and his protégé become involved in a series of misadventures involving a stolen painting and a family fortune."},
-    
-    {"title": "Dumb and Dumber", "genres": ["Comedy", "Adventure"], 
+    {"title": "Dumb and Dumber", "genres": ["Comedy", "Adventure"],
         "plot": "The cross-country adventures of two well-meaning but dimwitted friends who try to return a lost suitcase to its rightful owner."},
-    
-    {"title": "Ferris Bueller's Day Off", "genres": ["Comedy", "Teen"], 
+    {"title": "Ferris Bueller's Day Off", "genres": ["Comedy", "Teen"],
         "plot": "A high school student skips school for a day of fun in Chicago, all while avoiding his principal and his sister."},
-    
-    {"title": "Anchorman: The Legend of Ron Burgundy", "genres": ["Comedy"], 
-        "plot": "The absurd antics of an anchorman in a 1970s San Diego newsroom and his battle for dominance in the competitive world of broadcast journalism."}        
+    {"title": "Anchorman: The Legend of Ron Burgundy", "genres": ["Comedy"],
+        "plot": "The absurd antics of an anchorman in a 1970s San Diego newsroom and his battle for dominance in the competitive world of broadcast journalism."}
 ]
-
-title_embedding = model.encode([movie['title'] for movie in movies])
-genre_embedding = model.encode([', '.join(movie['genres']) for movie in movies])
-
-weighted_genre_embeddings = [genre * 2 for genre in genre_embedding] 
-
-embeddings = title_embedding + weighted_genre_embeddings
-
-inertia = []
-for k in range(1, 12):
-    kmeans = KMeans(n_clusters=k, random_state=42)
-    kmeans.fit(embeddings)
-    inertia.append(kmeans.inertia_)
-
-print("Inertia values for K = 1 to 5:", inertia)
-
-k = 3 
-
-kmeans = KMeans(n_clusters=k, random_state=42)
-kmeans.fit(embeddings)
-cluster_labels = kmeans.labels_
-
-print("\nCluster assignments for each movie:")
-for i, movie in enumerate(movies):
-    print(f"{movie['title']} - Cluster {cluster_labels[i]}")
 
 close_movie = {
     "title": "Avengers: Endgame",
     "genres": ["Action", "Adventure", "Sci-Fi"],
     "plot": "The Avengers work to undo the damage caused by Thanos."
 }
-
 far_movie = {
     "title": "Finding Nemo",
     "genres": ["Animation", "Adventure", "Comedy", "Family"],
     "plot": "A clownfish embarks on a dangerous journey to find his son, who was captured by a diver and placed in a fish tank."
 }
 
-title_embedding = model.encode([close_movie['title']])
-genre_embedding = model.encode([', '.join(close_movie['genres'])])
-plot_embedding = model.encode([close_movie['plot']])
 
-weighted_genre_embeddings = [genre * 2 for genre in genre_embedding] 
+def cluster_and_visualize(genre_weight=1.0, plot_weight=1.0, k=3):
+    title_emb = model.encode([movie['title'] for movie in movies])
+    genre_emb = model.encode([', '.join(movie['genres']) for movie in movies])
+    plot_emb = model.encode([movie['plot'] for movie in movies])
 
-close_embedding = title_embedding + weighted_genre_embeddings + plot_embedding
+    weighted_genre_emb = [g * genre_weight for g in genre_emb]
+    weighted_plot_emb = [p * plot_weight for p in plot_emb]
 
-title_embedding = model.encode([far_movie['title']])
-genre_embedding = model.encode([', '.join(far_movie['genres'])])
-plot_embedding = model.encode([far_movie['plot']])
+    embeddings = title_emb + weighted_genre_emb + weighted_plot_emb
 
-weighted_genre_embeddings = [genre * 2 for genre in genre_embedding] 
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    cluster_labels = kmeans.fit_predict(embeddings)
 
-far_embedding = title_embedding + weighted_genre_embeddings + plot_embedding
+    pca = PCA(n_components=2)
+    reduced_embeddings = pca.fit_transform(embeddings)
 
-cluster_centroids = kmeans.cluster_centers_
+    centroids_reduced = pca.transform(kmeans.cluster_centers_)
 
-close_similarities = cosine_similarity(close_embedding, cluster_centroids)
-far_similarities = cosine_similarity(far_embedding, cluster_centroids)
 
-print("\nCosine similarity of 'Avengers: Endgame' (close movie) to each cluster centroid:")
-print(close_similarities)
+    def embed_movie(movie):
+        title_emb = model.encode([movie['title']])
+        genre_emb = model.encode([', '.join(movie['genres'])]) * genre_weight
+        plot_emb = model.encode([movie['plot']]) * plot_weight
+        return title_emb + genre_emb + plot_emb
 
-print("\nCosine similarity of 'Finding Nemo' (far movie) to each cluster centroid:")
-print(far_similarities)
+    close_emb = embed_movie(close_movie)
+    far_emb = embed_movie(far_movie)
 
-close_cluster = np.argmax(close_similarities)
+    close_similarities = cosine_similarity(close_emb, kmeans.cluster_centers_)
+    far_similarities = cosine_similarity(far_emb, kmeans.cluster_centers_)
 
-far_cluster = np.argmax(far_similarities)
+    close_cluster = np.argmax(close_similarities)
+    far_cluster = np.argmax(far_similarities)
 
-print(f"\n'Avengers: Endgame' is closest to Cluster {close_cluster}")
-print(f"'Finding Nemo' is closest to Cluster {far_cluster}")
+    plt.scatter(reduced_embeddings[:, 0], reduced_embeddings[:, 1], c=cluster_labels, cmap='viridis', s=50)
+    plt.scatter(centroids_reduced[:, 0], centroids_reduced[:, 1], marker='x', s=200, c='red', label='Centroids')
 
-pca = PCA(n_components=2)
-reduced_embeddings = pca.fit_transform(embeddings)
+    close_movie_reduced = pca.transform(close_emb)
+    far_movie_reduced = pca.transform(far_emb)
 
-plt.figure(figsize=(8, 6))
-plt.scatter(reduced_embeddings[:, 0], reduced_embeddings[:, 1], c=cluster_labels, cmap='viridis', s=50)
+    plt.scatter(close_movie_reduced[:, 0], close_movie_reduced[:, 1], c='blue', marker='o', s=100, label=f"Close Movie (Cluster {close_cluster})")
+    plt.scatter(far_movie_reduced[:, 0], far_movie_reduced[:, 1], c='orange', marker='o', s=100, label=f"Far Movie (Cluster {far_cluster})")
 
-centroids_reduced = pca.transform(kmeans.cluster_centers_)
-plt.scatter(centroids_reduced[:, 0], centroids_reduced[:, 1], marker='x', s=200, c='red', label='Centroids')
+    plt.title(f"Genre Weight: {genre_weight}, Plot Weight: {plot_weight}")
+    plt.xlabel('PCA Component 1')
+    plt.ylabel('PCA Component 2')
+    plt.legend(fontsize='small')
 
-close_movie_reduced = pca.transform(close_embedding)
-far_movie_reduced = pca.transform(far_embedding)
+plt.figure(figsize=(18, 12))
 
-plt.scatter(close_movie_reduced[:, 0], close_movie_reduced[:, 1], c='blue', marker='o', s=100, label='Close Movie (Avengers: Endgame)')
-plt.scatter(far_movie_reduced[:, 0], far_movie_reduced[:, 1], c='orange', marker='o', s=100, label='Far Movie (Finding Nemo)')
+weight_settings = [
+    (0.8, 0.8),
+    (1.0, 1.0),
+    (1.2, 1.2),
+    (1.0, 1.2),
+    (1.2, 1.0),
+    (1.5, 1.5)
+]
 
-plt.title('2D Visualization of Movie Clusters')
-plt.xlabel('PCA Component 1')
-plt.ylabel('PCA Component 2')
+for i, (gw, pw) in enumerate(weight_settings):
+    plt.subplot(2, 3, i + 1)
+    cluster_and_visualize(genre_weight=gw, plot_weight=pw)
 
-plt.legend()
-
+plt.tight_layout()
 plt.show()
