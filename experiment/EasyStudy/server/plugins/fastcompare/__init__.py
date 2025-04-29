@@ -204,18 +204,35 @@ def get_diversity_data():
     loader = loader_factory(**filter_params(config["data_loader_parameters"], loader_factory))
     load_data_loader(loader, session["user_study_guid"], loader_factory.name())
 
-    # Same genres
+    # No diversity
+    # 5816,Harry Potter and the Chamber of Secrets (2002)
+    # 8368,Harry Potter and the Prisoner of Azkaban (2004)
+    no_div = [5816, 8368]
+
+    # No diversity genres, diff plot
     # 290573,The Creator (2023)
     # 95875,Total Recall (2012)
-    top_k_ids = [290573, 95875]
+    no_div_genres = [290573, 95875]
 
-    top_k_description = [loader.items_df_indexed.loc[movie_id].title for movie_id in top_k_ids]
-    top_k_genres = [loader.items_df_indexed.loc[movie_id].genres.split("|") for movie_id in top_k_ids]
-    top_k_genres = [x if x != ["(no genres listed)"] else [] for x in top_k_genres]
-    top_k_url = [loader.get_item_id_image_url(movie_idx) for movie_idx in top_k_ids]
-    top_k_plot = [loader.items_df_indexed.loc[movie_id]["plot"] for movie_id in top_k_ids]
+    # Similar plot, diff genres
+    # 226202,Free Guy (2020)
+    # 85414,Source Code (2011)
+    no_div_plot = [226202, 85414]
 
-    data = [{"movie": movie, "url": url, "movie_id": movie_id, "genres": genres, "plot": plot} for movie, url, movie_id, genres, plot in zip(top_k_description, top_k_url, top_k_ids, top_k_genres, top_k_plot)]
+    # Diff all
+    # 203222,The Lion King (2019)
+    # 296,Pulp Fiction (1994)
+    div_all = [203222, 296]
+
+    movie_ids = no_div + no_div_genres + no_div_plot + div_all
+
+    movies_description = [loader.items_df_indexed.loc[movie_id].title for movie_id in movie_ids]
+    movies_genres = [loader.items_df_indexed.loc[movie_id].genres.split("|") for movie_id in movie_ids]
+    movies_genres = [x if x != ["(no genres listed)"] else [] for x in movies_genres]
+    movies_url = [loader.get_item_id_image_url(movie_idx) for movie_idx in movie_ids]
+    movies_plot = [loader.items_df_indexed.loc[movie_id]["plot"] for movie_id in movie_ids]
+
+    data = [{"movie": movie, "url": url, "movie_id": movie_id, "genres": genres, "plot": plot} for movie, url, movie_id, genres, plot in zip(movies_description, movies_url, movie_ids, movies_genres, movies_plot)]
 
     tr = get_tr(languages, get_lang())
 
@@ -265,6 +282,8 @@ def send_diversity_feedback():
             data[pair_index] = rating_value
 
     log_interaction(session["participation_id"], "diversity-perception-ended", **data)
+
+    session["diversity_perception"] = data
 
     return redirect(url_for(
         "utils.preference_elicitation",

@@ -5,7 +5,6 @@
       Rate the movie's diversity by selecting one number. 1 means minimal or no diversity, while 5 signifies high diversity.
     </b-jumbotron>
 
-    <!-- Loop through all movie pairs -->
     <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4">
       <b-row align-h="center">
         <b-col cols="auto" v-for="(col, index) in pair" :key="col.movie.idx">

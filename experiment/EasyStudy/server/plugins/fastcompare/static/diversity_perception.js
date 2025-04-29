@@ -25,14 +25,20 @@ window.app = new Vue({
     async mounted() {
       const url = `${initial_data_url}?impl=${this.impl}`;
       const rawData = await fetch(url).then(resp => resp.json());
-      const prepared = rawData.slice(0, 2).map(item => ({
+      const prepared = rawData.map(item => ({
         movieName: item.movie,
         movie: {
           idx: item.movie_idx,
           url: item.url
         }
       }));
-      this.pairs = [prepared, prepared, prepared];
+      const pairs = [];
+      for (let i = 0; i < prepared.length; i += 2) {
+        const pair = [prepared[i], prepared[i + 1]];
+        pairs.push(pair);
+      }
+
+      this.pairs = pairs;
       this.ratings = new Array(this.pairs.length).fill(null);
     },
     methods: {
