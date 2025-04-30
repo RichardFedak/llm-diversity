@@ -377,7 +377,7 @@ def send_elicitation_feedback():
 
     
     # Initialize session data
-    print(f"SEtting session movies with: {recommendations}")
+    # print(f"SEtting session movies with: {recommendations}")
     session["movies"] = recommendations
     session["iteration"] = 1
     session["elicitation_selected_movies"] = selected_movies
