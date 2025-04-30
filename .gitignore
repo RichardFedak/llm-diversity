@@ -5,3 +5,4 @@ paper_data/
 papers/
 __pycache__
 **/*.json
+*.npy
