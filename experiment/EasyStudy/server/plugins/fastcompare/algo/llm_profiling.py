@@ -1,6 +1,7 @@
 from abc import ABC
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from sentence_transformers import SentenceTransformer
 
 from plugins.fastcompare.algo.algorithm_base import (
     AlgorithmBase,
@@ -14,6 +15,8 @@ class LLMProfiling(AlgorithmBase, ABC):
         self._loader = loader
         self._all_items = self._ratings_df.item.unique()
 
+        self.model = SentenceTransformer('all-MiniLM-L6-v2')
+
     def fit(self):
         pass
 
@@ -21,32 +24,36 @@ class LLMProfiling(AlgorithmBase, ABC):
     def predict(self, selected_items, filter_out_items, k):
         from flask import session
         print(session["diversity_perception"])
-        print(self._loader.embeddings_df.iloc[0])
-        print(self._loader.ratings_df.iloc[0])
-        print(self._loader.embeddings_df.movieId.dtype)
-        print(self._loader.embeddings_df.shape)
+        print("Selected", selected_items)
+        print("Filter out", filter_out_items)
 
         self._loader.embeddings_df['movieId'] = self._loader.embeddings_df['movieId'].astype(int)
 
-        ref_row = self._loader.embeddings_df.iloc[0]
-        ref_id = ref_row['movieId']
-        ref_embedding = ref_row.drop('movieId').values.reshape(1, -1)
+        movie = self._loader.items_df.iloc[selected_items[0]]
+        print(movie)
 
-        ref_row = self._loader.embeddings_df.iloc[0]
-        ref_id = ref_row['movieId']
-        ref_embedding = ref_row.drop('movieId').values.reshape(1, -1)
+        input_text = "Genres: "+ ", ".join(movie['genres']) + "\nPlot:" + movie['plot']
+        embedding = self.model.encode([input_text])[0]
+        embedding = embedding.reshape(1, -1)
 
-        mask = ~self._loader.embeddings_df['movieId'].isin(filter_out_items + [ref_id])
+        mask = ~self._loader.embeddings_df.index.isin(filter_out_items)
+        original_indices = self._loader.embeddings_df[mask].index
         filtered_df = self._loader.embeddings_df[mask]
-        filtered_indices = filtered_df.index  # Original row indices
+        filtered_df.reset_index(drop=True, inplace=True)
 
         emb_matrix = filtered_df.drop(columns=['movieId']).values
 
-        similarities = cosine_similarity(ref_embedding, emb_matrix)[0]
+        similarities = cosine_similarity(embedding, emb_matrix)[0]
 
-        top_k_indices = [filtered_indices[i] for i in np.argsort(similarities)[::-1][:k]]
+        top_k_sim = np.argsort(similarities)[::-1][:k]
 
-        result = [int(i) for i in top_k_indices]
+        print(top_k_sim)
+
+        top_k_original_indices = original_indices[top_k_sim].values
+
+        result = [int(i) for i in top_k_original_indices]
+
+        print("Final items (original indices):", result)
 
         return result
 
