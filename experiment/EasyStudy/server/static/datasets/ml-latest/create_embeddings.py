@@ -1,13 +1,15 @@
 import os
 import csv
+import numpy as np
+import pandas as pd
 from sentence_transformers import SentenceTransformer
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 img_folder = "img"
 movies_csv = "movies.csv"
-temp_csv = "movies_temp.csv"
 links_csv = "links.csv"
+embedding_file = "embeddings.npy"
 
 movie_ids_in_img = {os.path.splitext(f)[0] for f in os.listdir(img_folder) if f.endswith(".jpg")}
 
@@ -18,54 +20,40 @@ with open(links_csv, newline='', encoding="utf-8") as csvfile:
         if mid in movie_ids_in_img:
             movie_to_imdb[mid] = str(row["imdbId"]).zfill(7)
 
-processed_ids = set()
-if os.path.exists(temp_csv):
-    with open(temp_csv, newline='', encoding="utf-8") as temp_file:
-        temp_reader = csv.DictReader(temp_file)
-        for row in temp_reader:
-            processed_ids.add(row["movieId"])
+if os.path.exists(embedding_file):
+    embedding_dict = np.load(embedding_file, allow_pickle=True).item()
+else:
+    embedding_dict = {}
 
-with open(movies_csv, newline='', encoding="utf-8") as infile, \
-     open(temp_csv, mode='a', newline='', encoding="utf-8") as outfile:
-
+with open(movies_csv, newline='', encoding="utf-8") as infile:
     reader = csv.DictReader(infile)
-    fieldnames = reader.fieldnames.copy()
-    if "embedding" not in fieldnames:
-        fieldnames.append("embedding")
-
-    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
-
-    if os.stat(temp_csv).st_size == 0:
-        writer.writeheader()
-
     total = 87586
     curr = 0
 
     for row in reader:
         movie_id = row["movieId"]
-        
-        if movie_id in processed_ids:
-            curr += 1
-            continue
-
         curr += 1
-        imdb_id = movie_to_imdb.get(movie_id)
-        embedding = row.get("embedding", "").strip()
 
-        if embedding:
-            writer.writerow(row)
+        if movie_id in embedding_dict:
             continue
 
-        if not imdb_id:
-            row["embedding"] = "X"
-            writer.writerow(row)
+        if movie_id not in movie_to_imdb:
             continue
 
         try:
-            row["embedding"] = model.encode([', '.join(row['genres']) + row['plot']])
-            print(f"Embedding created: {row['title']}")
-            print(f"{curr}/{total} - {(curr/total)*100:.2f}%")
+            input_text = "Genres: "+ ", ".join(row['genres']) + "\nPlot:" + row['plot']
+            embedding = model.encode([input_text])[0]
+            embedding_dict[movie_id] = embedding
+            print(f"{curr}/{total} - Embedded: {row['title']}")
         except Exception as e:
             print(f"Failed for {row['title']}: {e}")
 
-        writer.writerow(row)
+np.save(embedding_file, embedding_dict)
+print(f"\nDone! Saved {len(embedding_dict)} embeddings to {embedding_file}")
+
+embedding_dict = np.load(embedding_file, allow_pickle=True).item()
+
+embedding_df = pd.DataFrame.from_dict(embedding_dict, orient='index')
+embedding_df.index.name = 'movieId'
+embedding_df.reset_index(inplace=True)
+print(embedding_df.shape)
