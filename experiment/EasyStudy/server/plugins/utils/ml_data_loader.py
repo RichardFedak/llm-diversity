@@ -69,9 +69,7 @@ class RatedMovieFilter:
 
         # Filter also their embeddings
         loader.embeddings_df = loader.embeddings_df[loader.embeddings_df.movieId.isin(rated_movie_ids)]
-        print(loader.embeddings_df.iloc[0])
         loader.embeddings_df = loader.embeddings_df.reset_index(drop=True)
-        print(loader.embeddings_df.iloc[0])
 
 # Filters out all ratings of movies that do not have enough ratings per year
 class RatingsPerYearFilter:
@@ -306,8 +304,6 @@ class MLDataLoader:
         self.embeddings_df = pd.DataFrame.from_dict(np.load(self.embeddings_path, allow_pickle=True).item(), orient='index')
         self.embeddings_df.index.name = 'movieId'
         self.embeddings_df.reset_index(inplace=True)
-        print("\nASASAS\n")
-        print(self.embeddings_df.iloc[0])
         self.embeddings_df['movieId'] = self.embeddings_df['movieId'].astype(int)
 
         # Load links
