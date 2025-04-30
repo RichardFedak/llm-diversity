@@ -301,10 +301,13 @@ class MLDataLoader:
         self.movies_df = pd.read_csv(self.movies_path)
 
         # Load embeddings
-        self.embeddings_df = pd.DataFrame.from_dict(np.load(self.embeddings_path, allow_pickle=True).item(), orient='index')
-        self.embeddings_df.index.name = 'movieId'
-        self.embeddings_df.reset_index(inplace=True)
-        self.embeddings_df['movieId'] = self.embeddings_df['movieId'].astype(int)
+        embeddings_dict = np.load(self.embeddings_path, allow_pickle=True).item()
+
+        self.embeddings_df = pd.DataFrame([
+            {'movieId': int(movie_id), **{f'{i}': emb[i] for i in range(len(emb))}}
+            for movie_id, emb in embeddings_dict.items()
+        ])
+        self.embeddings_df.reset_index(drop=True, inplace=True)
 
         # Load links
         self.links_df = pd.read_csv(self.links_path, index_col=0)
