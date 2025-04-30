@@ -61,9 +61,17 @@ class RatingTagFilter:
 
 class RatedMovieFilter:
     def __call__(self, loader):
-        # We are only interested in movies for which we hav
-        loader.movies_df = loader.movies_df[loader.movies_df.movieId.isin(loader.ratings_df.movieId.unique())]
+        # We are only interested in movies for which we have ratings
+        rated_movie_ids = loader.ratings_df.movieId.unique()
+
+        loader.movies_df = loader.movies_df[loader.movies_df.movieId.isin(rated_movie_ids)]
         loader.movies_df = loader.movies_df.reset_index(drop=True)
+
+        # Filter also their embeddings
+        loader.embeddings_df = loader.embeddings_df[loader.embeddings_df.movieId.isin(rated_movie_ids)]
+        print(loader.embeddings_df.iloc[0])
+        loader.embeddings_df = loader.embeddings_df.reset_index(drop=True)
+        print(loader.embeddings_df.iloc[0])
 
 # Filters out all ratings of movies that do not have enough ratings per year
 class RatingsPerYearFilter:
@@ -139,11 +147,12 @@ class LinkFilter:
         loader.links_df = loader.links_df[loader.links_df.index.isin((loader.movies_df.movieId))]
 
 class MLDataLoader:
-    def __init__(self, ratings_path, movies_path, tags_path, links_path,
+    def __init__(self, ratings_path, movies_path, embeddings_path, tags_path, links_path,
         filters = None, rating_matrix_path = None, img_dir_path = None):
 
         self.ratings_path = ratings_path
         self.movies_path = movies_path
+        self.embeddings_path = embeddings_path
         self.tags_path = tags_path
         self.filters = filters
         self.links_path = links_path
@@ -152,6 +161,7 @@ class MLDataLoader:
         self.ratings_df = None
         self.movies_df = None
         self.movies_df_indexed = None
+        self.embeddings_df = None
         self.tags_df = None
         self.links_df = None
         self.rating_matrix = None
@@ -291,6 +301,14 @@ class MLDataLoader:
 
         # Load movies
         self.movies_df = pd.read_csv(self.movies_path)
+
+        # Load embeddings
+        self.embeddings_df = pd.DataFrame.from_dict(np.load(self.embeddings_path, allow_pickle=True).item(), orient='index')
+        self.embeddings_df.index.name = 'movieId'
+        self.embeddings_df.reset_index(inplace=True)
+        print("\nASASAS\n")
+        print(self.embeddings_df.iloc[0])
+        self.embeddings_df['movieId'] = self.embeddings_df['movieId'].astype(int)
 
         # Load links
         self.links_df = pd.read_csv(self.links_path, index_col=0)
