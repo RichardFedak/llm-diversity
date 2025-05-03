@@ -9,46 +9,53 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 movies = [
 
-    {"title": "Iron Man", "genres": ["Action", "Adventure", "Sci-Fi"],
-        "plot": "A wealthy industrialist is kidnapped and builds a high-tech suit to escape."},
-    {"title": "Edge of Tomorrow", "genres": ["Action", "Adventure", "Sci-Fi"],
-        "plot": "A soldier caught in a time loop relives the same brutal battle against aliens."},
-    {"title": "Pacific Rim", "genres": ["Action", "Adventure", "Sci-Fi"],
-        "plot": "Giant robots piloted by humans fight massive sea monsters to save the world."},
-    {"title": "Ready Player One", "genres": ["Action", "Adventure", "Sci-Fi"],
-        "plot": "A teenager enters a virtual reality world to compete in a game that will decide the future of the OASIS."},
-    
+    {"title": "The Dark Knight", "genres": ["Action", "Crime", "Drama"],
+     "plot": "Batman faces off against the Joker, a criminal mastermind who wants to plunge Gotham into chaos."},
 
+    {"title": "Forrest Gump", "genres": ["Drama", "Romance"],
+     "plot": "The life journey of a kind-hearted man intersects with major historical events through decades of U.S. history."},
 
-    {"title": "Saving Private Ryan", "genres": ["Drama", "War"],
-        "plot": "A group of soldiers is sent to rescue a paratrooper behind enemy lines during WWII."},
+    {"title": "The Matrix", "genres": ["Action", "Sci-Fi"],
+     "plot": "A computer hacker discovers reality is a simulation and joins a rebellion against its controllers."},
+
+    {"title": "Inception", "genres": ["Action", "Adventure", "Sci-Fi"],
+     "plot": "A thief who infiltrates dreams is hired for a risky mission to plant an idea into a person's subconscious."},
+
     {"title": "Finding Nemo", "genres": ["Animation", "Adventure", "Comedy", "Family"],
-        "plot": "A clownfish crosses the ocean to find his kidnapped son."},
-    {"title": "Taken", "genres": ["Action", "Thriller"],
-        "plot": "A retired CIA agent uses his skills to rescue his daughter from kidnappers."},
-    {"title": "The Searchers", "genres": ["Western", "Adventure", "Drama"],
-        "plot": "A Civil War veteran spends years searching for his abducted niece."},
-    
+     "plot": "A timid clownfish travels across the ocean to rescue his captured son."},
+
+    {"title": "The Lion King", "genres": ["Animation", "Adventure", "Drama", "Family"],
+     "plot": "A young lion prince flees his kingdom after tragedy and learns to embrace his destiny."},
+
+    {"title": "Titanic", "genres": ["Drama", "Romance"],
+     "plot": "A young couple from different social classes fall in love aboard the doomed RMS Titanic."},
+
+    {"title": "The Silence of the Lambs", "genres": ["Crime", "Drama", "Thriller"],
+     "plot": "An FBI trainee consults a brilliant but imprisoned killer to catch another serial murderer."},
+     
 ]
 
-test_movie_genres = {"title": "The Fifth Element", "genres": ["Action", "Adventure", "Sci-Fi"],
-        "plot": "In a futuristic world, a cab driver helps a mystical being save Earth from destruction."}
+
+test_movie_genres = {
+    "title": "Interstellar",
+    "genres": ["Adventure", "Drama", "Sci-Fi"],
+    "plot": "A team of explorers travels through a wormhole in space to save humanity from environmental collapse."
+}
 
 
-test_movie_plot = {"title": "Room", "genres": ["Drama", "Thriller"],
-        "plot": "A mother and her young son plan their escape from captivity after years of imprisonment."}
+test_movie_plot = {
+    "title": "Taken",
+    "genres": ["Action", "Thriller"],
+    "plot": "A former spy uses his skills to track down and rescue his daughter after she's abducted by traffickers."
+}
 
 
 
 def cluster_and_visualize(genre_weight=1.0, plot_weight=1.0, k=2):
-    title_emb = model.encode([movie['title'] for movie in movies])
-    genre_emb = model.encode([', '.join(movie['genres']) for movie in movies])
-    plot_emb = model.encode([movie['plot'] for movie in movies])
+    genre_emb = np.array(model.encode([ "Genres of the movie: "+ ", ".join(movie['genres']) for movie in movies])) * genre_weight
+    plot_emb = np.array(model.encode(["Plot of the movie: " + movie['plot'] for movie in movies])) * plot_weight
 
-    weighted_genre_emb = [g * genre_weight for g in genre_emb]
-    weighted_plot_emb = [p * plot_weight for p in plot_emb]
-
-    embeddings = title_emb + weighted_genre_emb + weighted_plot_emb
+    embeddings = (genre_emb + plot_emb) / 2
 
     kmeans = KMeans(n_clusters=k, random_state=42)
     cluster_labels = kmeans.fit_predict(embeddings)
@@ -59,38 +66,38 @@ def cluster_and_visualize(genre_weight=1.0, plot_weight=1.0, k=2):
 
 
     def embed_movie(movie):
-        title_emb = model.encode([movie['title']])
         genre_emb = model.encode([', '.join(movie['genres'])]) * genre_weight
         plot_emb = model.encode([movie['plot']]) * plot_weight
-        return title_emb + genre_emb + plot_emb
+        return genre_emb + plot_emb
 
     test_emb = embed_movie(test_movie_genres)
     test_similarities = cosine_similarity(test_emb, kmeans.cluster_centers_)
     test_cluster = np.argmax(test_similarities)
 
     test_movie_reduced = pca.transform(test_emb)
-    plt.scatter(test_movie_reduced[:, 0], test_movie_reduced[:, 1], c='blue', marker='o', s=100, label=f"Genres (Cluster {test_cluster})")
+    plt.scatter(test_movie_reduced[:, 0], test_movie_reduced[:, 1], c=cluster_labels[test_cluster], marker='o', s=100, label=f"Genres (Cluster {test_cluster})")
+    plt.text(test_movie_reduced[0, 0] + 0.03, test_movie_reduced[0, 1] + 0.03, test_movie_genres['title'], fontsize=7)
 
     test_emb = embed_movie(test_movie_plot)
     test_similarities = cosine_similarity(test_emb, kmeans.cluster_centers_)
     test_cluster = np.argmax(test_similarities)
 
     test_movie_reduced = pca.transform(test_emb)
-    plt.scatter(test_movie_reduced[:, 0], test_movie_reduced[:, 1], c='green', marker='o', s=100, label=f"Plot (Cluster {test_cluster})")
+    plt.scatter(test_movie_reduced[:, 0], test_movie_reduced[:, 1], c=cluster_labels[test_cluster], marker='o', s=100, label=f"Plot (Cluster {test_cluster})")
+    plt.text(test_movie_reduced[0, 0] + 0.03, test_movie_reduced[0, 1] + 0.03, test_movie_plot['title'], fontsize=7)
 
     plt.scatter(reduced_embeddings[:, 0], reduced_embeddings[:, 1], c=cluster_labels, cmap='viridis', s=50)
     plt.scatter(centroids_reduced[:, 0], centroids_reduced[:, 1], marker='x', s=200, c='red', label='Centroids')
 
 
     for i, movie in enumerate(movies):
-        plt.text(reduced_embeddings[i, 0] + 0.1, reduced_embeddings[i, 1] + 0.1, movie['title'], fontsize=7)
+        plt.text(reduced_embeddings[i, 0] + 0.03, reduced_embeddings[i, 1] + 0.03, movie['title'], fontsize=7)
 
     plt.title(f"Genre Weight: {genre_weight}, Plot Weight: {plot_weight}")
     plt.xlabel('PCA Component 1')
     plt.ylabel('PCA Component 2')
-    plt.legend(fontsize='small')
 
-plt.figure(figsize=(13, 5))
+plt.figure(figsize=(14, 4))
 
 weight_settings = [
     (1.0, 1.0),
