@@ -57,7 +57,7 @@ print("Running HDBSCAN clustering...")
 hdbscan_clusterer = HDBSCAN(
     min_cluster_size=3,
     min_samples=None,
-    metric='euclidean',
+    metric='cosine',
 )
 cluster_labels = hdbscan_clusterer.fit_predict(user_embeddings)
 
