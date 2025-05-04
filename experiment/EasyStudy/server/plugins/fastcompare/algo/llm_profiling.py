@@ -120,7 +120,7 @@ class LLMProfiling(AlgorithmBase, ABC):
 
         return result[:k]
 
-    
+    # TODO: ADD TO PROMPT TO REMOVE POTENTIAL OUTLIERS THAT MAY NOT BE CAUGHT BY HDBSCAN...
     def _generate_representant(self, movies_cluster):
             movies = "\n".join(f"- {movie['title']} | Genres: " + movie['genres'] + "Plot: " + movie["plot"] for movie in movies_cluster)
             
