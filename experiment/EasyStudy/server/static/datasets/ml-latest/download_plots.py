@@ -2,6 +2,9 @@ import os
 import csv
 from imdb import Cinemagoer
 
+# 283745,Jope – Just Think for Yourself (2023),Documentary,An overweight boy who was a bullied at school grew up to become a beloved comedian, folk artist Jope Ruonansuu.
+# Add manually ...
+
 img_folder = "img"
 movies_csv = "movies.csv"
 temp_csv = "movies_temp.csv"
