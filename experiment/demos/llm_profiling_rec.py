@@ -44,7 +44,7 @@ class Representant(BaseModel):
     genres: str
     plot: str
 
-user_genre_embeddings = model.encode(["Genres: " + ", ".join(movie['genres']) for movie in user_preferred_movies])
+user_genre_embeddings = model.encode(["Genres: " + ", ".join(movie['genres']) for movie in user_preferred_movies]) # DO NOT EMBED TITLES -> CANNOT CLUSTER !
 user_plot_embeddings = model.encode(["Plot: " + movie['plot'] for movie in user_preferred_movies])
 user_embeddings = (2 * user_genre_embeddings + 0.5 * user_plot_embeddings) / 2
 
