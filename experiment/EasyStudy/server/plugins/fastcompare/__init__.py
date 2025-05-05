@@ -199,50 +199,50 @@ def get_initial_data():
 @bp.route("/get-diversity-data", methods=["GET"])
 def get_diversity_data():
     config = load_user_study_config(session["user_study_id"])
-    
     loader_factory = load_data_loaders()[config["selected_data_loader"]]
     loader = loader_factory(**filter_params(config["data_loader_parameters"], loader_factory))
     load_data_loader(loader, session["user_study_guid"], loader_factory.name())
 
-    # No diversity
-    # 5816,Harry Potter and the Chamber of Secrets (2002)
-    # 8368,Harry Potter and the Prisoner of Azkaban (2004)
-    no_div = [5816, 8368]
+    # Define categorized pairs
+    versioned_pairs = [
+        ([5816, 8368], "no_div"),
+        ([290573, 95875], "no_div_genres"),
+        ([188797, 64969], "no_div_genres"),
+        ([226202, 85414], "no_div_plot"),
+        ([276489, 289295], "no_div_plot"),
+        ([203222, 296], "div_all")
+    ]
 
-    # No diversity genres, diff plot
-    # 290573,The Creator (2023)
-    # 95875,Total Recall (2012)
-    no_div_genres = [290573, 95875]
-
-    # Similar plot, diff genres
-    # 226202,Free Guy (2020)
-    # 85414,Source Code (2011)
-    no_div_plot = [226202, 85414]
-
-    # Diff all
-    # 203222,The Lion King (2019)
-    # 296,Pulp Fiction (1994)
-    div_all = [203222, 296]
-
-    movie_ids = no_div + no_div_genres + no_div_plot + div_all
-
-    movies_description = [loader.items_df_indexed.loc[movie_id].title for movie_id in movie_ids]
-    movies_genres = [loader.items_df_indexed.loc[movie_id].genres.split("|") for movie_id in movie_ids]
-    movies_genres = [x if x != ["(no genres listed)"] else [] for x in movies_genres]
-    movies_url = [loader.get_item_id_image_url(movie_idx) for movie_idx in movie_ids]
-    movies_plot = [loader.items_df_indexed.loc[movie_id]["plot"] for movie_id in movie_ids]
-
-    data = [{"movie": movie, "url": url, "movie_id": movie_id, "genres": genres, "plot": plot} for movie, url, movie_id, genres, plot in zip(movies_description, movies_url, movie_ids, movies_genres, movies_plot)]
-
+    # Build full data with version labels
+    data = []
     tr = get_tr(languages, get_lang())
 
-    for i in range(len(data)):
-        input_name = f"{config['selected_data_loader']}_{data[i]['movie_id']}"
-        data[i]["movie"] = tr(input_name, data[i]['movie']) + " " + \
-        "|".join([tr(f"genre_{y.lower()}") for y in data[i]["genres"]]) + " " + \
-        data[i]["plot"]
+    for (id1, id2), version in versioned_pairs:
+        for movie_id in [id1, id2]:
+            row = loader.items_df_indexed.loc[movie_id]
+            title = tr(f"{config['selected_data_loader']}_{movie_id}", row.title)
+            genres = row.genres.split("|")
+            genres_tr = "|".join([tr(f"genre_{g.lower()}") for g in genres])
+            full_title = f"{title} {genres_tr} {row['plot']}"
+            data.append({
+                "movie_id": movie_id,
+                "movieName": full_title,
+                "url": loader.get_item_id_image_url(movie_id),
+                "version": version
+            })
 
-    return data
+    # Build pair structure with version info and shuffle-safe
+    pairs = []
+    for i in range(0, len(data), 2):
+        pair = [data[i], data[i+1]]
+        version = data[i]["version"]  # both movies have the same version
+        pairs.append({"pair": pair, "version": version})
+
+    # Optional: Shuffle if desired
+    import random
+    random.shuffle(pairs)
+
+    return jsonify(pairs)
 
 # Public facing endpoint
 @bp.route("/join", methods=["GET"])
@@ -274,16 +274,21 @@ def diversity_perception():
 
 @bp.route("/send-diversity-feedback", methods=["POST"])
 def send_diversity_feedback():
-    data = {}
+    ratings_by_version = {}
+
     for key in request.form:
         if key.startswith("rating_"):
-            pair_index = key.split("_")[1]
-            rating_value = request.form.get(key)
-            data[pair_index] = rating_value
+            index = key.split("_")[1]
+            rating = int(request.form.get(f"rating_{index}"))
+            version = request.form.get(f"version_{index}")
 
-    log_interaction(session["participation_id"], "diversity-perception-ended", **data)
+            if version not in ratings_by_version:
+                ratings_by_version[version] = []
+            ratings_by_version[version].append(rating)
 
-    session["diversity_perception"] = data
+    log_interaction(session["participation_id"], "diversity-perception-ended", **ratings_by_version)
+
+    session["diversity_perception"] = ratings_by_version
 
     return redirect(url_for(
         "utils.preference_elicitation",
