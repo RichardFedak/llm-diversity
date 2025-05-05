@@ -25,20 +25,10 @@ window.app = new Vue({
     async mounted() {
       const url = `${initial_data_url}?impl=${this.impl}`;
       const rawData = await fetch(url).then(resp => resp.json());
-      const prepared = rawData.map(item => ({
-        movieName: item.movie,
-        movie: {
-          idx: item.movie_idx,
-          url: item.url
-        }
+      this.pairs = rawData.map(item => ({
+        movies: item.pair,  // [movie1, movie2]
+        version: item.version
       }));
-      const pairs = [];
-      for (let i = 0; i < prepared.length; i += 2) {
-        const pair = [prepared[i], prepared[i + 1]];
-        pairs.push(pair);
-      }
-
-      this.pairs = pairs;
       this.ratings = new Array(this.pairs.length).fill(null);
     },
     methods: {
@@ -54,14 +44,19 @@ window.app = new Vue({
         csrfInput.value = csrfToken;
         form.appendChild(csrfInput);
   
-        // Include all diversity ratings
-        this.ratings.forEach((rating, i) => {
-          const input = document.createElement("input");
-          input.type = "hidden";
-          input.name = `rating_${i}`;
-          input.value = rating;
-          form.appendChild(input);
-        });
+        this.pairs.forEach((pair, i) => {
+          const inputRating = document.createElement("input");
+          inputRating.type = "hidden";
+          inputRating.name = `rating_${i}`;
+          inputRating.value = this.ratings[i];
+          form.appendChild(inputRating);
+        
+          const inputVersion = document.createElement("input");
+          inputVersion.type = "hidden";
+          inputVersion.name = `version_${i}`;
+          inputVersion.value = pair.version;
+          form.appendChild(inputVersion);
+        });        
   
         document.body.appendChild(form);
         form.submit();
