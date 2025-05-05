@@ -67,10 +67,6 @@ class RatedMovieFilter:
         loader.movies_df = loader.movies_df[loader.movies_df.movieId.isin(rated_movie_ids)]
         loader.movies_df = loader.movies_df.reset_index(drop=True)
 
-        # Filter also their embeddings
-        loader.embeddings_df = loader.embeddings_df[loader.embeddings_df.movieId.isin(rated_movie_ids)]
-        loader.embeddings_df = loader.embeddings_df.reset_index(drop=True)
-
 # Filters out all ratings of movies that do not have enough ratings per year
 class RatingsPerYearFilter:
     def __init__(self, min_ratings_per_year):
@@ -145,12 +141,13 @@ class LinkFilter:
         loader.links_df = loader.links_df[loader.links_df.index.isin((loader.movies_df.movieId))]
 
 class MLDataLoader:
-    def __init__(self, ratings_path, movies_path, embeddings_path, tags_path, links_path,
+    def __init__(self, ratings_path, movies_path, genres_embeddings_path, plot_embeddings_path, tags_path, links_path,
         filters = None, rating_matrix_path = None, img_dir_path = None):
 
         self.ratings_path = ratings_path
         self.movies_path = movies_path
-        self.embeddings_path = embeddings_path
+        self.genres_embeddings_path = genres_embeddings_path
+        self.plot_embeddings_path = plot_embeddings_path
         self.tags_path = tags_path
         self.filters = filters
         self.links_path = links_path
@@ -159,7 +156,8 @@ class MLDataLoader:
         self.ratings_df = None
         self.movies_df = None
         self.movies_df_indexed = None
-        self.embeddings_df = None
+        self.genres_embeddings = None
+        self.plot_embeddings = None
         self.tags_df = None
         self.links_df = None
         self.rating_matrix = None
@@ -301,13 +299,8 @@ class MLDataLoader:
         self.movies_df = pd.read_csv(self.movies_path)
 
         # Load embeddings
-        embeddings_dict = np.load(self.embeddings_path, allow_pickle=True).item()
-
-        self.embeddings_df = pd.DataFrame([
-            {'movieId': int(movie_id), **{f'{i}': emb[i] for i in range(len(emb))}}
-            for movie_id, emb in embeddings_dict.items()
-        ])
-        self.embeddings_df.reset_index(drop=True, inplace=True)
+        self.genres_embeddings = np.load(self.genres_embeddings_path)
+        self.plot_embeddings = np.load(self.plot_embeddings_path)
 
         # Load links
         self.links_df = pd.read_csv(self.links_path, index_col=0)
