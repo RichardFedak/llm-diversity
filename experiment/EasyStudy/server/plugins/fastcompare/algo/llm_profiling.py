@@ -20,7 +20,6 @@ class LLMProfiling(AlgorithmBase, ABC):
         self._ratings_df = loader.ratings_df
         self._loader = loader
         self._all_items = self._ratings_df.item.unique()
-        self._loader.embeddings_df['movieId'] = self._loader.embeddings_df['movieId'].astype(int)
 
         self._model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -40,25 +39,58 @@ class LLMProfiling(AlgorithmBase, ABC):
         print("Selected", selected_items)
         print("Filter out", filter_out_items)
 
-        user_preferred_movies = []
+        ratings = session["diversity_perception"]
 
+        def avg(lst):
+            return sum(lst) / len(lst) if lst else 0
+
+        def rating_to_effect(avg_rating):
+            return (avg_rating - 3) / 2.0
+
+        plot_effect = -rating_to_effect(avg(ratings.get('no_div_plot', []))) + rating_to_effect(avg(ratings.get('no_div_genres', [])))
+        genre_effect = +rating_to_effect(avg(ratings.get('no_div_plot', []))) - rating_to_effect(avg(ratings.get('no_div_genres', [])))
+
+        # Scale to weights in [0.5, 2.0]
+        def scale_to_weight(effect, min_val=0.5, max_val=2.0, neutral_value=0):
+            if effect == neutral_value:
+                return 1.0
+            # Otherwise, clamp the effect to [-1, 1] and normalize to [0.5, 2.0]
+            effect = max(-1.0, min(1.0, effect))
+            return min_val + (effect + 1) * (max_val - min_val) / 2.0
+
+        plot_weight = scale_to_weight(plot_effect)
+        genre_weight = scale_to_weight(genre_effect)
+
+        print(f"Genre weight: {genre_weight:.2f}")
+        print(f"Plot weight: {plot_weight:.2f}")
+
+        # Prepare user-preferred movies based on selected items
+        user_preferred_movies = []
         for item in selected_items:
             user_preferred_movies.append(self._loader.items_df.iloc[item])
+
+        # Update the final embedding calculation with the genre and plot weights
+        final_embedding = genre_weight * self._loader.genres_embeddings + plot_weight * self._loader.plot_embeddings
+        print("final embed shape", final_embedding.shape)
         
         # TODO: CREATE EMBEDDINGS SEPARATELY ? GENRES / PLOT
-        mask = ~self._loader.embeddings_df.index.isin(filter_out_items)
-        original_indices = self._loader.embeddings_df[mask].index
-        filtered_df = self._loader.embeddings_df[mask]
-        filtered_df.reset_index(drop=True, inplace=True)
+        mask = np.ones(final_embedding.shape[0], dtype=bool)
+        mask[filter_out_items] = False
+        original_indices = np.where(mask)[0]
+        emb_matrix = final_embedding[mask]
 
-        emb_matrix = filtered_df.drop(columns=['movieId']).values
+        # mask = ~self._loader.embeddings_df.index.isin(filter_out_items)
+        # original_indices = self._loader.embeddings_df[mask].index
+        # filtered_df = self._loader.embeddings_df[mask]
+        # filtered_df.reset_index(drop=True, inplace=True)
+
         
         # TODO: USER **MUST** CHOOSE AT LEAST *N* MOVIES
         # TODO: OR .. HANDLE WHEN SELECTED ITEMS < *N*
         print("embeding user")
         user_genre_embeddings = self._model.encode(["Genres: " + movie['genres'] for movie in user_preferred_movies])
         user_plot_embeddings = self._model.encode(["Plot: " + movie['plot'] for movie in user_preferred_movies])
-        user_embeddings = (2 * user_genre_embeddings + 0.5 * user_plot_embeddings) / 2
+        user_embeddings = (genre_weight * user_genre_embeddings + plot_weight * user_plot_embeddings) / 2
         print("embeding user DONE")
         print(user_embeddings.shape)
 
@@ -100,7 +132,7 @@ class LLMProfiling(AlgorithmBase, ABC):
         for cluster_id, rep_emb in representant_embeddings_dict.items():
             similarities = cosine_similarity(rep_emb.reshape(1, -1), emb_matrix)[0]
             closest_indices = np.argsort(similarities)[::-1][:k]
-            top_k_original_indices = original_indices[closest_indices].values
+            top_k_original_indices = original_indices[closest_indices]
             cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices if int(i) not in used_items]
 
         # Create result in round-robin way
