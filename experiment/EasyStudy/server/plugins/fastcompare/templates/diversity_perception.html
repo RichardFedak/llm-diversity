@@ -7,17 +7,17 @@
 
     <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4">
       <b-row align-h="center">
-        <b-col cols="auto" v-for="(col, index) in pair" :key="col.movie.idx">
+        <b-col v-for="(col, index) in pair.movies" :key="col.movie_id">
           <b-img
-            :src="col.movie.url"
+            :src="col.url"
             :alt="col.movieName"
-            :id="col.movie.idx"
+            :title="col.movieName"
+            :id="col.movie_id"
             width="175"
             fluid
             center
             class="mb-3"
             v-b-tooltip.hover
-            :title="col.movieName"
           ></b-img>
         </b-col>
       </b-row>
