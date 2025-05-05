@@ -35,14 +35,15 @@ class MLDataLoaderWrapper(DataLoaderBase):
 
         ratings_path = os.path.join(datasets_base_dir, "ml-latest", "ratings.csv")
         movies_path = os.path.join(datasets_base_dir, "ml-latest", "movies.csv")
-        embeddings_path = os.path.join(datasets_base_dir, "ml-latest", "embeddings.npy")
+        genres_embeddings_path = os.path.join(datasets_base_dir, "ml-latest", "genres_embeddings.npy")
+        plot_embeddings_path = os.path.join(datasets_base_dir, "ml-latest", "plot_embeddings.npy")
         tags_path = os.path.join(datasets_base_dir, "ml-latest", "tags.csv")
         links_path = os.path.join(datasets_base_dir, "ml-latest", "links.csv")
         img_dir_path = os.path.join(datasets_base_dir, "ml-latest", "img")
         # Ensure img dir path exists
         Path(img_dir_path).mkdir(parents=True, exist_ok=True)
 
-        self.loader = MLDataLoader(ratings_path, movies_path, embeddings_path, tags_path, links_path,
+        self.loader = MLDataLoader(ratings_path, movies_path, genres_embeddings_path, plot_embeddings_path, tags_path, links_path,
             [RatingLowFilter(4.0), MovieFilterByYear(1990), RatingFilterOld(2010), RatingsPerYearFilter(50.0), RatingUserFilter(100), RatedMovieFilter(), LinkFilter()],
             rating_matrix_path=None, img_dir_path=img_dir_path
         )
@@ -76,8 +77,12 @@ class MLDataLoaderWrapper(DataLoaderBase):
         return self.loader.movies_df
     
     @property
-    def embeddings_df(self):
-        return self.loader.embeddings_df
+    def genres_embeddings(self):
+        return self.loader.genres_embeddings
+
+    @property
+    def plot_embeddings(self):
+        return self.loader.plot_embeddings
 
     @property
     def items_df_indexed(self):
