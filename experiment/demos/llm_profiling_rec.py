@@ -25,6 +25,58 @@ movies = [
      "plot": "Paranormal investigators help a family terrorized by a dark presence in their farmhouse."},
     {"title": "The Notebook", "genres": ["Romance", "Drama"],
      "plot": "A young couple falls in love during the early years of World War II, facing obstacles from society and memory loss."},
+    {"title": "Inception", "genres": ["Action", "Sci-Fi", "Thriller"],
+     "plot": "A skilled thief is given a chance at redemption if he can successfully perform an inception: planting an idea into someone's mind."},
+    {"title": "Coco", "genres": ["Animation", "Family", "Fantasy"],
+     "plot": "A young boy journeys to the Land of the Dead to uncover his family's history and musical legacy."},
+    {"title": "Gladiator", "genres": ["Action", "Drama", "Adventure"],
+     "plot": "A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family."},
+    {"title": "Parasite", "genres": ["Thriller", "Drama"],
+     "plot": "A poor family's scheme to infiltrate a wealthy household leads to unexpected consequences."},
+    {"title": "The Grand Budapest Hotel", "genres": ["Comedy", "Drama"],
+     "plot": "A legendary concierge and his protégé become involved in the theft of a priceless painting and a battle over a family fortune."},
+    {"title": "Black Panther", "genres": ["Action", "Sci-Fi", "Adventure"],
+     "plot": "After the death of his father, T'Challa becomes king of Wakanda and must defend his nation from a powerful enemy."},
+    {"title": "The Social Network", "genres": ["Drama", "Biography"],
+     "plot": "The story of the founding of Facebook and the legal battles that followed its massive growth."},
+    {"title": "Finding Nemo", "genres": ["Animation", "Family", "Adventure"],
+     "plot": "A clownfish embarks on a journey across the ocean to rescue his son, who has been captured by a diver."},
+    {"title": "The Shawshank Redemption", "genres": ["Drama"],
+     "plot": "A man wrongly convicted of murder forms a lasting friendship and finds hope during decades in prison."},
+    {"title": "La La Land", "genres": ["Romance", "Drama", "Musical"],
+     "plot": "A jazz musician and an aspiring actress fall in love while pursuing their dreams in Los Angeles."},
+    {"title": "Get Out", "genres": ["Horror", "Mystery", "Thriller"],
+     "plot": "A young Black man uncovers a disturbing secret when he visits his white girlfriend’s family estate."},
+    {"title": "The Martian", "genres": ["Adventure", "Sci-Fi", "Drama"],
+     "plot": "An astronaut stranded on Mars must use his ingenuity to survive while awaiting rescue."},
+    {"title": "Joker", "genres": ["Crime", "Drama", "Thriller"],
+     "plot": "A failed comedian's descent into madness leads to violent chaos in Gotham City."},
+    {"title": "Toy Story", "genres": ["Animation", "Adventure", "Comedy"],
+     "plot": "A group of toys come to life and navigate their world when their owner is away."},
+    {"title": "1917", "genres": ["War", "Drama", "Action"],
+     "plot": "Two British soldiers must deliver a crucial message across enemy territory during World War I."},
+    {"title": "Her", "genres": ["Romance", "Drama", "Sci-Fi"],
+     "plot": "A lonely man falls in love with an advanced AI operating system designed to meet his every need."},
+     {"title": "Columbus", "genres": ["Drama", "Indie"], "plot": "An architecture enthusiast connects with a stranded man in a quiet Midwestern town, reflecting on life and relationships."},
+    {"title": "The Fall", "genres": ["Fantasy", "Drama", "Adventure"], "plot": "In a 1920s hospital, a stuntman spins a fantastical tale to a little girl, blurring the line between fiction and reality."},
+    {"title": "Timecrimes", "genres": ["Sci-Fi", "Thriller"], "plot": "A man accidentally enters a time loop and must deal with the dangerous consequences of meeting himself."},
+    {"title": "Coherence", "genres": ["Mystery", "Sci-Fi", "Thriller"], "plot": "During a dinner party, a comet causes reality to fracture, creating disturbing alternate timelines."},
+    {"title": "Leave No Trace", "genres": ["Drama"], "plot": "A father and daughter living off the grid are forced to re-enter society, challenging their bond and ideals."},
+    {"title": "Hunt for the Wilderpeople", "genres": ["Adventure", "Comedy", "Drama"], "plot": "A rebellious kid and his grumpy foster uncle become fugitives in the New Zealand bush."},
+    {"title": "The Guilty", "genres": ["Thriller", "Crime", "Drama"], "plot": "A demoted police officer takes a 911 call that unravels into a tense and personal crisis."},
+    {"title": "The Endless", "genres": ["Horror", "Sci-Fi", "Mystery"], "plot": "Two brothers return to a cult they escaped years ago, only to discover time itself may be breaking."},
+    {"title": "I Origins", "genres": ["Drama", "Romance", "Sci-Fi"], "plot": "A molecular biologist’s research into the human eye leads to questions about life, death, and reincarnation."},
+    {"title": "The Man from Earth", "genres": ["Drama", "Sci-Fi"], "plot": "A retiring professor reveals to colleagues that he's been alive for 14,000 years, sparking intense debate."},
+    {"title": "A Ghost Story", "genres": ["Drama", "Fantasy"], "plot": "A ghost in a white sheet lingers in his former home, observing time and grief in haunting silence."},
+    {"title": "Take Shelter", "genres": ["Drama", "Thriller"], "plot": "A man is tormented by apocalyptic visions and must decide whether to protect his family or seek help."},
+    {"title": "Short Term 12", "genres": ["Drama"], "plot": "A supervisor at a foster care facility struggles to help teens while facing her own traumatic past."},
+    {"title": "Another Earth", "genres": ["Drama", "Sci-Fi"], "plot": "On the night a duplicate Earth appears, a young woman seeks redemption for a tragic mistake."},
+    {"title": "Victoria", "genres": ["Crime", "Thriller", "Drama"], "plot": "In a single take, a young woman’s night in Berlin spirals into danger after meeting a group of men."},
+    {"title": "Beasts of the Southern Wild", "genres": ["Drama", "Fantasy"], "plot": "A six-year-old girl faces storms, illness, and mythic creatures in a surreal Louisiana bayou."},
+    {"title": "The Invitation", "genres": ["Thriller", "Horror", "Drama"], "plot": "A man attends a dinner party hosted by his ex-wife and suspects something sinister is unfolding."},
+    {"title": "The Lunchbox", "genres": ["Drama", "Romance"], "plot": "A mistaken lunchbox delivery sparks a quiet romance between two lonely strangers in Mumbai."},
+    {"title": "Incendies", "genres": ["Mystery", "Drama", "War"], "plot": "Twins uncover their mother’s shocking past through a will that sends them on a journey to the Middle East."},
+    {"title": "Perfect Blue", "genres": ["Animation", "Thriller", "Psychological"], "plot": "A pop star turned actress loses her grip on reality as she’s stalked and haunted by a disturbing past."},
 ]
 
 
@@ -110,12 +162,59 @@ def generate_representant(movies_cluster):
             {"role": "system", "content": "You are a helpful assistant that creates user preference profiles for movie recommendation systems. You always return output in a format that matches movie metadata: genres and plot."},
             {"role": "user", "content": llama_prompt}
         ],
-        model="mistral",
+        model="llama3.1:8b",
         format=Representant.model_json_schema(),
     )
     representant = Representant.model_validate_json(response.message.content)
 
     return representant
+
+def generate_diversity_representant(representants):
+    reps = "\n".join(
+        f"- Genres: {r.genres} | Plot: {r.plot}"
+        for r in representants
+    )
+    
+    llama_prompt = f"""
+    Below are several representants, each summarizing a group of movies the user enjoys:
+
+    {reps}
+
+    Your task:
+    1. Choose **genres NOT listed** in any of them.
+    2. Based on the selected new genres, create a synthetic 'representant'.
+    3. The **plot must match the new genres** and be **different** from the plots above.
+
+    Return a JSON object with:
+    - 'genres': a comma-separated string of the new genres
+    - 'plot': a short movie-style generated description that fits for new genres and avoids similarities with the input plots
+    """
+
+    response = chat(
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a creative assistant that generates diversity-focused movie profiles.\n"
+                    "You're given several 'representants' that summarize the user's known movie preferences.\n"
+                    "Your task is to expand their profile by introducing a completely different angle.\n\n"
+                    "Instructions:\n"
+                    "- Choose only genres that do NOT appear in the input.\n"
+                    "- Then, write a new movie plot that matches the newly chosen genres.\n"
+                    "- The plot must NOT share similarities with any of the provided plots in the input.\n\n"
+                    "Your goal is to generate a believable but distinctly different 'representant'."
+                )
+            },
+            {"role": "user", "content": llama_prompt}
+        ],
+        model="llama3.1:8b",
+        format=Representant.model_json_schema(),
+    )
+    representant = Representant.model_validate_json(response.message.content)
+
+    return representant
+
+
 
 representants = {}
 representant_embeddings_dict = {}
@@ -131,14 +230,32 @@ for cluster_id, cluster_movies_data in clusters.items():
         representants[cluster_id] = representant
         print(f"Representant {cluster_id}:", representant)
     
-        rep_text = f"Genres: {representant.genres} Plot: {representant.plot}"
-        emb = model.encode([rep_text])
+        candidate_genre_embeddings = model.encode(["Genres: " + representant.genres])
+        candidate_plot_embeddings = model.encode(["Plot: " + representant.plot])
+        emb = (2 * candidate_genre_embeddings + 0.5 * candidate_plot_embeddings) / 2
         representant_embeddings_dict[cluster_id] = emb[0]
         representant_embeddings_list.append(emb[0])
         representant_cluster_ids_list.append(cluster_id)
     else:
         print(f"Skipping representant for Cluster {cluster_id} due to generation error.")
 
+
+representant_values = list(representants.values())
+diversity_representant = generate_diversity_representant(representant_values)
+
+if diversity_representant:
+    diversity_cluster_id = "diversity"
+    representants[diversity_cluster_id] = diversity_representant
+    print(f"Diversity Representant:", diversity_representant)
+
+    candidate_genre_embeddings = model.encode(["Genres: " + diversity_representant.genres])
+    candidate_plot_embeddings = model.encode(["Plot: " + diversity_representant.plot])
+    emb = (2 * candidate_genre_embeddings + 0.5 * candidate_plot_embeddings) / 2
+    representant_embeddings_dict[diversity_cluster_id] = emb[0]
+    representant_embeddings_list.append(emb[0])
+    representant_cluster_ids_list.append(diversity_cluster_id)
+else:
+    print("Skipping diversity representant due to generation error.")
 
 print("\n--- Recommending Movies Based on Representants ---")
 all_recommended_indices = set()
