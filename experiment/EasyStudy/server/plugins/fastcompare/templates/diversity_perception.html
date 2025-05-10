@@ -7,7 +7,7 @@
 
     <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4">
       <b-row align-h="center">
-        <b-col v-for="(col, index) in pair.movies" :key="col.movie_id">
+        <b-col cols="auto" v-for="(col, index) in pair.movies" :key="col.movie_id">
           <b-img
             :src="col.url"
             :alt="col.movieName"
