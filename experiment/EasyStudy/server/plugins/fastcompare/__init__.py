@@ -193,7 +193,7 @@ def get_initial_data():
     session["elicitation_movies"] = el_movies
 
     # TODO to do lazy loading, return just X and update rows & items in JS directly
-    print(el_movies)
+    # print(el_movies)
     return jsonify(el_movies)
 
 @bp.route("/get-diversity-data", methods=["GET"])
