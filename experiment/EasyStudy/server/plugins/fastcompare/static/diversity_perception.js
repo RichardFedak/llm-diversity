@@ -1,19 +1,19 @@
 
 window.app = new Vue({
-    el: '#app',
-    delimiters: ['[[', ']]'],
+    el: "#app",
+    delimiters: ["[[", "]]"],
     data() {
       return {
         pairs: [],
         ratings: [],
         impl: "{{ impl }}",
         ratingOptions: [
-          { value: null, text: 'Select a rating' },
-          { value: 1, text: '1 - No diversity' },
-          { value: 2, text: '2' },
-          { value: 3, text: '3 - Moderate' },
-          { value: 4, text: '4' },
-          { value: 5, text: '5 - High diversity' }
+          { value: null, text: "Select a rating" },
+          { value: 1, text: "1 - No diversity" },
+          { value: 2, text: "2" },
+          { value: 3, text: "3 - Moderate" },
+          { value: 4, text: "4" },
+          { value: 5, text: "5 - High diversity" }
         ]
       };
     },
@@ -26,8 +26,10 @@ window.app = new Vue({
       const url = `${initial_data_url}?impl=${this.impl}`;
       const rawData = await fetch(url).then(resp => resp.json());
       this.pairs = rawData.map(item => ({
-        movies: item.pair,  // [movie1, movie2]
-        version: item.version
+        movies: item.pair,           // [movie1, movie2]
+        version: item.version,
+        genreSim: item.genreSim,
+        plotSim: item.plotSim
       }));
       this.ratings = new Array(this.pairs.length).fill(null);
     },
@@ -56,6 +58,18 @@ window.app = new Vue({
           inputVersion.name = `version_${i}`;
           inputVersion.value = pair.version;
           form.appendChild(inputVersion);
+          const inputGenreSim = document.createElement("input");
+          
+          inputGenreSim.type = "hidden";
+          inputGenreSim.name = `genre_sim_${i}`;
+          inputGenreSim.value = pair.genreSim;
+          form.appendChild(inputGenreSim);
+
+          const inputPlotSim = document.createElement("input");
+          inputPlotSim.type = "hidden";
+          inputPlotSim.name = `plot_sim_${i}`;
+          inputPlotSim.value = pair.plotSim;
+          form.appendChild(inputPlotSim);
         });        
   
         document.body.appendChild(form);

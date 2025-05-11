@@ -44,23 +44,35 @@ class LLMProfiling(AlgorithmBase, ABC):
 
         ratings = session["diversity_perception"]
 
-        def avg(lst):
-            return sum(lst) / len(lst) if lst else 0
-
         def rating_to_effect(avg_rating):
             return (avg_rating - 3) / 2.0 # rating to [-1, 1] range
+        
+        def compute_weighted_effect(ratings_data, version_key, sim_key):
+            items = ratings_data.get(version_key, [])
+            if not items:
+                return 0.0
+            total = 0.0
+            for item in items:
+                rating = int(item["rating"])
+                sim = float(item[sim_key])
+                effect = rating_to_effect(rating)
+                total += sim * effect
+            return total / len(items)
 
-        plot_effect = -rating_to_effect(avg(ratings.get('no_div_plot', []))) + rating_to_effect(avg(ratings.get('no_div_genres', [])))
-        genre_effect = +rating_to_effect(avg(ratings.get('no_div_plot', []))) - rating_to_effect(avg(ratings.get('no_div_genres', [])))
+        plot_effect = -compute_weighted_effect(ratings, "no_div_plot", "plot_sim") \
+                      +compute_weighted_effect(ratings, "no_div_genres", "plot_sim")
+
+        genre_effect = +compute_weighted_effect(ratings, "no_div_plot", "genre_sim") \
+                       -compute_weighted_effect(ratings, "no_div_genres", "genre_sim")
 
         # Scale to weights in [0.5, 2.0]
         def scale_to_weight(effect, min_val=0.5, max_val=2.0, neutral_value=0):
             if effect == neutral_value:
                 return 1.0
-            # Otherwise, clamp the effect to [-1, 1] and normalize to [0.5, 2.0]
+            # Effect to [-1, 1] and normalize to [0.5, 2.0]
             effect = max(-1.0, min(1.0, effect))
             return min_val + (effect + 1) * (max_val - min_val) / 2.0
-
+        # Scale effects to weights in [0.5, 2.0] for embeddings
         plot_weight = scale_to_weight(plot_effect)
         genre_weight = scale_to_weight(genre_effect)
 

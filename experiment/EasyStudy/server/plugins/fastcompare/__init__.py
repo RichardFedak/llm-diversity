@@ -203,46 +203,59 @@ def get_diversity_data():
     loader = loader_factory(**filter_params(config["data_loader_parameters"], loader_factory))
     load_data_loader(loader, session["user_study_guid"], loader_factory.name())
 
-    # Define categorized pairs
     versioned_pairs = [
-        ([5816, 8368], "no_div"),
-        ([290573, 95875], "no_div_genres"),
-        ([188797, 64969], "no_div_genres"),
-        ([226202, 85414], "no_div_plot"),
-        ([276489, 289295], "no_div_plot"),
-        ([203222, 296], "div_all")
+        # Harry Potter and the Chamber of Secrets (2002)  Harry Potter and the Prisoner of Azkaban (2004)
+        {"pair": [5816, 8368], "version": "no_div", "genre_sim": 0.9, "plot_sim": 0.8},
+
+        # The Creator (2023)                              Total Recall (2012)
+        {"pair": [290573, 95875], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.3},
+
+        # Tag (2018)                                      Yes Man (2008)
+        {"pair": [188797, 64969], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.1},
+
+        # Free Guy (2020)                                 Source Code (2011)      
+        {"pair": [226202, 85414], "version": "no_div_plot", "genre_sim": 0.4, "plot_sim": 0.6},
+
+        # The Sea Beast (2022)                            Meg 2: The Trench (2023)    
+        {"pair": [276489, 289295], "version": "no_div_plot", "genre_sim": 0.1, "plot_sim": 0.7},
+
+        # The Lion King (2019)                            Pulp Fiction (1994)       
+        {"pair": [203222, 296], "version": "div_all", "genre_sim": 0.1, "plot_sim": 0.1}
     ]
 
-    # Build full data with version labels
     data = []
     tr = get_tr(languages, get_lang())
 
-    for (id1, id2), version in versioned_pairs:
+    for pair_info in versioned_pairs:
+        id1, id2 = pair_info["pair"]
+        version = pair_info["version"]
+        genre_sim = pair_info["genre_sim"]
+        plot_sim = pair_info["plot_sim"]
+
+        pair_data = []
         for movie_id in [id1, id2]:
             row = loader.items_df_indexed.loc[movie_id]
             title = tr(f"{config['selected_data_loader']}_{movie_id}", row.title)
             genres = row.genres.split("|")
             genres_tr = "|".join([tr(f"genre_{g.lower()}") for g in genres])
             full_title = f"{title} {genres_tr} {row['plot']}"
-            data.append({
+            pair_data.append({
                 "movie_id": movie_id,
                 "movieName": full_title,
-                "url": loader.get_item_id_image_url(movie_id),
-                "version": version
+                "url": loader.get_item_id_image_url(movie_id)
             })
 
-    # Build pair structure with version info and shuffle-safe
-    pairs = []
-    for i in range(0, len(data), 2):
-        pair = [data[i], data[i+1]]
-        version = data[i]["version"]  # both movies have the same version
-        pairs.append({"pair": pair, "version": version})
+        data.append({
+            "pair": pair_data,
+            "version": version,
+            "genreSim": genre_sim,
+            "plotSim": plot_sim
+        })
 
-    # Optional: Shuffle if desired
-    import random
-    random.shuffle(pairs)
+    from random import shuffle
+    shuffle(data)
 
-    return jsonify(pairs)
+    return jsonify(data)
 
 # Public facing endpoint
 @bp.route("/join", methods=["GET"])
@@ -281,10 +294,16 @@ def send_diversity_feedback():
             index = key.split("_")[1]
             rating = int(request.form.get(f"rating_{index}"))
             version = request.form.get(f"version_{index}")
+            genre_sim = float(request.form.get(f"genre_sim_{index}"))
+            plot_sim = float(request.form.get(f"plot_sim_{index}"))
 
             if version not in ratings_by_version:
                 ratings_by_version[version] = []
-            ratings_by_version[version].append(rating)
+            ratings_by_version[version].append({
+                "rating": rating,
+                "genre_sim": genre_sim,
+                "plot_sim": plot_sim
+            })
 
     log_interaction(session["participation_id"], "diversity-perception-ended", **ratings_by_version)
 
