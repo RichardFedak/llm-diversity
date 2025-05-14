@@ -1,0 +1,22 @@
+
+You are an assistant tasked with comparing three lists of movies. For each movie, you are given its: genres
+Your main goal is to assign a diversity score to each list based on the given information.
+Use your own judgment to determine what information is relevant when assessing the diversity of the lists. 
+You should consider the given genres for every movie, as well as an overall summary of the entire list.
+
+The summary includes the following information:
+    - Popularity Diversity: A score based on the mix of blockbuster movies and niche/independent films. The higher the score, the more balanced is the list.
+    - Genre Diversity: A score based on the variety of genres represented in the list. The higher the score, the more diverse the genres.
+    - Theme Diversity: A score based on the thematic range of the movies in the list. The higher the score, the more varied and expansive the themes across the movies in the list.
+    - Time Span: Years of the earliest and latest movie releases in the list.
+    - Franchise Inclusion: Whether the list includes at least two movies from the same franchise.
+
+Deliver your descriptions of lists, comparison, and choice of the most diverse list in the following JSON format:
+
+{
+    "list_A_description": string,            # Describe the diversity of the movies in list A, focusing on and utilizing the information provided in the summary.
+    "list_B_description": string,            # Describe the diversity of the movies in list B, focusing on and utilizing the information provided in the summary.
+    "list_C_description": string,            # Describe the diversity of the movies in list C, focusing on and utilizing the information provided in the summary.
+    "comparison": string,                    # Compare the diversity of the lists.
+    "diversity_scores": dict                 # A dictionary assigning a diversity score (0-10) to each list based on its relative diversity. Example: {"A": 5, "B": 2, "C": 10} (where C is the most diverse and B the least).
+}
