@@ -8,13 +8,15 @@ with open('movie_data_plot.json', 'r', encoding='utf-8') as f:
 
 df = pd.read_csv('movies.csv')
 
-def get_plot(movie_id):
-    movie_str_id = str(movie_id)
-    if movie_str_id in plot_data:
-        plot_list = plot_data[movie_str_id].get("plot", [])
-        if plot_list:
-            return plot_list[0]
-    return "X"
+def get_plot(row):
+    current_plot = str(row.get('plot', '')).strip()
+    if current_plot and current_plot != "X":
+        return current_plot  # Keep existing plot
 
-df['plot'] = df['movieId'].apply(get_plot)
-df.to_csv('movies_plot.csv', index=False)
+    movie_str_id = str(row['movieId'])
+    plot_list = plot_data.get(movie_str_id, {}).get("plot", [])
+    return plot_list[0] if plot_list else "X"
+
+df['plot'] = df.apply(get_plot, axis=1)
+
+df.to_csv('movies.csv', index=False)
