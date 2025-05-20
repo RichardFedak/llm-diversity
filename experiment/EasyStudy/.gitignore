@@ -9,5 +9,6 @@ server/cache/
 server/instance/
 *.sqlite
 img
+img_full
 cache
 venv
