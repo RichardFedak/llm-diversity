@@ -250,23 +250,25 @@ class LLMProfiling(AlgorithmBase, ABC):
         def rating_to_effect(avg_rating):
             return (avg_rating - 3) / 2.0 # rating to [-1, 1] range
         
-        def compute_weighted_effect(ratings_data, version_key, sim_key):
+        def compute_weighted_effect(ratings_data, version_key, sim_key, use_diversity=False):
             items = ratings_data.get(version_key, [])
             if not items:
                 return 0.0
-            total = 0.0
+            total, weight_sum = 0.0, 0.0
             for item in items:
                 rating = int(item["rating"])
                 sim = float(item[sim_key])
                 effect = rating_to_effect(rating)
-                total += sim * effect
-            return total / len(items)
+                weight = 1.0 - sim if use_diversity else sim
+                total += weight * effect
+                weight_sum += weight
+            return total / weight_sum if weight_sum else 0.0
 
-        plot_effect = -compute_weighted_effect(ratings, "no_div_plot", "plot_sim") \
-                      +compute_weighted_effect(ratings, "no_div_genres", "plot_sim")
+        plot_effect = compute_weighted_effect(ratings, "no_div_genres", "plot_sim", use_diversity=True) \
+                    - compute_weighted_effect(ratings, "no_div_plot", "plot_sim", use_diversity=False)
 
-        genre_effect = +compute_weighted_effect(ratings, "no_div_plot", "genre_sim") \
-                       -compute_weighted_effect(ratings, "no_div_genres", "genre_sim")
+        genre_effect = compute_weighted_effect(ratings, "no_div_plot", "genre_sim", use_diversity=True) \
+                    - compute_weighted_effect(ratings, "no_div_genres", "genre_sim", use_diversity=False)
 
         # Scale to weights in [0.5, 2.0]
         def scale_to_weight(effect, min_val=0.5, max_val=2.0, neutral_value=0):
