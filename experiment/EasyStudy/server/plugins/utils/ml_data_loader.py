@@ -24,40 +24,9 @@ class RatingUserFilter:
         self.min_ratings_per_user = min_ratings_per_user
 
     def __call__(self, loader):
-        # First filter out users who gave <= 1 ratings
         loader.ratings_df = loader.ratings_df[loader.ratings_df['userId'].map(loader.ratings_df['userId'].value_counts()) >= self.min_ratings_per_user]
         loader.ratings_df = loader.ratings_df.reset_index(drop=True)
-        print(f"Ratings shape after user filtering: {loader.ratings_df.shape}, n_users = {loader.ratings_df.userId.unique().size}, n_items = {loader.ratings_df.movieId.unique().size}")
-        
-# Filters out all low ratings
-class RatingLowFilter:
-    def __init__(self, min_rating):
-        self.min_rating = min_rating
-    def __call__(self, loader):
-        loader.ratings_df = loader.ratings_df[loader.ratings_df.rating >= self.min_rating]
-        loader.ratings_df = loader.ratings_df.reset_index(drop=True)
-
-class RatingMovieFilter:
-    def __init__(self, min_ratings_per_movie):
-        self.min_ratings_per_movie = min_ratings_per_movie
-    def __call__(self, loader):
-        # Filter out users that were rated <= 1 times
-        loader.ratings_df = loader.ratings_df[loader.ratings_df['movieId'].map(loader.ratings_df['movieId'].value_counts()) >= self.min_ratings_per_movie]
-        loader.ratings_df = loader.ratings_df.reset_index(drop=True)
-        print(f"Ratings shape after item filtering: {loader.ratings_df.shape}, n_users = {loader.ratings_df.userId.unique().size}, n_items = {loader.ratings_df.movieId.unique().size}")
-
-class RatingTagFilter:
-    def __init__(self, min_tags_per_movie):
-        self.min_tags_per_movie = min_tags_per_movie
-    def __call__(self, loader):
-        # Filter out movies that do not have enough tags (we do not want those movies to end up in the dense pool for group based elicitation)
-        # Even if they have many ratings
-        tags_per_movie = loader.tags_df.groupby("movieId")["movieId"].count()
-        tags_per_movie = tags_per_movie[tags_per_movie > self.min_tags_per_movie]
-        print(f"Ratings shape before tag filtering: {loader.ratings_df.shape}, n_users = {loader.ratings_df.userId.unique().size}, n_items = {loader.ratings_df.movieId.unique().size}")
-        loader.ratings_df = loader.ratings_df[loader.ratings_df.movieId.isin(tags_per_movie)]
-        loader.ratings_df = loader.ratings_df.reset_index(drop=True)
-        print(f"Ratings shape after tag filtering: {loader.ratings_df.shape}, n_users = {loader.ratings_df.userId.unique().size}, n_items = {loader.ratings_df.movieId.unique().size}")
+    
 
 class RatedMovieFilter:
     def __call__(self, loader):
@@ -75,8 +44,14 @@ class RatingsPerYearFilter:
     def __call__(self, loader):
         movies_df_indexed = loader.movies_df.set_index("movieId")
 
+
+        oldest_rating = loader.ratings_df.timestamp.min()
+        oldest_year = datetime.datetime.fromtimestamp(oldest_rating).year
+        print(oldest_year)
+
         # Add column with age of each movie
-        movies_df_indexed.loc[:, "age"] = movies_df_indexed.year.max() - movies_df_indexed.year
+        movies_df_indexed.loc[:, "age"] = movies_df_indexed.year.max() - oldest_year
+
         
         # Calculate number of ratings per year for each of the movies
         loader.ratings_df.loc[:, "ratings_per_year"] = loader.ratings_df['movieId'].map(loader.ratings_df['movieId'].value_counts()) / loader.ratings_df['movieId'].map(movies_df_indexed["age"])
@@ -84,25 +59,20 @@ class RatingsPerYearFilter:
         # Filter out movies that do not have enough yearly ratings
         loader.ratings_df = loader.ratings_df[loader.ratings_df.ratings_per_year >= self.min_ratings_per_year]
 
-class MovieFilterByYear:
-    def __init__(self, min_year):
-        self.min_year = min_year
-        
-    def _parse_year(self, x):
-        x = x.split("(")
-        if len(x) <= 1:
-            return 0
-        try:
-            return int(x[-1].split(")")[0])
-        except:
-            return 0
-
+class MoviesNoGenreFilter:
     def __call__(self, loader):
-        # Filter out unrated movies and old movies
-        # Add year column      
-        loader.movies_df.loc[:, "year"] = loader.movies_df.title.apply(self._parse_year)
-        loader.movies_df = loader.movies_df[loader.movies_df.year >= self.min_year]
+        # Filter out movies with no genres
+        movie_ids_with_no_genres = loader.movies_df[loader.movies_df.genres == '(no genres listed)'].movieId
+
+        loader.movies_df = loader.movies_df[~loader.movies_df.movieId.isin(movie_ids_with_no_genres)]
         loader.movies_df = loader.movies_df.reset_index(drop=True)
+
+        # Filter out ratings of movies with no genres
+        loader.ratings_df = loader.ratings_df[loader.ratings_df.movieId.isin(loader.movies_df.movieId)]
+        loader.ratings_df = loader.ratings_df.reset_index(drop=True)
+
+        print(f"Ratings shape after filtering: {loader.ratings_df.shape}, n_users = {loader.ratings_df.userId.unique().size}, n_items = {loader.ratings_df.movieId.unique().size}")
+
 
 class RatingFilterOld:
     def __init__(self, oldest_rating_year):
@@ -113,28 +83,6 @@ class RatingFilterOld:
         # Filter ratings that are too old
         loader.ratings_df = loader.ratings_df[loader.ratings_df.timestamp > oldest_rating]
         #loader.ratings_df = loader.ratings_df.reset_index(drop=True)
-
-# Just filters out tags that are not present on any of the rated movies
-class TagsRatedMoviesFilter:
-    def __call__(self, loader):
-        print(f"TagsRatedMoviesFilter before: {loader.tags_df.shape}")
-        loader.tags_df = loader.tags_df[loader.tags_df.movieId.isin(loader.ratings_df.movieId.unique())]
-        loader.tags_df = loader.tags_df.reset_index(drop=True)
-        print(f"TagsRatedMoviesFilter after: {loader.tags_df.shape}")
-
-class TagsFilter:
-    def __init__(self, most_rated_items_subset_ids, min_num_tag_occurrences):
-        self.min_num_tag_occurrences = min_num_tag_occurrences
-        self.most_rated_items_subset_ids = most_rated_items_subset_ids
-    def __call__(self, loader):
-        # For the purpose of group-based preference elicitation we are only interested in tags that occurr in dense subset of items
-        # over which the groups are defined
-        loader.tags_df = loader.tags_df[loader.tags_df.movieId.isin(self.most_rated_items_subset_ids)]
-        print(f"Tags_df shape: {loader.tags_df.shape}")
-        # We also only consider tags that have enough occurrences, otherwise we will not be able to find enough representants (movies) for each tag
-        loader.tags_df = loader.tags_df[loader.tags_df['tag'].map(loader.tags_df['tag'].value_counts()) >= self.min_num_tag_occurrences]
-        print(f"Tags_df shape: {loader.tags_df.shape}")
-        loader.tags_df = loader.tags_df.reset_index(drop=True)
 
 class LinkFilter:
     def __call__(self, loader):
@@ -282,6 +230,15 @@ class MLDataLoader:
             for _, row in group_df.iterrows():
                 self.tag_counts_per_movie[self.movie_id_to_index[group_name]][row.tag] += 1
 
+    def _parse_year(self, x):
+        x = x.split("(")
+        if len(x) <= 1:
+            return 0
+        try:
+            return int(x[-1].split(")")[0])
+        except:
+            return 0
+
     # Passing local_movie_images as parameter to prevent cache changes
     # If local_movie_images==True, we will use local files instead of image urls inside img uris
     def load(self):
@@ -297,6 +254,8 @@ class MLDataLoader:
 
         # Load movies
         self.movies_df = pd.read_csv(self.movies_path)
+
+        self.movies_df.loc[:, "year"] = self.movies_df.title.apply(self._parse_year)
 
         # Load embeddings
         self.genres_embeddings = np.load(self.genres_embeddings_path)
@@ -332,11 +291,11 @@ class MLDataLoader:
         
         self.user_to_user_index = dict(zip(unique_users, range(num_users)))
 
-        ratings_df_i = self.ratings_df.copy()
-        ratings_df_i.userId = ratings_df_i.userId.map(self.user_to_user_index)
-        ratings_df_i.movieId = ratings_df_i.movieId.map(self.movie_id_to_index)
-        self.rating_matrix = self.ratings_df.pivot(index='userId', columns='movieId', values="rating").fillna(0).values
-        self.similarity_matrix = np.float32(squareform(pdist(self.rating_matrix.T, "cosine")))
+        # ratings_df_i = self.ratings_df.copy()
+        # ratings_df_i.userId = ratings_df_i.userId.map(self.user_to_user_index)
+        # ratings_df_i.movieId = ratings_df_i.movieId.map(self.movie_id_to_index)
+        # self.rating_matrix = self.ratings_df.pivot(index='userId', columns='movieId', values="rating").fillna(0).values
+        # self.similarity_matrix = np.float32(squareform(pdist(self.rating_matrix.T, "cosine")))
         
         # Maps movie index to text description
         self.movies_df["description"] = self.movies_df.title + ' ' + self.movies_df.genres
