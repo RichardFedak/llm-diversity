@@ -5,7 +5,7 @@ import time
 import sys
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
-from ml_data_loader import MLDataLoader, RatingUserFilter, RatedMovieFilter, MovieFilterByYear, RatingFilterOld, RatingsPerYearFilter, RatingLowFilter, LinkFilter
+from ml_data_loader import MLDataLoader, RatingUserFilter, RatedMovieFilter, RatingFilterOld, RatingsPerYearFilter, LinkFilter, MoviesNoGenreFilter
 
 from common import get_abs_project_root_path
 from pathlib import Path
@@ -36,7 +36,14 @@ def load_ml_dataset(ml_variant="ml-latest"):
 
         start_time = time.perf_counter()
         loader = MLDataLoader(ratings_path, movies_path, tags_path, links_path,
-            [RatingLowFilter(4.0), MovieFilterByYear(1990), RatingFilterOld(2010), RatingsPerYearFilter(50.0), RatingUserFilter(100), RatedMovieFilter(), LinkFilter()],
+            [
+            RatingFilterOld(2017),                             
+            RatingsPerYearFilter(10),                        
+            RatingUserFilter(50),                              
+            MoviesNoGenreFilter(),                           
+            RatedMovieFilter(),                                 
+            LinkFilter() 
+            ],
             img_dir_path=img_dir_path
         )
         loader.load()

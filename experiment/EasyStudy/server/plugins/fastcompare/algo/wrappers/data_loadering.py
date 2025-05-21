@@ -6,7 +6,7 @@ import pandas as pd
 import requests
 
 from plugins.fastcompare.algo.algorithm_base import DataLoaderBase
-from plugins.utils.ml_data_loader import MLDataLoader, RatingLowFilter, MovieFilterByYear, RatingFilterOld, RatingsPerYearFilter, RatingUserFilter, RatedMovieFilter, LinkFilter
+from plugins.utils.ml_data_loader import MLDataLoader, MoviesNoGenreFilter, RatingFilterOld, RatingsPerYearFilter, RatingUserFilter, RatedMovieFilter, LinkFilter
 
 from common import get_abs_project_root_path
 
@@ -43,9 +43,23 @@ class MLDataLoaderWrapper(DataLoaderBase):
         # Ensure img dir path exists
         Path(img_dir_path).mkdir(parents=True, exist_ok=True)
 
-        self.loader = MLDataLoader(ratings_path, movies_path, genres_embeddings_path, plot_embeddings_path, tags_path, links_path,
-            [RatingLowFilter(4.0), MovieFilterByYear(1990), RatingFilterOld(2010), RatingsPerYearFilter(50.0), RatingUserFilter(100), RatedMovieFilter(), LinkFilter()],
-            rating_matrix_path=None, img_dir_path=img_dir_path
+        self.loader = MLDataLoader(
+            ratings_path,
+            movies_path,
+            genres_embeddings_path,
+            plot_embeddings_path,
+            tags_path,
+            links_path,
+            [
+            RatingFilterOld(2017),                             
+            RatingsPerYearFilter(10),                        
+            RatingUserFilter(50),                              
+            MoviesNoGenreFilter(),                           
+            RatedMovieFilter(),                                 
+            LinkFilter() 
+            ],
+            rating_matrix_path=None,
+            img_dir_path=img_dir_path
         )
 
     def load_data(self):
@@ -64,7 +78,6 @@ class MLDataLoaderWrapper(DataLoaderBase):
         self.all_categories = set()
         for cats in self.loader.movies_df.genres.unique():
             self.all_categories.update(cats.split("|"))
-        self.all_categories.remove("(no genres listed)")
 
     # Returns dataframe with the interactions/ratings (be aware that implicit feedback is now considered)
     # There should be "user" and "item" columns in the dataframe
