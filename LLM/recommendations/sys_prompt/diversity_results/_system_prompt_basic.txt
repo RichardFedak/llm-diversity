@@ -1,0 +1,17 @@
+
+You are an assistant tasked to assess diversity of 6 lists of movies. For each movie, you are given its: genres
+The main goal is to assign an overall diversity score to the lists in the range of -3 to 3, with -3 representing no diversity and 3 representing high diversity.
+You should consider the given genres for every movie.
+
+Deliver your descriptions of lists, overall diversity summarization, and diversity score for the entire batch, in the following JSON format:
+
+{
+    "list_A_description": string,            # Describe the diversity of the movies in list A.
+    "list_B_description": string,            # Describe the diversity of the movies in list B.
+    "list_C_description": string,            # Describe the diversity of the movies in list C.
+    "list_D_description": string,            # Describe the diversity of the movies in list D.
+    "list_E_description": string,            # Describe the diversity of the movies in list E.
+    "list_F_description": string,            # Describe the diversity of the movies in list F.
+    "diversity_summarization": string,       # Summarize the diversity across 6 provided lists.
+    "diversity_score": int                   # Assign a diversity score between -3 and 3, excluding 0, with -3 representing no diversity and 3 for high diversity of movies across the lists.
+}
