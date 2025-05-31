@@ -4,7 +4,7 @@ from collections import defaultdict
 from scipy.stats import spearmanr, wasserstein_distance
 import numpy as np
 
-RESULTS_FOLDER = "results/"
+RESULTS_FOLDER = "results_ollama/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 DATASET_FILE = "final_movie_data.json"
 
