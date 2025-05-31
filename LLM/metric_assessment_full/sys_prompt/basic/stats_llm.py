@@ -2,7 +2,7 @@ import json
 import os
 from collections import defaultdict
 
-RESULTS_FOLDER = "results/"
+RESULTS_FOLDER = "results_ollama/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 DATASET_FILE = "final_movie_data.json"
 
