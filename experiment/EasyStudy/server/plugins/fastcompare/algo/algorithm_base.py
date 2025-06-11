@@ -44,7 +44,7 @@ class AlgorithmBase(ABC):
     # the reason is that some models have structure dependent on the underlying data (e.g. string lookups in tensorflow etc.)
     # so it makes sense to expect fitting is done at same data as construction
     # This method should perform initial training on the dataset
-    def fit():
+    def fit(loader):
         pass
 
     # Performs prediction for new, previously unknown user, by simulating his history using a list of selected items.

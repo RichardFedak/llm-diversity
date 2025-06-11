@@ -20,8 +20,26 @@ class EASE(AlgorithmBase, ABC):
     """
 
     def __init__(self, loader, positive_threshold, l2, **kwargs):
-        self._ratings_df = loader.ratings_df
+        self._ratings_df = None
         self._loader = loader
+        self._all_items = None
+
+        self._rating_matrix = None
+
+        self._threshold = positive_threshold
+        self._l2 = l2
+
+        self._items_count = None
+
+        self._weights = None
+
+    # One-time fitting of the algorithm for a predefined number of iterations
+    def fit(self, loader):
+
+        self._loader = loader
+
+        self._ratings_df = loader.ratings_df
+
         self._all_items = self._ratings_df.item.unique()
 
         self._rating_matrix = (
@@ -30,15 +48,8 @@ class EASE(AlgorithmBase, ABC):
             .values
         )
 
-        self._threshold = positive_threshold
-        self._l2 = l2
+        self._items_count =  np.shape(self._rating_matrix)[1]
 
-        self._items_count = np.shape(self._rating_matrix)[1]
-
-        self._weights = None
-
-    # One-time fitting of the algorithm for a predefined number of iterations
-    def fit(self):
         X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
 
         # Compute Gram matrix (G = X^T @ X)
@@ -57,6 +68,7 @@ class EASE(AlgorithmBase, ABC):
 
     # Predict for the user
     def predict(self, selected_items, filter_out_items, k):
+        print("PREDICTING EASE")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
         candidates = np.setdiff1d(self._all_items, rat.item.unique())
@@ -72,10 +84,14 @@ class EASE(AlgorithmBase, ABC):
 
         preds = np.dot(user_vector, self._weights)
 
+        preds = np.abs(preds)  
+
         candidates_by_prob = sorted(
             ((preds[cand], cand) for cand in candidates), reverse=True
         )
         result = [x for _, x in candidates_by_prob][:k]
+
+        print("EASE PREDICTION DONE")
 
         return result
 
@@ -89,7 +105,7 @@ class EASE(AlgorithmBase, ABC):
             Parameter(
                 "l2",
                 ParameterType.FLOAT,
-                0.1,  # I did not find a value in the paper, we can try tweaking the default value in the future
+                500,  # I did not find a value in the paper, we can try tweaking the default value in the future
                 help="L2-norm regularization",
                 help_key="ease_l2_help",
             ),

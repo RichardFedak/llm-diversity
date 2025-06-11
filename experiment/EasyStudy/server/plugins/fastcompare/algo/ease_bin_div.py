@@ -19,19 +19,15 @@ class EASE_BinDiv(AlgorithmBase, ABC):
     """
 
     def __init__(self, loader, alpha, n_candidates, positive_threshold, l2, **kwargs):
-        self._ratings_df = loader.ratings_df
+        self._ratings_df = None
         self._loader = loader
-        self._all_items = self._ratings_df.item.unique()
+        self._all_items = None
 
-        self._item_data = loader.items_df
-        self._all_categories = loader.get_all_categories()
-        self._get_item_idx_categories = loader.get_item_index_categories
+        self._item_data = None
+        self._all_categories = None
+        self._get_item_idx_categories = None
         
-        self._rating_matrix = (
-            self._loader.ratings_df.pivot(index="user", columns="item", values="rating")
-            .fillna(0)
-            .values
-        )
+        self._rating_matrix = None
 
         self._threshold = positive_threshold
         self._l2 = l2
@@ -39,7 +35,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         self._alpha = alpha
         self.NEG_INF = int(-10e6)
 
-        self._items_count = np.shape(self._rating_matrix)[1]
+        self._items_count = None
 
         self._weights = None
     
@@ -163,7 +159,24 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             return prod
 
     # One-time fitting of the algorithm for a predefined number of iterations
-    def fit(self):
+    def fit(self, loader):
+
+        self._ratings_df = loader.ratings_df
+        self._loader = loader
+        self._all_items = self._ratings_df.item.unique()
+
+        self._item_data = loader.items_df
+        self._all_categories = loader.get_all_categories()
+        self._get_item_idx_categories = loader.get_item_index_categories
+
+        self._rating_matrix = (
+            self._loader.ratings_df.pivot(index="user", columns="item", values="rating")
+            .fillna(0)
+            .values
+        )
+
+        self._items_count =  np.shape(self._rating_matrix)[1]
+
         X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
 
         # Compute Gram matrix (G = X^T @ X)
@@ -182,6 +195,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
     # Predict for the user
     def predict(self, selected_items, filter_out_items, k):
+        print("PREDICTING EASE BIN DIV")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
         candidates = np.setdiff1d(self._all_items, rat.item.unique())
@@ -218,6 +232,8 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             rating_row=user_vector,
             filter_out_items=filter_out_items
             )
+        
+        print("EASE BIN DIV PREDICTION DONE")
 
         return result
 
@@ -338,7 +354,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             Parameter(
                 "l2",
                 ParameterType.FLOAT,
-                0.1,  # I did not find a value in the paper, we can try tweaking the default value in the future
+                500,  # I did not find a value in the paper, we can try tweaking the default value in the future
                 help="L2-norm regularization",
                 help_key="ease_l2_help",
             ),
@@ -358,7 +374,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             Parameter(
                 "n_candidates",
                 ParameterType.INT,
-                500,
+                100,
                 help="How many candidate items should we consider for diversification procedure. Should be divisible by 2.",
             ),
         ]

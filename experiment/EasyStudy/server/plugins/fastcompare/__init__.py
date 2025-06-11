@@ -717,7 +717,7 @@ def long_initialization(guid):
             algorithm_displayed_name = conf["algorithm_parameters"][algorithm_idx]["displayed_name"]
             
             print(f"Training algorithm: {algorithm_displayed_name}")
-            algorithm.fit()
+            algorithm.fit(loader)
             print(f"Done training algorithm: {algorithm_displayed_name}")
 
             # Save the algorithm
