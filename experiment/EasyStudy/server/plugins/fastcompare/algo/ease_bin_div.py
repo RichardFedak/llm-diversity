@@ -12,38 +12,12 @@ from plugins.fastcompare.algo.algorithm_base import (
 
 from sklearn.preprocessing import QuantileTransformer
 
-class EASE_BinDiv(AlgorithmBase, ABC):
-    """Implementation of EASE algorithm + postprocessing utilizing diversification
-    procedure with binomial diversity metric
-    paper: https://dl.acm.org/doi/10.1145/3627043.3659555
-    """
 
-    def __init__(self, loader, alpha, n_candidates, positive_threshold, l2, **kwargs):
-        self._ratings_df = None
-        self._loader = loader
-        self._all_items = None
-
-        self._item_data = None
-        self._all_categories = None
-        self._get_item_idx_categories = None
-        
-        self._rating_matrix = None
-
-        self._threshold = positive_threshold
-        self._l2 = l2
-        self._n_candidates = n_candidates
-        self._alpha = alpha
-        self.NEG_INF = int(-10e6)
-
-        self._items_count = None
-
-        self._weights = None
-    
-    class binomial_diversity:
-        def __init__(self, all_categories, get_item_categories, rating_matrix):
+class Binomial_diversity:
+        def __init__(self, all_categories, get_item_categories, p_g_dict):
             self.all_categories = set(all_categories)
             self.category_getter = get_item_categories
-            self.rating_matrix = rating_matrix
+            self._p_g_dict = p_g_dict
 
         def __call__(self, rec_list):
             rec_list_categories = self._get_list_categories(rec_list)
@@ -67,25 +41,6 @@ class EASE_BinDiv(AlgorithmBase, ABC):
                 categories.extend(self.category_getter(item))
             return set(categories)
 
-        # Global part does not change for different users so we calculate it just once
-        @functools.lru_cache(maxsize=None)
-        def _p_g(self, g):
-            # Denominator is for every user take number of items the user has interacted with
-            # which reduces to nonzero entries in the rating_matrix
-            x = self.rating_matrix.astype(bool)
-            denom = x.sum()
-            nom = 0.0
-            
-            y = x.sum(axis=0)
-            for item, cnt in enumerate(y):
-                # Consider only items some user has interacted with that also have the given category
-                if cnt > 0 and g in self.category_getter(item):
-                    # Increase by the number of users who made the interaction with the item
-                    nom += cnt
-
-            p_g = nom / denom
-            return p_g
-
         # Coverage as in the Binomial algorithm paper
         def _coverage(self, rec_list, rec_list_categories):
             #rec_list_categories = self._get_list_categories(rec_list)
@@ -95,9 +50,8 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             
             prod = 1
             for g in not_rec_list_categories:
-                p = self._p_g(g)
-                prod *= np.power(self._binomial_probability(N, 0, p), 1.0 / len(self.all_categories))
-
+                p = self._p_g_dict[g]
+                prod *= np.power(self._binomial_probability(N, 0, p), 1.0 / len(self.all_categories))            
             return prod
         
         # Corresponds to conditional probability used in formulas (10) and (11) in original paper
@@ -109,7 +63,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
                 # so we further simplify this as P(x_g = l) / P(X_g > 0) and P(X_g > 0) can be set to 1 - P(X_g = 0)
                 # so we end up with
                 # P(x_g = l) / (1 - P(X_g = 0))
-                p = self._p_g(g)
+                p = self._p_g_dict[g]
                 s += (self._binomial_probability(N, l, p) / (1.0 - self._binomial_probability(N, 0, p)))
 
             return np.clip(1.0 - s, 0.0, 1.0)
@@ -138,25 +92,40 @@ class EASE_BinDiv(AlgorithmBase, ABC):
                 # so we further simplify this as P(x_g = l) / P(X_g > 0) and P(X_g > 0) can be set to 1 - P(X_g = 0)
                 # so we end up with
                 # P(x_g = l) / (1 - P(X_g = 0))
-                p = self._p_g(g)
+                p = self._p_g_dict[g]
                 s += (self._binomial_probability(N, l, p) / (1.0 - self._binomial_probability(N, 0, p)))
 
             return np.clip(1.0 - s, 0.0, 1.0)
+
+class EASE_BinDiv(AlgorithmBase, ABC):
+    """Implementation of EASE algorithm + postprocessing utilizing diversification
+    procedure with binomial diversity metric
+    paper: https://dl.acm.org/doi/10.1145/3627043.3659555
+    """
+
+    def __init__(self, loader, alpha, n_candidates, positive_threshold, l2, **kwargs):
+        self._ratings_df = None
+        self._loader = loader
+        self._all_items = None
+
+        self._item_data = None
+        self._all_categories = None
+        self._get_item_idx_categories = None
         
-        def _non_red(self, rec_list, rec_list_categories):
-            #rec_list_categories = self._get_list_categories(rec_list)
+        self._rating_matrix = None
+        self._p_g_dict = None
+        self._diversity_function = None
 
-            N = len(rec_list)
-            N_LIST_CATEGORIES = len(rec_list_categories)
+        self._threshold = positive_threshold
+        self._l2 = l2
+        self._n_candidates = n_candidates
+        self._alpha = alpha
+        self.NEG_INF = int(-10e6)
 
-            prod = 1.0
-            for g in rec_list_categories:
-                #num_movies_with_genre = get_num_movies_with_genre(rec_list, g)
-                k_g = len([x for x in rec_list if g in self.category_getter(x)])
-                p_cond = self._category_redundancy(g, k_g, N)
-                prod *= np.power(p_cond, 1.0 / N_LIST_CATEGORIES)
+        self._items_count = None
 
-            return prod
+        self._weights = None
+    
 
     # One-time fitting of the algorithm for a predefined number of iterations
     def fit(self, loader):
@@ -175,7 +144,32 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             .values
         )
 
+        print("RATING MATRIX SHAPE", self._rating_matrix.shape)
+
         self._items_count =  np.shape(self._rating_matrix)[1]
+
+        x = self._rating_matrix.astype(bool)
+        denom = x.sum()
+        item_counts = x.sum(axis=0)
+        p_g_dict = {g: 0.0 for g in self._all_categories}
+
+        for item, cnt in enumerate(item_counts):
+            if cnt > 0:
+                for g in self._get_item_idx_categories(item):
+                    p_g_dict[g] += cnt
+
+        for g in p_g_dict:
+            p_g_dict[g] /= denom
+
+        self._p_g_dict = p_g_dict
+
+        print("P_G_DICT DONE")
+
+        self._diversity_function = Binomial_diversity(
+            self._all_categories,
+            self._get_item_idx_categories,
+            self._p_g_dict
+            )
 
         X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
 
@@ -218,17 +212,11 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         rel_scores[selected_items] = self.NEG_INF
         rel_scores[filter_out_items] = self.NEG_INF
 
-        diversity_function = self.binomial_diversity(
-            self._all_categories,
-            self._get_item_idx_categories,
-            self._rating_matrix
-            )
-
         result = self.diversify(
             k=k, 
             rel_scores=rel_scores,
             alpha=self._alpha,
-            diversity_f=diversity_function,
+            diversity_f=self._diversity_function,
             rating_row=user_vector,
             filter_out_items=filter_out_items
             )
