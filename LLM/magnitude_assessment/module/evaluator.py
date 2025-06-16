@@ -77,6 +77,7 @@ class MovieEvaluator:
             existing_results = existing_results["evaluations"]
 
         model = genai.GenerativeModel(
+            model_name="gemini-2.0-flash-001",
             system_instruction=self.system_prompt,
             generation_config={
                 "response_mime_type": "application/json",

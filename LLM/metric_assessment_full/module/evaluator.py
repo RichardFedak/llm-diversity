@@ -46,10 +46,10 @@ class MovieEvaluator:
 
     def _generate_summary_text(self, summary):
         summary_text = (
-            f"Popularity Diversity: {summary['popularity_diversity']['reasoning']}\n"
-            f"Genre Diversity: {summary['genre_diversity']['reasoning']}\n"
-            f"Theme Diversity: {summary['theme_diversity']['reasoning']}\n"
-            f"Time Span: {summary['time_span']['reasoning']}\n"
+            f"Popularity Diversity: {summary['popularity_diversity']['value']}\n"
+            f"Genre Diversity: {summary['genre_diversity']['value']}\n"
+            f"Theme Diversity: {summary['theme_diversity']['value']}\n"
+            f"Time Span: {summary['time_span']['value']}\n"
             f"Franchise Inclusion: {'Yes' if summary['franchise_inclusion']['value'] else 'No'} - {summary['franchise_inclusion']['reasoning']}"
         )
         return summary_text
@@ -74,7 +74,7 @@ class MovieEvaluator:
             existing_results_map = {res["participation"]: res for res in existing_results["evaluations"]}
 
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash-002",
+            model_name="gemini-2.0-flash-001",
             system_instruction=self.system_prompt,
             generation_config={
                 "response_mime_type": "application/json",
