@@ -67,8 +67,8 @@ class EASE(AlgorithmBase, ABC):
         self._weights = B
 
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k):
-        print("PREDICTING EASE")
+    def predict(self, selected_items, filter_out_items, k, div_perception):
+        #print("PREDICTING EASE")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
         candidates = np.setdiff1d(self._all_items, rat.item.unique())
@@ -91,7 +91,7 @@ class EASE(AlgorithmBase, ABC):
         )
         result = [x for _, x in candidates_by_prob][:k]
 
-        print("EASE PREDICTION DONE")
+        #print("EASE PREDICTION DONE")
 
         return result
 

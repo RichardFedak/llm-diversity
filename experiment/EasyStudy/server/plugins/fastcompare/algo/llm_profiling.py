@@ -7,9 +7,12 @@ import numpy as np
 import textwrap
 from sentence_transformers import SentenceTransformer
 from pydantic import BaseModel
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from plugins.fastcompare.algo.algorithm_base import (
     AlgorithmBase,
+    Parameter,
+    ParameterType,
 )
 
 class Representant(BaseModel):
@@ -213,7 +216,35 @@ class PlotDiversityHandler(RepresentantGenerator):
 
 class LLMProfiling(AlgorithmBase, ABC):
 
-    def __init__(self, loader, **kwargs):
+    def __init__(self, loader, positive_threshold, l2, **kwargs):
+        self._ratings_df = None
+        self._loader = None
+        self._all_items = None
+
+        self._model = None
+
+        self._hdbscan_clusterer = None
+
+        self.stimulus_handlers: dict[DiversityStimulus, type[RepresentantGenerator]] = {
+            DiversityStimulus.GENRES: GenresDiversityHandler,
+            DiversityStimulus.PLOT: PlotDiversityHandler,
+        }
+
+        self.diversity_stimulus = None
+
+        # Ease part
+
+        self._rating_matrix = None
+
+        self._threshold = positive_threshold
+        self._l2 = l2
+
+        self._items_count = None
+
+        self._weights = None
+
+    def fit(self, loader):
+
         self._ratings_df = loader.ratings_df
         self._loader = loader
         self._all_items = self._ratings_df.item.unique()
@@ -226,26 +257,49 @@ class LLMProfiling(AlgorithmBase, ABC):
             metric='cosine',
         )
 
-        self.stimulus_handlers: dict[DiversityStimulus, type[RepresentantGenerator]] = {
-            DiversityStimulus.GENRES: GenresDiversityHandler,
-            DiversityStimulus.PLOT: PlotDiversityHandler,
-        }
+        self._rating_matrix = (
+            self._loader.ratings_df.pivot(index="user", columns="item", values="rating")
+            .fillna(0)
+            .values
+        )
 
-        self.diversity_stimulus = None
+        self._items_count = np.shape(self._rating_matrix)[1]
 
-    def fit(self):
-        pass
+        X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
+
+        # Compute Gram matrix (G = X^T @ X)
+        G = X.T @ X
+        G += self._l2 * np.eye(self._items_count)  # Regularization
+
+        # Compute the inverse of G
+        P = np.linalg.inv(G)
+
+        # Compute B matrix
+        diag_P = np.diag(P)
+        B = P / (-diag_P[:, None])  # Normalize rows by diagonal elements
+        np.fill_diagonal(B, 0)  # Set diagonal to zero
+
+        self._weights = B
 
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k):
-        from flask import session
-        print(session["diversity_perception"])
-        print("Selected", selected_items)
-        print("Filter out", filter_out_items)
+    def predict(self, selected_items, filter_out_items, k, div_perception):
+        #print("Selected", selected_items)
+        #print("Filter out", filter_out_items)
+
+        indices = list(selected_items)
+        user_vector = np.zeros((self._items_count,), dtype=np.float32)
+        for i in indices:
+            user_vector[i] = 1.0
+
+        relevance_scores = np.dot(user_vector, self._weights)
+
+        rel = np.abs(relevance_scores)
+        rel_z = (rel - rel.mean()) / (rel.std() + 1e-8)
+        relevance_scores = 1 / (1 + np.exp(-rel_z))
 
         MAX_CLUSTERS = 3
 
-        ratings = session["diversity_perception"]
+        ratings = div_perception
 
         def rating_to_effect(avg_rating):
             return (avg_rating - 3) / 2.0 # rating to [-1, 1] range
@@ -283,35 +337,36 @@ class LLMProfiling(AlgorithmBase, ABC):
 
         self.diversity_stimulus = DiversityStimulus.GENRES if genre_weight > plot_weight else DiversityStimulus.PLOT
 
-        print(f"Genre weight: {genre_weight:.2f}")
-        print(f"Plot weight: {plot_weight:.2f}")
+        #print(f"Genre weight: {genre_weight:.2f}")
+        #print(f"Plot weight: {plot_weight:.2f}")
 
         # Prepare user-preferred movies based on selected items
         user_preferred_movies = []
         for item in selected_items:
             user_preferred_movies.append(self._loader.items_df.iloc[item])
 
-        # print("PREF MOVIES:", user_preferred_movies)
+        # #print("PREF MOVIES:", user_preferred_movies)
 
         # Update the final embedding calculation with the genre and plot weights
         final_embedding = genre_weight * self._loader.genres_embeddings + plot_weight * self._loader.plot_embeddings
-        print("final embed shape", final_embedding.shape)
+        #print("final embed shape", final_embedding.shape)
         
         mask = np.ones(final_embedding.shape[0], dtype=bool)
-        mask[filter_out_items] = False
+        mask[filter_out_items] = 0
+        relevance_scores[filter_out_items] = 0
         original_indices = np.where(mask)[0]
         emb_matrix = final_embedding[mask]
         
         user_genre_embeddings = self._model.encode(["Genres: " + movie['genres'] for movie in user_preferred_movies])
         user_plot_embeddings = self._model.encode(["Plot: " + movie['plot'] for movie in user_preferred_movies])
         user_embeddings = (genre_weight * user_genre_embeddings + plot_weight * user_plot_embeddings) / 2
-        print(user_embeddings.shape)
+        #print(user_embeddings.shape)
 
-        print("clustering")
+        #print("clustering")
         
         cluster_labels = self._hdbscan_clusterer.fit_predict(user_embeddings)
-        print("clustering DONE")
-        print(cluster_labels)
+        #print("clustering DONE")
+        #print(cluster_labels)
         clusters = {}
 
         # Check if clusters have been found
@@ -325,12 +380,12 @@ class LLMProfiling(AlgorithmBase, ABC):
             # Get at most 3 largest clusters, igrnoring noise
             labels, counts = np.unique(cluster_labels[cluster_labels != -1], return_counts=True)
             top_clusters = labels[np.argsort(-counts)[:MAX_CLUSTERS]]
-            print("Top clusters:", top_clusters)
+            #print("Top clusters:", top_clusters)
 
-            mask = ~np.isin(cluster_labels, top_clusters)
-            print(cluster_labels)
-            cluster_labels[mask] = -1
-            print(cluster_labels)
+            cluster_mask = ~np.isin(cluster_labels, top_clusters)
+            #print(cluster_labels)
+            cluster_labels[cluster_mask] = -1
+            #print(cluster_labels)
 
             for i in range(len(user_preferred_movies)):
                 label = cluster_labels[i]
@@ -339,46 +394,58 @@ class LLMProfiling(AlgorithmBase, ABC):
                     continue # Skip noise movies
                 if label not in clusters:
                     clusters[str(label)] = []
-                print(f"Adding movie {movie_info['title']} to cluster {label}")
+                #print(f"Adding movie {movie_info['title']} to cluster {label}")
                 clusters[str(label)].append(movie_info)
 
-        representant_embeddings_dict = {}
-        representants = []
+        tasks = list(clusters.items())
 
-        print("\n--- Generating Cluster Representants ---")
-        for cluster_label, cluster_data in clusters.items():
-            print(f"Generating representant for Cluster {cluster_label}...")
-            if cluster_label.startswith("random_"):
-                representant = Representant(genres=cluster_data["genres"], plot=cluster_data["plot"])
+        def _produce(label, data):
+            """Runs *inside* a worker thread — keep heavy code here."""
+            if label.startswith("random_"):
+                rep = Representant(genres=data["genres"], plot=data["plot"])
             else:
-                representant = self._generate_representant([m for m in cluster_data], self.diversity_stimulus)
-            if representant:
-                print(f"Representant {cluster_label}:", representant)
+                # potentially slow call
+                rep = self._generate_representant(list(data), self.diversity_stimulus)
 
-                representants.append(representant)
-            
-                rep_text = f"Genres: {representant.genres} Plot: {representant.plot}"
-                emb = self._model.encode([rep_text])
-                representant_embeddings_dict[cluster_label] = emb[0]
-            else:
-                print(f"Could not generate representant for cluster: {cluster_label}")
+            if not rep:                         # return sentinel on failure
+                return label, None, None
+
+            rep_text = f"Genres: {rep.genres} Plot: {rep.plot}"
+            emb_vec = self._model.encode([rep_text])[0]
+
+            return label, rep, emb_vec
+
+        representants                 = []
+        representant_embeddings_dict  = {}
+
+        with ThreadPoolExecutor(max_workers=len(tasks)) as pool:
+            futures = [pool.submit(_produce, lbl, data) for lbl, data in tasks]
+
+            for fut in as_completed(futures):
+                label, rep, emb = fut.result()
+                if rep is not None:
+                    representants.append(rep)
+                    representant_embeddings_dict[label] = emb
         
-        print("\n--- Generating Diversity Representant ---")
+        #print("\n--- Generating Diversity Representant ---")
         div_representant = self._generate_diversity_representant(representants, self.diversity_stimulus)
         if div_representant:
-            print(f"Generated diversity representant:", div_representant)
+            #print(f"Generated diversity representant:", div_representant)
             rep_genre_embeddings = self._model.encode(["Genres: " + div_representant.genres])
             rep_plot_embeddings = self._model.encode(["Plot: " + div_representant.plot])
             rep_embeddings = (genre_weight * rep_genre_embeddings + plot_weight * rep_plot_embeddings) / 2
             representant_embeddings_dict["diversity"] = rep_embeddings[0]
         else:
-            print("Could not generate diversity representant.")
+            #print("Could not generate diversity representant.")
+            pass
 
         # Find similar embeddings, movies
         used_items = set()
         cluster_candidates = {}
         for cluster_id, rep_emb in representant_embeddings_dict.items():
             similarities = cosine_similarity(rep_emb.reshape(1, -1), emb_matrix)[0]
+            # multiply similarities by preds item wise
+            similarities = similarities * relevance_scores[mask]
             closest_indices = np.argsort(-similarities)[:k]
             top_k_original_indices = original_indices[closest_indices]
             cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices if int(i) not in used_items]
@@ -398,6 +465,8 @@ class LLMProfiling(AlgorithmBase, ABC):
                     result.append(candidate)
                     used_items.add(candidate)
             i += 1
+
+        #print("LLMprofiling done")
 
         return result[:k]
 
@@ -420,5 +489,17 @@ class LLMProfiling(AlgorithmBase, ABC):
     @classmethod
     def parameters(cls):
         return [
-            
+            Parameter(
+                "l2",
+                ParameterType.FLOAT,
+                500,  # I did not find a value in the paper, we can try tweaking the default value in the future
+                help="L2-norm regularization",
+                help_key="ease_l2_help",
+            ),
+            Parameter(  # at the moment, we assume that greater ratings are better
+                "positive_threshold",
+                ParameterType.FLOAT,
+                2.5,
+                help="Threshold for conversion of n-ary rating into binary (positive/negative).",
+            ),
         ]

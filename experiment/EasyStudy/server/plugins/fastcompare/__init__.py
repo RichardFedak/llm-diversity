@@ -9,6 +9,8 @@ from pathlib import Path
 import shutil
 import sys
 import traceback
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import numpy as np
 [sys.path.append(i) for i in ['.', '..']]
@@ -39,6 +41,8 @@ languages = load_languages(os.path.dirname(__file__))
 
 
 HIDE_LAST_K = 1000000 # Effectively hides everything
+
+ALGORITHM_CACHE = {}
 
 # Implementation of this function can differ among plugins
 def get_lang():
@@ -351,22 +355,65 @@ def item_search():
 
     return jsonify(res)
 
-def prepare_recommendations(loader, conf, recommendations, selected_movies, filter_out_movies, k):
+def get_or_load_algorithm(name, loader, params, factory):
+    if name not in ALGORITHM_CACHE:
+        print(f"{name} - Not in cache, loading...")
+        algo_obj = factory(loader, **filter_params(params, factory))
+        load_algorithm(algo_obj, session["user_study_guid"], name)
+        ALGORITHM_CACHE[name] = algo_obj
+    else:
+        print(f"{name} - Loaded from cache.")
+    return ALGORITHM_CACHE[name]
+
+def prepare_recommendations(loader, conf, recommendations,
+                            selected_movies, filter_out_movies, k):
+
     algorithm_factories = load_algorithms()
-    algorithms = conf["selected_algorithms"]
-    print(f"Algorithm factories = {algorithm_factories}")
-    for algorithm_idx, algorithm_name in enumerate(algorithms):
-        # Construct the algorithm
-        algorithm_displayed_name = conf["algorithm_parameters"][algorithm_idx]["displayed_name"]
-        factory = algorithm_factories[algorithm_name]
-        algorithm = factory(loader, **filter_params(conf["algorithm_parameters"][algorithm_idx], factory))
-        load_algorithm(algorithm, session["user_study_guid"], algorithm_displayed_name)
-        recommended_items = algorithm.predict(selected_movies, filter_out_movies, k=k)
+    algorithms_cfg = conf["selected_algorithms"]
 
-        if conf["shuffle_recommendations"]:
-            np.random.shuffle(recommended_items)
+    algo_instances = []  # [(display_name, algo_obj)]
 
-        recommendations[algorithm_displayed_name][-1] = enrich_results(recommended_items, loader)
+    load_start = time.perf_counter()
+
+    for idx, algo_name in enumerate(algorithms_cfg):
+        params = conf["algorithm_parameters"][idx]
+        disp = params["displayed_name"]
+
+        factory = algorithm_factories[algo_name]
+        algo_obj = get_or_load_algorithm(disp, loader, params, factory)
+
+        algo_instances.append((disp, algo_obj))
+
+    load_end = time.perf_counter()
+    print(f"\nLoading time: {load_end - load_start:.2f} seconds\n")
+
+    def _predict(algo_obj, div_perception=None):
+        return algo_obj.predict(selected_movies, filter_out_movies, k=k,
+                                div_perception=div_perception)
+
+    predictions = {}
+    div_perception = session["diversity_perception"]
+
+    predict_start = time.perf_counter()
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        fut_to_name = {
+            pool.submit(_predict, a, div_perception): name
+            for name, a in algo_instances
+        }
+
+        for fut in as_completed(fut_to_name):
+            name = fut_to_name[fut]
+            recs = fut.result()
+            predictions[name] = recs
+
+    predict_end = time.perf_counter()
+    print(f"\nPrediction time: {predict_end - predict_start:.2f} seconds\n")
+
+    for name, recs in predictions.items():
+        if conf.get("shuffle_recommendations"):
+            np.random.shuffle(recs)
+        recommendations[name][-1] = enrich_results(recs, loader)
 
     return recommendations
 

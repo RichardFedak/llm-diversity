@@ -50,7 +50,7 @@ class AlgorithmBase(ABC):
     # Performs prediction for new, previously unknown user, by simulating his history using a list of selected items.
     # It should return list of item indices of the k recommended items. Note, that none of the filter_out_items can be present in the result
     @abstractmethod
-    def predict(selected_items, filter_out_items, k):
+    def predict(selected_items, filter_out_items, k, div_perception):
         pass
 
     # Names have to be unique!

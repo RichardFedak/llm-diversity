@@ -144,7 +144,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             .values
         )
 
-        print("RATING MATRIX SHAPE", self._rating_matrix.shape)
+        #print("RATING MATRIX SHAPE", self._rating_matrix.shape)
 
         self._items_count =  np.shape(self._rating_matrix)[1]
 
@@ -163,7 +163,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
         self._p_g_dict = p_g_dict
 
-        print("P_G_DICT DONE")
+        #print("P_G_DICT DONE")
 
         self._diversity_function = Binomial_diversity(
             self._all_categories,
@@ -188,8 +188,8 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         self._weights = B
 
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k):
-        print("PREDICTING EASE BIN DIV")
+    def predict(self, selected_items, filter_out_items, k, div_perception):
+        #print("PREDICTING EASE BIN DIV")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
         candidates = np.setdiff1d(self._all_items, rat.item.unique())
@@ -205,8 +205,8 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
         rel_scores = np.dot(user_vector, self._weights)
 
-        print("rel scores", rel_scores.shape)
-        print("filter out", filter_out_items)
+        #print("rel scores", rel_scores.shape)
+        #print("filter out", filter_out_items)
 
         # mask out scores for already seen movies
         rel_scores[selected_items] = self.NEG_INF
@@ -221,7 +221,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             filter_out_items=filter_out_items
             )
         
-        print("EASE BIN DIV PREDICTION DONE")
+        #print("EASE BIN DIV PREDICTION DONE")
 
         return result
 
