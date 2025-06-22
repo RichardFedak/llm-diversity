@@ -12,11 +12,11 @@ class MostPopular(AlgorithmBase, ABC):
         self._loader = loader
         self._all_items = self._ratings_df.item.unique()
 
-    def fit(self):
+    def fit(self, _):
         pass
 
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k):
+    def predict(self, selected_items, filter_out_items, k, div_perception):
         ratings = self._ratings_df.groupby("item").size().sort_values(ascending=False)
 
         result = ratings.index.values.tolist()
