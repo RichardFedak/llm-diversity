@@ -1,4 +1,17 @@
 {% include 'header.html' %}
+<style>
+.custom-image {
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.custom-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+</style>
 <div id="app">
 <b-container fluid>
     {% if elicitation_hint_override is defined and elicitation_hint_override is not none  %}
@@ -6,8 +19,14 @@
       {{ elicitation_hint_override | safe }}
     </div>
     {% else %}
-    <b-jumbotron lead="{{hint_lead}}" class="smallJumbotron" header="{{header}}">
-      {{hint}}
+    <b-jumbotron lead="Lets start with what you like"
+    class="smallJumbotron" header="{{header}}">
+      Please, <strong>select the movies that you have seen and that you liked</strong>. It is advisable to <strong>select at least 5-10 movies</strong> for the correct recommendation functionality.
+      Movies are selected by clicking on them and each selected movie is highlighted in green border. 
+      If you want to load more movies, you can use the button at the bottom of the page. 
+      Alternatively, you can use search bar at the top to <strong>search for movies that you know and like</strong>. 
+      This step will help us to identify and better understand your preferences. 
+      When a mouse cursor is placed over a movie, its name, genres and plot will be shown.
     </b-jumbotron>
     {% endif %}
     <!-- <i class="{{impl}}" id="impl"></i> -->
@@ -50,7 +69,7 @@
     See https://stackoverflow.com/questions/46758441/preventing-vue-from-aggresively-reusing-dom-elements -->
     <b-row class="mb-3" align-h="center" align-content="center" v-for="row in rows">
       <b-col class="mb-3" class="align-middle" v-for="col in row">
-        <b-img :key="col.movie.idx" class="mb-3" style="width: 175px; height: auto;" center :src="col.movie.url" v-on:click="onSelectMovie($event, col)" :id="col.movie.idx" :alt="col.movieName" v-b-tooltip.hover :title="col.movieName" />
+        <b-img :key="col.movie.idx" class="mb-3 custom-image" style="width: 175px; height: auto;" center :src="col.movie.url" v-on:click="onSelectMovie($event, col)" :id="col.movie.idx" :alt="col.movieName" v-b-tooltip.html.hover="{ title: col.movieName }" :title="col.movieName" />
       </b-col>
     </b-row>
     <b-row align-h="center">

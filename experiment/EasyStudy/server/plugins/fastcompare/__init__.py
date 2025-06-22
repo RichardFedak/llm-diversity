@@ -189,9 +189,9 @@ def get_initial_data():
 
     for i in range(len(x)):
         input_name = f"{config['selected_data_loader']}_{x[i]['movie_id']}"
-        x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + \
-        "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + " " + \
-        x[i]["plot"]
+        x[i]["movie"] = "<strong>"+tr(input_name, x[i]['movie']) + "</strong><br>" + \
+                "<em>"+"|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + "</em><br> " + \
+                x[i]["plot"]
     
     el_movies.extend(x)
     session["elicitation_movies"] = el_movies
@@ -211,8 +211,8 @@ def get_diversity_data():
         # Harry Potter and the Chamber of Secrets (2002)  Harry Potter and the Prisoner of Azkaban (2004)
         {"pair": [5816, 8368], "version": "no_div", "genre_sim": 0.9, "plot_sim": 0.8},
 
-        # The Creator (2023)                              Total Recall (2012)
-        {"pair": [290573, 95875], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.3},
+        # Jurassic Park III (2001)                        Total Recall (2012)
+        {"pair": [4638, 95875], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.3},
 
         # Tag (2018)                                      Yes Man (2008)
         {"pair": [188797, 64969], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.1},
@@ -242,7 +242,7 @@ def get_diversity_data():
             title = tr(f"{config['selected_data_loader']}_{movie_id}", row.title)
             genres = row.genres.split("|")
             genres_tr = "|".join([tr(f"genre_{g.lower()}") for g in genres])
-            full_title = f"{title} {genres_tr} {row['plot']}"
+            full_title = f"<strong>{title}</strong><br><em>{genres_tr}</em><br>{row['plot']}"
             pair_data.append({
                 "movie_id": movie_id,
                 "movieName": full_title,
@@ -341,7 +341,6 @@ def search_for_item(pattern, tr=None):
 
 @bp.route("/item-search", methods=["GET"])
 def item_search():
-    print('caalled')
     pattern = request.args.get("pattern")
     if not pattern:
         return make_response("", 404)
@@ -552,8 +551,8 @@ def compare_algorithms():
         x = d["movies"]
         for i in range(len(x)):
             input_name = f"{conf['selected_data_loader']}_{x[i]['movie_id']}"
-            x[i]["movie"] = tr(input_name, x[i]['movie']) + " " + \
-                "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + " " + \
+            x[i]["movie"] = "<strong>"+tr(input_name, x[i]['movie']) + "</strong><br>" + \
+                "<em>"+"|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + "</em><br> " + \
                 x[i]["plot"]
             #x[i]["movie"] = tr(str(x[i]["movie_id"])) + " " + "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]])
 

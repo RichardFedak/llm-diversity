@@ -1,8 +1,57 @@
 {% include 'header.html' %}
 <style>
-    .verticalSeparator {
-        border-left: 10px solid red;
+.verticalSeparator {
+    border-left: 2px solid #dee2e6;
+    padding-left: 16px;
+    margin-left: 8px;
+}
+
+.verticalSeparatorNone {
+    border-left: 2px solid #fff;
+    padding-left: 16px;
+    margin-left: 8px;
+}
+
+.algorithm-title {
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 8px;
+}
+
+.custom-image {
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 120px;
+    height: auto;
+}
+
+.custom-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rating-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #495057;
+    margin-top: 8px;
+}
+
+.variant-row {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+}
+
+@media (max-width: 1024px) {
+    .custom-image {
+        width: 70px;
     }
+    .wrap-image {
+        width: auto;
+    }
+}
 </style>
 <div id="app">
     <b-container fluid>
@@ -12,30 +61,53 @@
             <h5>({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})</h5>
         </div>
         {% else %}
-        <b-jumbotron class="smallJumbotron" header="{{header}} ({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})" lead="{{hint_lead}}" header-level="4">
-            {{hint}}
-            <strong>{{note}}:</strong> {{note_text}}
+        <b-jumbotron class="smallJumbotron" header="{{header}} ({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})" lead="Select movies that you would consider to watch / buy." header-level="4">
+            <strong>Movies are selected by clicking on them</strong> and each selected movie is highlighted in green border. 
+            If you do not like any of the recommended movies, there is a button at the bottom of this page that you should check. 
+            When a mouse cursor is placed over a movie, its name, genres and plot will be shown. 
+            <strong>Completion of each step is final</strong> and you cannot return to previous steps (pages) - if necessary, you can start again from the beginning. 
+            <strong>Note:</strong> if movie is present in output of multiple algorithms, it is automatically selected for you once you click on any of its occurrences.
         </b-jumbotron>
         {% endif %}
 
         <!-- https://stackoverflow.com/questions/43999618/how-to-define-a-temporary-variable-in-vue-js-template -->
-        <b-row class="ml-1 mr-1">
+        <b-row class="ml-1 mr-1 mt-3">
             {% if result_layout == "columns" or result_layout == "column-single" %}
-            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)" :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : ''">
+            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)" :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
                 <b-row align-h="center">
-                    <h5>{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
-                </b-row>
-                <b-row align-h="center" class="mb-1 mt-1" v-for="row in variantResults">
-                    <b-col sm="auto" class="align-middle" v-for="col in row">
-                        <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx" style="width: 175px; height: auto;" center :src="col.url" v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))" :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
-                    </b-col>
-                </b-row>
-                <b-row align-h="center">
-                    <b-col sm="4">
-                        <label for="rating-sm" class="mt-1">{{algorithm_satisfaction}}</label>
-                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))" v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))" show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
-                    </b-col>
-                </b-row>
+                <h5 class="algorithm-title text-center">{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
+            </b-row>
+
+            <b-row align-h="center" class="variant-row" v-for="row in variantResults">
+                <b-col sm="auto" class="align-middle pr-1 pl-1 wrap-image" v-for="col in row">
+                    <b-img 
+                        class="custom-image"
+                        :id="variantNames[algoIdx] + '_' + col.movie_idx"
+                        :src="col.url"
+                        v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
+                        :name="col.movie_idx"
+                        :alt="col.movie"
+                        v-b-tooltip.html.hover="{ title: col.movieName }"
+                        :title="col.movie"
+                    />
+                </b-col>
+            </b-row>
+
+            <b-row align-h="center">
+            <b-col sm="12" class="text-center">
+                <label for="rating-sm" class="mt-1">{{algorithm_satisfaction}}</label>
+                <b-form-rating
+                :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))"
+                v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))"
+                show-value
+                show-value-max
+                id="rating-sm"
+                size="sm"
+                ></b-form-rating>
+            </b-col>
+            </b-row>
+
+
             </b-col>
             {%elif result_layout == "rows" or result_layout == "row-single" %}
             <b-col align-h="center">

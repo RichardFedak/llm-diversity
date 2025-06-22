@@ -1,11 +1,28 @@
 {% include 'header.html' %}
+<style>
+.custom-image {
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.custom-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+</style>
 <div id="app">
   <b-container fluid>
-    <b-jumbotron lead="TODO... Rate the diversity of the movie pairs" class="smallJumbotron" header="Diversity perception">
-      Rate the movie's diversity by selecting one number. 1 means minimal or no diversity, while 5 signifies high diversity.
+    <b-jumbotron lead="Rate the diversity of movie pairs"
+    class="smallJumbotron" header="Diversity perception">
+      You are given 5 pairs of movies. For each pair, please select a rating from 1 to 5 based on <strong>how diverse you perceive the pair</strong> to be.
+      A rating of 1 indicates no diversity, while a rating of 5 indicates high diversity. 
+      Your responses will help us understand your perception of diversity in movies. 
+      Please be honest and thoughtful in your ratings.
     </b-jumbotron>
 
-    <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4">
+    <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4 mt-4">
       <b-row align-h="center">
         <b-col cols="auto" v-for="(col, index) in pair.movies" :key="col.movie_id">
           <b-img
@@ -16,8 +33,8 @@
             width="175"
             fluid
             center
-            class="mb-3"
-            v-b-tooltip.hover
+            class="mb-3 custom-image"
+            v-b-tooltip.html.hover="{ title: col.movieName }"
           ></b-img>
         </b-col>
       </b-row>
