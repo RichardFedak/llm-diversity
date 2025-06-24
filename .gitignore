@@ -6,3 +6,4 @@ papers/
 __pycache__
 **/*.json
 *.npy
+*.pdf
