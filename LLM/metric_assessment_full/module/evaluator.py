@@ -13,14 +13,13 @@ class MovieFields(Enum):
     GENRES = "genres"
 
 class MovieEvaluator:
-    def __init__(self, api_key, evaluation_name, system_prompt=None, input_fields=None, include_summary=False, temperature=0):
+    def __init__(self, api_key, evaluation_name, system_prompt=None, input_fields=None, include_summary=False):
         """Initializes the MovieEvaluator with API key and configuration."""
         genai.configure(api_key=api_key)
         self.system_prompt = system_prompt
         self.input_fields = input_fields
         self.evaluation_name = evaluation_name
         self.include_summary = include_summary
-        self.temperature = temperature
         self.MAX_REQUESTS_PER_MINUTE = 15
         self.REQUEST_INTERVAL = 60 / self.MAX_REQUESTS_PER_MINUTE
         self.results = []
@@ -77,8 +76,7 @@ class MovieEvaluator:
             model_name="gemini-2.0-flash-001",
             system_instruction=self.system_prompt,
             generation_config={
-                "response_mime_type": "application/json",
-                "temperature":self.temperature
+                "response_mime_type": "application/json"
                 }
         )
 

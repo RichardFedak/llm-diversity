@@ -13,14 +13,13 @@ class MovieFields(Enum):
     GENRES = "genres"
 
 class MovieEvaluator:
-    def __init__(self, api_key, evaluation_name, system_prompt=None, input_fields=None, include_summary=False, temperature=0):
+    def __init__(self, api_key, evaluation_name, system_prompt=None, input_fields=None, include_summary=False):
         """Initializes the MovieEvaluator with API key and configuration."""
         genai.configure(api_key=api_key)
         self.system_prompt = system_prompt
         self.input_fields = input_fields
         self.evaluation_name = evaluation_name
         self.include_summary = include_summary
-        self.temperature = temperature
         self.MAX_REQUESTS_PER_MINUTE = 15
         self.REQUEST_INTERVAL = 60 / self.MAX_REQUESTS_PER_MINUTE
         self.results = []
@@ -46,10 +45,10 @@ class MovieEvaluator:
 
     def _generate_summary_text(self, summary):
         summary_text = (
-            f"Popularity Diversity: {summary['popularity_diversity']['reasoning']}\n"
-            f"Genre Diversity: {summary['genre_diversity']['reasoning']}\n"
-            f"Theme Diversity: {summary['theme_diversity']['reasoning']}\n"
-            f"Time Span: {summary['time_span']['reasoning']}\n"
+            f"Popularity Diversity: {summary['popularity_diversity']['value']}\n"
+            f"Genre Diversity: {summary['genre_diversity']['value']}\n"
+            f"Theme Diversity: {summary['theme_diversity']['value']}\n"
+            f"Time Span: {summary['time_span']['value']}\n"
             f"Franchise Inclusion: {'Yes' if summary['franchise_inclusion']['value'] else 'No'} - {summary['franchise_inclusion']['reasoning']}"
         )
         return summary_text
@@ -67,6 +66,20 @@ class MovieEvaluator:
     def _convert_to_indices(self, char_list):
         return [ord(char.upper()) - ord('A') for char in char_list]
 
+    def _get_int(self, value):
+        if isinstance(value, int):
+            return value
+        elif isinstance(value, float):
+            return int(value)
+        elif isinstance(value, str):
+            try:
+                return int(float(value))
+            except ValueError:
+                return None
+        else:
+            return None
+
+
     def evaluate_data(self, data, gold_standard_field='selected'):
         """Evaluates movie data, logs results to a JSON file, and prints summary."""
         json_log_file = f"./results/{self.evaluation_name}.json"
@@ -80,8 +93,7 @@ class MovieEvaluator:
             model_name="gemini-2.0-flash-001",
             system_instruction=self.system_prompt,
             generation_config={
-                "response_mime_type": "application/json",
-                "temperature":self.temperature
+                "response_mime_type": "application/json"
                 }
         )
 
@@ -148,7 +160,7 @@ class MovieEvaluator:
                     valid_outputs += 1
                     final_ordering = self._convert_to_indices(sorted(output["diversity_scores"], key=output["diversity_scores"].get))
                     fixed_order = ["A", "B", "C"]
-                    approx_scores = [round((output["diversity_scores"][key] / 10), 2) for key in fixed_order]
+                    approx_scores = [round((self._get_int(output["diversity_scores"][key]) / 10), 2) for key in fixed_order]
                     correctness = final_ordering == gold_most_diverse
                     if correctness:
                         print("-OK-")
