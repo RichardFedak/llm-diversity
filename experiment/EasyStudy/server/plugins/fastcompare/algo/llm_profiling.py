@@ -232,17 +232,6 @@ class LLMProfiling(AlgorithmBase, ABC):
 
         self.diversity_stimulus = None
 
-        # Ease part
-
-        self._rating_matrix = None
-
-        self._threshold = positive_threshold
-        self._l2 = l2
-
-        self._items_count = None
-
-        self._weights = None
-
     def fit(self, loader):
 
         self._ratings_df = loader.ratings_df
@@ -257,41 +246,17 @@ class LLMProfiling(AlgorithmBase, ABC):
             metric='cosine',
         )
 
-        self._rating_matrix = (
-            self._loader.ratings_df.pivot(index="user", columns="item", values="rating")
-            .fillna(0)
-            .values
-        )
-
-        self._items_count = np.shape(self._rating_matrix)[1]
-
-        X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
-
-        # Compute Gram matrix (G = X^T @ X)
-        G = X.T @ X
-        G += self._l2 * np.eye(self._items_count)  # Regularization
-
-        # Compute the inverse of G
-        P = np.linalg.inv(G)
-
-        # Compute B matrix
-        diag_P = np.diag(P)
-        B = P / (-diag_P[:, None])  # Normalize rows by diagonal elements
-        np.fill_diagonal(B, 0)  # Set diagonal to zero
-
-        self._weights = B
-
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k, div_perception):
+    def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
         #print("Selected", selected_items)
         #print("Filter out", filter_out_items)
 
         indices = list(selected_items)
-        user_vector = np.zeros((self._items_count,), dtype=np.float32)
+        user_vector = np.zeros((items_count,), dtype=np.float32)
         for i in indices:
             user_vector[i] = 1.0
 
-        relevance_scores = np.dot(user_vector, self._weights)
+        relevance_scores = np.dot(user_vector, weights)
 
         rel = np.abs(relevance_scores)
         rel_z = (rel - rel.mean()) / (rel.std() + 1e-8)

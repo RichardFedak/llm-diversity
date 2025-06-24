@@ -226,7 +226,6 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
     def __init__(self, loader, **kwargs):
         self._ratings_df = None
         self._loader = None
-        self._all_items = None
 
         self._model = None
 
@@ -242,7 +241,6 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
     def fit(self, loader):
         self._ratings_df = loader.ratings_df
         self._loader = loader
-        self._all_items = self._ratings_df.item.unique()
 
         self._model = SentenceTransformer('all-MiniLM-L6-v2')
 
@@ -252,16 +250,8 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
             metric='cosine',
         )
 
-        self._rating_matrix = (
-            self._loader.ratings_df.pivot(index="user", columns="item", values="rating")
-            .fillna(0)
-            .values
-        )
-
-        self._items_count = np.shape(self._rating_matrix)[1]
-
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k, div_perception):
+    def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
         #print("Selected", selected_items)
         #print("Filter out", filter_out_items)
 

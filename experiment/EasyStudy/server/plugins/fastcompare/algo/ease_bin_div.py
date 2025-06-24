@@ -122,11 +122,6 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         self._alpha = alpha
         self.NEG_INF = int(-10e6)
 
-        self._items_count = None
-
-        self._weights = None
-    
-
     # One-time fitting of the algorithm for a predefined number of iterations
     def fit(self, loader):
 
@@ -144,10 +139,6 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             .values
         )
 
-        #print("RATING MATRIX SHAPE", self._rating_matrix.shape)
-
-        self._items_count =  np.shape(self._rating_matrix)[1]
-
         x = self._rating_matrix.astype(bool)
         denom = x.sum()
         item_counts = x.sum(axis=0)
@@ -163,32 +154,14 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
         self._p_g_dict = p_g_dict
 
-        #print("P_G_DICT DONE")
-
         self._diversity_function = Binomial_diversity(
             self._all_categories,
             self._get_item_idx_categories,
             self._p_g_dict
             )
 
-        X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
-
-        # Compute Gram matrix (G = X^T @ X)
-        G = X.T @ X
-        G += self._l2 * np.eye(self._items_count)  # Regularization
-
-        # Compute the inverse of G
-        P = np.linalg.inv(G)
-
-        # Compute B matrix
-        diag_P = np.diag(P)
-        B = P / (-diag_P[:, None])  # Normalize rows by diagonal elements
-        np.fill_diagonal(B, 0)  # Set diagonal to zero
-
-        self._weights = B
-
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k, div_perception):
+    def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
         #print("PREDICTING EASE BIN DIV")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
@@ -199,11 +172,11 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             # to avoid empty recommendation, we just sample random candidates
             return np.random.choice(candidates, size=k, replace=False).tolist()
         indices = list(selected_items)
-        user_vector = np.zeros((self._items_count,), dtype=np.float32)
+        user_vector = np.zeros((items_count,), dtype=np.float32)
 
         user_vector[indices] = 1
 
-        rel_scores = np.dot(user_vector, self._weights)
+        rel_scores = np.dot(user_vector, weights)
 
         #print("rel scores", rel_scores.shape)
         #print("filter out", filter_out_items)

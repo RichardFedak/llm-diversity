@@ -29,10 +29,6 @@ class EASE(AlgorithmBase, ABC):
         self._threshold = positive_threshold
         self._l2 = l2
 
-        self._items_count = None
-
-        self._weights = None
-
     # One-time fitting of the algorithm for a predefined number of iterations
     def fit(self, loader):
 
@@ -48,13 +44,13 @@ class EASE(AlgorithmBase, ABC):
             .values
         )
 
-        self._items_count =  np.shape(self._rating_matrix)[1]
+        items_count =  np.shape(self._rating_matrix)[1]
 
         X = np.where(self._rating_matrix >= self._threshold, 1, 0).astype(np.float32)
 
         # Compute Gram matrix (G = X^T @ X)
         G = X.T @ X
-        G += self._l2 * np.eye(self._items_count)  # Regularization
+        G += self._l2 * np.eye(items_count)  # Regularization
 
         # Compute the inverse of G
         P = np.linalg.inv(G)
@@ -64,10 +60,10 @@ class EASE(AlgorithmBase, ABC):
         B = P / (-diag_P[:, None])  # Normalize rows by diagonal elements
         np.fill_diagonal(B, 0)  # Set diagonal to zero
 
-        self._weights = B
+        return B, items_count
 
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k, div_perception):
+    def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
         #print("PREDICTING EASE")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
@@ -78,11 +74,11 @@ class EASE(AlgorithmBase, ABC):
             # to avoid empty recommendation, we just sample random candidates
             return np.random.choice(candidates, size=k, replace=False).tolist()
         indices = list(selected_items)
-        user_vector = np.zeros((self._items_count,), dtype=np.float32)
+        user_vector = np.zeros((items_count,), dtype=np.float32)
         for i in indices:
             user_vector[i] = 1.0
 
-        preds = np.dot(user_vector, self._weights)
+        preds = np.dot(user_vector, weights)
 
         preds = np.abs(preds)  
 

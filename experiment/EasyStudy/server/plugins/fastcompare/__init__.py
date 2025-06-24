@@ -9,6 +9,7 @@ from pathlib import Path
 import shutil
 import sys
 import traceback
+import pickle
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -43,6 +44,7 @@ languages = load_languages(os.path.dirname(__file__))
 HIDE_LAST_K = 1000000 # Effectively hides everything
 
 ALGORITHM_CACHE = {}
+EASE_CACHE = {}
 
 # Implementation of this function can differ among plugins
 def get_lang():
@@ -386,18 +388,28 @@ def prepare_recommendations(loader, conf, recommendations,
     load_end = time.perf_counter()
     print(f"\nLoading time: {load_end - load_start:.2f} seconds\n")
 
-    def _predict(algo_obj, div_perception=None):
-        return algo_obj.predict(selected_movies, filter_out_movies, k=k,
+    def _predict(algo_obj, weights, items_count, div_perception):
+        return algo_obj.predict(selected_movies, 
+                                filter_out_movies, 
+                                k,
+                                weights,
+                                items_count,
                                 div_perception=div_perception)
 
     predictions = {}
     div_perception = session["diversity_perception"]
 
+    with open(get_cache_path(session["user_study_guid"], "ease_cache"), "rb") as f:
+        EASE_CACHE = pickle.load(f)
+
+    weights = EASE_CACHE["weights"]
+    items_count = EASE_CACHE["items_count"]
+
     predict_start = time.perf_counter()
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         fut_to_name = {
-            pool.submit(_predict, a, div_perception): name
+            pool.submit(_predict, a, weights, items_count, div_perception): name
             for name, a in algo_instances
         }
 
@@ -763,9 +775,17 @@ def long_initialization(guid):
             algorithm_displayed_name = conf["algorithm_parameters"][algorithm_idx]["displayed_name"]
             
             print(f"Training algorithm: {algorithm_displayed_name}")
-            algorithm.fit(loader)
+            res = algorithm.fit(loader)
             print(f"Done training algorithm: {algorithm_displayed_name}")
 
+            if res is not None:
+                ease_weights, items_count = res
+                if "weights" not in EASE_CACHE:
+                    EASE_CACHE["weights"] = ease_weights
+                if "items_count" not in EASE_CACHE:
+                    EASE_CACHE["items_count"] = items_count
+                with open(get_cache_path(guid, "ease_cache"), "wb") as f:
+                    pickle.dump(EASE_CACHE, f)
             # Save the algorithm
             algorithm.save(get_cache_path(guid, algorithm_displayed_name), get_cache_path("", algorithm_displayed_name))
 
