@@ -21,11 +21,12 @@ def load_dataset():
         print(f"Error: Invalid JSON format in dataset file: {e}")
         return {}
 
-def is_output_list_X_correct(output, gold):
+def parse_output_list_X(output):
     """Checks if the output is in the format of 'LIST X ...'."""
     if isinstance(output, str) and len(output) >= 6:
-        return output[:4].upper() == "LIST" and output[5].upper() in {"A", "B", "C"} and output[5].upper() == gold
-    return False
+        if output[:4].upper() == "LIST" and output[5].upper() in {"A", "B", "C"}:
+            return output[5].upper()
+    return output
 
 def analyze_file(file_path, dataset_dict):
     """Processes a single JSON results file and generates a summary."""
@@ -68,7 +69,9 @@ def analyze_file(file_path, dataset_dict):
         bin_div = dataset_entry["bin_div"]
         list_metrics = dataset_entry["list_metrics"]
 
-        if output and output == gold or is_output_list_X_correct(output, gold):
+        output = parse_output_list_X(output)
+
+        if output and output == gold:
             correct_evals["output"] += 1
         if cf_ild and output == cf_ild:
             correct_evals["cf_ild"] += 1

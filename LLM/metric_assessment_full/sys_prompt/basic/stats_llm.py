@@ -2,7 +2,8 @@ import json
 import os
 from collections import defaultdict
 
-RESULTS_FOLDER = "results_ollama/"
+RESULTS_FOLDER = "results/"
+#RESULTS_FOLDER = "results_ollama/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 DATASET_FILE = "final_movie_data.json"
 
@@ -123,7 +124,7 @@ def process_all_files():
         print("Skipping file processing due to missing dataset.")
         return
     
-    files = [f for f in os.listdir(RESULTS_FOLDER) if f.endswith(".json")]
+    files = [f for f in os.listdir(RESULTS_FOLDER) if f.endswith(".json") and not f.startswith("coverage")]
     if not files:
         print("No JSON files found in the results folder.")
         return
