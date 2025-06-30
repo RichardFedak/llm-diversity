@@ -32,24 +32,20 @@ def generate_prompt(fields):
     field_text = ", ".join(field_descriptions)
     
     return f"""
-You are an assistant tasked with comparing three lists of movies. For each movie, you are given its: {field_text}
+You are an assistant tasked with comparing three lists of movies. For each movie, you are given its: {field_text}.
 Your main goal is to assign a diversity score to each list based on the given information.
 Use your own judgment to determine what information is relevant when assessing the diversity of the lists. 
-You should consider the given {field_text} for every movie, as well as an overall summary of the entire list.
+You should consider the given {field_text} for every movie.
 
-The summary includes the following information:
-    - Popularity Diversity: A score based on the mix of blockbuster movies and niche/independent films. The higher the score, the more balanced is the list.
-    - Genre Diversity: A score based on the variety of genres represented in the list. The higher the score, the more diverse the genres.
-    - Theme Diversity: A score based on the thematic range of the movies in the list. The higher the score, the more varied and expansive the themes across the movies in the list.
-    - Time Span: Years of the earliest and latest movie releases in the list.
-    - Franchise Inclusion: Whether the list includes at least two movies from the same franchise.
+Identify movies that stand out from the rest in the given information, as they may impact the perceived diversity of the list.
+List of movies with similar features may feel more diverse if it includes one or more outliers.  
 
 Deliver your descriptions of lists, comparison, and choice of the most diverse list in the following JSON format:
 
 {{
-    "list_A_description": string,            # Describe the diversity of the movies in list A, focusing on and utilizing the information provided in the summary.
-    "list_B_description": string,            # Describe the diversity of the movies in list B, focusing on and utilizing the information provided in the summary.
-    "list_C_description": string,            # Describe the diversity of the movies in list C, focusing on and utilizing the information provided in the summary.
+    "list_A_description": string,            # Describe the diversity of the movies in list A with the focus on outliers.
+    "list_B_description": string,            # Describe the diversity of the movies in list B with the focus on outliers.
+    "list_C_description": string,            # Describe the diversity of the movies in list C with the focus on outliers.
     "comparison": string,                    # Compare the diversity of the lists.
     "diversity_scores": dict                 # A dictionary assigning a diversity score (0-10) to each list based on its relative diversity. Example: {{"A": 5, "B": 2, "C": 10}} (where C is the most diverse and B the least).
 }}
@@ -57,11 +53,11 @@ Deliver your descriptions of lists, comparison, and choice of the most diverse l
 
 for fields in field_combinations:
     system_prompt = generate_prompt(fields)
-    evaluation_name = "summary_" + "_".join(field.name.lower() for field in fields)
+    evaluation_name = "_standouts_" + "_".join(field.name.lower() for field in fields)
 
     print(f"Running evaluation for: {evaluation_name}")
 
-    evaluator = MovieEvaluator(api_key, evaluation_name, system_prompt, fields, include_summary=True)
+    evaluator = MovieEvaluator(api_key, evaluation_name, system_prompt, fields, include_summary=False)
     evaluator.evaluate_data(data)
     
     print(f"Completed evaluation for: {evaluation_name}\n")
