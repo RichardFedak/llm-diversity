@@ -7,6 +7,7 @@ def parse_json_file(file_path):
         name = data.get("name", "")
         accuracy = data.get("llm_output", {}).get("accuracy", {}).get("output", "")
         pearson = data.get("pearson", "")
+        binary = data.get("binary_accuracy", "")
 
         # Ensure rounding to 2 decimals if values are numeric
         if isinstance(accuracy, (int, float)):
@@ -18,16 +19,21 @@ def parse_json_file(file_path):
             pearson = f"{round(pearson, 2):.2f}"
         else:
             pearson = ""
+        
+        if isinstance(binary, (int, float)):
+            binary = f"{round(binary, 2):.2f}"
+        else:
+            binary = ""
 
-        return name, accuracy, pearson
+        return name, accuracy, pearson, binary
 
 def generate_markdown_table(entries):
     lines = [
-        "| Name | LLM-User Accuracy | Pearson |",
-        "|------|-------------------|---------|"
+        "| Name | LLM-User Accuracy | Pearson | Binary |",
+        "|------|-------------------|---------|--------|"
     ]
-    for name, acc, pearson in entries:
-        lines.append(f"| {name} | {acc} | {pearson} |")
+    for name, acc, pearson, binary in entries:
+        lines.append(f"| {name} | {acc} | {pearson} | {binary}")
     return "\n".join(lines)
 
 entries = []
