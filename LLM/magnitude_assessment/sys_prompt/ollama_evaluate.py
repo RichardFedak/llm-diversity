@@ -5,6 +5,38 @@ from tqdm import tqdm
 from ollama import chat
 from pydantic import BaseModel
 
+import subprocess
+from dotenv import load_dotenv
+
+load_dotenv()
+
+SSH_CONNECTION = os.getenv("SSH_CONNECTION")
+
+ssh_process = None
+
+def start_ssh_tunnel():
+    global ssh_process
+    if ssh_process and ssh_process.poll() is None:
+        return 
+    print("Starting SSH tunnel ...")
+    try:
+        ssh_process = subprocess.Popen(SSH_CONNECTION)
+        time.sleep(2)
+        print("SSH tunnel established.")
+    except Exception as exc:
+        print(exc)
+        ssh_process = None
+
+def restart_ssh_tunnel():
+    global ssh_process
+    if ssh_process:
+        ssh_process.terminate()
+        ssh_process.wait()
+    start_ssh_tunnel()
+
+start_ssh_tunnel()
+
+
 class DiversityScores(BaseModel):
     A: int
     B: int
@@ -46,14 +78,23 @@ for filename in tqdm(os.listdir(calculated_results_folder), desc="Processing fil
                 prompt = eval.get('prompt')
                 participation = eval.get('participation')
                 gold = eval.get('gold')
-                response = chat(
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": prompt}
-                    ],
-                    model="llama3.1:8b",
-                    format=Response.model_json_schema(),
-                )
+                for attempt in range(2):
+                    try:
+                        response = chat(
+                            messages=[
+                                {"role": "system", "content": system_prompt},
+                                {"role": "user", "content": prompt}
+                            ],
+                            model="llama3.1:8b",
+                            format=Response.model_json_schema(),
+                        )
+                        break
+                    except Exception as e:
+                        print(f"Chat failed on attempt {attempt+1}: {e}")
+                        if attempt == 0:
+                            restart_ssh_tunnel()
+                        else:
+                            raise
                 response_data = Response.model_validate_json(response.message.content)
                 scores_dict = response_data.diversity_scores.model_dump()
                 final_ordering = convert_to_indices(sorted(scores_dict, key=scores_dict.get))
@@ -83,3 +124,6 @@ for filename in tqdm(os.listdir(calculated_results_folder), desc="Processing fil
                     'system_prompt': system_prompt,
                     'evaluations': evaluations
                 }, output_file, indent=4)
+
+if ssh_process:
+    ssh_process.terminate()
