@@ -26,6 +26,7 @@ bp = Blueprint(__plugin_name__, __plugin_name__, url_prefix=f"/{__plugin_name__}
 from .preference_elicitation import load_data_1, load_data_2, load_data_3, recommend_2_3, search_for_movie, rlprop, weighted_average, calculate_weight_estimate, result_layout_variants, load_data
 
 NUM_TO_SELECT = 5
+OBJECTIVES = ["relevance", "diversity"]
 
 @bp.context_processor
 def plugin_name():
@@ -335,13 +336,20 @@ def prepare_basic_statistics(n_algorithms, algorithm_names):
             counts[algo_idx_to_name[v]] += 1
 
     avg_ratings = {
-        x: 0.0 for x in algorithm_names
+        algo_name: { objective: 0.0 for objective in OBJECTIVES }
+        for algo_name in algorithm_names
     }
-    for ratings in flask.session["a_r"]:
-        print(f"ratings={ratings}")
-        for algo_name, rating in ratings.items():
-            avg_ratings[algo_name] += rating
-    avg_ratings = {algo_name : round(sum_ratings / len(flask.session["a_r"]), 1) if len(flask.session["a_r"]) else 0 for algo_name, sum_ratings in avg_ratings.items()}
+
+    count = len(flask.session.get("a_r", []))
+    if count > 0:
+        for ratings in flask.session["a_r"]:
+            for algo_name, obj_ratings in ratings.items():
+                for objective, val in obj_ratings.items():
+                    avg_ratings[algo_name][objective] += val
+
+        for algo_name in avg_ratings:
+            for objective in avg_ratings[algo_name]:
+                avg_ratings[algo_name][objective] = round(avg_ratings[algo_name][objective] / count, 1)
 
     res["n_selected"] = sum([len(x) for x in flask.session["selected_movie_indices"]])
     res["n_recommended"] = int(flask.session["iteration"]) * flask.session["rec_k"] * n_algorithms

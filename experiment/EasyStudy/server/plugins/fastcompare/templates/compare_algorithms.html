@@ -1,135 +1,135 @@
 {% include 'header.html' %}
 <style>
-.verticalSeparator {
-    border-left: 2px solid #dee2e6;
-    padding-left: 16px;
-    margin-left: 8px;
-}
+    .verticalSeparator {
+        border-left: 2px solid #dee2e6;
+        padding-left: 16px;
+        margin-left: 8px;
+    }
 
-.verticalSeparatorNone {
-    border-left: 2px solid #fff;
-    padding-left: 16px;
-    margin-left: 8px;
-}
+    .verticalSeparatorNone {
+        border-left: 2px solid #fff;
+        padding-left: 16px;
+        margin-left: 8px;
+    }
 
-.algorithm-title {
-    font-weight: 600;
-    color: #343a40;
-    margin-bottom: 8px;
-}
+    .algorithm-title {
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 8px;
+    }
 
-.custom-image {
-    border-radius: 8px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    width: 120px;
-    height: auto;
-}
+    .movie-wrapper {
+        max-width: 120px;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        display: flex;
+        flex-flow: column;
+    }
 
-.custom-image:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+    .movie-wrapper:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-.rating-label {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #495057;
-    margin-top: 8px;
-}
-
-.variant-row {
-    margin-top: 12px !important;
-    margin-bottom: 12px !important;
-}
-
-@media (max-width: 1024px) {
     .custom-image {
-        width: 70px;
+        width: 120px;
+        height: auto;
     }
-    .wrap-image {
-        width: auto;
+
+    .rating-label {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #495057;
+        margin-top: 8px;
     }
-}
+
+    .variant-row {
+        margin-top: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    @media (max-width: 1024px) {
+        .custom-image {
+            width: 70px;
+        }
+
+        .wrap-image {
+            width: auto;
+        }
+    }
 </style>
 <div id="app">
     <b-container fluid>
-        {% if comparison_hint_override is defined and comparison_hint_override is not none  %}
+        {% if comparison_hint_override is defined and comparison_hint_override is not none %}
         <div class="jumbotron smallJumbotron">
             {{ comparison_hint_override | safe }}
             <h5>({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})</h5>
         </div>
         {% else %}
-        <b-jumbotron class="smallJumbotron" header="{{header}} ({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})" lead="Select movies that you would consider to watch / buy." header-level="4">
-            <strong>Movies are selected by clicking on them</strong> and each selected movie is highlighted in green border. 
-            If you do not like any of the recommended movies, there is a button at the bottom of this page that you should check. 
-            When a mouse cursor is placed over a movie, its name, genres and plot will be shown. 
-            <strong>Completion of each step is final</strong> and you cannot return to previous steps (pages) - if necessary, you can start again from the beginning. 
-            <strong>Note:</strong> if movie is present in output of multiple algorithms, it is automatically selected for you once you click on any of its occurrences.
+        <b-jumbotron class="smallJumbotron" header="{{header}} ({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})"
+            lead="Select movies that you would consider to watch / buy." header-level="4">
+            <strong>Movies are selected by clicking on them</strong> and each selected movie is highlighted in green
+            border.
+            If you do not like any of the recommended movies, there is a button at the bottom of this page that you
+            should check.
+            When a mouse cursor is placed over a movie, its name, genres and plot will be shown.
+            <strong>Completion of each step is final</strong> and you cannot return to previous steps (pages) - if
+            necessary, you can start again from the beginning.
+            <strong>Note:</strong> if movie is present in output of multiple algorithms, it is automatically selected
+            for you once you click on any of its occurrences.
         </b-jumbotron>
         {% endif %}
 
         <!-- https://stackoverflow.com/questions/43999618/how-to-define-a-temporary-variable-in-vue-js-template -->
         <b-row class="ml-1 mr-1 mt-3">
             {% if result_layout == "columns" or result_layout == "column-single" %}
-            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)" :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
+            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)"
+                :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
                 <b-row align-h="center">
-                <h5 class="algorithm-title text-center">{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
-            </b-row>
+                    <h5 class="algorithm-title text-center">{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
+                </b-row>
 
-            <b-row align-h="center" class="variant-row" v-for="row in variantResults">
-                <b-col sm="auto" class="align-middle pr-1 pl-1 wrap-image" v-for="col in row">
-                    <b-img 
-                        class="custom-image"
-                        :id="variantNames[algoIdx] + '_' + col.movie_idx"
-                        :src="col.url"
-                        v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
-                        :name="col.movie_idx"
-                        :alt="col.movie"
-                        v-b-tooltip.html.hover="{ title: col.movieName }"
-                        :title="col.movie"
-                    />
-                </b-col>
-            </b-row>
-
-            <b-row align-h="center">
-            <b-col sm="12" class="text-center">
-                <label for="rating-sm" class="mt-1">{{algorithm_satisfaction}}</label>
-                <b-form-rating
-                :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))"
-                v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))"
-                show-value
-                show-value-max
-                id="rating-sm"
-                size="sm"
-                ></b-form-rating>
-            </b-col>
-            </b-row>
-
-
+                <b-row align-h="center" class="variant-row" v-for="row in variantResults">
+                    <b-col sm="auto" class="align-middle pr-1 pl-1 wrap-image" v-for="col in row">
+                        <div class="movie-wrapper" :id="variantNames[algoIdx] + '_' + col.movie_idx"
+                            :name="col.movie_idx"
+                            v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
+                            :alt="col.movie" v-b-tooltip.html.hover="{ title: col.movie }" :title="col.movie">
+                            <b-img class="custom-image" :src="col.url"></b-img>
+                            <div v-text="col.movieTitle" class="movie-title m-auto pt-1 pb-1"></div>
+                        </div>
+                    </b-col>
+                </b-row>
             </b-col>
             {%elif result_layout == "rows" or result_layout == "row-single" %}
             <b-col align-h="center">
-                <b-row align-h="center" v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)">
+                <b-row align-h="center" v-for="variantResults in variantsResults"
+                    :set="algoIdx = variantsResults.indexOf(variantResults)">
                     <b-col class="text-center" align-h="center">
                         <h5>{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
                         <b-row align-h="center" class="mb-1 mt-1" v-for="row in variantResults">
                             {% if result_layout == "rows" %}
                             <b-col class="col" xl="auto" class="align-middle" v-for="col in row">
-                            {% else %}
-                            <b-col class="align-middle" v-for="col in row">
-                            {% endif %}
-                                <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx" fluid :src="col.url" v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))" :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
-                            </b-col>
+                                {% else %}
+                                <b-col class="align-middle" v-for="col in row">
+                                    {% endif %}
+                                    <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx" fluid :src="col.url"
+                                        v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
+                                        :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
+                                </b-col>
                         </b-row>
                         <b-row align-h="center">
                             <b-col cols="4">
                                 <label for="rating-sm" class="mt-1">{{algorithm_satisfaction}}</label>
-                                <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))" v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))" show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
+                                <b-form-rating
+                                    :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))"
+                                    v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))"
+                                    show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
                             </b-col>
                         </b-row>
-                        
+
                         <!-- Separator (except for after last one) -->
                         <b-row v-if="algoIdx < variantsResults.length - 1" class="mt-1 mb-1">
                             <b-container fluid>
@@ -142,13 +142,20 @@
             {%elif result_layout == "row-single-scrollable" %}
 
             <b-col align-h="center">
-                <b-row align-h="center" v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)">
+                <b-row align-h="center" v-for="variantResults in variantsResults"
+                    :set="algoIdx = variantsResults.indexOf(variantResults)">
                     <!-- <div class="text-center" style="max-width: 100%;" > -->
-                    <b-col class="text-center align-middle" align-h="center" xl="6" sm="auto" md=auto lg="6" >
+                    <b-col class="text-center align-middle" align-h="center" xl="6" sm="auto" md=auto lg="6">
                         <h5>{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
-                        <div :id="variantNames[algoIdx] + '-scrollableDiv'" name="scrollableDiv" style="overflow-x: auto; scroll-snap-type: x mandatory; white-space: nowrap; display: flex; flex-wrap: nowrap; align-items: center; width: 100%; text-align: left;" v-for="row in variantResults">
-                            <div style="scroll-snap-align: center; margin-right: 1px; flex: 0 0 auto;" cols="auto" class="mr-3" v-for="col in row">
-                                <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx" :style="{width: 'auto', height: imageHeight + 'px'}" center :src="col.url" v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))" :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
+                        <div :id="variantNames[algoIdx] + '-scrollableDiv'" name="scrollableDiv"
+                            style="overflow-x: auto; scroll-snap-type: x mandatory; white-space: nowrap; display: flex; flex-wrap: nowrap; align-items: center; width: 100%; text-align: left;"
+                            v-for="row in variantResults">
+                            <div style="scroll-snap-align: center; margin-right: 1px; flex: 0 0 auto;" cols="auto"
+                                class="mr-3" v-for="col in row">
+                                <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx"
+                                    :style="{width: 'auto', height: imageHeight + 'px'}" center :src="col.url"
+                                    v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
+                                    :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
                             </div>
                         </div>
                         <b-row align-v="center">
@@ -156,14 +163,14 @@
                                 <label for="rating-sm" class="mt-1">{{algorithm_satisfaction}}</label>
                             </b-col>
                             <b-col align-h="end">
-                                <b-form-rating
-                                    class="mt-1" :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))"
+                                <b-form-rating class="mt-1"
+                                    :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))"
                                     v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))"
                                     show-value show-value-max id="rating-sm" size="sm">
                                 </b-form-rating>
                             </b-col>
                         </b-row>
-                        
+
                         <!-- Separator (except for after last one) -->
                         <b-row v-if="algoIdx < variantsResults.length - 1" class="mt-1 mb-1">
                             <b-container fluid>
@@ -175,19 +182,25 @@
                 </b-row>
             </b-col>
             {%elif result_layout == "max-columns" %}
-            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)" :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : ''">
+            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)"
+                :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : ''">
                 <b-row align-h="center">
                     <h5>{{algorithm}} [[ variantNames[algoIdx] ]]</h5>
                 </b-row>
                 <b-row align-h="center" align-v="center" class="mb-1 mt-1" v-for="row in variantResults">
                     <b-col lg="4" xl="auto" class="align-middle" v-for="col in row">
-                        <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx" fluid :style="{ 'max-width': maxColumnsMaxWidth + 'px' }" center :src="col.url" v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))" :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
+                        <b-img :id="variantNames[algoIdx] + '_' + col.movie_idx" fluid
+                            :style="{ 'max-width': maxColumnsMaxWidth + 'px' }" center :src="col.url"
+                            v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
+                            :name="col.movie_idx" :alt="col.movie" v-b-tooltip.hover :title="col.movie" />
                     </b-col>
                 </b-row>
                 <b-row align-h="center">
                     <b-col sm="4">
                         <label for="rating-sm" class="mt-1">{{algorithm_satisfaction}}</label>
-                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))" v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))" show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
+                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults))"
+                            v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults))"
+                            show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
                     </b-col>
                 </b-row>
             </b-col>
@@ -195,73 +208,91 @@
         </b-row>
         <hr>
         <b-row v-if="!selected.length" class="mt-2" align-h="center">
-            <b-form-checkbox
-                :state="dontLikeAnythingState"    
-                v-model="dontLikeAnythingValue"
-            >
+            <b-form-checkbox :state="dontLikeAnythingState" v-model="dontLikeAnythingValue">
                 {{like_nothing}}
             </b-form-checkbox>
         </b-row>
+        <b-jumbotron class="smallJumbotron">
+            Please, <strong>rate the relevance and diversity</strong> of the recommended movies.
+            <strong>Higher star ratings</strong> reflect <strong>greater relevance</strong> to your interests and
+            <strong>higher diversity</strong> of the given list of movies.
+        </b-jumbotron>
+        <b-row class="ml-1 mr-1 mt-3">
+            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)"
+                :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
+                <b-row align-h="center">
+                    <b-col sm="12" class="text-center">
+                        <label for="rating-sm" class="mt-1">Relevance</label>
+                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'relevance')"
+                            v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'relevance')"
+                            show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-row>
+        <b-row class="ml-1 mr-1 mt-3">
+            <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)"
+                :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
+                <b-row align-h="center">
+                    <b-col sm="12" class="text-center">
+                        <label for="rating-sm" class="mt-1">Diversity</label>
+                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'diversity')"
+                            v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'diversity')"
+                            show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-row>
         <b-row class="mt-3 ml-1 mr-1" align-h="center">
-            <b-form-group :hidden="variantsResults.length != 2" label-align="center" label="{{algorithm_how_compare}}" v-slot="{ ariaDescribedby }">
-                <b-form-radio-group
-                  id="radio-group-2"
-                  :aria-describedby="ariaDescribedby"
-                  name="radio-sub-component"
-                  :state="algorithmComparisonState"
-                  v-model="algorithmComparisonValue"
-                >
-                  <b-form-radio value="first">[[variantNames.at(0)]] {{significantly}}</b-form-radio>
-                  <b-form-radio value="second">[[variantNames.at(0)]] {{slightly}}</b-form-radio>
-                  <b-form-radio value="third">{{same}}</b-form-radio>
-                  <b-form-radio value="fourth">[[variantNames.at(1)]] {{slightly}}</b-form-radio>
-                  <b-form-radio value="fifth">[[variantNames.at(1)]] {{significantly}}</b-form-radio>
+            <b-form-group :hidden="variantsResults.length != 2" label-align="center" label="{{algorithm_how_compare}}"
+                v-slot="{ ariaDescribedby }">
+                <b-form-radio-group id="radio-group-2" :aria-describedby="ariaDescribedby" name="radio-sub-component"
+                    :state="algorithmComparisonState" v-model="algorithmComparisonValue">
+                    <b-form-radio value="first">[[variantNames.at(0)]] {{significantly}}</b-form-radio>
+                    <b-form-radio value="second">[[variantNames.at(0)]] {{slightly}}</b-form-radio>
+                    <b-form-radio value="third">{{same}}</b-form-radio>
+                    <b-form-radio value="fourth">[[variantNames.at(1)]] {{slightly}}</b-form-radio>
+                    <b-form-radio value="fifth">[[variantNames.at(1)]] {{significantly}}</b-form-radio>
                 </b-form-radio-group>
             </b-form-group>
         </b-row>
         <b-row class="text-center mb-5" align-h="center">
             <b-col center class="align-middle">
-                
+
             </b-col>
             <b-col center class="align-middle">
-                {% if iteration < MIN_ITERATION_TO_CANCEL %}
-                <b-form @submit="busy = true" method="GET" action="{{ url_for(consuming_plugin + '.algorithm_feedback') }}">
-                    <input type="hidden" hidden="true" :value="selectedMovieIndices" name="selected_movies"/>
-                    <input type="hidden" hidden="true" :value="selectedMovieVariants" name="selected_movie_variants"/>
-                    <input v-for="i in variantsResults.length" type="hidden" hidden="true" :key="i" :value="algorithmRatings[i - 1]" :name="'ar_'.concat(i)"/>
-                    <input type="hidden" hidden="true" :value="dontLikeAnythingValue" name="nothing"/>
-                    <input type="hidden" hidden="true" :value="algorithmComparisonValue" name="cmp"/>
-                    <b-overlay
-                    :show="busy"
-                    rounded
-                    opacity="0.6"
-                    spinner-small
-                    spinner-variant="primary"
-                    class="d-inline-block"
-                    >
-                        <b-button name="next_compare" type="submit" block variant="primary" :disabled="!allValidated" center>{{next}}</b-button>
+                {% if iteration < MIN_ITERATION_TO_CANCEL %} <b-form @submit="busy = true" method="GET"
+                    action="{{ url_for(consuming_plugin + '.algorithm_feedback') }}">
+                    <input type="hidden" hidden="true" :value="selectedMovieIndices" name="selected_movies" />
+                    <input type="hidden" hidden="true" :value="selectedMovieVariants" name="selected_movie_variants" />
+                    <input v-for="i in variantsResults.length" type="hidden" hidden="true" :key="i"
+                        :value="algorithmRatings['relevance'][i - 1]" :name="'ar_relevance_'.concat(i)" />
+                    <input v-for="i in variantsResults.length" type="hidden" hidden="true" :key="i"
+                        :value="algorithmRatings['diversity'][i - 1]" :name="'ar_diversity_'.concat(i)" />
+                    <input type="hidden" hidden="true" :value="dontLikeAnythingValue" name="nothing" />
+                    <input type="hidden" hidden="true" :value="algorithmComparisonValue" name="cmp" />
+                    <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
+                        class="d-inline-block">
+                        <b-button name="next_compare" type="submit" block variant="primary" :disabled="!allValidated"
+                            center>{{next}}</b-button>
                     </b-overlay>
-                </b-form>
-                {% else %}
-                <b-form @submit="busy = true" method="GET" action="{{ url_for(consuming_plugin + '.finish_user_study') }}">
-                    <b-overlay
-                    :show="busy"
-                    rounded
-                    opacity="0.6"
-                    spinner-small
-                    spinner-variant="primary"
-                    class="d-inline-block"
-                    >
-                        <b-btn name="finish_compare" block type="submit" variant="success" :disabled="!allValidated" center>{{finish}}</b-btn>
-                    </b-overlay>
-                </b-form>
-                {% endif %}
+                    </b-form>
+                    {% else %}
+                    <b-form @submit="busy = true" method="GET"
+                        action="{{ url_for(consuming_plugin + '.finish_user_study') }}">
+                        <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
+                            class="d-inline-block">
+                            <b-btn name="finish_compare" block type="submit" variant="success" :disabled="!allValidated"
+                                center>{{finish}}</b-btn>
+                        </b-overlay>
+                    </b-form>
+                    {% endif %}
             </b-col>
             <b-col></b-col>
         </b-row>
     </b-container>
-    
-    
+
+
 </div>
 
 <script type='text/javascript'>
@@ -271,7 +302,7 @@
     var iteration = "{{iteration}}";
     var minIterationToCancel = "{{MIN_ITERATION_TO_CANCEL}}";
     var csrfToken = "{{csrf_token()}}"
-    
+
     {% if result_layout == "columns" %}
     var itemsPerRow = 2; // Two items per row
     {% elif result_layout == "column-single" %}
@@ -303,12 +334,13 @@
 </script>
 <script src="{{url_for('static', filename='resolution_handling.js')}}"></script>
 <script src="{{url_for('static', filename='interaction_reporting.js')}}"></script>
-{{ emit_assets('fastcompare','compare_algorithms.js') }}     
+{{ emit_assets('fastcompare','compare_algorithms.js') }}
 {% if footer_override is defined and footer_override is not none %}
-  <div class="footerDiv mt-3">
+<div class="footerDiv mt-3">
     {{ footer_override|safe }}
-  </div>
+</div>
 </body>
+
 </html>
 {% else %}
 {% include 'footer.html' %}

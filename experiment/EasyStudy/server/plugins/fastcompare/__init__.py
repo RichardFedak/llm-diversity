@@ -42,7 +42,7 @@ languages = load_languages(os.path.dirname(__file__))
 
 
 HIDE_LAST_K = 1000000 # Effectively hides everything
-
+OBJECTIVES = ["relevance", "diversity"]
 ALGORITHM_CACHE = {}
 EASE_CACHE = {}
 
@@ -244,10 +244,11 @@ def get_diversity_data():
             title = tr(f"{config['selected_data_loader']}_{movie_id}", row.title)
             genres = row.genres.split("|")
             genres_tr = "|".join([tr(f"genre_{g.lower()}") for g in genres])
-            full_title = f"<strong>{title}</strong><br><em>{genres_tr}</em><br>{row['plot']}"
+            tooltip_info = f"<em>{genres_tr}</em><br>{row['plot']}"
             pair_data.append({
                 "movie_id": movie_id,
-                "movieName": full_title,
+                "movieTitle": title,
+                "movieTooltip": tooltip_info,
                 "url": loader.get_item_id_image_url(movie_id)
             })
 
@@ -399,11 +400,16 @@ def prepare_recommendations(loader, conf, recommendations,
     predictions = {}
     div_perception = session["diversity_perception"]
 
-    with open(get_cache_path(session["user_study_guid"], "ease_cache"), "rb") as f:
-        EASE_CACHE = pickle.load(f)
+    cache_path = get_cache_path(session["user_study_guid"], "ease_cache")
+    weights = None
+    items_count = None
 
-    weights = EASE_CACHE["weights"]
-    items_count = EASE_CACHE["items_count"]
+    if os.path.exists(cache_path):
+        with open(cache_path, "rb") as f:
+            EASE_CACHE = pickle.load(f)
+
+        weights = EASE_CACHE["weights"]
+        items_count = EASE_CACHE["items_count"]
 
     predict_start = time.perf_counter()
 
@@ -563,10 +569,10 @@ def compare_algorithms():
         x = d["movies"]
         for i in range(len(x)):
             input_name = f"{conf['selected_data_loader']}_{x[i]['movie_id']}"
+            x[i]["movieTitle"] = tr(input_name, x[i]['movie'])
             x[i]["movie"] = "<strong>"+tr(input_name, x[i]['movie']) + "</strong><br>" + \
                 "<em>"+"|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]]) + "</em><br> " + \
                 x[i]["plot"]
-            #x[i]["movie"] = tr(str(x[i]["movie_id"])) + " " + "|".join([tr(f"genre_{y.lower()}") for y in x[i]["genres"]])
 
     params = {
         "movies": movies,
@@ -630,9 +636,14 @@ def algorithm_feedback():
     selected_variants = selected_variants.split(",") if selected_variants else []
     selected_variants = [int(x) for x in selected_variants]
 
-    algorithm_ratings = []
-    for i in range(conf["n_algorithms_to_compare"]):
-        algorithm_ratings.append(int(request.args.get(f"ar_{i + 1}")))
+    ratings = {}
+
+    for objective in OBJECTIVES:
+        ratings[objective] = []
+        for i in range(conf["n_algorithms_to_compare"]):
+            key = f"ar_{objective}_{i + 1}"
+            value = request.args.get(key)
+            ratings[objective].append(int(value) if value is not None else None)
 
     dont_like_anything = request.args.get("nothing")
     if dont_like_anything == "true":
@@ -642,8 +653,11 @@ def algorithm_feedback():
     algorithm_comparison = request.args.get("cmp")
     order = session["permutation"][0]
     ordered_ratings = {}
+
     for algo_name, idx in order.items():
-        ordered_ratings[algo_name] = algorithm_ratings[idx]
+        ordered_ratings[algo_name] = {
+            objective: ratings[objective][idx] for objective in OBJECTIVES
+        }
 
     t1 = session["nothing"]
     t1.append(dont_like_anything)

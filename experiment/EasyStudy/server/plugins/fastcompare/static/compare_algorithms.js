@@ -1,8 +1,8 @@
 
 window.app = new Vue({
     el: '#app',
-    delimiters: ['[[',']]'], // Used to replace double { escaping with double [ escaping (to prevent jinja vs vue inference)
-    data: function() {
+    delimiters: ['[[', ']]'], // Used to replace double { escaping with double [ escaping (to prevent jinja vs vue inference)
+    data: function () {
         const colsPerRow = itemsPerRow;
 
         var numAlgorithms = Object.keys(movies).length;
@@ -13,7 +13,7 @@ window.app = new Vue({
             let variantResults = movies[variantIdx]["movies"];
             let order = parseInt(movies[variantIdx]["order"]);
             variantNames[order] = variantIdx.toUpperCase();
-            
+
             let variantResultsColumnified = [];
             let row = [];
             for (idx in variantResults) {
@@ -30,12 +30,19 @@ window.app = new Vue({
             moviesColumnified[order] = variantResultsColumnified;
         }
 
-        let algorithmRatings = [];
-        let algorithmRatingsValidated = [];
-        for (let i = 0; i < numAlgorithms; ++i) {
-            algorithmRatings.push(null);
-            algorithmRatingsValidated.push(false);
+        let objectives = ["relevance", "diversity"];
+        let algorithmRatings = {};
+        let algorithmRatingsValidated = {};
+
+        for (let objective of objectives) {
+            algorithmRatings[objective] = [];
+            algorithmRatingsValidated[objective] = [];
+            for (let i = 0; i < numAlgorithms; ++i) {
+                algorithmRatings[objective].push(null);
+                algorithmRatingsValidated[objective].push(false);
+            }
         }
+
         return {
             variantsResults: moviesColumnified,
             selected: [],
@@ -65,8 +72,8 @@ window.app = new Vue({
         allValidated() {
             let dontLikeAnythingValidated = this.selected.length > 0 || this.dontLikeAnythingValue;
             return this.algorithmComparisonValidated &&
-                   this.allAlgorithmRatingsValidated && // All algorithms have their outputs rated
-                   dontLikeAnythingValidated;
+                this.allAlgorithmRatingsValidated && // All algorithms have their outputs rated
+                dontLikeAnythingValidated;
         }
     },
     methods: {
@@ -79,8 +86,8 @@ window.app = new Vue({
                 if (arrItem.movie_idx === item.movie_idx
                     && arrItem.movie === item.movie
                     && arrItem.url === item.url) {
-                        return idx;
-                    }
+                    return idx;
+                }
             }
             return -1;
         },
@@ -89,30 +96,31 @@ window.app = new Vue({
             let index = this.movieIndexOf(this.selected, item);
             if (index > -1) {
                 // Already there, remove it
-                var copies = document.getElementsByName(event.srcElement.name);
+                var copies = document.getElementsByName(item.movie_idx);
                 for (let j = 0; j < copies.length; ++j) {
                     copies[j].classList.remove("selected");
                 }
                 this.selected.splice(index, 1);
-                reportDeselectedItem(`/utils/deselected-item`, csrfToken, item, this.selected, ()=>{ return {"variant": variant}; });
+                reportDeselectedItem(`/utils/deselected-item`, csrfToken, item, this.selected, () => { return { "variant": variant }; });
             } else {
                 // Not there, insert
-                var copies = document.getElementsByName(event.srcElement.name);
+                var copies = document.getElementsByName(item.movie_idx);
                 for (let j = 0; j < copies.length; ++j) {
                     copies[j].classList.add("selected");
                 }
                 this.selected.push(item);
-                reportSelectedItem(`/utils/selected-item`, csrfToken, item, this.selected, ()=>{ return {"variant": variant}; });
+                reportSelectedItem(`/utils/selected-item`, csrfToken, item, this.selected, () => { return { "variant": variant }; });
             }
             this.selectedMovieIndices = this.selected.map((x) => x.movie_idx).join(",");
             this.selectedMovieVariants = this.selected.map((x) => x.variant).join(",");
         },
-        onAlgorithmRatingChanged(newRating, algorithmIndex) {
-            let oldRating = this.algorithmRatings[algorithmIndex];
-            this.algorithmRatingsValidated[algorithmIndex] = true;
-            this.algorithmRatings[algorithmIndex] = newRating;
-            this.allAlgorithmRatingsValidated = this.algorithmRatingsValidated.reduce((partialSum, a) => partialSum + a, 0) == this.numAlgorithms;
-            reportOnInput("/utils/on-input", csrfToken, "rating", {
+        onAlgorithmRatingChanged(newRating, algorithmIndex, objective) {
+            let oldRating = this.algorithmRatings[objective][algorithmIndex];
+            this.algorithmRatingsValidated[objective][algorithmIndex] = true;
+            this.algorithmRatings[objective][algorithmIndex] = newRating;
+            this.allAlgorithmRatingsValidated = this.algorithmRatingsValidated["relevance"].reduce((partialSum, a) => partialSum + a, 0) == this.numAlgorithms &&
+                this.algorithmRatingsValidated["diversity"].reduce((partialSum, a) => partialSum + a, 0) == this.numAlgorithms;
+            reportOnInput("/utils/on-input", csrfToken, "rating_" + objective, {
                 "variant": algorithmIndex,
                 "variant_name": this.variantNames[algorithmIndex],
                 "old_rating": oldRating,
@@ -120,8 +128,8 @@ window.app = new Vue({
             });
             this.$forceUpdate(); // Make sure it propagates to UI (some issues with modifying list via direct access)
         },
-        algorithmRatingVariant(algorithmIndex) {
-            if (this.algorithmRatingsValidated[algorithmIndex]) {
+        algorithmRatingVariant(algorithmIndex, objective) {
+            if (this.algorithmRatingsValidated[objective][algorithmIndex]) {
                 return "success";
             }
             return "danger";
@@ -157,15 +165,14 @@ window.app = new Vue({
         registerClickedButtonReporting(`/utils/on-input`, csrfToken, btns);
         registerClickedCheckboxReporting("/utils/on-input", csrfToken, chckbxs);
         registerClickedRadioReporting("/utils/on-input", csrfToken, radios);
-        reportLoadedPage(`/utils/loaded-page`, csrfToken, "compare_algorithms", ()=>
-            {
-                return {
-                    "result_layout": resultLayout,
-                    "movies": movies,
-                    "iteration": iteration,
-                    "min_iteration_to_cancel": minIterationToCancel
-                };
-            }
+        reportLoadedPage(`/utils/loaded-page`, csrfToken, "compare_algorithms", () => {
+            return {
+                "result_layout": resultLayout,
+                "movies": movies,
+                "iteration": iteration,
+                "min_iteration_to_cancel": minIterationToCancel
+            };
+        }
         );
 
         this.updateResolutions();

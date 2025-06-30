@@ -1,91 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-    <title>{{ title }}</title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-    <!-- Required Stylesheets -->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://unpkg.com/bootstrap-vue@2.22.0/dist/bootstrap-vue.css"
-    />
+  <title>{{ title }}</title>
 
-    <!-- Required scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+  <!-- Required Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@2.22.0/dist/bootstrap-vue.css" />
 
-    
-    <!-- Load polyfills to support older browsers -->
-    <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
-    
-    <!-- Required scripts -->
-    <!-- <script src="https://unpkg.com/bootstrap-vue@2.22.0/dist/bootstrap-vue.js"></script> -->
-    <script src="{{ url_for('static', filename='bootstrap-vue.js') }}"></script>
-    <script src="https://unpkg.com/bootstrap-vue@2.22.0/dist/bootstrap-vue-icons.js"></script> <!-- Needed just for the Icons -->
-    <style>
-      img.selected {
-          outline: 5px solid greenyellow;
-          outline-offset: -5px;
+  <!-- Required scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+
+
+  <!-- Load polyfills to support older browsers -->
+  <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
+
+  <!-- Required scripts -->
+  <!-- <script src="https://unpkg.com/bootstrap-vue@2.22.0/dist/bootstrap-vue.js"></script> -->
+  <script src="{{ url_for('static', filename='bootstrap-vue.js') }}"></script>
+  <script src="https://unpkg.com/bootstrap-vue@2.22.0/dist/bootstrap-vue-icons.js"></script>
+  <!-- Needed just for the Icons -->
+  <style>
+    img.selected {
+      outline: 5px solid greenyellow;
+      outline-offset: -5px;
+    }
+
+    .footerDiv {
+      width: 100%;
+      height: 100%;
+      background-color: #e9ecef;
+      text-align: center;
+    }
+
+    .btn {
+      min-width: 150px;
+    }
+
+    .smallJumbotron {
+      padding: 1rem 1.5rem;
+      margin: 0.5rem 0;
+      background: #e9ecef;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      color: #343a40;
+    }
+
+    .smallJumbotron p {
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #495057;
+    }
+
+    .smallJumbotron h1,
+    .smallJumbotron h4,
+    .smallJumbotron h5 {
+      margin: 0.3rem 0;
+      font-weight: 600;
+      color: #212529;
+    }
+
+    .smallJumbotron h1 {
+      font-size: 1.75rem;
+    }
+
+    .smallJumbotron h5 {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .smallJumbotron strong {
+      color: #007bff;
+    }
+
+    .movie-wrapper {
+      max-width: 175px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 8px;
+    }
+
+    .movie-wrapper:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .custom-image {
+      border-radius: 8px 8px 0 0;
+    }
+
+    .movie-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #333;
+      margin-top: 0.5rem;
+      padding: 0 0.5rem;
+      line-height: 1.4;
+      word-wrap: break-word;
+      text-align: center;
+      white-space: normal;
+    }
+
+
+    @media (max-width: 1024px) {
+      .movie-wrapper img {
+        width: 100px !important;
       }
 
-      .footerDiv {
-        width: 100%;
-        height: 100%;
-        background-color: #e9ecef;
-        text-align: center;
+      .responsive-radio-group {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
       }
 
-      .btn {
-        min-width: 150px;
+      .responsive-radio-group .btn {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 0.4rem;
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
       }
+    }
+  </style>
+</head>
 
-      .smallJumbotron {
-          padding: 1rem 1.5rem;
-          margin: 0.5rem 0;
-          background: #e9ecef;
-          border: 1px solid #dee2e6;
-          border-radius: 12px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-          transition: all 0.3s ease;
-          color: #343a40;
-      }
-
-      .smallJumbotron p {
-          margin-bottom: 0.3rem;
-          font-size: 0.95rem;
-          line-height: 1.4;
-          color: #495057;
-      }
-
-      .smallJumbotron h1,
-      .smallJumbotron h4,
-      .smallJumbotron h5 {
-          margin: 0.3rem 0;
-          font-weight: 600;
-          color: #212529;
-      }
-
-      .smallJumbotron h1 {
-          font-size: 1.75rem;
-      }
-
-      .smallJumbotron h5 {
-          font-size: 1rem;
-          color: #6c757d;
-      }
-
-      .smallJumbotron strong {
-          color: #007bff;
-      }
-    </style>
-  </head>
-  <body>
+<body>
