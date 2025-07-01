@@ -213,16 +213,17 @@
             </b-form-checkbox>
         </b-row>
         <b-jumbotron class="smallJumbotron">
-            Please, <strong>rate the relevance and diversity</strong> of the recommended movies.
+            Please, <strong>rate the relevance and diversity</strong> of the recommended movies in each list.
             <strong>Higher star ratings</strong> reflect <strong>greater relevance</strong> to your interests and
-            <strong>higher diversity</strong> of the given list of movies.
+            <strong>higher diversity</strong> of the movies in the given list.
         </b-jumbotron>
         <b-row class="ml-1 mr-1 mt-3">
             <b-col v-for="variantResults in variantsResults" :set="algoIdx = variantsResults.indexOf(variantResults)"
                 :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
                 <b-row align-h="center">
                     <b-col sm="12" class="text-center">
-                        <label for="rating-sm" class="mt-1">Relevance</label>
+                        <label for="rating-sm" class="mt-1 ml-2 float-left">Low relevance</label>
+                        <label for="rating-sm" class="mt-1 mr-2 float-right">High relevance</label>
                         <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'relevance')"
                             v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'relevance')"
                             show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
@@ -235,7 +236,8 @@
                 :class="variantsResults.indexOf(variantResults) != 0 ? 'verticalSeparator' : 'verticalSeparatorNone'">
                 <b-row align-h="center">
                     <b-col sm="12" class="text-center">
-                        <label for="rating-sm" class="mt-1">Diversity</label>
+                        <label for="rating-sm" class="mt-1 ml-2 float-left">Low diversity</label>
+                        <label for="rating-sm" class="mt-1 mr-2 float-right">High diversity</label>
                         <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'diversity')"
                             v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'diversity')"
                             show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
