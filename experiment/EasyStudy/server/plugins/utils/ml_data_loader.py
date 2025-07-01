@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 from collections import defaultdict
 import os
+import json
 
 
 from scipy.spatial.distance import squareform, pdist
@@ -89,13 +90,17 @@ class LinkFilter:
         loader.links_df = loader.links_df[loader.links_df.index.isin((loader.movies_df.movieId))]
 
 class MLDataLoader:
-    def __init__(self, ratings_path, movies_path, genres_embeddings_path, plot_embeddings_path, tags_path, links_path,
-        filters = None, rating_matrix_path = None, img_dir_path = None):
+    def __init__(self, ratings_path, movies_path, genres_embeddings_path, plot_embeddings_path, 
+                div_phase_genres_pairs_path, div_phase_plot_pairs_path, tags_path, links_path,
+                filters = None, rating_matrix_path = None, img_dir_path = None
+                ):
 
         self.ratings_path = ratings_path
         self.movies_path = movies_path
         self.genres_embeddings_path = genres_embeddings_path
         self.plot_embeddings_path = plot_embeddings_path
+        self.div_phase_genres_pairs_path = div_phase_genres_pairs_path
+        self.div_phase_plot_pairs_path = div_phase_plot_pairs_path
         self.tags_path = tags_path
         self.filters = filters
         self.links_path = links_path
@@ -260,6 +265,13 @@ class MLDataLoader:
         # Load embeddings
         self.genres_embeddings = np.load(self.genres_embeddings_path)
         self.plot_embeddings = np.load(self.plot_embeddings_path)
+
+        # Load diversity phase pairs
+        with open(self.div_phase_genres_pairs_path, 'r') as f:
+            self.div_phase_genres_pairs = json.load(f)
+
+        with open(self.div_phase_plot_pairs_path, 'r') as f:
+            self.div_phase_plot_pairs = json.load(f)
 
         # Load links
         self.links_df = pd.read_csv(self.links_path, index_col=0)
