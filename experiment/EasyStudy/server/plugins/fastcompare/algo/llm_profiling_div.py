@@ -1,11 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.cluster import HDBSCAN
 from ollama import chat
-from enum import Enum
 import numpy as np
 import textwrap
-import json
 from typing import List
 from sentence_transformers import SentenceTransformer
 from pydantic import BaseModel
@@ -22,204 +20,13 @@ class SelectedMovie(BaseModel):
 class SelectionResult(BaseModel):
     selected: List[SelectedMovie]
 
-class Representant(BaseModel):
-        genres: str
-        plot: str
-
-class DiversityStimulus(str, Enum):
-    GENRES = "genres"
-    PLOT = "plot"
-
-class RepresentantGenerator(ABC):
-    def __init__(self, chat_model="llama3.1:8b"):
-        self.chat_model = chat_model
-
-    @abstractmethod
-    def generate_cluster_representant(self, movies_cluster) -> 'Representant':
-        pass
-
-    @abstractmethod
-    def generate_diversity_representant(self, representants) -> 'Representant':
-        pass
-
-class GenresDiversityHandler(RepresentantGenerator):
-
-    def generate_cluster_representant(self, movies_cluster):
-        movie_text = "\n".join(
-            f"- {m['title']} | Genres: {m['genres']} Plot: {m['plot']}"
-            for m in movies_cluster
-        )
-
-        user_prompt = textwrap.dedent(f"""\
-            The user enjoys the following movies:
-
-            {movie_text}
-
-            Based on these, write a new synthetic movie-style entry.
-
-            Your task:
-                1. Identify the common genres shared across the listed movies.
-                2. Create a new plot that fits and reflects those shared genres.
-
-            Return a JSON object with:
-                - 'genres': a comma-separated list of the most commonly shared genres
-                - 'plot': a short, original movie-style description that fits those genres
-        """)
-
-        system_prompt = textwrap.dedent("""\
-            You are a creative assistant that synthesizes a user’s taste in movies by analyzing their shared genre patterns.
-
-            Your goal is to:
-                - Detect the most commonly shared genres across the provided movies
-                - Generate a believable and engaging new plot that fits those genres
-                - Ensure the result reflects the user's typical preferences
-
-            Always return your result in a JSON format with:
-                - 'genres': a comma-separated list of dominant shared genres
-                - 'plot': a compelling, short movie-style description that matches those genres
-        """)
-
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
-
-    def generate_diversity_representant(self, representants):
-        reps = "\n".join(
-            f"- Genres: {r.genres} | Plot: {r.plot}"
-            for r in representants
-        )
-        user_prompt = textwrap.dedent(f"""\    
-            Below are several representants, each summarizing a group of movies the user enjoys:
-
-            {reps}
-
-            Your task:
-                1. Choose **genres NOT listed** in any of them.
-                2. Based on the selected new genres, create a synthetic 'representant'.
-                3. The **plot must match the new genres** and be **different** from the plots above.
-
-            Return a JSON object with:
-                - 'genres': a comma-separated string of the new genres
-                - 'plot': a short movie-style generated description that fits the new genres.
-        """)
-
-        system_prompt = textwrap.dedent("""\
-            You are a creative assistant that generates diversity-focused movie profiles.
-            You're given several 'representants' that summarize the user's known movie preferences.
-            Your task is to expand their profile by introducing diversity through **new genres**.
-
-            Instructions:
-                - Identify genres used in the input.
-                - Choose only new genres not already present.
-                - Create a movie plot that fits the newly selected genres.
-
-            Return a JSON object with:
-                - 'genres': a comma-separated string of the new genres
-                - 'plot': a short movie-style generated description that fits the new genres.
-        """)
-
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
-
-class PlotDiversityHandler(RepresentantGenerator):
-
-    def generate_cluster_representant(self, movies_cluster):
-        # similar to GenresHandler, but with emphasis on plot synthesis
-        movie_text = "\n".join(
-            f"- {m['title']} | Genres: {m['genres']} Plot: {m['plot']}"
-            for m in movies_cluster
-        )
-        user_prompt = textwrap.dedent(f"""\
-            The user enjoys the following movies:
-
-            {movie_text}
-
-            Based on these, write a new synthetic movie-style entry.
-            
-            Your task:
-                1. Create a new plot that reflects the storytelling patterns and themes of the listed movies.
-                2. Then, assign genres that best describe this new plot.
-
-            Return a JSON object with:
-                - 'plot': a short, original movie-style description inspired by the ideas of the listed movies
-                - 'genres': a comma-separated list of genres that best fit the new plot
-        """)
-        system_prompt = textwrap.dedent("""\
-            You are a creative assistant that synthesizes a user’s taste in movies by analyzing a group of movies.
-            
-            Your goal is to:
-                - Understand the common themes, tone, and narrative structure of the provided movies
-                - Create an original plot that reflects those shared qualities
-                - Assign fitting genres based on the newly written plot
-
-            Always return your result in a JSON format with:
-                - 'plot': a compelling, short movie-style description
-                - 'genres': a comma-separated string of appropriate genres
-        """)
-
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
-
-    def generate_diversity_representant(self, representants):
-        reps = "\n".join(
-            f"- Genres: {r.genres} | Plot: {r.plot}"
-            for r in representants
-        )
-        user_prompt = textwrap.dedent(f"""\
-            Below are several representants, each summarizing a group of movies the user enjoys:
-
-            {reps}
-
-            Your task:
-            1. Create a **new plot** that is clearly different from any of the plots above and plausible.
-            2. Based on the plot, infer genres that **best match** the new story.
-
-            Return a JSON object with:
-            - 'plot': a short movie-style generated description that avoids similarities with the input plots.
-            - 'genres': a comma-separated string of genres that best match the generated plot.
-        """)
-
-        system_prompt = textwrap.dedent("""\
-            You are a creative assistant that generates diversity-focused movie profiles.
-            You're given several 'representants' that summarize the user's known movie preferences.
-            Your task is to expand their profile by introducing diversity through a **new plot**.
-
-            Instructions:
-                - First, analyze the existing plots and create a new plot that is *different* from all of them.
-                - Make sure the new plot is original, creative, and plausible.
-                - After creating the plot, assign genres that best describe it.
-        """)
-
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
-
+from plugins.fastcompare.algo.representant_base import (
+    Representant,
+    DiversityStimulus,
+    RepresentantGenerator,
+    GenresDiversityHandler,
+    PlotDiversityHandler,
+)
 
 class LLMProfilingDiv(AlgorithmBase, ABC):
 
@@ -402,24 +209,6 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
             closest_indices = np.argsort(-similarities)[:k]
             top_k_original_indices = original_indices[closest_indices]
             cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices if int(i) not in used_items]
-
-
-        # # Create result in round-robin way
-        # # TODO: Use LLM to re-rank the items ? or half of them ?
-        # cluster_ids = list(cluster_candidates.keys())
-        # result = []
-        # i = 0
-        # while len(result) < k and any(cluster_candidates.values()):
-        #     cluster_id = cluster_ids[i % len(cluster_ids)]
-        #     candidates = cluster_candidates[cluster_id]
-
-        #     if candidates:
-        #         candidate = candidates.pop(0)
-        #         if candidate not in used_items:
-        #             result.append(candidate)
-        #             used_items.add(candidate)
-        #     i += 1
-
         
         all_candidates = [item for candidates in cluster_candidates.values() for item in candidates]
         all_candidates_data = []
@@ -427,7 +216,7 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
             row = self._loader.items_df.iloc[item_id]
             all_candidates_data.append((item_id, row))
 
-        res = self.select_genre_diverse_movies(all_candidates_data, k)
+        res = self.select_diverse_movies(self.diversity_stimulus, all_candidates_data, k)
 
         cluster_map = {}
         for cluster_id, item_ids in cluster_candidates.items():
@@ -446,6 +235,14 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
 
         return final_ids
     
+    def select_diverse_movies(self, stimulus , movie_data: list[dict], k: int):
+        if stimulus == DiversityStimulus.GENRES:
+            return self.select_genre_diverse_movies(movie_data, k)
+        elif stimulus == DiversityStimulus.PLOT:
+            return self.select_plot_diverse_movies(movie_data, k)
+        else: # should never happen...
+            raise ValueError(f"Unknown diversity stimulus: {stimulus}")
+
     def select_genre_diverse_movies(self, movie_data: list[dict], k: int):
         movie_lines = "\n".join(
             f"- ID: {item[0]} | Title: {item[1]['title']} | Genres: {item[1]['genres']}"
@@ -462,10 +259,12 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
             - You should aim for the widest genre coverage and minimal overlap between selected movies.
             - Avoid picking movies that are genre-similar to each other.
 
-            Return your answer as a JSON object with:
+            Return your answer as a JSON object with a key:
             - 'selected': a list of objects, each containing:
                 - 'item_id': the ID of the selected movie
                 - 'reason': a short explanation for why it was chosen (e.g., unique genres, expands diversity, etc.)
+
+            Eaxmple structure:
             {{
                 "selected": [
                     {{"item_id": 123, "reason": "Your reasoning..."}}
@@ -476,7 +275,7 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
 
         system_prompt = textwrap.dedent("""\
             You are a movie selection assistant helping to maximize diversity in genre across a small list of chosen movies.
-            Your job is to pick the most genre-different items from a given list and explain your reasoning.
+            Your job is to pick the most genre-different items from a given list and explain your selection.
             Output must always be in valid JSON format.
         """)
 
@@ -489,10 +288,56 @@ class LLMProfilingDiv(AlgorithmBase, ABC):
             format=SelectionResult.model_json_schema(),
         )
 
-        # Optionally validate/parse response
         parsed = SelectionResult.model_validate_json(response.message.content)
         return parsed
 
+    def select_plot_diverse_movies(self, movie_data: list[dict], k: int):
+        movie_lines = "\n".join(
+            f"- ID: {item[0]} | Title: {item[1]['title']} | Plot: {item[1]['plot']}"
+            for item in movie_data
+        )
+
+        user_prompt = textwrap.dedent(f"""\  
+            Here is a list of movies, each with an ID, title, and plot description:
+
+            {movie_lines}
+
+            Task:
+            - Select {k} movies that are the most diverse from each other based on **plot**.
+            - You should aim for the widest thematic and narrative variety, avoiding movies with similar storylines, characters, or settings.
+
+            Return your answer as a JSON object with a key:
+            - 'selected': a list of objects, each containing:
+                - 'item_id': the ID of the selected movie
+                - 'reason': a short explanation for why it was chosen (e.g., unique story, different narrative style, contrasting themes, etc.)
+            
+            Example structure:
+            {{
+                "selected": [
+                    {{"item_id": 123, "reason": "Your reasoning..."}}
+                    ...
+                ]
+            }}
+        """)
+
+        system_prompt = textwrap.dedent("""\
+            You are a movie selection assistant helping to maximize diversity in movie **plots**.
+            Your job is to pick the most plot-different items from a given list and explain your selection.
+            Focus on selecting movies with distinct stories, themes, tones, or narrative styles.
+            Output must always be in valid JSON format.
+        """)
+
+        response = chat(
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            model="llama3.1:8b",
+            format=SelectionResult.model_json_schema(),
+        )
+
+        parsed = SelectionResult.model_validate_json(response.message.content)
+        return parsed
 
     def _generate_representant(self, movies_cluster, stimulus: DiversityStimulus):
             
