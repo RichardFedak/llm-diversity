@@ -209,25 +209,29 @@ def get_diversity_data():
     loader = loader_factory(**filter_params(config["data_loader_parameters"], loader_factory))
     load_data_loader(loader, session["user_study_guid"], loader_factory.name())
 
-    versioned_pairs = [
-        # Harry Potter and the Chamber of Secrets (2002)  Harry Potter and the Prisoner of Azkaban (2004)
-        {"pair": [5816, 8368], "version": "no_div", "genre_sim": 0.9, "plot_sim": 0.8},
+    # Select 3 pairs of movies for each version - [sim_plot, sim_genres]
+    versioned_pairs = []
 
-        # Jurassic Park III (2001)                        Total Recall (2012)
-        {"pair": [4638, 95875], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.3},
+    genre_pairs = loader.div_phase_genres_pairs
+    plot_pairs = loader.div_phase_plot_pairs
 
-        # Tag (2018)                                      Yes Man (2008)
-        {"pair": [188797, 64969], "version": "no_div_genres", "genre_sim": 1.0, "plot_sim": 0.1},
+    index_key = f"{session['user_study_guid']}_available_div_indices"
 
-        # Free Guy (2020)                                 Source Code (2011)      
-        {"pair": [226202, 85414], "version": "no_div_plot", "genre_sim": 0.4, "plot_sim": 0.6},
+    if index_key not in session or len(session[index_key]) < 3:
+        session[index_key] = list(range(len(genre_pairs)))  # lengt of genre pairs is equal to length of plot pairs
 
-        # The Sea Beast (2022)                            Meg 2: The Trench (2023)    
-        {"pair": [276489, 289295], "version": "no_div_plot", "genre_sim": 0.1, "plot_sim": 0.7},
+    available = session[index_key]
+    chosen = np.random.choice(available, 3, replace=False).tolist()
 
-        # The Lion King (2019)                            Pulp Fiction (1994)       
-        {"pair": [203222, 296], "version": "div_all", "genre_sim": 0.1, "plot_sim": 0.1}
-    ]
+    selected_genre_pairs = [genre_pairs[i] for i in chosen]
+    selected_plot_pairs = [plot_pairs[i] for i in chosen]
+
+    for i in chosen:
+        available.remove(i)
+    session[index_key] = available
+
+    versioned_pairs.extend(selected_genre_pairs)
+    versioned_pairs.extend(selected_plot_pairs)
 
     data = []
     tr = get_tr(languages, get_lang())

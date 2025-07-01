@@ -37,6 +37,8 @@ class MLDataLoaderWrapper(DataLoaderBase):
         movies_path = os.path.join(datasets_base_dir, "ml-latest", "movies.csv")
         genres_embeddings_path = os.path.join(datasets_base_dir, "ml-latest", "genres_embeddings.npy")
         plot_embeddings_path = os.path.join(datasets_base_dir, "ml-latest", "plot_embeddings.npy")
+        div_phase_genres_pairs_path = os.path.join(datasets_base_dir, "ml-latest", "div_phase_genres_pairs.json")
+        div_phase_plot_pairs_path = os.path.join(datasets_base_dir, "ml-latest", "div_phase_plot_pairs.json")
         tags_path = os.path.join(datasets_base_dir, "ml-latest", "tags.csv")
         links_path = os.path.join(datasets_base_dir, "ml-latest", "links.csv")
         img_dir_path = os.path.join(datasets_base_dir, "ml-latest", "img")
@@ -48,6 +50,8 @@ class MLDataLoaderWrapper(DataLoaderBase):
             movies_path,
             genres_embeddings_path,
             plot_embeddings_path,
+            div_phase_genres_pairs_path,
+            div_phase_plot_pairs_path,
             tags_path,
             links_path,
             [
@@ -96,6 +100,14 @@ class MLDataLoaderWrapper(DataLoaderBase):
     @property
     def plot_embeddings(self):
         return self.loader.plot_embeddings
+    
+    @property
+    def div_phase_genres_pairs(self):
+        return self.loader.div_phase_genres_pairs
+    
+    @property
+    def div_phase_plot_pairs(self):
+        return self.loader.div_phase_plot_pairs
 
     @property
     def items_df_indexed(self):
