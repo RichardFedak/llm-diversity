@@ -16,7 +16,7 @@ class MostPopular(AlgorithmBase, ABC):
         pass
 
     # Predict for the user
-    def predict(self, selected_items, filter_out_items, k, div_perception):
+    def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
         ratings = self._ratings_df.groupby("item").size().sort_values(ascending=False)
 
         result = ratings.index.values.tolist()
