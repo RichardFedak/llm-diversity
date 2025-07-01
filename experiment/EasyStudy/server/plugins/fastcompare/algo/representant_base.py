@@ -27,6 +27,17 @@ class RepresentantGenerator(ABC):
 
 class GenresDiversityHandler(RepresentantGenerator):
 
+    def _call_chat(self, system_prompt: str, user_prompt: str) -> 'Representant':
+        response = chat(
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            model=self.chat_model,
+            format=Representant.model_json_schema(),
+        )
+        return Representant.model_validate_json(response.message.content)
+
     def generate_cluster_representant(self, movies_cluster):
         movie_text = "\n".join(
             f"- {m['title']} | Genres: {m['genres']} Plot: {m['plot']}"
@@ -62,15 +73,7 @@ class GenresDiversityHandler(RepresentantGenerator):
                 - 'plot': a short, original movie-style description that fits those genres
         """)
 
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
+        return self._call_chat(system_prompt, user_prompt)
 
     def generate_diversity_representant(self, representants):
         reps = "\n".join(
@@ -109,6 +112,11 @@ class GenresDiversityHandler(RepresentantGenerator):
                 - 'plot': a short movie-style generated description that fits the new genres
         """)
 
+        return self._call_chat(system_prompt, user_prompt)
+
+class PlotDiversityHandler(RepresentantGenerator):
+
+    def _call_chat(self, system_prompt: str, user_prompt: str) -> 'Representant':
         response = chat(
             messages=[
                 {"role": "system", "content": system_prompt},
@@ -118,8 +126,6 @@ class GenresDiversityHandler(RepresentantGenerator):
             format=Representant.model_json_schema(),
         )
         return Representant.model_validate_json(response.message.content)
-
-class PlotDiversityHandler(RepresentantGenerator):
 
     def generate_cluster_representant(self, movies_cluster):
         # similar to GenresHandler, but with emphasis on plot synthesis
@@ -155,15 +161,7 @@ class PlotDiversityHandler(RepresentantGenerator):
                 - 'genres': a comma-separated list of genres that best fit the new plot
         """)
 
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
+        return self._call_chat(system_prompt, user_prompt)
 
     def generate_diversity_representant(self, representants):
         reps = "\n".join(
@@ -200,13 +198,5 @@ class PlotDiversityHandler(RepresentantGenerator):
                 - 'genres': a comma-separated string of genres that best match the generated plot.
         """)
 
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
+        return self._call_chat(system_prompt, user_prompt)
 
