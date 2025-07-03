@@ -93,7 +93,7 @@ def gen_user_study_url(guid):
     return f"/user-study/{guid}"
 
 def gen_user_study_invitation_url(parent_plugin, guid):
-    return f"{gen_url_prefix()}/{parent_plugin}/join?guid={guid}"
+    return f"/{parent_plugin}/join?guid={guid}"
 
 def get_vars(x):
     return {name: value for name, value in vars(x).items() if not name.startswith("_")}
