@@ -1,64 +1,64 @@
 {% include 'header.html' %}
 <style>
-.custom-image {
+  .custom-image {
     border-radius: 8px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-}
+  }
 
-.custom-image:hover {
+  .custom-image:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+  }
 </style>
 <div id="app">
-<b-container fluid>
-    {% if elicitation_hint_override is defined and elicitation_hint_override is not none  %}
+  <b-container fluid>
+    {% if elicitation_hint_override is defined and elicitation_hint_override is not none %}
     <div class="jumbotron smallJumbotron">
       {{ elicitation_hint_override | safe }}
     </div>
     {% else %}
-    <b-jumbotron lead="Lets start with what you like"
-    class="smallJumbotron" header="{{header}}">
-      Please, <strong>select the movies that you have seen and that you liked</strong>. It is advisable to <strong>select at least 5-10 movies</strong> for the correct recommendation functionality.
-      Movies are selected by clicking on them and each selected movie is highlighted in green border. 
-      If you want to load more movies, you can use the button at the bottom of the page. 
-      Alternatively, you can use search bar at the top to <strong>search for movies that you know and like</strong>. 
-      This step will help us to identify and better understand your preferences. 
+    <b-jumbotron lead="Lets start with what you like" class="smallJumbotron" header="{{header}}">
+      Please, <strong>select the movies that you have seen and that you liked</strong>. It is advisable to
+      <strong>select at least 5-10 movies</strong> for the correct recommendation functionality.
+      Movies are selected by clicking on them and each selected movie is highlighted in green border.
+      If you want to load more movies, you can use the button at the bottom of the page.
+      Alternatively, you can use search bar at the top to <strong>search for movies that you know and like</strong>.
+      This step will help us to identify and better understand your preferences.
       When a mouse cursor is placed over a movie, its name, genres and plot will be shown.
     </b-jumbotron>
     {% endif %}
     <!-- <i class="{{impl}}" id="impl"></i> -->
     <!-- <b-form method="POST" action="{{continuation_url}}"> -->
     <b-form name="theForm" method="GET" action="{{continuation_url}}">
-      <b-form-group
-        horizontal
-      >
-          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
-          <!-- <input type="hidden" name="impl" value="{{ impl }}" /> -->
-          <b-row>
-            
-          </b-row>
+      <b-form-group horizontal>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <!-- <input type="hidden" name="impl" value="{{ impl }}" /> -->
+        <b-row>
+
+        </b-row>
       </b-form-group>
     </b-form>
 
     <b-row class="mb-3" align-h="center">
       <b-col>
-        
+
       </b-col>
       <b-col align-h="center">
         <b-row>
-          <b-col><b-input @update="onUpdateSearchMovieName" @keydown="onKeyDownSearchMovieName" v-model="searchMovieName" type="search" placeholder="{{enter_name}}"></b-input></b-col>
+          <b-col><b-input @update="onUpdateSearchMovieName" @keydown="onKeyDownSearchMovieName"
+              v-model="searchMovieName" type="search" placeholder="{{enter_name}}" :disabled="busy"></b-input></b-col>
         </b-row>
       </b-col>
       <b-col align-h="start">
         <b-row>
           <div class="mr-1">
-            <b-btn name="search" v-on:click="onClickSearch" variant="secondary">{{search}}</b-btn>
+            <b-btn name="search" v-on:click="onClickSearch" variant="secondary" :disabled="busy">{{search}}</b-btn>
           </div>
           <div class="mr-5">
-            <b-btn name="cancel_search" :disabled="!itemsBackup" v-on:click="onClickCancelSearch" variant="warning">{{cancel_search}}</b-btn>
+            <b-btn name="cancel_search" :disabled="!itemsBackup || busy" v-on:click="onClickCancelSearch"
+              variant="warning">{{cancel_search}}</b-btn>
           </div>
         </b-row>
       </b-col>
@@ -69,32 +69,45 @@
     See https://stackoverflow.com/questions/46758441/preventing-vue-from-aggresively-reusing-dom-elements -->
     <b-row class="mb-3" align-h="center" align-content="center" v-for="row in rows">
       <b-col class="mb-3" class="align-middle" v-for="col in row">
-        <b-img :key="col.movie.idx" class="mb-3 custom-image" style="width: 175px; height: auto;" center :src="col.movie.url" v-on:click="onSelectMovie($event, col)" :id="col.movie.idx" :alt="col.movieName" v-b-tooltip.html.hover="{ title: col.movieName }" :title="col.movieName" />
+        <b-img :key="col.movie.idx" class="mb-3 custom-image" style="width: 175px; height: auto;" :src="col.movie.url"
+          center :id="col.movie.idx" :alt="col.movieName" v-b-tooltip.html.hover="{ title: col.movieName }"
+          :title="col.movieName" @click="!busy && onSelectMovie($event, col)"
+          :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }" />
       </b-col>
     </b-row>
-    <b-row align-h="center">
-      <b-col cols="2" align-h="start">
-        <div>
-          <b-btn name="load_more" :disabled="itemsBackup" v-on:click="onClickLoadMore" variant="secondary">{{load_more}}</b-btn>
-        </div>
-      </b-col>
-      <b-col cols="3" align-h="center">
-        <b-overlay
-          :show="busy"
-          rounded
-          opacity="0.6"
-          spinner-small
-          spinner-variant="primary"
-          class="d-inline-block"
-        >
-          <b-btn name="finish_elicitation" block v-on:Click="onElicitationFinish(theForm)" :disabled="disableNextStep" variant="primary">{{finish}}</b-btn>
-        </b-overlay>
+    <b-row align-h="center" class="align-items-center">
+      <template v-if="!busy">
+        <b-col cols="2" align-h="start">
+          <b-btn name="load_more" :disabled="itemsBackup" v-on:click="onClickLoadMore" variant="secondary">
+            {{load_more}}
+          </b-btn>
+        </b-col>
+        <b-col cols="3" align-h="center">
+          <b-btn name="finish_elicitation" block v-on:click="onElicitationFinish(theForm)" :disabled="disableNextStep"
+            variant="primary">
+            {{finish}}
+          </b-btn>
+        </b-col>
+      </template>
+      <b-col cols="5" v-else>
+        <b-progress :value="predictionProgress.done" :max="predictionProgress.total" height="35px"
+          class="w-100 position-relative">
+          <b-progress-bar :value="predictionProgress.done" variant="info" style="font-size: 1rem;"></b-progress-bar>
+          <div class="position-absolute w-100"
+            style="top: 0; left: 0; height: 35px; line-height: 35px; text-align: center; color: black; pointer-events: none; user-select: none; font-size: 1rem;">
+            [[ predictionProgress.done === 0 ? 'Analyzing preferences... (~10s)' : 'Recommending: ' + predictionProgress.done + ' / ' +
+            predictionProgress.total + ' done (~10s)' ]]
+          </div>
+        </b-progress>
+
       </b-col>
     </b-row>
+
+
     <!-- <b-row>
       [[ selected ]]
     </b-row> -->
-</b-container>
+  </b-container>
 </div>
 
 <script type='text/javascript'>
@@ -104,17 +117,19 @@
   var impl = "{{impl}}";
   var initial_data_url = "{{initial_data_url}}";
   var search_item_url = "{{search_item_url}}";
-  
+  var statusUrl = "{{status_url}}";
+
 </script>
 <script src="{{url_for('static', filename='resolution_handling.js')}}"></script>
 <script src="{{url_for('static', filename='interaction_reporting.js')}}"></script>
-{{ emit_assets('utils','preference_elicitation.js') }}        
+{{ emit_assets('utils','preference_elicitation.js') }}
 <script src="{{url_for('static', filename='common.js')}}"></script>
 {% if footer_override is defined and footer_override is not none %}
-  <div class="footerDiv mt-3">
-    {{ footer_override|safe }}
-  </div>
+<div class="footerDiv mt-3">
+  {{ footer_override|safe }}
+</div>
 </body>
+
 </html>
 {% else %}
 {% include 'footer.html' %}

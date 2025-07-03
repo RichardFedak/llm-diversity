@@ -21,58 +21,60 @@ function elicitation_ctx_lambda() {
 
 window.app = new Vue({
     el: '#app',
-    delimiters: ['[[',']]'], // Used to replace double { escaping with double [ escaping (to prevent jinja vs vue inference)
-    data: function() {
-    // let impl = document.getElementById("impl").className;
-    return {
-        userEmail: "{{email}}",
-        items: [],
-        selected: [],
-        impl: impl,
-        selectMode: "multi",
-        lastSelectedCluster: null,
-        handle: false,
-        rows: [],
-        rows2: [],
-        itemsPerRow: 80,
-        jumboHeader: "Preference Elicitation",
-        disableNextStep: false,
-        searchMovieName: null,
-        itemsBackup: null,
-        rowsBackup: null,
-        busy: false
-    }
+    delimiters: ['[[', ']]'], // Used to replace double { escaping with double [ escaping (to prevent jinja vs vue inference)
+    data: function () {
+        // let impl = document.getElementById("impl").className;
+        return {
+            userEmail: "{{email}}",
+            items: [],
+            selected: [],
+            impl: impl,
+            selectMode: "multi",
+            lastSelectedCluster: null,
+            handle: false,
+            rows: [],
+            rows2: [],
+            itemsPerRow: 80,
+            jumboHeader: "Preference Elicitation",
+            disableNextStep: false,
+            searchMovieName: null,
+            itemsBackup: null,
+            rowsBackup: null,
+            busy: false,
+            predictionProgress: { done: 0, total: 0 },
+            progressInterval: null
+        }
     },
     async mounted() {
         const btns = document.querySelectorAll(".btn");
-        
+
         // This was used for reporting as previously reporting endpoints were defined inside plugin
 
         // Get the number of items user is supposed to select
         let data = await fetch(initial_data_url + "?impl=" + this.impl + "&i=0").then((resp) => resp.json()).then((resp) => resp);
-        
+
         res = this.prepareTable(data);
         this.rows = res["rows"];
         this.items = res["items"];
 
         // Register the handlers for event reporting
         startViewportChangeReportingWithLimit(`/utils/changed-viewport`, csrfToken, 1.0, true, elicitation_ctx_lambda);
-        registerClickedButtonReporting(`/utils/on-input`, csrfToken, btns, ()=>{
+        registerClickedButtonReporting(`/utils/on-input`, csrfToken, btns, () => {
             return {
                 "search_text_box_value": this.searchMovieName
             };
         });
-        reportLoadedPage(`/utils/loaded-page`, csrfToken, "preference_elicitation", ()=>{
-            return {"impl":impl};
+        reportLoadedPage(`/utils/loaded-page`, csrfToken, "preference_elicitation", () => {
+            return { "impl": impl };
         });
-        
+
         setTimeout(function () {
             reportViewportChange(`/utils/changed-viewport`, csrfToken, elicitation_ctx_lambda);
         }, 5000);
     },
     methods: {
         async handlePrefixSearch(movieName) {
-            let foundMovies = await fetch(search_item_url + "?attrib=movie&pattern="+movieName).then(resp => resp.json());
+            let foundMovies = await fetch(search_item_url + "?attrib=movie&pattern=" + movieName).then(resp => resp.json());
             return foundMovies;
         },
         prepareTable(data) {
@@ -103,13 +105,13 @@ window.app = new Vue({
                 rows.push(row);
             }
 
-            return {"rows": rows, "items": items };
+            return { "rows": rows, "items": items };
         },
         async onClickSearch(event) {
-            reportOnInput("/utils/on-input", csrfToken, "search", {"search_text_box_value": this.searchMovieName});
+            reportOnInput("/utils/on-input", csrfToken, "search", { "search_text_box_value": this.searchMovieName });
             let data = await this.handlePrefixSearch(this.searchMovieName);
             let res = this.prepareTable(data);
-            
+
             // Do not overwrite backups when doing repeated search
             if (this.itemsBackup === null) {
                 this.itemsBackup = this.items;
@@ -177,8 +179,8 @@ window.app = new Vue({
                 if (arrItem.movie.idx === item.movie.idx
                     && arrItem.movieName === item.movieName
                     && arrItem.movie.url === item.movie.url) {
-                        return idx;
-                    }
+                    return idx;
+                }
             }
             return -1;
         },
@@ -207,16 +209,29 @@ window.app = new Vue({
                 //this.$refs.selectableTable.selectRow(this.items.indexOf(item));
             }
         },
+        pollProgress() {
+            this.progressInterval = setInterval(() => {
+                fetch(statusUrl)
+                    .then(res => res.json())
+                    .then(data => {
+                        this.predictionProgress = data;
+                        if (data.done === data.total) {
+                            clearInterval(this.progressInterval);
+                        }
+                    });
+            }, 500);
+        },
         onElicitationFinish(form) {
             this.busy = true;
             let selectedMoviesTag = document.createElement("input");
-            selectedMoviesTag.setAttribute("type","hidden");
-            selectedMoviesTag.setAttribute("name","selectedMovies");
+            selectedMoviesTag.setAttribute("type", "hidden");
+            selectedMoviesTag.setAttribute("name", "selectedMovies");
             selectedMoviesTag.setAttribute("value", this.selected.map((x) => x.movie.idx).join(","));
 
             form.appendChild(selectedMoviesTag);
 
             form.submit();
+            this.pollProgress();
         }
     }
 })

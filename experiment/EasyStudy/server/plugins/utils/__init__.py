@@ -190,6 +190,7 @@ def preference_elicitation():
     params["continuation_url"] = request.args.get("continuation_url") # Continuation url must be specified
     params["initial_data_url"] = request.args.get("initial_data_url")
     params["search_item_url"] = request.args.get("search_item_url")
+    params["status_url"] = request.args.get("status_url") 
 
     # Handle textual overrides
     params["elicitation_hint_override"] = None

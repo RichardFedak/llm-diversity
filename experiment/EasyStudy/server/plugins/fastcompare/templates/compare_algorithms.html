@@ -224,7 +224,8 @@
                     <b-col sm="12" class="text-center">
                         <label for="rating-sm" class="mt-1 ml-2 float-left">Low relevance</label>
                         <label for="rating-sm" class="mt-1 mr-2 float-right">High relevance</label>
-                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'relevance')"
+                        <b-form-rating
+                            :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'relevance')"
                             v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'relevance')"
                             show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
                     </b-col>
@@ -238,7 +239,8 @@
                     <b-col sm="12" class="text-center">
                         <label for="rating-sm" class="mt-1 ml-2 float-left">Low diversity</label>
                         <label for="rating-sm" class="mt-1 mr-2 float-right">High diversity</label>
-                        <b-form-rating :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'diversity')"
+                        <b-form-rating
+                            :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'diversity')"
                             v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'diversity')"
                             show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
                     </b-col>
@@ -262,7 +264,7 @@
             <b-col center class="align-middle">
 
             </b-col>
-            <b-col center class="align-middle">
+            <b-col center class="align-middle" cols="3">
                 {% if iteration < MIN_ITERATION_TO_CANCEL %} <b-form @submit="busy = true" method="GET"
                     action="{{ url_for(consuming_plugin + '.algorithm_feedback') }}">
                     <input type="hidden" hidden="true" :value="selectedMovieIndices" name="selected_movies" />
@@ -274,10 +276,29 @@
                     <input type="hidden" hidden="true" :value="dontLikeAnythingValue" name="nothing" />
                     <input type="hidden" hidden="true" :value="algorithmComparisonValue" name="cmp" />
                     <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
-                        class="d-inline-block">
-                        <b-button name="next_compare" type="submit" block variant="primary" :disabled="!allValidated"
-                            center>{{next}}</b-button>
+                        class="d-inline-block w-100">
+                        <b-button name="next_compare" type="submit" block variant="primary" @click="pollProgress"
+                            :disabled="!allValidated" center v-show="!busy">
+                            {{ next }}
+                        </b-button>
                     </b-overlay>
+
+                    <b-col class="w-100 mt-3" v-show="busy">
+                        <b-progress :value="predictionProgress.done" :max="predictionProgress.total" height="35px"
+                            class="w-100 position-relative">
+                            <b-progress-bar :value="predictionProgress.done" variant="info"
+                                style="font-size: 1rem;"></b-progress-bar>
+                            <div class="position-absolute w-100"
+                                style="top: 0; left: 0; height: 35px; line-height: 35px; text-align: center; color: black; pointer-events: none; user-select: none; font-size: 1rem;">
+                                [[
+                                predictionProgress.done === 0
+                                ? 'Analyzing preferences... (~10s)'
+                                : predictionProgress.done + ' / ' + predictionProgress.total + ' done (~10s)'
+                                ]]
+                            </div>
+                        </b-progress>
+                    </b-col>
+
                     </b-form>
                     {% else %}
                     <b-form @submit="busy = true" method="GET"
@@ -303,7 +324,8 @@
     var resultLayout = "{{result_layout}}";
     var iteration = "{{iteration}}";
     var minIterationToCancel = "{{MIN_ITERATION_TO_CANCEL}}";
-    var csrfToken = "{{csrf_token()}}"
+    var csrfToken = "{{csrf_token()}}";
+    var statusUrl = "{{status_url}}";
 
     {% if result_layout == "columns" %}
     var itemsPerRow = 2; // Two items per row

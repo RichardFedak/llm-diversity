@@ -18,6 +18,11 @@
       Please provide <strong>honest and thoughtful</strong> ratings.
     </b-jumbotron>
 
+    <b-row align-h="center" v-if="pairs.length === 0">
+      <b-spinner variant="primary" label="Loading..." style="width: 3rem; height: 3rem;" class="my-4"></b-spinner>
+    </b-row>
+
+
     <div v-for="(pair, pairIndex) in pairs" :key="'pair-' + pairIndex" class="mb-4 mt-4">
       <b-row align-h="center mb-2">
         <b-col cols="auto" v-for="(col, index) in pair.movies" :key="col.movie_id">
@@ -35,7 +40,7 @@
             label-align="center">
             <b-form-radio-group :id="'radio-rating-' + pairIndex" :name="'rating_' + pairIndex"
               v-model="ratings[pairIndex]" :state="ratings[pairIndex] !== null" buttons button-variant="outline-primary"
-              class="responsive-radio-group">
+              class="responsive-radio-group" :disabled="submitted">
               <b-form-radio :value="1">1 - No diversity</b-form-radio>
               <b-form-radio :value="2">2</b-form-radio>
               <b-form-radio :value="3">3 - Moderate</b-form-radio>
@@ -49,9 +54,11 @@
       <hr>
     </div>
 
-    <b-row align-h="center" class="mt-4">
-      <b-col cols="3">
-        <b-btn :disabled="!isFormValid" variant="primary" block @click="submit">Submit</b-btn>
+    <b-row align-h="center" class="mt-4 mb-4" v-if="pairs.length != 0">
+      <b-col cols="2" align-h="center">
+        <b-overlay :show="submitted" rounded opacity="0.6" spinner-small spinner-variant="primary">
+          <b-btn :disabled="!isFormValid || submitted" variant="primary" block @click="submit">Submit</b-btn>
+        </b-overlay>
       </b-col>
     </b-row>
   </b-container>
@@ -64,4 +71,3 @@
 </script>
 
 {{ emit_assets('fastcompare','diversity_perception.js') }}
-{% include 'footer.html' %}

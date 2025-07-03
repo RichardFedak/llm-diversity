@@ -12,6 +12,7 @@ import traceback
 import pickle
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 import numpy as np
 [sys.path.append(i) for i in ['.', '..']]
@@ -39,12 +40,17 @@ __description__ = "Fast and easy comparison of 2 or 3 RS algorithms on implicit 
 bp = Blueprint(__plugin_name__, __plugin_name__, url_prefix=f"/{__plugin_name__}")
 
 languages = load_languages(os.path.dirname(__file__))
+progress_lock = threading.Lock()
 
 
 HIDE_LAST_K = 1000000 # Effectively hides everything
 OBJECTIVES = ["relevance", "diversity"]
 ALGORITHM_CACHE = {}
 EASE_CACHE = {}
+PREDICTION_PROGRESS = {
+    'done': 0,
+    'total': 1
+}
 
 # Implementation of this function can differ among plugins
 def get_lang():
@@ -198,6 +204,9 @@ def get_initial_data():
     el_movies.extend(x)
     session["elicitation_movies"] = el_movies
 
+    if PREDICTION_PROGRESS["total"] > 1:
+        reset_progress(PREDICTION_PROGRESS["total"])
+
     # TODO to do lazy loading, return just X and update rows & items in JS directly
     # print(el_movies)
     return jsonify(el_movies)
@@ -325,7 +334,8 @@ def send_diversity_feedback():
         continuation_url=url_for(f"{__plugin_name__}.send_elicitation_feedback"),
         consuming_plugin=__plugin_name__,
         initial_data_url=url_for(f"{__plugin_name__}.get_initial_data"),
-        search_item_url=url_for(f'{__plugin_name__}.item_search')
+        search_item_url=url_for(f'{__plugin_name__}.item_search'),
+        status_url=url_for(f"{__plugin_name__}.get_recommendation_progress")
     ))
 
 
@@ -371,6 +381,15 @@ def get_or_load_algorithm(name, loader, params, factory):
         print(f"{name} - Loaded from cache.")
     return ALGORITHM_CACHE[name]
 
+def update_progress():
+    with progress_lock:
+        PREDICTION_PROGRESS['done'] += 1
+
+def reset_progress(total_count):
+    with progress_lock:
+        PREDICTION_PROGRESS['done'] = 0
+        PREDICTION_PROGRESS['total'] = total_count
+
 def prepare_recommendations(loader, conf, recommendations,
                             selected_movies, filter_out_movies, k):
 
@@ -389,6 +408,8 @@ def prepare_recommendations(loader, conf, recommendations,
         algo_obj = get_or_load_algorithm(disp, loader, params, factory)
 
         algo_instances.append((disp, algo_obj))
+    
+    reset_progress(len(algo_instances))
 
     load_end = time.perf_counter()
     print(f"\nLoading time: {load_end - load_start:.2f} seconds\n")
@@ -427,6 +448,7 @@ def prepare_recommendations(loader, conf, recommendations,
             name = fut_to_name[fut]
             recs = fut.result()
             predictions[name] = recs
+            update_progress()
 
     predict_end = time.perf_counter()
     print(f"\nPrediction time: {predict_end - predict_start:.2f} seconds\n")
@@ -437,6 +459,12 @@ def prepare_recommendations(loader, conf, recommendations,
         recommendations[name][-1] = enrich_results(recs, loader)
 
     return recommendations
+
+@bp.route("/get-recommendation-progress")
+def get_recommendation_progress():
+    with progress_lock:
+        progress = PREDICTION_PROGRESS
+    return jsonify(progress)
 
 # Receives arbitrary feedback (CALLED from preference elicitation) and generates recommendation
 @bp.route("/send-elicitation-feedback", methods=["GET"])
@@ -584,6 +612,7 @@ def compare_algorithms():
         "result_layout": result_layout,
         "MIN_ITERATION_TO_CANCEL": len(session["permutation"]),
         "consuming_plugin": __plugin_name__,
+        "status_url": url_for(f"{__plugin_name__}.get_recommendation_progress"),
     }
    
     params["contacts"] = tr("footer_contacts")
@@ -624,6 +653,7 @@ def compare_algorithms():
 # We received feedback from compare_algorithms.html
 @bp.route("/algorithm-feedback")
 def algorithm_feedback():
+    reset_progress(PREDICTION_PROGRESS.get("total", 1)) # Reset progress for new iteration
     # TODO do whatever with the passed parameters and set session variable
 
     conf = load_user_study_config(session["user_study_id"])

@@ -58,7 +58,9 @@ window.app = new Vue({
             imageHeight: 300,
             maxColumnsMaxWidth: 300,
             busy: false,
-            allAlgorithmRatingsValidated: false
+            allAlgorithmRatingsValidated: false,
+            predictionProgress: { done: 0, total: 1 },
+            progressInterval: null
         }
     },
     computed: {
@@ -113,6 +115,19 @@ window.app = new Vue({
             }
             this.selectedMovieIndices = this.selected.map((x) => x.movie_idx).join(",");
             this.selectedMovieVariants = this.selected.map((x) => x.variant).join(",");
+        },
+        pollProgress() {
+            this.busy = true;
+            this.progressInterval = setInterval(() => {
+                fetch(statusUrl)
+                    .then(res => res.json())
+                    .then(data => {
+                        this.predictionProgress = data;
+                        if (data.done === data.total) {
+                            clearInterval(this.progressInterval);
+                        }
+                    });
+            }, 500);
         },
         onAlgorithmRatingChanged(newRating, algorithmIndex, objective) {
             let oldRating = this.algorithmRatings[objective][algorithmIndex];

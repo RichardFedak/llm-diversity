@@ -14,7 +14,8 @@ window.app = new Vue({
           { value: 3, text: "3 - Moderate" },
           { value: 4, text: "4" },
           { value: 5, text: "5 - High diversity" }
-        ]
+        ],
+        submitted: false,
       };
     },
     computed: {
@@ -35,6 +36,7 @@ window.app = new Vue({
     },
     methods: {
       submit() {
+        this.submitted = true;
         const form = document.createElement("form");
         form.method = "POST";
         form.action = continuation_url;
