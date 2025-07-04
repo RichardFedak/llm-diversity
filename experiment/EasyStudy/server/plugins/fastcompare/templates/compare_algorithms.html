@@ -265,7 +265,7 @@
 
             </b-col>
             <b-col center class="align-middle" cols="3">
-                {% if iteration < MIN_ITERATION_TO_CANCEL %} <b-form @submit="busy = true" method="GET"
+                {% if iteration < MIN_ITERATION_TO_CANCEL %} <b-form @submit="pollProgress" method="GET"
                     action="{{ url_for(consuming_plugin + '.algorithm_feedback') }}">
                     <input type="hidden" hidden="true" :value="selectedMovieIndices" name="selected_movies" />
                     <input type="hidden" hidden="true" :value="selectedMovieVariants" name="selected_movie_variants" />
@@ -277,7 +277,7 @@
                     <input type="hidden" hidden="true" :value="algorithmComparisonValue" name="cmp" />
                     <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
                         class="d-inline-block w-100">
-                        <b-button name="next_compare" type="submit" block variant="primary" @click="pollProgress"
+                        <b-button name="next_compare" type="submit" block variant="primary"
                             :disabled="!allValidated" center v-show="!busy">
                             {{ next }}
                         </b-button>
