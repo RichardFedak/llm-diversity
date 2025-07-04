@@ -42,7 +42,8 @@ window.app = new Vue({
             rowsBackup: null,
             busy: false,
             predictionProgress: { done: 0, total: 0 },
-            progressInterval: null
+            progressInterval: null,
+            finish: finish
         }
     },
     async mounted() {

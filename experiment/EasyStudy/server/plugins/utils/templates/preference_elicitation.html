@@ -76,17 +76,21 @@
       </b-col>
     </b-row>
     <b-row align-h="center" class="align-items-center">
-        <b-col cols="2" align-h="start">
-          <b-btn name="load_more" :disabled="itemsBackup" v-on:click="onClickLoadMore" variant="secondary">
-            {{load_more}}
-          </b-btn>
-        </b-col>
-        <b-col cols="3" align-h="center">
+      <b-col cols="2" align-h="start">
+        <b-btn name="load_more" :disabled="itemsBackup" v-on:click="onClickLoadMore" variant="secondary"
+          :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }">
+          {{load_more}}
+        </b-btn>
+      </b-col>
+      <b-col cols="3" align-h="center">
+        <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
+          class="d-inline-block w-100">
           <b-btn name="finish_elicitation" block v-on:click="onElicitationFinish(theForm)" :disabled="disableNextStep"
-            variant="primary">
-            {{finish}}
+            :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }" variant="primary">
+            [[ busy ? 'Analyzing preferences... (~15s)' : finish ]]
           </b-btn>
-        </b-col>
+        </b-overlay>
+      </b-col>
     </b-row>
 
 
@@ -104,6 +108,7 @@
   var initial_data_url = "{{initial_data_url}}";
   var search_item_url = "{{search_item_url}}";
   var statusUrl = "{{status_url}}";
+  var finish = "{{ finish }}";
 
 </script>
 <script src="{{url_for('static', filename='resolution_handling.js')}}"></script>
