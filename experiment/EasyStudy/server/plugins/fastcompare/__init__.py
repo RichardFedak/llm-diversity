@@ -13,6 +13,7 @@ import pickle
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
+import redis
 
 import numpy as np
 [sys.path.append(i) for i in ['.', '..']]
@@ -42,15 +43,14 @@ bp = Blueprint(__plugin_name__, __plugin_name__, url_prefix=f"/{__plugin_name__}
 languages = load_languages(os.path.dirname(__file__))
 progress_lock = threading.Lock()
 
+redis_client = redis.Redis(host='redis_db', port=6379, decode_responses=True)
+
 
 HIDE_LAST_K = 1000000 # Effectively hides everything
 OBJECTIVES = ["relevance", "diversity"]
 ALGORITHM_CACHE = {}
 EASE_CACHE = {}
-PREDICTION_PROGRESS = {
-    'done': 0,
-    'total': 1
-}
+DIV_INDICES_KEY = "available_div_indices"
 
 # Implementation of this function can differ among plugins
 def get_lang():
@@ -204,8 +204,10 @@ def get_initial_data():
     el_movies.extend(x)
     session["elicitation_movies"] = el_movies
 
-    if PREDICTION_PROGRESS["total"] > 1:
-        reset_progress(PREDICTION_PROGRESS["total"])
+    progress = get_progress()
+
+    if progress["total"] > 1:
+        reset_progress(progress["total"])
 
     # TODO to do lazy loading, return just X and update rows & items in JS directly
     # print(el_movies)
@@ -224,20 +226,23 @@ def get_diversity_data():
     genre_pairs = loader.div_phase_genres_pairs
     plot_pairs = loader.div_phase_plot_pairs
 
-    index_key = f"{session['user_study_guid']}_available_div_indices"
+    if not redis_client.exists(DIV_INDICES_KEY):
+        indices = list(range(len(genre_pairs))) # Genre pars and plot pairs are the same length (9)
+        redis_client.set(DIV_INDICES_KEY, json.dumps(indices))
 
-    if index_key not in session or len(session[index_key]) < 3:
-        session[index_key] = list(range(len(genre_pairs)))  # lengt of genre pairs is equal to length of plot pairs
+    available_json = redis_client.get(DIV_INDICES_KEY)
+    available = json.loads(available_json)
 
-    available = session[index_key]
+    if len(available) < 3:
+        available = list(range(len(genre_pairs)))
+
     chosen = np.random.choice(available, 3, replace=False).tolist()
 
     selected_genre_pairs = [genre_pairs[i] for i in chosen]
     selected_plot_pairs = [plot_pairs[i] for i in chosen]
 
-    for i in chosen:
-        available.remove(i)
-    session[index_key] = available
+    remaining = [i for i in available if i not in chosen]
+    redis_client.set(DIV_INDICES_KEY, json.dumps(remaining))
 
     versioned_pairs.extend(selected_genre_pairs)
     versioned_pairs.extend(selected_plot_pairs)
@@ -381,14 +386,34 @@ def get_or_load_algorithm(name, loader, params, factory):
         print(f"{name} - Loaded from cache.")
     return ALGORITHM_CACHE[name]
 
-def update_progress():
+def get_participation_key():
+    study_guid = session.get("user_study_guid")
+    participation_id = session.get("participation_id")
+    if not study_guid or not participation_id:
+        raise ValueError("Missing session identifiers.")
+    return f"progress:{study_guid}:{participation_id}"
+
+def update_progress(user_study_guid = None, participation_id = None):
     with progress_lock:
-        PREDICTION_PROGRESS['done'] += 1
+        if not user_study_guid or not participation_id:
+            key = get_participation_key()
+        data = redis_client.get(key)
+        if data:
+            progress = json.loads(data)
+        else:
+            progress = {'done': 0, 'total': 1}
+        
+        progress['done'] += 1
+        redis_client.set(key, json.dumps(progress))
 
 def reset_progress(total_count):
     with progress_lock:
-        PREDICTION_PROGRESS['done'] = 0
-        PREDICTION_PROGRESS['total'] = total_count
+        key = get_participation_key()
+        progress = {
+            'done': 0,
+            'total': total_count
+        }
+        redis_client.set(key, json.dumps(progress))
 
 def prepare_recommendations(loader, conf, recommendations,
                             selected_movies, filter_out_movies, k):
@@ -424,8 +449,10 @@ def prepare_recommendations(loader, conf, recommendations,
 
     predictions = {}
     div_perception = session["diversity_perception"]
+    user_study_guid = session["user_study_guid"]
+    participation_id = session["participation_id"]
 
-    cache_path = get_cache_path(session["user_study_guid"], "ease_cache")
+    cache_path = get_cache_path(user_study_guid, "ease_cache")
     weights = None
     items_count = None
 
@@ -448,7 +475,7 @@ def prepare_recommendations(loader, conf, recommendations,
             name = fut_to_name[fut]
             recs = fut.result()
             predictions[name] = recs
-            update_progress()
+            update_progress(user_study_guid, participation_id)
 
     predict_end = time.perf_counter()
     print(f"\nPrediction time: {predict_end - predict_start:.2f} seconds\n")
@@ -460,11 +487,14 @@ def prepare_recommendations(loader, conf, recommendations,
 
     return recommendations
 
+def get_progress():
+    key = get_participation_key()
+    data = redis_client.get(key)
+    return json.loads(data) if data else {'done': 0, 'total': 1}
+
 @bp.route("/get-recommendation-progress")
 def get_recommendation_progress():
-    with progress_lock:
-        progress = PREDICTION_PROGRESS
-    return jsonify(progress)
+    return get_progress()
 
 # Receives arbitrary feedback (CALLED from preference elicitation) and generates recommendation
 @bp.route("/send-elicitation-feedback", methods=["GET"])
@@ -653,7 +683,8 @@ def compare_algorithms():
 # We received feedback from compare_algorithms.html
 @bp.route("/algorithm-feedback")
 def algorithm_feedback():
-    reset_progress(PREDICTION_PROGRESS.get("total", 1)) # Reset progress for new iteration
+    progress = get_progress()
+    reset_progress(progress.get("total", 1))  # Reset progress for new iteration
     # TODO do whatever with the passed parameters and set session variable
 
     conf = load_user_study_config(session["user_study_id"])

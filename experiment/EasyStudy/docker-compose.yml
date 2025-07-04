@@ -1,0 +1,28 @@
+services:
+  web:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: llm_diversity
+    ports:
+      - "5000:5000"
+    volumes:
+      - ~/.ssh/:/root/.ssh:ro
+    depends_on:
+      - redis
+    command: >
+      bash -c "./keep_ssh_tunnel.sh &
+      exec gunicorn --bind 0.0.0.0:5000 -w 4 --threads 3 wsgi:app"
+
+  redis:
+    image: redis:7.4.2
+    container_name: redis_db
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+    
