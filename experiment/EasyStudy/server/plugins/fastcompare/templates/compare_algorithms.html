@@ -95,6 +95,7 @@
                     <b-col sm="auto" class="align-middle pr-1 pl-1 wrap-image" v-for="col in row">
                         <div class="movie-wrapper" :id="variantNames[algoIdx] + '_' + col.movie_idx"
                             :name="col.movie_idx"
+                            :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }"
                             v-on:click="onSelectMovie($event, col, variantsResults.indexOf(variantResults))"
                             :alt="col.movie" v-b-tooltip.html.hover="{ title: col.movie }" :title="col.movie">
                             <b-img class="custom-image" :src="col.url"></b-img>
@@ -227,7 +228,8 @@
                         <b-form-rating
                             :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'relevance')"
                             v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'relevance')"
-                            show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
+                            :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }" show-value
+                            show-value-max id="rating-sm" size="sm"></b-form-rating>
                     </b-col>
                 </b-row>
             </b-col>
@@ -242,7 +244,8 @@
                         <b-form-rating
                             :variant="algorithmRatingVariant(variantsResults.indexOf(variantResults), 'diversity')"
                             v-on:change="onAlgorithmRatingChanged($event, variantsResults.indexOf(variantResults), 'diversity')"
-                            show-value show-value-max id="rating-sm" size="sm"></b-form-rating>
+                            :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }" show-value
+                            show-value-max id="rating-sm" size="sm"></b-form-rating>
                     </b-col>
                 </b-row>
             </b-col>
@@ -265,7 +268,7 @@
 
             </b-col>
             <b-col center class="align-middle" cols="3">
-                {% if iteration < MIN_ITERATION_TO_CANCEL %} <b-form @submit="pollProgress" method="GET"
+                {% if iteration < MIN_ITERATION_TO_CANCEL %} <b-form @submit="busy = true" method="GET"
                     action="{{ url_for(consuming_plugin + '.algorithm_feedback') }}">
                     <input type="hidden" hidden="true" :value="selectedMovieIndices" name="selected_movies" />
                     <input type="hidden" hidden="true" :value="selectedMovieVariants" name="selected_movie_variants" />
@@ -282,22 +285,6 @@
                             {{ next }}
                         </b-button>
                     </b-overlay>
-
-                    <b-col class="w-100 mt-3" v-show="busy">
-                        <b-progress :value="predictionProgress.done" :max="predictionProgress.total" height="35px"
-                            class="w-100 position-relative">
-                            <b-progress-bar :value="predictionProgress.done" variant="info"
-                                style="font-size: 1rem;"></b-progress-bar>
-                            <div class="position-absolute w-100"
-                                style="top: 0; left: 0; height: 35px; line-height: 35px; text-align: center; color: black; pointer-events: none; user-select: none; font-size: 1rem;">
-                                [[
-                                predictionProgress.done === 0
-                                ? 'Analyzing preferences... (~10s)'
-                                : predictionProgress.done + ' / ' + predictionProgress.total + ' done (~10s)'
-                                ]]
-                            </div>
-                        </b-progress>
-                    </b-col>
 
                     </b-form>
                     {% else %}

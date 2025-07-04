@@ -116,19 +116,6 @@ window.app = new Vue({
             this.selectedMovieIndices = this.selected.map((x) => x.movie_idx).join(",");
             this.selectedMovieVariants = this.selected.map((x) => x.variant).join(",");
         },
-        pollProgress() {
-            this.busy = true;
-            this.progressInterval = setInterval(() => {
-                fetch(statusUrl)
-                    .then(res => res.json())
-                    .then(data => {
-                        this.predictionProgress = data;
-                        if (data.done === data.total) {
-                            clearInterval(this.progressInterval);
-                        }
-                    });
-            }, 500);
-        },
         onAlgorithmRatingChanged(newRating, algorithmIndex, objective) {
             let oldRating = this.algorithmRatings[objective][algorithmIndex];
             this.algorithmRatingsValidated[objective][algorithmIndex] = true;

@@ -76,7 +76,6 @@
       </b-col>
     </b-row>
     <b-row align-h="center" class="align-items-center">
-      <template v-if="!busy">
         <b-col cols="2" align-h="start">
           <b-btn name="load_more" :disabled="itemsBackup" v-on:click="onClickLoadMore" variant="secondary">
             {{load_more}}
@@ -88,19 +87,6 @@
             {{finish}}
           </b-btn>
         </b-col>
-      </template>
-      <b-col cols="5" v-else>
-        <b-progress :value="predictionProgress.done" :max="predictionProgress.total" height="35px"
-          class="w-100 position-relative">
-          <b-progress-bar :value="predictionProgress.done" variant="info" style="font-size: 1rem;"></b-progress-bar>
-          <div class="position-absolute w-100"
-            style="top: 0; left: 0; height: 35px; line-height: 35px; text-align: center; color: black; pointer-events: none; user-select: none; font-size: 1rem;">
-            [[ predictionProgress.done === 0 ? 'Analyzing preferences... (~10s)' : 'Recommending: ' + predictionProgress.done + ' / ' +
-            predictionProgress.total + ' done (~10s)' ]]
-          </div>
-        </b-progress>
-
-      </b-col>
     </b-row>
 
 

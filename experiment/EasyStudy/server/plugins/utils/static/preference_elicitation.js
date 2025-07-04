@@ -209,18 +209,6 @@ window.app = new Vue({
                 //this.$refs.selectableTable.selectRow(this.items.indexOf(item));
             }
         },
-        pollProgress() {
-            this.progressInterval = setInterval(() => {
-                fetch(statusUrl)
-                    .then(res => res.json())
-                    .then(data => {
-                        this.predictionProgress = data;
-                        if (data.done === data.total) {
-                            clearInterval(this.progressInterval);
-                        }
-                    });
-            }, 500);
-        },
         onElicitationFinish(form) {
             this.busy = true;
             let selectedMoviesTag = document.createElement("input");
@@ -231,7 +219,6 @@ window.app = new Vue({
             form.appendChild(selectedMoviesTag);
 
             form.submit();
-            this.pollProgress();
         }
     }
 })

@@ -397,6 +397,8 @@ def update_progress(user_study_guid = None, participation_id = None):
     with progress_lock:
         if not user_study_guid or not participation_id:
             key = get_participation_key()
+        else:
+            key = f"progress:{user_study_guid}:{participation_id}"
         data = redis_client.get(key)
         if data:
             progress = json.loads(data)
