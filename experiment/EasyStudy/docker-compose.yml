@@ -3,7 +3,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: llm_diversity
+    container_name: web_server
     ports:
       - "5000:5000"
     volumes:
@@ -12,7 +12,7 @@ services:
       - redis
     command: >
       bash -c "./keep_ssh_tunnel.sh &
-      exec gunicorn --bind 0.0.0.0:5000 -w 4 --threads 3 wsgi:app"
+      exec gunicorn --bind 0.0.0.0:5000 -w 1 --threads 3 wsgi:app"
 
   redis:
     image: redis:7.4.2
