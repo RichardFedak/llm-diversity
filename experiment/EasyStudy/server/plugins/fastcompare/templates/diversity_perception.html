@@ -11,9 +11,8 @@
 <div id="app">
   <b-container fluid>
     <b-jumbotron lead="Rate the diversity of movie pairs" class="smallJumbotron" header="Diversity perception">
-      You are presented with 5 pairs of movies. For each pair, please select a rating from 1 to 5 based on <strong>how
-        diverse you perceive the pair</strong> to be.
-      A rating of 1 indicates little or no diversity, while a rating of 5 indicates a high degree of diversity.
+      You are presented with pairs of movies. For each pair, <strong>select the option that best describes the level
+        of diversity you perceive</strong> between them.
       You can <strong>hover over a movie</strong> to see more information about it.
       Please provide <strong>honest and thoughtful</strong> ratings.
     </b-jumbotron>
@@ -36,16 +35,14 @@
 
       <b-row align-h="center" class="mb-3">
         <b-col cols="auto">
-          <b-form-group label="How diverse are these movies?" :label-for="'radio-rating-' + pairIndex"
-            label-align="center">
+          <b-form-group :label="getRatingLabel(pair)" :label-for="'radio-rating-' + pairIndex" label-align="center">
             <b-form-radio-group :id="'radio-rating-' + pairIndex" :name="'rating_' + pairIndex"
               v-model="ratings[pairIndex]" :state="ratings[pairIndex] !== null" buttons button-variant="outline-primary"
               class="responsive-radio-group" :disabled="submitted">
-              <b-form-radio :value="1">1 - No diversity</b-form-radio>
-              <b-form-radio :value="2">2</b-form-radio>
-              <b-form-radio :value="3">3 - Moderate</b-form-radio>
-              <b-form-radio :value="4">4</b-form-radio>
-              <b-form-radio :value="5">5 - High diversity</b-form-radio>
+              <b-form-radio :value="1">No diversity</b-form-radio>
+              <b-form-radio :value="2">Low diversity</b-form-radio>
+              <b-form-radio :value="3">Noticeable diversity</b-form-radio>
+              <b-form-radio :value="4">High diversity</b-form-radio>
             </b-form-radio-group>
           </b-form-group>
         </b-col>

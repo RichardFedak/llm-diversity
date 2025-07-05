@@ -51,6 +51,26 @@ OBJECTIVES = ["relevance", "diversity"]
 ALGORITHM_CACHE = {}
 EASE_CACHE = {}
 DIV_INDICES_KEY = "available_div_indices"
+ATTENTION_CHECK_PAIRS = [
+    {
+        "pair": [
+            4896, # Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)
+            5816  # Harry Potter and the Chamber of Secrets (2002)
+        ],
+        "version": "attention_check",
+        "plot_sim": 1,
+        "genre_sim": 1,
+    },
+    {
+        "pair": [
+            33615, # Madagascar (2005)
+            1036   # Die Hard (1988)
+        ],
+        "version": "attention_check",
+        "plot_sim": 0,
+        "genre_sim": 0,
+    }    
+]
 
 # Implementation of this function can differ among plugins
 def get_lang():
@@ -245,7 +265,8 @@ def get_diversity_data():
     redis_client.set(DIV_INDICES_KEY, json.dumps(remaining))
 
     versioned_pairs.extend(selected_genre_pairs)
-    versioned_pairs.extend(selected_plot_pairs)
+    versioned_pairs.extend(selected_plot_pairs)   
+    versioned_pairs.extend(ATTENTION_CHECK_PAIRS)
 
     data = []
     tr = get_tr(languages, get_lang())
@@ -277,10 +298,20 @@ def get_diversity_data():
             "plotSim": plot_sim
         })
 
-    from random import shuffle
-    shuffle(data)
+    attention_checks = [d for d in data if d["version"] == "attention_check"]
+    final_data = [d for d in data if d["version"] != "attention_check"]
 
-    return jsonify(data)
+    from random import shuffle
+    shuffle(final_data)
+
+    # we dont want attention checks at the beginning of the diversity phase
+    if len(attention_checks) == 2 and len(final_data) >= 4:
+        final_data.insert(3, attention_checks[0])
+        final_data.insert(len(final_data) - 1, attention_checks[1])
+    else:
+        final_data.extend(attention_checks)
+
+    return jsonify(final_data)
 
 # Public facing endpoint
 @bp.route("/join", methods=["GET"])
