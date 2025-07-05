@@ -43,7 +43,10 @@ window.app = new Vue({
             busy: false,
             predictionProgress: { done: 0, total: 0 },
             progressInterval: null,
-            finish: finish
+            finish: finish,
+            searchSuccess: true,
+            loadingMore: false,
+            searching: false,
         }
     },
     async mounted() {
@@ -109,6 +112,7 @@ window.app = new Vue({
             return { "rows": rows, "items": items };
         },
         async onClickSearch(event) {
+            this.searching = true;
             reportOnInput("/utils/on-input", csrfToken, "search", { "search_text_box_value": this.searchMovieName });
             let data = await this.handlePrefixSearch(this.searchMovieName);
             let res = this.prepareTable(data);
@@ -121,6 +125,13 @@ window.app = new Vue({
 
             this.rows = res["rows"];
             this.items = res["items"];
+            this.searchSuccess = true;
+
+            if (this.rows.length === 0) {
+                this.$bvToast.toast("No movies found for the search term: " + this.searchMovieName);
+                this.searchSuccess = false;
+            }
+            this.searching = false;
 
             // VUE is reusing dom and dropping classes, add them back
             this.$nextTick(() => {
@@ -143,6 +154,7 @@ window.app = new Vue({
             this.rows = this.rowsBackup;
             this.itemsBackup = null;
             this.rowsBackup = null;
+            this.searchSuccess = true;
 
             // VUE is reusing dom and dropping classes, add them back
             this.$nextTick(() => {
@@ -156,10 +168,12 @@ window.app = new Vue({
             });
         },
         async onClickLoadMore() {
+            this.loadingMore = true;
             let data = await fetch(initial_data_url + "?impl=" + this.impl).then((resp) => resp.json()).then((resp) => resp);
             res = this.prepareTable(data);
             this.rows = res["rows"];
             this.items = res["items"];
+            this.loadingMore = false;
 
             // VUE is reusing dom and dropping classes, add them back
             this.$nextTick(() => {

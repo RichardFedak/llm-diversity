@@ -21,9 +21,9 @@
     {% else %}
     <b-jumbotron lead="Lets start with what you like" class="smallJumbotron" header="{{header}}">
       Please, <strong>select the movies that you have seen and that you liked</strong>. It is advisable to
-      <strong>select at least 5-10 movies</strong> for the correct recommendation functionality.
+      <strong>select at least 5 movies</strong> for the correct recommendation functionality.
       Movies are selected by clicking on them and each selected movie is highlighted in green border.
-      If you want to load more movies, you can use the button at the bottom of the page.
+      If you want to load more movies, you can use the <strong>Load more</strong> button at the bottom of the page.
       Alternatively, you can use search bar at the top to <strong>search for movies that you know and like</strong>.
       This step will help us to identify and better understand your preferences.
       When a mouse cursor is placed over a movie, its name, genres and plot will be shown.
@@ -54,7 +54,10 @@
       <b-col align-h="start">
         <b-row>
           <div class="mr-1">
-            <b-btn name="search" v-on:click="onClickSearch" variant="secondary" :disabled="busy">{{search}}</b-btn>
+            <b-overlay :show="searching" rounded opacity="0.6" spinner-small spinner-variant="primary"
+              class="d-inline-block">
+              <b-btn name="search" v-on:click="onClickSearch" variant="secondary" :disabled="busy">{{search}}</b-btn>
+            </b-overlay>
           </div>
           <div class="mr-5">
             <b-btn name="cancel_search" :disabled="!itemsBackup || busy" v-on:click="onClickCancelSearch"
@@ -75,19 +78,33 @@
           :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }" />
       </b-col>
     </b-row>
+
+    <b-row align-h="center" v-if="rows.length === 0 && searchSuccess">
+      <b-spinner variant="primary" label="Loading..." style="width: 3rem; height: 3rem;" class="my-4"></b-spinner>
+    </b-row>
+
     <b-row align-h="center" class="align-items-center">
       <b-col cols="2" align-h="start">
-        <b-btn name="load_more" :disabled="itemsBackup" v-on:click="onClickLoadMore" variant="secondary"
-          :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }">
-          {{load_more}}
-        </b-btn>
+        <b-overlay :show="loadingMore" rounded opacity="0.6" spinner-small spinner-variant="primary"
+          class="d-inline-block">
+          <b-btn name="load_more" :disabled="itemsBackup || loadingMore" v-on:click="onClickLoadMore"
+            variant="secondary" :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }">
+            {{load_more}}
+          </b-btn>
+        </b-overlay>
       </b-col>
       <b-col cols="3" align-h="center">
         <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
           class="d-inline-block w-100">
-          <b-btn name="finish_elicitation" block v-on:click="onElicitationFinish(theForm)" :disabled="disableNextStep"
-            :style="{ pointerEvents: busy ? 'none' : 'auto', opacity: busy ? 0.6 : 1 }" variant="primary">
-            [[ busy ? 'Analyzing preferences... (~15s)' : finish ]]
+          <b-btn name="finish_elicitation" block v-on:click="onElicitationFinish(theForm)"
+            :style="{ pointerEvents: selected.length < 5 || busy ? 'none' : 'auto', opacity: selected.length < 5 || busy ? 0.6 : 1 }" variant="primary">
+            [[
+            busy
+            ? 'Analyzing preferences... (~15s)'
+            : (selected.length < 5 ? `Select ${5 - selected.length} more movie${5 - selected.length> 1 ? 's' : ''} to
+              continue`
+              : finish)
+              ]]
           </b-btn>
         </b-overlay>
       </b-col>
