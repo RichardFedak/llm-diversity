@@ -69,14 +69,14 @@
         </div>
         {% else %}
         <b-jumbotron class="smallJumbotron" header="{{header}} ({{iteration}}/{{MIN_ITERATION_TO_CANCEL}})"
-            lead="Select movies that you would consider to watch / buy." header-level="4">
-            <strong>Movies are selected by clicking on them</strong> and each selected movie is highlighted in green
+            header-level="4">
+            Please, <strong>select the movies you would consider to watch / buy by clicking on them</strong>. Each
+            selected movie is highlighted in green
             border.
             If you do not like any of the recommended movies, there is a button at the bottom of this page that you
             should check.
-            When a mouse cursor is placed over a movie, its name, genres and plot will be shown.
-            <strong>Completion of each step is final</strong> and you cannot return to previous steps (pages) - if
-            necessary, you can start again from the beginning.
+            When a mouse cursor is placed over a movie its information will be shown.
+            <strong>Completion of each step is final</strong> and you cannot return to previous steps (pages).
             <strong>Note:</strong> if movie is present in output of multiple algorithms, it is automatically selected
             for you once you click on any of its occurrences.
         </b-jumbotron>
@@ -280,8 +280,8 @@
                     <input type="hidden" hidden="true" :value="algorithmComparisonValue" name="cmp" />
                     <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
                         class="d-inline-block w-100">
-                        <b-button name="next_compare" type="submit" block variant="primary"
-                            :disabled="!allValidated" center v-show="!busy">
+                        <b-button name="next_compare" type="submit" block variant="primary" :disabled="!allValidated"
+                            center v-show="!busy">
                             {{ next }}
                         </b-button>
                     </b-overlay>
