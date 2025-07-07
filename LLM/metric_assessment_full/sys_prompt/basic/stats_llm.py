@@ -43,6 +43,9 @@ def analyze_file(file_path, dataset_dict):
     
     correct_evals = {"output": 0, "cf_ild": 0, "cb_ild": 0, "bin_div": 0}
     accuracy = {"output": 0.0, "cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
+
+    user_metric_evals = {"cf_ild": 0, "cb_ild": 0, "bin_div": 0}
+    user_metric_accuracy = {"cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
     
     selected_list_to_index = {"A": 0, "B": 1, "C": 2}
     list_metrics_value_counts = defaultdict(int)
@@ -72,6 +75,13 @@ def analyze_file(file_path, dataset_dict):
         if bin_div and output == bin_div:
             correct_evals["bin_div"] += 1
 
+        if cf_ild and gold == cf_ild:
+            user_metric_evals["cf_ild"] += 1
+        if cb_ild and gold == cb_ild:
+            user_metric_evals["cb_ild"] += 1
+        if bin_div and gold == bin_div:
+            user_metric_evals["bin_div"] += 1
+
         if output in selected_list_to_index and list_metrics:
             index = selected_list_to_index[output]
             if 0 <= index < len(list_metrics):
@@ -81,6 +91,11 @@ def analyze_file(file_path, dataset_dict):
     for key in correct_evals:
         accuracy[key] = (
             round(correct_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
+        )
+    
+    for key in user_metric_evals:
+        user_metric_accuracy[key] = (
+            round(user_metric_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
         )
     
     chosen_metrics_percentages = {
@@ -94,6 +109,10 @@ def analyze_file(file_path, dataset_dict):
         "llm_output": {
             "correct_evaluations": correct_evals,
             "accuracy": accuracy,
+        },
+        "user_output": {
+            "correct_evaluations": user_metric_evals,
+            "accuracy": user_metric_accuracy,
         },
         "chosen_metrics": {
             "counts": dict(list_metrics_value_counts),

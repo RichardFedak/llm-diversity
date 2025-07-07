@@ -15,6 +15,18 @@
             "bin_div": 0.2162
         }
     },
+    "user_output": {
+        "correct_evaluations": {
+            "cf_ild": 64,
+            "cb_ild": 61,
+            "bin_div": 53
+        },
+        "accuracy": {
+            "cf_ild": 0.2883,
+            "cb_ild": 0.2748,
+            "bin_div": 0.2387
+        }
+    },
     "correct_output_metric_counts": {
         "BIN-DIV": 19,
         "CB-ILD": 17,

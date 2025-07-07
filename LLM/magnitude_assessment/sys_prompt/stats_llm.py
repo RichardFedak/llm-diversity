@@ -44,6 +44,10 @@ def analyze_file(file_path, dataset):
     
     correct_evals = {"output": 0, "cf_ild": 0, "cb_ild": 0, "bin_div": 0}
     accuracy = {"output": 0.0, "cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
+
+    user_metric_evals = {"cf_ild": 0, "cb_ild": 0, "bin_div": 0}
+    user_metric_accuracy = {"cf_ild": 0.0, "cb_ild": 0.0, "bin_div": 0.0}
+
     emd_distances = []
     spearman_correlations = []
     spearman_correlations_final_ordering = []
@@ -78,6 +82,13 @@ def analyze_file(file_path, dataset):
             correct_evals["cb_ild"] += 1
         if llm_final_ordering == bin_div:
             correct_evals["bin_div"] += 1
+
+        if cf_ild and user_final_ordering == cf_ild:
+            user_metric_evals["cf_ild"] += 1
+        if cb_ild and user_final_ordering == cb_ild:
+            user_metric_evals["cb_ild"] += 1
+        if bin_div and user_final_ordering == bin_div:
+            user_metric_evals["bin_div"] += 1
         
         emd_distance = wasserstein_distance(llm_approx_alphas, user_approx_alphas)
         emd_distances.append(emd_distance)
@@ -93,6 +104,11 @@ def analyze_file(file_path, dataset):
             round(correct_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
         )
     
+    for key in user_metric_evals:
+        user_metric_accuracy[key] = (
+            round(user_metric_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
+        )
+    
     mean_emd = np.mean(emd_distances)
     mean_spearman = np.nanmean(spearman_correlations)
     mean_spearman_final_ordering = np.nanmean(spearman_correlations_final_ordering)
@@ -103,6 +119,10 @@ def analyze_file(file_path, dataset):
         "llm_output": {
             "correct_evaluations": correct_evals,
             "accuracy": accuracy,
+        },
+        "user_output": {
+            "correct_evaluations": user_metric_evals,
+            "accuracy": user_metric_accuracy,
         },
         "correct_output_metric_counts": dict(list_metrics_value_counts),
         "emd": mean_emd,
