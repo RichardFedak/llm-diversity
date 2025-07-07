@@ -55,7 +55,7 @@ ATTENTION_CHECK_PAIRS = [
     {
         "pair": [
             4896, # Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)
-            5816  # Harry Potter and the Chamber of Secrets (2002)
+            4896
         ],
         "version": "attention_check",
         "plot_sim": 1,
@@ -63,12 +63,12 @@ ATTENTION_CHECK_PAIRS = [
     },
     {
         "pair": [
-            33615, # Madagascar (2005)
-            1036   # Die Hard (1988)
+            1036,  # Die Hard (1988)
+            1036
         ],
         "version": "attention_check",
-        "plot_sim": 0,
-        "genre_sim": 0,
+        "plot_sim": 1,
+        "genre_sim": 1,
     }    
 ]
 
