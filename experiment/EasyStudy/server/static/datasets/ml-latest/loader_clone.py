@@ -1,5 +1,6 @@
 import pandas as pd
 import datetime
+import numpy as np
 
 class RatingUserFilter:
     def __init__(self, min_ratings_per_user):
@@ -80,13 +81,16 @@ class LinkFilter:
 
 # Dummy loader to simulate the object used in filters
 class Loader:
-    def __init__(self, movies_df, ratings_df, links_df, embeddings_df=None):
+    def __init__(self, movies_df, ratings_df, links_df, embeddings_df=None, genres_embeddings=None, plot_embeddings=None):
         movies_df.loc[:, "year"] = movies_df.title.apply(self._parse_year)
         self.movies_df = movies_df
         self.movies_df["genres"] = movies_df["genres"].str.replace("|", ", ", regex=False)
         self.ratings_df = ratings_df
         self.links_df = links_df
         self.embeddings_df = embeddings_df if embeddings_df is not None else pd.DataFrame(columns=["movieId"])
+        self.genres_embeddings = genres_embeddings
+        self.plot_embeddings = plot_embeddings
+
     def _parse_year(self, x):
         x = x.split("(")
         if len(x) <= 1:
@@ -100,13 +104,19 @@ def create_loaders():
     movies_df = pd.read_csv("movies.csv")
     ratings_df = pd.read_csv("ratings.csv")
     links_df = pd.read_csv("links.csv")
+    genre_embeddings = np.load("genres_embeddings.npy")
+    plot_embeddings = np.load("plot_embeddings.npy")
+
+    demo_genres_embeddings = np.load("demo_genres_embeddings.npy")
+    demo_plot_embeddings = np.load("demo_plot_embeddings.npy")
+    
 
     explore_movies_df = movies_df.copy()
     explore_ratings_df = ratings_df.copy()
     explore_links_df = links_df.copy()
 
-    demo_loader = Loader(movies_df, ratings_df, links_df)
-    experiment_loader = Loader(explore_movies_df, explore_ratings_df, explore_links_df)
+    demo_loader = Loader(movies_df, ratings_df, links_df, genres_embeddings=demo_genres_embeddings, plot_embeddings=demo_plot_embeddings)
+    experiment_loader = Loader(explore_movies_df, explore_ratings_df, explore_links_df, genres_embeddings=genre_embeddings, plot_embeddings=plot_embeddings)
 
     filters_demo = [
         RatingFilterOld(2017),                             
