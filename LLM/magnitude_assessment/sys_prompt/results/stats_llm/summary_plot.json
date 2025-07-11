@@ -34,5 +34,6 @@
     },
     "emd": 0.2692192192192192,
     "spearman": 0.09504311360821265,
-    "spearman_final_ordering": 0.04504504504504504
+    "spearman_final_ordering": 0.04504504504504504,
+    "mean_absolute_error": 0.33132132132132136
 }

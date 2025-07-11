@@ -2,9 +2,11 @@ import json
 import os
 from collections import defaultdict
 from scipy.stats import spearmanr, wasserstein_distance
+from sklearn.metrics import mean_absolute_error
 import numpy as np
 
 RESULTS_FOLDER = "results/"
+RESULTS_FOLDER = "results_ollama/"
 STATS_FOLDER = os.path.join(RESULTS_FOLDER, "stats_llm/")
 DATASET_FILE = "final_movie_data.json"
 
@@ -51,6 +53,7 @@ def analyze_file(file_path, dataset):
     emd_distances = []
     spearman_correlations = []
     spearman_correlations_final_ordering = []
+    mae_values = []
         
     selected_list_to_index = {"A": 0, "B": 1, "C": 2}
     list_metrics_value_counts = defaultdict(int)
@@ -99,6 +102,9 @@ def analyze_file(file_path, dataset):
         res = spearmanr(llm_final_ordering, user_final_ordering)
         spearman_correlations_final_ordering.append(res.statistic)
 
+        mae_value = mean_absolute_error(llm_approx_alphas, user_approx_alphas)
+        mae_values.append(mae_value)
+
     for key in correct_evals:
         accuracy[key] = (
             round(correct_evals[key] / total_evaluations if total_evaluations > 0 else 0.0, 4)
@@ -112,6 +118,7 @@ def analyze_file(file_path, dataset):
     mean_emd = np.mean(emd_distances)
     mean_spearman = np.nanmean(spearman_correlations)
     mean_spearman_final_ordering = np.nanmean(spearman_correlations_final_ordering)
+    mean_mae = np.mean(mae_values)
         
     summary_data = {
         "name": eval_name,
@@ -127,7 +134,8 @@ def analyze_file(file_path, dataset):
         "correct_output_metric_counts": dict(list_metrics_value_counts),
         "emd": mean_emd,
         "spearman": mean_spearman,
-        "spearman_final_ordering": mean_spearman_final_ordering
+        "spearman_final_ordering": mean_spearman_final_ordering,
+        "mean_absolute_error": mean_mae,
     }
     
     output_summary_file = os.path.join(
