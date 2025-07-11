@@ -3,15 +3,21 @@ from enum import Enum
 import textwrap
 from ollama import chat
 from pydantic import BaseModel
-
+import time
 
 class Representant(BaseModel):
-        genres: str
-        plot: str
+    genres: str
+    plot: str
 
 class DiversityStimulus(str, Enum):
     GENRES = "genres"
     PLOT = "plot"
+
+def get_stimulus_weight(stimulus: DiversityStimulus) -> float:
+    if stimulus == DiversityStimulus.GENRES:
+        return 0.6
+    elif stimulus == DiversityStimulus.PLOT:
+        return 0.8
 
 class RepresentantGenerator(ABC):
     def __init__(self, chat_model="llama3.1:8b"):
@@ -28,15 +34,20 @@ class RepresentantGenerator(ABC):
 class GenresDiversityHandler(RepresentantGenerator):
 
     def _call_chat(self, system_prompt: str, user_prompt: str) -> 'Representant':
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
+        for _ in range(3):
+            try:
+                r = chat(
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt}
+                    ],
+                    model=self.chat_model,
+                    format=Representant.model_json_schema(),
+                )
+                return Representant.model_validate_json(r.message.content)
+            except Exception:
+                time.sleep(5)
+        raise RuntimeError("Chat failed after 3 attempts")
 
     def generate_cluster_representant(self, movies_cluster):
         movie_text = "\n".join(
@@ -117,15 +128,20 @@ class GenresDiversityHandler(RepresentantGenerator):
 class PlotDiversityHandler(RepresentantGenerator):
 
     def _call_chat(self, system_prompt: str, user_prompt: str) -> 'Representant':
-        response = chat(
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            model=self.chat_model,
-            format=Representant.model_json_schema(),
-        )
-        return Representant.model_validate_json(response.message.content)
+        for _ in range(3):
+            try:
+                r = chat(
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt}
+                    ],
+                    model=self.chat_model,
+                    format=Representant.model_json_schema(),
+                )
+                return Representant.model_validate_json(r.message.content)
+            except Exception:
+                time.sleep(5)
+        raise RuntimeError("Chat failed after 3 attempts")
 
     def generate_cluster_representant(self, movies_cluster):
         # similar to GenresHandler, but with emphasis on plot synthesis

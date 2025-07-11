@@ -82,20 +82,6 @@ class Binomial_diversity:
                 prod *= np.power(p_cond, 1.0 / N_LIST_CATEGORIES)
 
             return prod
-        
-        # Corresponds to conditional probability used in formulas (10) and (11) in original paper
-        def _category_redundancy(self, g, k_g, N):
-            s = 0.0
-            for l in range(1, k_g):
-                # We want P(x_g = l | X_g > 0) so rewrite it as P(x_g = l & X_g > 0) / P(X_g > 0)
-                # P(x_g = l & X_g > 0) happens when P(x_g = l) is it already imply X_g > 0
-                # so we further simplify this as P(x_g = l) / P(X_g > 0) and P(X_g > 0) can be set to 1 - P(X_g = 0)
-                # so we end up with
-                # P(x_g = l) / (1 - P(X_g = 0))
-                p = self._p_g_dict[g]
-                s += (self._binomial_probability(N, l, p) / (1.0 - self._binomial_probability(N, 0, p)))
-
-            return np.clip(1.0 - s, 0.0, 1.0)
 
 class EASE_BinDiv(AlgorithmBase, ABC):
     """Implementation of EASE algorithm + postprocessing utilizing diversification
@@ -315,7 +301,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             Parameter(
                 "l2",
                 ParameterType.FLOAT,
-                500,  # I did not find a value in the paper, we can try tweaking the default value in the future
+                500,
                 help="L2-norm regularization",
                 help_key="ease_l2_help",
             ),
