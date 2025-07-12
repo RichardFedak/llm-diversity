@@ -27,7 +27,7 @@ from plugins.fastcompare.algo.representant_base import (
 )
 
 class SelectedMovie(BaseModel):
-    item_id: int
+    movie_id: int
     reason: str
 
 class SelectionResult(BaseModel):
@@ -77,16 +77,16 @@ class LLMProfiling(AlgorithmBase, ABC):
         for i in indices:
             user_vector[i] = 1.0
 
+        # Calculate EASE relevance scores
         relevance_scores = np.dot(user_vector, weights)
 
+        # Determine diversity stimulus based on user responses from the diversity phase
         ratings = div_perception
-
         all_pairs = div_perception.get('sim_genres', []) + div_perception.get('sim_plot', [])
         ratings = [int(item['rating']) for item in all_pairs]
-
         self.diversity_stimulus = self._compute_stimulus(all_pairs, ratings)
 
-        # Prepare user-preferred movies based on selected items
+        # Prepare user-preferred movies and their metadata, based on IDs
         user_preferred_movies = []
         for item in selected_items:
             user_preferred_movies.append(self._loader.items_df.iloc[item])
@@ -95,7 +95,6 @@ class LLMProfiling(AlgorithmBase, ABC):
         stimulus_weight = get_stimulus_weight(self.diversity_stimulus)
         genre_weight = stimulus_weight if self.diversity_stimulus == DiversityStimulus.GENRES else 1 - stimulus_weight
         plot_weight = 1 - genre_weight
-
         final_embedding = genre_weight * self._loader.genres_embeddings + plot_weight * self._loader.plot_embeddings
 
         # Mask already seen items - filter_out_items
@@ -122,11 +121,16 @@ class LLMProfiling(AlgorithmBase, ABC):
                 clusters[label] = user_preferred_movies[i]
         else:
             labels, counts = np.unique(cluster_labels[cluster_labels != -1], return_counts=True)
-            # Get index of most common cluster
-            most_common_cluster = labels[np.argmax(counts)]
 
-            # Get index of least common cluster, to prevent overspecialization
+            # Get index of most and least common clusters
+            most_common_cluster = labels[np.argmax(counts)]
             least_common_cluster = labels[np.argmin(counts)]
+
+            # If they are the same (clusters have same size), pick a different one
+            if most_common_cluster == least_common_cluster and len(labels) > 1:
+                # Exclude the most common cluster and pick randomly from the rest
+                alternative_clusters = [label for label in labels if label != most_common_cluster]
+                least_common_cluster = np.random.choice(alternative_clusters)
 
             selected_clusters = [most_common_cluster, least_common_cluster]
 
@@ -138,7 +142,7 @@ class LLMProfiling(AlgorithmBase, ABC):
                 movie_info = user_preferred_movies[i]
                 if label == -1:
                     continue # Skip noise movies
-                if label not in clusters:
+                if str(label) not in clusters:
                     clusters[str(label)] = []
                 clusters[str(label)].append(movie_info)
 
@@ -146,10 +150,13 @@ class LLMProfiling(AlgorithmBase, ABC):
 
         def _produce(label, data):
             """Runs *inside* a worker thread"""
-            if label.startswith("random_"):
+            if label.startswith("random_"): # When we have no clusters, representant is random movie
                 rep = Representant(genres=data["genres"], plot=data["plot"])
             else:
-                rep = self._generate_representant(list(data)[:10], self.diversity_stimulus)
+                limit = min(len(data), 10)  # Limit to 10 movies per cluster since we are using Llama3.1:8b
+                indices = np.random.choice(len(data), size=limit, replace=False)
+                cluster_sample = [data[i] for i in indices]
+                rep = self._generate_representant(cluster_sample, self.diversity_stimulus)
 
             if not rep:
                 return label, None, None
@@ -181,7 +188,6 @@ class LLMProfiling(AlgorithmBase, ABC):
             representant_embeddings_dict["diversity"] = rep_embeddings
         
         # Find similar movies to representants
-        used_items = set()
         cluster_candidates = {}
         for cluster_id, rep_emb in representant_embeddings_dict.items():
             similarities = cosine_similarity(rep_emb.reshape(1, -1), emb_matrix)[0]
@@ -192,7 +198,7 @@ class LLMProfiling(AlgorithmBase, ABC):
             similarities = similarities * relevance_scores[mask]
             closest_indices = np.argsort(-similarities)[:k]
             top_k_original_indices = original_indices[closest_indices]
-            cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices if int(i) not in used_items]
+            cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices]
 
         # Create final list of items based on cluster candidates and selected post-processing method
         result = self._create_final_list(cluster_candidates, k)
@@ -230,13 +236,13 @@ class LLMProfiling(AlgorithmBase, ABC):
     def _create_llm_list(self, cluster_candidates, k):
         all_candidates = [item for candidates in cluster_candidates.values() for item in candidates]
         all_candidates_data = []
-        for item_id in all_candidates:
-            row = self._loader.items_df.iloc[item_id]
-            all_candidates_data.append((item_id, row))
+        for movie_id in all_candidates:
+            row = self._loader.items_df.iloc[movie_id]
+            all_candidates_data.append((movie_id, row))
 
         res = self.select_diverse_movies(self.diversity_stimulus, all_candidates_data, k)
 
-        final_ids = [entry.item_id for entry in res.selected][:k]
+        final_ids = [entry.movie_id for entry in res.selected][:k]
 
         return final_ids
 
@@ -266,13 +272,13 @@ class LLMProfiling(AlgorithmBase, ABC):
 
             Return your answer as a JSON object with a key:
             - 'selected': a list of objects, each containing:
-                - 'item_id': the ID of the selected movie
+                - 'movie_id': the ID of the selected movie
                 - 'reason': a short explanation for why it was chosen (e.g., unique genres, expands diversity, etc.)
 
             Eaxmple structure:
             {{
                 "selected": [
-                    {{"item_id": 123, "reason": "Your reasoning..."}}
+                    {{"movie_id": 123, "reason": "Your reasoning..."}}
                     ...
                 ]
             }}
@@ -301,18 +307,18 @@ class LLMProfiling(AlgorithmBase, ABC):
             {movie_lines}
 
             Task:
-            - Select {k} movies that are the most diverse from each other based on **plot**.
+            - Select {k} distinct movies that are the most diverse from each other based on **plot**.
             - You should aim for the widest thematic and narrative variety, avoiding movies with similar storylines, characters, or settings.
 
             Return your answer as a JSON object with a key:
             - 'selected': a list of objects, each containing:
-                - 'item_id': the ID of the selected movie
+                - 'movie_id': the ID of the selected movie
                 - 'reason': a short explanation for why it was chosen (e.g., unique story, different narrative style, contrasting themes, etc.)
             
             Example structure:
             {{
                 "selected": [
-                    {{"item_id": 123, "reason": "Your reasoning..."}}
+                    {{"movie_id": 123, "reason": "Your reasoning..."}}
                     ...
                 ]
             }}
@@ -320,7 +326,7 @@ class LLMProfiling(AlgorithmBase, ABC):
 
         system_prompt = textwrap.dedent("""\
             You are a movie selection assistant helping to maximize diversity in movie **plots**.
-            Your job is to pick the most plot-different items from a given list and explain your selection.
+            Your job is to pick the most plot-different distinct movies from a given list and explain your selection.
             Focus on selecting movies with distinct stories, themes, tones, or narrative styles.
             Output must always be in valid JSON format.
         """)

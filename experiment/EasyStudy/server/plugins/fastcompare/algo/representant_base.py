@@ -15,7 +15,7 @@ class DiversityStimulus(str, Enum):
 
 def get_stimulus_weight(stimulus: DiversityStimulus) -> float:
     if stimulus == DiversityStimulus.GENRES:
-        return 0.6
+        return 0.7
     elif stimulus == DiversityStimulus.PLOT:
         return 0.8
 
