@@ -937,6 +937,58 @@ def dispose():
 @multi_lang
 def finish_user_study():
     # Last iteration has ended here
+    conf = load_user_study_config(session["user_study_id"])
+    selected_movies = request.args.get("selected_movies")
+    selected_movies = selected_movies.split(",") if selected_movies else []
+
+    selected_variants = request.args.get("selected_movie_variants")
+    selected_variants = selected_variants.split(",") if selected_variants else []
+    selected_variants = [int(x) for x in selected_variants]
+
+    ratings = {}
+
+    for objective in OBJECTIVES:
+        ratings[objective] = []
+        for i in range(conf["n_algorithms_to_compare"]):
+            key = f"ar_{objective}_{i + 1}"
+            value = request.args.get(key)
+            ratings[objective].append(int(value) if value is not None else None)
+
+    dont_like_anything = request.args.get("nothing")
+    if dont_like_anything == "true":
+        dont_like_anything = True
+    else:
+        dont_like_anything = False
+    algorithm_comparison = request.args.get("cmp")
+    order = session["permutation"][0]
+    ordered_ratings = {}
+
+    for algo_name, idx in order.items():
+        ordered_ratings[algo_name] = {
+            objective: ratings[objective][idx] for objective in OBJECTIVES
+        }
+
+    t1 = session["nothing"]
+    t1.append(dont_like_anything)
+    session["nothing"] = t1
+
+    t2 = session["cmp"]
+    t2.append(algorithm_comparison)
+    session["cmp"] = t2
+
+    t3 = session["a_r"]
+    t3.append(ordered_ratings)
+    session["a_r"] = t3
+
+    selected_movies = [int(m) for m in selected_movies]
+    x = session["selected_movie_indices"]
+    x.append(selected_movies)
+    session["selected_movie_indices"] = x
+    
+    y = session["selected_variants"]
+    y.append(selected_variants)
+    session["selected_variants"] = y
+
     iteration_ended(session["iteration"], session["selected_movie_indices"], session["selected_variants"], session["nothing"], session["cmp"], session["a_r"])
     return redirect(url_for("utils.finish"))
 

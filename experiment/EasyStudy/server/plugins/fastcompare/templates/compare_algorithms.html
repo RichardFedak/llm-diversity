@@ -290,6 +290,15 @@
                     {% else %}
                     <b-form @submit="busy = true" method="GET"
                         action="{{ url_for(consuming_plugin + '.finish_user_study') }}">
+                        <input type="hidden" hidden="true" :value="selectedMovieIndices" name="selected_movies" />
+                        <input type="hidden" hidden="true" :value="selectedMovieVariants"
+                            name="selected_movie_variants" />
+                        <input v-for="i in variantsResults.length" type="hidden" hidden="true" :key="i"
+                            :value="algorithmRatings['relevance'][i - 1]" :name="'ar_relevance_'.concat(i)" />
+                        <input v-for="i in variantsResults.length" type="hidden" hidden="true" :key="i"
+                            :value="algorithmRatings['diversity'][i - 1]" :name="'ar_diversity_'.concat(i)" />
+                        <input type="hidden" hidden="true" :value="dontLikeAnythingValue" name="nothing" />
+                        <input type="hidden" hidden="true" :value="algorithmComparisonValue" name="cmp" />
                         <b-overlay :show="busy" rounded opacity="0.6" spinner-small spinner-variant="primary"
                             class="d-inline-block">
                             <b-btn name="finish_compare" block type="submit" variant="success" :disabled="!allValidated"
