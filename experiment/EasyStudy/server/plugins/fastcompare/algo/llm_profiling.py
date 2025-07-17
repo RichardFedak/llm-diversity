@@ -34,7 +34,18 @@ class SelectionResult(BaseModel):
     selected: List[SelectedMovie]
 
 class LLMProfiling(AlgorithmBase, ABC):
-
+    """Implementation of LLM Profiling algorithm
+    
+    The implementation:
+     - Processes user feedback on movie pairs and determines diversity stimulus for personalized diversification
+     - Creates clusters using `HDBSCAN` based on user-preferred movies
+     - Uses LLM (from Ollama) to create summaries (`representants`) of user-preferred movies
+     - Uses text embedding model (`all-MiniLM-L6-v2`) to compute similarity between `representants` and movie embeddings
+     - Combines similarity scores with `EASE` relevance scores to generate top candidates for each `representant`
+     - Provides two post-processing methods:
+        - `round_robin`: selects `k` movies in a round-robin fashion from each representants candidates
+        - `llm`: uses LLM to select final `k` movies from the representants candidates 
+    """
     def __init__(self, loader, post_processing_method, **kwargs):
         self._ratings_df = None
         self._loader = None
@@ -234,6 +245,9 @@ class LLMProfiling(AlgorithmBase, ABC):
         return final_ids[:k]
     
     def _create_llm_list(self, cluster_candidates, k):
+        """
+        Create a final list of items using LLM to select from cluster candidates.
+        """
         all_candidates = [item for candidates in cluster_candidates.values() for item in candidates]
         all_candidates_data = []
         for movie_id in all_candidates:
@@ -427,3 +441,4 @@ class LLMProfiling(AlgorithmBase, ABC):
                 help_key="llm_profiling_post_processing_help",
             )
         ]
+    

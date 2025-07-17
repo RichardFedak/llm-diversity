@@ -125,6 +125,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             .values
         )
 
+        # Calculate global occurence probabilities for each genre
         x = self._rating_matrix.astype(bool)
         denom = x.sum()
         item_counts = x.sum(axis=0)
@@ -148,7 +149,6 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
     # Predict for the user
     def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
-        #print("PREDICTING EASE BIN DIV")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
         candidates = np.setdiff1d(self._all_items, rat.item.unique())
@@ -164,9 +164,6 @@ class EASE_BinDiv(AlgorithmBase, ABC):
 
         rel_scores = np.dot(user_vector, weights)
 
-        #print("rel scores", rel_scores.shape)
-        #print("filter out", filter_out_items)
-
         # mask out scores for already seen movies
         rel_scores[selected_items] = self.NEG_INF
         rel_scores[filter_out_items] = self.NEG_INF
@@ -180,8 +177,6 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             filter_out_items=filter_out_items
             )
         
-        #print("EASE BIN DIV PREDICTION DONE")
-
         return result
 
     def diversify(self, k, rel_scores,
@@ -272,7 +267,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
         # because masked-out items will not have smallest score (some valid, non-masked ones can be negative)
         # scores = scores * seen_items_mask[user_idx]
         # So instead we do scores = scores * seen_items_mask[user_idx] + NEG_INF * (1 - seen_items_mask[user_idx])
-        min_score = scores.min()
+
         # Here we do not mandate NEG_INF to be strictly smaller
         # because rel_scores may already contain some NEG_INF that was set by predict_with_score
         # called previously -> so we allow <=.
@@ -301,7 +296,7 @@ class EASE_BinDiv(AlgorithmBase, ABC):
             Parameter(
                 "l2",
                 ParameterType.FLOAT,
-                500,
+                500, # Set to 500 based on our experiments
                 help="L2-norm regularization",
                 help_key="ease_l2_help",
             ),

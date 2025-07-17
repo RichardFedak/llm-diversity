@@ -64,7 +64,6 @@ class EASE(AlgorithmBase, ABC):
 
     # Predict for the user
     def predict(self, selected_items, filter_out_items, k, weights, items_count, div_perception):
-        #print("PREDICTING EASE")
         rat = pd.DataFrame({"item": selected_items}).set_index("item", drop=False)
         # Appropriately filter out what was seen and what else should be filtered
         candidates = np.setdiff1d(self._all_items, rat.item.unique())
@@ -87,8 +86,6 @@ class EASE(AlgorithmBase, ABC):
         )
         result = [x for _, x in candidates_by_prob][:k]
 
-        #print("EASE PREDICTION DONE")
-
         return result
 
     @classmethod
@@ -101,7 +98,7 @@ class EASE(AlgorithmBase, ABC):
             Parameter(
                 "l2",
                 ParameterType.FLOAT,
-                500,  # I did not find a value in the paper, we can try tweaking the default value in the future
+                500,
                 help="L2-norm regularization",
                 help_key="ease_l2_help",
             ),
