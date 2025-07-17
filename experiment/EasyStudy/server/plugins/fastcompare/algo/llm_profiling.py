@@ -381,12 +381,18 @@ class LLMProfiling(AlgorithmBase, ABC):
         raise RuntimeError("Chat failed after 3 attempts")
 
     def _generate_representant(self, movies_cluster, stimulus: DiversityStimulus):
+        """
+        Generate a representant for a cluster of movies based on the diversity stimulus.
+        """
             
         handler = self.stimulus_handlers[stimulus]()
 
         return handler.generate_cluster_representant(movies_cluster)
     
     def _generate_diversity_representant(self, representants, stimulus: DiversityStimulus):
+        """
+        Generate a diversity representant based on the provided representants and stimulus.
+        """
 
         handler = self.stimulus_handlers[stimulus]()
 
