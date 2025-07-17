@@ -92,7 +92,6 @@ class LLMProfiling(AlgorithmBase, ABC):
         relevance_scores = np.dot(user_vector, weights)
 
         # Determine diversity stimulus based on user responses from the diversity phase
-        ratings = div_perception
         all_pairs = div_perception.get('sim_genres', []) + div_perception.get('sim_plot', [])
         ratings = [int(item['rating']) for item in all_pairs]
         self.diversity_stimulus = self._compute_stimulus(all_pairs, ratings)
@@ -121,6 +120,36 @@ class LLMProfiling(AlgorithmBase, ABC):
         user_embeddings = genre_weight * user_genre_embeddings + plot_weight * user_plot_embeddings
 
         # Cluster user embeddings
+        clusters = self._get_clusters(user_embeddings, user_preferred_movies)
+        tasks = list(clusters.items())
+
+        # Create representants for clusters and diversity representant
+        representant_embeddings_dict = self._create_representants(tasks, genre_weight, plot_weight)
+        
+        # Find similar movies to representants
+        cluster_candidates = {}
+        for cluster_id, rep_emb in representant_embeddings_dict.items():
+            similarities = cosine_similarity(rep_emb.reshape(1, -1), emb_matrix)[0]
+            # Normalize similarities and relevance scores
+            similarities = self._apply_quantile_transform(similarities.reshape(-1, 1), output_distribution='normal').flatten()
+            relevance_scores = self._apply_quantile_transform(relevance_scores.reshape(-1, 1), output_distribution='normal').flatten()
+
+            similarities = similarities * relevance_scores[mask]
+            closest_indices = np.argsort(-similarities)[:k]
+            top_k_original_indices = original_indices[closest_indices]
+            cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices]
+
+        # Create final list of items based on cluster candidates and selected post-processing (selection) method
+        result = self._create_final_list(cluster_candidates, k)
+
+        return result
+    
+    def _get_clusters(self, user_embeddings, user_preferred_movies):
+        """
+        Create clusters from user embeddings using HDBSCAN.
+        If no clusters are found, sample randomly from user preferred movies.
+        If clusters are found, select largest and smallest clusters (based on number of movies)
+        """
         cluster_labels = self._hdbscan_clusterer.fit_predict(user_embeddings)
         clusters = {}
 
@@ -156,9 +185,10 @@ class LLMProfiling(AlgorithmBase, ABC):
                 if str(label) not in clusters:
                     clusters[str(label)] = []
                 clusters[str(label)].append(movie_info)
-
-        tasks = list(clusters.items())
-
+        
+        return clusters
+    
+    def _create_representants(self, tasks, genre_weight, plot_weight):
         def _produce(label, data):
             """Runs *inside* a worker thread"""
             if label.startswith("random_"): # When we have no clusters, representant is random movie
@@ -191,30 +221,15 @@ class LLMProfiling(AlgorithmBase, ABC):
                     representants.append(rep)
                     representant_embeddings_dict[label] = emb
         
+        # Generate diversity representant based on representants created from clusters
         div_representant = self._generate_diversity_representant(representants, self.diversity_stimulus)
         if div_representant:
             rep_genre_embeddings = self._model.encode([div_representant.genres])
             rep_plot_embeddings = self._model.encode([div_representant.plot])
             rep_embeddings = genre_weight * rep_genre_embeddings + plot_weight * rep_plot_embeddings
             representant_embeddings_dict["diversity"] = rep_embeddings
-        
-        # Find similar movies to representants
-        cluster_candidates = {}
-        for cluster_id, rep_emb in representant_embeddings_dict.items():
-            similarities = cosine_similarity(rep_emb.reshape(1, -1), emb_matrix)[0]
-            # Normalize similarities and relevance scores
-            similarities = self._apply_quantile_transform(similarities.reshape(-1, 1), output_distribution='normal').flatten()
-            relevance_scores = self._apply_quantile_transform(relevance_scores.reshape(-1, 1), output_distribution='normal').flatten()
 
-            similarities = similarities * relevance_scores[mask]
-            closest_indices = np.argsort(-similarities)[:k]
-            top_k_original_indices = original_indices[closest_indices]
-            cluster_candidates[cluster_id] = [int(i) for i in top_k_original_indices]
-
-        # Create final list of items based on cluster candidates and selected post-processing method
-        result = self._create_final_list(cluster_candidates, k)
-
-        return result
+        return representant_embeddings_dict
     
     def _create_final_list(self, cluster_candidates, k):
         """
